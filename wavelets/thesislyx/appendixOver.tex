@@ -1,0 +1,419 @@
+\chapter{Wavelets Implemented in General}
+\section{Haar Wavelet Transform Class:}
+
+\bigskip The Haar Wavelet Transform class has the purpose of taking in a
+signal and outputing the signal processed by the Haar Wavelet Transform. \
+It is dependent on the convolution function for computation. \ It is also
+dependent on the haar function generator to establish a Haar Scaling and
+Wavelet vector. \ For practical I/O, a result plotter is also necessary. \ 
+
+\bigskip All of the above can be accommodated within one class. \ One other
+class that is necessary is the myVector class. \ This class provides a
+simple, yet practical data type for the computation. \ It can be allocated
+and deallocated such that its size is appropriate for the task. \ 
+
+It is projected that the two-dimensional version will simply add a matrix
+manipulator. \ What such a manipulator extracts rows and columns into
+myVector structures such that the computation to procede on each row and
+column.. \ 
+
+\subsection{\protect\bigskip One Dimensional Wavelet Transform}
+
+The primary function in the Wavelet transform class is the one dimensional
+wavelet transform (hWaveXform). \ More than one form of this function could
+possible exist; however, for simplisty only one was produced. \ It takes two
+myVector classes (input and output). \ It produces a haar difference and
+scaling vector, as well as a $R_{A}$, $R_{D}$, $T$, $F$ and $S$ myVector
+classes for use within the function. \ The algorithm is as follows
+
+$S=input$
+
+$l=$ is the size of S (or the input)
+
+$\forall i\in \lbrack 0,l)$
+
+\qquad $R_{A}=S\ast H_{A}$
+
+\qquad $R_{D}=S\ast H_{D}$
+
+\qquad T = join ($R_{A}$,$R_{D}$)
+
+\qquad F = evenSplit (T)
+
+\qquad ForceInsert (F, output)
+
+\qquad end = floor ( $\frac{l}{2^{i+1}}$)
+
+\qquad Extract (output, S, 0, end)
+
+\bigskip
+
+The Extract procedure is to take values from output up to the index end, and
+make S a copy of that vector. \ Thus S is called the resolution vector. \ T
+is always twice the size of the working S vector. \ F is always half. \ The
+resolution vector decreases by half each iteration, and starts at the same
+size as the input.
+
+\bigskip
+
+\subsection{Join Procedure}
+
+The join procedure is rather simple. \ Produce a result whose size is the
+size of the two sources combined, and whose elements are those of the two
+input vectors. \ 
+
+Input:
+
+\qquad myVector left, right
+
+Output:
+
+\qquad myVector Result
+
+Algorithm
+
+\qquad result.deallocate
+
+\qquad $s_{l\,}=size(left)$
+
+\qquad $s_{r}=size(right)$
+
+\qquad $s=s_{l}+s_{r}$
+
+\qquad result.allocate(s)
+
+\qquad $\forall i\in \lbrack 0,s_{l})$
+
+\qquad \qquad result[i]=left[i]
+
+\qquad $\forall i\in \lbrack s_{l},s)$
+
+\qquad \qquad result[i]= right$[i-s_{l}]$
+
+\subsection{Procedure: Even Split}
+
+This procedure is simply a special type for condensing procedure. \ Simply
+put, this procedure makes the result half the size of the original input. \
+Both the input and result are myVector classes. \ The characteristic of the
+elements of the result is:
+
+\qquad result[i] = input[2*i]
+
+\subsubsection{Input:}
+
+\qquad myVector s
+
+\subsubsection{Output:}
+
+\qquad myVector r
+
+\subsubsection{Algorithm}
+
+\qquad l = ceil (s.size/2)
+
+\qquad r.allocate(l)
+
+\qquad $\forall i\in \lbrack 0,l)$
+
+\qquad \qquad $r_{i}=s_{i\ast 2}$
+
+\bigskip
+
+\bigskip
+
+\subsection{Procedure: Force Insert}
+
+\bigskip Purpose: To insert one myVector ,s, into a larger myVector, r. \
+The constraint is that r be larger than s. \ As long as this is the case,
+then forced insertion can occur. \ Special cases can include start and end
+points. \ In which case, the start and end points must be within the
+specified range.
+
+\subsubsection{Input:}
+
+\qquad myVector s, r
+
+\subsubsection{Output:}
+
+\qquad myVector r
+
+\subsubsection{Algorithm:}
+
+\qquad $l_{1}=s.size$
+
+\qquad $l_{2}=r.size$
+
+\qquad if ($l_{1}<l_{2}$) and (start < end)
+
+\qquad \qquad $\forall i\in \lbrack start,end]$
+
+\qquad \qquad \qquad $r_{i}=s_{i}$
+
+\bigskip
+
+\subsection{Procedure: Extract}
+
+Purpose: To produce a new or replace a myVector whose length is that of the
+section to copied and extracted. \ The point behind this procedure is
+provide allow a wavelet transform to be performed on a segment of data, and
+keep the procedure the same each resolution. \ 
+
+\bigskip
+
+\subsubsection{Input:}
+
+The inputs for the wavelet Xform extraction procedure are as
+follows:
+
+\qquad myVector S,
+
+\qquad integer a \ 
+
+\qquad integer b \ 
+
+These names are arbitray. \ The variables a and b specify the start and end
+points respectively. \ Obviously, there is an inequality relationship here.
+
+\qquad $0\leq a\leq b\leq S.size$
+
+\bigskip
+
+\subsubsection{Output:}
+
+The output of the wavelet Xform > extraction procedure is
+simply:
+
+\qquad myVector R
+
+The elements of R are a copy of the elements of S from index a to index b.
+
+\bigskip
+
+\subsubsection{Algorithm}
+
+\qquad if ( 0 <a < b < S.size)
+
+\qquad \qquad R.deallocate
+
+\qquad \qquad l = b - a +1
+
+\qquad \qquad R.allocate(l)
+
+\qquad \qquad $\forall i\in \lbrack a,b]$
+
+\qquad \qquad \qquad $R_{i-a}=S_{i}$
+
+\bigskip
+
+
+\subsection {Procedure: Haar Wavelet Inverse (Left Side)}
+Purpose:  These procedures are specific case toward the 2-element Haar Wavelet.  They take in an array of even length and return an array of equal size which is the Inverse Haar Wavelet Transform of the original.  The format of the original is assumed to be ($A|D_{1}|D_{2}|...|D_{n}$).
+
+\subsubsection {Input}
+A "MyVector" class which is an array with simple operations associated with it.   The object name is source.  The source is of the form ($A|D_{1}|D_{2}|...|D_{n}$).  
+
+\subsubsection{Output} 
+A "MyVector"  class with an object name of result.  
+
+\subsubsection{Algorithm}
+There is a difference between the current algorithm and the ideal algorithm which may be the source of error.  This algorithm uses the following symbols to aide in its description:
+\begin{itemize}
+\item S is the source myVector
+\item A is the average term for which $A_i = S_i$ \newline
+\item D is the difference term for which $D_i = S_{i+l/2}$ \newline
+\item l is the length of S
+\end{itemize}
+
+The first version has the following algorithm:
+
+\begin{enumerate}
+\item Initialize the result, R.
+\item $\forall i \in [0,\frac{l}{2}]$
+	$R_{2i} = (A_i + D_i) \sqrt{ \frac{1}{2}}$
+\item $\forall i \in [0,\frac{l}{2}]$
+	$R_{2i-1} = (A_i + D_i) \sqrt {\frac{1}{2}} $
+\end{enumerate}
+
+There is a problem with this method.  Let us start with the even values:   $R_0 = (A_0 + D_0 )\sqrt{1/2}$.   Now the odd, not that $R_{-1}=(A_0 + D_0)\sqrt{1/2}$ which of course does not exist.  Next, $R_1 = (A_1 - D_1)\sqrt{1/2}$ is valid.   Lastly, $R_{l-1}=R_{2*(l/2) - 1} = (A_{l/2} - D_{l/2})\sqrt{1/2}$.  The problem is that $A_{l/2}$ and $D_{l/2}$ do not exist.  Thus, $R_{l-1}$ does not exist, either.  
+
+\bigskip
+
+\section {2-D Wavelet Transform Class}
+This class provides three functions. \ The column wavelet provides a
+transform solely on the columns. \ The row wavelet likewise, provides a
+wavelet transform on each of the rows. \ The 2-D\ wavelet transform is
+simple a row wavelet followed by a column wavelet transform. \ 
+
+It should be noted that these wavelet transforms are Haar Wavelet
+transforms.. Multiple resolutions functions can be made, but again it is
+still the Haar Wavelet at the core. \ Other class clones may be produced to
+use other wavelet basis such as Daubachie or Coeflet. \ 
+
+Another support class required for support of the two dimensional wavelet is
+the image reader/ writer. \ Such a class of functions provide means of
+acquiring data for a matrix to be computed. \ Granted this matrix could have
+been populated by other means. \ Generating such a class consumed some time
+on this project. \ The reason is that there a few mechanisms for doing this.
+\ One is to use raw image types. \ These types are known as by their
+extensions: pgm and ppm. \ Another popular mechanism is Image Magick. \ The
+reason for Image Magick is that it is available on most UNIX platforms
+(Linux, IRIX, Solaris, and Mac OSX). \ Otherwise, schemes such as Apple's
+Quicktime would be used. \ The other reason for the use of other software to
+acquire the image is that the objective of this class is not produce image
+translators for each image type imaginable. \ 
+
+\subsection{\protect\bigskip Method: Column Wavelet Transform}
+
+The column wavelet transform is provides a source matrix, and returns a
+result. \ In order to yield this result, each column is extracted into a
+vector and that vector is fed into a one-dimensional transform. \ The result
+of the one dimensional transform is placed the corresponding row of the
+result matrix. \ Mathematically, this algorithm is as follows:
+
+\qquad $\forall j\in col$
+
+\qquad \qquad n = 0
+
+\qquad \qquad $\forall i\in row$ in reverse order
+
+\qquad \qquad \qquad $S_{n++}=$source$_{i,j}$
+
+\qquad \qquad $S$ ${W}{\Rightarrow }R$
+
+\qquad \qquad n = 0
+
+\qquad \qquad $\forall i\in row$ in reverse order
+
+\qquad \qquad \qquad result$_{i,j}$ \ = $R_{n++}$
+
+\bigskip Note that the need for the n index is keep the order straight for
+this wavelets convention. \ 
+
+\bigskip
+
+\subsection{Method: Row Wavelet Transform}
+
+\bigskip Like the column wavelet transform, the row wavelet transform takes
+a source matrix and returns a resulting matrix. \ The only two significant
+differences are first the items being operated on (rows not columns). \
+Second, the lack of need for the n index. \ 
+
+\qquad $\forall i\in row$
+
+\qquad \qquad $\forall j\in col$
+
+\qquad \qquad \qquad $S_{j}=$source$_{i,j}$
+
+\qquad \qquad $S$ ${W}{\Rightarrow }R$
+
+\qquad \qquad n = 0
+
+\qquad \qquad $\forall j\in col$ in reverse order
+
+\qquad \qquad \qquad result$_{i,j}$ \ = $R_{j}$
+
+\subsection {Method: Self Row/Column Wavelet Transform}
+There is a significant difference between the proof of concept version and self row/column wavelet transforms.  The self versions use a matrix convolution.  
+
+
+
+\subsection{Method:Wavelet Transform}
+
+\bigskip As stated above, the two dimensional wavelet transform is simply
+row wavelet transform followed by a column wavelet transform. \ It could
+have been done in reverse order. \ However, the result would be the same. \ 
+
+Just of note, this class lacks for the moment an inverse transform function.
+\ Not that such a thing does not exist mathematically. \ It simply was not
+implemented at the time of this document. \ 
+
+\subsection {Method: Row Wavelet Inverse Transform}
+\bigskip The row wavelet inverse transform uses the one-dimensional form to transform each row of the matrix.  The algorithm is as follows:
+
+\begin{enumerate}
+\item $\forall i \in [0,k)$
+\begin{enumerate}
+	\item Assign S the values of row i in such that $S_i = M_{i,j}$
+	\item Perform inverse wavelet transform on S:  $S\rightarrow R$
+	\item reintegrate R into result such that $N_{i,j} = R{j} $
+\end{enumerate}
+\end{enumerate}
+
+The above algorithm is defined with the following notation
+	\begin{itemize}
+	\item S is the source vector for use in the inverse wavelet transform.
+	\item R is the result vector used in the inverse wavelet transform.
+	\item M is the source matrix
+	\item N is the result matrix
+	\end{itemize}
+
+\bigskip
+
+\subsection {Method: Column Wavelet Inverse Transform}
+The column wavelet inverse transform is nearly identical to the row wavelet inverse transform.  The exception is of course that the source vector S is assigned to equal the columns.  Another significant issue is that the column indices and source vector indices are in reverse order.
+
+$S_j = M_{i,l-j}$ and $N_{i,l-j} = R_j$
+
+\bigskip
+
+\subsection {Method: Wavelet Inverse Transform v1}
+The wavelet inverse transform simply calls the row wavelet inverse transform first, and uses the results to in column wavelet inverse transform.  The result of the column wavelet inverse transform is used as the result for the wavelet inverse transform.  
+
+\subsection {Method: Self Wavelet Inverse Transform }
+This method is used to save on memory leaks by only allocating the temporary matrix and result only once.  This method uses two other methods, the Self Column Inverse Wavelet Transform and the Self Row Inverse Wavelet Transform.  
+
+\subsubsection {Given}
+The two items provided are references to the source matrix and the result matrix.
+
+\subsubsection {Algorithm}
+\begin{itemize}
+\item $\forall j \in W.columns  SelfColumnInverseXform (W,R,j)$
+
+\item $\forall j \in W.rows SelfRowInverseXform (W,R,i ) $
+\end{itemize}
+
+\subsection {Method: Self Column Inverse Wavelet Transform }
+The code name for this method is selfColumnInverseXform, and it takes three arguments.  This particular method performs a column inverse wavelet transform on a particular column, designated j.  The return value is placed in R, in the correct column.  
+
+\subsubsection {Given}
+Two references are given.  One to the source matrix, and the other to the result matrix.  The third item is an integer, j.  This integer identifies the column to be transformed.
+
+\subsubsection {Notation}
+Two symbols are used to simplify the writing of the algorithm.  
+\begin {itemize}
+\item k is number of rows in source matrix minus 1.
+\item k2 is the half the number of rows in the source matrix.
+\item W is the source matrix
+\item R is the result matrix.
+\end {itemize}
+
+\subsubsection {Algorithm}
+
+$\forall i \in [0,k2) $
+\begin{itemize}
+\item $R_{2i,j} = (W_{i,j} + W_{i+k2,j}) \sqrt {\frac{1}{2}}$
+\item $R_{2i+1,j} = (W_{i+k2,j} -  W_{i,j}) \sqrt {\frac{1}{2}}$
+\end{itemize}
+
+\subsection {Method: Self Row Inverse Wavelet Transform }
+The code name for this method is selfRowInverseXform, and it takes three arguments.  This particular method performs a column inverse wavelet transform on a particular column, designated i.  The return value is placed in R, in the correct column.  
+
+\subsubsection {Given}
+Two references are given.  One to the source matrix, and the other to the result matrix.  The third item is an integer, j.  This integer identifies the column to be transformed.
+
+\subsubsection {Notation}
+Two symbols are used to simplify the writing of the algorithm.  
+\begin {itemize}
+\item l is number of columns in source matrix minus 1.
+\item l2 is the half the number of columns in the source matrix.
+\item W is the source matrix
+\item R is the result matrix.
+\end {itemize}
+
+\subsubsection {Algorithm}
+
+$\forall i \in [0,l2) $
+\begin{itemize}
+\item $R_{i,2j} = (W_{i,j} - W_{i,j + l2}) \sqrt {\frac{1}{2}}$
+\item $R_{i,2j + 1} = (W_{i,j + l2} +  W_{i,j}) \sqrt {\frac{1}{2}}$
+\end{itemize}

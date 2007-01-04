@@ -1,0 +1,16 @@
+\begin{eqnarray*}A_{i,j} = \left\{\begin{array}{cc}0 & A_{i,j}\le \epsilon \\A_{i,j} & otherwise\end{array}\right.\end{eqnarray*} 
+
+An averaging basis function which must meet the following criteria
+\begin{itemize}
+\item must be square integrable, 
+\item must satisfy the orthonormal translation-dilation property, and
+\item the wavelet basis function must be orthogonal with the average basis function.
+\end{itemize}
+
+The Convolution wavelet transform can be described using three steps
+\begin{enumerate}\item Convolve $A= S \ast \phi$ and $D = S \ast \psi$
+\item Selectively Filter: Map $A\to A'$ and $D\to D'$
+\item Concatenate:  $W(S) = (A'|D'$\end{enumerate}
+
+\begin{itemize}\item The convolution wavelet transform is a mapping from $L^2({\mathbb R})$ defined in terms of the wavelet pair, the convolution operation on an $L^2({\mathbb R})$ array, and an element selector.
+\item A wavelet pair is defined as wavelet basis function with a corresponding wavelet averaging basis function\end{itemize}

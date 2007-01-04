@@ -1,0 +1,10 @@
+[PropertyInfo]
+borderLayout1,BorderLayout,false,false, , ,false,<default>
+current,int,false,false, , ,true,<default>
+length,int,false,false, , ,true,<default>
+tree,quadnode[],false,false, , ,true,<default>
+[IconNames]
+
+
+
+

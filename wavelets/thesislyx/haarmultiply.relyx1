@@ -1,0 +1,304 @@
+In this chapter, the general concept of matrix multiplication via wavelets is introduced.  In addition,  the chapter provides proof that the Haar Wavelet Transform can precondition matrix, and produces the same answer.  A little bit of matrix multiplication and sparse matrix multiplication itself is reviewed for completeness.  
+
+\section{Matrix Multiplication}
+
+Matrix multiplication is this ...
+
+What is sparse matrix multiplication?
+
+Matrix multiplication is one of the fundamental operations in linear algebra.  It is defined for two matrices \(A\) and \(B\), denoted \(A\cdot B\).  Matrix multiply requires that the row length of A to be the same as the column length of B.  Lastly, the matrix multiplication operation is defined:
+\[
+c_{i,j} = \sum\limits_k a_{i,k} b_{k,j}.
+\]
+Matrix multiplication also obeys the following properties
+\begin{itemize}
+\item Associative law:  \((AB)C = A(BC)\)
+\item Left Distributive Law \(A (B+C) = AB + AC\)
+\item Right Distributive Law \((B+C)A = BA + CA\)
+\item Distribution of a constant
+\end{itemize} \cite {lipschutz}
+
+Consider a \(2 \times 2\) matrix, this example matrix multiplication:
+\begin{equation}\displaystyle
+\label{eqn:conventional}
+A \cdot B = 
+\left(\begin{array}{cc}  a^1_1&  a^2_1 \\ a^1_2 &  a^2_2 \end{array}\right)
+\left(\begin{array}{cc}  b^1_1&  b^2_1 \\ b^1_2 &  b^2_2 \end{array}\right) =
+\left(\begin{array}{cc}  a^1_{1} b^1_{1} + a^2_{1} b^1_{2}&  a^1_{1}b^2_{1} + a^2_{1}  b^2_{2}    \\ a^1_{2} b^1_{1} + a^2_{2} b^1_{2} &  a^1_{2} b^2_{1} + a^2_{2} b^2_{2} 
+\end{array}\right)
+\end{equation}
+
+
+There is a fast matrix multiply which was devised in 1969 by  Strassen.  It tends to obtain a computational complexity of \(O(N^{2.807})\).  This works for square even dimensioned matrices.  There is a variation of the Strassen called the Winograd obtains slightly better performance.  \cite{lederman}
+
+Another view on matrix multiplication is sparse multiplication, is the use of sparse matrix multiply.  One method is included in the Sparse Matrix Multiplication Package, called SYMBMM \cite {bank}. An other is the one contained Basic Linear Algebra Subprogram for sparse matrix to dense matrix multiply.  
+
+The whole point of sparse matrix multiplication is to take a matrix such that the matrix composition is mostly zero, and exploit that composition to reduce the number of multiplications required.  Such multiplication schemes optimal limit for matrix multiplication is \(O(N^2)\).  
+
+
+
+\section {Wavelet Matrix Multiplication}
+The point of this thesis is not show the efficiencies of these above algorithms.  Rather, it is to show a pre-conditioner using the wavelet transform that can be used in each of them.  Wavelet based matrix multiply is sound for the Haar Wavelet Transform and the \(\psi^n\) expansion.   In other words, All terms contributed by the wavelet transform on the operation of matrix multiplication are cancelled in the inverse.
+If the Haar Wavelet Transform produces a sparse and well conditioned matrix, then the Haar Wavelet Transform proves itself as a useful preconditioner.  In this chapter, the general concept of matrix multiplication via wavelets is introduced, and the linearity principle is shown.  
+The key point for wavelet matrix multiplication is the proof that \(W(A) \times W(B) = W(A\times B)\)  If this is the case, then it is obvious that \(W(A) \times W(B) = W(\Gamma) = W(A\times B = \Gamma)\).  \subsection{A \(2\times 2\) example}
+
+The feasibility of multiplication in the wavelet domain is demonstrated directly using a \(2 \times 2\) matrix. The coefficients of the matrices are multiplied both according to normal matrix multiplication and the modified wavelet multiplication operator. In the end the resulting coefficients are seen to be the same.
+
+\subsubsection{Wavelet Transforms of the Matrices}
+
+For a wavelet transform, the result on matrix \(A\) is
+\begin{equation} \label{WA} \displaystyle
+W(A) = 
+{1 \over 2} 
+\left(\begin{array}{cc}  
+\left(a^1_1 + a^1_2 + a^2_1 + a^2_2\right) & 
+\left(a^1_1 + a^1_2 - a^2_1 - a^2_2\right)  \\ 
+\left(a^1_1 - a^1_2 + a^2_1 - a^2_2\right) & 
+\left(a^1_1 - a^1_2 - a^2_1 + a^2_2\right)   
+\end{array}\right), 
+\end{equation}
+and for matrix \(B\) it is
+\begin{equation} \label{WB} \displaystyle
+W(B) = {1 \over 2} 
+\left(\begin{array}{cc}
+\left(b^1_1 + b^1_2 + b^2_1 + b^2_2\right) &
+\left(b^1_1 + b^1_2 - b^2_1 - b^2_2\right) \\ 
+\left(b^1_1 - b^1_2 + b^2_1 - b^2_2\right) &  
+\left(b^1_1 - b^1_2 - b^2_1 + b^2_2\right)
+\end{array}\right).
+\end{equation}
+
+\subsubsection{Product of \(A\) and \(B\) in wavelet space}
+
+The conventional product of \(A\) and \(B\) (equation \ref{eqn:conventional}) can be transformed into wavelet space. The wavelet transform of this matrix is represented by 
+\[
+W(A \cdot B) =
+{1 \over 2}
+\left(
+\begin{array}{cc}
+\psi(A) & \psi(V) \\
+\psi(H) & \psi(D)
+\end{array}
+\right)
+\]
+where 
+\begin{eqnarray}
+\label{eqn:abwavelet1}
+\psi(A) &=& (a^1_1 b^1_1 + a^2_1 b^1_2 + a^1_1b^2_1 + a^2_1  b^2_2) + (a^1_2 b^1_1 + a^2_2 b^1_2 + a^1_2 b^2_1 + a^2_2 b^2_2)\\
+\label{eqn:abwavelet2}
+\psi(V) &=&(a^1_1 b^1_1 + a^2_1 b^1_2  - a^1_1b^2_1 - a^2_1  b^2_2) +  (a^1_2 b^1_1 + a^2_2 b^1_2 - a^1_2 b^2_1 - a^2_2 b^2_2 ) \\
+\label{eqn:abwavelet3}
+\psi(H) &=& (a^1_1 b^1_1 + a^2_1 b^1_2 + a^1_1b^2_1 + a^2_1  b^2_2) - (a^1_2 b^1_1 + a^2_2 b^1_2 + a^1_2 b^2_1 + a^2_2 b^2_2)\\
+\label{eqn:abwavelet4}
+\psi(D) &=& (a^1_1 b^1_1 + a^2_1 b^1_2  - a^1_1b^2_1 - a^2_1  b^2_2) - (a^1_2 b^1_1 + a^2_2 b^1_2 - a^1_2 b^2_1 - a^2_2 b^2_2 ).
+\end{eqnarray}
+
+\subsubsection{The product of the waveletized matrices}
+
+Straight forward multiplication of \(W(A) \cdot W(B)\) represented by equations \ref{WA} and \ref{WB} works out as follows:
+\[
+W(A) \cdot W(B) = 
+{1 \over 4} 
+\left(
+\begin{array}{cc}
+W_A & W_V \\
+W_H & W_D
+\end{array}
+\right)
+\]
+where
+\begin{eqnarray*}
+W_A &=& (a^1_1 + a^1_2 + a^2_1 + a^2_2)( b^1_1 + b^1_2 + b^2_1 + b^2_2) + ( a^1_1 + a^1_2 - a^2_1 - a^2_2)(b^1_1 - b^1_2 + b^2_1 - b^2_2) \\
+W_V &=& ( a^1_1 + a^1_2 + a^2_1 + a^2_2) ( b^1_1 + b^1_2 - b^2_1 - b^2_2) + (a^1_1 + a^1_2 - a^2_1 - a^2_2) ( b^1_1 - b^1_2 - b^2_1 + b^2_2)  \\
+W_H &=&  ( a^1_1 - a^1_2 + a^2_1 - a^2_2)(b^1_1 + b^1_2 + b^2_1 + b^2_2) +  ( a^1_1 - a^1_2 - a^2_1 + a^2_2 ) (b^1_1 - b^1_2 + b^2_1 - b^2_2) \\
+W_D &=& ( a^1_1 - a^1_2 + a^2_1 - a^2_2) (b^1_1 + b^1_2 - b^2_1 - b^2_2)+( a^1_1 - a^1_2 - a^2_1 + a^2_2 )(b^1_1 - b^1_2 - b^2_1 + b^2_2)
+\end{eqnarray*}
+which simplifies to
+\begin{eqnarray*}
+W_A &=& a^1_1 b^1_1 + a^1_2 b^1_1 + a^2_1 b^1_2 + a^2_2 b^1_2 + a^1_1 b^2_1 + a^1_2 b^2_1 + a^2_1 b^2_2 + a^2_2 b^2_2 \\
+W_V &=& a^1_1 b^1_1 + a^1_2 b^1_1 + a^2_1 b^1_2 + a^2_2 b^1_2 - a^1_1 b^2_1 - a^1_2 b^2_1 - a^2_1 b^2_2 - a^2_2 b^2_2 \\
+W_H &=& a^1_1 b^1_1 - a^1_2 b^1_1 + a^2_1 b^1_2 - a^2_2 b^1_2 + a^1_1 b^2_1 - a^1_2 b^2_1 + a^2_1 b^2_2 - a^2_2 b^2_2 \\
+W_D &=& a^1_1 b^1_1 - a^1_2 b^1_1 + a^2_1 b^1_2 - a^2_2 b^1_2 - a^1_1 b^2_1 + a^1_2 b^2_1 - a^2_1 b^2_2 + a^2_2 b^2_2 
+\end{eqnarray*}
+These can then be compared to the coefficients of \(W(A \cdot B)\) in equations \ref{eqn:abwavelet1}-\ref{eqn:abwavelet2} and seen to be identical. This asserts that \(W(A) \cdot W(B) = W(A \cdot B)\) in the case of \(2 \times 2\) matrices.
+
+\subsection {Haar Wavelets and Vector Inner Products}
+One of the other crucial keys for the Haar Wavelet Transform Matrix Multiply to work is vector inner product.  The issue is whether or not 
+\begin{equation}\langle f', g' \rangle = \langle f,g \rangle \end{equation}
+is true for vectors \(f\) and \(g\) which both of length \(p\), and the wavelet transformed versions of \(f\) and \(g\) denoted \(f'\) and \(g'\) respectively.
+To show this, \(\langle f',g' \rangle\) is expanded algebraically to establish its identity.  
+\begin{equation}
+\label {vectinwt}\langle f',g' \rangle = \sum \limits_{k=0} ^{p/2 -1}(\frac{f_{2k} +f_{2k+1}}{\sqrt{2}} \cdot \frac{g_{2k} + g_{2k+1}}{\sqrt{2}}) + \sum \limits_{k=0} ^{p/2 -1}(\frac{f_{2k} - f_{2k+1}}{\sqrt{2}} \cdot \frac{g_{2k} - g_{2k+1}}{\sqrt{2}})\end{equation}
+When equation \ref{vectinwt} is expanded further, the terms that emerge expose the identity of the inner product.  
+\begin{eqnarray}\label {vectinwte}
+\langle f',g' \rangle = \frac{1}{2}  \sum \limits_{k=0} ^{p/2 -1}
+( f_{2k} g_{2k} + f_{2k+1}g_{2k} + f_{2k}g_{2k+1} + f_{2k+1}g_{2k+1}  \\ \nonumber+  f_{2k} g_{2k} - f_{2k+1}g_{2k} - f_{2k}g_{2k+1} + f_{2k+1}g_{2k+1} \end{eqnarray}
+When simplified the \(f_{2k}g_{2k+1}\) and \(f_{2k+1}g_{2k}\) terms cancel.  The \(f_{2k}g_{2k}\) and \(f_{2k+1}g_{2k+1}\) terms combine to yield equation \ref{vectinwtsimple} and further simplifies to equation {vectinwtsimple2}.
+\begin{equation}\label {vectinwtsimple}
+\langle f',g' \rangle = \frac{1}{2}  \sum \limits_{k=0} ^{p/2 -1} (f_{2k}g_{2k} + f_{2k+1}g_{2k+1})\end{equation}
+\begin{equation}\label {vectinwtsimple2}
+\langle f',g' \rangle = \frac{1}{2}  \sum \limits_{k=0} ^{p-1} (f_{k}g_{k} ) = \langle f,g \rangle\end{equation}
+
+\subsection{Matrix Multiply with the Haar Transform: Formal Proof}
+\textbf{Given} two arbitary matrices \(A\) of size \(m\times p\), \(B\) of size \(m\times p\), the Haar Wavelet Pair, and the Haar Wavelet Transform.  The wavelet pair to be used here is 
+\[ \psi_H (x)= \sqrt{\frac{1}{2}} \left\{\begin{array}{cc}1 & x=0 \\-1 & x=1 \\0 & otherwise\end{array}\right.\]
+\[\phi_H (x) = \sqrt{\frac{1}{2}} \left\{\begin{array}{cc}1 & x=0 \\0 & otherwise\end{array}\right. \]  
+Also, this notation is used for this proof.
+\begin{itemize}\item \(\psi_{1R}(S)\) is the row transform of matrix \(S\).\item \(\psi_{1C}(S)\) is the column transform of matrix \(S\).
+\item \(\psi {S}\) is the 2-D wavelet transform of matrix \(S\).
+\item \(\langle f,g \rangle = \langle \psi_1(f) , \psi_1(g) \rangle \)
+\item \(A' = \psi(A)\)
+\item \(B' = \psi(B)\)\item \(A^R =\psi_{1R}(A) \)
+\item \(B^C =\psi_{1C}(B) \) \item \(A^R_{ri}\) is the row vector \(i\) of the row transform of \(A\).\item \(A^R_{ri+1}\) is the row vector \(i+1\) of the row transform of \(A\).
+\item \(B^C_{cj}\) is the column vector \(j\) of the column transform of \(B\)
+\item \(B^C_{cj+1}\) is the column vector \(j+1\) of the column transform of \(B\)\end{itemize}
+
+\textbf{Required} show that 
+\[ \psi (A) \psi (B) = \psi (A B) \]
+is a true statement. \textbf{Proof}
+
+There are two formulae required for transforming either A or B into the wavelet domain.
+\begin{equation}
+\label{wavedefc4A}
+ \psi (A) = \psi _{1R} ( \psi_{1C} (A)) = \psi _{1C} ( \psi_{1R} (A))
+\end{equation}
+\begin{equation}
+\label{wavedefc4B}
+\psi (B) = \psi _{1R} ( \psi_{1C} (B)) = \psi _{1C} ( \psi_{1R} (B))    
+\end{equation}
+
+Thus, this is simply a re-write of the definition of the wavelet transform by the CWT.   Next,  define a matrix \(\Gamma'\)  so that
+\[\Gamma' = \psi (A) \psi (B) \].  From, the definition \(\Gamma'\), a series of re-writes and the properties of the Haar Wavelet Transform can expose the solution for every element of \(\Gamma'\) and \(\Gamma'\).  In general, the elements of \(\Gamma'\) defined as follows:
+\begin{equation}
+\label{wavecrossA}
+\Gamma'_{i,j} =   \left\langle \psi_{1C} (\psi_{1R} (A)) _{ri} , \psi_{1R} (\psi_{1C} (B)) _{ci}  \right\rangle
+\end{equation}
+\begin{equation}
+\label{wavecrossB}
+\Gamma'_{i,j} =   \left\langle \psi_{1R} (\psi_{1C} (A)) _{ri} , \psi_{1C} (\psi_{1R} (B)) _{ci}  \right\rangle
+\end{equation}
+
+In this case, each element of \(\Gamma'\) is defined as nothing more than the inner product of row \(i\) of \(\psi(A)\) and column \(j\) of \(\psi(B)\).  This is in agreement with standard matrix multiplication.  Another identity that is important what the wavelet pair for transform will do in either a row or column transform.  
+\[  \psi _{1C} (A) = \left\{ 
+\begin{array}{ll}
+\frac{A_{i,j}+A_{i,j+1}}{\sqrt{2}} & j<col \\ 
+\frac{A_{i,j}-A_{i,j+1}}{\sqrt{2}} & j\geq col\end{array}
+\right.   \]
+ \[  \psi _{1R} (A) = \left\{ 
+\begin{array}{ll}
+\frac{A_{i,j}+A_{i+1,j}}{\sqrt{2}} & i<row \\ 
+\frac{A_{i,j}-A_{i+1,j}}{\sqrt{2}} & i\geq row\end{array}
+\right. 
+ \]
+ In this case, there are four cases to show for:
+\begin{enumerate}\item \(i < \frac{row}{2}\) and \(j <  \frac{col}{2}\)
+\item \(i \geq \frac{row}{2}\) and \(j <  \frac{col}{2}\)
+\item \(i < \frac{row}{2}\) and \(j \geq  \frac{col}{2}\)
+\item \(i \geq \frac{row}{2}\) and \(j \geq  \frac{col}{2}\)\end{enumerate}
+
+ \textbf{Case 1} \(i < \frac{row}{2} \) and \(j < \frac{col}{2}\).
+The base equation \(\Gamma'_{i,j}\) in this cases is as follows:
+\begin{equation}
+\label{case1inner}
+ \Gamma'_{ij} = \left\langle \frac {A^R_{ri} + A^R_{ri+1}}{\sqrt{2}} , \frac {B^C_{cj} + B^C_{cj + 1}}{\sqrt{2}} \right\rangle
+\end{equation}
+
+This re-write must be expanded to expose an equality.  This expansion is valid for vectors sums within inner products.   Thus \(\Gamma'_{i,j}\) in this case is expanded to:
+\[ \Gamma'_{i,j} = \frac{1}{2} ( \left\langle A^R_{ri}, B^C_{cj}   \right\rangle +   \left\langle A^R_{ri+1}, B^C_{cj}   \right\rangle +  \left\langle A^R_{ri}, B^C_{cj + 1}   \right\rangle +  \left\langle A^R_{ri+1}, B^C_{cj+1}   \right\rangle    ) \]
+
+Next, \(\Gamma'_{i,j}\) must be compared to \(\psi(\Gamma)_{i,j}\) where
+\[ \psi (A B)  = \psi (\Gamma)    \]
+By definition, every element in \(C\) is defined:
+\[ C_{i,j} =   \left\langle A_{ri} , B_{cj}  \right\rangle \]
+The next step is to show what every element within this case is for \(\psi(\Gamma)\).  This is done by analyzing what the column transform will do at \(C_{i,j}\).  To do this, the column transform is applied to both column \(j\) and \(j+1\) for columns between \([0,\frac{col}{2} -1]\).  The effects of these column transforms are defined in equations \ref{rowwtC1c1} and \ref{rowwtC2c1}.
+\begin{equation}\displaystyle\label {rowwtC1c1}
+ \psi_{1C} (\Gamma)_{i,j} = \frac{1}{\sqrt{2}} \left\langle A_{ri} , B_{cj}  \right\rangle + \left\langle A_{ri +1} , B_{cj}  \right\rangle \end{equation}
+\begin{equation}\label {rowwtC2c1}
+\psi_{1C} (\Gamma)_{i,j+1} = \frac{1}{\sqrt{2}} \left\langle A_{ri} , B_{cj+1}  \right\rangle + \left\langle A_{ri +1} , B_{cj+1}  \right\rangle \\end{equation}
+
+The result of the row transform on \(\psi_{1C}(\Gamma)\) in this case is a sum of \(\psi_{1C}(\Gamma)_{i,j}\) and \(\psi_{1C}(\Gamma)_{i,j+1}\), and specified in equation \ref{rowtfCc1}.
+\begin{equation}\label{rowtfCc1}
+ \psi(\Gamma) = \frac{1}{\sqrt {2}} (\psi_{1C} (\Gamma)_{i,j} + \psi_{1C} (\Gamma)_{i,j+1}   )\end{equation}
+ Expanded this equation is equation \ref{rowtfCc1e}.
+\begin{equation}\label{rowtfCc1e}
+ \psi(\Gamma) = \frac{1}{2} (  \left\langle A_{ri} , B_{cj}  \right\rangle + \left\langle A_{ri +1} , B_{cj}  \right\rangle + \left\langle A_{ri} , B_{cj+1}  \right\rangle + \left\langle A_{ri +1} , B_{cj+1}  \right\rangle   ) \end{equation}
+
+
+\textbf{Case 2} \(i \geq frac{row}{2}\) and \(j <  \frac{col}{2}\).
+The base equation \(\Gamma'_{i,j}\) in this cases is as follows:
+\[ \Gamma'_{ij} = \left\langle \frac {A^R_{ri,j} - A^R_{ri+1}}{\sqrt{2}} , \frac {B^C_{cj} + B^C_{cj + 1}}{\sqrt{2}} \right\rangle  \]
+The next step is to show what every element within this case is for \(\psi(\Gamma)\).  
+\[ \Gamma'_{i,j} = \frac{1}{2} ( \left\langle A^R_{ri}, B^C_{cj}   \right\rangle -   \left\langle A^R_{ri+1}, B^C_{cj}   \right\rangle +  \left\langle A^R_{ri}, B^C_{cj + 1}   \right\rangle -  \left\langle A^R_{ri+1}, B^C_{cj+1}   \right\rangle    ) \]
+How does this compare with \(\psi (\Gamma)\)?
+\[ \psi (A B)  = \psi (\Gamma)    \]
+\[ (\Gamma) = \psi  \left\langle A_{ri} , B_{cj}  \right\rangle \]
+This equation expands with wavelet operator to:
+\[ \psi_{1C} (\Gamma)_{i,j} = \frac{1}{\sqrt{2}} \left\langle A_{ri} , B_{cj}  \right\rangle - \left\langle A_{ri +1} , B_{cj}  \right\rangle   \]
+\[ \psi_{1C} (\Gamma)_{i,j+1} = \frac{1}{\sqrt{2}} \left\langle A_{ri} , B_{cj+1}  \right\rangle - \left\langle A_{ri +1} , B_{cj+1}  \right\rangle \  \]
+
+The result of the row transform on \(\psi_{1C}(\Gamma)\) in this case is a sum of \(\psi_{1C}(\Gamma)_{i,j}\) and 
+\[ \psi(\Gamma) = \frac{1}{\sqrt {2}} (\psi_{1C} (\Gamma)_{i,j} + \psi_{1C} (\Gamma)_{i,j+1}   ) \]
+
+ Expanded this equation is equation \ref{rowtfCc1e}.
+\[ \psi(\Gamma) = \frac{1}{2} (  \left\langle A_{ri} , B_{cj}  \right\rangle - \left\langle A_{ri +1} , B_{cj}  \right\rangle + \left\langle A_{ri} , B_{cj+1}  \right\rangle - \left\langle A_{ri +1} , B_{cj+1}  \right\rangle   ) \]
+
+\textbf {Case 3} \(i < \frac {row}{2}\) and \(j \ge \frac{col}{2}\).
+Like, before the base case for \(\Gamma'_{i,j}\)
+\[ \Gamma'_{ij} = \left\langle \frac {A^R_{ri,j} + A^R_{ri+1}}{\sqrt{2}} , \frac {B^C_{cj} - B^C_{cj + 1}}{\sqrt{2}} \right\rangle  \]
+Again, the vector sums are expanded within their inner products.  
+\[ \Gamma'_{i,j} = \frac{1}{2} ( \left\langle A^R_{ri}, B^C_{cj}   \right\rangle +   \left\langle A^R_{ri+1}, B^C_{cj}   \right\rangle -  \left\langle A^R_{ri}, B^C_{cj + 1}   \right\rangle -  \left\langle A^R_{ri+1}, B^C_{cj+1}   \right\rangle    ) \]
+Next, \(\Gamma'_{i,j}\) is compared with \(\psi(\Gamma)\)
+\[ \psi (A B)  = \psi (\Gamma)    \]
+Next, the column transform expansion is conducted:
+\[ (\Gamma) = \psi  \left\langle A_{ri} , B_{cj}  \right\rangle \]
+\[ \psi_{1C} (\Gamma)_{i,j} = \frac{1}{\sqrt{2}} \left\langle A_{ri} , B_{cj}  \right\rangle + \left\langle A_{ri +1} , B_{cj}  \right\rangle   \]
+\[ \psi_{1C} (\Gamma)_{i,j+1} = \frac{1}{\sqrt{2}} \left\langle A_{ri} , B_{cj+1}  \right\rangle + \left\langle A_{ri +1} , B_{cj+1}  \right\rangle \  \]
+Now the column transform results are combined, by subtraction in this case:
+\[ \psi(\Gamma) = \frac{1}{\sqrt {2}} (\psi_{1C} (\Gamma)_{i,j} - \psi_{1C} (\Gamma)_{i,j+1}   ) \]
+Lastly, the expanded form is expanded.
+\[ \psi(\Gamma) = \frac{1}{2} (  \left\langle A_{ri} , B_{cj}  \right\rangle + \left\langle A_{ri +1} , B_{cj}  \right\rangle - \left\langle A_{ri} , B_{cj+1}  \right\rangle - \left\langle A_{ri +1} , B_{cj+1}  \right\rangle   ) \]
+
+ \textbf{Case 4} \(i \ge \frac {row}{2}\) and \(j \ge \frac{col}{2}\).
+Like, before the base case for \(\Gamma'_{i,j}\) 
+\[ \Gamma'_{ij} = \left\langle \frac {A^R_{ri,j} - A^R_{ri+1}}{\sqrt{2}} , \frac {B^C_{cj} - B^C_{cj + 1}}{\sqrt{2}} \right\rangle  \]
+Again, the vector sums are expanded within their inner products. 
+\[ \Gamma'_{i,j} = \frac{1}{2} ( \left\langle A^R_{ri}, B^C_{cj}   \right\rangle -   \left\langle A^R_{ri+1}, B^C_{cj}   \right\rangle -  \left\langle A^R_{ri}, B^C_{cj + 1}   \right\rangle +  \left\langle A^R_{ri+1}, B^C_{cj+1}   \right\rangle    ) \]
+
+Next, \(\Gamma'_{i,j}\) is compared with \(\psi(\Gamma)\)
+\[ \psi (A B)  = \psi (\Gamma)    \]
+\[ (\Gamma) = \psi  \left\langle A_{ri} , B_{cj}  \right\rangle \]
+Once the column wavelet transform expands \(\Gamma\) to
+\[ \psi_{1C} (\Gamma)_{i,j} = \frac{1}{\sqrt{2}} \left\langle A_{ri} , B_{cj}  \right\rangle - \left\langle A_{ri +1} , B_{cj}  \right\rangle   \]
+\[ \psi_{1C} (\Gamma)_{i,j+1} = \frac{1}{\sqrt{2}} \left\langle A_{ri} , B_{cj+1}  \right\rangle - \left\langle A_{ri +1} , B_{cj+1}  \right\rangle \  \]
+
+Now the column transform results are combined, by subtraction in this case:
+\[ \psi(\Gamma) = \frac{1}{\sqrt {2}} (\psi_{1C} (\Gamma)_{i,j} - \psi_{1C} (\Gamma)_{i,j+1}   ) \]
+
+Lastly, the expanded form is expanded.
+\[ \psi(\Gamma) = \frac{1}{2} (  \left\langle A_{ri} , B_{cj}  \right\rangle - \left\langle A_{ri +1} , B_{cj}  \right\rangle - \left\langle A_{ri} , B_{cj+1}  \right\rangle + \left\langle A_{ri +1} , B_{cj+1}  \right\rangle   ) \]
+
+Since the inner product of two vectors \(f,g\) is the same as their wavelet transformed vectors \(f',g'\), then all 4 cases produce a case where \(\Gamma'_{i,j} = (\psi (\Gamma))_{i,j} \ \forall (i,j)\).  Thus for the Haar Wavelet Transform (discrete mother basis), 
+\[ \psi (A) \cdot \psi(B) = \psi (A\cdot B) \].
+
+\section {Multi Resolution Expansion Proof}
+In a previous section, wavelet based matrix multiplication was proven such that
+\[\psi(A) \cdot \psi(B) = \psi (A\cdot B) \]
+In this section the question of whether or not there is MRE form which is sound for matrix multiplication.  There are few facts that are relevant and were made obvious in the empirical analysis in the results chapter.  
+\begin{itemize}\item \(\psi_{WPx} (A) \not= \psi^x(A) \)  where \(\psi_{WPx} (A) \) is the \(x\) resolution of wavelet transform packets (full decomposition) except for \(x=1\).
+\item \(\psi_{Wx} (A) \not= \psi^x(A) \)  where \(\psi_{Wx} (A) \) is the \(x\) resolution of wavelet transform pyramids except for \(x=1\).\end{itemize}
+
+The next hypothesis to be answered is can the wavelet transform be applied more than once to condition a matrix for matrix multiplication?  This question is answered by the following lemma.
+
+\[ \psi ^2 (A) \cdot \psi^2 (B)  = \psi^2(A\cdot B) \]
+Proof: \\The theorem \[ \psi(A) \cdot \psi(B) = \psi (A\cdot B) \] is proven as fact.
+\[ \psi^2(A) = \psi(\psi (A))\]
+\[ \psi^2 (A) =\cdot \psi^2 (B) = \psi(\psi(A)) \cdot \psi (\psi (B))  \]
+\[ \psi(\psi(A)) \cdot \psi (\psi (B)) = \psi (\psi(A) \cdot \psi(B) ) \]
+\[ \psi (\psi(A) \cdot \psi(B) ) = \psi (\psi(A \cdot (B))  \]
+\[ \psi (\psi(A \cdot (B)) = \psi^2(A \cdot B) \]
+Therefore: 
+\[ \psi ^2 (A) \cdot \psi^2 (B)= \psi^2(A \cdot B) \]
+
+
+ 
+

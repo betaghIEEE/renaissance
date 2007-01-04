@@ -1,0 +1,183 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 99.2beta8 (1.43)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Class 2-D Wavelet: Complete Form</TITLE>
+<META NAME="description" CONTENT="Class 2-D Wavelet: Complete Form">
+<META NAME="keywords" CONTENT="basicwave">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v99.2beta8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="basicwave.css">
+
+<LINK REL="next" HREF="node10.html">
+<LINK REL="previous" HREF="node3.html">
+<LINK REL="up" HREF="basicwave.html">
+<LINK REL="next" HREF="node5.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html148"
+  HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html144"
+  HREF="basicwave.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html138"
+  HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html146"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html149"
+  HREF="node5.html">Proof of Concept</A>
+<B> Up:</B> <A NAME="tex2html145"
+  HREF="basicwave.html">Simple Wavelets with Convolution</A>
+<B> Previous:</B> <A NAME="tex2html139"
+  HREF="node3.html">Wavelets via Convolution</A>
+ &nbsp <B>  <A NAME="tex2html147"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00040000000000000000">
+Class 2-D Wavelet: Complete Form</A>
+</H1>
+
+<P><P>
+<BR>
+The convolution version can be used to derive a Wavelet Matrix.  For a general case, it is simpler to use the convolution method.  The matrix form becomes practical in repetitive  special case applications.  
+
+<P>
+
+<P><P>
+<BR>
+The 2-D transform has four components: the average, vertical, horizontal, and diagonal. Two general computational means exist to generate a one-resolution transform.  These can derive means for performing many resolutions.
+
+<P><P>
+<BR>
+A complete
+transform method returns a result matrix which is the same size as the
+source matrix.  The result contains the four components.  Each component
+resides on 4 corners of the matrix.  Given a matrix B, the transform is to
+yield the following form:
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- MATH
+ $B\Rightarrow
+\begin{array}{cc}
+H & D \\
+A & V
+\end{array}
+$
+ -->
+<IMG
+ WIDTH="321" HEIGHT="102" BORDER="0"
+ SRC="img13.png"
+ ALT="\begin{displaymath}B\Rightarrow
+\begin{array}{cc}
+H &amp; D \\
+A &amp; V
+\end{array}
+\end{displaymath}">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;where A is the average component, H is the horizontal component, V is the
+vertical component, and D is the difference component.    There is another form which is also used as an example:
+
+<!-- MATH
+ $\qquad B\Rightarrow
+\begin{tabular}{ll}
+$
+ -->
+AVHD<!-- MATH
+ $%%
+\end{tabular}
+$
+ -->
+
+
+<P>
+The first version is simple in concept, but provides a few more possibilities for error and confusion.  Regardless of the case, the four components have the following definitions:
+
+<P>
+
+<OL>
+<LI>Average component: produced by filtering the row vectors and the column vectors with the averaging filter.
+</LI>
+<LI>Vertical Component:  produced by applying the average filter to the column vectors and the difference filter to the row vectors.
+</LI>
+<LI>Horizontal component: produced by applying the average filter to the row vectors and the difference to the column vectors.
+</LI>
+<LI>Diagonal component: produced by applying the difference filter to both the row and column vectors.  
+</LI>
+</OL>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html150"
+  HREF="node5.html">Proof of Concept</A>
+<UL>
+<LI><A NAME="tex2html151"
+  HREF="node6.html">1-D to 2-D Method</A>
+<LI><A NAME="tex2html152"
+  HREF="node7.html">Vector - Matrix Method</A>
+</UL>
+<LI><A NAME="tex2html153"
+  HREF="node8.html">Multi-Resolution</A>
+<LI><A NAME="tex2html154"
+  HREF="node9.html">Computational Cost:</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html148"
+  HREF="node5.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html144"
+  HREF="basicwave.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html138"
+  HREF="node3.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html146"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html149"
+  HREF="node5.html">Proof of Concept</A>
+<B> Up:</B> <A NAME="tex2html145"
+  HREF="basicwave.html">Simple Wavelets with Convolution</A>
+<B> Previous:</B> <A NAME="tex2html139"
+  HREF="node3.html">Wavelets via Convolution</A>
+ &nbsp <B>  <A NAME="tex2html147"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Daniel Beatty
+2003-06-04
+</ADDRESS>
+</BODY>
+</HTML>

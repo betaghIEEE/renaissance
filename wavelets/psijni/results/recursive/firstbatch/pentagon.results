@@ -1,0 +1,672 @@
+
+1 1zero value 48
+
+ At resolution 1
+
+ image 1 pgmclassics/pentagon.pgm
+ image 2 pgmclassics/pentagon.pgm¿768768 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿768768 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 8 
+ 
+ The vertices in the self WX form is 4 
+ Quad Tree Initalized 
+ Stats taken 
+ 0 is being copied 
+ Beginning copy 
+ Copy of 0 complete 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+ 
+ The resolution in the self WX form is 8 
+ 
+ The vertices in the self WX form is 4 
+ Quad Tree Initalized 
+ Stats taken 
+ 0 is being copied 
+ Beginning copy 
+ Copy of 0 complete 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Energy of the standard 51447.7
+ Energy of the approximation 51447.7
+ Percent difference -1.41424e-15 Saved source and result
+ Allocated quadnode and set values 
+ 0 is being copied 
+ Beginning copy 
+ Copy of 0 complete 
+ 
+ The resolution in the self WX form is 8 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+
+ Energy of the standard 51447.7
+ Energy of the approximation 51447.7
+ Percent difference -4.24273e-16
+ Fidelity 2.58068e-13
+
+1 2zero value 48
+
+ At resolution 2
+
+ image 1 pgmclassics/pentagon.pgm
+ image 2 pgmclassics/pentagon.pgm¿768768 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿768768 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 8 
+ 
+ The vertices in the self WX form is 16 
+ Quad Tree Initalized 
+ Stats taken 
+ 0 is being copied 
+ Beginning copy 
+ Copy of 0 complete 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+ 
+ The resolution in the self WX form is 8 
+ 
+ The vertices in the self WX form is 16 
+ Quad Tree Initalized 
+ Stats taken 
+ 0 is being copied 
+ Beginning copy 
+ Copy of 0 complete 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Energy of the standard 51447.7
+ Energy of the approximation 51447.7
+ Percent difference -1.83852e-15 Saved source and result
+ Allocated quadnode and set values 
+ 0 is being copied 
+ Beginning copy 
+ Copy of 0 complete 
+ 
+ The resolution in the self WX form is 8 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+
+ Energy of the standard 51447.7
+ Energy of the approximation 51447.7
+ Percent difference -9.8997e-16
+ Fidelity 2.98867e-13
+
+1 3zero value 48
+
+ At resolution 3
+
+ image 1 pgmclassics/pentagon.pgm
+ image 2 pgmclassics/pentagon.pgm¿768768 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿768768 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 8 
+ 
+ The vertices in the self WX form is 64 
+ Quad Tree Initalized 
+ Stats taken 
+ 0 is being copied 
+ Beginning copy 
+ Copy of 0 complete 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+ 
+ The resolution in the self WX form is 8 
+ 
+ The vertices in the self WX form is 64 
+ Quad Tree Initalized 
+ Stats taken 
+ 0 is being copied 
+ Beginning copy 
+ Copy of 0 complete 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Energy of the standard 51447.7
+ Energy of the approximation 51447.7
+ Percent difference -2.96991e-15 Saved source and result
+ Allocated quadnode and set values 
+ 0 is being copied 
+ Beginning copy 
+ Copy of 0 complete 
+ 
+ The resolution in the self WX form is 8 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+
+ Energy of the standard 51447.7
+ Energy of the approximation 51447.7
+ Percent difference -1.97994e-15
+ Fidelity 3.60441e-13
+
+1 4zero value 48
+
+ At resolution 4
+
+ image 1 pgmclassics/pentagon.pgm
+ image 2 pgmclassics/pentagon.pgm¿768768 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿768768 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 8 
+ 
+ The vertices in the self WX form is 256 
+ Quad Tree Initalized 
+ Stats taken 
+ 0 is being copied 
+ Beginning copy 
+ Copy of 0 complete 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+ 
+ The resolution in the self WX form is 8 
+ 
+ The vertices in the self WX form is 256 
+ Quad Tree Initalized 
+ Stats taken 
+ 0 is being copied 
+ Beginning copy 
+ Copy of 0 complete 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Energy of the standard 51447.7
+ Energy of the approximation 51447.7
+ Percent difference -3.25276e-15 Saved source and result
+ Allocated quadnode and set values 
+ 0 is being copied 
+ Beginning copy 
+ Copy of 0 complete 
+ 
+ The resolution in the self WX form is 8 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+
+ Energy of the standard 51447.7
+ Energy of the approximation 51447.7
+ Percent difference -2.96991e-15
+ Fidelity 4.26587e-13
+
+1 5zero value 48
+
+ At resolution 5
+
+ image 1 pgmclassics/pentagon.pgm
+ image 2 pgmclassics/pentagon.pgm¿768768 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿768768 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 8 
+ 
+ The vertices in the self WX form is 1024 
+ Quad Tree Initalized 
+ Stats taken 
+ 0 is being copied 
+ Beginning copy 
+ Copy of 0 complete 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+ 
+ The resolution in the self WX form is 8 
+ 
+ The vertices in the self WX form is 1024 
+ Quad Tree Initalized 
+ Stats taken 
+ 0 is being copied 
+ Beginning copy 
+ Copy of 0 complete 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Energy of the standard 51447.7
+ Energy of the approximation 51447.7
+ Percent difference -6.08124e-15 Saved source and result
+ Allocated quadnode and set values 
+ 0 is being copied 
+ Beginning copy 
+ Copy of 0 complete 
+ 
+ The resolution in the self WX form is 8 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+
+ Energy of the standard 51447.7
+ Energy of the approximation 51447.7
+ Percent difference -3.39418e-15
+ Fidelity 5.04261e-13
+
+1 6zero value 48
+
+ At resolution 6
+
+ image 1 pgmclassics/pentagon.pgm
+ image 2 pgmclassics/pentagon.pgm¿768768 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿768768 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 8 
+ 
+ The vertices in the self WX form is 4096 
+ Quad Tree Initalized 
+ Stats taken 
+ 0 is being copied 
+ Beginning copy 
+ Copy of 0 complete 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+ 
+ The resolution in the self WX form is 8 
+ 
+ The vertices in the self WX form is 4096 
+ Quad Tree Initalized 
+ Stats taken 
+ 0 is being copied 
+ Beginning copy 
+ Copy of 0 complete 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Energy of the standard 51447.7
+ Energy of the approximation 51447.7
+ Percent difference -2.68706e-15 Saved source and result
+ Allocated quadnode and set values 
+ 0 is being copied 
+ Beginning copy 
+ Copy of 0 complete 
+ 
+ The resolution in the self WX form is 8 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+
+ Energy of the standard 51447.7
+ Energy of the approximation 51447.7
+ Percent difference -4.1013e-15
+ Fidelity 5.68651e-13
+
+1 7zero value 48
+
+ At resolution 7
+
+ image 1 pgmclassics/pentagon.pgm
+ image 2 pgmclassics/pentagon.pgm¿768768 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿768768 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 8 
+ 
+ The vertices in the self WX form is 16384 
+ Quad Tree Initalized 
+ Stats taken 
+ 0 is being copied 
+ Beginning copy 
+ Copy of 0 complete 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+ 
+ The resolution in the self WX form is 8 
+ 
+ The vertices in the self WX form is 16384 
+ Quad Tree Initalized 
+ Stats taken 
+ 0 is being copied 
+ Beginning copy 
+ Copy of 0 complete 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Energy of the standard 51447.7
+ Energy of the approximation 51447.7
+ Percent difference -5.2327e-15 Saved source and result
+ Allocated quadnode and set values 
+ 0 is being copied 
+ Beginning copy 
+ Copy of 0 complete 
+ 
+ The resolution in the self WX form is 8 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+
+ Energy of the standard 51447.7
+ Energy of the approximation 51447.7
+ Percent difference -5.65697e-15
+ Fidelity 6.88659e-13

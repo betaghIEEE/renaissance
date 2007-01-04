@@ -1,0 +1,224 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 99.2beta8 (1.43)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Wavelets via Convolution</TITLE>
+<META NAME="description" CONTENT="Wavelets via Convolution">
+<META NAME="keywords" CONTENT="basicwave">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v99.2beta8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="basicwave.css">
+
+<LINK REL="next" HREF="node4.html">
+<LINK REL="previous" HREF="node2.html">
+<LINK REL="up" HREF="basicwave.html">
+<LINK REL="next" HREF="node4.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html136"
+  HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html132"
+  HREF="basicwave.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html126"
+  HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html134"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html137"
+  HREF="node4.html">Class 2-D Wavelet: Complete</A>
+<B> Up:</B> <A NAME="tex2html133"
+  HREF="basicwave.html">Simple Wavelets with Convolution</A>
+<B> Previous:</B> <A NAME="tex2html127"
+  HREF="node2.html">Wavelet Transform Definitions:</A>
+ &nbsp <B>  <A NAME="tex2html135"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00030000000000000000">
+
+<P><P>
+<BR>
+Wavelets via Convolution</A>
+</H1>
+Wavelets are defined in terms of average and difference components.  Each component can further be transformed to isolate properties of each component.  Typically, each component has the form <!-- MATH
+ $O\rightarrow (A|D)$
+ -->
+<IMG
+ WIDTH="86" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img1.png"
+ ALT="$ O\rightarrow (A\vert D)$"> where O is the original signal, A is the average component, D is the difference component and <IMG
+ WIDTH="48" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img2.png"
+ ALT="$ (A\vert D)$"> the signal A concatenated with D.  Each of these components are produced by an orthonormal basis.  Also, these components are produced such that the original can be constructed easily from them.
+
+<P><P>
+<BR>
+Many mathematicians such as Walker[<A
+ HREF="node52.html#walker">2</A>], use a form that eliminates half of the values. 
+Thus a form can be defined which has the same number of elements as the original.  The rules for choosing the member elements are dependent on the wavelet filter choice.
+
+<P><P>
+<BR>
+Another useful property of wavelets via convolution is the simplicity of the
+operation. The general case works for all.  Such an algorithm requires one nested loop as seen below:
+
+<P>
+<!-- MATH
+ $\forall i\in \lbrack 0,M)$
+ -->
+<IMG
+ WIDTH="83" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img3.png"
+ ALT="$ \forall i\in \lbrack 0,M)$">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- MATH
+ $\forall j\in \lbrack 0,N)$
+ -->
+<IMG
+ WIDTH="82" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img4.png"
+ ALT="$ \forall j\in \lbrack 0,N)$">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n=i-j
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (<!-- MATH
+ $n\in \lbrack 0,M)$
+ -->
+<IMG
+ WIDTH="78" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img5.png"
+ ALT="$ n\in \lbrack 0,M)$">)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- MATH
+ $y_{i\,}+=x_{n}\cdot h_{j\,}$
+ -->
+<IMG
+ WIDTH="102" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img6.png"
+ ALT="$ y_{i\,}+=x_{n}\cdot h_{j\,}$">
+
+<P>
+This filter simply equates to the mathematical function: <!-- MATH
+ $x\ast
+h=\sum_{l}x_{k-l}h_{k}$
+ -->
+<IMG
+ WIDTH="133" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img7.png"
+ ALT="$ x\ast
+h=\sum_{l}x_{k-l}h_{k}$">, which is the convolution operation. As we can see
+the operation is slightly less than <IMG
+ WIDTH="48" HEIGHT="36" ALIGN="MIDDLE" BORDER="0"
+ SRC="img8.png"
+ ALT="$ O(n^{2})$"> . For practical use, the
+filter is made smaller than the actual signal being analyized. In some
+cases, the filter may be much smalled than the signal. Filter size
+matters in extracting features from the original signal.
+
+In the case of this convolution operator, the limit is acutally M, not N.
+The value of M is the size of the original signal. Since the resulting
+vector is the same as the original, the vector is said to be fully
+qualified. Only half of those values are necessary to reconstruct the original (every other element).  
+
+To perform a wavelet transform via convolution, each signal is convolved
+twice.  
+
+<!-- MATH
+ $A_{i}=A_{i-1}\ast V$
+ -->
+<IMG
+ WIDTH="106" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img9.png"
+ ALT="$ A_{i}=A_{i-1}\ast V$">
+
+<!-- MATH
+ $D_{i\,}=A_{i-1}\ast W$
+ -->
+<IMG
+ WIDTH="114" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img10.png"
+ ALT="$ D_{i\,}=A_{i-1}\ast W$">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;where
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;V is the scaling wavelet vector
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;W is the differencing wavelet vector
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;A is the average vector (scaled vector)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D is the difference component vector
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- MATH
+ $\forall i\in \lbrack 1,L)$
+ -->
+<IMG
+ WIDTH="76" HEIGHT="34" ALIGN="MIDDLE" BORDER="0"
+ SRC="img11.png"
+ ALT="$ \forall i\in \lbrack 1,L)$"> and <IMG
+ WIDTH="56" HEIGHT="32" ALIGN="MIDDLE" BORDER="0"
+ SRC="img12.png"
+ ALT="$ A_{0}=f$"> which is the
+original signal
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L is the limit on the number resolutions that signal can have
+based on the wavelet type.
+
+<P><P>
+<BR>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html136"
+  HREF="node4.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html132"
+  HREF="basicwave.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html126"
+  HREF="node2.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html134"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html137"
+  HREF="node4.html">Class 2-D Wavelet: Complete</A>
+<B> Up:</B> <A NAME="tex2html133"
+  HREF="basicwave.html">Simple Wavelets with Convolution</A>
+<B> Previous:</B> <A NAME="tex2html127"
+  HREF="node2.html">Wavelet Transform Definitions:</A>
+ &nbsp <B>  <A NAME="tex2html135"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Daniel Beatty
+2003-06-04
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 99.2beta8 (1.43)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>One Dimensional Wavelet Transform</TITLE>
+<META NAME="description" CONTENT="One Dimensional Wavelet Transform">
+<META NAME="keywords" CONTENT="basicwave">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v99.2beta8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="basicwave.css">
+
+<LINK REL="next" HREF="node16.html">
+<LINK REL="previous" HREF="node14.html">
+<LINK REL="up" HREF="node14.html">
+<LINK REL="next" HREF="node16.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html301"
+  HREF="node16.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html297"
+  HREF="node14.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html291"
+  HREF="node14.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html299"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html302"
+  HREF="node16.html">Join Procedure</A>
+<B> Up:</B> <A NAME="tex2html298"
+  HREF="node14.html">Haar Wavelet Transform Class:</A>
+<B> Previous:</B> <A NAME="tex2html292"
+  HREF="node14.html">Haar Wavelet Transform Class:</A>
+ &nbsp <B>  <A NAME="tex2html300"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00071000000000000000">
+
+<P><P>
+<BR>
+One Dimensional Wavelet Transform</A>
+</H2>
+
+The primary function in the Wavelet transform class is the one dimensional
+wavelet transform (hWaveXform).  More than one form of this function could
+possible exist; however, for simplisty only one was produced.  It takes two
+myVector classes (input and output).  It produces a haar difference and
+scaling vector, as well as a , , ,  and  myVector
+classes for use within the function.  The algorithm is as follows
+
+
+
+ is the size of S (or the input)
+
+<!-- MATH
+ $\forall i\in \lbrack 0,l)$
+ -->
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- MATH
+ $R_{A}=S\ast H_{A}$
+ -->
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<!-- MATH
+ $R_{D}=S\ast H_{D}$
+ -->
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T = join (,)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;F = evenSplit (T)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ForceInsert (F, output)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end = floor ( <!-- MATH
+ $\frac{l}{2^{i+1}}$
+ -->
+)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Extract (output, S, 0, end)
+
+<P><P>
+<BR>
+The Extract procedure is to take values from output up to the index end, and
+make S a copy of that vector.  Thus S is called the resolution vector.  T
+is always twice the size of the working S vector.  F is always half.  The
+resolution vector decreases by half each iteration, and starts at the same
+size as the input.
+
+<P><P>
+<BR>
+<BR><HR>
+<ADDRESS>
+Daniel Beatty
+2003-06-04
+</ADDRESS>
+</BODY>
+</HTML>

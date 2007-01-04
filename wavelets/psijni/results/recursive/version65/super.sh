@@ -1,0 +1,9 @@
+sh f16.sh &
+sh fishingboat.sh &
+sh opera.sh &
+sh pentagon.sh &
+sh watch.sh &
+sh papermachine.sh &
+sh peppers.sh &
+sh water.sh &
+sh waterfall.sh &

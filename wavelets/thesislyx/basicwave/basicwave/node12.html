@@ -1,0 +1,157 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 99.2beta8 (1.43)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Multi -resolution</TITLE>
+<META NAME="description" CONTENT="Multi -resolution">
+<META NAME="keywords" CONTENT="basicwave">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v99.2beta8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="basicwave.css">
+
+<LINK REL="next" HREF="node13.html">
+<LINK REL="previous" HREF="node11.html">
+<LINK REL="up" HREF="node11.html">
+<LINK REL="next" HREF="node13.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html249"
+  HREF="node13.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html245"
+  HREF="node11.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html239"
+  HREF="node11.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html247"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html250"
+  HREF="node13.html">Threshold FIltering</A>
+<B> Up:</B> <A NAME="tex2html246"
+  HREF="node11.html">Results: 2-D Wavelet Transform</A>
+<B> Previous:</B> <A NAME="tex2html240"
+  HREF="node11.html">Results: 2-D Wavelet Transform</A>
+ &nbsp <B>  <A NAME="tex2html248"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00061000000000000000">
+Multi -resolution</A>
+</H2>
+The expected result is a picture within a picture.  Each average component has a further transform on it.  The three resolution transform has the form:
+
+<P>
+ 
+<TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT"><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT"><TABLE CELLPADDING=3>
+<TR><TD></TD>
+<TD></TD>
+</TR>
+<TR><TD></TD>
+<TD ALIGN="LEFT"></TD>
+</TR>
+</TABLE> </TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+</TR>
+<TR><TD></TD>
+<TD ALIGN="LEFT"></TD>
+</TR>
+</TABLE></TD>
+<TD></TD>
+</TR>
+<TR><TD></TD>
+<TD ALIGN="LEFT"></TD>
+</TR>
+</TABLE>
+
+<P>
+Refer to Figure <A HREF="node12.html#wavepicR3">9</A> for the image transform results.  
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="wavepicR3"></A><A NAME="203"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 9:</STRONG>
+Wavelet Transform Image.  This image is divided in to average, horizontal, vertical and diagonal components using multi-resolution wavelet transform.  Note the the average component was transformed one step further. </CAPTION>
+<TR><TD><!-- MATH
+ $\includegraphics[width=4in]{wavepic3R.jpg}$
+ -->
+</TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="recoverHid"></A><A NAME="208"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 10:</STRONG>
+Recovered Image - Wrong Order (Multi-Resolution). This image shows a 2-D wavelet transform after it was recovered out of order.  Obviously, the distortion is hideous.  </CAPTION>
+<TR><TD><!-- MATH
+ $\includegraphics[width=4in]{recoverHid.jpg}$
+ -->
+</TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+To obtain the inverse, an exact reverse procedure is necessary, otherwise the distortion is hideous.   The first attempt of the wavelet inverse transform was out of order, refer to Figure <A HREF="node12.html#recoverHid">10</A> .  A correct picture was obtained during the second attempt.  Correct order yielded correct results, refer to Figure <A HREF="node11.html#rightDanRecovered">8</A> .
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html249"
+  HREF="node13.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html245"
+  HREF="node11.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html239"
+  HREF="node11.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html247"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html250"
+  HREF="node13.html">Threshold FIltering</A>
+<B> Up:</B> <A NAME="tex2html246"
+  HREF="node11.html">Results: 2-D Wavelet Transform</A>
+<B> Previous:</B> <A NAME="tex2html240"
+  HREF="node11.html">Results: 2-D Wavelet Transform</A>
+ &nbsp <B>  <A NAME="tex2html248"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Daniel Beatty
+2003-06-04
+</ADDRESS>
+</BODY>
+</HTML>

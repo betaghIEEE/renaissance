@@ -1,0 +1,33 @@
+set title "Fidelity of Wavelet Based Matrix Multiply with Sparse Filter for F-16 image at 512 by 512"
+set xlabel "Sparse Filter Threshold"
+set ylabel "Relative Fidelity"
+set nologscale; set logscale y 
+plot "fidel2.f16.results" using 1:2  title "Resolution 1" with linespoints, "fidel2.f16.results" using 1:3  title "Resolution 2" with linespoints, "fidel2.f16.results" using 1:4  title "Resolution 3"  with linespoints, "fidel2.f16.results" using 1:5  title "Resolution 4"  with linespoints, "fidel2.f16.results" using 1:6  title "Resolution 5"  with linespoints, "fidel2.f16.results" using 1:7  title "Resolution 6"  with linespoints, "fidel2.f16.results" using 1:8  title "Resolution 7"  with linespoints
+
+set title "Fidelity of Wavelet Based Matrix Multiply with Sparse Filter for Fishing Boat Image"
+
+plot "fidel2.fishingboat.results" using 1:2  title "Resolution 1" with linespoints, "fidel2.fishingboat.results" using 1:3  title "Resolution 2" with linespoints, "fidel2.fishingboat.results" using 1:4  title "Resolution 3" with linespoints, "fidel2.fishingboat.results" using 1:5  title "Resolution 4" with linespoints, "fidel2.fishingboat.results" using 1:6  title "Resolution 5" with linespoints, "fidel2.fishingboat.results" using 1:7  title "Resolution 6" with linespoints, "fidel2.fishingboat.results" using 1:8  title "Resolution 7" with linespoints
+
+set title "Fidelity of Wavelet Based Matrix Multiply with Sparse Filter for Opera House"
+
+plot "fidel2.opera.results" using 1:2  title "Resolution 1" with linespoints, "fidel2.opera.results" using 1:3  title "Resolution 2" with linespoints, "fidel2.opera.results" using 1:4  title "Resolution 3" with linespoints, "fidel2.opera.results" using 1:5  title "Resolution 4" with linespoints, "fidel2.opera.results" using 1:6  title "Resolution 5" with linespoints, "fidel2.opera.results" using 1:7  title "Resolution 6" with linespoints, "fidel2.opera.results" using 1:8  title "Resolution 7" with linespoints
+
+set title "Fidelity of Wavelet Based Matrix Multiply with Sparse Filter for  Pentagon Image"
+
+plot "fidel2.pentagon.results" using 1:2  title "Resolution 1" with linespoints, "fidel2.pentagon.results" using 1:3  title "Resolution 2" with linespoints, "fidel2.pentagon.results" using 1:4  title "Resolution 3" with linespoints, "fidel2.pentagon.results" using 1:5  title "Resolution 4" with linespoints, "fidel2.pentagon.results" using 1:6  title "Resolution 5" with linespoints, "fidel2.pentagon.results" using 1:7  title "Resolution 6" with linespoints, "fidel2.pentagon.results" using 1:8  title "Resolution 7" with linespoints
+
+set title "Fidelity of Wavelet Based Matrix Multiply with Sparse Filter for  Peppers image"
+
+plot "fidel2.pepper.results" using 1:2  title "Resolution 1" with linespoints, "fidel2.pepper.results" using 1:3  title "Resolution 2" with linespoints, "fidel2.pepper.results" using 1:4  title "Resolution 3" with linespoints, "fidel2.pepper.results" using 1:5  title "Resolution 4" with linespoints, "fidel2.pepper.results" using 1:6  title "Resolution 5" with linespoints, "fidel2.pepper.results" using 1:7  title "Resolution 6" with linespoints, "fidel2.pepper.results" using 1:8  title "Resolution 7" with linespoints
+
+set title "Fidelity of Wavelet Based Matrix Multiply with Sparse Filter for Watch image"
+
+plot "fidel2.watch.results" using 1:2  title "Resolution 1" with linespoints, "fidel2.watch.results" using 1:3  title "Resolution 2" with linespoints, "fidel2.watch.results" using 1:4  title "Resolution 3" with linespoints, "fidel2.watch.results" using 1:5  title "Resolution 4" with linespoints, "fidel2.watch.results" using 1:6  title "Resolution 5" with linespoints, "fidel2.watch.results" using 1:7  title "Resolution 6" with linespoints, "fidel2.watch.results" using 1:8  title "Resolution 7" with linespoints
+
+set title "Fidelity of Wavelet Based Matrix Multiply with Sparse Filter for Water image"
+
+plot "fidel2.water.results" using 1:2  title "Resolution 1" with linespoints, "fidel2.water.results" using 1:3  title "Resolution 2" with linespoints, "fidel2.water.results" using 1:4  title "Resolution 3" with linespoints, "fidel2.water.results" using 1:5  title "Resolution 4" with linespoints, "fidel2.water.results" using 1:6  title "Resolution 5" with linespoints, "fidel2.water.results" using 1:7  title "Resolution 6" with linespoints, "fidel2.water.results" using 1:8  title "Resolution 7" with linespoints
+
+set title "Fidelity of Wavelet Based Matrix Multiply with Sparse Filter for Waterfall Image"
+
+plot "fidel2.waterfall.results" using 1:2  title "Resolution 1" with linespoints, "fidel2.waterfall.results" using 1:3  title "Resolution 2" with linespoints, "fidel2.waterfall.results" using 1:4  title "Resolution 3" with linespoints, "fidel2.waterfall.results" using 1:5  title "Resolution 4" with linespoints, "fidel2.waterfall.results" using 1:6  title "Resolution 5" with linespoints, "fidel2.waterfall.results" using 1:7  title "Resolution 6" with linespoints, "fidel2.waterfall.results" using 1:8  title "Resolution 7" with linespoints

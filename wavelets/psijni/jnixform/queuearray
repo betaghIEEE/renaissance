@@ -1,0 +1,14 @@
+
+
+class queuearray
+{
+    private quadnode q[];
+    private int N, head, tail;
+    public boolean empty ();
+    public int put (quadnode myItem);
+    public quadnode pop ();
+    public quadnode get ();
+    public void put (quadnode r);
+    
+    
+}

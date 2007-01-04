@@ -1,0 +1,1044 @@
+%\input{tcilatex}
+%\input{tcilatex}
+%\input{tcilatex}
+
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Created=Tue Mar 30 18:28:38 2004}
+%TCIDATA{LastRevised=Wed Mar 31 14:13:12 2004}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="General\Blank Document">}
+%TCIDATA{CSTFile=LaTeX article (bright).cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+%\input{tcilatex}
+
+\begin{document}
+\section{$8\times 8$ Examples}
+This section shows a test simple $8\times 8$ matrices multiplied in wavelet space.  One set of examples uses an upper triangular matrix and multiplies it by itself.  Another set uses a matrix $\frac{1}{2}$s with the diagonal being $\frac{1}{4}$ and also multiplies itself.  The third example takes the upper triangular matrix and multiplies it by the matrix of $\frac{1}{2}$s.   
+
+The values are inserted and retrieved from the program in PGM and PPM with signs retained.  Also, values above 256 are retained.  Each value is a quantized at values of 256 during the input and output stages.  While processing, the values are computed with double floating point precision.  In these case, error is showing up mostly due to quantization.  
+
+\subsection{Matrix multiplication on $8\times 8$ Upper Triangle}
+This first set of multiplications uses the matrix defined in equation \ref{} as the test matrix $A$.   In equation \ref{}, the results of matrix multiply of $A^2$ is presented.  $A$ is simple, and its results in fractional and decimal form are provided.  In the sub-sections that follow the one, two and three resolution wavelet transform and the multiplications for $A^2$ are provided.  In each section, the conventional $A^2$ is referenced for comparison.   
+
+$A= \frac{1}{256} 
+\begin{array}{cccccccc}
+64 & 128 & 128 & 128 & 128 & 128 & 128 & 128 \\ 
+0 & 64 & 128 & 128 & 128 & 128 & 128 & 128 \\ 
+0 & 0 & 64 & 128 & 128 & 128 & 128 & 128 \\ 
+0 & 0 & 0 & 64 & 128 & 128 & 128 & 128 \\ 
+0 & 0 & 0 & 0 & 64 & 128 & 128 & 128 \\ 
+0 & 0 & 0 & 0 & 0 & 64 & 128 & 128 \\ 
+0 & 0 & 0 & 0 & 0 & 0 & 64 & 128 \\ 
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 64
+\end{array}
+$
+
+Results in conventional multiplication are shown in equation \ref{}.  Again these results are reported in intervals of 256.  These results are used to compare the results of $W^{-1}((W(A))^2)$, $W^{-2}((W^2(A))^2)$, and $W^{-3}((W^3(A))^2)$.
+
+$A^2 = \frac{1}{256} 
+\begin{array}{cccccccc}
+1530 & 2550 & 3570 & 4590 & 5610 & 6630 & 7140 & 0 \\ 
+1020 & 2040 & 3060 & 4080 & 5100 & 6120 & 6630 & 0 \\ 
+255 & 1020 & 2040 & 3060 & 4080 & 5100 & 5610 & 0 \\ 
+0 & 255 & 1020 & 2040 & 3060 & 4080 & 4590 & 0 \\ 
+0 & 0 & 255 & 1020 & 2040 & 3060 & 3570 & 0 \\ 
+0 & 0 & 0 & 255 & 1020 & 2040 & 2550 & 0 \\ 
+0 & 0 & 0 & 0 & 255 & 1020 & 1530 & 0 \\ 
+0 & 0 & 0 & 0 & 0 & 255 & 765 & 255
+\end{array} $\\ $ A^2
+=\allowbreak 
+\begin{array}{cccccccc}
+\frac{765}{128} & \frac{1275}{128} & \frac{1785}{128} & \frac{2295}{128} & 
+\frac{2805}{128} & \frac{3315}{128} & \frac{1785}{64} & 0 \\ 
+\frac{255}{64} & \frac{255}{32} & \frac{765}{64} & \frac{255}{16} & \frac{%
+1275}{64} & \frac{765}{32} & \frac{3315}{128} & 0 \\ 
+\frac{255}{256} & \frac{255}{64} & \frac{255}{32} & \frac{765}{64} & \frac{%
+255}{16} & \frac{1275}{64} & \frac{2805}{128} & 0 \\ 
+0 & \frac{255}{256} & \frac{255}{64} & \frac{255}{32} & \frac{765}{64} & 
+\frac{255}{16} & \frac{2295}{128} & 0 \\ 
+0 & 0 & \frac{255}{256} & \frac{255}{64} & \frac{255}{32} & \frac{765}{64} & 
+\frac{1785}{128} & 0 \\ 
+0 & 0 & 0 & \frac{255}{256} & \frac{255}{64} & \frac{255}{32} & \frac{1275}{%
+128} & 0 \\ 
+0 & 0 & 0 & 0 & \frac{255}{256} & \frac{255}{64} & \frac{765}{128} & 0 \\ 
+0 & 0 & 0 & 0 & 0 & \frac{255}{256} & \frac{765}{256} & \frac{255}{256}
+\end{array}
+\allowbreak $\\$ A^2 =\allowbreak 
+\begin{array}{cccccccc}
+\frac{765}{128} & \frac{1275}{128} & \frac{1785}{128} & \frac{2295}{128} & 
+\frac{2805}{128} & \frac{3315}{128} & \frac{1785}{64} & 0 \\ 
+\frac{255}{64} & \frac{255}{32} & \frac{765}{64} & \frac{255}{16} & \frac{%
+1275}{64} & \frac{765}{32} & \frac{3315}{128} & 0 \\ 
+\frac{255}{256} & \frac{255}{64} & \frac{255}{32} & \frac{765}{64} & \frac{%
+255}{16} & \frac{1275}{64} & \frac{2805}{128} & 0 \\ 
+0 & \frac{255}{256} & \frac{255}{64} & \frac{255}{32} & \frac{765}{64} & 
+\frac{255}{16} & \frac{2295}{128} & 0 \\ 
+0 & 0 & \frac{255}{256} & \frac{255}{64} & \frac{255}{32} & \frac{765}{64} & 
+\frac{1785}{128} & 0 \\ 
+0 & 0 & 0 & \frac{255}{256} & \frac{255}{64} & \frac{255}{32} & \frac{1275}{%
+128} & 0 \\ 
+0 & 0 & 0 & 0 & \frac{255}{256} & \frac{255}{64} & \frac{765}{128} & 0 \\ 
+0 & 0 & 0 & 0 & 0 & \frac{255}{256} & \frac{765}{256} & \frac{255}{256}
+\end{array} $\\ $A^2
+\allowbreak =\allowbreak 
+\begin{array}{cccccccc}
+5.\,\allowbreak 976\,6 & 9.\,\allowbreak 960\,9 & 13.\,\allowbreak 945 & 
+17.\,\allowbreak 93 & 21.\,\allowbreak 914 & 25.\,\allowbreak 898 & 
+27.\,\allowbreak 891 & 0 \\ 
+3.\,\allowbreak 984\,4 & 7.\,\allowbreak 968\,8 & 11.\,\allowbreak 953 & 
+15.\,\allowbreak 938 & 19.\,\allowbreak 922 & 23.\,\allowbreak 906 & 
+25.\,\allowbreak 898 & 0 \\ 
+.\,\allowbreak 996\,09 & 3.\,\allowbreak 984\,4 & 7.\,\allowbreak 968\,8 & 
+11.\,\allowbreak 953 & 15.\,\allowbreak 938 & 19.\,\allowbreak 922 & 
+21.\,\allowbreak 914 & 0 \\ 
+0 & .\,\allowbreak 996\,09 & 3.\,\allowbreak 984\,4 & 7.\,\allowbreak 968\,8
+& 11.\,\allowbreak 953 & 15.\,\allowbreak 938 & 17.\,\allowbreak 93 & 0 \\ 
+0 & 0 & .\,\allowbreak 996\,09 & 3.\,\allowbreak 984\,4 & 7.\,\allowbreak
+968\,8 & 11.\,\allowbreak 953 & 13.\,\allowbreak 945 & 0 \\ 
+0 & 0 & 0 & .\,\allowbreak 996\,09 & 3.\,\allowbreak 984\,4 & 
+7.\,\allowbreak 968\,8 & 9.\,\allowbreak 960\,9 & 0 \\ 
+0 & 0 & 0 & 0 & .\,\allowbreak 996\,09 & 3.\,\allowbreak 984\,4 & 
+5.\,\allowbreak 976\,6 & 0 \\ 
+0 & 0 & 0 & 0 & 0 & .\,\allowbreak 996\,09 & 2.\,\allowbreak 988\,3 & 
+.\,\allowbreak 996\,09
+\end{array}
+\allowbreak $
+
+\subsubsection {A multiplication at one resolutions}
+First shown is the wavelet transform of the test matrix $A$.  $W(A)$ is shown with its equivalent fractional and decimal form, and just one resolution of transform.  Elements near or at zero are candidates for sparse filtering.  Contributions made by these near zero elements is small in comparison to that of the larger elements.  
+
+
+$W(A) \frac{1}{256} 
+\begin{array}{cccccccc}
+893 & 1021 & 1021 & 511 & 128 & 0 & 0 & -510 \\ 
+128 & 893 & 1021 & 511 & 128 & 128 & 0 & -510 \\ 
+0 & 128 & 893 & 511 & 0 & 128 & 128 & -510 \\ 
+0 & 0 & 128 & 511 & 0 & 0 & 128 & -255 \\ 
+-127 & 1 & 1 & 1 & 128 & 0 & 0 & 0 \\ 
+-127 & -127 & 1 & 1 & -127 & 128 & 0 & 0 \\ 
+0 & -127 & -127 & 1 & 0 & -127 & 128 & 0 \\ 
+0 & 0 & -127 & 1 & 0 & 0 & -127 & 256
+\end{array}$\\$ W(A) 
+=\allowbreak 
+\begin{array}{cccccccc}
+\frac{893}{256} & \frac{1021}{256} & \frac{1021}{256} & \frac{511}{256} & 
+\frac{1}{2} & 0 & 0 & -\frac{255}{128} \\ 
+\frac{1}{2} & \frac{893}{256} & \frac{1021}{256} & \frac{511}{256} & \frac{1%
+}{2} & \frac{1}{2} & 0 & -\frac{255}{128} \\ 
+0 & \frac{1}{2} & \frac{893}{256} & \frac{511}{256} & 0 & \frac{1}{2} & 
+\frac{1}{2} & -\frac{255}{128} \\ 
+0 & 0 & \frac{1}{2} & \frac{511}{256} & 0 & 0 & \frac{1}{2} & -\frac{255}{256%
+} \\ 
+-\frac{127}{256} & \frac{1}{256} & \frac{1}{256} & \frac{1}{256} & \frac{1}{2%
+} & 0 & 0 & 0 \\ 
+-\frac{127}{256} & -\frac{127}{256} & \frac{1}{256} & \frac{1}{256} & -\frac{%
+127}{256} & \frac{1}{2} & 0 & 0 \\ 
+0 & -\frac{127}{256} & -\frac{127}{256} & \frac{1}{256} & 0 & -\frac{127}{256%
+} & \frac{1}{2} & 0 \\ 
+0 & 0 & -\frac{127}{256} & \frac{1}{256} & 0 & 0 & -\frac{127}{256} & 1
+\end{array}
+\allowbreak $
+
+The results of $(W(A))^2$ are shown in equation \ref{}.  One thing to be careful of in this form are the signs and how they are represented.  If this transform value is stored externally, then these wide range of values have to be considered.    
+
+$\frac{1}{256} 
+\begin{array}{cccccccc}
+3571 & 7651 & 11731 & 6886 & 1021 & 1021 & 1021 & -6885 \\ 
+766 & 4081 & 8161 & 5101 & 511 & 1021 & 1021 & -5100 \\ 
+0 & 766 & 4081 & 3061 & 0 & 511 & 1021 & -3060 \\ 
+0 & 0 & 766 & 1276 & 0 & 0 & 511 & -1020 \\ 
+-510 & -509 & -509 & -254 & 1 & 1 & 1 & 255 \\ 
+-510 & -1020 & -1020 & -510 & -255 & 1 & 1 & 511 \\ 
+1 & -510 & -1020 & -510 & 1 & -255 & 1 & 511 \\ 
+0 & 1 & -510 & -255 & 0 & 1 & -255 & 511
+\end{array}
+=\allowbreak 
+\begin{array}{cccccccc}
+\frac{3571}{256} & \frac{7651}{256} & \frac{11\,731}{256} & \frac{3443}{128}
+& \frac{1021}{256} & \frac{1021}{256} & \frac{1021}{256} & -\frac{6885}{256}
+\\ 
+\frac{383}{128} & \frac{4081}{256} & \frac{8161}{256} & \frac{5101}{256} & 
+\frac{511}{256} & \frac{1021}{256} & \frac{1021}{256} & -\frac{1275}{64} \\ 
+0 & \frac{383}{128} & \frac{4081}{256} & \frac{3061}{256} & 0 & \frac{511}{%
+256} & \frac{1021}{256} & -\frac{765}{64} \\ 
+0 & 0 & \frac{383}{128} & \frac{319}{64} & 0 & 0 & \frac{511}{256} & -\frac{%
+255}{64} \\ 
+-\frac{255}{128} & -\frac{509}{256} & -\frac{509}{256} & -\frac{127}{128} & 
+\frac{1}{256} & \frac{1}{256} & \frac{1}{256} & \frac{255}{256} \\ 
+-\frac{255}{128} & -\frac{255}{64} & -\frac{255}{64} & -\frac{255}{128} & -%
+\frac{255}{256} & \frac{1}{256} & \frac{1}{256} & \frac{511}{256} \\ 
+\frac{1}{256} & -\frac{255}{128} & -\frac{255}{64} & -\frac{255}{128} & 
+\frac{1}{256} & -\frac{255}{256} & \frac{1}{256} & \frac{511}{256} \\ 
+0 & \frac{1}{256} & -\frac{255}{128} & -\frac{255}{256} & 0 & \frac{1}{256}
+& -\frac{255}{256} & \frac{511}{256}
+\end{array}
+\allowbreak $
+\bigskip
+
+After the inverse transform is applied $(W(A))^2$, the matrix is very close to the matrix $A^2$.
+
+$\frac{1}{256} 
+\begin{array}{cccccccc}
+1531 & 2551 & 3571 & 4591 & 5611 & 6631 & 7141 & 1 \\ 
+1021 & 2041 & 3061 & 4081 & 5101 & 6121 & 6631 & 0 \\ 
+256 & 1021 & 2041 & 3061 & 4081 & 5101 & 5611 & 1 \\ 
+0 & 256 & 1021 & 2041 & 3061 & 4081 & 4591 & 1 \\ 
+0 & 0 & 256 & 1021 & 2041 & 3061 & 3571 & 0 \\ 
+0 & 0 & 0 & 256 & 1021 & 2041 & 2551 & 0 \\ 
+0 & 0 & 0 & 0 & 256 & 1021 & 1531 & 0 \\ 
+0 & 0 & 0 & 0 & 0 & 256 & 766 & 256
+\end{array}
+=\allowbreak 
+\begin{array}{cccccccc}
+\frac{1531}{256} & \frac{2551}{256} & \frac{3571}{256} & \frac{4591}{256} & 
+\frac{5611}{256} & \frac{6631}{256} & \frac{7141}{256} & \frac{1}{256} \\ 
+\frac{1021}{256} & \frac{2041}{256} & \frac{3061}{256} & \frac{4081}{256} & 
+\frac{5101}{256} & \frac{6121}{256} & \frac{6631}{256} & 0 \\ 
+1 & \frac{1021}{256} & \frac{2041}{256} & \frac{3061}{256} & \frac{4081}{256}
+& \frac{5101}{256} & \frac{5611}{256} & \frac{1}{256} \\ 
+0 & 1 & \frac{1021}{256} & \frac{2041}{256} & \frac{3061}{256} & \frac{4081}{%
+256} & \frac{4591}{256} & \frac{1}{256} \\ 
+0 & 0 & 1 & \frac{1021}{256} & \frac{2041}{256} & \frac{3061}{256} & \frac{%
+3571}{256} & 0 \\ 
+0 & 0 & 0 & 1 & \frac{1021}{256} & \frac{2041}{256} & \frac{2551}{256} & 0
+\\ 
+0 & 0 & 0 & 0 & 1 & \frac{1021}{256} & \frac{1531}{256} & 0 \\ 
+0 & 0 & 0 & 0 & 0 & 1 & \frac{383}{128} & 1
+\end{array}
+\allowbreak =\allowbreak 
+\begin{array}{cccccccc}
+5.\,\allowbreak 980\,5 & 9.\,\allowbreak 964\,8 & 13.\,\allowbreak 949 & 
+17.\,\allowbreak 934 & 21.\,\allowbreak 918 & 25.\,\allowbreak 902 & 
+27.\,\allowbreak 895 & 3.\,\allowbreak 906\,3\times 10^{-3} \\ 
+3.\,\allowbreak 988\,3 & 7.\,\allowbreak 972\,7 & 11.\,\allowbreak 957 & 
+15.\,\allowbreak 941 & 19.\,\allowbreak 926 & 23.\,\allowbreak 91 & 
+25.\,\allowbreak 902 & 0 \\ 
+1.0 & 3.\,\allowbreak 988\,3 & 7.\,\allowbreak 972\,7 & 11.\,\allowbreak 957
+& 15.\,\allowbreak 941 & 19.\,\allowbreak 926 & 21.\,\allowbreak 918 & 
+3.\,\allowbreak 906\,3\times 10^{-3} \\ 
+0 & 1.0 & 3.\,\allowbreak 988\,3 & 7.\,\allowbreak 972\,7 & 11.\,\allowbreak
+957 & 15.\,\allowbreak 941 & 17.\,\allowbreak 934 & 3.\,\allowbreak
+906\,3\times 10^{-3} \\ 
+0 & 0 & 1.0 & 3.\,\allowbreak 988\,3 & 7.\,\allowbreak 972\,7 & 
+11.\,\allowbreak 957 & 13.\,\allowbreak 949 & 0 \\ 
+0 & 0 & 0 & 1.0 & 3.\,\allowbreak 988\,3 & 7.\,\allowbreak 972\,7 & 
+9.\,\allowbreak 964\,8 & 0 \\ 
+0 & 0 & 0 & 0 & 1.0 & 3.\,\allowbreak 988\,3 & 5.\,\allowbreak 980\,5 & 0 \\ 
+0 & 0 & 0 & 0 & 0 & 1.0 & 2.\,\allowbreak 992\,2 & 1.0
+\end{array}
+\allowbreak $
+
+The values for this operation match those of the conventional matrix multiplication a relative energy of $10^-15$.  These slight difference are enough to generate quantization difference between the original and the transform based one.  However, it should be noted that numerically, $W^{-1}(W(A)^2)$ are the same.  
+
+\subsubsection {Upper Triangular Matrix Multiply with Two Resolution of the Wavelet Transform}
+After two resolutions of the wavelet transform, matrix multiplication retains a fidelity of $10^{-14}$ between $A^2$ and $W^{-2}(((W^2(A))^2)$.  Unfortunately, only seven of the elements are within the epsilon threshold of $\frac{1}{512}$.  and nine elements within the epsilon threshold of $\frac{3}{512}$.
+
+$\frac{1}{256}
+\begin{array}{cccccccc}
+1467 & 1531 & 192 & -510 & 447 & -510 & -63 & -510\\
+64 & 1021 & 64 & -255 & 64 & 0 & 64 & -510\\
+-191 & 1 & 64 & 0 & 64 & 0 & 64 & 0\\
+-63 & -127 & -63 & 128 & -63 & 128 & -63 & 128\\
+-446 & 1 & 64 & 1 & 319 & 1 & 64 & 1\\
+-63 & -382 & -63 & 128 & -63 & 383 & -63 & 128\\
+-63 & 1 & -63 & 0 & -63 & 1 & 192 & 0\\
+64 & 0 & 64 & 1 & 64 & 1 & 64 & 256
+\end{array}
+$ 
+
+Next step is to square matrix $W^2(A)$ designated $(W^2(A))^2$.  $(W^2(A))^2$ is shown in equation.
+$
+(W^2(A))^2= \frac{1}{256}
+\begin{array}{cccccccc}
+8033 & 15938 & 1786 & -4972 & 3698 & -3952 & 256 & -7012\\
+383 & 4591 & 256 & -1275 & 383 & -255 & 256 & -2805\\
+-1275 & -1147 & -127 & 383 & -255 & 383 & 128 & 383\\
+-255 & -1147 & -127 & 383 & -255 & 383 & -127 & 638\\
+-3187 & -2677 & -255 & 893 & -382 & 893 & 256 & 893\\
+-382 & -2550 & -255 & 766 & -382 & 766 & -255 & 1276\\
+-255 & -382 & -127 & 128 & -255 & 128 & 128 & 128\\
+256 & 383 & 128 & -127 & 256 & -127 & 128 & 128
+\end{array}
+$ 
+After the inverse transform is applied $(W^2(A))^2$, the result is very close to the product of $A^2$.
+
+$
+W^-2((W^2(A))^2)= \frac{1}{256}
+\begin{array}{cccccccc}
+1531 & 2551 & 3571 & 4591 & 5611 & 6631 & 7141 & 1\\
+1021 & 2041 & 3061 & 4081 & 5101 & 6121 & 6631 & 1\\ 
+256 & 1021 & 2041 & 3061 & 4081 & 5101 & 5611 & 1\\
+1 & 256 & 1021 & 2041 & 3061 & 4081 & 4591 & 0\\
+1 & 1 & 256 & 1021 & 2041 & 3061 & 3571 & 0\\
+1 & 1 & 0 & 256 & 1020 & 2041 & 2551 & 0\\
+0 & 1 & 0 & 0 & 256 & 1021 & 1531 & 0\\
+0 & 0 & 0 & 0 & 0 & 256 & 766 & 256
+\end{array}
+$
+
+\subsubsection {Multiplication on Three Resolutions of Wavelet Transform on an Upper Triangular Matrix}
+After three resolutions of the wavelet transform on an upper triangular matrix, six elements of the sixty-four elements are below $\frac{1}{512}$.  Another ten of the sixty-four elements are below $\frac{3}{512}$.    Relative fidelity is on the order of $10^-14$.  The steps of producing a wavelet based transform with three resolutions is shown here.
+
+First, acquire three resolutions of the wavelet transform, shown in equation \ref{}.
+
+$
+W^3(A)= \frac{1}{256}
+\begin{array}{cccccccc}
+2041 & -255 & 0 & -510 & 511 & -510 & -510 & -510\\
+-191 & 64 & 64 & 64 & 64 & 64 & 64 & 64\\
+-446 & 64 & 319 & 64 & 64 & 64 & 64 & 64\\
+0 & 0 & 1 & 256 & 1 & 1 & 1 & 1\\
+-956 & 64 & 64 & 64 & 447 & 192 & 447 & -63\\
+0 & 1 & 1 & 1 & -127 & 128 & 128 & 128\\
+1 & 0 & 1 & 0 & -382 & 128 & 383 & 128\\
+64 & 64 & 64 & 64 & -63 & -63 & -63 & 192
+\end{array}
+$
+
+Next step is to square matrix $W^3(A)$ designated $(W^3(A))^2$.  $(W^3(A))^2$ is shown in equation \ref{}.
+$
+(W^3(A))^2= \frac{1}{256}
+\begin{array}{cccccccc}
+14472 & -2103 & -63 & -4653 & 6057 & -4143 & -4143 & -5163\\
+-1912 & 256 & 128 & 511 & -382 & 511 & 638 & 511\\
+-4398 & 574 & 447 & 1084 & -828 & 1084 & 1212 & 1084\\
+0 & 1 & 1 & 256 & 0 & 1 & 1 & 1\\
+-9498 & 1084 & 192 & 2104 & -1848 & 2614 & 3507 & 2104\\
+511 & 1 & 1 & 1 & -510 & 1 & 1 & 256\\
+1467 & -63 & -63 & -63 & -1338 & -63 & -63 & 447\\
+638 & 1 & 128 & 1 & 128 & -255 & -382 & 1
+\end{array}
+$ 
+Last the inverse transform is applied $(W^3(A))^2$, the result is very close to the product of $A^2$.
+
+$
+W^-3((W^3(A))^2)= \frac{1}{256}
+\begin{array}{cccccccc}
+1531 & 2551 & 3571 & 4591 & 5611 & 6631 & 7141 & 0\\
+1021 & 2041 & 3061 & 4081 & 5101 & 6121 & 6631 & 0\\
+256 & 1021 & 2041 & 3061 & 4081 & 5101 & 5611 & 1\\
+1 & 256 & 1021 & 2041 & 3061 & 4081 & 4591 & 0\\
+1 & 1 & 256 & 1021 & 2041 & 3061 & 3571 & 0\\
+1 & 1 & 1 & 256 & 1021 & 2041 & 2551 & 0\\
+0 & 1 & 1 & 1 & 255 & 1021 & 1531 & 0\\
+0 & 1 & 1 & 1 & 0 & 256 & 766 & 255
+\end{array}
+$
+
+
+
+\subsection{Matrix Multiply Results for 8 by 8 Full Matrix}
+This next example uses a matrix defined in equation \ref{}, and designated $B$.  Unlike the other matrix, this matrix is filled with nothing but $\frac{1}{2}$ except on the diagonal.  One nice feature about this example are the huge levels of sparsity that emerge as the matrix is transformed.   This example only uses the conventional multiplication algorithm as the mean of calculating $B^2$ and $W(B)^2)$.  Strassen and Winograd may used for future work.  
+
+$\frac{1}{256} 
+\begin{array}{cccccccc}
+64 & 128 & 128 & 128 & 128 & 128 & 128 & 128 \\ 
+128 & 64 & 128 & 128 & 128 & 128 & 128 & 128 \\ 
+128 & 128 & 64 & 128 & 128 & 128 & 128 & 128 \\ 
+128 & 128 & 128 & 64 & 128 & 128 & 128 & 128 \\ 
+128 & 128 & 128 & 128 & 64 & 128 & 128 & 128 \\ 
+128 & 128 & 128 & 128 & 128 & 64 & 128 & 128 \\ 
+128 & 128 & 128 & 128 & 128 & 128 & 64 & 128 \\ 
+128 & 128 & 128 & 128 & 128 & 128 & 128 & 64
+\end{array}
+=\allowbreak 
+\begin{array}{cccccccc}
+\frac{1}{4} & \frac{1}{2} & \frac{1}{2} & \frac{1}{2} & \frac{1}{2} & \frac{1%
+}{2} & \frac{1}{2} & \frac{1}{2} \\ 
+\frac{1}{2} & \frac{1}{4} & \frac{1}{2} & \frac{1}{2} & \frac{1}{2} & \frac{1%
+}{2} & \frac{1}{2} & \frac{1}{2} \\ 
+\frac{1}{2} & \frac{1}{2} & \frac{1}{4} & \frac{1}{2} & \frac{1}{2} & \frac{1%
+}{2} & \frac{1}{2} & \frac{1}{2} \\ 
+\frac{1}{2} & \frac{1}{2} & \frac{1}{2} & \frac{1}{4} & \frac{1}{2} & \frac{1%
+}{2} & \frac{1}{2} & \frac{1}{2} \\ 
+\frac{1}{2} & \frac{1}{2} & \frac{1}{2} & \frac{1}{2} & \frac{1}{4} & \frac{1%
+}{2} & \frac{1}{2} & \frac{1}{2} \\ 
+\frac{1}{2} & \frac{1}{2} & \frac{1}{2} & \frac{1}{2} & \frac{1}{2} & \frac{1%
+}{4} & \frac{1}{2} & \frac{1}{2} \\ 
+\frac{1}{2} & \frac{1}{2} & \frac{1}{2} & \frac{1}{2} & \frac{1}{2} & \frac{1%
+}{2} & \frac{1}{4} & \frac{1}{2} \\ 
+\frac{1}{2} & \frac{1}{2} & \frac{1}{2} & \frac{1}{2} & \frac{1}{2} & \frac{1%
+}{2} & \frac{1}{2} & \frac{1}{4}
+\end{array}
+\allowbreak $
+
+\subsubsection {One Resolution of Wavelet Transform}
+The first resolution produces a huge level of sparseness in the vertical section and the horizontal section has most of its energy concentrated in the lower and upper rows.  Furthermore the diagonal component as expected has its energy concentrated in the diagonal.   Twenty values out sixty-four have been reduced to less than $\frac{1}{512}$.  Another seventeen has been reduced to less than $\frac{3}{512}$.   The rest of the values, hold significance and may need to transformed again to remove some redundancy.  
+
+First step is to show the wavelet transform, and displayed in equation \ref{}.
+$\frac{1}{256} 
+\begin{array}{cccccccc}
+893 & 1021 & 1021 & 1021 & 128 & 0 & 0 & 0 \\ 
+893 & 893 & 1021 & 1021 & -127 & 128 & 0 & 0 \\ 
+1021 & 893 & 893 & 1021 & 0 & -127 & 128 & 0 \\ 
+1021 & 1021 & 893 & 766 & 0 & 0 & -127 & 0 \\ 
+-127 & 1 & 1 & 1 & 128 & 0 & 0 & 0 \\ 
+128 & -127 & 1 & 1 & 128 & 128 & 0 & 0 \\ 
+1 & 128 & -127 & 1 & 0 & 128 & 128 & 0 \\ 
+1 & 1 & 128 & -255 & 0 & 0 & 128 & 0
+\end{array}
+=\allowbreak 
+\begin{array}{cccccccc}
+\frac{893}{256} & \frac{1021}{256} & \frac{1021}{256} & \frac{1021}{256} & 
+\frac{1}{2} & 0 & 0 & 0 \\ 
+\frac{893}{256} & \frac{893}{256} & \frac{1021}{256} & \frac{1021}{256} & -%
+\frac{127}{256} & \frac{1}{2} & 0 & 0 \\ 
+\frac{1021}{256} & \frac{893}{256} & \frac{893}{256} & \frac{1021}{256} & 0
+& -\frac{127}{256} & \frac{1}{2} & 0 \\ 
+\frac{1021}{256} & \frac{1021}{256} & \frac{893}{256} & \frac{383}{128} & 0
+& 0 & -\frac{127}{256} & 0 \\ 
+-\frac{127}{256} & \frac{1}{256} & \frac{1}{256} & \frac{1}{256} & \frac{1}{2%
+} & 0 & 0 & 0 \\ 
+\frac{1}{2} & -\frac{127}{256} & \frac{1}{256} & \frac{1}{256} & \frac{1}{2}
+& \frac{1}{2} & 0 & 0 \\ 
+\frac{1}{256} & \frac{1}{2} & -\frac{127}{256} & \frac{1}{256} & 0 & \frac{1%
+}{2} & \frac{1}{2} & 0 \\ 
+\frac{1}{256} & \frac{1}{256} & \frac{1}{2} & -\frac{255}{256} & 0 & 0 & 
+\frac{1}{2} & 0
+\end{array}
+\allowbreak =\allowbreak 
+\begin{array}{cccccccc}
+3.\,\allowbreak 488\,3 & 3.\,\allowbreak 988\,3 & 3.\,\allowbreak 988\,3 & 
+3.\,\allowbreak 988\,3 & .\,\allowbreak 5 & 0 & 0 & 0 \\ 
+3.\,\allowbreak 488\,3 & 3.\,\allowbreak 488\,3 & 3.\,\allowbreak 988\,3 & 
+3.\,\allowbreak 988\,3 & -.\,\allowbreak 496\,09 & .\,\allowbreak 5 & 0 & 0
+\\ 
+3.\,\allowbreak 988\,3 & 3.\,\allowbreak 488\,3 & 3.\,\allowbreak 488\,3 & 
+3.\,\allowbreak 988\,3 & 0 & -.\,\allowbreak 496\,09 & .\,\allowbreak 5 & 0
+\\ 
+3.\,\allowbreak 988\,3 & 3.\,\allowbreak 988\,3 & 3.\,\allowbreak 488\,3 & 
+2.\,\allowbreak 992\,2 & 0 & 0 & -.\,\allowbreak 496\,09 & 0 \\ 
+-.\,\allowbreak 496\,09 & 3.\,\allowbreak 906\,3\times 10^{-3} & 
+3.\,\allowbreak 906\,3\times 10^{-3} & 3.\,\allowbreak 906\,3\times 10^{-3}
+& .\,\allowbreak 5 & 0 & 0 & 0 \\ 
+.\,\allowbreak 5 & -.\,\allowbreak 496\,09 & 3.\,\allowbreak 906\,3\times
+10^{-3} & 3.\,\allowbreak 906\,3\times 10^{-3} & .\,\allowbreak 5 & 
+.\,\allowbreak 5 & 0 & 0 \\ 
+3.\,\allowbreak 906\,3\times 10^{-3} & .\,\allowbreak 5 & -.\,\allowbreak
+496\,09 & 3.\,\allowbreak 906\,3\times 10^{-3} & 0 & .\,\allowbreak 5 & 
+.\,\allowbreak 5 & 0 \\ 
+3.\,\allowbreak 906\,3\times 10^{-3} & 3.\,\allowbreak 906\,3\times 10^{-3}
+& .\,\allowbreak 5 & -.\,\allowbreak 996\,09 & 0 & 0 & .\,\allowbreak 5 & 0
+\end{array}
+\allowbreak $
+
+Next step is to compute the value of $W(B)^2$, and is shown in equation \ref{}.  
+
+$\frac{1}{256} 
+\begin{array}{cccccccc}
+14791 & 14791 & 14791 & 14791 & 0 & 0 & 0 & 0 \\ 
+14536 & 14281 & 14281 & 14281 & 1 & 0 & 0 & 0 \\ 
+14281 & 14536 & 14281 & 14281 & 0 & 1 & 0 & 0 \\ 
+13771 & 13771 & 14026 & 14026 & 0 & 0 & 1 & 0 \\ 
+-509 & -509 & -509 & -509 & 0 & 1 & 1 & 0 \\ 
+1 & 1 & 1 & 1 & 256 & 0 & 1 & 0 \\ 
+1 & 1 & 1 & 1 & 1 & 256 & 0 & 0 \\ 
+-509 & -509 & -509 & -254 & 1 & 1 & 256 & 0
+\end{array}
+=\allowbreak 
+\begin{array}{cccccccc}
+\frac{14\,791}{256} & \frac{14\,791}{256} & \frac{14\,791}{256} & \frac{%
+14\,791}{256} & 0 & 0 & 0 & 0 \\ 
+\frac{1817}{32} & \frac{14\,281}{256} & \frac{14\,281}{256} & \frac{14\,281}{%
+256} & \frac{1}{256} & 0 & 0 & 0 \\ 
+\frac{14\,281}{256} & \frac{1817}{32} & \frac{14\,281}{256} & \frac{14\,281}{%
+256} & 0 & \frac{1}{256} & 0 & 0 \\ 
+\frac{13\,771}{256} & \frac{13\,771}{256} & \frac{7013}{128} & \frac{7013}{%
+128} & 0 & 0 & \frac{1}{256} & 0 \\ 
+-\frac{509}{256} & -\frac{509}{256} & -\frac{509}{256} & -\frac{509}{256} & 0
+& \frac{1}{256} & \frac{1}{256} & 0 \\ 
+\frac{1}{256} & \frac{1}{256} & \frac{1}{256} & \frac{1}{256} & 1 & 0 & 
+\frac{1}{256} & 0 \\ 
+\frac{1}{256} & \frac{1}{256} & \frac{1}{256} & \frac{1}{256} & \frac{1}{256}
+& 1 & 0 & 0 \\ 
+-\frac{509}{256} & -\frac{509}{256} & -\frac{509}{256} & -\frac{127}{128} & 
+\frac{1}{256} & \frac{1}{256} & 1 & 0
+\end{array}
+\allowbreak =\allowbreak 
+\begin{array}{cccccccc}
+57.\,\allowbreak 777 & 57.\,\allowbreak 777 & 57.\,\allowbreak 777 & 
+57.\,\allowbreak 777 & 0 & 0 & 0 & 0 \\ 
+56.\,\allowbreak 781 & 55.\,\allowbreak 785 & 55.\,\allowbreak 785 & 
+55.\,\allowbreak 785 & 3.\,\allowbreak 906\,3\times 10^{-3} & 0 & 0 & 0 \\ 
+55.\,\allowbreak 785 & 56.\,\allowbreak 781 & 55.\,\allowbreak 785 & 
+55.\,\allowbreak 785 & 0 & 3.\,\allowbreak 906\,3\times 10^{-3} & 0 & 0 \\ 
+53.\,\allowbreak 793 & 53.\,\allowbreak 793 & 54.\,\allowbreak 789 & 
+54.\,\allowbreak 789 & 0 & 0 & 3.\,\allowbreak 906\,3\times 10^{-3} & 0 \\ 
+-1.\,\allowbreak 988\,3 & -1.\,\allowbreak 988\,3 & -1.\,\allowbreak 988\,3
+& -1.\,\allowbreak 988\,3 & 0 & 3.\,\allowbreak 906\,3\times 10^{-3} & 
+3.\,\allowbreak 906\,3\times 10^{-3} & 0 \\ 
+3.\,\allowbreak 906\,3\times 10^{-3} & 3.\,\allowbreak 906\,3\times 10^{-3}
+& 3.\,\allowbreak 906\,3\times 10^{-3} & 3.\,\allowbreak 906\,3\times 10^{-3}
+& 1.0 & 0 & 3.\,\allowbreak 906\,3\times 10^{-3} & 0 \\ 
+3.\,\allowbreak 906\,3\times 10^{-3} & 3.\,\allowbreak 906\,3\times 10^{-3}
+& 3.\,\allowbreak 906\,3\times 10^{-3} & 3.\,\allowbreak 906\,3\times 10^{-3}
+& 3.\,\allowbreak 906\,3\times 10^{-3} & 1.0 & 0 & 0 \\ 
+-1.\,\allowbreak 988\,3 & -1.\,\allowbreak 988\,3 & -1.\,\allowbreak 988\,3
+& -.\,\allowbreak 992\,19 & 3.\,\allowbreak 906\,3\times 10^{-3} & 
+3.\,\allowbreak 906\,3\times 10^{-3} & 1.0 & 0
+\end{array}
+\allowbreak $
+
+%Results in conventional multiplication
+%
+%$\frac{1}{256} 
+%\begin{array}{cccccccc}
+%7650 & 7650 & 7650 & 7650 & 7650 & 7650 & 7650 & 7650 \\ 
+%7140 & 7140 & 7140 & 7140 & 7140 & 7140 & 7140 & 7140 \\ 
+%7395 & 7140 & 7140 & 7140 & 7140 & 7140 & 7140 & 7140 \\ 
+%7140 & 7395 & 7140 & 7140 & 7140 & 7140 & 7140 & 7140 \\ 
+%7140 & 7140 & 7395 & 7140 & 7140 & 7140 & 7140 & 7140 \\ 
+%7140 & 7140 & 7140 & 7395 & 7140 & 7140 & 7140 & 7140 \\ 
+%7140 & 7140 & 7140 & 7140 & 7395 & 7140 & 7140 & 7140 \\ 
+%6630 & 6630 & 6630 & 6630 & 6630 & 6885 & 6885 & 6885
+%\end{array}
+%=\allowbreak 
+%\begin{array}{cccccccc}
+%\frac{3825}{128} & \frac{3825}{128} & \frac{3825}{128} & \frac{3825}{128} & 
+%\frac{3825}{128} & \frac{3825}{128} & \frac{3825}{128} & \frac{3825}{128} \\ 
+%\frac{1785}{64} & \frac{1785}{64} & \frac{1785}{64} & \frac{1785}{64} & 
+%\frac{1785}{64} & \frac{1785}{64} & \frac{1785}{64} & \frac{1785}{64} \\ 
+%\frac{7395}{256} & \frac{1785}{64} & \frac{1785}{64} & \frac{1785}{64} & 
+%\frac{1785}{64} & \frac{1785}{64} & \frac{1785}{64} & \frac{1785}{64} \\ 
+%\frac{1785}{64} & \frac{7395}{256} & \frac{1785}{64} & \frac{1785}{64} & 
+%\frac{1785}{64} & \frac{1785}{64} & \frac{1785}{64} & \frac{1785}{64} \\ 
+%\frac{1785}{64} & \frac{1785}{64} & \frac{7395}{256} & \frac{1785}{64} & 
+%\frac{1785}{64} & \frac{1785}{64} & \frac{1785}{64} & \frac{1785}{64} \\ 
+%\frac{1785}{64} & \frac{1785}{64} & \frac{1785}{64} & \frac{7395}{256} & 
+%\frac{1785}{64} & \frac{1785}{64} & \frac{1785}{64} & \frac{1785}{64} \\ 
+%\frac{1785}{64} & \frac{1785}{64} & \frac{1785}{64} & \frac{1785}{64} & 
+%\frac{7395}{256} & \frac{1785}{64} & \frac{1785}{64} & \frac{1785}{64} \\ 
+%\frac{3315}{128} & \frac{3315}{128} & \frac{3315}{128} & \frac{3315}{128} & 
+%\frac{3315}{128} & \frac{6885}{256} & \frac{6885}{256} & \frac{6885}{256}
+%\end{array}
+%\allowbreak =\allowbreak 
+%\begin{array}{cccccccc}
+%29.\,\allowbreak 883 & 29.\,\allowbreak 883 & 29.\,\allowbreak 883 & 
+%29.\,\allowbreak 883 & 29.\,\allowbreak 883 & 29.\,\allowbreak 883 & 
+%29.\,\allowbreak 883 & 29.\,\allowbreak 883 \\ 
+%27.\,\allowbreak 891 & 27.\,\allowbreak 891 & 27.\,\allowbreak 891 & 
+%27.\,\allowbreak 891 & 27.\,\allowbreak 891 & 27.\,\allowbreak 891 & 
+%27.\,\allowbreak 891 & 27.\,\allowbreak 891 \\ 
+%28.\,\allowbreak 887 & 27.\,\allowbreak 891 & 27.\,\allowbreak 891 & 
+%27.\,\allowbreak 891 & 27.\,\allowbreak 891 & 27.\,\allowbreak 891 & 
+%27.\,\allowbreak 891 & 27.\,\allowbreak 891 \\ 
+%27.\,\allowbreak 891 & 28.\,\allowbreak 887 & 27.\,\allowbreak 891 & 
+%27.\,\allowbreak 891 & 27.\,\allowbreak 891 & 27.\,\allowbreak 891 & 
+%27.\,\allowbreak 891 & 27.\,\allowbreak 891 \\ 
+%27.\,\allowbreak 891 & 27.\,\allowbreak 891 & 28.\,\allowbreak 887 & 
+%27.\,\allowbreak 891 & 27.\,\allowbreak 891 & 27.\,\allowbreak 891 & 
+%27.\,\allowbreak 891 & 27.\,\allowbreak 891 \\ 
+%27.\,\allowbreak 891 & 27.\,\allowbreak 891 & 27.\,\allowbreak 891 & 
+%28.\,\allowbreak 887 & 27.\,\allowbreak 891 & 27.\,\allowbreak 891 & 
+%27.\,\allowbreak 891 & 27.\,\allowbreak 891 \\ 
+%27.\,\allowbreak 891 & 27.\,\allowbreak 891 & 27.\,\allowbreak 891 & 
+%27.\,\allowbreak 891 & 28.\,\allowbreak 887 & 27.\,\allowbreak 891 & 
+%27.\,\allowbreak 891 & 27.\,\allowbreak 891 \\ 
+%25.\,\allowbreak 898 & 25.\,\allowbreak 898 & 25.\,\allowbreak 898 & 
+%25.\,\allowbreak 898 & 25.\,\allowbreak 898 & 26.\,\allowbreak 895 & 
+%26.\,\allowbreak 895 & 26.\,\allowbreak 895
+%\end{array}
+%\allowbreak $
+Finally, the inverse transform is applied to matrix $W(B)^2$, shown in equation \ref{}.
+
+$\frac{1}{256} 
+\begin{array}{cccccccc}
+7651 & 7651 & 7651 & 7651 & 7651 & 7651 & 7651 & 7651 \\ 
+7141 & 7141 & 7141 & 7141 & 7141 & 7141 & 7141 & 7141 \\ 
+7396 & 7141 & 7141 & 7141 & 7141 & 7141 & 7141 & 7141 \\ 
+7141 & 7396 & 7141 & 7141 & 7141 & 7141 & 7141 & 7141 \\ 
+7141 & 7141 & 7396 & 7141 & 7141 & 7141 & 7141 & 7141 \\ 
+7141 & 7141 & 7141 & 7396 & 7141 & 7141 & 7141 & 7141 \\ 
+7141 & 7141 & 7141 & 7141 & 7396 & 7141 & 7141 & 7141 \\ 
+6631 & 6631 & 6631 & 6631 & 6631 & 6886 & 6886 & 6886
+\end{array}
+=\allowbreak 
+\begin{array}{cccccccc}
+\frac{7651}{256} & \frac{7651}{256} & \frac{7651}{256} & \frac{7651}{256} & 
+\frac{7651}{256} & \frac{7651}{256} & \frac{7651}{256} & \frac{7651}{256} \\ 
+\frac{7141}{256} & \frac{7141}{256} & \frac{7141}{256} & \frac{7141}{256} & 
+\frac{7141}{256} & \frac{7141}{256} & \frac{7141}{256} & \frac{7141}{256} \\ 
+\frac{1849}{64} & \frac{7141}{256} & \frac{7141}{256} & \frac{7141}{256} & 
+\frac{7141}{256} & \frac{7141}{256} & \frac{7141}{256} & \frac{7141}{256} \\ 
+\frac{7141}{256} & \frac{1849}{64} & \frac{7141}{256} & \frac{7141}{256} & 
+\frac{7141}{256} & \frac{7141}{256} & \frac{7141}{256} & \frac{7141}{256} \\ 
+\frac{7141}{256} & \frac{7141}{256} & \frac{1849}{64} & \frac{7141}{256} & 
+\frac{7141}{256} & \frac{7141}{256} & \frac{7141}{256} & \frac{7141}{256} \\ 
+\frac{7141}{256} & \frac{7141}{256} & \frac{7141}{256} & \frac{1849}{64} & 
+\frac{7141}{256} & \frac{7141}{256} & \frac{7141}{256} & \frac{7141}{256} \\ 
+\frac{7141}{256} & \frac{7141}{256} & \frac{7141}{256} & \frac{7141}{256} & 
+\frac{1849}{64} & \frac{7141}{256} & \frac{7141}{256} & \frac{7141}{256} \\ 
+\frac{6631}{256} & \frac{6631}{256} & \frac{6631}{256} & \frac{6631}{256} & 
+\frac{6631}{256} & \frac{3443}{128} & \frac{3443}{128} & \frac{3443}{128}
+\end{array}
+\allowbreak =\allowbreak 
+\begin{array}{cccccccc}
+29.\,\allowbreak 887 & 29.\,\allowbreak 887 & 29.\,\allowbreak 887 & 
+29.\,\allowbreak 887 & 29.\,\allowbreak 887 & 29.\,\allowbreak 887 & 
+29.\,\allowbreak 887 & 29.\,\allowbreak 887 \\ 
+27.\,\allowbreak 895 & 27.\,\allowbreak 895 & 27.\,\allowbreak 895 & 
+27.\,\allowbreak 895 & 27.\,\allowbreak 895 & 27.\,\allowbreak 895 & 
+27.\,\allowbreak 895 & 27.\,\allowbreak 895 \\ 
+28.\,\allowbreak 891 & 27.\,\allowbreak 895 & 27.\,\allowbreak 895 & 
+27.\,\allowbreak 895 & 27.\,\allowbreak 895 & 27.\,\allowbreak 895 & 
+27.\,\allowbreak 895 & 27.\,\allowbreak 895 \\ 
+27.\,\allowbreak 895 & 28.\,\allowbreak 891 & 27.\,\allowbreak 895 & 
+27.\,\allowbreak 895 & 27.\,\allowbreak 895 & 27.\,\allowbreak 895 & 
+27.\,\allowbreak 895 & 27.\,\allowbreak 895 \\ 
+27.\,\allowbreak 895 & 27.\,\allowbreak 895 & 28.\,\allowbreak 891 & 
+27.\,\allowbreak 895 & 27.\,\allowbreak 895 & 27.\,\allowbreak 895 & 
+27.\,\allowbreak 895 & 27.\,\allowbreak 895 \\ 
+27.\,\allowbreak 895 & 27.\,\allowbreak 895 & 27.\,\allowbreak 895 & 
+28.\,\allowbreak 891 & 27.\,\allowbreak 895 & 27.\,\allowbreak 895 & 
+27.\,\allowbreak 895 & 27.\,\allowbreak 895 \\ 
+27.\,\allowbreak 895 & 27.\,\allowbreak 895 & 27.\,\allowbreak 895 & 
+27.\,\allowbreak 895 & 28.\,\allowbreak 891 & 27.\,\allowbreak 895 & 
+27.\,\allowbreak 895 & 27.\,\allowbreak 895 \\ 
+25.\,\allowbreak 902 & 25.\,\allowbreak 902 & 25.\,\allowbreak 902 & 
+25.\,\allowbreak 902 & 25.\,\allowbreak 902 & 26.\,\allowbreak 898 & 
+26.\,\allowbreak 898 & 26.\,\allowbreak 898
+\end{array}
+\allowbreak $
+
+\subsubsection{Matrix Multiplication $8\times 8$ on dense matrix with 2 resolutions%
+}
+
+
+Next step, the square of matrix $W^2(B)$ is $(W^2(B))^2$ and shown in equation \ref{}.
+
+$\frac{1}{256}
+\begin{array}{cccccccc}
+1849 & 2041 & 64 & 0 & 64 & 0 & 64 & 0 \\ 
+1977 & 1786 & -63 & 1 & -63 & 0 & -63 & 0 \\ 
+-63 & 1 & 192 & 0 & -63 & 1 & -63 & 0 \\ 
+64 & -127 & 64 & 128 & 64 & -127 & 64 & -127 \\ 
+-63 & 0 & -63 & 0 & -63 & 1 & 192 & 0 \\ 
+64 & -127 & 64 & -127 & 64 & -127 & 64 & 128 \\ 
+64 & 1 & 64 & 0 & -191 & 1 & 64 & 0 \\ 
+-63 & 0 & -63 & 0 & -63 & -255 & -63 & 1
+\end{array}
+=$
+
+$\allowbreak 
+\begin{array}{cccccccc}
+\frac{1849}{256} & \frac{2041}{256} & \frac{1}{4} & 0 & \frac{1}{4} & 0 & 
+\frac{1}{4} & 0 \\ 
+\frac{1977}{256} & \frac{893}{128} & -\frac{63}{256} & \frac{1}{256} & -%
+\frac{63}{256} & 0 & -\frac{63}{256} & 0 \\ 
+-\frac{63}{256} & \frac{1}{256} & \frac{3}{4} & 0 & -\frac{63}{256} & \frac{1%
+}{256} & -\frac{63}{256} & 0 \\ 
+\frac{1}{4} & -\frac{127}{256} & \frac{1}{4} & \frac{1}{2} & \frac{1}{4} & -%
+\frac{127}{256} & \frac{1}{4} & -\frac{127}{256} \\ 
+-\frac{63}{256} & 0 & -\frac{63}{256} & 0 & -\frac{63}{256} & \frac{1}{256}
+& \frac{3}{4} & 0 \\ 
+\frac{1}{4} & -\frac{127}{256} & \frac{1}{4} & -\frac{127}{256} & \frac{1}{4}
+& -\frac{127}{256} & \frac{1}{4} & \frac{1}{2} \\ 
+\frac{1}{4} & \frac{1}{256} & \frac{1}{4} & 0 & -\frac{191}{256} & \frac{1}{%
+256} & \frac{1}{4} & 0 \\ 
+-\frac{63}{256} & 0 & -\frac{63}{256} & 0 & -\frac{63}{256} & -\frac{255}{256%
+} & -\frac{63}{256} & \frac{1}{256}
+\end{array}
+\allowbreak =$
+
+$\allowbreak 
+\begin{array}{cccccccc}
+7.\,\allowbreak 222\,7 & 7.\,\allowbreak 972\,7 & .\,\allowbreak 25 & 0 & 
+.\,\allowbreak 25 & 0 & .\,\allowbreak 25 & 0 \\ 
+7.\,\allowbreak 722\,7 & 6.\,\allowbreak 976\,6 & -.\,\allowbreak 246\,09 & 
+3.\,\allowbreak 906\,3\times 10^{-3} & -.\,\allowbreak 246\,09 & 0 & 
+-.\,\allowbreak 246\,09 & 0 \\ 
+-.\,\allowbreak 246\,09 & 3.\,\allowbreak 906\,3\times 10^{-3} & 
+.\,\allowbreak 75 & 0 & -.\,\allowbreak 246\,09 & 3.\,\allowbreak
+906\,3\times 10^{-3} & -.\,\allowbreak 246\,09 & 0 \\ 
+.\,\allowbreak 25 & -.\,\allowbreak 496\,09 & .\,\allowbreak 25 & 
+.\,\allowbreak 5 & .\,\allowbreak 25 & -.\,\allowbreak 496\,09 & 
+.\,\allowbreak 25 & -.\,\allowbreak 496\,09 \\ 
+-.\,\allowbreak 246\,09 & 0 & -.\,\allowbreak 246\,09 & 0 & -.\,\allowbreak
+246\,09 & 3.\,\allowbreak 906\,3\times 10^{-3} & .\,\allowbreak 75 & 0 \\ 
+.\,\allowbreak 25 & -.\,\allowbreak 496\,09 & .\,\allowbreak 25 & 
+-.\,\allowbreak 496\,09 & .\,\allowbreak 25 & -.\,\allowbreak 496\,09 & 
+.\,\allowbreak 25 & .\,\allowbreak 5 \\ 
+.\,\allowbreak 25 & 3.\,\allowbreak 906\,3\times 10^{-3} & .\,\allowbreak 25
+& 0 & -.\,\allowbreak 746\,09 & 3.\,\allowbreak 906\,3\times 10^{-3} & 
+.\,\allowbreak 25 & 0 \\ 
+-.\,\allowbreak 246\,09 & 0 & -.\,\allowbreak 246\,09 & 0 & -.\,\allowbreak
+246\,09 & -.\,\allowbreak 996\,09 & -.\,\allowbreak 246\,09 & 
+3.\,\allowbreak 906\,3\times 10^{-3}
+\end{array}
+\allowbreak $
+
+
+Matrix Multiply by Wavelet transform after 2 resolutions $\psi ^{n}$ expansion is expressed in equation \ref{}. 
+\newline
+$\frac{1}{256}
+\begin{array}{cccccccc}
+7651 & 7651 & 7651 & 7651 & 7651 & 7651 & 7651 & 7651 \\ 
+7141 & 7141 & 7141 & 7141 & 7141 & 7141 & 7141 & 7141 \\ 
+7396 & 7141 & 7141 & 7141 & 7141 & 7141 & 7141 & 7141 \\ 
+7141 & 7396 & 7141 & 7141 & 7141 & 7141 & 7141 & 7141 \\ 
+7141 & 7141 & 7396 & 7141 & 7141 & 7141 & 7141 & 7141 \\ 
+7141 & 7141 & 7141 & 7396 & 7141 & 7141 & 7141 & 7141 \\ 
+7141 & 7141 & 7141 & 7141 & 7396 & 7141 & 7141 & 7141 \\ 
+6631 & 6631 & 6631 & 6631 & 6631 & 6886 & 6886 & 6886
+\end{array}
+=$
+
+$\allowbreak 
+\begin{array}{cccccccc}
+\frac{7651}{256} & \frac{7651}{256} & \frac{7651}{256} & \frac{7651}{256} & 
+\frac{7651}{256} & \frac{7651}{256} & \frac{7651}{256} & \frac{7651}{256} \\ 
+\frac{7141}{256} & \frac{7141}{256} & \frac{7141}{256} & \frac{7141}{256} & 
+\frac{7141}{256} & \frac{7141}{256} & \frac{7141}{256} & \frac{7141}{256} \\ 
+\frac{1849}{64} & \frac{7141}{256} & \frac{7141}{256} & \frac{7141}{256} & 
+\frac{7141}{256} & \frac{7141}{256} & \frac{7141}{256} & \frac{7141}{256} \\ 
+\frac{7141}{256} & \frac{1849}{64} & \frac{7141}{256} & \frac{7141}{256} & 
+\frac{7141}{256} & \frac{7141}{256} & \frac{7141}{256} & \frac{7141}{256} \\ 
+\frac{7141}{256} & \frac{7141}{256} & \frac{1849}{64} & \frac{7141}{256} & 
+\frac{7141}{256} & \frac{7141}{256} & \frac{7141}{256} & \frac{7141}{256} \\ 
+\frac{7141}{256} & \frac{7141}{256} & \frac{7141}{256} & \frac{1849}{64} & 
+\frac{7141}{256} & \frac{7141}{256} & \frac{7141}{256} & \frac{7141}{256} \\ 
+\frac{7141}{256} & \frac{7141}{256} & \frac{7141}{256} & \frac{7141}{256} & 
+\frac{1849}{64} & \frac{7141}{256} & \frac{7141}{256} & \frac{7141}{256} \\ 
+\frac{6631}{256} & \frac{6631}{256} & \frac{6631}{256} & \frac{6631}{256} & 
+\frac{6631}{256} & \frac{3443}{128} & \frac{3443}{128} & \frac{3443}{128}
+\end{array}
+\allowbreak =$
+
+$\allowbreak 
+\begin{array}{cccccccc}
+29.\,\allowbreak 887 & 29.\,\allowbreak 887 & 29.\,\allowbreak 887 & 
+29.\,\allowbreak 887 & 29.\,\allowbreak 887 & 29.\,\allowbreak 887 & 
+29.\,\allowbreak 887 & 29.\,\allowbreak 887 \\ 
+27.\,\allowbreak 895 & 27.\,\allowbreak 895 & 27.\,\allowbreak 895 & 
+27.\,\allowbreak 895 & 27.\,\allowbreak 895 & 27.\,\allowbreak 895 & 
+27.\,\allowbreak 895 & 27.\,\allowbreak 895 \\ 
+28.\,\allowbreak 891 & 27.\,\allowbreak 895 & 27.\,\allowbreak 895 & 
+27.\,\allowbreak 895 & 27.\,\allowbreak 895 & 27.\,\allowbreak 895 & 
+27.\,\allowbreak 895 & 27.\,\allowbreak 895 \\ 
+27.\,\allowbreak 895 & 28.\,\allowbreak 891 & 27.\,\allowbreak 895 & 
+27.\,\allowbreak 895 & 27.\,\allowbreak 895 & 27.\,\allowbreak 895 & 
+27.\,\allowbreak 895 & 27.\,\allowbreak 895 \\ 
+27.\,\allowbreak 895 & 27.\,\allowbreak 895 & 28.\,\allowbreak 891 & 
+27.\,\allowbreak 895 & 27.\,\allowbreak 895 & 27.\,\allowbreak 895 & 
+27.\,\allowbreak 895 & 27.\,\allowbreak 895 \\ 
+27.\,\allowbreak 895 & 27.\,\allowbreak 895 & 27.\,\allowbreak 895 & 
+28.\,\allowbreak 891 & 27.\,\allowbreak 895 & 27.\,\allowbreak 895 & 
+27.\,\allowbreak 895 & 27.\,\allowbreak 895 \\ 
+27.\,\allowbreak 895 & 27.\,\allowbreak 895 & 27.\,\allowbreak 895 & 
+27.\,\allowbreak 895 & 28.\,\allowbreak 891 & 27.\,\allowbreak 895 & 
+27.\,\allowbreak 895 & 27.\,\allowbreak 895 \\ 
+25.\,\allowbreak 902 & 25.\,\allowbreak 902 & 25.\,\allowbreak 902 & 
+25.\,\allowbreak 902 & 25.\,\allowbreak 902 & 26.\,\allowbreak 898 & 
+26.\,\allowbreak 898 & 26.\,\allowbreak 898
+\end{array}
+\allowbreak $
+
+\subsubsection{Matrix Multiplication on $8\times 8$ matrix with 3 resolutions}
+
+$\frac{1}{256} 
+\begin{array}{cccccccc}
+64 & 128 & 128 & 128 & 128 & 128 & 128 & 128 \\ 
+128 & 64 & 128 & 128 & 128 & 128 & 128 & 128 \\ 
+128 & 128 & 64 & 128 & 128 & 128 & 128 & 128 \\ 
+128 & 128 & 128 & 64 & 128 & 128 & 128 & 128 \\ 
+128 & 128 & 128 & 128 & 64 & 128 & 128 & 128 \\ 
+128 & 128 & 128 & 128 & 128 & 64 & 128 & 128 \\ 
+128 & 128 & 128 & 128 & 128 & 128 & 64 & 128 \\ 
+128 & 128 & 128 & 128 & 128 & 128 & 128 & 64
+\end{array}
+=\allowbreak 
+\begin{array}{cccccccc}
+\frac{1}{4} & \frac{1}{2} & \frac{1}{2} & \frac{1}{2} & \frac{1}{2} & \frac{1%
+}{2} & \frac{1}{2} & \frac{1}{2} \\ 
+\frac{1}{2} & \frac{1}{4} & \frac{1}{2} & \frac{1}{2} & \frac{1}{2} & \frac{1%
+}{2} & \frac{1}{2} & \frac{1}{2} \\ 
+\frac{1}{2} & \frac{1}{2} & \frac{1}{4} & \frac{1}{2} & \frac{1}{2} & \frac{1%
+}{2} & \frac{1}{2} & \frac{1}{2} \\ 
+\frac{1}{2} & \frac{1}{2} & \frac{1}{2} & \frac{1}{4} & \frac{1}{2} & \frac{1%
+}{2} & \frac{1}{2} & \frac{1}{2} \\ 
+\frac{1}{2} & \frac{1}{2} & \frac{1}{2} & \frac{1}{2} & \frac{1}{4} & \frac{1%
+}{2} & \frac{1}{2} & \frac{1}{2} \\ 
+\frac{1}{2} & \frac{1}{2} & \frac{1}{2} & \frac{1}{2} & \frac{1}{2} & \frac{1%
+}{4} & \frac{1}{2} & \frac{1}{2} \\ 
+\frac{1}{2} & \frac{1}{2} & \frac{1}{2} & \frac{1}{2} & \frac{1}{2} & \frac{1%
+}{2} & \frac{1}{4} & \frac{1}{2} \\ 
+\frac{1}{2} & \frac{1}{2} & \frac{1}{2} & \frac{1}{2} & \frac{1}{2} & \frac{1%
+}{2} & \frac{1}{2} & \frac{1}{4}
+\end{array}
+\allowbreak $
+After three resolution of wavelet transforms, matrix $W^3(B)$ has fourteen of its elements with an epsilon of $\frac{1}{512}$.  Another, seven within an epsilon of $\frac{3}{512}$.  Most of the energy is in the second, third, fifth, and last rows.   The remaining energy is located in the diagonal.  Again nearly, $\frac{7}{32}$ of elements are not likely to contribute anything significant to this multiplication.    $W^3(B)$ is shown in equation \ref{}.  
+
+
+Next step, the square of matrix $W^3(B)$ is $(W^3(B))^2$ and shown in equation \ref{}.
+ $\frac{1}{256} 
+\begin{array}{cccccccc}
+3826 & 1 & 0 & 0 & 0 & 1 & 0 & 0 \\ 
+-63 & 192 & -63 & -63 & -63 & -63 & -63 & -63 \\ 
+-63 & -63 & -63 & 192 & -63 & -63 & -63 & -63 \\ 
+0 & 0 & -255 & 1 & 0 & 0 & 0 & 1 \\ 
+-63 & -63 & -63 & -63 & -191 & 64 & 64 & 64 \\ 
+0 & 1 & 0 & 1 & -127 & 128 & -127 & -127 \\ 
+0 & 1 & 0 & 1 & -127 & -127 & -127 & 128 \\ 
+-63 & -63 & -63 & -63 & 64 & 64 & -191 & 64
+\end{array}
+$
+
+Matrix Multiply by Conventional Method \newline
+$\frac{1}{256} 
+\begin{array}{cccccccc}
+7650 & 7650 & 7650 & 7650 & 7650 & 7650 & 7650 & 7650 \\ 
+7140 & 7140 & 7140 & 7140 & 7140 & 7140 & 7140 & 7140 \\ 
+7395 & 7140 & 7140 & 7140 & 7140 & 7140 & 7140 & 7140 \\ 
+7140 & 7395 & 7140 & 7140 & 7140 & 7140 & 7140 & 7140 \\ 
+7140 & 7140 & 7395 & 7140 & 7140 & 7140 & 7140 & 7140 \\ 
+7140 & 7140 & 7140 & 7395 & 7140 & 7140 & 7140 & 7140 \\ 
+7140 & 7140 & 7140 & 7140 & 7395 & 7140 & 7140 & 7140 \\ 
+6630 & 6630 & 6630 & 6630 & 6630 & 6885 & 6885 & 6885
+\end{array}
+=\allowbreak 
+\begin{array}{cccccccc}
+\frac{3825}{128} & \frac{3825}{128} & \frac{3825}{128} & \frac{3825}{128} & 
+\frac{3825}{128} & \frac{3825}{128} & \frac{3825}{128} & \frac{3825}{128} \\ 
+\frac{1785}{64} & \frac{1785}{64} & \frac{1785}{64} & \frac{1785}{64} & 
+\frac{1785}{64} & \frac{1785}{64} & \frac{1785}{64} & \frac{1785}{64} \\ 
+\frac{7395}{256} & \frac{1785}{64} & \frac{1785}{64} & \frac{1785}{64} & 
+\frac{1785}{64} & \frac{1785}{64} & \frac{1785}{64} & \frac{1785}{64} \\ 
+\frac{1785}{64} & \frac{7395}{256} & \frac{1785}{64} & \frac{1785}{64} & 
+\frac{1785}{64} & \frac{1785}{64} & \frac{1785}{64} & \frac{1785}{64} \\ 
+\frac{1785}{64} & \frac{1785}{64} & \frac{7395}{256} & \frac{1785}{64} & 
+\frac{1785}{64} & \frac{1785}{64} & \frac{1785}{64} & \frac{1785}{64} \\ 
+\frac{1785}{64} & \frac{1785}{64} & \frac{1785}{64} & \frac{7395}{256} & 
+\frac{1785}{64} & \frac{1785}{64} & \frac{1785}{64} & \frac{1785}{64} \\ 
+\frac{1785}{64} & \frac{1785}{64} & \frac{1785}{64} & \frac{1785}{64} & 
+\frac{7395}{256} & \frac{1785}{64} & \frac{1785}{64} & \frac{1785}{64} \\ 
+\frac{3315}{128} & \frac{3315}{128} & \frac{3315}{128} & \frac{3315}{128} & 
+\frac{3315}{128} & \frac{6885}{256} & \frac{6885}{256} & \frac{6885}{256}
+\end{array}
+$ \newline
+$\allowbreak =\allowbreak 
+\begin{array}{cccccccc}
+29.\,\allowbreak 883 & 29.\,\allowbreak 883 & 29.\,\allowbreak 883 & 
+29.\,\allowbreak 883 & 29.\,\allowbreak 883 & 29.\,\allowbreak 883 & 
+29.\,\allowbreak 883 & 29.\,\allowbreak 883 \\ 
+27.\,\allowbreak 891 & 27.\,\allowbreak 891 & 27.\,\allowbreak 891 & 
+27.\,\allowbreak 891 & 27.\,\allowbreak 891 & 27.\,\allowbreak 891 & 
+27.\,\allowbreak 891 & 27.\,\allowbreak 891 \\ 
+28.\,\allowbreak 887 & 27.\,\allowbreak 891 & 27.\,\allowbreak 891 & 
+27.\,\allowbreak 891 & 27.\,\allowbreak 891 & 27.\,\allowbreak 891 & 
+27.\,\allowbreak 891 & 27.\,\allowbreak 891 \\ 
+27.\,\allowbreak 891 & 28.\,\allowbreak 887 & 27.\,\allowbreak 891 & 
+27.\,\allowbreak 891 & 27.\,\allowbreak 891 & 27.\,\allowbreak 891 & 
+27.\,\allowbreak 891 & 27.\,\allowbreak 891 \\ 
+27.\,\allowbreak 891 & 27.\,\allowbreak 891 & 28.\,\allowbreak 887 & 
+27.\,\allowbreak 891 & 27.\,\allowbreak 891 & 27.\,\allowbreak 891 & 
+27.\,\allowbreak 891 & 27.\,\allowbreak 891 \\ 
+27.\,\allowbreak 891 & 27.\,\allowbreak 891 & 27.\,\allowbreak 891 & 
+28.\,\allowbreak 887 & 27.\,\allowbreak 891 & 27.\,\allowbreak 891 & 
+27.\,\allowbreak 891 & 27.\,\allowbreak 891 \\ 
+27.\,\allowbreak 891 & 27.\,\allowbreak 891 & 27.\,\allowbreak 891 & 
+27.\,\allowbreak 891 & 28.\,\allowbreak 887 & 27.\,\allowbreak 891 & 
+27.\,\allowbreak 891 & 27.\,\allowbreak 891 \\ 
+25.\,\allowbreak 898 & 25.\,\allowbreak 898 & 25.\,\allowbreak 898 & 
+25.\,\allowbreak 898 & 25.\,\allowbreak 898 & 26.\,\allowbreak 895 & 
+26.\,\allowbreak 895 & 26.\,\allowbreak 895
+\end{array}
+\allowbreak $ \newline
+\newline
+%Matrix Multiply by Wavelet transform (3 resolutions $\psi ^{n}$ expansion) 
+The inverse of $(W^3(B))^2$ is very close to that of $B^2$ and is shown in equation \ref{}.
+\newline
+$\frac{1}{256} 
+\begin{array}{cccccccc}
+7651 & 7651 & 7651 & 7651 & 7651 & 7651 & 7651 & 7651 \\ 
+7141 & 7141 & 7141 & 7141 & 7141 & 7141 & 7141 & 7141 \\ 
+7396 & 7141 & 7141 & 7141 & 7141 & 7141 & 7141 & 7141 \\ 
+7141 & 7396 & 7141 & 7141 & 7141 & 7141 & 7141 & 7141 \\ 
+7141 & 7141 & 7396 & 7141 & 7141 & 7141 & 7141 & 7141 \\ 
+7141 & 7141 & 7141 & 7396 & 7141 & 7141 & 7141 & 7141 \\ 
+7141 & 7141 & 7141 & 7141 & 7396 & 7141 & 7141 & 7141 \\ 
+6631 & 6631 & 6631 & 6631 & 6631 & 6886 & 6886 & 6886
+\end{array}
+=$
+
+$\allowbreak 
+\begin{array}{cccccccc}
+\frac{7651}{256} & \frac{7651}{256} & \frac{7651}{256} & \frac{7651}{256} & 
+\frac{7651}{256} & \frac{7651}{256} & \frac{7651}{256} & \frac{7651}{256} \\ 
+\frac{7141}{256} & \frac{7141}{256} & \frac{7141}{256} & \frac{7141}{256} & 
+\frac{7141}{256} & \frac{7141}{256} & \frac{7141}{256} & \frac{7141}{256} \\ 
+\frac{1849}{64} & \frac{7141}{256} & \frac{7141}{256} & \frac{7141}{256} & 
+\frac{7141}{256} & \frac{7141}{256} & \frac{7141}{256} & \frac{7141}{256} \\ 
+\frac{7141}{256} & \frac{1849}{64} & \frac{7141}{256} & \frac{7141}{256} & 
+\frac{7141}{256} & \frac{7141}{256} & \frac{7141}{256} & \frac{7141}{256} \\ 
+\frac{7141}{256} & \frac{7141}{256} & \frac{1849}{64} & \frac{7141}{256} & 
+\frac{7141}{256} & \frac{7141}{256} & \frac{7141}{256} & \frac{7141}{256} \\ 
+\frac{7141}{256} & \frac{7141}{256} & \frac{7141}{256} & \frac{1849}{64} & 
+\frac{7141}{256} & \frac{7141}{256} & \frac{7141}{256} & \frac{7141}{256} \\ 
+\frac{7141}{256} & \frac{7141}{256} & \frac{7141}{256} & \frac{7141}{256} & 
+\frac{1849}{64} & \frac{7141}{256} & \frac{7141}{256} & \frac{7141}{256} \\ 
+\frac{6631}{256} & \frac{6631}{256} & \frac{6631}{256} & \frac{6631}{256} & 
+\frac{6631}{256} & \frac{3443}{128} & \frac{3443}{128} & \frac{3443}{128}
+\end{array}
+\allowbreak =$
+
+$
+\begin{array}{cccccccc}
+29.\,\allowbreak 887 & 29.\,\allowbreak 887 & 29.\,\allowbreak 887 & 
+29.\,\allowbreak 887 & 29.\,\allowbreak 887 & 29.\,\allowbreak 887 & 
+29.\,\allowbreak 887 & 29.\,\allowbreak 887 \\ 
+27.\,\allowbreak 895 & 27.\,\allowbreak 895 & 27.\,\allowbreak 895 & 
+27.\,\allowbreak 895 & 27.\,\allowbreak 895 & 27.\,\allowbreak 895 & 
+27.\,\allowbreak 895 & 27.\,\allowbreak 895 \\ 
+28.\,\allowbreak 891 & 27.\,\allowbreak 895 & 27.\,\allowbreak 895 & 
+27.\,\allowbreak 895 & 27.\,\allowbreak 895 & 27.\,\allowbreak 895 & 
+27.\,\allowbreak 895 & 27.\,\allowbreak 895 \\ 
+27.\,\allowbreak 895 & 28.\,\allowbreak 891 & 27.\,\allowbreak 895 & 
+27.\,\allowbreak 895 & 27.\,\allowbreak 895 & 27.\,\allowbreak 895 & 
+27.\,\allowbreak 895 & 27.\,\allowbreak 895 \\ 
+27.\,\allowbreak 895 & 27.\,\allowbreak 895 & 28.\,\allowbreak 891 & 
+27.\,\allowbreak 895 & 27.\,\allowbreak 895 & 27.\,\allowbreak 895 & 
+27.\,\allowbreak 895 & 27.\,\allowbreak 895 \\ 
+27.\,\allowbreak 895 & 27.\,\allowbreak 895 & 27.\,\allowbreak 895 & 
+28.\,\allowbreak 891 & 27.\,\allowbreak 895 & 27.\,\allowbreak 895 & 
+27.\,\allowbreak 895 & 27.\,\allowbreak 895 \\ 
+27.\,\allowbreak 895 & 27.\,\allowbreak 895 & 27.\,\allowbreak 895 & 
+27.\,\allowbreak 895 & 28.\,\allowbreak 891 & 27.\,\allowbreak 895 & 
+27.\,\allowbreak 895 & 27.\,\allowbreak 895 \\ 
+25.\,\allowbreak 902 & 25.\,\allowbreak 902 & 25.\,\allowbreak 902 & 
+25.\,\allowbreak 902 & 25.\,\allowbreak 902 & 26.\,\allowbreak 898 & 
+26.\,\allowbreak 898 & 26.\,\allowbreak 898
+\end{array}
+\allowbreak $
+
+\subsection {Matrix Multiplication between Upper Triangular and Full Matrix}
+In this section,  an upper triangular matrix $A$ and a full matrix $B$ are multiplied together both in conventional space and in wavelet space.  Their results are compared for fidelity, and any notable discrepancies.  The upper triangular matrix is the same $A$ used in section \ref{} .  The full matrix is the same $B$ used in section \ref{}.  There wavelet transforms are the same as in those sections as well.  Here the results for each resolution is described for completeness.  The matrix $C$ is the product of $A$ and $B$ in conventional matrix multiplication and is provided for comparison in equation \ref{}.
+
+$ A \cdot B =
+\begin{array}{cccccccc}
+6630 & 6630 & 6630 & 6630 & 6630 & 6630 & 7140 & 7140\\
+6120 & 6120 & 6120 & 6120 & 6120 & 6120 & 6630 & 6630\\
+5355 & 5100 & 5100 & 5100 & 5100 & 5100 & 5610 & 5610\\
+4590 & 4335 & 4080 & 4080 & 4080 & 4080 & 4590 & 4590\\
+3570 & 3570 & 3315 & 3060 & 3060 & 3060 & 3570 & 3570\\
+2550 & 2550 & 2550 & 2295 & 2040 & 2040 & 2550 & 2550\\
+1530 & 1530 & 1530 & 1530 & 1275 & 1020 & 1530 & 1530\\
+1020 & 1020 & 1020 & 1020 & 1020 & 765 & 765 & 765
+\end{array}
+$
+
+\subsubsection {One resolution case}
+With one resolution, relative fidelity is retained within $9.8 \cdot 10^{-15}$.  The result of $W(A)\cdot  W(B)$ is shown in equation \ref{}.\\
+$ W(A) \cdot W(B) =
+\begin{array}{cccccccc}
+12751 & 12751 & 12751 & 13771 & 0 & 0 & 0 & 0\\
+9691 & 9181 & 9181 & 10201 & -255 & 0 & 0 & 0\\
+6121 & 5611 & 5101 & 6121 & 1 & -255 & 0 & 0\\
+2551 & 2551 & 2041 & 2296 & 0 & 1 & -255 & 0\\
+-509 & -509 & -509 & -509 & 0 & 1 & 1 & 0\\
+-764 & -1020 & -1020 & -1020 & 0 & 0 & 1 & 0\\
+-1020 & -765 & -1020 & -1020 & 0 & 0 & 0 & 0\\
+-510 & -510 & -255 & -765 & 0 & 0 & 0 & 0
+\end{array}
+$
+The result is shown in equation \ref{} .\\
+$ W^{-1}(W(A) \cdot W(B)) =
+\begin{array}{cccccccc}
+6631 & 6631 & 6631 & 6631 & 6631 & 6631 & 7141 & 7141\\
+6121 & 6121 & 6121 & 6121 & 6121 & 6121 & 6631 & 6631\\
+5356 & 5101 & 5101 & 5101 & 5101 & 5101 & 5611 & 5611\\
+4591 & 4336 & 4081 & 4081 & 4081 & 4081 & 4591 & 4591\\
+3571 & 3571 & 3316 & 3061 & 3061 & 3061 & 3571 & 3571\\
+2551 & 2551 & 2551 & 2296 & 2041 & 2041 & 2551 & 2551\\
+1531 & 1531 & 1531 & 1531 & 1276 & 1021 & 1531 & 1531\\
+1021 & 1021 & 1021 & 1021 & 1021 & 766 & 766 & 766 
+\end{array}
+$
+
+\subsubsection {Two resolution case}
+With two resolutions, relative fidelity stays at  $1.4 \cdot 10^{-14}$.  The result of $W(A)\cdot  W(B)$ is shown in equation \ref{}.\\
+$ W(A) \cdot W(B) =
+\begin{array}{cccccccc}
+22186 22951 -127 1 -255 1020 128 0\\
+8416 7778 -127 -127 -255 638 -127 128\\
+-1402 -1530 0 0 -127 1 1 1\\
+-1402 -1530 0 0 128 -255 0 1\\
+-3315 -3570 -127 1 -255 1 128 0\\
+-3315 -3442 128 -127 256 -382 128 128\\
+-382 -510 0 0 -127 1 0 1\\
+383 511 0 0 -127 -255 0 1\\
+\end{array}
+$
+The result is shown in equation \ref{} .\\
+$ W^{-1}(W(A) \cdot W(B)) =
+\begin{array}{cccccccc}
+6631 & 6631 & 6631 & 6631 & 6631 & 6631 & 7141 & 7141\\
+6121 & 6121 & 6121 & 6121 & 6121 & 6121 & 6631 & 6631\\
+5356 & 5101 & 5101 & 5101 & 5101 & 5101 & 5611 & 5611\\
+4591 & 4336 & 4081 & 4081 & 4081 & 4081 & 4591 & 4591\\
+3571 & 3571 & 3316 & 3061 & 3061 & 3061 & 3571 & 3571\\
+2551 & 2551 & 2551 & 2296 & 2041 & 2041 & 2551 & 2551\\
+1531 & 1531 & 1531 & 1531 & 1276 & 1021 & 1531 & 1531\\
+1021 & 1021 & 1021 & 1021 & 1021 & 766 & 766 & 766\\
+\end{array}
+$
+
+\subsubsection {Three resolution case}
+With three resolutions, relative fidelity stays at  $2.3 \cdot 10^{-14}$.  The result of $W(A)\cdot  W(B)$ is shown in equation \ref{}.\\
+$ W(A) \cdot W(B) =
+\begin{array}{cccccccc}
+30664 & -191 & 574 & 64 & 64 & 64 & 1084 & 64\\
+-2932 & 0 & -127 & 1 & -127 & 0 & -127 & 1\\
+-6821 & -63 & -191 & 192 & -191 & -63 & -191 & -63\\
+0 & 0 & -255 & 1 & 0 & 1 & 0 & 1\\
+-14471 & -63 & -191 & -63 & -701 & -63 & -191 & 192\\
+0 & 0 & 0 & 1 & 1 & 0 & -255 & 1\\
+64 & 64 & 64 & 64 & 64 & -191 & -446 & 64\\
+893 & 0 & -127 & 1 & 128 & 0 & -127 & 1
+\end{array}
+$
+The result is shown in equation \ref{} .\\
+$ W^{-1}(W(A) \cdot W(B)) =
+\begin{array}{cccccccc}
+6631 & 6631 & 6631 & 6631 & 6631 & 6631 & 7141 & 7141\\
+6121 & 6121 & 6121 & 6121 & 6121 & 6121 & 6631 & 6631\\
+5356 & 5101 & 5101 & 5101 & 5101 & 5101 & 5611 & 5611\\
+4591 & 4336 & 4081 & 4081 & 4081 & 4081 & 4591 & 4591\\
+3571 & 3571 & 3316 & 3061 & 3061 & 3061 & 3571 & 3571\\
+2551 & 2551 & 2551 & 2296 & 2041 & 2041 & 2551 & 2551\\
+1531 & 1531 & 1531 & 1531 & 1276 & 1021 & 1531 & 1531\\
+1021 & 1021 & 1021 & 1021 & 1021 & 766 & 766 & 766\\
+\end{array}
+$
+
+\section {Conclusion}
+For these $8\times 8$ examples, the product matrix in either conventional space or recovered from wavelet space are very close.  In all cases, relative fidelity is maintained within the order of $10^{-14}$.  More examples can be obtained at larger levels.  Examples for this are images at $512 \time 512$ and $768\times 768$ which are also matrices.  
+
+\end{document}
