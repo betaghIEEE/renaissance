@@ -1,0 +1,101 @@
+############################################################
+#
+# Makefile for renaissance
+#
+# renaissance version 3.0
+# Created: 09/22/00
+# previously called palette, enterprise, chisel
+#
+# renaissance is a set of basic elements for research in
+# image processing,  computer vision and computer graphics
+#
+# It provides primitives for
+# + graphical objects
+#   - CPoint
+#   - CDirection
+#   - CFace
+#   - CMesh
+# + image objects
+#   - CGrayImages
+#   - CColorImages
+# + numerical objects
+#   - CMatrix
+#   - CVector
+#
+# In addition, CGrid and CVolume provide basic templates
+# for 2D and 3D operations
+#
+# Requirements:
+#   ImageMagick (5.4.2 or greater)
+#   Some LAPACK library
+#
+# Revisions:
+#   04/01/02 Removed the image processing, vision and graphics
+#            libraries ... not essential to renaissance
+#
+############################################################
+
+#include $(HOME)/research/LocalInfo
+RENAISSANCE_INCLUDE = $(HOME)/include/renaissance
+
+SRCS = \
+	r_valarray.cpp \
+	point2I.cpp \
+	point2D.cpp \
+	point3D.cpp \
+	point3DH.cpp \
+	vector2D.cpp \
+	vector3D.cpp \
+	matrix.cpp \
+	grayImage.cpp \
+	colorImage.cpp \
+	utility.cpp \
+	mesh.cpp \
+	camera.cpp \
+	face.cpp 
+
+XHDRS = \
+	octree.hpp \
+	digits.hpp \
+	config.hpp \
+	slice_iter.hpp \
+	grid.hpp \
+	volume.hpp \
+#	point.hpp 
+
+
+HDRS = ${SRCS:.cpp=.hpp}
+OBJS = ${SRCS:.cpp=.o}
+
+INCDIR = `Magick++-config --cppflags` $(LOCAL_INCLUDE) 
+LIBDIR = 
+LIBS = 
+
+CC = g++
+CFLAGS = -O2 -g
+
+renaissance: $(OBJS)	
+#	$(ARCHIVE) libRenaissance.a $(OBJS) 
+#	CC -ar -o libRenaissance.a $(OBJS) 
+	ar -r libRenaissance.a $(OBJS)
+
+
+.SUFFIXES : .o .cpp
+
+.cpp.o : 
+	$(CC) $(CFLAGS) -c $< $(INCDIR)
+
+
+install : 
+	-cp libRenaissance.a $(HOME)/lib/.
+	-cp $(HDRS) $(XHDRS) $(RENAISSANCE_INCLUDE)/.
+
+clean :
+	-rm -f  *~ *.o *.a core
+	-du
+
+backup:
+	rm -rf backup
+	mkdir backup
+	cp *.cpp *.c *.h Makefile README backup
+
