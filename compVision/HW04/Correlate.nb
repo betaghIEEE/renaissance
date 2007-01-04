@@ -1,0 +1,558 @@
+(************** Content-type: application/mathematica **************
+
+                    Mathematica-Compatible Notebook
+
+This notebook can be used with any Mathematica-compatible
+application, such as Mathematica, MathReader or Publicon. The data
+for the notebook starts with the line containing stars above.
+
+To get the notebook into a Mathematica-compatible application, do
+one of the following:
+
+* Save the data starting with the line of stars above into a file
+  with a name ending in .nb, then open the file inside the
+  application;
+
+* Copy the data starting with the line of stars above to the
+  clipboard, then use the Paste menu command inside the application.
+
+Data for notebooks contains only printable 7-bit ASCII and can be
+sent directly in email or through ftp in text mode.  Newlines can be
+CR, LF or CRLF (Unix, Macintosh or MS-DOS style).
+
+NOTE: If you modify the data for this notebook not in a Mathematica-
+compatible application, you must delete the line below containing
+the word CacheID, otherwise Mathematica-compatible applications may
+try to use invalid cache data.
+
+For more information on notebooks and Mathematica-compatible 
+applications, contact Wolfram Research:
+  web: http://www.wolfram.com
+  email: info@wolfram.com
+  phone: +1-217-398-0700 (U.S.)
+
+Notebook reader applications are available free of charge from 
+Wolfram Research.
+*******************************************************************)
+
+(*CacheID: 232*)
+
+
+(*NotebookFileLineBreakTest
+NotebookFileLineBreakTest*)
+(*NotebookOptionsPosition[      7208,        356]*)
+(*NotebookOutlinePosition[      7920,        381]*)
+(*  CellTagsIndexPosition[      7876,        377]*)
+(*WindowFrame->Normal*)
+
+
+
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Project Face Off", "Title"],
+
+Cell["One of Dr. Sinzinger's ideas for a project.  ", "Text"],
+
+Cell["\<\
+It is done past due, but it better be done before End of Semester \
+Spring 2002\
+\>", "Text"],
+
+Cell["Author: Dan Beatty", "Text"],
+
+Cell[CellGroupData[{
+
+Cell["Class:  Correlate", "Section"],
+
+Cell[CellGroupData[{
+
+Cell["Member Function: Get Intrinsic Parameters", "Subsection"],
+
+Cell["\<\
+Purpose: To acquire from the calibration class the intrinsic \
+parameters of the camera system.  The data is to be put into the form\
+\>", \
+"Text"],
+
+Cell[BoxData[
+    RowBox[{\(M\_int\), "=", 
+      RowBox[{"(", GridBox[{
+            {\(-f\_x\), "0", \(o\_x\)},
+            {"0", \(-f\_y\), \(o\_y\)},
+            {"0", "0", "1"}
+            }], ")"}]}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell["Code Name", "Subsubsection"],
+
+Cell[BoxData[
+    \(getIntParams\)], "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Input", "Subsubsection"],
+
+Cell["pointer to calibration class", "Text"],
+
+Cell["LeftOrRight: boolean ", "Text"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Output", "Subsubsection"],
+
+Cell["None", "Text"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Notation", "Subsubsection"],
+
+Cell["temp is a local double float variable", "Text"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Procedure", "Subsubsection"],
+
+Cell["If left do", "Text"],
+
+Cell["\<\
+Fill Mleft with 
+temp = calibration->getFx
+Mleft->store (0,0, -temp)
+temp = calibration->getFy
+Mleft->store(1,1, -temp)
+temp = calibration->getOx
+Mleft->store(0,2, temp)
+temp = calibration->getOy
+Mleft->store(1,2, temp)
+Mleft->store(2,2,1)\
+\>", "Text"],
+
+Cell["else // if right do", "Text"],
+
+Cell["\<\
+Fill Mright with 
+temp = calibration->getFx
+Mright->store (0,0, -temp)
+temp = calibration->getFy
+Mright->store(1,1, -temp)
+temp = calibration->getOx
+Mright->store(0,2, temp)
+temp = calibration->getOy
+Mright->store(1,2, temp)
+Mright->store(2,2,1)\
+\>", "Text"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Member Function: Get Extrinsic Parameters", "Subsection"],
+
+Cell[CellGroupData[{
+
+Cell["Code Name", "Subsubsection"],
+
+Cell[BoxData[
+    \(getExtParams\)], "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Input", "Subsubsection"],
+
+Cell["pointer to calibration class", "Text"],
+
+Cell["LeftOrRight: boolean ", "Text"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Output", "Subsubsection"],
+
+Cell["None", "Text"]
+}, Open  ]],
+
+Cell["Notation", "Subsubsection"],
+
+Cell[CellGroupData[{
+
+Cell["Procedure", "Subsubsection"],
+
+Cell["If left", "Text"],
+
+Cell[BoxData[
+    \(\(\(\t\)\(T\_left = calibrate \[Rule] getT\)\)\)], "Input"],
+
+Cell["else", "Text"],
+
+Cell[BoxData[
+    \(\(\(\t\)\(T\_right = calibrate \[Rule] getT\)\)\)], "Input"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Member Function: Get Corresponding Pairs", "Subsection"],
+
+Cell[CellGroupData[{
+
+Cell["Code Name", "Subsubsection"],
+
+Cell[BoxData[
+    \(getCorrPairs\)], "Input"]
+}, Open  ]],
+
+Cell["Input", "Subsubsection"],
+
+Cell["Output", "Subsubsection"],
+
+Cell["Notation", "Subsubsection"],
+
+Cell["Procedure", "Subsubsection"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Member Function: Compute The Epipole Coordinates", "Subsection"],
+
+Cell[CellGroupData[{
+
+Cell["Code Name", "Subsubsection"],
+
+Cell[BoxData[
+    \(compEpiPoles\)], "Input"]
+}, Open  ]],
+
+Cell["Input", "Subsubsection"],
+
+Cell["Output", "Subsubsection"],
+
+Cell["Notation", "Subsubsection"],
+
+Cell["Procedure", "Subsubsection"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Member Function: Compute Epipolar Lines", "Subsection"],
+
+Cell[CellGroupData[{
+
+Cell["Code Name", "Subsubsection"],
+
+Cell[BoxData[
+    \(compEpiLines\)], "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Input", "Subsubsection"],
+
+Cell["imageLeft", "Text"],
+
+Cell["imageRight", "Text"]
+}, Open  ]],
+
+Cell["Output", "Subsubsection"],
+
+Cell["Notation", "Subsubsection"],
+
+Cell["Procedure", "Subsubsection"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Member Function:  Compute Raw Correspondence", "Subsection"],
+
+Cell[CellGroupData[{
+
+Cell["Code Name", "Subsubsection"],
+
+Cell[BoxData[
+    \(compRawCorr\)], "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Input", "Subsubsection"],
+
+Cell["imageLeft", "Text"],
+
+Cell["imageRight", "Text"]
+}, Open  ]],
+
+Cell["Output", "Subsubsection"],
+
+Cell["Procedure", "Subsubsection"],
+
+Cell[CellGroupData[{
+
+Cell["Notation", "Subsubsection"],
+
+Cell["\[ForAll]i", "Text"],
+
+Cell["\t\[ForAll]j", "Text"],
+
+Cell["\t\t\t\[ForAll] xwin & ywin", "Text"],
+
+Cell[TextData[{
+  "\t\t\t\t",
+  Cell[BoxData[
+      FormBox[
+        RowBox[{
+          RowBox[{"c", "(", 
+            StyleBox["d",
+              FontWeight->"Bold"], ")"}], 
+          "=", \(\[Sum]\+k\(\[Sum]\_l \[Psi](u, y)\)\)}], TraditionalForm]]],
+  "\n\t\t\t\tinsert (c(d), i, j) to max disparity search"
+}], "Text"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Member Function: Compute Correspondence Via Epipolar Lines", \
+"Subsection"],
+
+Cell[CellGroupData[{
+
+Cell["Code Name", "Subsubsection"],
+
+Cell[BoxData[
+    \(compEpiCorr\)], "Input"]
+}, Open  ]],
+
+Cell["Input", "Subsubsection"],
+
+Cell["Output", "Subsubsection"],
+
+Cell["Notation", "Subsubsection"],
+
+Cell["Procedure", "Subsubsection"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Member Data ", "Subsection"],
+
+Cell["Correlation Pairs", "Text"],
+
+Cell["Intrinsic Parameters Matrix", "Text"],
+
+Cell["Translation Vector", "Text"],
+
+Cell["Rotation Vector", "Text"],
+
+Cell["Focal Length", "Text"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+FrontEndVersion->"4.1 for Macintosh",
+ScreenRectangle->{{0, 1024}, {0, 746}},
+WindowToolbars->{},
+WindowSize->{520, 624},
+WindowMargins->{{Automatic, 123}, {Automatic, 46}},
+PrintingCopies->1,
+PrintingPageRange->{1, Automatic}
+]
+
+(*******************************************************************
+Cached data follows.  If you edit this Notebook file directly, not
+using Mathematica, you must remove the line containing CacheID at
+the top of  the file.  The cache data will then be recreated when
+you save this file from within Mathematica.
+*******************************************************************)
+
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+
+(*NotebookFileOutline
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[1727, 52, 33, 0, 108, "Title"],
+Cell[1763, 54, 61, 0, 30, "Text"],
+Cell[1827, 56, 103, 3, 30, "Text"],
+Cell[1933, 61, 34, 0, 30, "Text"],
+
+Cell[CellGroupData[{
+Cell[1992, 65, 36, 0, 56, "Section"],
+
+Cell[CellGroupData[{
+Cell[2053, 69, 63, 0, 46, "Subsection"],
+Cell[2119, 71, 158, 4, 46, "Text"],
+Cell[2280, 77, 215, 6, 59, "Input"],
+
+Cell[CellGroupData[{
+Cell[2520, 87, 34, 0, 42, "Subsubsection"],
+Cell[2557, 89, 45, 1, 27, "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[2639, 95, 30, 0, 42, "Subsubsection"],
+Cell[2672, 97, 44, 0, 30, "Text"],
+Cell[2719, 99, 37, 0, 30, "Text"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[2793, 104, 31, 0, 42, "Subsubsection"],
+Cell[2827, 106, 20, 0, 30, "Text"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[2884, 111, 33, 0, 42, "Subsubsection"],
+Cell[2920, 113, 53, 0, 30, "Text"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[3010, 118, 34, 0, 42, "Subsubsection"],
+Cell[3047, 120, 26, 0, 30, "Text"],
+Cell[3076, 122, 263, 11, 174, "Text"],
+Cell[3342, 135, 35, 0, 30, "Text"],
+Cell[3380, 137, 269, 11, 174, "Text"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[3698, 154, 63, 0, 46, "Subsection"],
+
+Cell[CellGroupData[{
+Cell[3786, 158, 34, 0, 42, "Subsubsection"],
+Cell[3823, 160, 45, 1, 27, "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[3905, 166, 30, 0, 42, "Subsubsection"],
+Cell[3938, 168, 44, 0, 30, "Text"],
+Cell[3985, 170, 37, 0, 30, "Text"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[4059, 175, 31, 0, 42, "Subsubsection"],
+Cell[4093, 177, 20, 0, 30, "Text"]
+}, Open  ]],
+Cell[4128, 180, 33, 0, 42, "Subsubsection"],
+
+Cell[CellGroupData[{
+Cell[4186, 184, 34, 0, 42, "Subsubsection"],
+Cell[4223, 186, 23, 0, 30, "Text"],
+Cell[4249, 188, 79, 1, 27, "Input"],
+Cell[4331, 191, 20, 0, 30, "Text"],
+Cell[4354, 193, 80, 1, 28, "Input"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[4483, 200, 62, 0, 46, "Subsection"],
+
+Cell[CellGroupData[{
+Cell[4570, 204, 34, 0, 42, "Subsubsection"],
+Cell[4607, 206, 45, 1, 27, "Input"]
+}, Open  ]],
+Cell[4667, 210, 30, 0, 42, "Subsubsection"],
+Cell[4700, 212, 31, 0, 42, "Subsubsection"],
+Cell[4734, 214, 33, 0, 42, "Subsubsection"],
+Cell[4770, 216, 34, 0, 42, "Subsubsection"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[4841, 221, 70, 0, 46, "Subsection"],
+
+Cell[CellGroupData[{
+Cell[4936, 225, 34, 0, 42, "Subsubsection"],
+Cell[4973, 227, 45, 1, 27, "Input"]
+}, Open  ]],
+Cell[5033, 231, 30, 0, 42, "Subsubsection"],
+Cell[5066, 233, 31, 0, 42, "Subsubsection"],
+Cell[5100, 235, 33, 0, 42, "Subsubsection"],
+Cell[5136, 237, 34, 0, 42, "Subsubsection"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[5207, 242, 61, 0, 46, "Subsection"],
+
+Cell[CellGroupData[{
+Cell[5293, 246, 34, 0, 42, "Subsubsection"],
+Cell[5330, 248, 45, 1, 27, "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[5412, 254, 30, 0, 42, "Subsubsection"],
+Cell[5445, 256, 25, 0, 30, "Text"],
+Cell[5473, 258, 26, 0, 30, "Text"]
+}, Open  ]],
+Cell[5514, 261, 31, 0, 42, "Subsubsection"],
+Cell[5548, 263, 33, 0, 42, "Subsubsection"],
+Cell[5584, 265, 34, 0, 42, "Subsubsection"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[5655, 270, 66, 0, 46, "Subsection"],
+
+Cell[CellGroupData[{
+Cell[5746, 274, 34, 0, 42, "Subsubsection"],
+Cell[5783, 276, 44, 1, 27, "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[5864, 282, 30, 0, 42, "Subsubsection"],
+Cell[5897, 284, 25, 0, 30, "Text"],
+Cell[5925, 286, 26, 0, 30, "Text"]
+}, Open  ]],
+Cell[5966, 289, 31, 0, 42, "Subsubsection"],
+Cell[6000, 291, 34, 0, 42, "Subsubsection"],
+
+Cell[CellGroupData[{
+Cell[6059, 295, 33, 0, 42, "Subsubsection"],
+Cell[6095, 297, 26, 0, 30, "Text"],
+Cell[6124, 299, 28, 0, 30, "Text"],
+Cell[6155, 301, 43, 0, 30, "Text"],
+Cell[6201, 303, 323, 10, 46, "Text"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[6573, 319, 82, 1, 46, "Subsection"],
+
+Cell[CellGroupData[{
+Cell[6680, 324, 34, 0, 42, "Subsubsection"],
+Cell[6717, 326, 44, 1, 27, "Input"]
+}, Open  ]],
+Cell[6776, 330, 30, 0, 42, "Subsubsection"],
+Cell[6809, 332, 31, 0, 42, "Subsubsection"],
+Cell[6843, 334, 33, 0, 42, "Subsubsection"],
+Cell[6879, 336, 34, 0, 42, "Subsubsection"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[6950, 341, 34, 0, 46, "Subsection"],
+Cell[6987, 343, 33, 0, 30, "Text"],
+Cell[7023, 345, 43, 0, 30, "Text"],
+Cell[7069, 347, 34, 0, 30, "Text"],
+Cell[7106, 349, 31, 0, 30, "Text"],
+Cell[7140, 351, 28, 0, 30, "Text"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+
+
+(*******************************************************************
+End of Mathematica Notebook file.
+*******************************************************************)
+

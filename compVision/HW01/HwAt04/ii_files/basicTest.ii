@@ -1,0 +1,5 @@
+CMDLINE=CC -DEFAULT:abi=n32:isa=mips4:proc=r10k -g -LANG:std -c -I/usr/freeware/include -I/usr/freeware/include/libxml2 -n32 basicTest.cpp
+PWD=/home/undergrad4/beatty/CS5331/HW01/HwAt04
+----
+_M_insert_dispatch__Q2_3std78list__pt__66_Q2_6Magick8DrawableQ2_3std37allocator__pt__20_Q2_6Magick8DrawableGQ2_3std82_List_iterator__pt__60_Q2_6Magick8DrawableRQ2_6Magick8DrawablePQ2_6Magick8DrawableQ2_3std84_List_iterator__pt__62_Q2_6Magick8DrawableRCQ2_6Magick8DrawablePCQ2_6Magick8DrawableT212__false_type
+clear__Q2_3std84_List_base__pt__66_Q2_6Magick8DrawableQ2_3std37allocator__pt__20_Q2_6Magick8DrawableGv

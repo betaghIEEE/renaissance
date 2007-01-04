@@ -1,0 +1,466 @@
+(************** Content-type: application/mathematica **************
+
+                    Mathematica-Compatible Notebook
+
+This notebook can be used with any Mathematica-compatible
+application, such as Mathematica, MathReader or Publicon. The data
+for the notebook starts with the line containing stars above.
+
+To get the notebook into a Mathematica-compatible application, do
+one of the following:
+
+* Save the data starting with the line of stars above into a file
+  with a name ending in .nb, then open the file inside the
+  application;
+
+* Copy the data starting with the line of stars above to the
+  clipboard, then use the Paste menu command inside the application.
+
+Data for notebooks contains only printable 7-bit ASCII and can be
+sent directly in email or through ftp in text mode.  Newlines can be
+CR, LF or CRLF (Unix, Macintosh or MS-DOS style).
+
+NOTE: If you modify the data for this notebook not in a Mathematica-
+compatible application, you must delete the line below containing
+the word CacheID, otherwise Mathematica-compatible applications may
+try to use invalid cache data.
+
+For more information on notebooks and Mathematica-compatible 
+applications, contact Wolfram Research:
+  web: http://www.wolfram.com
+  email: info@wolfram.com
+  phone: +1-217-398-0700 (U.S.)
+
+Notebook reader applications are available free of charge from 
+Wolfram Research.
+*******************************************************************)
+
+(*CacheID: 232*)
+
+
+(*NotebookFileLineBreakTest
+NotebookFileLineBreakTest*)
+(*NotebookOptionsPosition[      7907,        319]*)
+(*NotebookOutlinePosition[      8544,        341]*)
+(*  CellTagsIndexPosition[      8500,        337]*)
+(*WindowFrame->Normal*)
+
+
+
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Module: Camera Calibration", "Title"],
+
+Cell["Daniel D. Beatty", "Subtitle"],
+
+Cell["March 22, 2002", "Subsubtitle"],
+
+Cell[CellGroupData[{
+
+Cell["Needed Functions", "Section"],
+
+Cell["\<\
+SVD
+Get 3-D Points
+Get Image Points
+Form Matrix\
+\>", "Text"],
+
+Cell["\<\
+Note that this class will need calls to Edge Detection and Hough \
+Lines.  Use the lines or corners to establish points of \
+\>", "Text"],
+
+Cell[CellGroupData[{
+
+Cell["Computing Camera Parameters", "Subsection"],
+
+Cell[CellGroupData[{
+
+Cell["Input:", "Subsubsection"],
+
+Cell[TextData[{
+  "Projection Matrix Estimation vector: ",
+  StyleBox["m",
+    FontWeight->"Bold"]
+}], "Text"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Output", "Subsubsection"],
+
+Cell["Completion", "Text"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Values Set", "Subsubsection"],
+
+Cell[TextData[Cell[BoxData[
+    \(TraditionalForm\`f\_x, f\_y, o\_x, o\_y, T, \ R\)]]], "Text"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Notation", "Subsubsection"],
+
+Cell[BoxData[
+    RowBox[{"m", "=", 
+      RowBox[{
+        SuperscriptBox[
+          RowBox[{"(", GridBox[{
+                {\(m\_11\), \(m\_12\), \(m\_13\), \(m\_14\), \(m\_21\), \
+\(m\_22\), \(m\_23\), \(m\_24\), \(m\_31\), \(m\_32\), \(m\_33\), \(m\_34\)}
+                }], ")"}], "T"], "=", 
+        SuperscriptBox[
+          RowBox[{"(", GridBox[{
+                {\(m\_0\), \(m\_1\), \(m\_2\), \(m\_3\), \(m\_4\), \(m\_5\), \
+\(m\_6\), \(m\_7\), \(m\_8\), \(m\_9\), \(m\_10\), \(m\_11\)}
+                }], ")"}], "T"]}]}]], "Input"],
+
+Cell["\<\
+The elements of the rotation vector and translation vector are \
+given\
+\>", "Text"],
+
+Cell[BoxData[
+    \(r\_xy = R[x, y]\)], "Input"],
+
+Cell[BoxData[
+    RowBox[{\(T\_i\), "=", GridBox[{
+          {\(T\_x\), \(i = 0\)},
+          {\(T\_y\), \(i = 1\)},
+          {\(T\_z\), \(i = 2\)}
+          }]}]], "Input"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Computation", "Subsection"],
+
+Cell[TextData[{
+  "Compute ",
+  Cell[BoxData[
+      \(TraditionalForm\`T\_z', \ \[Gamma], \ and\ \[Sigma]\)]]
+}], "Text"],
+
+Cell[BoxData[
+    \(\[Gamma] = \@\(m\_8\^2 + m\_9\^2 + m\_10\^2\)\)], "Input"],
+
+Cell[BoxData[
+    \(T\_z' = m\_11\/\[Gamma]\)], "Input"],
+
+Cell[BoxData[
+    \(\[Sigma] = 1\)], "Input"],
+
+Cell[BoxData[{
+    \(if\ \((T\_z' < 0)\)\), "\[IndentingNewLine]", 
+    \(\tT\_z' = \(-T\_z\)\), "\[IndentingNewLine]", 
+    \(\t\[Gamma] = \(-\[Gamma]\)\), "\[IndentingNewLine]", 
+    \(\t\[Sigma] = \(-1\)\)}], "Input"],
+
+Cell[BoxData[
+    \(o\_x = \(m\_0\) m\_8 + \(m\_1\) m\_9 + \(m\_2\) m\_10\)], "Input"],
+
+Cell[BoxData[
+    \(o\_y = \(m\_4\) m\_8 + \(m\_5\) m\_9 + \(m\_6\) m\_10\)], "Input"],
+
+Cell[BoxData[
+    \(f\_x = \@\(m\_0\^2 + m\_1\^2 + m\_2\^2 - o\_x\^2\)\)], "Input"],
+
+Cell[BoxData[
+    \(f\_y = \@\(m\_4\^2 + m\_5\^2 + m\_6\^2 - o\_y\^2\)\)], "Input"],
+
+Cell[BoxData[
+    \(r\_\(1  i\) = \(\[Sigma]\/f\_x\) \((\(o\_x\) m\&^\_\(3  i\) - 
+            m\&^\_\(0 + i\))\)\)], "Input"],
+
+Cell[BoxData[
+    \(r\_\(2  i\) = \(\[Sigma]\/f\_y\) \((\(o\_y\) m\&^\_\(3  i\) - 
+            m\&^\_\(4 + i\))\)\)], "Input"],
+
+Cell[BoxData[
+    \(r\_\(3  i\) = m\_\(8 + i\)\/\[Gamma]\)], "Input"],
+
+Cell[BoxData[
+    \(T\_0 = \(\[Sigma]\/f\_x\) \((\(o\_x\) T\_z' - m\&^\_3)\)\)], "Input"],
+
+Cell[BoxData[
+    \(T\_1 = \(\[Sigma]\/f\_y\) \((\(o\_y\) T\_z - m\&^\_7)\)\)], "Input"],
+
+Cell[BoxData[
+    \(T\_2 = T\_z'\)], "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Function: Get World and Image Points", "Subsection"],
+
+Cell[TextData[{
+  "Input: ",
+  Cell[BoxData[
+      \(TraditionalForm\`X\_w, Y\_w, Z\_w, x, y\)]]
+}], "Text"],
+
+Cell["Output:  success of entry", "Text"],
+
+Cell["Modified:  Projection System Matrix AProjSys", "Text"],
+
+Cell["Notation:  ", "Text"],
+
+Cell["A = AProjSys", "Text"],
+
+Cell[BoxData[
+    \(a\_i = row\ of\ \(\(A\)\(.\)\)\)], "Input"],
+
+Cell["Algorithm", "Text"],
+
+Cell[BoxData[
+    RowBox[{\(a\_\(2  i\)\), "=", 
+      RowBox[{"(", GridBox[{
+            {\(X\_1\), \(Y\_1\), \(Z\_1\), "1", "0", "0", "0", 
+              "0", \(\(-x\_1\) X\_1\), \(\(-x\_1\) Y\_1\), \(\(-x\_1\) 
+                Z\_1\), \(-x\_1\)}
+            }], ")"}]}]], "Input"],
+
+Cell[BoxData[
+    RowBox[{\(a\_\(2  i + 1\)\), "=", 
+      RowBox[{"(", GridBox[{
+            {"0", "0", "0", "0", \(X\_1\), \(Y\_1\), \(Z\_1\), 
+              "1", \(\(-y\_1\) X\_1\), \(\(-y\_1\) Y\_1\), \(\(-y\_1\) 
+                Z\_1\), \(-y\_1\)}
+            }], ")"}]}]], "Input"],
+
+Cell[TextData[{
+  "m=12th row off of the ",
+  Cell[BoxData[
+      \(TraditionalForm\`V\^T\)]],
+  "."
+}], "Text"],
+
+Cell["Get the Latex", "Text"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["World Image Point:", "Section"],
+
+Cell[CellGroupData[{
+
+Cell["Format", "Subsection"],
+
+Cell[BoxData[GridBox[{
+        {"\[Placeholder]", "\[Placeholder]", "\[Placeholder]", 
+          "\[Placeholder]", "\[Placeholder]"},
+        {"\[Placeholder]", "\[Placeholder]", "\[Placeholder]", 
+          "\[Placeholder]", "\[Placeholder]"},
+        {\(X\_1\), \(Y\_1\), \(Z\_1\), \(x\_1\), \(y\_1\)},
+        {\(X\_2\), \(Y\_2\), \(Z\_2\), \(x\_2\), \(y\_2\)},
+        {".", ".", ".", ".", "."},
+        {".", ".", ".", ".", "."},
+        {\(X\_n\), \(Y\_n\), \(Z\_n\), \(x\_n\), \(y\_n\)}
+        }]], "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Function getPointsFromFile", "Subsection"],
+
+Cell["Input: Filename of points files", "Text"],
+
+Cell["Output: Success statement", "Text"],
+
+Cell["Procedure:", "Text"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Function savePointsFromFile", "Subsection"],
+
+Cell["Input: Filename of points files", "Text"],
+
+Cell["Output: Success Statement", "Text"],
+
+Cell["Procedure:", "Text"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Camera Parameters", "Section"],
+
+Cell[CellGroupData[{
+
+Cell["Function getParamsFromFile", "Subsection"],
+
+Cell["Input: Filename of points files", "Text"],
+
+Cell["Output: Success Statement", "Text"],
+
+Cell["Procedure:", "Text"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Function saveParamsFromFile", "Subsection"],
+
+Cell["Input: Filename of points files", "Text"],
+
+Cell["Output: Success Statement", "Text"],
+
+Cell["Procedure:", "Text"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+FrontEndVersion->"4.1 for Macintosh",
+ScreenRectangle->{{0, 1024}, {0, 746}},
+WindowSize->{520, 624},
+WindowMargins->{{14, Automatic}, {49, Automatic}}
+]
+
+(*******************************************************************
+Cached data follows.  If you edit this Notebook file directly, not
+using Mathematica, you must remove the line containing CacheID at
+the top of  the file.  The cache data will then be recreated when
+you save this file from within Mathematica.
+*******************************************************************)
+
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+
+(*NotebookFileOutline
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[1727, 52, 43, 0, 156, "Title"],
+Cell[1773, 54, 36, 0, 65, "Subtitle"],
+Cell[1812, 56, 37, 0, 53, "Subsubtitle"],
+
+Cell[CellGroupData[{
+Cell[1874, 60, 35, 0, 56, "Section"],
+Cell[1912, 62, 71, 5, 86, "Text"],
+Cell[1986, 69, 147, 3, 50, "Text"],
+
+Cell[CellGroupData[{
+Cell[2158, 76, 49, 0, 46, "Subsection"],
+
+Cell[CellGroupData[{
+Cell[2232, 80, 31, 0, 42, "Subsubsection"],
+Cell[2266, 82, 110, 4, 32, "Text"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[2413, 91, 31, 0, 42, "Subsubsection"],
+Cell[2447, 93, 26, 0, 32, "Text"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[2510, 98, 35, 0, 42, "Subsubsection"],
+Cell[2548, 100, 95, 1, 29, "Text"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[2680, 106, 33, 0, 42, "Subsubsection"],
+Cell[2716, 108, 543, 12, 63, "Input"],
+Cell[3262, 122, 94, 3, 32, "Text"],
+Cell[3359, 127, 48, 1, 28, "Input"],
+Cell[3410, 130, 174, 5, 59, "Input"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[3633, 141, 33, 0, 46, "Subsection"],
+Cell[3669, 143, 121, 4, 32, "Text"],
+Cell[3793, 149, 78, 1, 35, "Input"],
+Cell[3874, 152, 56, 1, 42, "Input"],
+Cell[3933, 155, 45, 1, 27, "Input"],
+Cell[3981, 158, 220, 4, 75, "Input"],
+Cell[4204, 164, 86, 1, 27, "Input"],
+Cell[4293, 167, 86, 1, 28, "Input"],
+Cell[4382, 170, 83, 1, 35, "Input"],
+Cell[4468, 173, 83, 1, 36, "Input"],
+Cell[4554, 176, 126, 2, 41, "Input"],
+Cell[4683, 180, 126, 2, 43, "Input"],
+Cell[4812, 184, 69, 1, 42, "Input"],
+Cell[4884, 187, 89, 1, 41, "Input"],
+Cell[4976, 190, 88, 1, 43, "Input"],
+Cell[5067, 193, 45, 1, 27, "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[5149, 199, 58, 0, 46, "Subsection"],
+Cell[5210, 201, 108, 4, 32, "Text"],
+Cell[5321, 207, 41, 0, 32, "Text"],
+Cell[5365, 209, 60, 0, 32, "Text"],
+Cell[5428, 211, 27, 0, 32, "Text"],
+Cell[5458, 213, 28, 0, 32, "Text"],
+Cell[5489, 215, 63, 1, 27, "Input"],
+Cell[5555, 218, 25, 0, 32, "Text"],
+Cell[5583, 220, 283, 6, 43, "Input"],
+Cell[5869, 228, 287, 6, 43, "Input"],
+Cell[6159, 236, 112, 5, 32, "Text"],
+Cell[6274, 243, 29, 0, 32, "Text"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[6352, 249, 37, 0, 56, "Section"],
+
+Cell[CellGroupData[{
+Cell[6414, 253, 28, 0, 46, "Subsection"],
+Cell[6445, 255, 515, 10, 121, "Input"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[6997, 270, 48, 0, 46, "Subsection"],
+Cell[7048, 272, 47, 0, 32, "Text"],
+Cell[7098, 274, 41, 0, 32, "Text"],
+Cell[7142, 276, 26, 0, 32, "Text"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[7205, 281, 49, 0, 46, "Subsection"],
+Cell[7257, 283, 47, 0, 32, "Text"],
+Cell[7307, 285, 41, 0, 32, "Text"],
+Cell[7351, 287, 26, 0, 32, "Text"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[7426, 293, 36, 0, 56, "Section"],
+
+Cell[CellGroupData[{
+Cell[7487, 297, 48, 0, 46, "Subsection"],
+Cell[7538, 299, 47, 0, 32, "Text"],
+Cell[7588, 301, 41, 0, 32, "Text"],
+Cell[7632, 303, 26, 0, 32, "Text"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[7695, 308, 49, 0, 46, "Subsection"],
+Cell[7747, 310, 47, 0, 32, "Text"],
+Cell[7797, 312, 41, 0, 32, "Text"],
+Cell[7841, 314, 26, 0, 32, "Text"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+
+
+(*******************************************************************
+End of Mathematica Notebook file.
+*******************************************************************)
+
