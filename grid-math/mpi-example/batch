@@ -1,0 +1,4 @@
+#!/bin/csh
+#BSUB -q parallel
+#BSUB -n 4
+cpuset -q batch /usr/local/mpich/bin/mpirun -np 4 ./a.out >logfile

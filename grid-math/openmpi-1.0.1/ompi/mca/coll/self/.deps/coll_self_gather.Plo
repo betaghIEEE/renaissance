@@ -1,0 +1,218 @@
+coll_self_gather.lo .libs/coll_self_gather.o: coll_self_gather.c \
+  ../../../../include/ompi_config.h \
+  ../../../../include/ompi_config_bottom.h \
+  /usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/stdbool.h \
+  /usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/limits.h \
+  /usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/syslimits.h \
+  /usr/include/limits.h /usr/include/machine/limits.h \
+  /usr/include/ppc/limits.h /usr/include/ppc/_limits.h \
+  /usr/include/sys/syslimits.h \
+  /usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/stdint.h \
+  ../../../../ompi/include/constants.h \
+  ../../../../orte/include/orte_constants.h \
+  ../../../../opal/include/constants.h \
+  ../../../../ompi/datatype/datatype.h /usr/include/sys/types.h \
+  /usr/include/sys/appleapiopts.h /usr/include/sys/cdefs.h \
+  /usr/include/machine/types.h /usr/include/ppc/types.h \
+  /usr/include/ppc/_types.h /usr/include/sys/_types.h \
+  /usr/include/machine/_types.h /usr/include/machine/endian.h \
+  /usr/include/ppc/endian.h /usr/include/sys/_endian.h \
+  /usr/include/libkern/OSByteOrder.h \
+  /usr/include/libkern/ppc/OSByteOrder.h /usr/include/unistd.h \
+  /usr/include/_types.h /usr/include/sys/unistd.h \
+  /usr/include/sys/select.h /usr/include/signal.h \
+  /usr/include/sys/signal.h /usr/include/machine/signal.h \
+  /usr/include/ppc/signal.h /usr/include/sys/time.h /usr/include/time.h \
+  /usr/include/machine/_limits.h /usr/include/string.h \
+  ../../../../opal/class/opal_object.h /usr/include/assert.h \
+  /usr/include/stdlib.h /usr/include/sys/wait.h \
+  /usr/include/sys/resource.h /usr/include/alloca.h \
+  ../../../../opal/include/sys/atomic.h \
+  ../../../../opal/include/sys/architecture.h \
+  ../../../../opal/include/sys/powerpc/atomic.h \
+  ../../../../opal/include/sys/atomic_impl.h \
+  ../../../../opal/class/opal_hash_table.h \
+  ../../../../ompi/include/types.h /usr/include/sys/socket.h \
+  /usr/include/machine/param.h /usr/include/ppc/param.h \
+  ../../../../opal/class/opal_list.h /usr/include/stdio.h \
+  ../../../../ompi/class/ompi_pointer_array.h \
+  ../../../../opal/threads/mutex.h ../../../../opal/threads/mutex_unix.h \
+  /usr/include/pthread.h /usr/include/pthread_impl.h /usr/include/sched.h \
+  ../../../../include/mpi.h coll_self.h ../../../../opal/mca/mca.h \
+  ../../../../opal/util/cmd_line.h ../../../../ompi/mca/coll/coll.h \
+  ../../../../opal/mca/base/base.h \
+  ../../../../opal/mca/base/mca_base_param.h \
+  ../../../../opal/class/opal_value_array.h \
+  ../../../../opal/class/opal_hash_table.h ../../../../opal/mca/mca.h \
+  ../../../../opal/mca/base/mca_base_msgbuf.h \
+  ../../../../ompi/request/request.h \
+  ../../../../ompi/errhandler/errhandler.h \
+  ../../../../ompi/runtime/mpiruntime.h \
+  ../../../../ompi/errhandler/errhandler_predefined.h \
+  ../../../../ompi/errhandler/errcode-internal.h \
+  ../../../../opal/runtime/opal_progress.h \
+  ../../../../opal/threads/condition.h ../../../../ompi/mca/pml/pml.h
+
+../../../../include/ompi_config.h:
+
+../../../../include/ompi_config_bottom.h:
+
+/usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/stdbool.h:
+
+/usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/limits.h:
+
+/usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/syslimits.h:
+
+/usr/include/limits.h:
+
+/usr/include/machine/limits.h:
+
+/usr/include/ppc/limits.h:
+
+/usr/include/ppc/_limits.h:
+
+/usr/include/sys/syslimits.h:
+
+/usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/stdint.h:
+
+../../../../ompi/include/constants.h:
+
+../../../../orte/include/orte_constants.h:
+
+../../../../opal/include/constants.h:
+
+../../../../ompi/datatype/datatype.h:
+
+/usr/include/sys/types.h:
+
+/usr/include/sys/appleapiopts.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/machine/types.h:
+
+/usr/include/ppc/types.h:
+
+/usr/include/ppc/_types.h:
+
+/usr/include/sys/_types.h:
+
+/usr/include/machine/_types.h:
+
+/usr/include/machine/endian.h:
+
+/usr/include/ppc/endian.h:
+
+/usr/include/sys/_endian.h:
+
+/usr/include/libkern/OSByteOrder.h:
+
+/usr/include/libkern/ppc/OSByteOrder.h:
+
+/usr/include/unistd.h:
+
+/usr/include/_types.h:
+
+/usr/include/sys/unistd.h:
+
+/usr/include/sys/select.h:
+
+/usr/include/signal.h:
+
+/usr/include/sys/signal.h:
+
+/usr/include/machine/signal.h:
+
+/usr/include/ppc/signal.h:
+
+/usr/include/sys/time.h:
+
+/usr/include/time.h:
+
+/usr/include/machine/_limits.h:
+
+/usr/include/string.h:
+
+../../../../opal/class/opal_object.h:
+
+/usr/include/assert.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/sys/wait.h:
+
+/usr/include/sys/resource.h:
+
+/usr/include/alloca.h:
+
+../../../../opal/include/sys/atomic.h:
+
+../../../../opal/include/sys/architecture.h:
+
+../../../../opal/include/sys/powerpc/atomic.h:
+
+../../../../opal/include/sys/atomic_impl.h:
+
+../../../../opal/class/opal_hash_table.h:
+
+../../../../ompi/include/types.h:
+
+/usr/include/sys/socket.h:
+
+/usr/include/machine/param.h:
+
+/usr/include/ppc/param.h:
+
+../../../../opal/class/opal_list.h:
+
+/usr/include/stdio.h:
+
+../../../../ompi/class/ompi_pointer_array.h:
+
+../../../../opal/threads/mutex.h:
+
+../../../../opal/threads/mutex_unix.h:
+
+/usr/include/pthread.h:
+
+/usr/include/pthread_impl.h:
+
+/usr/include/sched.h:
+
+../../../../include/mpi.h:
+
+coll_self.h:
+
+../../../../opal/mca/mca.h:
+
+../../../../opal/util/cmd_line.h:
+
+../../../../ompi/mca/coll/coll.h:
+
+../../../../opal/mca/base/base.h:
+
+../../../../opal/mca/base/mca_base_param.h:
+
+../../../../opal/class/opal_value_array.h:
+
+../../../../opal/class/opal_hash_table.h:
+
+../../../../opal/mca/mca.h:
+
+../../../../opal/mca/base/mca_base_msgbuf.h:
+
+../../../../ompi/request/request.h:
+
+../../../../ompi/errhandler/errhandler.h:
+
+../../../../ompi/runtime/mpiruntime.h:
+
+../../../../ompi/errhandler/errhandler_predefined.h:
+
+../../../../ompi/errhandler/errcode-internal.h:
+
+../../../../opal/runtime/opal_progress.h:
+
+../../../../opal/threads/condition.h:
+
+../../../../ompi/mca/pml/pml.h:

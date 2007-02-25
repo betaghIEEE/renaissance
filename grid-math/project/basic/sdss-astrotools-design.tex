@@ -1,0 +1,138 @@
+The first set of tools are for measuring outputs of the images themselves.  Each image consists of a sub-image for each image color filter.   
+
+The original SDSS used a few pipelines for its image processing.  These pipelines included:
+\begin{itemize}
+\item Astrometric Pipeline: which performed astrometric calibration.  
+\item Postage Stamp Pipeline: which characterizes the behavior of the point spread function as a function of time and location in the focal plane.
+\item Frames pipeline: finds, deblends, and measures the properties of objects
+\item Final calibration pipeline applies to photometric calibration to the objects
+\item Monitor telescope pipeline provides calibration data for the psp, and frames pipeline.  
+\end{itemize}
+These pipelines arranged data into the following categories:
+\begin{itemize}
+\item Image Properties
+\item Spectroscopic parameters
+\item Color Images
+\item FITS images (corrected images}
+\item Spectra:
+\end{itemize}
+
+The image category includes image parameters, the images themselves, the corrected images, mask frames, atlas image (a listing of which pixels were part of the object),  color images.  
+
+It is the intended objective of this project to provide a set of libraries that provide the data that was one precomputed, and use the more fundamental data to produce a powerful knowledge base.  This knowledge base can therefore use these libraries to discover other facts of the SDSS data.    
+
+The original database servers included a catalog archive server, data archive, sky server.  The sky server was for outreach.  The data archive server provides detailed data such as corrected frames, images, or spectra available.  The catalog server provided searches on the magnitudes of the objects based on the five filters.  
+
+Each great circle coordinate system was defined for each stripe.  The coordinates that a pixel was to be corrected for empirically derived optical distortion terms, and provide corrected row and column coordinates to these pixels.   Some of these terms were derived for USNO CCD Astrograph Catalog values of known stars. These mappings result in an affine transformation relating to corrected pixel positions to celestial coordinates.  
+
+From a computer vision point of view, the astronomic coordinate system simply represents a standardized spherical coordinate system.  Each image can further more mapped if there are sufficient number of points in the image that map to precise coordinates in the spherical coordinate system.  Each point in the image represents an angle of the sky by the CCD camera.  The general angle is known from the mechanisms aiming the telescope.  
+
+\section {Auto Linear Fits}
+This section analyzes the atLinearFits module of the astrotools.  
+
+
+\subsection{Auto Vector Liner Equation}
+
+\textbf{Description} Solve a set of linear equations: 
+\[ A X = B \]
+, where \begin{itemize}
+\item A is a matrix of independent coefficients, 
+\item X is a vector of unknown
+\item B is a vector of dependent variables. 
+\end{itemize}
+The independent vectors $A$ are passed as a list of vectors.
+
+The primary tool for working this equation is known as dgefs.   This function is part of LinPack, LAPACK, and BLAS.  It solves an $n\times n$ matrix, $A$ for $X$ given $A$ and condition vector $B$.   
+
+\subsection {Auto Vector Linear Fits on Bivariate Correlated Errors and Intrinsic Scatter}
+BCES (Bivariate Correlated Errors and intrinsic Scatter) is a linear
+  regression algorithm that allows for:
+\begin{itemize}
+\item measurement errors on both variables
+\item measurement errors that depend on the measurement
+\item correlated measurement errors
+\item scatter intrinsic to the relation being fitted, beyond measument error
+\end {itemize}
+  The routine performs four fits: y regressed on x, x regressed on y, the bisector, and orthogonal errors. Which answer is the "right" one depends on the situation. (A simplified guide would be: if you wish to predict a y given an x, use y regressed on x. If you wish to learn about the relationship of two quantities, use the bisector. See Feigelson and Babu, ApJ 397, 55 1992 for details.)
+
+The algorithm and the base fortran code are from Akritas and Bershady, ApJ 470, ? 1996.
+\begin{itemize}
+\item Also returned are the results of a bootstrap ananlysis.
+\item The "slopeErr" and "slopeErrBoot" lists have two extra elements on them. These are variences for the bisector and orthogonal slopes calculated using a technique of wider applicability than the usual one (which assumes that the residuals in Y about a line are independant of the value of X; see Isobe, Feigelson, Akritas, and Babu, ApJ 364, 104 1990)
+\item The covarience vector may be all zeros.
+\item James Annis, June 14, 1996 
+\end{itemize}
+
+
+\section {Auto Sla-LIB Package}
+This library is for translating structs used in Astrotools to ones that the SLALIB package can understand.  Future versions of this probably should use standard LAPACK.  Most of these values are common astronomy values and may be useful if only the conversion of these astrotools.  
+
+\section {AT Survey Geometry} 
+``Converts Equatorial coordinates to Great Circle coordinates'' , and vise-versa.  Converts equatorial to galactic coordinates, and vise versa.   ``Converts Equatorial to Survey coordinates,'' and vise-versa.    Converts Great Circle coordinates to Survey coordinates and vise-versa.
+
+\begin{quote}
+ Based on an experimental version of atSurveyToAzelpa, this gets the 
+     parallactic angle wrt scanning direction  correctly- 5 March 1998
+
+   This version converts (LMST,lat) to (LAST,lat), which are zenith
+    coordinates referred to true equator and equinox of date, then 
+    applies precession/nutation to convert to zenith coordinates referred 
+    to mean eqtr & eqnx of J2000.  From that, can convert to GC coordinates, 
+    and determine difference between zenith direction and direction of 
+    scanning.
+
+    This could all be done as well in survey coordinates, but still need
+    to know the node and inclination of GC path.  The survey coordinates
+    of a star do not tell you what great circle is being scanned, which
+    is what is needed to get mu & nu components of refraction.
+
+   Survey coordinates are (lambda, eta).  Lines of constant lambda are
+   parallels, and lines of constant eta are meridians which go through
+   the survey poles.  The center of a great circle scan will be a line
+   of constant eta.
+
+   Great circle coordinates (mu, nu) are defined so that the line down the
+   center of a stripe (which is a meridian in survey coordinates) is the
+   parallel nu=0.  So, lines of constant mu are meridians and lines of
+   constant nu are parallels.  Great circle coordinates are specific to a
+   survey stripe.
+
+   To convert to and from Great Circle coordinates, you must input the
+   node and inclination of the reference great circle.  For "normal" drift
+   scan great circles, use <code>node=at_surveyCenterRa - 90</code>degrees,
+   and <code>inc=survey latitude + at_surveyCenterDec</code>.
+
+   The survey latitudes for SDSS stripes are <code> +/- n*at_stripeSeparation
+   </code>.
+
+
+   The limits on these coordinates are:
+\begin{itemize}
+\item 0 <= (ra, glong, mu) < 360.0
+\item -180.0 <= lambda < 180.0
+\item -90 <= (dec, glat, nu, eta) < 90.0
+\end{itemize}
+
+   The survey center is defined with the external const double values
+\begin{itemize}
+\item <code> at_surveyCenterRa = 185.0</code>
+\item <code> at_surveyCenterDec = 32.5</code>
+\end{itemize}
+   This (ra,dec) transforms to:
+\begin{itemize}
+\item <bf>galactic</bf> gLong=172.79876542 gLat=81.32406952
+\item <bf>great circle</bf>(with node=95.0, inclination=32.5) mu=185.0 nu=0.0
+\item <bf>survey</bf> lambda=0.0 eta=0.0
+\end{itemize}
+\end{quote}
+
+\section {AT Conversions}  
+More conversion libraries.
+
+\section {AT Air Mass}  
+C routines for calculating air mass for equatorial, meridian, and zenith positions.  
+
+\section {AT Galaxies, AT Objects}
+Calculates number of objects either in our galaxy or with in a specified range.  
+
+\textbf{Description} 

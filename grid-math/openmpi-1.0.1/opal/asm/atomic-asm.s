@@ -1,0 +1,1 @@
+../../opal/asm/generated/atomic-powerpc32-osx.s

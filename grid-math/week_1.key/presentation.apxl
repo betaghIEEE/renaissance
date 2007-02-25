@@ -1,0 +1,2566 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<presentation xmlns="http://developer.apple.com/schemas/APXL" version="36" xmlns:plugin="http://developer.apple.com/schemas/APXL" self-contained="true">
+	<metadata>
+		<application-name>Keynote</application-name>
+		<application-version>update3-20030829_1</application-version>
+		<time-stamp>2005-01-18 13:14:20 -0600</time-stamp>
+	</metadata>
+	<theme slide-size="720 540">
+		<prototype-drawables>
+			<shape stroke-color="1 1 1" opacity="1" stroke-width="1">
+				<styles>
+					<fill-style fill-type="color" fill-color="0.2 0.8 0.8"/>
+					<dash-style pattern="solid"/>
+					<shadow-style opacity="0" radius="0"/>
+				</styles>
+			</shape>
+			<line opacity="1" stroke-color="1 1 1" stroke-width="1">
+				<styles>
+					<dash-style pattern="solid"/>
+					<shadow-style opacity="0" radius="0"/>
+					<line-head-style is-filled="false"/>
+					<line-tail-style is-filled="false"/>
+				</styles>
+			</line>
+			<textbox opacity="1">
+				<content font-color="0 0 0" paragraph-alignment="left" tab-stops="L 28 L 56 L 84 L 112 L 140 L 168 L 196 L 224 L 252 L 280 L 308 L 336" font-size="12" font-name="Verdana"/>
+				<styles>
+					<shadow-style opacity="0" radius="0"/>
+				</styles>
+			</textbox>
+		</prototype-drawables>
+		<prototype-plugins>
+			<prototype-plugin key="StackedAreaDefaults" transformation="1 0 0 1 186.84 133.946" opacity="1">
+				<prototype-data>
+					<string>root</string>
+					<plugin:chart-prototype dataFormatterSuffix="" seriesDirection="0" dataFormatterHasThousandsSeparators="NO" interSeriesGap="0" dataFormatterPrefix="" interBarGap="0.25" pieSlicePercentVisible="YES" buildChunkingStyle="0" version="1" layerElementsForShadowing="NO" dataFormatterNumberOfDecimals="1">
+						<fill-style fill-type="none"/>
+						<plugin:data>
+							<array>
+								<null/>
+								<string>East</string>
+								<string>West</string>
+								<string>North</string>
+							</array>
+							<array>
+								<string>1st Qtr</string>
+								<string>20.4</string>
+								<string>30.6</string>
+								<string>45.9</string>
+							</array>
+							<array>
+								<string>2nd Qtr</string>
+								<string>27.4</string>
+								<string>38.6</string>
+								<string>46.9</string>
+							</array>
+							<array>
+								<string>3rd Qtr</string>
+								<string>90.0</string>
+								<string>34.6</string>
+								<string>45.0</string>
+							</array>
+							<array>
+								<string>4th Qtr</string>
+								<string>20.4</string>
+								<string>31.6</string>
+								<string>43.9</string>
+							</array>
+						</plugin:data>
+						<plugin:axes>
+							<plugin:axis altLineVisible="NO" userMinimum="0" userMaximum="0" showGrid="NO" lineOpacity="1" minorTickPositions="0" gridOpacity="1" version="1" useUserMaximum="NO" showZero="YES" useUserMinimum="NO" tickLabelsVisible="YES" steps="4" majorTickPositions="1" tickLabelsAngle="0" lineVisible="YES" tickLabelsOpacity="1" altLineOpacity="1">
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+							</plugin:axis>
+							<plugin:axis altLineVisible="NO" userMinimum="0" userMaximum="200" showGrid="YES" lineOpacity="1" minorTickPositions="0" gridOpacity="1" version="1" useUserMaximum="YES" showZero="YES" useUserMinimum="YES" tickLabelsVisible="YES" steps="4" majorTickPositions="1" tickLabelsAngle="0" lineVisible="YES" tickLabelsOpacity="1" altLineOpacity="1">
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+							</plugin:axis>
+						</plugin:axes>
+						<plugin:series>
+							<plugin:serie labelVisible="NO" symbolFillMode="1" labelOpacity="1" version="1" pieSliceOffset="0" labelPosition="10" opacity="1" titleVisible="NO">
+								<fill-style fill-type="color" fill-color="0.2 0.8 0.8"/>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+								<fill-style fill-type="none"/>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<plugin:symbol numberOfPoints="0" size="12" version="2" type="0" point_at_top="NO"/>
+							</plugin:serie>
+							<plugin:serie labelVisible="NO" symbolFillMode="1" labelOpacity="1" version="1" pieSliceOffset="0" labelPosition="10" opacity="1" titleVisible="NO">
+								<fill-style fill-type="color" fill-color="0.4 0.8 1"/>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+								<fill-style fill-type="none"/>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<plugin:symbol numberOfPoints="0" size="12" version="2" type="0" point_at_top="NO"/>
+							</plugin:serie>
+							<plugin:serie labelVisible="NO" symbolFillMode="1" labelOpacity="1" version="1" pieSliceOffset="0" labelPosition="10" opacity="1" titleVisible="NO">
+								<fill-style fill-type="color" fill-color="1 1 0.8"/>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+								<fill-style fill-type="none"/>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<plugin:symbol numberOfPoints="0" size="12" version="2" type="0" point_at_top="NO"/>
+							</plugin:serie>
+							<plugin:serie labelVisible="NO" symbolFillMode="1" labelOpacity="1" version="1" pieSliceOffset="0" labelPosition="10" opacity="1" titleVisible="NO">
+								<fill-style fill-type="color" fill-color="1 0.8 0.4"/>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+								<fill-style fill-type="none"/>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<plugin:symbol numberOfPoints="0" size="12" version="2" type="0" point_at_top="NO"/>
+							</plugin:serie>
+							<plugin:serie labelVisible="NO" symbolFillMode="1" labelOpacity="1" version="1" pieSliceOffset="0" labelPosition="10" opacity="1" titleVisible="NO">
+								<fill-style fill-type="color" fill-color="0 0.231373 0.462745"/>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+								<fill-style fill-type="none"/>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<plugin:symbol numberOfPoints="0" size="12" version="2" type="0" point_at_top="NO"/>
+							</plugin:serie>
+							<plugin:serie labelVisible="NO" symbolFillMode="1" labelOpacity="1" version="1" pieSliceOffset="0" labelPosition="10" opacity="1" titleVisible="NO">
+								<fill-style fill-type="color" fill-color="0.8 0.92549 1"/>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+								<fill-style fill-type="none"/>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<plugin:symbol numberOfPoints="0" size="12" version="2" type="0" point_at_top="NO"/>
+							</plugin:serie>
+						</plugin:series>
+						<plugin:legend version="1" visible="YES">
+							<dict>
+								<color key="NSColor">1 1 1</color>
+								<font key="NSFont" name="ArialMT" font-size="18"/>
+							</dict>
+							<plugin:stroke-style version="2" width="1">
+								<color>1 1 1</color>
+								<dash-style pattern="solid"/>
+							</plugin:stroke-style>
+							<fill-style fill-type="none"/>
+						</plugin:legend>
+					</plugin:chart-prototype>
+				</prototype-data>
+			</prototype-plugin>
+			<prototype-plugin key="VerticalStackedBarDefaults" transformation="1 0 0 1 186.84 133.946" opacity="1">
+				<prototype-data>
+					<string>root</string>
+					<plugin:chart-prototype dataFormatterSuffix="" seriesDirection="0" dataFormatterHasThousandsSeparators="NO" interSeriesGap="0" dataFormatterPrefix="" interBarGap="0.25" pieSlicePercentVisible="YES" buildChunkingStyle="0" version="1" layerElementsForShadowing="NO" dataFormatterNumberOfDecimals="1">
+						<fill-style fill-type="none"/>
+						<plugin:data>
+							<array>
+								<null/>
+								<string>East</string>
+								<string>West</string>
+								<string>North</string>
+							</array>
+							<array>
+								<string>1st Qtr</string>
+								<string>20.4</string>
+								<string>30.6</string>
+								<string>45.9</string>
+							</array>
+							<array>
+								<string>2nd Qtr</string>
+								<string>27.4</string>
+								<string>38.6</string>
+								<string>46.9</string>
+							</array>
+							<array>
+								<string>3rd Qtr</string>
+								<string>90.0</string>
+								<string>34.6</string>
+								<string>45.0</string>
+							</array>
+							<array>
+								<string>4th Qtr</string>
+								<string>20.4</string>
+								<string>31.6</string>
+								<string>43.9</string>
+							</array>
+						</plugin:data>
+						<plugin:axes>
+							<plugin:axis altLineVisible="NO" userMinimum="0" userMaximum="0" showGrid="NO" lineOpacity="1" minorTickPositions="0" gridOpacity="1" version="1" useUserMaximum="NO" showZero="YES" useUserMinimum="NO" tickLabelsVisible="YES" steps="4" majorTickPositions="1" tickLabelsAngle="0" lineVisible="YES" tickLabelsOpacity="1" altLineOpacity="1">
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+							</plugin:axis>
+							<plugin:axis altLineVisible="NO" userMinimum="0" userMaximum="200" showGrid="YES" lineOpacity="1" minorTickPositions="0" gridOpacity="1" version="1" useUserMaximum="YES" showZero="YES" useUserMinimum="YES" tickLabelsVisible="YES" steps="4" majorTickPositions="1" tickLabelsAngle="0" lineVisible="YES" tickLabelsOpacity="1" altLineOpacity="1">
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+							</plugin:axis>
+						</plugin:axes>
+						<plugin:series>
+							<plugin:serie labelVisible="NO" symbolFillMode="1" labelOpacity="1" version="1" pieSliceOffset="0" labelPosition="7" opacity="1" titleVisible="NO">
+								<fill-style fill-type="color" fill-color="0.2 0.8 0.8"/>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+								<fill-style fill-type="none"/>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<plugin:symbol numberOfPoints="0" size="12" version="2" type="0" point_at_top="NO"/>
+							</plugin:serie>
+							<plugin:serie labelVisible="NO" symbolFillMode="1" labelOpacity="1" version="1" pieSliceOffset="0" labelPosition="7" opacity="1" titleVisible="NO">
+								<fill-style fill-type="color" fill-color="0.4 0.8 1"/>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+								<fill-style fill-type="none"/>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<plugin:symbol numberOfPoints="0" size="12" version="2" type="0" point_at_top="NO"/>
+							</plugin:serie>
+							<plugin:serie labelVisible="NO" symbolFillMode="1" labelOpacity="1" version="1" pieSliceOffset="0" labelPosition="7" opacity="1" titleVisible="NO">
+								<fill-style fill-type="color" fill-color="1 1 0.8"/>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+								<fill-style fill-type="none"/>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<plugin:symbol numberOfPoints="0" size="12" version="2" type="0" point_at_top="NO"/>
+							</plugin:serie>
+							<plugin:serie labelVisible="NO" symbolFillMode="1" labelOpacity="1" version="1" pieSliceOffset="0" labelPosition="7" opacity="1" titleVisible="NO">
+								<fill-style fill-type="color" fill-color="1 0.8 0.4"/>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+								<fill-style fill-type="none"/>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<plugin:symbol numberOfPoints="0" size="12" version="2" type="0" point_at_top="NO"/>
+							</plugin:serie>
+							<plugin:serie labelVisible="NO" symbolFillMode="1" labelOpacity="1" version="1" pieSliceOffset="0" labelPosition="7" opacity="1" titleVisible="NO">
+								<fill-style fill-type="color" fill-color="0 0.231373 0.462745"/>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+								<fill-style fill-type="none"/>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<plugin:symbol numberOfPoints="0" size="12" version="2" type="0" point_at_top="NO"/>
+							</plugin:serie>
+							<plugin:serie labelVisible="NO" symbolFillMode="1" labelOpacity="1" version="1" pieSliceOffset="0" labelPosition="7" opacity="1" titleVisible="NO">
+								<fill-style fill-type="color" fill-color="0.8 0.92549 1"/>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+								<fill-style fill-type="none"/>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<plugin:symbol numberOfPoints="0" size="12" version="2" type="0" point_at_top="NO"/>
+							</plugin:serie>
+						</plugin:series>
+						<plugin:legend version="1" visible="YES">
+							<dict>
+								<color key="NSColor">1 1 1</color>
+								<font key="NSFont" name="ArialMT" font-size="18"/>
+							</dict>
+							<plugin:stroke-style version="2" width="1">
+								<color>1 1 1</color>
+								<dash-style pattern="solid"/>
+							</plugin:stroke-style>
+							<fill-style fill-type="none"/>
+						</plugin:legend>
+					</plugin:chart-prototype>
+				</prototype-data>
+			</prototype-plugin>
+			<prototype-plugin key="HorizontalBarDefaults" transformation="1 0 0 1 186.84 133.946" opacity="1">
+				<prototype-data>
+					<string>root</string>
+					<plugin:chart-prototype dataFormatterSuffix="" seriesDirection="0" dataFormatterHasThousandsSeparators="NO" interSeriesGap="0" dataFormatterPrefix="" interBarGap="0.25" pieSlicePercentVisible="YES" buildChunkingStyle="0" version="1" layerElementsForShadowing="NO" dataFormatterNumberOfDecimals="1">
+						<fill-style fill-type="none"/>
+						<plugin:data>
+							<array>
+								<null/>
+								<string>East</string>
+								<string>West</string>
+								<string>North</string>
+							</array>
+							<array>
+								<string>1st Qtr</string>
+								<string>20.4</string>
+								<string>30.6</string>
+								<string>45.9</string>
+							</array>
+							<array>
+								<string>2nd Qtr</string>
+								<string>27.4</string>
+								<string>38.6</string>
+								<string>46.9</string>
+							</array>
+							<array>
+								<string>3rd Qtr</string>
+								<string>90.0</string>
+								<string>34.6</string>
+								<string>45.0</string>
+							</array>
+							<array>
+								<string>4th Qtr</string>
+								<string>20.4</string>
+								<string>31.6</string>
+								<string>43.9</string>
+							</array>
+						</plugin:data>
+						<plugin:axes>
+							<plugin:axis altLineVisible="NO" userMinimum="0" userMaximum="100" showGrid="YES" lineOpacity="1" minorTickPositions="0" gridOpacity="1" version="1" useUserMaximum="YES" showZero="YES" useUserMinimum="YES" tickLabelsVisible="YES" steps="4" majorTickPositions="1" tickLabelsAngle="0" lineVisible="YES" tickLabelsOpacity="1" altLineOpacity="1">
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+							</plugin:axis>
+							<plugin:axis altLineVisible="NO" userMinimum="0" userMaximum="0" showGrid="NO" lineOpacity="1" minorTickPositions="0" gridOpacity="1" version="1" useUserMaximum="NO" showZero="YES" useUserMinimum="NO" tickLabelsVisible="YES" steps="4" majorTickPositions="1" tickLabelsAngle="0" lineVisible="YES" tickLabelsOpacity="1" altLineOpacity="1">
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+							</plugin:axis>
+						</plugin:axes>
+						<plugin:series>
+							<plugin:serie labelVisible="NO" symbolFillMode="1" labelOpacity="1" version="1" pieSliceOffset="0" labelPosition="1" opacity="1" titleVisible="NO">
+								<fill-style fill-type="color" fill-color="0.2 0.8 0.8"/>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+								<fill-style fill-type="none"/>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<plugin:symbol numberOfPoints="0" size="12" version="2" type="0" point_at_top="NO"/>
+							</plugin:serie>
+							<plugin:serie labelVisible="NO" symbolFillMode="1" labelOpacity="1" version="1" pieSliceOffset="0" labelPosition="1" opacity="1" titleVisible="NO">
+								<fill-style fill-type="color" fill-color="0.4 0.8 1"/>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+								<fill-style fill-type="none"/>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<plugin:symbol numberOfPoints="0" size="12" version="2" type="0" point_at_top="NO"/>
+							</plugin:serie>
+							<plugin:serie labelVisible="NO" symbolFillMode="1" labelOpacity="1" version="1" pieSliceOffset="0" labelPosition="1" opacity="1" titleVisible="NO">
+								<fill-style fill-type="color" fill-color="1 1 0.8"/>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+								<fill-style fill-type="none"/>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<plugin:symbol numberOfPoints="0" size="12" version="2" type="0" point_at_top="NO"/>
+							</plugin:serie>
+							<plugin:serie labelVisible="NO" symbolFillMode="1" labelOpacity="1" version="1" pieSliceOffset="0" labelPosition="1" opacity="1" titleVisible="NO">
+								<fill-style fill-type="color" fill-color="1 0.8 0.4"/>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+								<fill-style fill-type="none"/>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<plugin:symbol numberOfPoints="0" size="12" version="2" type="0" point_at_top="NO"/>
+							</plugin:serie>
+							<plugin:serie labelVisible="NO" symbolFillMode="1" labelOpacity="1" version="1" pieSliceOffset="0" labelPosition="1" opacity="1" titleVisible="NO">
+								<fill-style fill-type="color" fill-color="0 0.231373 0.462745"/>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+								<fill-style fill-type="none"/>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<plugin:symbol numberOfPoints="0" size="12" version="2" type="0" point_at_top="NO"/>
+							</plugin:serie>
+							<plugin:serie labelVisible="NO" symbolFillMode="1" labelOpacity="1" version="1" pieSliceOffset="0" labelPosition="1" opacity="1" titleVisible="NO">
+								<fill-style fill-type="color" fill-color="0.8 0.92549 1"/>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+								<fill-style fill-type="none"/>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<plugin:symbol numberOfPoints="0" size="12" version="2" type="0" point_at_top="NO"/>
+							</plugin:serie>
+						</plugin:series>
+						<plugin:legend version="1" visible="YES">
+							<dict>
+								<color key="NSColor">1 1 1</color>
+								<font key="NSFont" name="ArialMT" font-size="18"/>
+							</dict>
+							<plugin:stroke-style version="2" width="1">
+								<color>1 1 1</color>
+								<dash-style pattern="solid"/>
+							</plugin:stroke-style>
+							<fill-style fill-type="none"/>
+						</plugin:legend>
+					</plugin:chart-prototype>
+				</prototype-data>
+			</prototype-plugin>
+			<prototype-plugin key="VerticalBarDefaults" transformation="1 0 0 1 186.84 133.946" opacity="1">
+				<prototype-data>
+					<string>root</string>
+					<plugin:chart-prototype dataFormatterSuffix="" seriesDirection="0" dataFormatterHasThousandsSeparators="NO" interSeriesGap="0" dataFormatterPrefix="" interBarGap="0.25" pieSlicePercentVisible="YES" buildChunkingStyle="0" version="1" layerElementsForShadowing="NO" dataFormatterNumberOfDecimals="1">
+						<fill-style fill-type="none"/>
+						<plugin:data>
+							<array>
+								<null/>
+								<string>East</string>
+								<string>West</string>
+								<string>North</string>
+							</array>
+							<array>
+								<string>1st Qtr</string>
+								<string>20.4</string>
+								<string>30.6</string>
+								<string>45.9</string>
+							</array>
+							<array>
+								<string>2nd Qtr</string>
+								<string>27.4</string>
+								<string>38.6</string>
+								<string>46.9</string>
+							</array>
+							<array>
+								<string>3rd Qtr</string>
+								<string>90.0</string>
+								<string>34.6</string>
+								<string>45.0</string>
+							</array>
+							<array>
+								<string>4th Qtr</string>
+								<string>20.4</string>
+								<string>31.6</string>
+								<string>43.9</string>
+							</array>
+						</plugin:data>
+						<plugin:axes>
+							<plugin:axis altLineVisible="NO" userMinimum="0" userMaximum="0" showGrid="NO" lineOpacity="1" minorTickPositions="0" gridOpacity="1" version="1" useUserMaximum="NO" showZero="YES" useUserMinimum="NO" tickLabelsVisible="YES" steps="4" majorTickPositions="1" tickLabelsAngle="0" lineVisible="YES" tickLabelsOpacity="1" altLineOpacity="1">
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+							</plugin:axis>
+							<plugin:axis altLineVisible="NO" userMinimum="0" userMaximum="100" showGrid="YES" lineOpacity="1" minorTickPositions="0" gridOpacity="1" version="1" useUserMaximum="YES" showZero="YES" useUserMinimum="YES" tickLabelsVisible="YES" steps="4" majorTickPositions="1" tickLabelsAngle="0" lineVisible="YES" tickLabelsOpacity="1" altLineOpacity="1">
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+							</plugin:axis>
+						</plugin:axes>
+						<plugin:series>
+							<plugin:serie labelVisible="NO" symbolFillMode="1" labelOpacity="1" version="1" pieSliceOffset="0" labelPosition="1" opacity="1" titleVisible="NO">
+								<fill-style fill-type="color" fill-color="0.2 0.8 0.8"/>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+								<fill-style fill-type="none"/>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<plugin:symbol numberOfPoints="0" size="12" version="2" type="0" point_at_top="NO"/>
+							</plugin:serie>
+							<plugin:serie labelVisible="NO" symbolFillMode="1" labelOpacity="1" version="1" pieSliceOffset="0" labelPosition="1" opacity="1" titleVisible="NO">
+								<fill-style fill-type="color" fill-color="0.4 0.8 1"/>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+								<fill-style fill-type="none"/>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<plugin:symbol numberOfPoints="0" size="12" version="2" type="0" point_at_top="NO"/>
+							</plugin:serie>
+							<plugin:serie labelVisible="NO" symbolFillMode="1" labelOpacity="1" version="1" pieSliceOffset="0" labelPosition="1" opacity="1" titleVisible="NO">
+								<fill-style fill-type="color" fill-color="1 1 0.8"/>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+								<fill-style fill-type="none"/>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<plugin:symbol numberOfPoints="0" size="12" version="2" type="0" point_at_top="NO"/>
+							</plugin:serie>
+							<plugin:serie labelVisible="NO" symbolFillMode="1" labelOpacity="1" version="1" pieSliceOffset="0" labelPosition="1" opacity="1" titleVisible="NO">
+								<fill-style fill-type="color" fill-color="1 0.8 0.4"/>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+								<fill-style fill-type="none"/>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<plugin:symbol numberOfPoints="0" size="12" version="2" type="0" point_at_top="NO"/>
+							</plugin:serie>
+							<plugin:serie labelVisible="NO" symbolFillMode="1" labelOpacity="1" version="1" pieSliceOffset="0" labelPosition="1" opacity="1" titleVisible="NO">
+								<fill-style fill-type="color" fill-color="0 0.231373 0.462745"/>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+								<fill-style fill-type="none"/>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<plugin:symbol numberOfPoints="0" size="12" version="2" type="0" point_at_top="NO"/>
+							</plugin:serie>
+							<plugin:serie labelVisible="NO" symbolFillMode="1" labelOpacity="1" version="1" pieSliceOffset="0" labelPosition="1" opacity="1" titleVisible="NO">
+								<fill-style fill-type="color" fill-color="0.8 0.92549 1"/>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+								<fill-style fill-type="none"/>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<plugin:symbol numberOfPoints="0" size="12" version="2" type="0" point_at_top="NO"/>
+							</plugin:serie>
+						</plugin:series>
+						<plugin:legend version="1" visible="YES">
+							<dict>
+								<color key="NSColor">1 1 1</color>
+								<font key="NSFont" name="ArialMT" font-size="18"/>
+							</dict>
+							<plugin:stroke-style version="2" width="1">
+								<color>1 1 1</color>
+								<dash-style pattern="solid"/>
+							</plugin:stroke-style>
+							<fill-style fill-type="none"/>
+						</plugin:legend>
+					</plugin:chart-prototype>
+				</prototype-data>
+			</prototype-plugin>
+			<prototype-plugin key="AreaDefaults" transformation="1 0 0 1 186.84 133.946" opacity="1">
+				<prototype-data>
+					<string>root</string>
+					<plugin:chart-prototype dataFormatterSuffix="" seriesDirection="0" dataFormatterHasThousandsSeparators="NO" interSeriesGap="0" dataFormatterPrefix="" interBarGap="0.25" pieSlicePercentVisible="YES" buildChunkingStyle="0" version="1" layerElementsForShadowing="NO" dataFormatterNumberOfDecimals="1">
+						<fill-style fill-type="none"/>
+						<plugin:data>
+							<array>
+								<null/>
+								<string>East</string>
+								<string>West</string>
+								<string>North</string>
+							</array>
+							<array>
+								<string>1st Qtr</string>
+								<string>20.4</string>
+								<string>30.6</string>
+								<string>45.9</string>
+							</array>
+							<array>
+								<string>2nd Qtr</string>
+								<string>27.4</string>
+								<string>38.6</string>
+								<string>46.9</string>
+							</array>
+							<array>
+								<string>3rd Qtr</string>
+								<string>90.0</string>
+								<string>34.6</string>
+								<string>45.0</string>
+							</array>
+							<array>
+								<string>4th Qtr</string>
+								<string>20.4</string>
+								<string>31.6</string>
+								<string>43.9</string>
+							</array>
+						</plugin:data>
+						<plugin:axes>
+							<plugin:axis altLineVisible="NO" userMinimum="0" userMaximum="0" showGrid="NO" lineOpacity="1" minorTickPositions="0" gridOpacity="1" version="1" useUserMaximum="NO" showZero="YES" useUserMinimum="NO" tickLabelsVisible="YES" steps="4" majorTickPositions="1" tickLabelsAngle="0" lineVisible="YES" tickLabelsOpacity="1" altLineOpacity="1">
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+							</plugin:axis>
+							<plugin:axis altLineVisible="NO" userMinimum="0" userMaximum="100" showGrid="YES" lineOpacity="1" minorTickPositions="0" gridOpacity="1" version="1" useUserMaximum="YES" showZero="YES" useUserMinimum="YES" tickLabelsVisible="YES" steps="4" majorTickPositions="1" tickLabelsAngle="0" lineVisible="YES" tickLabelsOpacity="1" altLineOpacity="1">
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+							</plugin:axis>
+						</plugin:axes>
+						<plugin:series>
+							<plugin:serie labelVisible="NO" symbolFillMode="1" labelOpacity="1" version="1" pieSliceOffset="0" labelPosition="10" opacity="1" titleVisible="NO">
+								<fill-style fill-type="color" fill-color="0.2 0.8 0.8"/>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+								<fill-style fill-type="none"/>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<plugin:symbol numberOfPoints="0" size="12" version="2" type="0" point_at_top="NO"/>
+							</plugin:serie>
+							<plugin:serie labelVisible="NO" symbolFillMode="1" labelOpacity="1" version="1" pieSliceOffset="0" labelPosition="10" opacity="1" titleVisible="NO">
+								<fill-style fill-type="color" fill-color="0.4 0.8 1"/>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+								<fill-style fill-type="none"/>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<plugin:symbol numberOfPoints="0" size="12" version="2" type="0" point_at_top="NO"/>
+							</plugin:serie>
+							<plugin:serie labelVisible="NO" symbolFillMode="1" labelOpacity="1" version="1" pieSliceOffset="0" labelPosition="10" opacity="1" titleVisible="NO">
+								<fill-style fill-type="color" fill-color="1 1 0.8"/>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+								<fill-style fill-type="none"/>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<plugin:symbol numberOfPoints="0" size="12" version="2" type="0" point_at_top="NO"/>
+							</plugin:serie>
+							<plugin:serie labelVisible="NO" symbolFillMode="1" labelOpacity="1" version="1" pieSliceOffset="0" labelPosition="10" opacity="1" titleVisible="NO">
+								<fill-style fill-type="color" fill-color="1 0.8 0.4"/>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+								<fill-style fill-type="none"/>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<plugin:symbol numberOfPoints="0" size="12" version="2" type="0" point_at_top="NO"/>
+							</plugin:serie>
+							<plugin:serie labelVisible="NO" symbolFillMode="1" labelOpacity="1" version="1" pieSliceOffset="0" labelPosition="10" opacity="1" titleVisible="NO">
+								<fill-style fill-type="color" fill-color="0 0.231373 0.462745"/>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+								<fill-style fill-type="none"/>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<plugin:symbol numberOfPoints="0" size="12" version="2" type="0" point_at_top="NO"/>
+							</plugin:serie>
+							<plugin:serie labelVisible="NO" symbolFillMode="1" labelOpacity="1" version="1" pieSliceOffset="0" labelPosition="10" opacity="1" titleVisible="NO">
+								<fill-style fill-type="color" fill-color="0.8 0.92549 1"/>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+								<fill-style fill-type="none"/>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<plugin:symbol numberOfPoints="0" size="12" version="2" type="0" point_at_top="NO"/>
+							</plugin:serie>
+						</plugin:series>
+						<plugin:legend version="1" visible="YES">
+							<dict>
+								<color key="NSColor">1 1 1</color>
+								<font key="NSFont" name="ArialMT" font-size="18"/>
+							</dict>
+							<plugin:stroke-style version="2" width="1">
+								<color>1 1 1</color>
+								<dash-style pattern="solid"/>
+							</plugin:stroke-style>
+							<fill-style fill-type="none"/>
+						</plugin:legend>
+					</plugin:chart-prototype>
+				</prototype-data>
+			</prototype-plugin>
+			<prototype-plugin key="HorizontalStackedBarDefaults" transformation="1 0 0 1 186.84 133.946" opacity="1">
+				<prototype-data>
+					<string>root</string>
+					<plugin:chart-prototype dataFormatterSuffix="" seriesDirection="0" dataFormatterHasThousandsSeparators="NO" interSeriesGap="0" dataFormatterPrefix="" interBarGap="0.25" pieSlicePercentVisible="YES" buildChunkingStyle="0" version="1" layerElementsForShadowing="NO" dataFormatterNumberOfDecimals="1">
+						<fill-style fill-type="none"/>
+						<plugin:data>
+							<array>
+								<null/>
+								<string>East</string>
+								<string>West</string>
+								<string>North</string>
+							</array>
+							<array>
+								<string>1st Qtr</string>
+								<string>20.4</string>
+								<string>30.6</string>
+								<string>45.9</string>
+							</array>
+							<array>
+								<string>2nd Qtr</string>
+								<string>27.4</string>
+								<string>38.6</string>
+								<string>46.9</string>
+							</array>
+							<array>
+								<string>3rd Qtr</string>
+								<string>90.0</string>
+								<string>34.6</string>
+								<string>45.0</string>
+							</array>
+							<array>
+								<string>4th Qtr</string>
+								<string>20.4</string>
+								<string>31.6</string>
+								<string>43.9</string>
+							</array>
+						</plugin:data>
+						<plugin:axes>
+							<plugin:axis altLineVisible="NO" userMinimum="0" userMaximum="200" showGrid="YES" lineOpacity="1" minorTickPositions="0" gridOpacity="1" version="1" useUserMaximum="YES" showZero="YES" useUserMinimum="YES" tickLabelsVisible="YES" steps="4" majorTickPositions="1" tickLabelsAngle="0" lineVisible="YES" tickLabelsOpacity="1" altLineOpacity="1">
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+							</plugin:axis>
+							<plugin:axis altLineVisible="NO" userMinimum="0" userMaximum="0" showGrid="NO" lineOpacity="1" minorTickPositions="0" gridOpacity="1" version="1" useUserMaximum="NO" showZero="YES" useUserMinimum="NO" tickLabelsVisible="YES" steps="4" majorTickPositions="1" tickLabelsAngle="0" lineVisible="YES" tickLabelsOpacity="1" altLineOpacity="1">
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+							</plugin:axis>
+						</plugin:axes>
+						<plugin:series>
+							<plugin:serie labelVisible="NO" symbolFillMode="1" labelOpacity="1" version="1" pieSliceOffset="0" labelPosition="7" opacity="1" titleVisible="NO">
+								<fill-style fill-type="color" fill-color="0.2 0.8 0.8"/>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+								<fill-style fill-type="none"/>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<plugin:symbol numberOfPoints="0" size="12" version="2" type="0" point_at_top="NO"/>
+							</plugin:serie>
+							<plugin:serie labelVisible="NO" symbolFillMode="1" labelOpacity="1" version="1" pieSliceOffset="0" labelPosition="7" opacity="1" titleVisible="NO">
+								<fill-style fill-type="color" fill-color="0.4 0.8 1"/>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+								<fill-style fill-type="none"/>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<plugin:symbol numberOfPoints="0" size="12" version="2" type="0" point_at_top="NO"/>
+							</plugin:serie>
+							<plugin:serie labelVisible="NO" symbolFillMode="1" labelOpacity="1" version="1" pieSliceOffset="0" labelPosition="7" opacity="1" titleVisible="NO">
+								<fill-style fill-type="color" fill-color="1 1 0.8"/>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+								<fill-style fill-type="none"/>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<plugin:symbol numberOfPoints="0" size="12" version="2" type="0" point_at_top="NO"/>
+							</plugin:serie>
+							<plugin:serie labelVisible="NO" symbolFillMode="1" labelOpacity="1" version="1" pieSliceOffset="0" labelPosition="7" opacity="1" titleVisible="NO">
+								<fill-style fill-type="color" fill-color="1 0.8 0.4"/>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+								<fill-style fill-type="none"/>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<plugin:symbol numberOfPoints="0" size="12" version="2" type="0" point_at_top="NO"/>
+							</plugin:serie>
+							<plugin:serie labelVisible="NO" symbolFillMode="1" labelOpacity="1" version="1" pieSliceOffset="0" labelPosition="7" opacity="1" titleVisible="NO">
+								<fill-style fill-type="color" fill-color="0 0.231373 0.462745"/>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+								<fill-style fill-type="none"/>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<plugin:symbol numberOfPoints="0" size="12" version="2" type="0" point_at_top="NO"/>
+							</plugin:serie>
+							<plugin:serie labelVisible="NO" symbolFillMode="1" labelOpacity="1" version="1" pieSliceOffset="0" labelPosition="7" opacity="1" titleVisible="NO">
+								<fill-style fill-type="color" fill-color="0.8 0.92549 1"/>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+								<fill-style fill-type="none"/>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<plugin:symbol numberOfPoints="0" size="12" version="2" type="0" point_at_top="NO"/>
+							</plugin:serie>
+						</plugin:series>
+						<plugin:legend version="1" visible="YES">
+							<dict>
+								<color key="NSColor">1 1 1</color>
+								<font key="NSFont" name="ArialMT" font-size="18"/>
+							</dict>
+							<plugin:stroke-style version="2" width="1">
+								<color>1 1 1</color>
+								<dash-style pattern="solid"/>
+							</plugin:stroke-style>
+							<fill-style fill-type="none"/>
+						</plugin:legend>
+					</plugin:chart-prototype>
+				</prototype-data>
+			</prototype-plugin>
+			<prototype-plugin key="LineDefaults" transformation="1 0 0 1 186.84 133.946" opacity="1">
+				<prototype-data>
+					<string>root</string>
+					<plugin:chart-prototype dataFormatterSuffix="" seriesDirection="0" dataFormatterHasThousandsSeparators="NO" interSeriesGap="0" dataFormatterPrefix="" interBarGap="0.25" pieSlicePercentVisible="YES" buildChunkingStyle="0" version="1" layerElementsForShadowing="NO" dataFormatterNumberOfDecimals="1">
+						<fill-style fill-type="none"/>
+						<plugin:data>
+							<array>
+								<null/>
+								<string>East</string>
+								<string>West</string>
+								<string>North</string>
+							</array>
+							<array>
+								<string>1st Qtr</string>
+								<string>20.4</string>
+								<string>30.6</string>
+								<string>45.9</string>
+							</array>
+							<array>
+								<string>2nd Qtr</string>
+								<string>27.4</string>
+								<string>38.6</string>
+								<string>46.9</string>
+							</array>
+							<array>
+								<string>3rd Qtr</string>
+								<string>90.0</string>
+								<string>34.6</string>
+								<string>45.0</string>
+							</array>
+							<array>
+								<string>4th Qtr</string>
+								<string>20.4</string>
+								<string>31.6</string>
+								<string>43.9</string>
+							</array>
+						</plugin:data>
+						<plugin:axes>
+							<plugin:axis altLineVisible="NO" userMinimum="0" userMaximum="0" showGrid="NO" lineOpacity="1" minorTickPositions="0" gridOpacity="1" version="1" useUserMaximum="NO" showZero="YES" useUserMinimum="NO" tickLabelsVisible="YES" steps="4" majorTickPositions="1" tickLabelsAngle="0" lineVisible="YES" tickLabelsOpacity="1" altLineOpacity="1">
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+							</plugin:axis>
+							<plugin:axis altLineVisible="NO" userMinimum="0" userMaximum="100" showGrid="YES" lineOpacity="1" minorTickPositions="0" gridOpacity="1" version="1" useUserMaximum="YES" showZero="YES" useUserMinimum="YES" tickLabelsVisible="YES" steps="4" majorTickPositions="1" tickLabelsAngle="0" lineVisible="YES" tickLabelsOpacity="1" altLineOpacity="1">
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+							</plugin:axis>
+						</plugin:axes>
+						<plugin:series>
+							<plugin:serie labelVisible="NO" symbolFillMode="1" labelOpacity="1" version="1" pieSliceOffset="0" labelPosition="10" opacity="1" titleVisible="NO">
+								<fill-style fill-type="color" fill-color="0.2 0.8 0.8"/>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+								<fill-style fill-type="none"/>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="6">
+									<color>0.2 0.8 0.8</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<plugin:symbol numberOfPoints="0" size="12" version="2" type="1" point_at_top="NO"/>
+							</plugin:serie>
+							<plugin:serie labelVisible="NO" symbolFillMode="1" labelOpacity="1" version="1" pieSliceOffset="0" labelPosition="10" opacity="1" titleVisible="NO">
+								<fill-style fill-type="color" fill-color="0.4 0.8 1"/>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+								<fill-style fill-type="none"/>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="6">
+									<color>0.4 0.8 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<plugin:symbol numberOfPoints="0" size="12" version="2" type="1" point_at_top="NO"/>
+							</plugin:serie>
+							<plugin:serie labelVisible="NO" symbolFillMode="1" labelOpacity="1" version="1" pieSliceOffset="0" labelPosition="10" opacity="1" titleVisible="NO">
+								<fill-style fill-type="color" fill-color="1 1 0.8"/>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+								<fill-style fill-type="none"/>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="6">
+									<color>1 1 0.8</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<plugin:symbol numberOfPoints="0" size="12" version="2" type="1" point_at_top="NO"/>
+							</plugin:serie>
+							<plugin:serie labelVisible="NO" symbolFillMode="1" labelOpacity="1" version="1" pieSliceOffset="0" labelPosition="10" opacity="1" titleVisible="NO">
+								<fill-style fill-type="color" fill-color="1 0.8 0.4"/>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+								<fill-style fill-type="none"/>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="6">
+									<color>1 0.8 0.4</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<plugin:symbol numberOfPoints="0" size="12" version="2" type="1" point_at_top="NO"/>
+							</plugin:serie>
+							<plugin:serie labelVisible="NO" symbolFillMode="1" labelOpacity="1" version="1" pieSliceOffset="0" labelPosition="10" opacity="1" titleVisible="NO">
+								<fill-style fill-type="color" fill-color="0 0.231373 0.462745"/>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+								<fill-style fill-type="none"/>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="6">
+									<color>0 0.231373 0.462745</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<plugin:symbol numberOfPoints="0" size="12" version="2" type="1" point_at_top="NO"/>
+							</plugin:serie>
+							<plugin:serie labelVisible="NO" symbolFillMode="1" labelOpacity="1" version="1" pieSliceOffset="0" labelPosition="10" opacity="1" titleVisible="NO">
+								<fill-style fill-type="color" fill-color="0.8 0.92549 1"/>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+								<fill-style fill-type="none"/>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="6">
+									<color>0.8 0.92549 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<plugin:symbol numberOfPoints="0" size="12" version="2" type="1" point_at_top="NO"/>
+							</plugin:serie>
+						</plugin:series>
+						<plugin:legend version="1" visible="YES">
+							<dict>
+								<color key="NSColor">1 1 1</color>
+								<font key="NSFont" name="ArialMT" font-size="18"/>
+							</dict>
+							<plugin:stroke-style version="2" width="1">
+								<color>1 1 1</color>
+								<dash-style pattern="solid"/>
+							</plugin:stroke-style>
+							<fill-style fill-type="none"/>
+						</plugin:legend>
+					</plugin:chart-prototype>
+				</prototype-data>
+			</prototype-plugin>
+			<prototype-plugin key="Sticks">
+				<prototype-data>
+					<string>version</string>
+					<number>1</number>
+					<string>CPBorderColorProperty</string>
+					<color>1 1 1</color>
+					<string>CPTextProperty</string>
+					<content font-color="1 1 1" paragraph-head-indent="2.666" paragraph-alignment="left" paragraph-first-line-indent="2.666" tab-stops="L 2 L 47 L 119 L 191 L 263 L 335 L 407 L 479 L 551" font-size="28" paragraph-line-spacing="-0.109375" font-name="Verdana"/>
+				</prototype-data>
+			</prototype-plugin>
+			<prototype-plugin key="PieDefaults" transformation="1 0 0 1 186.84 133.946" opacity="1">
+				<prototype-data>
+					<string>root</string>
+					<plugin:chart-prototype dataFormatterSuffix="" seriesDirection="0" dataFormatterHasThousandsSeparators="NO" interSeriesGap="0" dataFormatterPrefix="" interBarGap="0.25" pieSlicePercentVisible="YES" buildChunkingStyle="0" version="1" layerElementsForShadowing="NO" dataFormatterNumberOfDecimals="1">
+						<fill-style fill-type="none"/>
+						<plugin:data>
+							<array>
+								<null/>
+								<string>East</string>
+								<string>West</string>
+								<string>North</string>
+							</array>
+							<array>
+								<string>1st Qtr</string>
+								<string>20.4</string>
+								<string>30.6</string>
+								<string>45.9</string>
+							</array>
+							<array>
+								<string>2nd Qtr</string>
+								<string>27.4</string>
+								<string>38.6</string>
+								<string>46.9</string>
+							</array>
+							<array>
+								<string>3rd Qtr</string>
+								<string>90.0</string>
+								<string>34.6</string>
+								<string>45.0</string>
+							</array>
+							<array>
+								<string>4th Qtr</string>
+								<string>20.4</string>
+								<string>31.6</string>
+								<string>43.9</string>
+							</array>
+						</plugin:data>
+						<plugin:axes>
+							<plugin:axis altLineVisible="NO" userMinimum="0" userMaximum="0" showGrid="NO" lineOpacity="1" minorTickPositions="0" gridOpacity="1" version="1" useUserMaximum="NO" showZero="YES" useUserMinimum="NO" tickLabelsVisible="YES" steps="4" majorTickPositions="1" tickLabelsAngle="0" lineVisible="YES" tickLabelsOpacity="1" altLineOpacity="1">
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+							</plugin:axis>
+							<plugin:axis altLineVisible="NO" userMinimum="0" userMaximum="100" showGrid="YES" lineOpacity="1" minorTickPositions="0" gridOpacity="1" version="1" useUserMaximum="YES" showZero="YES" useUserMinimum="YES" tickLabelsVisible="YES" steps="4" majorTickPositions="1" tickLabelsAngle="0" lineVisible="YES" tickLabelsOpacity="1" altLineOpacity="1">
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+							</plugin:axis>
+						</plugin:axes>
+						<plugin:series>
+							<plugin:serie labelVisible="YES" symbolFillMode="1" labelOpacity="1" version="1" pieSliceOffset="0" labelPosition="7" opacity="1" titleVisible="NO">
+								<fill-style fill-type="color" fill-color="0.2 0.8 0.8"/>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+								<fill-style fill-type="none"/>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<plugin:symbol numberOfPoints="0" size="12" version="2" type="0" point_at_top="NO"/>
+							</plugin:serie>
+							<plugin:serie labelVisible="YES" symbolFillMode="1" labelOpacity="1" version="1" pieSliceOffset="0" labelPosition="7" opacity="1" titleVisible="NO">
+								<fill-style fill-type="color" fill-color="0.4 0.8 1"/>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+								<fill-style fill-type="none"/>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<plugin:symbol numberOfPoints="0" size="12" version="2" type="0" point_at_top="NO"/>
+							</plugin:serie>
+							<plugin:serie labelVisible="YES" symbolFillMode="1" labelOpacity="1" version="1" pieSliceOffset="0" labelPosition="7" opacity="1" titleVisible="NO">
+								<fill-style fill-type="color" fill-color="1 1 0.8"/>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+								<fill-style fill-type="none"/>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<plugin:symbol numberOfPoints="0" size="12" version="2" type="0" point_at_top="NO"/>
+							</plugin:serie>
+							<plugin:serie labelVisible="YES" symbolFillMode="1" labelOpacity="1" version="1" pieSliceOffset="0" labelPosition="7" opacity="1" titleVisible="NO">
+								<fill-style fill-type="color" fill-color="1 0.8 0.4"/>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+								<fill-style fill-type="none"/>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<plugin:symbol numberOfPoints="0" size="12" version="2" type="0" point_at_top="NO"/>
+							</plugin:serie>
+							<plugin:serie labelVisible="YES" symbolFillMode="1" labelOpacity="1" version="1" pieSliceOffset="0" labelPosition="7" opacity="1" titleVisible="NO">
+								<fill-style fill-type="color" fill-color="0 0.231373 0.462745"/>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+								<fill-style fill-type="none"/>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<plugin:symbol numberOfPoints="0" size="12" version="2" type="0" point_at_top="NO"/>
+							</plugin:serie>
+							<plugin:serie labelVisible="YES" symbolFillMode="1" labelOpacity="1" version="1" pieSliceOffset="0" labelPosition="7" opacity="1" titleVisible="NO">
+								<fill-style fill-type="color" fill-color="0.8 0.92549 1"/>
+								<dict>
+									<color key="NSColor">1 1 1</color>
+									<font key="NSFont" name="ArialMT" font-size="18"/>
+								</dict>
+								<shadow-style opacity="0" radius="0"/>
+								<fill-style fill-type="none"/>
+								<shadow-style opacity="0" radius="0"/>
+								<plugin:stroke-style version="2" width="1">
+									<color>1 1 1</color>
+									<dash-style pattern="solid"/>
+								</plugin:stroke-style>
+								<plugin:symbol numberOfPoints="0" size="12" version="2" type="0" point_at_top="NO"/>
+							</plugin:serie>
+						</plugin:series>
+						<plugin:legend version="1" visible="YES">
+							<dict>
+								<color key="NSColor">1 1 1</color>
+								<font key="NSFont" name="ArialMT" font-size="18"/>
+							</dict>
+							<plugin:stroke-style version="2" width="1">
+								<color>1 1 1</color>
+								<dash-style pattern="solid"/>
+							</plugin:stroke-style>
+							<fill-style fill-type="none"/>
+						</plugin:legend>
+					</plugin:chart-prototype>
+				</prototype-data>
+			</prototype-plugin>
+		</prototype-plugins>
+		<description>
+<![CDATA[Title: SSH
+Subject: 
+Author: jerperez
+Keywords: 
+Comments: 
+Last Author: Philip W. Smith
+Revision Number: 26
+]]>
+		</description>
+		<master-slides>
+			<master-slide id="master-slide-1" name="Title &amp; Bullets">
+				<drawables>
+					<g transformation="1 0 0 1 0.125 0">
+						<shape path="M 100 4.26035 L 100 0 L 97.4895 5.97633 L 94.1423 12.3669 L 87.4477 23.0178 L 80.0558 33.6686 L 70.0139 44.3195 L 59.1353 55.3254 L 46.583 66.3314 L 32.4965 77.6331 L 17.4338 88.6391 L 0 100 L 1.53417 100 L 19.1074 88.6391 L 34.1702 77.6331 L 48.2566 66.3314 L 60.8089 55.3254 L 71.6876 44.3195 L 81.59 33.6686 L 89.1213 23.0178 L 95.8159 12.3669 L 98.3264 8.46154 L 100 4.26035 L 100 4.26035 Z M 100 4.26035" transformation="0.89875 0 0 2.1125 630.625 328.25" opacity="1" stroke-color="0 0 0" stroke-width="1">
+							<styles>
+								<fill-style fill-type="gradient">
+									<gradient end-color="0 0.137255 0.278431" start-color="0 0.231373 0.462745" gradient-angle="270"/>
+								</fill-style>
+								<dash-style pattern="none"/>
+								<shadow-style opacity="0" radius="0"/>
+							</styles>
+						</shape>
+						<shape path="M 100 0 L 77.7188 25.2874 L 54.1114 50.5747 L 27.0557 75.8621 L 0 100 L 3.18302 100 L 30.2387 77.0115 L 54.1114 54.023 L 100 4.5977 L 100 0 L 100 0 Z M 100 0" transformation="0.4725 0 0 0.6525 673.25 474.25" opacity="1" stroke-color="0 0 0" stroke-width="1">
+							<styles>
+								<fill-style fill-type="gradient">
+									<gradient end-color="0 0.137255 0.278431" start-color="0 0.231373 0.462745" gradient-angle="270"/>
+								</fill-style>
+								<dash-style pattern="none"/>
+								<shadow-style opacity="0" radius="0"/>
+							</styles>
+						</shape>
+						<shape path="M 0 100 L 21.4286 100 L 57.1429 58.8235 L 100 23.5294 L 100 0 L 50 52.9412 L 0 100 L 0 100 Z M 0 100" transformation="0.105 0 0 0.1275 710 526.75" opacity="1" stroke-color="0 0 0" stroke-width="1">
+							<styles>
+								<fill-style fill-type="gradient">
+									<gradient end-color="0 0.137255 0.278431" start-color="0 0.231373 0.462745" gradient-angle="270"/>
+								</fill-style>
+								<dash-style pattern="none"/>
+								<shadow-style opacity="0" radius="0"/>
+							</styles>
+						</shape>
+						<g transformation="1 0 0 1 36 0">
+							<shape path="M 0 0 L 83.3333 100 L 100 100 L 16.6667 0 L 0 0 L 0 0 Z M 0 0" transformation="0.09 0 0 5.395 348.625 0" opacity="1" stroke-color="0 0 0" stroke-width="1">
+								<styles>
+									<fill-style fill-type="gradient">
+										<gradient end-color="0 0.266667 0.533333" start-color="0 0.4 0.8" gradient-angle="270"/>
+									</fill-style>
+									<dash-style pattern="none"/>
+									<shadow-style opacity="0" radius="0"/>
+								</styles>
+							</shape>
+							<shape path="M 13.7931 0 L 6.89655 0 L 24.1379 5.00463 L 41.3793 10.2873 L 55.1724 15.9639 L 68.9655 21.9416 L 75.8621 28.0584 L 86.2069 34.4532 L 89.6552 40.9639 L 93.1034 47.7757 L 89.6552 61.2604 L 72.4138 74.722 L 62.069 81.2558 L 44.8276 87.7664 L 24.1379 94.0222 L 0 100 L 6.89655 100 L 31.0345 94.0222 L 51.7241 87.6274 L 68.9655 81.2558 L 79.3103 74.5829 L 96.5517 61.1214 L 100 47.6367 L 96.5517 40.9639 L 93.1034 34.4532 L 82.7586 28.0584 L 75.8621 21.8026 L 62.069 15.9639 L 48.2759 10.2873 L 31.0345 5.00463 L 13.7931 0 L 13.7931 0 Z M 13.7931 0" transformation="0.2175 0 0 5.395 386.125 0" opacity="1" stroke-color="0 0 0" stroke-width="1">
+								<styles>
+									<fill-style fill-type="gradient">
+										<gradient end-color="0 0.266667 0.533333" start-color="0 0.4 0.8" gradient-angle="270"/>
+									</fill-style>
+									<dash-style pattern="none"/>
+									<shadow-style opacity="0" radius="0"/>
+								</styles>
+							</shape>
+							<shape path="M 98.209 46.6636 L 94.6269 39.9907 L 87.4627 33.4801 L 78.5075 27.2243 L 68.0597 21.2465 L 55.5224 15.4078 L 39.403 10.0093 L 23.2836 4.7266 L 3.58209 0 L 0 0 L 19.7015 4.7266 L 35.8209 10.0093 L 51.9403 15.4078 L 64.4776 21.2465 L 74.9254 27.2243 L 83.8806 33.4801 L 91.0448 39.9907 L 94.6269 46.6636 L 96.4179 53.6145 L 94.6269 60.4263 L 91.0448 67.354 L 83.8806 74.1659 L 76.7164 80.8387 L 64.4776 87.5116 L 51.9403 93.8832 L 35.8209 100 L 39.403 100 L 55.5224 93.8832 L 68.0597 87.5116 L 80.2985 80.8387 L 87.4627 74.1659 L 94.6269 67.354 L 98.209 60.4263 L 100 53.6145 L 98.209 46.6636 L 98.209 46.6636 Z M 98.209 46.6636" transformation="0.42125 0 0 5.395 419.75 0" opacity="1" stroke-color="0 0 0" stroke-width="1">
+								<styles>
+									<fill-style fill-type="gradient">
+										<gradient end-color="0 0.266667 0.533333" start-color="0 0.4 0.8" gradient-angle="270"/>
+									</fill-style>
+									<dash-style pattern="none"/>
+									<shadow-style opacity="0" radius="0"/>
+								</styles>
+							</shape>
+							<shape path="M 97.1765 44.5783 L 92.9412 39.1566 L 85.8824 33.7581 L 77.4118 28.4754 L 66.1176 23.1928 L 53.4118 17.6321 L 38.1176 12.0945 L 21.1765 6.25579 L 2.82353 0 L 0 0 L 19.7647 6.25579 L 36.7059 12.0945 L 50.8235 17.7711 L 64.7059 23.1928 L 74.5882 28.6145 L 83.0588 33.8971 L 90.1176 39.1566 L 94.3529 44.5783 L 97.1765 50.6951 L 95.7647 56.9509 L 92.9412 63.3225 L 85.8824 69.9954 L 77.4118 76.9462 L 64.7059 84.3142 L 48 91.937 L 29.6471 100 L 32.4706 100 L 50.8235 91.937 L 67.5294 84.3142 L 80.2353 76.9462 L 88.7059 69.9954 L 95.7647 63.3225 L 98.5882 56.9509 L 100 50.6951 L 97.1765 44.5783 L 97.1765 44.5783 Z M 97.1765 44.5783" transformation="0.53375 0 0 5.395 459.5 0" opacity="1" stroke-color="0 0 0" stroke-width="1">
+								<styles>
+									<fill-style fill-type="gradient">
+										<gradient end-color="0 0.266667 0.533333" start-color="0 0.4 0.8" gradient-angle="270"/>
+									</fill-style>
+									<dash-style pattern="none"/>
+									<shadow-style opacity="0" radius="0"/>
+								</styles>
+							</shape>
+							<shape path="M 100 46.8026 L 96.7626 40.1297 L 90.4676 33.4801 L 81.8345 27.2243 L 71.0432 21.1075 L 57.0144 15.2688 L 41.0072 9.87025 L 22.6619 4.7266 L 2.15827 0 L 0 0 L 20.5036 4.7266 L 38.8489 9.87025 L 54.8561 15.2688 L 68.8849 21.1075 L 79.6763 27.2243 L 88.3094 33.4801 L 94.6043 40.1297 L 97.8417 46.8026 L 97.8417 53.8925 L 95.6835 60.9824 L 90.4676 67.9101 L 81.8345 74.722 L 69.964 81.3948 L 55.9353 87.7664 L 38.8489 94.0222 L 18.3453 100 L 20.5036 100 L 41.0072 94.0222 L 58.0935 87.7664 L 72.1223 81.3948 L 83.9928 74.722 L 92.6259 67.9101 L 97.8417 60.9824 L 100 53.8925 L 100 46.8026 L 100 46.8026 Z M 100 46.8026" transformation="0.6975 0 0 5.395 493.25 0" opacity="1" stroke-color="0 0 0" stroke-width="1">
+								<styles>
+									<fill-style fill-type="gradient">
+										<gradient end-color="0 0.266667 0.533333" start-color="0 0.4 0.8" gradient-angle="270"/>
+									</fill-style>
+									<dash-style pattern="none"/>
+									<shadow-style opacity="0" radius="0"/>
+								</styles>
+							</shape>
+							<shape path="M 100 48.3318 L 97.3837 41.937 L 92.1512 35.7044 L 83.4302 29.4486 L 72.2384 23.3318 L 58.2849 17.354 L 42.5872 11.3994 L 23.5465 5.5607 L 1.74419 0 L 0 0 L 21.8023 5.5607 L 40.843 11.3994 L 56.5407 17.354 L 70.4942 23.3318 L 81.686 29.4486 L 90.407 35.7044 L 95.6395 41.937 L 98.2558 48.3318 L 98.2558 54.8656 L 95.6395 61.3994 L 89.5349 67.9101 L 80.8139 74.4439 L 68.75 80.9778 L 53.9244 87.5116 L 36.4826 93.7442 L 16.5698 100 L 18.314 100 L 38.2267 93.7442 L 55.6686 87.5116 L 70.4942 80.9778 L 82.5581 74.5829 L 91.2791 68.0491 L 97.3837 61.5385 L 100 54.8656 L 100 48.3318 L 100 48.3318 Z M 100 48.3318" transformation="0.8625 0 0 5.395 530.75 0" opacity="1" stroke-color="0 0 0" stroke-width="1">
+								<styles>
+									<fill-style fill-type="gradient">
+										<gradient end-color="0 0.266667 0.533333" start-color="0 0.4 0.8" gradient-angle="270"/>
+									</fill-style>
+									<dash-style pattern="none"/>
+									<shadow-style opacity="0" radius="0"/>
+								</styles>
+							</shape>
+							<shape path="M 99.3031 49.3049 L 96.5157 42.493 L 93.8444 39.0176 L 91.0569 35.7044 L 86.8757 32.3679 L 82.6945 29.0315 L 77.1196 25.8341 L 70.8478 22.6367 L 57.0267 16.6589 L 40.9988 10.8434 L 22.2997 5.28267 L 1.39373 0 L 0 0 L 20.9059 5.28267 L 39.6051 10.8434 L 55.633 16.6589 L 69.4541 22.7757 L 75.7259 25.9731 L 81.3008 29.1705 L 85.482 32.507 L 89.6632 35.8434 L 93.1475 39.1566 L 95.1219 42.493 L 97.2125 45.9685 L 97.9094 49.3049 L 98.6063 52.7804 L 97.9094 56.2558 L 96.5157 59.5922 L 95.1219 63.0445 L 92.4506 66.3809 L 88.9663 69.8563 L 84.0883 73.1928 L 79.2102 76.5292 L 68.0604 82.646 L 54.9361 88.6006 L 38.9082 94.4393 L 20.9059 100 L 22.2997 100 L 40.302 94.4393 L 56.3298 88.6006 L 69.4541 82.785 L 80.604 76.6682 L 85.482 73.3318 L 90.36 69.9954 L 93.8444 66.5199 L 96.5157 63.1835 L 97.9094 59.7312 L 99.3031 56.2558 L 100 52.7804 L 99.3031 49.3049 L 99.3031 49.3049 Z M 99.3031 49.3049" transformation="1.08 0 0 5.395 565.25 0" opacity="1" stroke-color="0 0 0" stroke-width="1">
+								<styles>
+									<fill-style fill-type="gradient">
+										<gradient end-color="0 0.266667 0.533333" start-color="0 0.4 0.8" gradient-angle="270"/>
+									</fill-style>
+									<dash-style pattern="none"/>
+									<shadow-style opacity="0" radius="0"/>
+								</styles>
+							</shape>
+							<shape path="M 12.0805 44.9954 L 20.1342 37.7664 L 28.1879 30.8387 L 39.5973 24.4439 L 51.6779 18.3272 L 55.7047 15.5468 L 63.7584 12.9055 L 71.8121 10.2873 L 75.8389 7.924 L 83.8926 5.69972 L 87.9195 3.61446 L 95.9732 1.66821 L 100 0 L 91.9463 0 L 87.9195 1.66821 L 79.8658 3.61446 L 75.8389 5.69972 L 67.7852 7.924 L 63.7584 10.2873 L 55.7047 12.9055 L 47.651 15.5468 L 43.6242 18.3272 L 32.2148 24.4439 L 20.1342 30.8387 L 12.0805 37.7664 L 4.02685 44.9954 L 0 52.7804 L 4.02685 60.2873 L 8.05369 67.6321 L 16.1074 74.5829 L 24.1611 81.3948 L 39.5973 87.9055 L 59.7315 94.0222 L 83.8926 100 L 91.9463 100 L 67.7852 94.0222 L 47.651 87.9055 L 32.2148 81.3948 L 24.1611 74.722 L 16.1074 67.6321 L 12.0805 60.4263 L 8.05369 52.7804 L 12.0805 44.9954 L 12.0805 44.9954 Z M 12.0805 44.9954" transformation="0.1875 0 0 5.395 299.875 0" opacity="1" stroke-color="0 0 0" stroke-width="1">
+								<styles>
+									<fill-style fill-type="gradient">
+										<gradient end-color="0 0.266667 0.533333" start-color="0 0.4 0.8" gradient-angle="270"/>
+									</fill-style>
+									<dash-style pattern="none"/>
+									<shadow-style opacity="0" radius="0"/>
+								</styles>
+							</shape>
+							<shape path="M 6.02007 47.7757 L 10.0334 40.5468 L 18.0602 33.6191 L 28.0936 27.0853 L 42.1405 20.8295 L 54.1806 14.8517 L 69.8997 9.4532 L 83.9465 4.44856 L 100 0 L 95.9866 0 L 79.9331 4.44856 L 66.2207 9.4532 L 52.1739 14.8517 L 38.1271 20.8295 L 26.087 27.0853 L 16.0535 33.6191 L 8.02676 40.5468 L 2.00669 47.7757 L 0 55.0046 L 4.01338 61.9555 L 10.0334 68.8832 L 18.0602 75.4171 L 32.107 81.9509 L 48.1605 88.1835 L 67.893 94.1613 L 91.9732 100 L 95.9866 100 L 71.9064 94.1613 L 52.1739 88.1835 L 36.1204 81.9509 L 22.0736 75.5561 L 14.0468 68.8832 L 8.02676 62.0945 L 4.01338 55.0046 L 6.02007 47.7757 L 6.02007 47.7757 Z M 6.02007 47.7757" transformation="0.375 0 0 5.395 245.875 0" opacity="1" stroke-color="0 0 0" stroke-width="1">
+								<styles>
+									<fill-style fill-type="gradient">
+										<gradient end-color="0 0.266667 0.533333" start-color="0 0.4 0.8" gradient-angle="270"/>
+									</fill-style>
+									<dash-style pattern="none"/>
+									<shadow-style opacity="0" radius="0"/>
+								</styles>
+							</shape>
+							<shape path="M 100 0 L 97.1698 0 L 74.5283 5.14365 L 56.3679 10.7044 L 39.3868 16.3809 L 25.2358 22.4977 L 15.3302 28.8925 L 6.83962 35.4263 L 1.41509 42.215 L 0 49.1659 L 1.41509 55.6997 L 5.66038 62.2336 L 11.0849 68.6052 L 20.9906 75.139 L 32.3113 81.5338 L 46.4623 87.7664 L 63.4434 94.0222 L 81.6038 100 L 84.434 100 L 66.2736 94.0222 L 49.2925 87.7664 L 35.1415 81.5338 L 23.8208 75.139 L 13.9151 68.6052 L 8.25472 62.2336 L 4.24528 55.6997 L 2.83019 49.1659 L 4.24528 42.215 L 9.66981 35.4263 L 16.7453 28.8925 L 28.066 22.4977 L 42.217 16.3809 L 57.783 10.7044 L 77.3585 5.14365 L 100 0 L 100 0 Z M 100 0" transformation="0.53125 0 0 5.395 195.75 0" opacity="1" stroke-color="0 0 0" stroke-width="1">
+								<styles>
+									<fill-style fill-type="gradient">
+										<gradient end-color="0 0.266667 0.533333" start-color="0 0.4 0.8" gradient-angle="270"/>
+									</fill-style>
+									<dash-style pattern="none"/>
+									<shadow-style opacity="0" radius="0"/>
+								</styles>
+							</shape>
+							<shape path="M 2.09059 49.722 L 4.18118 42.7711 L 9.40767 36.1214 L 16.7247 29.5876 L 28.223 23.1928 L 41.6376 16.937 L 58.3624 11.1214 L 78.223 5.42169 L 100 0 L 97.9094 0 L 76.1324 5.42169 L 56.2718 11.1214 L 39.547 17.076 L 26.1324 23.1928 L 14.6341 29.5876 L 7.31707 36.1214 L 2.09059 42.9101 L 0 49.722 L 1.0453 56.3948 L 5.22648 62.9055 L 11.4983 69.4393 L 20.9059 75.8341 L 33.2753 82.2289 L 47.9094 88.3225 L 64.6341 94.3003 L 84.3206 100 L 86.4111 100 L 66.7247 94.3003 L 50 88.3225 L 35.3659 82.2289 L 22.9965 75.8341 L 13.5889 69.4393 L 7.31707 62.9055 L 3.13589 56.3948 L 2.09059 49.722 L 2.09059 49.722 Z M 2.09059 49.722" transformation="0.71875 0 0 5.395 141 0" opacity="1" stroke-color="0 0 0" stroke-width="1">
+								<styles>
+									<fill-style fill-type="gradient">
+										<gradient end-color="0 0.266667 0.533333" start-color="0 0.4 0.8" gradient-angle="270"/>
+									</fill-style>
+									<dash-style pattern="none"/>
+									<shadow-style opacity="0" radius="0"/>
+								</styles>
+							</shape>
+							<shape path="M 1.63265 48.6098 L 3.94558 41.6589 L 9.65986 34.8703 L 17.8231 28.3364 L 29.2517 21.8026 L 42.9932 15.9639 L 60.1361 10.2873 L 78.9116 5.00463 L 100 0 L 98.3673 0 L 77.2789 4.86562 L 58.5034 10.1483 L 42.3129 15.8248 L 28.4354 21.8026 L 17.0068 28.1974 L 8.02721 34.8703 L 2.44898 41.6589 L 0 48.6098 L 0.816327 55.6997 L 3.94558 62.7664 L 10.4762 69.8563 L 20.2721 76.8072 L 30.8844 82.785 L 42.9932 88.6006 L 57.6871 94.4393 L 74.0136 100 L 75.6463 100 L 59.3197 94.4393 L 44.6259 88.6006 L 32.517 82.785 L 21.9048 76.8072 L 12.1088 69.8563 L 5.57823 62.7664 L 2.44898 55.6997 L 1.63265 48.6098 L 1.63265 48.6098 Z M 1.63265 48.6098" transformation="0.92125 0 0 5.395 87.75 0" opacity="1" stroke-color="0 0 0" stroke-width="1">
+								<styles>
+									<fill-style fill-type="gradient">
+										<gradient end-color="0 0.266667 0.533333" start-color="0 0.4 0.8" gradient-angle="270"/>
+									</fill-style>
+									<dash-style pattern="none"/>
+									<shadow-style opacity="0" radius="0"/>
+								</styles>
+							</shape>
+							<shape path="M 2.15054 45.1344 L 5.73477 39.5737 L 11.4695 34.1752 L 19.2354 28.6145 L 29.9881 23.0538 L 43.6081 17.493 L 59.2593 11.8165 L 78.6141 5.97776 L 88.5305 3.05839 L 100 0 L 98.5663 0 L 87.0968 3.05839 L 76.4636 5.97776 L 67.1446 8.89713 L 57.8256 11.8165 L 42.1744 17.493 L 28.5544 23.0538 L 17.9211 28.6145 L 10.0358 34.0361 L 4.30108 39.4347 L 0.716846 44.9954 L 0 50.9731 L 1.43369 57.2289 L 5.73477 63.4615 L 13.6201 70.1344 L 17.9211 73.4708 L 23.5364 76.9462 L 29.2712 80.5607 L 36.4397 84.3142 L 43.6081 88.0445 L 52.2103 91.937 L 60.693 95.8295 L 70.7288 100 L 72.1625 100 L 62.1266 95.8295 L 53.5245 91.937 L 45.0418 88.0445 L 37.8734 84.3142 L 30.7049 80.5607 L 24.9701 77.0853 L 19.2354 73.4708 L 15.0538 70.1344 L 7.16846 63.4615 L 2.86738 57.2289 L 1.43369 51.1121 L 2.15054 45.1344 L 2.15054 45.1344 Z M 2.15054 45.1344" transformation="1.05 0 0 5.395 36 0" opacity="1" stroke-color="0 0 0" stroke-width="1">
+								<styles>
+									<fill-style fill-type="gradient">
+										<gradient end-color="0 0.266667 0.533333" start-color="0 0.4 0.8" gradient-angle="270"/>
+									</fill-style>
+									<dash-style pattern="none"/>
+									<shadow-style opacity="0" radius="0"/>
+								</styles>
+							</shape>
+						</g>
+						<shape path="M 0 3.81625 L 6.95364 16.1131 L 15.894 28.4099 L 26.6556 40.7067 L 37.5828 52.5795 L 50.4967 64.8057 L 64.404 76.6784 L 80.1324 88.5512 L 97.0199 100 L 100 100 L 82.1192 88.1272 L 66.3907 75.8304 L 51.4901 63.5336 L 38.5762 50.8834 L 26.6556 38.5866 L 16.8874 25.8657 L 7.94702 12.7208 L 0 0 L 0 3.81625 L 0 3.81625 Z M 0 3.81625" transformation="0.7575 0 0 1.76875 0.75 362.625" opacity="1" stroke-color="0 0 0" stroke-width="1">
+							<styles>
+								<fill-style fill-type="gradient">
+									<gradient end-color="0 0.137255 0.278431" start-color="0 0.231373 0.462745" gradient-angle="270"/>
+								</fill-style>
+								<dash-style pattern="none"/>
+								<shadow-style opacity="0" radius="0"/>
+							</styles>
+						</shape>
+						<shape path="M 0 7.04225 L 47.5771 56.338 L 94.7137 100 L 100 100 L 73.5683 77.4648 L 50.2203 52.1127 L 0 0 L 0 7.04225 L 0 7.04225 Z M 0 7.04225" transformation="0.285 0 0 0.5325 0.75 486.25" opacity="1" stroke-color="0 0 0" stroke-width="1">
+							<styles>
+								<fill-style fill-type="gradient">
+									<gradient end-color="0 0.137255 0.278431" start-color="0 0.231373 0.462745" gradient-angle="270"/>
+								</fill-style>
+								<dash-style pattern="none"/>
+								<shadow-style opacity="0" radius="0"/>
+							</styles>
+						</shape>
+						<shape path="M 100 100 L 100 96.3046 L 98.7768 93.2811 L 97.5535 90.3136 L 93.8838 83.2587 L 90.2141 76.2038 L 81.1417 62.766 L 69.5209 50.3359 L 57.2885 38.5778 L 43.9348 27.8835 L 29.8675 17.8052 L 15.2905 8.39866 L 1.22324 0 L 0 0 L 14.0673 8.39866 L 28.0326 17.8052 L 42.0999 27.8835 L 55.5556 38.5778 L 68.2977 50.3359 L 79.3068 62.766 L 88.9908 76.2038 L 92.6606 83.2587 L 96.3303 90.6495 L 98.1651 95.2968 L 100 100 L 100 100 Z M 100 100" transformation="1.23 0 0 2.2325 597 0" opacity="1" stroke-color="0 0 0" stroke-width="1">
+							<styles>
+								<fill-style fill-type="gradient">
+									<gradient end-color="0 0.376471 0.752941" start-color="0 0.4 0.8" gradient-angle="270"/>
+								</fill-style>
+								<dash-style pattern="none"/>
+								<shadow-style opacity="0" radius="0"/>
+							</styles>
+						</shape>
+						<shape path="M 100 100 L 100 97.1598 L 80.0558 71.5976 L 56.6248 46.8639 L 30.8229 22.7219 L 2.37099 0 L 0 0 L 29.1492 23.432 L 55.788 48.284 L 79.219 73.7278 L 100 100 L 100 100 Z M 100 100" transformation="0.89875 0 0 1.05625 630.125 0" opacity="1" stroke-color="0 0 0" stroke-width="1">
+							<styles>
+								<fill-style fill-type="color" fill-color="0 0.4 0.8"/>
+								<dash-style pattern="none"/>
+								<shadow-style opacity="0" radius="0"/>
+							</styles>
+						</shape>
+						<shape path="M 100 100 L 100 95.6522 L 54.5455 46.3768 L 2.9484 0 L 0 0 L 26.5356 24.6377 L 53.0713 49.2754 L 100 100 L 100 100 Z M 100 100" transformation="0.51 0 0 0.5175 669 0" opacity="1" stroke-color="0 0 0" stroke-width="1">
+							<styles>
+								<fill-style fill-type="color" fill-color="0 0.4 0.8"/>
+								<dash-style pattern="none"/>
+								<shadow-style opacity="0" radius="0"/>
+							</styles>
+						</shape>
+						<shape path="M 0 96.5933 L 0 100 L 6.31579 85.9475 L 14.7368 71.895 L 25.1462 58.6941 L 36.3743 45.9191 L 50.4094 33.6409 L 65.0292 22.1434 L 81.8713 10.6458 L 100 0 L 97.8947 0 L 80.4678 10.22 L 64.3275 21.2917 L 49.7076 32.7892 L 36.3743 44.6416 L 25.1462 56.9908 L 15.4386 69.7658 L 7.01754 82.9666 L 0 96.5933 L 0 96.5933 Z M 0 96.5933" transformation="1.0725 0 0 1.76125 0.75 0" opacity="1" stroke-color="0 0 0" stroke-width="1">
+							<styles>
+								<fill-style fill-type="gradient">
+									<gradient end-color="0 0.376471 0.752941" start-color="0 0.4 0.8" gradient-angle="270"/>
+								</fill-style>
+								<dash-style pattern="none"/>
+								<shadow-style opacity="0" radius="0"/>
+							</styles>
+						</shape>
+						<shape path="M 100 0 L 96.9283 0 L 69.4539 22.0367 L 43.8567 45.0751 L 20.4778 70.1169 L 0 95.9933 L 0 100 L 20.4778 72.1202 L 43.8567 47.0785 L 70.4778 23.0384 L 100 0 L 100 0 Z M 100 0" transformation="0.735 0 0 0.74875 0.75 0" opacity="1" stroke-color="0 0 0" stroke-width="1">
+							<styles>
+								<fill-style fill-type="color" fill-color="0 0.4 0.8"/>
+								<dash-style pattern="none"/>
+								<shadow-style opacity="0" radius="0"/>
+							</styles>
+						</shape>
+						<shape path="M 100 0 L 93.3086 0 L 44.6097 45.2381 L 22.3048 69.0476 L 0 92.8571 L 0 100 L 46.8401 47.619 L 100 0 L 100 0 Z M 100 0" transformation="0.3375 0 0 0.315 0.75 0" opacity="1" stroke-color="0 0 0" stroke-width="1">
+							<styles>
+								<fill-style fill-type="color" fill-color="0 0.4 0.8"/>
+								<dash-style pattern="none"/>
+								<shadow-style opacity="0" radius="0"/>
+							</styles>
+						</shape>
+						<line stroke-color="0 0.4 0.8" head="719.875 344.125" opacity="1" stroke-width="1" tail="0.125 343.125">
+							<styles>
+								<dash-style pattern="solid"/>
+								<shadow-style opacity="0" radius="0"/>
+								<line-head-style is-filled="false"/>
+								<line-tail-style is-filled="false"/>
+							</styles>
+						</line>
+						<line stroke-color="0 0.4 0.8" head="719.875 295" opacity="1" stroke-width="1" tail="0.125 294">
+							<styles>
+								<dash-style pattern="solid"/>
+								<shadow-style opacity="0" radius="0"/>
+								<line-head-style is-filled="false"/>
+								<line-tail-style is-filled="false"/>
+							</styles>
+						</line>
+						<line stroke-color="0 0.231373 0.462745" head="719.875 393.25" opacity="1" stroke-width="1" tail="0.125 392.25">
+							<styles>
+								<dash-style pattern="solid"/>
+								<shadow-style opacity="0" radius="0"/>
+								<line-head-style is-filled="false"/>
+								<line-tail-style is-filled="false"/>
+							</styles>
+						</line>
+						<g transformation="1 0 0 1 0.125 48.5">
+							<line stroke-color="0 0.4 0.8" head="719.875 98.5" opacity="1" stroke-width="1" tail="0.125 97.5">
+								<styles>
+									<dash-style pattern="solid"/>
+									<shadow-style opacity="0" radius="0"/>
+									<line-head-style is-filled="false"/>
+									<line-tail-style is-filled="false"/>
+								</styles>
+							</line>
+							<line stroke-color="0 0.4 0.8" head="719.875 245.875" opacity="1" stroke-width="1" tail="0.125 244.875">
+								<styles>
+									<dash-style pattern="solid"/>
+									<shadow-style opacity="0" radius="0"/>
+									<line-head-style is-filled="false"/>
+									<line-tail-style is-filled="false"/>
+								</styles>
+							</line>
+							<line stroke-color="0 0.4 0.8" head="719.875 196.75" opacity="1" stroke-width="1" tail="0.125 195.75">
+								<styles>
+									<dash-style pattern="solid"/>
+									<shadow-style opacity="0" radius="0"/>
+									<line-head-style is-filled="false"/>
+									<line-tail-style is-filled="false"/>
+								</styles>
+							</line>
+							<line stroke-color="0 0.4 0.8" head="719.875 147.625" opacity="1" stroke-width="1" tail="0.125 146.625">
+								<styles>
+									<dash-style pattern="solid"/>
+									<shadow-style opacity="0" radius="0"/>
+									<line-head-style is-filled="false"/>
+									<line-tail-style is-filled="false"/>
+								</styles>
+							</line>
+							<line stroke-color="0 0.4 0.8" head="719.875 49.5" opacity="1" stroke-width="1" tail="0.125 48.5">
+								<styles>
+									<dash-style pattern="solid"/>
+									<shadow-style opacity="0" radius="0"/>
+									<line-head-style is-filled="false"/>
+									<line-tail-style is-filled="false"/>
+								</styles>
+							</line>
+						</g>
+						<line stroke-color="0 0.231373 0.462745" head="719.875 491.5" opacity="1" stroke-width="1" tail="0.125 490.5">
+							<styles>
+								<dash-style pattern="solid"/>
+								<shadow-style opacity="0" radius="0"/>
+								<line-head-style is-filled="false"/>
+								<line-tail-style is-filled="false"/>
+							</styles>
+						</line>
+						<line stroke-color="0 0.231373 0.462745" head="719.875 442.375" opacity="1" stroke-width="1" tail="0.125 441.375">
+							<styles>
+								<dash-style pattern="solid"/>
+								<shadow-style opacity="0" radius="0"/>
+								<line-head-style is-filled="false"/>
+								<line-tail-style is-filled="false"/>
+							</styles>
+						</line>
+					</g>
+					<title stroke-width="1" size="662.1 133.5" visibility="visible" vertical-alignment="middle" location="29.2 -0" opacity="1" stroke-color="1 1 1">
+						<styles>
+							<fill-style fill-type="none"/>
+							<dash-style pattern="none"/>
+							<shadow-style opacity="0" radius="0"/>
+						</styles>
+					</title>
+					<textbox size="162.6 12" transformation="1 0 0 1 38.2 495.225">
+						<content font-color="1 1 1" paragraph-spacing="-2" paragraph-alignment="left" tab-stops="L 0 L 72 L 144" font-size="10" paragraph-line-spacing="0.15332" font-name="Verdana">
+<![CDATA[ ]]>
+						</content>
+						<styles>
+							<shadow-style opacity="0" radius="0"/>
+						</styles>
+					</textbox>
+					<textbox size="222.6 12.1533" transformation="1 0 0 1 248.2 495.6">
+						<content font-color="1 1 1" paragraph-spacing="-2" paragraph-alignment="center" tab-stops="L 0 L 72 L 144 L 216" font-size="10" paragraph-line-spacing="0.15332" font-name="Verdana">
+<![CDATA[ ]]>
+						</content>
+						<styles>
+							<shadow-style opacity="0" radius="0"/>
+						</styles>
+					</textbox>
+					<body stroke-width="1" size="642.6 411.4" bullet-indentation="0 0 36 72 108 144" visibility="visible" vertical-alignment="top" location="38.2 128.6" opacity="1" stroke-color="1 1 1">
+						<styles>
+							<fill-style fill-type="none"/>
+							<dash-style pattern="none"/>
+							<shadow-style opacity="0" radius="0"/>
+						</styles>
+					</body>
+					<page-number stroke-width="1" size="162.6 45.775" visibility="hidden" vertical-alignment="top" location="518.2 494.225" opacity="1" stroke-color="1 1 1">
+						<styles>
+							<fill-style fill-type="none"/>
+							<dash-style pattern="none"/>
+							<shadow-style opacity="0" radius="0"/>
+						</styles>
+						<text-attributes font-color="1 1 1" paragraph-spacing="-2" paragraph-alignment="right" tab-stops="L 0 L 72 L 144" font-size="10" paragraph-line-spacing="0.15332" font-name="Verdana"/>
+					</page-number>
+				</drawables>
+				<background-fill-style fill-type="gradient">
+					<gradient end-color="0 0.156863 0.313726" start-color="0 0.4 0.8" gradient-angle="270"/>
+				</background-fill-style>
+				<prototype-bullets>
+					<bullet level="0" marker-type="none" spacing="0">
+						<content paragraph-line-max-height="0" paragraph-line-min-height="0" font-color="0.8 0.92549 1" paragraph-spacing="-2" paragraph-head-indent="0" paragraph-alignment="center" font-background-color="g0 0" paragraph-first-line-indent="0" font-kerning="0" font-ligatures="default" paragraph-line-break="word-wrap" tab-stops="L 0 L 72 L 144 L 216 L 288 L 360 L 432 L 504 L 576" font-size="44" font-baseline-offset="0" font-underline="false" paragraph-tail-indent="0" paragraph-line-spacing="2.8" font-superscript="0" font-name="ArialMT"/>
+					</bullet>
+					<bullet level="1" marker-type="character" spacing="5.66875">
+						<content font-color="1 1 1" paragraph-head-indent="2.666" paragraph-alignment="left" paragraph-first-line-indent="2.666" tab-stops="L 2 L 47 L 119 L 191 L 263 L 335 L 407 L 479 L 551" font-size="32" paragraph-line-spacing="-0.109375" font-name="Verdana">Click to edit Master text styles</content>
+						<character-bullet-style size-technique="relative" size="0.6">
+							<bullet-characters font-color="1 1 0.8" font-name="Wingdings" font-size="32"></bullet-characters>
+						</character-bullet-style>
+					</bullet>
+					<bullet level="2" marker-type="character" spacing="4.83516">
+						<content font-color="1 1 1" paragraph-alignment="left" tab-stops="L 33.5 L 47 L 119 L 191 L 263 L 335 L 407 L 479 L 551" font-size="28" paragraph-line-spacing="0.0292969" font-name="Verdana">Second level</content>
+						<character-bullet-style size-technique="relative" size="1">
+							<bullet-characters font-color="1 1 1" font-name="Verdana" font-size="28">•</bullet-characters>
+						</character-bullet-style>
+					</bullet>
+					<bullet level="3" marker-type="character" spacing="4.00156">
+						<content font-color="1 1 1" paragraph-alignment="left" tab-stops="L 47 L 65 L 119 L 191 L 263 L 335 L 407 L 479 L 551" font-size="24" paragraph-line-spacing="0.167969" font-name="Verdana">Third level</content>
+						<character-bullet-style size-technique="relative" size="0.6">
+							<bullet-characters font-color="0.4 0.8 1" font-name="Wingdings" font-size="24"></bullet-characters>
+						</character-bullet-style>
+					</bullet>
+					<bullet level="4" marker-type="character" spacing="3.16797">
+						<content font-color="1 1 1" paragraph-alignment="left" tab-stops="L 47 L 101 L 119 L 191 L 263 L 335 L 407 L 479 L 551" font-size="20" paragraph-line-spacing="0.306641" font-name="Verdana">Fourth level</content>
+						<character-bullet-style size-technique="relative" size="1">
+							<bullet-characters font-color="0.8 0.92549 1" font-name="Verdana" font-size="20">•</bullet-characters>
+						</character-bullet-style>
+					</bullet>
+					<bullet level="5" marker-type="character" spacing="-1.69336">
+						<content font-color="1 1 1" paragraph-alignment="left" tab-stops="L 47 L 119 L 137 L 191 L 263 L 335 L 407 L 479 L 551" font-size="20" paragraph-line-spacing="0.306641" font-name="Verdana">Fifth level</content>
+						<character-bullet-style size-technique="relative" size="0.6">
+							<bullet-characters font-color="1 0.8 0.4" font-name="Wingdings" font-size="20"></bullet-characters>
+						</character-bullet-style>
+					</bullet>
+				</prototype-bullets>
+				<transition-style type="none" duration="0"/>
+				<thumbnails>
+					<thumbnail byte-size="8106" size="60 45" file="thumbs/mt0.tiff"/>
+				</thumbnails>
+			</master-slide>
+			<master-slide id="master-slide-2" name="Title &amp; Subtitle">
+				<drawables>
+					<g>
+						<shape path="M 100 4.26035 L 100 0 L 97.4895 5.97633 L 94.1423 12.3669 L 87.4477 23.0178 L 80.0558 33.6686 L 70.0139 44.3195 L 59.1353 55.3254 L 46.583 66.3314 L 32.4965 77.6331 L 17.4338 88.6391 L 0 100 L 1.53417 100 L 19.1074 88.6391 L 34.1702 77.6331 L 48.2566 66.3314 L 60.8089 55.3254 L 71.6876 44.3195 L 81.59 33.6686 L 89.1213 23.0178 L 95.8159 12.3669 L 98.3264 8.46154 L 100 4.26035 L 100 4.26035 Z M 100 4.26035" transformation="0.89875 0 0 2.1125 630.5 328.25" opacity="1" stroke-color="0 0 0" stroke-width="1">
+							<styles>
+								<fill-style fill-type="gradient">
+									<gradient end-color="0 0.137255 0.278431" start-color="0 0.231373 0.462745" gradient-angle="270"/>
+								</fill-style>
+								<dash-style pattern="none"/>
+								<shadow-style opacity="0" radius="0"/>
+							</styles>
+						</shape>
+						<shape path="M 100 0 L 77.7188 25.2874 L 54.1114 50.5747 L 27.0557 75.8621 L 0 100 L 3.18302 100 L 30.2387 77.0115 L 54.1114 54.023 L 100 4.5977 L 100 0 L 100 0 Z M 100 0" transformation="0.4725 0 0 0.6525 673.125 474.25" opacity="1" stroke-color="0 0 0" stroke-width="1">
+							<styles>
+								<fill-style fill-type="gradient">
+									<gradient end-color="0 0.137255 0.278431" start-color="0 0.231373 0.462745" gradient-angle="270"/>
+								</fill-style>
+								<dash-style pattern="none"/>
+								<shadow-style opacity="0" radius="0"/>
+							</styles>
+						</shape>
+						<shape path="M 0 100 L 21.4286 100 L 57.1429 58.8235 L 100 23.5294 L 100 0 L 50 52.9412 L 0 100 L 0 100 Z M 0 100" transformation="0.105 0 0 0.1275 709.875 526.75" opacity="1" stroke-color="0 0 0" stroke-width="1">
+							<styles>
+								<fill-style fill-type="gradient">
+									<gradient end-color="0 0.137255 0.278431" start-color="0 0.231373 0.462745" gradient-angle="270"/>
+								</fill-style>
+								<dash-style pattern="none"/>
+								<shadow-style opacity="0" radius="0"/>
+							</styles>
+						</shape>
+						<g transformation="1 0 0 1 35.875 0">
+							<shape path="M 0 0 L 83.3333 100 L 100 100 L 16.6667 0 L 0 0 L 0 0 Z M 0 0" transformation="0.09 0 0 5.395 348.5 0" opacity="1" stroke-color="0 0 0" stroke-width="1">
+								<styles>
+									<fill-style fill-type="gradient">
+										<gradient end-color="0 0.266667 0.533333" start-color="0 0.4 0.8" gradient-angle="270"/>
+									</fill-style>
+									<dash-style pattern="none"/>
+									<shadow-style opacity="0" radius="0"/>
+								</styles>
+							</shape>
+							<shape path="M 13.7931 0 L 6.89655 0 L 24.1379 5.00463 L 41.3793 10.2873 L 55.1724 15.9639 L 68.9655 21.9416 L 75.8621 28.0584 L 86.2069 34.4532 L 89.6552 40.9639 L 93.1034 47.7757 L 89.6552 61.2604 L 72.4138 74.722 L 62.069 81.2558 L 44.8276 87.7664 L 24.1379 94.0222 L 0 100 L 6.89655 100 L 31.0345 94.0222 L 51.7241 87.6274 L 68.9655 81.2558 L 79.3103 74.5829 L 96.5517 61.1214 L 100 47.6367 L 96.5517 40.9639 L 93.1034 34.4532 L 82.7586 28.0584 L 75.8621 21.8026 L 62.069 15.9639 L 48.2759 10.2873 L 31.0345 5.00463 L 13.7931 0 L 13.7931 0 Z M 13.7931 0" transformation="0.2175 0 0 5.395 386 0" opacity="1" stroke-color="0 0 0" stroke-width="1">
+								<styles>
+									<fill-style fill-type="gradient">
+										<gradient end-color="0 0.266667 0.533333" start-color="0 0.4 0.8" gradient-angle="270"/>
+									</fill-style>
+									<dash-style pattern="none"/>
+									<shadow-style opacity="0" radius="0"/>
+								</styles>
+							</shape>
+							<shape path="M 98.209 46.6636 L 94.6269 39.9907 L 87.4627 33.4801 L 78.5075 27.2243 L 68.0597 21.2465 L 55.5224 15.4078 L 39.403 10.0093 L 23.2836 4.7266 L 3.58209 0 L 0 0 L 19.7015 4.7266 L 35.8209 10.0093 L 51.9403 15.4078 L 64.4776 21.2465 L 74.9254 27.2243 L 83.8806 33.4801 L 91.0448 39.9907 L 94.6269 46.6636 L 96.4179 53.6145 L 94.6269 60.4263 L 91.0448 67.354 L 83.8806 74.1659 L 76.7164 80.8387 L 64.4776 87.5116 L 51.9403 93.8832 L 35.8209 100 L 39.403 100 L 55.5224 93.8832 L 68.0597 87.5116 L 80.2985 80.8387 L 87.4627 74.1659 L 94.6269 67.354 L 98.209 60.4263 L 100 53.6145 L 98.209 46.6636 L 98.209 46.6636 Z M 98.209 46.6636" transformation="0.42125 0 0 5.395 419.625 0" opacity="1" stroke-color="0 0 0" stroke-width="1">
+								<styles>
+									<fill-style fill-type="gradient">
+										<gradient end-color="0 0.266667 0.533333" start-color="0 0.4 0.8" gradient-angle="270"/>
+									</fill-style>
+									<dash-style pattern="none"/>
+									<shadow-style opacity="0" radius="0"/>
+								</styles>
+							</shape>
+							<shape path="M 97.1765 44.5783 L 92.9412 39.1566 L 85.8824 33.7581 L 77.4118 28.4754 L 66.1176 23.1928 L 53.4118 17.6321 L 38.1176 12.0945 L 21.1765 6.25579 L 2.82353 0 L 0 0 L 19.7647 6.25579 L 36.7059 12.0945 L 50.8235 17.7711 L 64.7059 23.1928 L 74.5882 28.6145 L 83.0588 33.8971 L 90.1176 39.1566 L 94.3529 44.5783 L 97.1765 50.6951 L 95.7647 56.9509 L 92.9412 63.3225 L 85.8824 69.9954 L 77.4118 76.9462 L 64.7059 84.3142 L 48 91.937 L 29.6471 100 L 32.4706 100 L 50.8235 91.937 L 67.5294 84.3142 L 80.2353 76.9462 L 88.7059 69.9954 L 95.7647 63.3225 L 98.5882 56.9509 L 100 50.6951 L 97.1765 44.5783 L 97.1765 44.5783 Z M 97.1765 44.5783" transformation="0.53375 0 0 5.395 459.375 0" opacity="1" stroke-color="0 0 0" stroke-width="1">
+								<styles>
+									<fill-style fill-type="gradient">
+										<gradient end-color="0 0.266667 0.533333" start-color="0 0.4 0.8" gradient-angle="270"/>
+									</fill-style>
+									<dash-style pattern="none"/>
+									<shadow-style opacity="0" radius="0"/>
+								</styles>
+							</shape>
+							<shape path="M 100 46.8026 L 96.7626 40.1297 L 90.4676 33.4801 L 81.8345 27.2243 L 71.0432 21.1075 L 57.0144 15.2688 L 41.0072 9.87025 L 22.6619 4.7266 L 2.15827 0 L 0 0 L 20.5036 4.7266 L 38.8489 9.87025 L 54.8561 15.2688 L 68.8849 21.1075 L 79.6763 27.2243 L 88.3094 33.4801 L 94.6043 40.1297 L 97.8417 46.8026 L 97.8417 53.8925 L 95.6835 60.9824 L 90.4676 67.9101 L 81.8345 74.722 L 69.964 81.3948 L 55.9353 87.7664 L 38.8489 94.0222 L 18.3453 100 L 20.5036 100 L 41.0072 94.0222 L 58.0935 87.7664 L 72.1223 81.3948 L 83.9928 74.722 L 92.6259 67.9101 L 97.8417 60.9824 L 100 53.8925 L 100 46.8026 L 100 46.8026 Z M 100 46.8026" transformation="0.6975 0 0 5.395 493.125 0" opacity="1" stroke-color="0 0 0" stroke-width="1">
+								<styles>
+									<fill-style fill-type="gradient">
+										<gradient end-color="0 0.266667 0.533333" start-color="0 0.4 0.8" gradient-angle="270"/>
+									</fill-style>
+									<dash-style pattern="none"/>
+									<shadow-style opacity="0" radius="0"/>
+								</styles>
+							</shape>
+							<shape path="M 100 48.3318 L 97.3837 41.937 L 92.1512 35.7044 L 83.4302 29.4486 L 72.2384 23.3318 L 58.2849 17.354 L 42.5872 11.3994 L 23.5465 5.5607 L 1.74419 0 L 0 0 L 21.8023 5.5607 L 40.843 11.3994 L 56.5407 17.354 L 70.4942 23.3318 L 81.686 29.4486 L 90.407 35.7044 L 95.6395 41.937 L 98.2558 48.3318 L 98.2558 54.8656 L 95.6395 61.3994 L 89.5349 67.9101 L 80.8139 74.4439 L 68.75 80.9778 L 53.9244 87.5116 L 36.4826 93.7442 L 16.5698 100 L 18.314 100 L 38.2267 93.7442 L 55.6686 87.5116 L 70.4942 80.9778 L 82.5581 74.5829 L 91.2791 68.0491 L 97.3837 61.5385 L 100 54.8656 L 100 48.3318 L 100 48.3318 Z M 100 48.3318" transformation="0.8625 0 0 5.395 530.625 0" opacity="1" stroke-color="0 0 0" stroke-width="1">
+								<styles>
+									<fill-style fill-type="gradient">
+										<gradient end-color="0 0.266667 0.533333" start-color="0 0.4 0.8" gradient-angle="270"/>
+									</fill-style>
+									<dash-style pattern="none"/>
+									<shadow-style opacity="0" radius="0"/>
+								</styles>
+							</shape>
+							<shape path="M 99.3031 49.3049 L 96.5157 42.493 L 93.8444 39.0176 L 91.0569 35.7044 L 86.8757 32.3679 L 82.6945 29.0315 L 77.1196 25.8341 L 70.8478 22.6367 L 57.0267 16.6589 L 40.9988 10.8434 L 22.2997 5.28267 L 1.39373 0 L 0 0 L 20.9059 5.28267 L 39.6051 10.8434 L 55.633 16.6589 L 69.4541 22.7757 L 75.7259 25.9731 L 81.3008 29.1705 L 85.482 32.507 L 89.6632 35.8434 L 93.1475 39.1566 L 95.1219 42.493 L 97.2125 45.9685 L 97.9094 49.3049 L 98.6063 52.7804 L 97.9094 56.2558 L 96.5157 59.5922 L 95.1219 63.0445 L 92.4506 66.3809 L 88.9663 69.8563 L 84.0883 73.1928 L 79.2102 76.5292 L 68.0604 82.646 L 54.9361 88.6006 L 38.9082 94.4393 L 20.9059 100 L 22.2997 100 L 40.302 94.4393 L 56.3298 88.6006 L 69.4541 82.785 L 80.604 76.6682 L 85.482 73.3318 L 90.36 69.9954 L 93.8444 66.5199 L 96.5157 63.1835 L 97.9094 59.7312 L 99.3031 56.2558 L 100 52.7804 L 99.3031 49.3049 L 99.3031 49.3049 Z M 99.3031 49.3049" transformation="1.08 0 0 5.395 565.125 0" opacity="1" stroke-color="0 0 0" stroke-width="1">
+								<styles>
+									<fill-style fill-type="gradient">
+										<gradient end-color="0 0.266667 0.533333" start-color="0 0.4 0.8" gradient-angle="270"/>
+									</fill-style>
+									<dash-style pattern="none"/>
+									<shadow-style opacity="0" radius="0"/>
+								</styles>
+							</shape>
+							<shape path="M 12.0805 44.9954 L 20.1342 37.7664 L 28.1879 30.8387 L 39.5973 24.4439 L 51.6779 18.3272 L 55.7047 15.5468 L 63.7584 12.9055 L 71.8121 10.2873 L 75.8389 7.924 L 83.8926 5.69972 L 87.9195 3.61446 L 95.9732 1.66821 L 100 0 L 91.9463 0 L 87.9195 1.66821 L 79.8658 3.61446 L 75.8389 5.69972 L 67.7852 7.924 L 63.7584 10.2873 L 55.7047 12.9055 L 47.651 15.5468 L 43.6242 18.3272 L 32.2148 24.4439 L 20.1342 30.8387 L 12.0805 37.7664 L 4.02685 44.9954 L 0 52.7804 L 4.02685 60.2873 L 8.05369 67.6321 L 16.1074 74.5829 L 24.1611 81.3948 L 39.5973 87.9055 L 59.7315 94.0222 L 83.8926 100 L 91.9463 100 L 67.7852 94.0222 L 47.651 87.9055 L 32.2148 81.3948 L 24.1611 74.722 L 16.1074 67.6321 L 12.0805 60.4263 L 8.05369 52.7804 L 12.0805 44.9954 L 12.0805 44.9954 Z M 12.0805 44.9954" transformation="0.1875 0 0 5.395 299.75 0" opacity="1" stroke-color="0 0 0" stroke-width="1">
+								<styles>
+									<fill-style fill-type="gradient">
+										<gradient end-color="0 0.266667 0.533333" start-color="0 0.4 0.8" gradient-angle="270"/>
+									</fill-style>
+									<dash-style pattern="none"/>
+									<shadow-style opacity="0" radius="0"/>
+								</styles>
+							</shape>
+							<shape path="M 6.02007 47.7757 L 10.0334 40.5468 L 18.0602 33.6191 L 28.0936 27.0853 L 42.1405 20.8295 L 54.1806 14.8517 L 69.8997 9.4532 L 83.9465 4.44856 L 100 0 L 95.9866 0 L 79.9331 4.44856 L 66.2207 9.4532 L 52.1739 14.8517 L 38.1271 20.8295 L 26.087 27.0853 L 16.0535 33.6191 L 8.02676 40.5468 L 2.00669 47.7757 L 0 55.0046 L 4.01338 61.9555 L 10.0334 68.8832 L 18.0602 75.4171 L 32.107 81.9509 L 48.1605 88.1835 L 67.893 94.1613 L 91.9732 100 L 95.9866 100 L 71.9064 94.1613 L 52.1739 88.1835 L 36.1204 81.9509 L 22.0736 75.5561 L 14.0468 68.8832 L 8.02676 62.0945 L 4.01338 55.0046 L 6.02007 47.7757 L 6.02007 47.7757 Z M 6.02007 47.7757" transformation="0.375 0 0 5.395 245.75 0" opacity="1" stroke-color="0 0 0" stroke-width="1">
+								<styles>
+									<fill-style fill-type="gradient">
+										<gradient end-color="0 0.266667 0.533333" start-color="0 0.4 0.8" gradient-angle="270"/>
+									</fill-style>
+									<dash-style pattern="none"/>
+									<shadow-style opacity="0" radius="0"/>
+								</styles>
+							</shape>
+							<shape path="M 100 0 L 97.1698 0 L 74.5283 5.14365 L 56.3679 10.7044 L 39.3868 16.3809 L 25.2358 22.4977 L 15.3302 28.8925 L 6.83962 35.4263 L 1.41509 42.215 L 0 49.1659 L 1.41509 55.6997 L 5.66038 62.2336 L 11.0849 68.6052 L 20.9906 75.139 L 32.3113 81.5338 L 46.4623 87.7664 L 63.4434 94.0222 L 81.6038 100 L 84.434 100 L 66.2736 94.0222 L 49.2925 87.7664 L 35.1415 81.5338 L 23.8208 75.139 L 13.9151 68.6052 L 8.25472 62.2336 L 4.24528 55.6997 L 2.83019 49.1659 L 4.24528 42.215 L 9.66981 35.4263 L 16.7453 28.8925 L 28.066 22.4977 L 42.217 16.3809 L 57.783 10.7044 L 77.3585 5.14365 L 100 0 L 100 0 Z M 100 0" transformation="0.53125 0 0 5.395 195.625 0" opacity="1" stroke-color="0 0 0" stroke-width="1">
+								<styles>
+									<fill-style fill-type="gradient">
+										<gradient end-color="0 0.266667 0.533333" start-color="0 0.4 0.8" gradient-angle="270"/>
+									</fill-style>
+									<dash-style pattern="none"/>
+									<shadow-style opacity="0" radius="0"/>
+								</styles>
+							</shape>
+							<shape path="M 2.09059 49.722 L 4.18118 42.7711 L 9.40767 36.1214 L 16.7247 29.5876 L 28.223 23.1928 L 41.6376 16.937 L 58.3624 11.1214 L 78.223 5.42169 L 100 0 L 97.9094 0 L 76.1324 5.42169 L 56.2718 11.1214 L 39.547 17.076 L 26.1324 23.1928 L 14.6341 29.5876 L 7.31707 36.1214 L 2.09059 42.9101 L 0 49.722 L 1.0453 56.3948 L 5.22648 62.9055 L 11.4983 69.4393 L 20.9059 75.8341 L 33.2753 82.2289 L 47.9094 88.3225 L 64.6341 94.3003 L 84.3206 100 L 86.4111 100 L 66.7247 94.3003 L 50 88.3225 L 35.3659 82.2289 L 22.9965 75.8341 L 13.5889 69.4393 L 7.31707 62.9055 L 3.13589 56.3948 L 2.09059 49.722 L 2.09059 49.722 Z M 2.09059 49.722" transformation="0.71875 0 0 5.395 140.875 0" opacity="1" stroke-color="0 0 0" stroke-width="1">
+								<styles>
+									<fill-style fill-type="gradient">
+										<gradient end-color="0 0.266667 0.533333" start-color="0 0.4 0.8" gradient-angle="270"/>
+									</fill-style>
+									<dash-style pattern="none"/>
+									<shadow-style opacity="0" radius="0"/>
+								</styles>
+							</shape>
+							<shape path="M 1.63265 48.6098 L 3.94558 41.6589 L 9.65986 34.8703 L 17.8231 28.3364 L 29.2517 21.8026 L 42.9932 15.9639 L 60.1361 10.2873 L 78.9116 5.00463 L 100 0 L 98.3673 0 L 77.2789 4.86562 L 58.5034 10.1483 L 42.3129 15.8248 L 28.4354 21.8026 L 17.0068 28.1974 L 8.02721 34.8703 L 2.44898 41.6589 L 0 48.6098 L 0.816327 55.6997 L 3.94558 62.7664 L 10.4762 69.8563 L 20.2721 76.8072 L 30.8844 82.785 L 42.9932 88.6006 L 57.6871 94.4393 L 74.0136 100 L 75.6463 100 L 59.3197 94.4393 L 44.6259 88.6006 L 32.517 82.785 L 21.9048 76.8072 L 12.1088 69.8563 L 5.57823 62.7664 L 2.44898 55.6997 L 1.63265 48.6098 L 1.63265 48.6098 Z M 1.63265 48.6098" transformation="0.92125 0 0 5.395 87.625 0" opacity="1" stroke-color="0 0 0" stroke-width="1">
+								<styles>
+									<fill-style fill-type="gradient">
+										<gradient end-color="0 0.266667 0.533333" start-color="0 0.4 0.8" gradient-angle="270"/>
+									</fill-style>
+									<dash-style pattern="none"/>
+									<shadow-style opacity="0" radius="0"/>
+								</styles>
+							</shape>
+							<shape path="M 2.15054 45.1344 L 5.73477 39.5737 L 11.4695 34.1752 L 19.2354 28.6145 L 29.9881 23.0538 L 43.6081 17.493 L 59.2593 11.8165 L 78.6141 5.97776 L 88.5305 3.05839 L 100 0 L 98.5663 0 L 87.0968 3.05839 L 76.4636 5.97776 L 67.1446 8.89713 L 57.8256 11.8165 L 42.1744 17.493 L 28.5544 23.0538 L 17.9211 28.6145 L 10.0358 34.0361 L 4.30108 39.4347 L 0.716846 44.9954 L 0 50.9731 L 1.43369 57.2289 L 5.73477 63.4615 L 13.6201 70.1344 L 17.9211 73.4708 L 23.5364 76.9462 L 29.2712 80.5607 L 36.4397 84.3142 L 43.6081 88.0445 L 52.2103 91.937 L 60.693 95.8295 L 70.7288 100 L 72.1625 100 L 62.1266 95.8295 L 53.5245 91.937 L 45.0418 88.0445 L 37.8734 84.3142 L 30.7049 80.5607 L 24.9701 77.0853 L 19.2354 73.4708 L 15.0538 70.1344 L 7.16846 63.4615 L 2.86738 57.2289 L 1.43369 51.1121 L 2.15054 45.1344 L 2.15054 45.1344 Z M 2.15054 45.1344" transformation="1.05 0 0 5.395 35.875 0" opacity="1" stroke-color="0 0 0" stroke-width="1">
+								<styles>
+									<fill-style fill-type="gradient">
+										<gradient end-color="0 0.266667 0.533333" start-color="0 0.4 0.8" gradient-angle="270"/>
+									</fill-style>
+									<dash-style pattern="none"/>
+									<shadow-style opacity="0" radius="0"/>
+								</styles>
+							</shape>
+						</g>
+						<shape path="M 0 3.81625 L 6.95364 16.1131 L 15.894 28.4099 L 26.6556 40.7067 L 37.5828 52.5795 L 50.4967 64.8057 L 64.404 76.6784 L 80.1324 88.5512 L 97.0199 100 L 100 100 L 82.1192 88.1272 L 66.3907 75.8304 L 51.4901 63.5336 L 38.5762 50.8834 L 26.6556 38.5866 L 16.8874 25.8657 L 7.94702 12.7208 L 0 0 L 0 3.81625 L 0 3.81625 Z M 0 3.81625" transformation="0.7575 0 0 1.76875 0.625 362.625" opacity="1" stroke-color="0 0 0" stroke-width="1">
+							<styles>
+								<fill-style fill-type="gradient">
+									<gradient end-color="0 0.137255 0.278431" start-color="0 0.231373 0.462745" gradient-angle="270"/>
+								</fill-style>
+								<dash-style pattern="none"/>
+								<shadow-style opacity="0" radius="0"/>
+							</styles>
+						</shape>
+						<shape path="M 0 7.04225 L 47.5771 56.338 L 94.7137 100 L 100 100 L 73.5683 77.4648 L 50.2203 52.1127 L 0 0 L 0 7.04225 L 0 7.04225 Z M 0 7.04225" transformation="0.285 0 0 0.5325 0.625 486.25" opacity="1" stroke-color="0 0 0" stroke-width="1">
+							<styles>
+								<fill-style fill-type="gradient">
+									<gradient end-color="0 0.137255 0.278431" start-color="0 0.231373 0.462745" gradient-angle="270"/>
+								</fill-style>
+								<dash-style pattern="none"/>
+								<shadow-style opacity="0" radius="0"/>
+							</styles>
+						</shape>
+						<shape path="M 100 100 L 100 96.3046 L 98.7768 93.2811 L 97.5535 90.3136 L 93.8838 83.2587 L 90.2141 76.2038 L 81.1417 62.766 L 69.5209 50.3359 L 57.2885 38.5778 L 43.9348 27.8835 L 29.8675 17.8052 L 15.2905 8.39866 L 1.22324 0 L 0 0 L 14.0673 8.39866 L 28.0326 17.8052 L 42.0999 27.8835 L 55.5556 38.5778 L 68.2977 50.3359 L 79.3068 62.766 L 88.9908 76.2038 L 92.6606 83.2587 L 96.3303 90.6495 L 98.1651 95.2968 L 100 100 L 100 100 Z M 100 100" transformation="1.23 0 0 2.2325 596.875 0" opacity="1" stroke-color="0 0 0" stroke-width="1">
+							<styles>
+								<fill-style fill-type="gradient">
+									<gradient end-color="0 0.376471 0.752941" start-color="0 0.4 0.8" gradient-angle="270"/>
+								</fill-style>
+								<dash-style pattern="none"/>
+								<shadow-style opacity="0" radius="0"/>
+							</styles>
+						</shape>
+						<shape path="M 100 100 L 100 97.1598 L 80.0558 71.5976 L 56.6248 46.8639 L 30.8229 22.7219 L 2.37099 0 L 0 0 L 29.1492 23.432 L 55.788 48.284 L 79.219 73.7278 L 100 100 L 100 100 Z M 100 100" transformation="0.89875 0 0 1.05625 630 0" opacity="1" stroke-color="0 0 0" stroke-width="1">
+							<styles>
+								<fill-style fill-type="color" fill-color="0 0.4 0.8"/>
+								<dash-style pattern="none"/>
+								<shadow-style opacity="0" radius="0"/>
+							</styles>
+						</shape>
+						<shape path="M 100 100 L 100 95.6522 L 54.5455 46.3768 L 2.9484 0 L 0 0 L 26.5356 24.6377 L 53.0713 49.2754 L 100 100 L 100 100 Z M 100 100" transformation="0.51 0 0 0.5175 668.875 0" opacity="1" stroke-color="0 0 0" stroke-width="1">
+							<styles>
+								<fill-style fill-type="color" fill-color="0 0.4 0.8"/>
+								<dash-style pattern="none"/>
+								<shadow-style opacity="0" radius="0"/>
+							</styles>
+						</shape>
+						<shape path="M 0 96.5933 L 0 100 L 6.31579 85.9475 L 14.7368 71.895 L 25.1462 58.6941 L 36.3743 45.9191 L 50.4094 33.6409 L 65.0292 22.1434 L 81.8713 10.6458 L 100 0 L 97.8947 0 L 80.4678 10.22 L 64.3275 21.2917 L 49.7076 32.7892 L 36.3743 44.6416 L 25.1462 56.9908 L 15.4386 69.7658 L 7.01754 82.9666 L 0 96.5933 L 0 96.5933 Z M 0 96.5933" transformation="1.0725 0 0 1.76125 0.625 0" opacity="1" stroke-color="0 0 0" stroke-width="1">
+							<styles>
+								<fill-style fill-type="gradient">
+									<gradient end-color="0 0.376471 0.752941" start-color="0 0.4 0.8" gradient-angle="270"/>
+								</fill-style>
+								<dash-style pattern="none"/>
+								<shadow-style opacity="0" radius="0"/>
+							</styles>
+						</shape>
+						<shape path="M 100 0 L 96.9283 0 L 69.4539 22.0367 L 43.8567 45.0751 L 20.4778 70.1169 L 0 95.9933 L 0 100 L 20.4778 72.1202 L 43.8567 47.0785 L 70.4778 23.0384 L 100 0 L 100 0 Z M 100 0" transformation="0.735 0 0 0.74875 0.625 0" opacity="1" stroke-color="0 0 0" stroke-width="1">
+							<styles>
+								<fill-style fill-type="color" fill-color="0 0.4 0.8"/>
+								<dash-style pattern="none"/>
+								<shadow-style opacity="0" radius="0"/>
+							</styles>
+						</shape>
+						<shape path="M 100 0 L 93.3086 0 L 44.6097 45.2381 L 22.3048 69.0476 L 0 92.8571 L 0 100 L 46.8401 47.619 L 100 0 L 100 0 Z M 100 0" transformation="0.3375 0 0 0.315 0.625 0" opacity="1" stroke-color="0 0 0" stroke-width="1">
+							<styles>
+								<fill-style fill-type="color" fill-color="0 0.4 0.8"/>
+								<dash-style pattern="none"/>
+								<shadow-style opacity="0" radius="0"/>
+							</styles>
+						</shape>
+						<line stroke-color="0 0.4 0.8" head="719.75 344.125" opacity="1" stroke-width="1" tail="0 343.125">
+							<styles>
+								<dash-style pattern="solid"/>
+								<shadow-style opacity="0" radius="0"/>
+								<line-head-style is-filled="false"/>
+								<line-tail-style is-filled="false"/>
+							</styles>
+						</line>
+						<line stroke-color="0 0.4 0.8" head="719.75 295" opacity="1" stroke-width="1" tail="0 294">
+							<styles>
+								<dash-style pattern="solid"/>
+								<shadow-style opacity="0" radius="0"/>
+								<line-head-style is-filled="false"/>
+								<line-tail-style is-filled="false"/>
+							</styles>
+						</line>
+						<line stroke-color="0 0.231373 0.462745" head="719.75 393.25" opacity="1" stroke-width="1" tail="0 392.25">
+							<styles>
+								<dash-style pattern="solid"/>
+								<shadow-style opacity="0" radius="0"/>
+								<line-head-style is-filled="false"/>
+								<line-tail-style is-filled="false"/>
+							</styles>
+						</line>
+						<g transformation="1 0 0 1 0 48.5">
+							<line stroke-color="0 0.4 0.8" head="719.75 98.5" opacity="1" stroke-width="1" tail="0 97.5">
+								<styles>
+									<dash-style pattern="solid"/>
+									<shadow-style opacity="0" radius="0"/>
+									<line-head-style is-filled="false"/>
+									<line-tail-style is-filled="false"/>
+								</styles>
+							</line>
+							<line stroke-color="0 0.4 0.8" head="719.75 245.875" opacity="1" stroke-width="1" tail="0 244.875">
+								<styles>
+									<dash-style pattern="solid"/>
+									<shadow-style opacity="0" radius="0"/>
+									<line-head-style is-filled="false"/>
+									<line-tail-style is-filled="false"/>
+								</styles>
+							</line>
+							<line stroke-color="0 0.4 0.8" head="719.75 196.75" opacity="1" stroke-width="1" tail="0 195.75">
+								<styles>
+									<dash-style pattern="solid"/>
+									<shadow-style opacity="0" radius="0"/>
+									<line-head-style is-filled="false"/>
+									<line-tail-style is-filled="false"/>
+								</styles>
+							</line>
+							<line stroke-color="0 0.4 0.8" head="719.75 147.625" opacity="1" stroke-width="1" tail="0 146.625">
+								<styles>
+									<dash-style pattern="solid"/>
+									<shadow-style opacity="0" radius="0"/>
+									<line-head-style is-filled="false"/>
+									<line-tail-style is-filled="false"/>
+								</styles>
+							</line>
+							<line stroke-color="0 0.4 0.8" head="719.75 49.5" opacity="1" stroke-width="1" tail="0 48.5">
+								<styles>
+									<dash-style pattern="solid"/>
+									<shadow-style opacity="0" radius="0"/>
+									<line-head-style is-filled="false"/>
+									<line-tail-style is-filled="false"/>
+								</styles>
+							</line>
+						</g>
+						<line stroke-color="0 0.231373 0.462745" head="719.75 491.5" opacity="1" stroke-width="1" tail="0 490.5">
+							<styles>
+								<dash-style pattern="solid"/>
+								<shadow-style opacity="0" radius="0"/>
+								<line-head-style is-filled="false"/>
+								<line-tail-style is-filled="false"/>
+							</styles>
+						</line>
+						<line stroke-color="0 0.231373 0.462745" head="719.75 442.375" opacity="1" stroke-width="1" tail="0 441.375">
+							<styles>
+								<dash-style pattern="solid"/>
+								<shadow-style opacity="0" radius="0"/>
+								<line-head-style is-filled="false"/>
+								<line-tail-style is-filled="false"/>
+							</styles>
+						</line>
+					</g>
+					<title stroke-width="1" size="626.1 277.4" visibility="visible" vertical-alignment="bottom" location="47.2 0" opacity="1" stroke-color="1 1 1">
+						<styles>
+							<fill-style fill-type="none"/>
+							<dash-style pattern="none"/>
+							<shadow-style opacity="0" radius="0"/>
+						</styles>
+					</title>
+					<body stroke-width="1" size="498.6 231.4" bullet-indentation="0 0 36 72 108 144" visibility="visible" vertical-alignment="top" location="110.2 308.6" opacity="1" stroke-color="1 1 1">
+						<styles>
+							<fill-style fill-type="none"/>
+							<dash-style pattern="none"/>
+							<shadow-style opacity="0" radius="0"/>
+						</styles>
+					</body>
+					<textbox size="162.6 12" transformation="1 0 0 1 38.2 495.225">
+						<content font-color="1 1 1" paragraph-spacing="-2" paragraph-alignment="left" tab-stops="L 0 L 72 L 144" font-size="10" paragraph-line-spacing="0.15332" font-name="Verdana">
+<![CDATA[ ]]>
+						</content>
+						<styles>
+							<shadow-style opacity="0" radius="0"/>
+						</styles>
+					</textbox>
+					<textbox size="222.6 12.1533" transformation="1 0 0 1 248.2 495.6">
+						<content font-color="1 1 1" paragraph-spacing="-2" paragraph-alignment="center" tab-stops="L 0 L 72 L 144 L 216" font-size="10" paragraph-line-spacing="0.15332" font-name="Verdana">
+<![CDATA[ ]]>
+						</content>
+						<styles>
+							<shadow-style opacity="0" radius="0"/>
+						</styles>
+					</textbox>
+					<page-number stroke-width="1" size="162.6 45.775" visibility="hidden" vertical-alignment="top" location="518.2 494.225" opacity="1" stroke-color="1 1 1">
+						<styles>
+							<fill-style fill-type="none"/>
+							<dash-style pattern="none"/>
+							<shadow-style opacity="0" radius="0"/>
+						</styles>
+						<text-attributes font-color="1 1 1" paragraph-spacing="-2" paragraph-alignment="right" tab-stops="L 0 L 72 L 144" font-size="10" paragraph-line-spacing="0.15332" font-name="Verdana"/>
+					</page-number>
+				</drawables>
+				<background-fill-style fill-type="gradient">
+					<gradient end-color="0 0.156863 0.313726" start-color="0 0.4 0.8" gradient-angle="270"/>
+				</background-fill-style>
+				<prototype-bullets>
+					<bullet level="0" marker-type="none" spacing="0">
+						<content paragraph-line-max-height="0" paragraph-line-min-height="0" font-color="0.8 0.92549 1" paragraph-spacing="-2" paragraph-head-indent="0" paragraph-alignment="center" font-background-color="g0 0" paragraph-first-line-indent="0" font-kerning="0" font-ligatures="default" paragraph-line-break="word-wrap" tab-stops="L 0 L 72 L 144 L 216 L 288 L 360 L 432 L 504 L 576" font-size="54" font-baseline-offset="0" font-underline="false" paragraph-tail-indent="0" paragraph-line-spacing="2.8" font-superscript="0" font-name="ArialMT"/>
+					</bullet>
+					<bullet level="1" marker-type="none" spacing="-2.10938">
+						<content font-color="1 1 1" paragraph-alignment="center" tab-stops="L 0 L 72 L 144 L 216 L 288 L 360 L 432" font-size="32" paragraph-line-spacing="-0.109375" font-name="Verdana">Click to edit Master subtitle style</content>
+					</bullet>
+					<bullet level="2" marker-type="none" spacing="4.83516">
+						<content font-color="1 1 1" paragraph-head-indent="36" paragraph-alignment="center" paragraph-first-line-indent="36" tab-stops="L 28 L 36 L 56 L 84 L 112 L 140 L 168 L 196 L 224 L 252 L 280 L 308 L 336" font-size="28" paragraph-line-spacing="0.0292969" font-name="Verdana">1</content>
+					</bullet>
+					<bullet level="3" marker-type="none" spacing="4.00156">
+						<content font-color="1 1 1" paragraph-head-indent="72" paragraph-alignment="center" paragraph-first-line-indent="72" tab-stops="L 28 L 56 L 72 L 84 L 112 L 140 L 168 L 196 L 224 L 252 L 280 L 308 L 336" font-size="24" paragraph-line-spacing="0.167969" font-name="Verdana">2</content>
+					</bullet>
+					<bullet level="4" marker-type="none" spacing="3.16797">
+						<content font-color="1 1 1" paragraph-head-indent="108" paragraph-alignment="center" paragraph-first-line-indent="108" tab-stops="L 28 L 56 L 84 L 108 L 112 L 140 L 168 L 196 L 224 L 252 L 280 L 308 L 336" font-size="20" paragraph-line-spacing="0.306641" font-name="Verdana">3</content>
+					</bullet>
+					<bullet level="5" marker-type="none" spacing="-1.69336">
+						<content font-color="1 1 1" paragraph-head-indent="144" paragraph-alignment="center" paragraph-first-line-indent="144" tab-stops="L 28 L 56 L 84 L 112 L 140 L 144 L 168 L 196 L 224 L 252 L 280 L 308 L 336" font-size="20" paragraph-line-spacing="0.306641" font-name="Verdana">4</content>
+					</bullet>
+				</prototype-bullets>
+				<transition-style type="none" duration="0"/>
+				<thumbnails>
+					<thumbnail byte-size="8106" size="60 45" file="thumbs/mt1.tiff"/>
+				</thumbnails>
+			</master-slide>
+		</master-slides>
+	</theme>
+	<slide-list>
+		<slide master-slide-id="master-slide-1">
+			<drawables>
+				<image opacity="1" natural-size="358 358" transformation="2.01117 0 0 1.50838 0 0" display-name="Image-1" image-data="seal_color.jpg" stroke-color="g1" byte-size="31577" stroke-width="2" lock-aspect-ratio="true">
+					<styles>
+						<shadow-style opacity="0" radius="0"/>
+						<dash-style pattern="none"/>
+					</styles>
+				</image>
+				<title visibility="hidden" vertical-alignment="tracks-master"/>
+				<body visibility="hidden" vertical-alignment="tracks-master"/>
+			</drawables>
+			<transition-style type="none" duration="0"/>
+			<thumbnails>
+				<thumbnail byte-size="6198" size="60 45" file="thumbs/st0.tiff"/>
+			</thumbnails>
+			<bullets>
+				<bullet level="0" marker-type="inherited">
+					<content font-color="0.8 0.92549 1" paragraph-spacing="-2" paragraph-alignment="center" tab-stops="L 0 L 72 L 144 L 216 L 288 L 360 L 432 L 504 L 576" font-size="44" paragraph-line-spacing="2.8" font-name="ArialMT"/>
+				</bullet>
+			</bullets>
+		</slide>
+		<slide id="slide-1" master-slide-id="master-slide-1">
+			<drawables>
+				<title visibility="visible" vertical-alignment="tracks-master"/>
+				<textbox size="642.6 374.322" transformation="1 0 0 1 32.2 123.6">
+					<content font-color="1 1 1" paragraph-spacing="2.86133" paragraph-head-indent="27" paragraph-alignment="left" tab-stops="L 27 L 72 L 144 L 216 L 288 L 360 L 432 L 504 L 576" font-size="20" paragraph-line-spacing="0.306641" font-name="Verdana">
+<![CDATA[/* greetings.c -- greetings program
+ *
+ * Send a message from all processes with rank != 0 to process 0.
+ *    Process 0 prints the messages received.
+ *
+ * Input: none.
+ * Output: contents of messages received by process 0.
+ *
+ * See Chapter 3, pp. 41 & ff in PPMPI.
+ */
+#include <stdio.h>
+#include <string.h>
+]]>
+						<div paragraph-spacing="-2">#include "mpi.h"</div>
+					</content>
+				</textbox>
+				<body visibility="hidden" vertical-alignment="tracks-master"/>
+			</drawables>
+			<transition-style type="none" duration="0"/>
+			<thumbnails>
+				<thumbnail byte-size="8106" size="60 45" file="thumbs/st1.tiff"/>
+			</thumbnails>
+			<bullets>
+				<bullet level="0" spacing="0.799999" marker-type="none">
+					<content font-color="0.8 0.92549 1" paragraph-alignment="center" tab-stops="L 0 L 72 L 144 L 216 L 288 L 360 L 432 L 504 L 576" font-size="44" paragraph-line-spacing="2.8" font-name="Arial-BoldMT">Greetings</content>
+				</bullet>
+			</bullets>
+		</slide>
+		<slide master-slide-id="master-slide-1">
+			<drawables>
+				<textbox size="678.6 468.009" transformation="1 0 0 1 14.2 3.60001">
+					<content font-color="1 1 1" paragraph-spacing="-2" paragraph-alignment="left" tab-stops="L 0 L 72 L 144 L 216 L 288 L 360 L 432 L 504 L 576 L 648" font-size="20" paragraph-line-spacing="0.306641" font-name="Verdana">
+<![CDATA[main(int argc, char* argv[]) {
+    int         my_rank;        /* rank of process      */
+    int         p;                   /* number of processes  */
+    int         source;            /* rank of sender       */
+    int         dest;               /* rank of receiver     */
+    int         tag = 0;           /* tag for messages     */
+    char      message[100];  /* storage for message  */
+    MPI_Status  status;        /* return status for    */
+                                          /* receive              */
+             	/* Start up MPI */
+    MPI_Init(&argc, &argv);
+    		/* Find out process rank  */
+    MPI_Comm_rank(MPI_COMM_WORLD, &my_rank);
+    		/* Find out number of processes */
+    MPI_Comm_size(MPI_COMM_WORLD, &p);
+    if (my_rank != 0) {
+        		/* Create message */
+        sprintf(message, "Greetings from process %d!",
+            my_rank);
+        dest = 0;
+]]>
+						<div font-size="18" paragraph-line-spacing="-0.124023">
+<![CDATA[        ]]>
+						</div>
+					</content>
+					<styles>
+						<shadow-style opacity="0" radius="0"/>
+					</styles>
+				</textbox>
+				<title visibility="hidden" vertical-alignment="tracks-master"/>
+				<body visibility="hidden" vertical-alignment="tracks-master"/>
+			</drawables>
+			<transition-style type="none" duration="0"/>
+			<thumbnails>
+				<thumbnail byte-size="8106" size="60 45" file="thumbs/st2.tiff"/>
+			</thumbnails>
+			<bullets>
+				<bullet level="0" marker-type="inherited">
+					<content font-color="0.8 0.92549 1" paragraph-spacing="-2" paragraph-alignment="center" tab-stops="L 0 L 72 L 144 L 216 L 288 L 360 L 432 L 504 L 576" font-size="44" paragraph-line-spacing="2.8" font-name="ArialMT"/>
+				</bullet>
+			</bullets>
+		</slide>
+		<slide master-slide-id="master-slide-1">
+			<drawables>
+				<textbox size="702.6 291.68" transformation="1 0 0 1 2.20001 3.60001">
+					<content font-color="1 1 1" paragraph-spacing="-2" paragraph-alignment="left" tab-stops="L 0 L 72 L 144 L 216 L 288 L 360 L 432 L 504 L 576 L 648" font-size="20" paragraph-line-spacing="0.306641" font-name="Verdana">
+<![CDATA[		/* Use strlen+1 so that '\0' gets transmitted */
+        MPI_Send(message, strlen(message)+1, MPI_CHAR, 
+            dest, tag, MPI_COMM_WORLD);
+    } else { 	/* my_rank == 0 */
+        for (source = 1; source < p; source++) {
+            MPI_Recv(message, 100, MPI_CHAR, source, tag, 
+	  MPI_COMM_WORLD, &status);
+            printf("%s\n", message);
+        }
+    }
+    		/* Shut down MPI */
+    MPI_Finalize();
+} 		/* main */]]>
+					</content>
+					<styles>
+						<shadow-style opacity="0" radius="0"/>
+					</styles>
+				</textbox>
+				<title visibility="hidden" vertical-alignment="tracks-master"/>
+				<body visibility="hidden" vertical-alignment="tracks-master"/>
+			</drawables>
+			<transition-style type="none" duration="0"/>
+			<thumbnails>
+				<thumbnail byte-size="8108" size="60 45" file="thumbs/st3.tiff"/>
+			</thumbnails>
+			<bullets>
+				<bullet level="0" marker-type="inherited">
+					<content font-color="0.8 0.92549 1" paragraph-spacing="-2" paragraph-alignment="center" tab-stops="L 0 L 72 L 144 L 216 L 288 L 360 L 432 L 504 L 576" font-size="44" paragraph-line-spacing="2.8" font-name="ArialMT"/>
+				</bullet>
+			</bullets>
+		</slide>
+		<slide master-slide-id="master-slide-1">
+			<drawables>
+				<title visibility="visible" vertical-alignment="tracks-master"/>
+				<textbox size="702.6 381.768" transformation="1 0 0 1 14.2 99.6">
+					<content font-color="1 1 1" paragraph-spacing="-2" paragraph-alignment="left" tab-stops="L 0 L 72 L 144 L 216 L 288 L 360 L 432 L 504 L 576 L 648" font-size="18" paragraph-line-spacing="-0.124023" font-name="Verdana">
+<![CDATA[#include <stdio.h>
+#include <string.h>
+#include <mpi.h>
+
+#define TRUE 1
+#define FALSE 0
+#define MASTER_RANK 0
+
+main(argc, argv)
+int argc;
+char *argv[];
+{
+   int count, pool_size, my_rank, my_name_length, i_am_the_master = FALSE;
+   char my_name[BUFSIZ], master_name[BUFSIZ], send_buffer[BUFSIZ],
+        recv_buffer[BUFSIZ];
+   MPI_Status status;
+
+   ]]>
+					</content>
+					<styles>
+						<shadow-style opacity="0" radius="0"/>
+					</styles>
+				</textbox>
+				<body visibility="hidden" vertical-alignment="tracks-master"/>
+			</drawables>
+			<transition-style type="none" duration="0"/>
+			<thumbnails>
+				<thumbnail byte-size="8106" size="60 45" file="thumbs/st4.tiff"/>
+			</thumbnails>
+			<bullets>
+				<bullet level="0" spacing="0.799999" marker-type="none">
+					<content font-color="0.8 0.92549 1" paragraph-alignment="center" tab-stops="L 0 L 72 L 144 L 216 L 288 L 360 L 432 L 504 L 576" font-size="44" paragraph-line-spacing="2.8" font-name="ArialMT">Greetings Master</content>
+				</bullet>
+			</bullets>
+		</slide>
+		<slide master-slide-id="master-slide-1">
+			<drawables>
+				<textbox size="714.6 455.133" transformation="1 0 0 1 2.20001 3.60001">
+					<content font-color="1 1 1" paragraph-spacing="-2" paragraph-alignment="left" tab-stops="L 0 L 72 L 144 L 216 L 288 L 360 L 432 L 504 L 576 L 648" font-size="16" paragraph-line-spacing="0.445312" font-name="Verdana">
+<![CDATA[MPI_Init(&argc, &argv);
+   MPI_Comm_size(MPI_COMM_WORLD, &pool_size);
+   MPI_Comm_rank(MPI_COMM_WORLD, &my_rank);
+   MPI_Get_processor_name(my_name, &my_name_length);
+
+   if (my_rank == MASTER_RANK) {
+      i_am_the_master = TRUE;
+      strcpy (master_name, my_name);
+   }
+
+  MPI_Bcast(master_name, BUFSIZ, MPI_CHAR, MASTER_RANK, MPI_COMM_WORLD);
+
+   sprintf(send_buffer, "hello %s, greetings from %s, rank = %d",
+           master_name, my_name, my_rank);
+   MPI_Send (send_buffer, strlen(send_buffer) + 1, MPI_CHAR,
+             MASTER_RANK, 0, MPI_COMM_WORLD);
+
+   if (i_am_the_master) {
+      for (count = 1; count <= pool_size; count++) {
+         MPI_Recv (recv_buffer, BUFSIZ, MPI_CHAR, MPI_ANY_SOURCE, MPI_ANY_TAG,
+                   MPI_COMM_WORLD, &status);
+         printf ("%s\n", recv_buffer);
+      }
+   }
+   MPI_Finalize();
+}]]>
+					</content>
+					<styles>
+						<shadow-style opacity="0" radius="0"/>
+					</styles>
+				</textbox>
+				<title visibility="hidden" vertical-alignment="tracks-master"/>
+				<body visibility="hidden" vertical-alignment="tracks-master"/>
+			</drawables>
+			<transition-style type="none" duration="0"/>
+			<thumbnails>
+				<thumbnail byte-size="8108" size="60 45" file="thumbs/st5.tiff"/>
+			</thumbnails>
+			<bullets>
+				<bullet level="0" marker-type="inherited">
+					<content font-color="0.8 0.92549 1" paragraph-spacing="-2" paragraph-alignment="center" tab-stops="L 0 L 72 L 144 L 216 L 288 L 360 L 432 L 504 L 576" font-size="44" paragraph-line-spacing="2.8" font-name="ArialMT"/>
+				</bullet>
+			</bullets>
+		</slide>
+		<slide master-slide-id="master-slide-1">
+			<drawables>
+				<image opacity="1" natural-size="358 358" transformation="2.01117 0 0 1.50838 0 0" display-name="Image-2" image-data="seal_color.jpg" stroke-color="g1" byte-size="31577" stroke-width="2" lock-aspect-ratio="true">
+					<styles>
+						<shadow-style opacity="0" radius="0"/>
+						<dash-style pattern="none"/>
+					</styles>
+				</image>
+				<title visibility="hidden" vertical-alignment="tracks-master"/>
+				<body visibility="hidden" vertical-alignment="tracks-master"/>
+			</drawables>
+			<transition-style type="none" duration="0"/>
+			<thumbnails>
+				<thumbnail byte-size="6198" size="60 45" file="thumbs/st6.tiff"/>
+			</thumbnails>
+			<bullets>
+				<bullet level="0" marker-type="inherited">
+					<content font-color="0.8 0.92549 1" paragraph-spacing="-2" paragraph-alignment="center" tab-stops="L 0 L 72 L 144 L 216 L 288 L 360 L 432 L 504 L 576" font-size="44" paragraph-line-spacing="2.8" font-name="ArialMT"/>
+				</bullet>
+			</bullets>
+		</slide>
+	</slide-list>
+	<ui-state>
+		<number key="BGShowUIStateNotesVisible">0</number>
+		<reference key="BGShowUIStateActiveSlide" id-ref="slide-1"/>
+		<array key="BGShowUIStateSelectedSlides">
+			<reference id-ref="slide-1"/>
+		</array>
+		<array key="BGShowUIStateSelectedBulletPoints"/>
+		<array key="BGShowUIStateSelectedDrawables"/>
+		<string key="BGShowUIStateCanvasOrigin">{0, 0}</string>
+	</ui-state>
+</presentation>

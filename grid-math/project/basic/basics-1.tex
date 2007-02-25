@@ -1,0 +1,372 @@
+ \documentclass[11pt]{article}
+ \usepackage{graphicx}
+ \usepackage{amssymb}
+ \usepackage{epstopdf}
+ \usepackage {doublespace}
+ \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+ 
+ \textwidth = 6.5 in
+ \textheight = 9 in
+ \oddsidemargin = 0.0 in
+ \evensidemargin = 0.0 in
+ \topmargin = 0.0 in
+ \headheight = 0.0 in
+ \headsep = 0.0 in
+ \parskip = 0.2in
+ \parindent = 0.0in
+ 
+ \newtheorem{theorem}{Theorem}
+ \newtheorem{corollary}[theorem]{Corollary}
+ \newtheorem{definition}{Definition}
+ 
+ \title{Basic Concepts for Service Oriented Computing Applied to Scientific Computing  Part 1}
+ \author{Daniel Beatty}
+ \begin{document}
+ \maketitle
+ 
+ \section {Introduction}
+ The term service oriented computing has been used in many papers to be a form of distributed computing.  The term grid has also been used in the distributed computing community to describe a distributed operating system, of sorts.  What may help is set of perspectives that encompass core components of computer science.  The obvious questions are:
+ \begin{itemize}
+\item How can distributed systems implement the Turing Machine?
+\item What features of a classic operating system can be applied to a distributed system?
+\item What degrees of failure limit the features of the computing system?  
+\item What impact does this have on scientific computing?
+\end{itemize}
+
+Many computing paradigms have developed as computing science has spread to a larger crew participants.  The paradigms have included procedural, object-oriented, list oriented and logic oriented type paradigms.  Some these paradigms have incorporated how-to concepts which are described as algorithmic.  Others have been coined as descriptive for there ability define a problem by a precise enough description.  
+
+Aiding these paradigms are concepts of processing these paradigms such single instruction single data, to parallel schemes.  Currently multiple data or multiple instructions tend be the exclusive mechanisms of performing parallel computation.  Further aiding these paradigms software to manage processing agents.   
+
+The big issue for distributed computing currently is what concepts apply in the distributed forms?    There are many system types that could be considered to be distributed.   What concept is held in common for distributed computing is that each node in the distributed system have independent processing and memory systems.   Storage at large, and degrees of processes management may or may not be shared.  This description allows for a range of systems from a tightly coupled super computer and clusters to globally separated systems.
+
+The level of separation of these systems contributes communications issues of these systems.  These communications issues lead levels of access, and coordination.  These levels provide limitations as what degree of parallelism can be applied to these systems both at large and in particular groups.  
+
+In the worst case, simple batch system load sharing and basic data sharing is about all that can be expect of these distributed systems.  In other cases, a sophisticated sharing of memory, storage, processing, and other resources can produce efficient means of combining computing power.   These varying degrees combining computing power demands paradigms to describe how to use this power effectively.   Thus if we are to call a grid a collection of computing devices connected by a network to reduce overhead, accelerate productivity and maximize computing power, then we need a paradigm to describe how this can be done.  If the how-to is defined, then the descriptive paradigms benefit as well by having means to answer their queries.  The paradigm associated with this grid can be as a Service Oriented Paradigm.   This service paradigm covers both the middle-ware that services a management scheme to this grid, and how programs are designed implementation of the Turing Machine.  
+
+The focus of this series of studies is to determine how to define the varying levels sharing, how to connect these levels in a productive manner, and how this effect scientific computing and the paradigms to make scientific computing effective.    This first part of the series describes the concepts in terms of classic process management, data management, memory management, service calls, user services, and application examples.  
+ 
+ \section {Process Management}
+ Process management is a fundamental part of every modern operating system.  Any service oriented paradigm must include management schemes to coordinate these process managers effectively.  In some cases, the coordination  is limited by the lack of sophistication of the host OS.  In other cases, more sophistication can be applied.  The sophistication process management can be applied in cases of OS's  with sharing micro-kernels,  or schedulers which can either altered or interfaced with to share management information.  
+ 
+ Even if the OS process manager support shared management, the infrastructure connecting the shared system also provides limitation.  These limits are results of communication limits and precision on which the system clocks can be coordinated.  In general, designs for distributed system assume that the communications are unreliable and time can not be coordinated.   However, this statement fails to account for degrees of reliability and how precise time can be cooridinated.  Anywhere on earth, time services such as WWV supplied by National Institute of Standards and Technology.  \cite {lombardi}  The maximum precision available from NIST is down to 30 ps, but that time is not transmitted at intervals of 55ms.  The variance at which such a signal reaches a location versus another defines the precision for which time is reliable for these location.  For shared process management, the purpose of coordinated time is for determining order events in these systems.  Of course ties are still possible, but the goal is to ensure the same reliability as a single processor system.  
+ 
+ Time on a supercomputer is very precisely coordinated.  Each processor could be running exclusively of the same clock.  A cluster tends to be made of machines with independent clocks.  However, if the communications are quick in that cluster, and the latency is small then precision can be made on the order of $10^{-9}$ to $10^{-6}$ seconds.  As a latency and bandwidth decreases the degree of precision decreases dramatically.  In cases where these properties can be calculated or measured, a limit of clock coordinated.  For example, many ping counts in university settings are recorded on the order of microseconds.  
+ 
+ As stated, the issue of time coordination is a matter of establishing order of events.  In the case of a supercomputers, ties occur between processor working in parallel, but those ties are based on the same clock.  For a cluster, the order of messages from threads and processes in not as precise.  A gray area exists in the precision limit and any message received in that window, must be declared as a tie.  A set of time windows can be used to separate groups of messages as occurring at the same time.  
+ 
+ Another issue is the generation of processes and the distribution of threads.  The purpose of multi-processes is to allow for multiple jobs to run simultaneously.  The source of these jobs may be application (the jobs themselves) or spawned copies of those jobs.  In other words, some process may be copies of the same program or different program.  
+ 
+ The coordination of these processes include a process space which an operating system uses to encapsulate all operations and properties to manage that job.  Threads are considered to be sub-jobs which share their space within a process.  Their purpose is to allow parallel operation without the overhead associated with multiple process spaces.  Threads are limited to system where memory can be considered to be shared.  
+ 
+ In some cases, virtual shared memory can be employed.  In cases where virtual shared memory is impractical, then migrating a thread from processor to processor means generating a process on the other processor which communicates to a thread on the original processor by proxy.  
+ 
+ \subsection{Example: GRAM}
+ 
+ \subsection {Example: Nimrod-G}
+ 
+ \subsection {Example: Avaki/ Legion}
+ 
+ \subsection {XGrid}
+ 
+ \section {Data Management}
+ 
+ \subsection {Example: GridFTP}
+ 
+ \subsection {Example: SAM}
+ 
+ \subsection {Example: AFS}
+ 
+ \subsection {Example: Avaki Data Grid}
+ 
+ \subsection {SORCER: Data Management}
+ 
+ 
+ \section {Services: A SOC Operating System Call}
+ 
+ \subsection {Examples}
+ \subsubsection {Darwin and Distributed Objects}
+OSX is a product of NeXTStep with the Mach micro-kernel.  As such it also has NSPorts.  One feature that is also present is another service registration scheme called Rendezvous.    Rendezvous is Apple's implementation of Zeroconf DNS which allows services to declare the name, type, port, etc.  
+
+OSX uses NSPorts to provide distributed objects (DO(s)) and uses the run loop and or thread  to achieve a non-blocking solution.  Such DO are called via normal message passing routines associated with Objective C and NS Objects.  This mechanism provides a sort of proxy for which there are two classes"  NSDistributedObject and NSProxy.  
+
+An NSConnection object has two instances of NSPort: one receives data and the other sends data.   An NSPort is a superclass to all other ports.  NSMachPort uses Mach messaging and is typically used solely on the machine itself.  NSSocketPorts use socket to go between machines.  
+
+There are addition identifier/ modifier types applied to distributed objects: functions, methods and members alike.  These key words are as follows:
+\begin{itemize}
+\item oneway void ( client does not wait for a response.
+\item in (A receiver is going to read the value but not change it.)
+\item out ( A value is changed by the receiver by not read)
+\item inout (receiver is to both read and write  the value).
+\item bycopy (argument is archived before sent and de-archived in the receiver's process space)
+\item byref (the argument is represented by proxy).   
+\end{itemize}
+
+
+Each connection can have a delegate.  Each time the connection spawns a new ``child'' connection, the ``child'' will have its delegate outlet set to point to its parent delegate. The connection monitor is a class for logging delegates and their connections.  
+
+\subsubsection {Distributed Tasks}
+Of course, there is nothing wrong with calling distributed tasks either.  An example was provided by O'Reilly's articles and written by Drew McCormack May 11, 2004 \cite {mccormack}. This analysis examines the crucial parts.
+
+Apply Filters is the method that calls Distributed Task.  There are many nuggets of value in addition to the calls for:
+\begin{itemize}
+\item Add Sub Task with Identifier .  This call includes
+\begin{enumerate}
+\item The identifier
+\item Launch path
+\item Working Directory
+\item Output Directory
+\item Standard Input 
+\item Standard Output
+\end{enumerate}
+
+\item Launch
+\end{itemize}
+
+The methods of how ``Photo Industry'' provides these values are somewhat interesting.  
+\begin{itemize}
+\item The first section of Apply Filters acquires the time.   
+\item Next initiates local instances of the file manager.  
+\item The output directory is fed into Apply Filters and is not interesting.  
+\item The temporary directory segment is interesting.  
+\begin{enumerate}
+\item It uses the processes own information (supplied by NS (OSX) which identifies the process in all of its details.  The way this is used to access programs is with in the application itself.  
+\item The temporary directory of functions which acquires the temporary directory as specified by the OS.  (Any where NS applies). 
+\end{enumerate}
+\item The next section claims to produce standard input for the filters which are actually programs and the parameters to those programs.  The means for this is the typical array/ dictionary scheme of Objective-C.  
+\item The next segment produces input and temporary directories for the input data (the photos).  Features of these production(s) is the production of directories for the sub-tasks.  Thus a scheme for dividing the work judiciously is being applied.  
+\end{itemize}
+The question of the thread oriented submission becomes an issue.
+
+Also, the feeding of data structures becomes an issue for the parent application:
+\begin{itemize}
+\item The manner the sub-tasks are divided up as a list of files (input).   Items copied into these directories into these directories are the data (photos) and the programs to work on them.
+\item These structures include message forwarding which is the purpose of a NeXTStep delegate.  
+\item ``A delegate is an object directed to carry out an action by another object.'' page 456 \cite {Kochan}
+\item Once the sub-tasks and its data are determined, the sub job is copied out of the bundle (app), and the executable (script), then the sub-task queue is loaded.  
+\item The rest of the methods are delegate methods.
+
+\end{itemize}
+
+\subsubsection {Devise xGrid client from Source}
+One thing to be said about the distributed tasks devised by Drew McCormack is that it is a client of a client.  Of course, xGrid has three basic components by design: client, agent and controller.  Since xGrid's agent and client are open source, a good clean examination of these components may be in order to devise an xGrid API that makes any application simply a client of the xGrid system.  Some of these clients could broker xGrid's services to Federated systems like SORCER, Condor, Globus, and the like.  
+
+ 
+ \section {Services: User Libraries}
+ 
+ \section {Application Example:  Sloan Digital Sky Survey}  
+ Suffice to say, the Sloan Digital Sky Survey has collected an enormous amount of visual and spectral data of the night sky.    The basic scheme for representing the SDSS repository of data is to store its images in a data store of some kind with a meta-data catalog containing information on the images themselves as well as pre-computed data.    Having said that, there are some issues to bring this 
+ \begin{itemize}
+\item Generate an object to represent a FITS file
+\item Generate an astrotools object to manipulate the FITS file
+\item Generate objects that represent derived attributes of the FITS file.
+\item Include optimizations to the FITS object such as wavelet representation. 
+\end{itemize}
+
+ Having said this the FITS object should include be able to understood by both native and Java code.  The astrotools should represent a set of services should be both mobile and efficient.  
+
+The Objective-C version of this object most likely will be a wrapper around the C version.  The FITS object will most likely have its own reference to the fitsfile, status bit, number of elements, bit pixels, number of axes, size of axes, and null value discriminator.  Operations include:
+\begin{itemize}
+\item Open Filename: mode: 
+\item Open Table name: mode:
+\item Open Data file name:  mode:
+\item Open Image Name:  mode:
+\item Create Filename: 
+\item Close file
+\item Hidden methods for copying the FITS file to memory
+\begin{itemize}
+\item Get Num of HDUs:
+\item Get HDU Move To HDU
+\end{itemize}
+\item Image I/O 
+\begin{itemize}
+\item Get Image Type
+\item Get Image Dim
+\item Get Image Size
+\item Get Image Parameters
+\item Create Image
+\item Write Pix
+\item Write Null Pix
+\item Read Pix
+\item Write Subset
+\item Read subset
+\end{itemize}
+
+\end{itemize}
+
+
+Note that image types may use:
+\begin{itemize}
+\item Byte size 
+\item Short, int, or long
+\item Floats or doubles
+\end{itemize}
+
+ Tables may also be used in the FITS object.  The goal of the table object is to store dictionary type data, meta-data, and may be relational/ knowledge base information.  
+ 
+ %create table
+ 
+ 
+ 
+ 
+ \subsection {SDSS Wavelet Application}
+ This feasibility study uses the problems encountered by the Sloan Digital Sky Survey to show the need of this scheme.   How does this scheme derive the use of wavelets?  How does this scheme work?   In fact, the application of wavelets to the SDSS data releases could be a topic in and of itself.  However, there is a common need.   
+
+All of the SDSS data can be reduced to a collection of FITS files and the meta-data derived from it.  These FITS files can be viewed in terms of objects where the data comes from the files, and the operations contained in the object make it compatible with conventional and wavelet numerical methods.   Such an object can act as a proxy, and deliver the information as the transportable object itself.   
+
+%The concept of using wavelets in this object make sense for making the object compact and easier to send.  
+What is the point of using wavelets in these FITS objects?  First a matrix in a wavelet domain tends to be more sparse and easier to compact.  The wavelet domain also allows for feature detection,  image enhancement,  and noise reduction a much simpler operation.   Can these operations be handled by  these objects?  Can these operations be handled concurrently?  What message handling is in order?  These are questions for the feasibility study.  %Combined with the capacity to distributed these objects cleanly is concept worth pursuing.  This commonality comes in the form of objects that are brokered for purpose performing the operations concurrently.  
+
+
+The first set of tools are for measuring outputs of the images themselves.  Each image consists of a sub-image for each image color filter.   
+
+The original SDSS used a few pipelines for its image processing.  These pipelines included:
+\begin{itemize}
+\item Astrometric Pipeline: which performed astrometric calibration.  
+\item Postage Stamp Pipeline: which characterizes the behavior of the point spread function as a function of time and location in the focal plane.
+\item Frames pipeline: finds, deblends, and measures the properties of objects
+\item Final calibration pipeline applies to photometric calibration to the objects
+\item Monitor telescope pipeline provides calibration data for the psp, and frames pipeline.  
+\end{itemize}
+These pipelines arranged data into the following categories:
+\begin{itemize}
+\item Image Properties
+\item Spectroscopic parameters
+\item Color Images
+\item FITS images (corrected images)
+\item Spectra:
+\end{itemize}
+
+The image category includes image parameters, the images themselves, the corrected images, mask frames, atlas image (a listing of which pixels were part of the object),  color images.  
+
+It is the intended objective of this project to provide a set of libraries that provide the data that was one precomputed, and use the more fundamental data to produce a powerful knowledge base.  This knowledge base can therefore use these libraries to discover other facts of the SDSS data.    
+
+The original database servers included a catalog archive server, data archive, sky server.  The sky server was for outreach.  The data archive server provides detailed data such as corrected frames, images, or spectra available.  The catalog server provided searches on the magnitudes of the objects based on the five filters.  
+
+Each great circle coordinate system was defined for each stripe.  The coordinates that a pixel was to be corrected for empirically derived optical distortion terms, and provide corrected row and column coordinates to these pixels.   Some of these terms were derived for USNO CCD Astrograph Catalog values of known stars. These mappings result in an affine transformation relating to corrected pixel positions to celestial coordinates.  
+
+From a computer vision point of view, the astronomic coordinate system simply represents a standardized spherical coordinate system.  Each image can further more mapped if there are sufficient number of points in the image that map to precise coordinates in the spherical coordinate system.  Each point in the image represents an angle of the sky by the CCD camera.  The general angle is known from the mechanisms aiming the telescope.  
+
+\section {Auto Linear Fits}
+This section analyzes the atLinearFits module of the astrotools.  
+
+
+\subsection{Auto Vector Liner Equation}
+
+\textbf{Description} Solve a set of linear equations: 
+\[ A X = B \]
+, where \begin{itemize}
+\item A is a matrix of independent coefficients, 
+\item X is a vector of unknown
+\item B is a vector of dependent variables. 
+\end{itemize}
+The independent vectors $A$ are passed as a list of vectors.
+
+The primary tool for working this equation is known as dgefs.   This function is part of LinPack, LAPACK, and BLAS.  It solves an $n\times n$ matrix, $A$ for $X$ given $A$ and condition vector $B$.   
+
+\subsection {Auto Vector Linear Fits on Bivariate Correlated Errors and Intrinsic Scatter}
+BCES (Bivariate Correlated Errors and intrinsic Scatter) is a linear
+  regression algorithm that allows for:
+\begin{itemize}
+\item measurement errors on both variables
+\item measurement errors that depend on the measurement
+\item correlated measurement errors
+\item scatter intrinsic to the relation being fitted, beyond measument error
+\end {itemize}
+  The routine performs four fits: y regressed on x, x regressed on y, the bisector, and orthogonal errors. Which answer is the "right" one depends on the situation. (A simplified guide would be: if you wish to predict a y given an x, use y regressed on x. If you wish to learn about the relationship of two quantities, use the bisector. See Feigelson and Babu, ApJ 397, 55 1992 for details.)
+
+The algorithm and the base fortran code are from Akritas and Bershady, ApJ 470, ? 1996.
+\begin{itemize}
+\item Also returned are the results of a bootstrap ananlysis.
+\item The "slopeErr" and "slopeErrBoot" lists have two extra elements on them. These are variences for the bisector and orthogonal slopes calculated using a technique of wider applicability than the usual one (which assumes that the residuals in Y about a line are independant of the value of X; see Isobe, Feigelson, Akritas, and Babu, ApJ 364, 104 1990)
+\item The covarience vector may be all zeros.
+\item James Annis, June 14, 1996 
+\end{itemize}
+
+
+\section {Auto Sla-LIB Package}
+This library is for translating structs used in Astrotools to ones that the SLALIB package can understand.  Future versions of this probably should use standard LAPACK.  Most of these values are common astronomy values and may be useful if only the conversion of these astrotools.  
+
+\section {AT Survey Geometry} 
+``Converts Equatorial coordinates to Great Circle coordinates'' , and vise-versa.  Converts equatorial to galactic coordinates, and vise versa.   ``Converts Equatorial to Survey coordinates,'' and vise-versa.    Converts Great Circle coordinates to Survey coordinates and vise-versa.
+
+\begin{quote}
+ Based on an experimental version of atSurveyToAzelpa, this gets the 
+     parallactic angle wrt scanning direction  correctly- 5 March 1998
+
+   This version converts (LMST,lat) to (LAST,lat), which are zenith
+    coordinates referred to true equator and equinox of date, then 
+    applies precession/nutation to convert to zenith coordinates referred 
+    to mean eqtr \& eqnx of J2000.  From that, can convert to GC coordinates, 
+    and determine difference between zenith direction and direction of 
+    scanning.
+
+    This could all be done as well in survey coordinates, but still need
+    to know the node and inclination of GC path.  The survey coordinates
+    of a star do not tell you what great circle is being scanned, which
+    is what is needed to get mu \& nu components of refraction.
+
+   Survey coordinates are (lambda, eta).  Lines of constant lambda are
+   parallels, and lines of constant eta are meridians which go through
+   the survey poles.  The center of a great circle scan will be a line
+   of constant eta.
+
+   Great circle coordinates (mu, nu) are defined so that the line down the
+   center of a stripe (which is a meridian in survey coordinates) is the
+   parallel nu=0.  So, lines of constant mu are meridians and lines of
+   constant nu are parallels.  Great circle coordinates are specific to a
+   survey stripe.
+
+   To convert to and from Great Circle coordinates, you must input the
+   node and inclination of the reference great circle.  For "normal" drift
+   scan great circles, use <code>node=at\_surveyCenterRa - 90</code>degrees,
+   and <code>inc=survey latitude + at\_surveyCenterDec</code>.
+
+   The survey latitudes for SDSS stripes are <code> +/- n*at\_stripeSeparation
+   </code>.
+
+
+   The limits on these coordinates are:
+\begin{itemize}
+\item 0 <= (ra, glong, mu) < 360.0
+\item -180.0 <= lambda < 180.0
+\item -90 <= (dec, glat, nu, eta) < 90.0
+\end{itemize}
+
+   The survey center is defined with the external const double values
+\begin{itemize}
+\item <code> at\_surveyCenterRa = 185.0</code>
+\item <code> at\_surveyCenterDec = 32.5</code>
+\end{itemize}
+   This (ra,dec) transforms to:
+\begin{itemize}
+\item <bf>galactic</bf> gLong=172.79876542 gLat=81.32406952
+\item <bf>great circle</bf>(with node=95.0, inclination=32.5) mu=185.0 nu=0.0
+\item <bf>survey</bf> lambda=0.0 eta=0.0
+\end{itemize}
+\end{quote}
+
+\section {AT Conversions}  
+More conversion libraries.
+
+\section {AT Air Mass}  
+C routines for calculating air mass for equatorial, meridian, and zenith positions.  
+
+\section {AT Galaxies, AT Objects}
+Calculates number of objects either in our galaxy or with in a specified range.  
+
+\textbf{Description} 
+
+ \section {Application Example: Grass GIS 6 (Service Oriented GIS)}
+ 
+ 
+ \begin {thebibliography}{99}
+ \bibitem {denton} Jason Denton and Dan Beatty  \textsl{Lecture notes from Operating Systems} 2003-2004 Texas Tech University
+ \bibitem {simple1} Simple - XGrid project 
+ \bibitem {simple2}
+ \bibitem {simple3}
+ \bibitem {simple4}
+ \bibitem {GT4Primer}
+\bibitem {lombardi} Michael Lombardi \textsl {Computer Time Synchronization}  http://www.boulder.nist.gov/timefreq/service/time-computer.html
+ \end{thebibliography}
+ 
+  \end{document}

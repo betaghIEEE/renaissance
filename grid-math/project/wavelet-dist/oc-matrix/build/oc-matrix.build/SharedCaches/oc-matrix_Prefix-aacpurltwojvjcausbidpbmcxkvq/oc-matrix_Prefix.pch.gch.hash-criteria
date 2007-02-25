@@ -1,0 +1,21 @@
+oc-matrix_Prefix.pch
+Reading specs from /usr/libexec/gcc/darwin/ppc/3.3/specs
+Thread model: posix
+gcc version 3.3 20030304 (Apple Computer, Inc. build 1666)
+
+/usr/bin/gcc-3.3
+-x
+objective-c
+-arch
+ppc
+-pipe
+-Wno-trigraphs
+-fasm-blocks
+-fpascal-strings
+-Os
+-pg
+-mtune=G5
+-fmessage-length=0
+-fpch-preprocess
+-F/Volumes/thebunny/Users/danbgood/Desktop/courses/grid-math/project/wavelet-dist/oc-matrix/build
+-I/Volumes/thebunny/Users/danbgood/Desktop/courses/grid-math/project/wavelet-dist/oc-matrix/build/include

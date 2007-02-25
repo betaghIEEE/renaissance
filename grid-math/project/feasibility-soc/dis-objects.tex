@@ -1,0 +1,16 @@
+Distant Object(s) with Rendezvous (Bonjour) 
+
+The basic purpose of a Distant Object is to provide a proxy to an object which is executing on another control unit.   Such a control unit can be another process or thread.  Such an distant object incurs a little bit of overhead.  The overhead for a %Bonjour type implementation 
+socket ports implementation includes:
+\begin{itemize}
+\item Socket Ports delegate
+\item Connection methods
+\item Initialization
+\item cleanup
+\end{itemize}
+
+Can a distant object itself be transmitted?  Can an object proxy multiple objects?   A distinction between may need to be made between singular and plural distributed object(s).  In the singular, a distant object is a proxy connected to an object in a distant control unit (CU).  In the plural, distant objects are a broker of a collection of distant object includes two arrays of elements.  The elements of the first array are mechanisms to a acquire single distant object proxies.   The second array elements are single distant object types.  In the plural, distant objects acquire its collection of single distant object elements of homogenous type.  
+A collection of different homogenous distant objects can further be brokered with an array of distant object types and number of each available. 
+
+In order make this practical, the single distant object and plural distant objects are provided as separate classes.   The Bonjour delegates are contained in the plural object.   The plural object is used by the heterogeneous brokers, libraries and user programs to obtain single distant objects in the Bonjour environment.  In the case that a user simply wants one distant object, a singular method call is made.  It then selects one at random.    Questions for its use in XGrid (cluster environments) may be handy to determine deployment, failures of services, and distribution of service resources.  
+

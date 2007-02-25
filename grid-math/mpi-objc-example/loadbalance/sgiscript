@@ -1,0 +1,4 @@
+#!/bin/csh
+#BSUB -q short 
+#BSUB -n 8 
+cpuset -q batch  -A mpirun -miser -v -np 8 ./a.out > loadbalancer.out

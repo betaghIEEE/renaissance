@@ -1,0 +1,148 @@
+Reference: First steps of the Scientific  Knowledge Base and Computational Service 
+
+BEEP serves as a form of glue for XGrid (zilla and zillion).  It is the inter-communication framework.  On OSX it is one of three frameworks for XGrid.  The other two are :
+\begin{itemize}
+\item Grid Interface 
+\item Grid Plugs
+\end{itemize}
+
+ Basic features that most implementations of BEEP claim the following:
+ \begin{itemize}\item Portability 
+ \item Object Oriented Design
+ \item Robustness and stability 
+ \item High Performance
+ \item Multi-threaded\end{itemize}
+In essence BEEP is another marshalling, message passing, and general communication protocol.  It uses XML and elements of SOAP to transfer messages across the web.  Like other web type protocols, TLS/SSL security is available.  However, the XGrid implementation makes no mention of it except in its API framework.  
+
+On OSX, the primary BEEP framework header imports the following headers:
+\begin{itemize}
+\item BEEPSession.h
+\item BEEPSessionAcceptor.h
+\item BEEPSessionConnector.h
+\item BEEPChannel.h
+\item BEEPMessage.h
+\item BEEPError.h
+\item BEEPSSLContext.h
+\end{itemize}
+
+On other platforms, XGrid is forced to use RoadRunner as its implementation of BEEP.   The object hierarchy  is as follows:
+\begin{itemize}\item GObject
+\begin{itemize}\item RRConnection
+\begin{itemize}\item RRTCPConnection\end{itemize}
+\item RRListener
+\begin{itemize}\item RRTCPListener\end{itemize}
+\item RRFilter
+\begin{itemize}\item RRTCPFilter\end{itemize}
+\item RRFrame
+\begin {itemize}
+\item RRFrameSeq
+\end {itemize}
+\item RRChannel
+\begin {itemize}
+\item RRManager
+\end{itemize}
+\begin {itemize}
+\item RRMessage
+\end {itemize}
+\begin{itemize}\item RRMessageStart
+\item RRMessageStartRpy
+\item RRMessageClose
+\item RRMessageError
+\item RRMessageStatic
+\item RRGreeting\end{itemize}
+\item RRProfileRegistry\end{itemize}
+\item GInterface\end{itemize}
+
+\subsection {BEEP Session}
+A BEEP session has the following members
+\begin{itemize}
+\item is Initiator
+\item servant 
+\item Arrays for the communication channels
+\begin{itemize}
+\item channel Should Open Queue
+\item Channel Should Close Queue
+\item Sent Request Type Queue
+\end{itemize}
+\item Mutable Sets
+\begin{itemize}
+\item Uncloseable Channels
+\item Used Channel Number Set
+\end{itemize}
+\item Beep Channels
+\begin{itemize}
+\item Management Channel
+\item Tuning Channel
+\end{itemize}
+\item Next Channel
+\item Looking For Greeting
+\item Delegate
+\item Profile URI
+\item Peer Profile URIs
+\item Closing values:
+\begin{itemize}
+\item  Allows Close
+\item Should Close
+\item Will Close
+\item Did Close
+\item Will Terminate
+\end{itemize}
+\item Transporting
+\item Peer Credentials
+\end{itemize}
+
+
+The methods contained in this Beep Session and the comments associated with them.  
+
+`` The BEEPSession session should not usually be created by hand.  Instead, a BEEPSessionAcceptor
+ or a BEEPSessionConnector should be used to create the session.''  The methods for this are:
+ \begin{itemize}
+\item \textsl{+ (id)initiatorWithReadStream:(CFReadStreamRef)readStream writeStream:(CFWriteStreamRef)writeStream;}
+\item \textsl{+ (id)listenerWithReadStream:(CFReadStreamRef)readStream writeStream:(CFWriteStreamRef)writeStream;}
+\item ``- (id)initWithReadStream:(CFReadStreamRef)readStream writeStream:(CFWriteStreamRef)writeStream asInitiator:(BOOL)asInitiator;''
+\end{itemize}
+ 
+ Confirmation of the session being initialized is provided by \textsl{isInitiator}.    
+ 
+ Credentials are set and acquired by \textsl{setPeerCredentials} and \textsl{peerCredientials}.  This applies to remote peers.  `` The peer's credentials should only be set by local
+ tuning channel delegates, and may only be set once.''
+ 
+ The basic purpose of BEEP session is provide a basic object that encompasses the general session used in the BEEP framework.  The RoadRunner equivalent is called general function.    This object initializes the session, and includes session wide functions.  
+
+ 
+ % (More information on methods.  Both on the status of the session and the use of TLS/SSL security to include PKI certificates.  
+ 
+\subsection {Beep Channels}
+
+``The channel number.  The zero channel is the private BEEPSession management channel.  Even-numbered
+ channels are created by the listener session.  Odd-numbered channels are created by the initiator session.'' \cite{OSXgridAPI}   
+ 
+ % Question:  What purpose does the channel and how is it used.  Furthermore, how is TLS implemented on BEEP.  
+ 
+ \subsection {Beep Session Connector } 
+ This object controls session connections, and provides methods initialize connections.  It provides a method to cancel the connection.  Also provided are delegates for \textsl{did connect} and \textsl{failed with error}.  
+ 
+ 
+ \subsection {Beep Session Acceptor}
+ Probably one of the unique features of the XGrid (OSX) implementation of BEEP is the use of Rendezvous.  This is useful for service discovery with zero configuration DNS.    The methods to set the values of the Rendezvous service must be set before letting the session acceptor begin.  This applies to both the controller and the agents.   This may apply to the clients as well only when service is being requested.  
+
+
+\begin {quote}
+This method asynchronously opens a socket and listens for connections.
+
+ When a connection is accepted the delegate is notified via the appropriate delegate method.  The accepted session must be opened before it can be used to create new channels and send messages.  Note that if the accepted session is not opened soon after the notification is posted the remote peer's session may time out. Also note that the acceptor will continue to run asynchronously and notify the delegate when additional connections are accepted.
+ 
+ If the BEEPSessionAcceptor can not listen on the port specified or another error occurs it will cancel
+ the asynchronous operation and notify the delegate with the appropriate method.
+\end{quote}\cite {OSXgridAPI}
+
+
+\subsection {BEEP Frame}
+This method provides operations on other objects in the BEEP framework.  Mostly, this section works on the message breakdown in to frames.    % Some pieces which need to be answered is whether multi-threaded frames are used to maximize bandwidth?  What bandwidth is used?
+    
+    
+\subsection {BEEP Message}
+ This is object is the core of the message is itself, and seems rather simple.  For OSX is it is not clear as to whether marshalling is handled by the ``archiving'' feature of Cocoa (Objective-C) or some other feature.  
+ 
+ 
+    

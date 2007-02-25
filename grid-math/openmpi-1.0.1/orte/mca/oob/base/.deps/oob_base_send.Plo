@@ -1,0 +1,224 @@
+oob_base_send.lo .libs/oob_base_send.o: oob_base_send.c \
+  ../../../../include/ompi_config.h \
+  ../../../../include/ompi_config_bottom.h \
+  /usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/stdbool.h \
+  /usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/limits.h \
+  /usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/syslimits.h \
+  /usr/include/limits.h /usr/include/machine/limits.h \
+  /usr/include/ppc/limits.h /usr/include/ppc/_limits.h \
+  /usr/include/sys/syslimits.h \
+  /usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/stdint.h \
+  /usr/include/string.h /usr/include/_types.h /usr/include/sys/_types.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/_types.h \
+  /usr/include/ppc/_types.h /usr/include/sys/types.h \
+  /usr/include/sys/appleapiopts.h /usr/include/machine/types.h \
+  /usr/include/ppc/types.h /usr/include/machine/endian.h \
+  /usr/include/ppc/endian.h /usr/include/sys/_endian.h \
+  /usr/include/libkern/OSByteOrder.h \
+  /usr/include/libkern/ppc/OSByteOrder.h /usr/include/netinet/in.h \
+  /usr/include/sys/socket.h /usr/include/machine/param.h \
+  /usr/include/ppc/param.h /usr/include/netinet6/in6.h \
+  ../../../../opal/include/constants.h ../../../../orte/dps/dps.h \
+  ../../../../include/orte_config.h ../../../../include/ompi_config.h \
+  ../../../../orte/include/orte_constants.h \
+  ../../../../opal/include/constants.h \
+  ../../../../orte/include/orte_types.h ../../../../orte/dps/dps_types.h \
+  ../../../../opal/class/opal_object.h /usr/include/assert.h \
+  /usr/include/stdlib.h /usr/include/sys/wait.h /usr/include/sys/signal.h \
+  /usr/include/machine/signal.h /usr/include/ppc/signal.h \
+  /usr/include/sys/resource.h /usr/include/alloca.h \
+  ../../../../opal/include/sys/atomic.h \
+  ../../../../opal/include/sys/architecture.h \
+  ../../../../opal/include/sys/powerpc/atomic.h \
+  ../../../../opal/include/sys/atomic_impl.h \
+  ../../../../orte/mca/ns/ns_types.h ../../../../ompi/include/types.h \
+  /usr/include/sys/select.h /usr/include/signal.h /usr/include/sys/time.h \
+  /usr/include/time.h /usr/include/machine/_limits.h \
+  ../../../../opal/class/opal_list.h /usr/include/stdio.h \
+  ../../../../orte/mca/oob/oob.h /usr/include/unistd.h \
+  /usr/include/sys/unistd.h ../../../../opal/mca/mca.h \
+  ../../../../opal/util/cmd_line.h ../../../../opal/threads/mutex.h \
+  ../../../../opal/threads/mutex_unix.h /usr/include/pthread.h \
+  /usr/include/pthread_impl.h /usr/include/sched.h \
+  ../../../../orte/mca/gpr/gpr_types.h \
+  ../../../../orte/mca/schema/schema.h \
+  ../../../../orte/mca/schema/schema_types.h \
+  ../../../../opal/util/error.h \
+  ../../../../orte/class/orte_pointer_array.h \
+  ../../../../orte/mca/rmgr/rmgr_types.h \
+  ../../../../orte/mca/soh/soh_types.h \
+  ../../../../orte/mca/oob/oob_types.h \
+  ../../../../orte/mca/rml/rml_types.h ../../../../orte/util/proc_info.h \
+  ../../../../orte/mca/oob/base/base.h /usr/include/sys/uio.h \
+  ../../../../opal/util/output.h \
+  /usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/stdarg.h
+
+../../../../include/ompi_config.h:
+
+../../../../include/ompi_config_bottom.h:
+
+/usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/stdbool.h:
+
+/usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/limits.h:
+
+/usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/syslimits.h:
+
+/usr/include/limits.h:
+
+/usr/include/machine/limits.h:
+
+/usr/include/ppc/limits.h:
+
+/usr/include/ppc/_limits.h:
+
+/usr/include/sys/syslimits.h:
+
+/usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/stdint.h:
+
+/usr/include/string.h:
+
+/usr/include/_types.h:
+
+/usr/include/sys/_types.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/machine/_types.h:
+
+/usr/include/ppc/_types.h:
+
+/usr/include/sys/types.h:
+
+/usr/include/sys/appleapiopts.h:
+
+/usr/include/machine/types.h:
+
+/usr/include/ppc/types.h:
+
+/usr/include/machine/endian.h:
+
+/usr/include/ppc/endian.h:
+
+/usr/include/sys/_endian.h:
+
+/usr/include/libkern/OSByteOrder.h:
+
+/usr/include/libkern/ppc/OSByteOrder.h:
+
+/usr/include/netinet/in.h:
+
+/usr/include/sys/socket.h:
+
+/usr/include/machine/param.h:
+
+/usr/include/ppc/param.h:
+
+/usr/include/netinet6/in6.h:
+
+../../../../opal/include/constants.h:
+
+../../../../orte/dps/dps.h:
+
+../../../../include/orte_config.h:
+
+../../../../include/ompi_config.h:
+
+../../../../orte/include/orte_constants.h:
+
+../../../../opal/include/constants.h:
+
+../../../../orte/include/orte_types.h:
+
+../../../../orte/dps/dps_types.h:
+
+../../../../opal/class/opal_object.h:
+
+/usr/include/assert.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/sys/wait.h:
+
+/usr/include/sys/signal.h:
+
+/usr/include/machine/signal.h:
+
+/usr/include/ppc/signal.h:
+
+/usr/include/sys/resource.h:
+
+/usr/include/alloca.h:
+
+../../../../opal/include/sys/atomic.h:
+
+../../../../opal/include/sys/architecture.h:
+
+../../../../opal/include/sys/powerpc/atomic.h:
+
+../../../../opal/include/sys/atomic_impl.h:
+
+../../../../orte/mca/ns/ns_types.h:
+
+../../../../ompi/include/types.h:
+
+/usr/include/sys/select.h:
+
+/usr/include/signal.h:
+
+/usr/include/sys/time.h:
+
+/usr/include/time.h:
+
+/usr/include/machine/_limits.h:
+
+../../../../opal/class/opal_list.h:
+
+/usr/include/stdio.h:
+
+../../../../orte/mca/oob/oob.h:
+
+/usr/include/unistd.h:
+
+/usr/include/sys/unistd.h:
+
+../../../../opal/mca/mca.h:
+
+../../../../opal/util/cmd_line.h:
+
+../../../../opal/threads/mutex.h:
+
+../../../../opal/threads/mutex_unix.h:
+
+/usr/include/pthread.h:
+
+/usr/include/pthread_impl.h:
+
+/usr/include/sched.h:
+
+../../../../orte/mca/gpr/gpr_types.h:
+
+../../../../orte/mca/schema/schema.h:
+
+../../../../orte/mca/schema/schema_types.h:
+
+../../../../opal/util/error.h:
+
+../../../../orte/class/orte_pointer_array.h:
+
+../../../../orte/mca/rmgr/rmgr_types.h:
+
+../../../../orte/mca/soh/soh_types.h:
+
+../../../../orte/mca/oob/oob_types.h:
+
+../../../../orte/mca/rml/rml_types.h:
+
+../../../../orte/util/proc_info.h:
+
+../../../../orte/mca/oob/base/base.h:
+
+/usr/include/sys/uio.h:
+
+../../../../opal/util/output.h:
+
+/usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/stdarg.h:

@@ -1,0 +1,10 @@
+/*
+ * $HEADER$
+ */
+
+
+
+const mca_base_component_t *mca_ns_base_static_components[] = {
+
+  NULL
+};

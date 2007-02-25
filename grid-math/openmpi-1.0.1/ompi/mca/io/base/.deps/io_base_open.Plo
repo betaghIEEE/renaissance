@@ -1,0 +1,235 @@
+io_base_open.lo .libs/io_base_open.o: io_base_open.c \
+  ../../../../include/ompi_config.h \
+  ../../../../include/ompi_config_bottom.h \
+  /usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/stdbool.h \
+  /usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/limits.h \
+  /usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/syslimits.h \
+  /usr/include/limits.h /usr/include/machine/limits.h \
+  /usr/include/ppc/limits.h /usr/include/ppc/_limits.h \
+  /usr/include/sys/syslimits.h \
+  /usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/stdint.h \
+  /usr/include/stdio.h /usr/include/_types.h /usr/include/sys/_types.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/_types.h \
+  /usr/include/ppc/_types.h ../../../../ompi/class/ompi_free_list.h \
+  ../../../../opal/class/opal_list.h /usr/include/stdlib.h \
+  /usr/include/sys/wait.h /usr/include/sys/signal.h \
+  /usr/include/sys/appleapiopts.h /usr/include/machine/signal.h \
+  /usr/include/ppc/signal.h /usr/include/sys/resource.h \
+  /usr/include/machine/endian.h /usr/include/ppc/endian.h \
+  /usr/include/sys/_endian.h /usr/include/libkern/OSByteOrder.h \
+  /usr/include/libkern/ppc/OSByteOrder.h /usr/include/alloca.h \
+  /usr/include/machine/types.h /usr/include/ppc/types.h \
+  ../../../../opal/class/opal_object.h /usr/include/assert.h \
+  ../../../../opal/include/sys/atomic.h \
+  ../../../../opal/include/sys/architecture.h /usr/include/sys/types.h \
+  ../../../../opal/include/sys/powerpc/atomic.h \
+  ../../../../opal/include/sys/atomic_impl.h \
+  ../../../../opal/threads/threads.h /usr/include/pthread.h \
+  /usr/include/pthread_impl.h /usr/include/sched.h /usr/include/time.h \
+  /usr/include/machine/_limits.h ../../../../opal/threads/condition.h \
+  /usr/include/sys/time.h ../../../../opal/threads/mutex.h \
+  ../../../../opal/threads/mutex_unix.h \
+  ../../../../opal/runtime/opal_progress.h \
+  ../../../../ompi/include/constants.h \
+  ../../../../orte/include/orte_constants.h \
+  ../../../../opal/include/constants.h ../../../../ompi/mca/mpool/mpool.h \
+  ../../../../opal/mca/mca.h ../../../../opal/util/cmd_line.h \
+  ../../../../ompi/info/info.h /usr/include/string.h \
+  ../../../../include/mpi.h ../../../../opal/util/strncpy.h \
+  ../../../../ompi/class/ompi_pointer_array.h \
+  ../../../../ompi/class/ompi_pointer_array.h \
+  ../../../../opal/util/output.h \
+  /usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/stdarg.h \
+  ../../../../opal/mca/base/base.h \
+  ../../../../opal/mca/base/mca_base_param.h \
+  ../../../../opal/class/opal_value_array.h \
+  ../../../../opal/class/opal_hash_table.h \
+  ../../../../ompi/include/types.h /usr/include/sys/socket.h \
+  /usr/include/machine/param.h /usr/include/ppc/param.h \
+  /usr/include/sys/select.h /usr/include/signal.h \
+  ../../../../opal/mca/mca.h ../../../../opal/mca/base/mca_base_msgbuf.h \
+  ../../../../ompi/mca/io/io.h ../../../../ompi/request/request.h \
+  ../../../../ompi/errhandler/errhandler.h \
+  ../../../../ompi/runtime/mpiruntime.h \
+  ../../../../ompi/errhandler/errhandler_predefined.h \
+  ../../../../ompi/errhandler/errcode-internal.h \
+  ../../../../ompi/mca/io/base/base.h \
+  ../../../../ompi/mca/io/base/io_base_request.h \
+  ../../../../ompi/file/file.h \
+  ../../../../ompi/mca/io/base/static-components.h
+
+../../../../include/ompi_config.h:
+
+../../../../include/ompi_config_bottom.h:
+
+/usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/stdbool.h:
+
+/usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/limits.h:
+
+/usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/syslimits.h:
+
+/usr/include/limits.h:
+
+/usr/include/machine/limits.h:
+
+/usr/include/ppc/limits.h:
+
+/usr/include/ppc/_limits.h:
+
+/usr/include/sys/syslimits.h:
+
+/usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/stdint.h:
+
+/usr/include/stdio.h:
+
+/usr/include/_types.h:
+
+/usr/include/sys/_types.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/machine/_types.h:
+
+/usr/include/ppc/_types.h:
+
+../../../../ompi/class/ompi_free_list.h:
+
+../../../../opal/class/opal_list.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/sys/wait.h:
+
+/usr/include/sys/signal.h:
+
+/usr/include/sys/appleapiopts.h:
+
+/usr/include/machine/signal.h:
+
+/usr/include/ppc/signal.h:
+
+/usr/include/sys/resource.h:
+
+/usr/include/machine/endian.h:
+
+/usr/include/ppc/endian.h:
+
+/usr/include/sys/_endian.h:
+
+/usr/include/libkern/OSByteOrder.h:
+
+/usr/include/libkern/ppc/OSByteOrder.h:
+
+/usr/include/alloca.h:
+
+/usr/include/machine/types.h:
+
+/usr/include/ppc/types.h:
+
+../../../../opal/class/opal_object.h:
+
+/usr/include/assert.h:
+
+../../../../opal/include/sys/atomic.h:
+
+../../../../opal/include/sys/architecture.h:
+
+/usr/include/sys/types.h:
+
+../../../../opal/include/sys/powerpc/atomic.h:
+
+../../../../opal/include/sys/atomic_impl.h:
+
+../../../../opal/threads/threads.h:
+
+/usr/include/pthread.h:
+
+/usr/include/pthread_impl.h:
+
+/usr/include/sched.h:
+
+/usr/include/time.h:
+
+/usr/include/machine/_limits.h:
+
+../../../../opal/threads/condition.h:
+
+/usr/include/sys/time.h:
+
+../../../../opal/threads/mutex.h:
+
+../../../../opal/threads/mutex_unix.h:
+
+../../../../opal/runtime/opal_progress.h:
+
+../../../../ompi/include/constants.h:
+
+../../../../orte/include/orte_constants.h:
+
+../../../../opal/include/constants.h:
+
+../../../../ompi/mca/mpool/mpool.h:
+
+../../../../opal/mca/mca.h:
+
+../../../../opal/util/cmd_line.h:
+
+../../../../ompi/info/info.h:
+
+/usr/include/string.h:
+
+../../../../include/mpi.h:
+
+../../../../opal/util/strncpy.h:
+
+../../../../ompi/class/ompi_pointer_array.h:
+
+../../../../ompi/class/ompi_pointer_array.h:
+
+../../../../opal/util/output.h:
+
+/usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/stdarg.h:
+
+../../../../opal/mca/base/base.h:
+
+../../../../opal/mca/base/mca_base_param.h:
+
+../../../../opal/class/opal_value_array.h:
+
+../../../../opal/class/opal_hash_table.h:
+
+../../../../ompi/include/types.h:
+
+/usr/include/sys/socket.h:
+
+/usr/include/machine/param.h:
+
+/usr/include/ppc/param.h:
+
+/usr/include/sys/select.h:
+
+/usr/include/signal.h:
+
+../../../../opal/mca/mca.h:
+
+../../../../opal/mca/base/mca_base_msgbuf.h:
+
+../../../../ompi/mca/io/io.h:
+
+../../../../ompi/request/request.h:
+
+../../../../ompi/errhandler/errhandler.h:
+
+../../../../ompi/runtime/mpiruntime.h:
+
+../../../../ompi/errhandler/errhandler_predefined.h:
+
+../../../../ompi/errhandler/errcode-internal.h:
+
+../../../../ompi/mca/io/base/base.h:
+
+../../../../ompi/mca/io/base/io_base_request.h:
+
+../../../../ompi/file/file.h:
+
+../../../../ompi/mca/io/base/static-components.h:

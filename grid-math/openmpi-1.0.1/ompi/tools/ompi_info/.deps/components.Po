@@ -1,0 +1,885 @@
+components.o components.o: components.cc ../../../include/ompi_config.h \
+  ../../../include/ompi_config_bottom.h \
+  /usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/limits.h \
+  /usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/syslimits.h \
+  /usr/include/limits.h /usr/include/machine/limits.h \
+  /usr/include/ppc/limits.h /usr/include/ppc/_limits.h \
+  /usr/include/sys/syslimits.h \
+  /usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/stdint.h \
+  /usr/include/c++/4.0.0/iostream \
+  /usr/include/c++/4.0.0/powerpc-apple-darwin8/bits/c++config.h \
+  /usr/include/c++/4.0.0/powerpc-apple-darwin8/bits/os_defines.h \
+  /usr/include/c++/4.0.0/ostream /usr/include/c++/4.0.0/ios \
+  /usr/include/c++/4.0.0/iosfwd \
+  /usr/include/c++/4.0.0/powerpc-apple-darwin8/bits/c++locale.h \
+  /usr/include/c++/4.0.0/clocale /usr/include/locale.h \
+  /usr/include/_locale.h /usr/include/sys/cdefs.h /usr/include/_types.h \
+  /usr/include/sys/_types.h /usr/include/machine/_types.h \
+  /usr/include/ppc/_types.h /usr/include/c++/4.0.0/cstring \
+  /usr/include/c++/4.0.0/cstddef \
+  /usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/stddef.h \
+  /usr/include/string.h /usr/include/c++/4.0.0/cstdio \
+  /usr/include/stdio.h \
+  /usr/include/c++/4.0.0/powerpc-apple-darwin8/bits/c++io.h \
+  /usr/include/c++/4.0.0/powerpc-apple-darwin8/bits/gthr.h \
+  /usr/include/c++/4.0.0/powerpc-apple-darwin8/bits/gthr-default.h \
+  /usr/include/pthread.h /usr/include/pthread_impl.h /usr/include/sched.h \
+  /usr/include/time.h /usr/include/machine/_limits.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/sys/select.h /usr/include/sys/appleapiopts.h \
+  /usr/include/sys/types.h /usr/include/machine/types.h \
+  /usr/include/ppc/types.h /usr/include/machine/endian.h \
+  /usr/include/ppc/endian.h /usr/include/sys/_endian.h \
+  /usr/include/libkern/OSByteOrder.h \
+  /usr/include/libkern/ppc/OSByteOrder.h /usr/include/signal.h \
+  /usr/include/sys/signal.h /usr/include/machine/signal.h \
+  /usr/include/ppc/signal.h /usr/include/sys/time.h \
+  /usr/include/c++/4.0.0/cctype /usr/include/ctype.h \
+  /usr/include/runetype.h /usr/include/c++/4.0.0/bits/stringfwd.h \
+  /usr/include/c++/4.0.0/bits/postypes.h /usr/include/c++/4.0.0/cwchar \
+  /usr/include/c++/4.0.0/ctime /usr/include/wchar.h \
+  /usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/stdarg.h \
+  /usr/include/_wctype.h /usr/include/c++/4.0.0/bits/functexcept.h \
+  /usr/include/c++/4.0.0/exception_defines.h \
+  /usr/include/c++/4.0.0/exception \
+  /usr/include/c++/4.0.0/bits/char_traits.h \
+  /usr/include/c++/4.0.0/bits/stl_algobase.h \
+  /usr/include/c++/4.0.0/climits /usr/include/c++/4.0.0/cstdlib \
+  /usr/include/stdlib.h /usr/include/sys/wait.h \
+  /usr/include/sys/resource.h /usr/include/alloca.h \
+  /usr/include/c++/4.0.0/bits/stl_pair.h \
+  /usr/include/c++/4.0.0/bits/cpp_type_traits.h \
+  /usr/include/c++/4.0.0/bits/stl_iterator_base_types.h \
+  /usr/include/c++/4.0.0/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/4.0.0/bits/concept_check.h \
+  /usr/include/c++/4.0.0/bits/stl_iterator.h \
+  /usr/include/c++/4.0.0/debug/debug.h /usr/include/c++/4.0.0/cassert \
+  /usr/include/assert.h /usr/include/c++/4.0.0/bits/localefwd.h \
+  /usr/include/c++/4.0.0/bits/ios_base.h \
+  /usr/include/c++/4.0.0/bits/atomicity.h \
+  /usr/include/c++/4.0.0/powerpc-apple-darwin8/bits/atomic_word.h \
+  /usr/include/c++/4.0.0/bits/locale_classes.h \
+  /usr/include/c++/4.0.0/string /usr/include/c++/4.0.0/memory \
+  /usr/include/c++/4.0.0/bits/allocator.h \
+  /usr/include/c++/4.0.0/powerpc-apple-darwin8/bits/c++allocator.h \
+  /usr/include/c++/4.0.0/ext/new_allocator.h /usr/include/c++/4.0.0/new \
+  /usr/include/c++/4.0.0/bits/stl_construct.h \
+  /usr/include/c++/4.0.0/bits/stl_uninitialized.h \
+  /usr/include/c++/4.0.0/bits/stl_raw_storage_iter.h \
+  /usr/include/c++/4.0.0/limits \
+  /usr/include/c++/4.0.0/bits/stl_function.h \
+  /usr/include/c++/4.0.0/bits/basic_string.h \
+  /usr/include/c++/4.0.0/algorithm /usr/include/c++/4.0.0/bits/stl_algo.h \
+  /usr/include/c++/4.0.0/bits/stl_heap.h \
+  /usr/include/c++/4.0.0/bits/stl_tempbuf.h \
+  /usr/include/c++/4.0.0/bits/basic_string.tcc \
+  /usr/include/c++/4.0.0/streambuf \
+  /usr/include/c++/4.0.0/bits/streambuf.tcc \
+  /usr/include/c++/4.0.0/bits/basic_ios.h \
+  /usr/include/c++/4.0.0/bits/streambuf_iterator.h \
+  /usr/include/c++/4.0.0/bits/locale_facets.h \
+  /usr/include/c++/4.0.0/cwctype /usr/include/wctype.h \
+  /usr/include/c++/4.0.0/powerpc-apple-darwin8/bits/ctype_base.h \
+  /usr/include/c++/4.0.0/powerpc-apple-darwin8/bits/ctype_inline.h \
+  /usr/include/c++/4.0.0/bits/codecvt.h \
+  /usr/include/c++/4.0.0/powerpc-apple-darwin8/bits/time_members.h \
+  /usr/include/c++/4.0.0/powerpc-apple-darwin8/bits/messages_members.h \
+  /usr/include/c++/4.0.0/bits/basic_ios.tcc \
+  /usr/include/c++/4.0.0/bits/ostream.tcc /usr/include/c++/4.0.0/locale \
+  /usr/include/c++/4.0.0/bits/locale_facets.tcc \
+  /usr/include/c++/4.0.0/typeinfo /usr/include/c++/4.0.0/istream \
+  /usr/include/c++/4.0.0/bits/istream.tcc ../../../ompi/runtime/params.h \
+  ../../../orte/runtime/runtime.h ../../../include/orte_config.h \
+  ../../../include/ompi_config.h ../../../orte/mca/gpr/gpr_types.h \
+  ../../../orte/include/orte_types.h ../../../orte/mca/schema/schema.h \
+  ../../../opal/mca/mca.h ../../../opal/class/opal_list.h \
+  ../../../opal/class/opal_object.h ../../../opal/include/sys/atomic.h \
+  ../../../opal/include/sys/architecture.h \
+  ../../../opal/include/sys/powerpc/atomic.h \
+  ../../../opal/include/sys/atomic_impl.h ../../../opal/util/cmd_line.h \
+  ../../../opal/threads/mutex.h ../../../opal/threads/mutex_unix.h \
+  ../../../orte/mca/ns/ns_types.h ../../../ompi/include/types.h \
+  /usr/include/sys/socket.h /usr/include/machine/param.h \
+  /usr/include/ppc/param.h ../../../orte/mca/schema/schema_types.h \
+  ../../../opal/util/error.h ../../../orte/class/orte_pointer_array.h \
+  ../../../orte/dps/dps_types.h ../../../orte/mca/rmgr/rmgr_types.h \
+  ../../../orte/mca/soh/soh_types.h ../../../orte/runtime/runtime_types.h \
+  ../../../orte/util/univ_info.h /usr/include/sys/utsname.h \
+  ../../../orte/mca/ns/ns.h ../../../opal/include/constants.h \
+  ../../../orte/dps/dps.h ../../../orte/include/orte_constants.h \
+  ../../../opal/include/constants.h ../../../orte/mca/oob/oob_types.h \
+  ../../../orte/mca/rml/rml_types.h ../../../orte/util/proc_info.h \
+  ../../../orte/mca/ns/ns_types.h \
+  ../../../ompi/tools/ompi_info/ompi_info.h /usr/include/c++/4.0.0/vector \
+  /usr/include/c++/4.0.0/bits/stl_vector.h \
+  /usr/include/c++/4.0.0/bits/stl_bvector.h \
+  /usr/include/c++/4.0.0/bits/vector.tcc /usr/include/c++/4.0.0/map \
+  /usr/include/c++/4.0.0/bits/stl_tree.h \
+  /usr/include/c++/4.0.0/bits/stl_map.h \
+  /usr/include/c++/4.0.0/bits/stl_multimap.h \
+  ../../../opal/mca/base/base.h ../../../opal/mca/base/mca_base_param.h \
+  ../../../opal/class/opal_value_array.h \
+  ../../../ompi/include/constants.h \
+  ../../../orte/include/orte_constants.h \
+  ../../../opal/class/opal_hash_table.h ../../../opal/mca/mca.h \
+  ../../../opal/mca/base/mca_base_msgbuf.h \
+  ../../../opal/mca/memory/memory.h ../../../opal/mca/base/base.h \
+  ../../../opal/mca/paffinity/paffinity.h \
+  ../../../opal/mca/paffinity/base/base.h \
+  ../../../opal/mca/paffinity/paffinity.h \
+  ../../../opal/mca/paffinity/base/internal.h \
+  ../../../opal/mca/maffinity/maffinity.h \
+  ../../../opal/mca/maffinity/maffinity_types.h \
+  ../../../opal/mca/maffinity/base/base.h \
+  ../../../opal/mca/maffinity/maffinity.h \
+  ../../../opal/mca/maffinity/base/internal.h \
+  ../../../opal/mca/memory/base/base.h ../../../opal/mca/memory/memory.h \
+  ../../../opal/mca/timer/timer.h ../../../opal/mca/timer/base/base.h \
+  ../../../opal/mca/timer/timer.h \
+  ../../../opal/mca/timer/base/base_impl.h /usr/include/mach/mach_time.h \
+  /usr/include/mach/mach_types.h /usr/include/mach/host_info.h \
+  /usr/include/mach/message.h /usr/include/mach/port.h \
+  /usr/include/mach/boolean.h /usr/include/mach/machine/boolean.h \
+  /usr/include/mach/ppc/boolean.h /usr/include/mach/machine/vm_types.h \
+  /usr/include/mach/ppc/vm_types.h /usr/include/ppc/vmparam.h \
+  /usr/include/mach/kern_return.h /usr/include/mach/machine/kern_return.h \
+  /usr/include/mach/ppc/kern_return.h /usr/include/mach/vm_statistics.h \
+  /usr/include/mach/machine.h /usr/include/mach/time_value.h \
+  /usr/include/mach/host_notify.h /usr/include/mach/host_special_ports.h \
+  /usr/include/mach/memory_object_types.h /usr/include/mach/vm_types.h \
+  /usr/include/mach/exception_types.h \
+  /usr/include/mach/machine/exception.h /usr/include/mach/ppc/exception.h \
+  /usr/include/mach/thread_status.h \
+  /usr/include/mach/machine/thread_status.h \
+  /usr/include/mach/ppc/thread_status.h /usr/include/mach/ppc/_types.h \
+  /usr/include/mach/machine/thread_state.h \
+  /usr/include/mach/ppc/thread_state.h /usr/include/mach/processor_info.h \
+  /usr/include/mach/machine/processor_info.h \
+  /usr/include/mach/ppc/processor_info.h /usr/include/mach/task_info.h \
+  /usr/include/mach/policy.h /usr/include/mach/task_policy.h \
+  /usr/include/mach/task_special_ports.h /usr/include/mach/thread_info.h \
+  /usr/include/mach/thread_policy.h \
+  /usr/include/mach/thread_special_ports.h \
+  /usr/include/mach/clock_types.h /usr/include/mach/vm_attributes.h \
+  /usr/include/mach/vm_inherit.h /usr/include/mach/vm_purgable.h \
+  /usr/include/mach/vm_behavior.h /usr/include/mach/vm_prot.h \
+  /usr/include/mach/vm_sync.h /usr/include/mach/vm_region.h \
+  /usr/include/mach/machine/vm_param.h /usr/include/mach/ppc/vm_param.h \
+  /usr/include/mach/kmod.h /usr/include/mach/std_types.h \
+  ../../../ompi/mca/allocator/allocator.h ../../../ompi/mca/mpool/mpool.h \
+  ../../../ompi/info/info.h ../../../ompi/class/ompi_pointer_array.h \
+  ../../../ompi/mca/allocator/base/base.h \
+  ../../../ompi/mca/allocator/allocator.h ../../../ompi/mca/coll/coll.h \
+  ../../../include/mpi.h ../../../ompi/mca/coll/base/base.h \
+  ../../../ompi/mca/coll/coll.h ../../../ompi/mca/io/io.h \
+  ../../../ompi/request/request.h \
+  ../../../ompi/class/ompi_pointer_array.h \
+  ../../../ompi/errhandler/errhandler.h \
+  ../../../ompi/runtime/mpiruntime.h \
+  ../../../ompi/errhandler/errhandler_predefined.h \
+  ../../../ompi/errhandler/errcode-internal.h \
+  ../../../opal/runtime/opal_progress.h ../../../opal/threads/condition.h \
+  ../../../ompi/mca/io/base/base.h ../../../ompi/class/ompi_free_list.h \
+  ../../../opal/threads/threads.h ../../../ompi/mca/io/io.h \
+  ../../../ompi/mca/mpool/mpool.h ../../../ompi/mca/mpool/base/base.h \
+  ../../../ompi/class/ompi_rb_tree.h ../../../ompi/mca/pml/pml.h \
+  ../../../ompi/mca/pml/base/base.h ../../../ompi/mca/pml/pml.h \
+  ../../../ompi/mca/ptl/ptl.h ../../../ompi/mca/ptl/base/base.h \
+  ../../../ompi/mca/ptl/ptl.h ../../../ompi/mca/btl/btl.h \
+  ../../../ompi/mca/btl/base/base.h ../../../ompi/mca/btl/btl.h \
+  ../../../ompi/mca/topo/topo.h ../../../ompi/mca/topo/base/base.h \
+  ../../../ompi/mca/topo/topo.h ../../../ompi/proc/proc.h \
+  ../../../orte/mca/errmgr/errmgr.h ../../../orte/mca/errmgr/base/base.h \
+  ../../../orte/mca/errmgr/errmgr.h ../../../orte/mca/gpr/gpr.h \
+  ../../../orte/mca/gpr/base/base.h ../../../orte/mca/gpr/gpr.h \
+  ../../../orte/mca/iof/iof.h ../../../orte/mca/iof/base/base.h \
+  /usr/include/sys/uio.h ../../../opal/class/opal_free_list.h \
+  ../../../orte/mca/iof/iof.h ../../../orte/mca/ns/ns.h \
+  ../../../orte/mca/ns/base/base.h ../../../orte/mca/oob/oob.h \
+  ../../../orte/mca/oob/base/base.h ../../../orte/mca/oob/base/base.h \
+  ../../../orte/mca/ras/ras.h ../../../orte/mca/ras/ras_types.h \
+  ../../../orte/mca/ras/base/base.h ../../../orte/mca/ras/ras.h \
+  ../../../orte/mca/rds/rds.h ../../../orte/mca/rds/rds_types.h \
+  ../../../orte/mca/rds/base/base.h ../../../orte/mca/rds/rds.h \
+  ../../../orte/mca/rmaps/rmaps.h ../../../orte/mca/rmaps/base/base.h \
+  ../../../orte/mca/rmaps/rmaps.h ../../../orte/mca/rmgr/rmgr.h \
+  ../../../orte/mca/rmgr/rmgr_types.h ../../../orte/mca/rmgr/base/base.h \
+  ../../../orte/mca/rmgr/rmgr.h ../../../orte/mca/rml/rml.h \
+  ../../../orte/mca/rml/base/base.h ../../../orte/mca/rml/rml.h \
+  ../../../orte/mca/pls/pls.h ../../../orte/mca/pls/base/base.h \
+  ../../../orte/mca/pls/pls.h ../../../orte/mca/ras/base/ras_base_node.h \
+  ../../../orte/mca/soh/soh.h ../../../orte/mca/soh/base/base.h \
+  ../../../orte/mca/soh/soh.h ../../../orte/mca/sds/sds.h \
+  ../../../orte/mca/sds/base/base.h ../../../orte/mca/ns/ns_types.h
+
+../../../include/ompi_config.h:
+
+../../../include/ompi_config_bottom.h:
+
+/usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/limits.h:
+
+/usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/syslimits.h:
+
+/usr/include/limits.h:
+
+/usr/include/machine/limits.h:
+
+/usr/include/ppc/limits.h:
+
+/usr/include/ppc/_limits.h:
+
+/usr/include/sys/syslimits.h:
+
+/usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/stdint.h:
+
+/usr/include/c++/4.0.0/iostream:
+
+/usr/include/c++/4.0.0/powerpc-apple-darwin8/bits/c++config.h:
+
+/usr/include/c++/4.0.0/powerpc-apple-darwin8/bits/os_defines.h:
+
+/usr/include/c++/4.0.0/ostream:
+
+/usr/include/c++/4.0.0/ios:
+
+/usr/include/c++/4.0.0/iosfwd:
+
+/usr/include/c++/4.0.0/powerpc-apple-darwin8/bits/c++locale.h:
+
+/usr/include/c++/4.0.0/clocale:
+
+/usr/include/locale.h:
+
+/usr/include/_locale.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/_types.h:
+
+/usr/include/sys/_types.h:
+
+/usr/include/machine/_types.h:
+
+/usr/include/ppc/_types.h:
+
+/usr/include/c++/4.0.0/cstring:
+
+/usr/include/c++/4.0.0/cstddef:
+
+/usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/stddef.h:
+
+/usr/include/string.h:
+
+/usr/include/c++/4.0.0/cstdio:
+
+/usr/include/stdio.h:
+
+/usr/include/c++/4.0.0/powerpc-apple-darwin8/bits/c++io.h:
+
+/usr/include/c++/4.0.0/powerpc-apple-darwin8/bits/gthr.h:
+
+/usr/include/c++/4.0.0/powerpc-apple-darwin8/bits/gthr-default.h:
+
+/usr/include/pthread.h:
+
+/usr/include/pthread_impl.h:
+
+/usr/include/sched.h:
+
+/usr/include/time.h:
+
+/usr/include/machine/_limits.h:
+
+/usr/include/unistd.h:
+
+/usr/include/sys/unistd.h:
+
+/usr/include/sys/select.h:
+
+/usr/include/sys/appleapiopts.h:
+
+/usr/include/sys/types.h:
+
+/usr/include/machine/types.h:
+
+/usr/include/ppc/types.h:
+
+/usr/include/machine/endian.h:
+
+/usr/include/ppc/endian.h:
+
+/usr/include/sys/_endian.h:
+
+/usr/include/libkern/OSByteOrder.h:
+
+/usr/include/libkern/ppc/OSByteOrder.h:
+
+/usr/include/signal.h:
+
+/usr/include/sys/signal.h:
+
+/usr/include/machine/signal.h:
+
+/usr/include/ppc/signal.h:
+
+/usr/include/sys/time.h:
+
+/usr/include/c++/4.0.0/cctype:
+
+/usr/include/ctype.h:
+
+/usr/include/runetype.h:
+
+/usr/include/c++/4.0.0/bits/stringfwd.h:
+
+/usr/include/c++/4.0.0/bits/postypes.h:
+
+/usr/include/c++/4.0.0/cwchar:
+
+/usr/include/c++/4.0.0/ctime:
+
+/usr/include/wchar.h:
+
+/usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/stdarg.h:
+
+/usr/include/_wctype.h:
+
+/usr/include/c++/4.0.0/bits/functexcept.h:
+
+/usr/include/c++/4.0.0/exception_defines.h:
+
+/usr/include/c++/4.0.0/exception:
+
+/usr/include/c++/4.0.0/bits/char_traits.h:
+
+/usr/include/c++/4.0.0/bits/stl_algobase.h:
+
+/usr/include/c++/4.0.0/climits:
+
+/usr/include/c++/4.0.0/cstdlib:
+
+/usr/include/stdlib.h:
+
+/usr/include/sys/wait.h:
+
+/usr/include/sys/resource.h:
+
+/usr/include/alloca.h:
+
+/usr/include/c++/4.0.0/bits/stl_pair.h:
+
+/usr/include/c++/4.0.0/bits/cpp_type_traits.h:
+
+/usr/include/c++/4.0.0/bits/stl_iterator_base_types.h:
+
+/usr/include/c++/4.0.0/bits/stl_iterator_base_funcs.h:
+
+/usr/include/c++/4.0.0/bits/concept_check.h:
+
+/usr/include/c++/4.0.0/bits/stl_iterator.h:
+
+/usr/include/c++/4.0.0/debug/debug.h:
+
+/usr/include/c++/4.0.0/cassert:
+
+/usr/include/assert.h:
+
+/usr/include/c++/4.0.0/bits/localefwd.h:
+
+/usr/include/c++/4.0.0/bits/ios_base.h:
+
+/usr/include/c++/4.0.0/bits/atomicity.h:
+
+/usr/include/c++/4.0.0/powerpc-apple-darwin8/bits/atomic_word.h:
+
+/usr/include/c++/4.0.0/bits/locale_classes.h:
+
+/usr/include/c++/4.0.0/string:
+
+/usr/include/c++/4.0.0/memory:
+
+/usr/include/c++/4.0.0/bits/allocator.h:
+
+/usr/include/c++/4.0.0/powerpc-apple-darwin8/bits/c++allocator.h:
+
+/usr/include/c++/4.0.0/ext/new_allocator.h:
+
+/usr/include/c++/4.0.0/new:
+
+/usr/include/c++/4.0.0/bits/stl_construct.h:
+
+/usr/include/c++/4.0.0/bits/stl_uninitialized.h:
+
+/usr/include/c++/4.0.0/bits/stl_raw_storage_iter.h:
+
+/usr/include/c++/4.0.0/limits:
+
+/usr/include/c++/4.0.0/bits/stl_function.h:
+
+/usr/include/c++/4.0.0/bits/basic_string.h:
+
+/usr/include/c++/4.0.0/algorithm:
+
+/usr/include/c++/4.0.0/bits/stl_algo.h:
+
+/usr/include/c++/4.0.0/bits/stl_heap.h:
+
+/usr/include/c++/4.0.0/bits/stl_tempbuf.h:
+
+/usr/include/c++/4.0.0/bits/basic_string.tcc:
+
+/usr/include/c++/4.0.0/streambuf:
+
+/usr/include/c++/4.0.0/bits/streambuf.tcc:
+
+/usr/include/c++/4.0.0/bits/basic_ios.h:
+
+/usr/include/c++/4.0.0/bits/streambuf_iterator.h:
+
+/usr/include/c++/4.0.0/bits/locale_facets.h:
+
+/usr/include/c++/4.0.0/cwctype:
+
+/usr/include/wctype.h:
+
+/usr/include/c++/4.0.0/powerpc-apple-darwin8/bits/ctype_base.h:
+
+/usr/include/c++/4.0.0/powerpc-apple-darwin8/bits/ctype_inline.h:
+
+/usr/include/c++/4.0.0/bits/codecvt.h:
+
+/usr/include/c++/4.0.0/powerpc-apple-darwin8/bits/time_members.h:
+
+/usr/include/c++/4.0.0/powerpc-apple-darwin8/bits/messages_members.h:
+
+/usr/include/c++/4.0.0/bits/basic_ios.tcc:
+
+/usr/include/c++/4.0.0/bits/ostream.tcc:
+
+/usr/include/c++/4.0.0/locale:
+
+/usr/include/c++/4.0.0/bits/locale_facets.tcc:
+
+/usr/include/c++/4.0.0/typeinfo:
+
+/usr/include/c++/4.0.0/istream:
+
+/usr/include/c++/4.0.0/bits/istream.tcc:
+
+../../../ompi/runtime/params.h:
+
+../../../orte/runtime/runtime.h:
+
+../../../include/orte_config.h:
+
+../../../include/ompi_config.h:
+
+../../../orte/mca/gpr/gpr_types.h:
+
+../../../orte/include/orte_types.h:
+
+../../../orte/mca/schema/schema.h:
+
+../../../opal/mca/mca.h:
+
+../../../opal/class/opal_list.h:
+
+../../../opal/class/opal_object.h:
+
+../../../opal/include/sys/atomic.h:
+
+../../../opal/include/sys/architecture.h:
+
+../../../opal/include/sys/powerpc/atomic.h:
+
+../../../opal/include/sys/atomic_impl.h:
+
+../../../opal/util/cmd_line.h:
+
+../../../opal/threads/mutex.h:
+
+../../../opal/threads/mutex_unix.h:
+
+../../../orte/mca/ns/ns_types.h:
+
+../../../ompi/include/types.h:
+
+/usr/include/sys/socket.h:
+
+/usr/include/machine/param.h:
+
+/usr/include/ppc/param.h:
+
+../../../orte/mca/schema/schema_types.h:
+
+../../../opal/util/error.h:
+
+../../../orte/class/orte_pointer_array.h:
+
+../../../orte/dps/dps_types.h:
+
+../../../orte/mca/rmgr/rmgr_types.h:
+
+../../../orte/mca/soh/soh_types.h:
+
+../../../orte/runtime/runtime_types.h:
+
+../../../orte/util/univ_info.h:
+
+/usr/include/sys/utsname.h:
+
+../../../orte/mca/ns/ns.h:
+
+../../../opal/include/constants.h:
+
+../../../orte/dps/dps.h:
+
+../../../orte/include/orte_constants.h:
+
+../../../opal/include/constants.h:
+
+../../../orte/mca/oob/oob_types.h:
+
+../../../orte/mca/rml/rml_types.h:
+
+../../../orte/util/proc_info.h:
+
+../../../orte/mca/ns/ns_types.h:
+
+../../../ompi/tools/ompi_info/ompi_info.h:
+
+/usr/include/c++/4.0.0/vector:
+
+/usr/include/c++/4.0.0/bits/stl_vector.h:
+
+/usr/include/c++/4.0.0/bits/stl_bvector.h:
+
+/usr/include/c++/4.0.0/bits/vector.tcc:
+
+/usr/include/c++/4.0.0/map:
+
+/usr/include/c++/4.0.0/bits/stl_tree.h:
+
+/usr/include/c++/4.0.0/bits/stl_map.h:
+
+/usr/include/c++/4.0.0/bits/stl_multimap.h:
+
+../../../opal/mca/base/base.h:
+
+../../../opal/mca/base/mca_base_param.h:
+
+../../../opal/class/opal_value_array.h:
+
+../../../ompi/include/constants.h:
+
+../../../orte/include/orte_constants.h:
+
+../../../opal/class/opal_hash_table.h:
+
+../../../opal/mca/mca.h:
+
+../../../opal/mca/base/mca_base_msgbuf.h:
+
+../../../opal/mca/memory/memory.h:
+
+../../../opal/mca/base/base.h:
+
+../../../opal/mca/paffinity/paffinity.h:
+
+../../../opal/mca/paffinity/base/base.h:
+
+../../../opal/mca/paffinity/paffinity.h:
+
+../../../opal/mca/paffinity/base/internal.h:
+
+../../../opal/mca/maffinity/maffinity.h:
+
+../../../opal/mca/maffinity/maffinity_types.h:
+
+../../../opal/mca/maffinity/base/base.h:
+
+../../../opal/mca/maffinity/maffinity.h:
+
+../../../opal/mca/maffinity/base/internal.h:
+
+../../../opal/mca/memory/base/base.h:
+
+../../../opal/mca/memory/memory.h:
+
+../../../opal/mca/timer/timer.h:
+
+../../../opal/mca/timer/base/base.h:
+
+../../../opal/mca/timer/timer.h:
+
+../../../opal/mca/timer/base/base_impl.h:
+
+/usr/include/mach/mach_time.h:
+
+/usr/include/mach/mach_types.h:
+
+/usr/include/mach/host_info.h:
+
+/usr/include/mach/message.h:
+
+/usr/include/mach/port.h:
+
+/usr/include/mach/boolean.h:
+
+/usr/include/mach/machine/boolean.h:
+
+/usr/include/mach/ppc/boolean.h:
+
+/usr/include/mach/machine/vm_types.h:
+
+/usr/include/mach/ppc/vm_types.h:
+
+/usr/include/ppc/vmparam.h:
+
+/usr/include/mach/kern_return.h:
+
+/usr/include/mach/machine/kern_return.h:
+
+/usr/include/mach/ppc/kern_return.h:
+
+/usr/include/mach/vm_statistics.h:
+
+/usr/include/mach/machine.h:
+
+/usr/include/mach/time_value.h:
+
+/usr/include/mach/host_notify.h:
+
+/usr/include/mach/host_special_ports.h:
+
+/usr/include/mach/memory_object_types.h:
+
+/usr/include/mach/vm_types.h:
+
+/usr/include/mach/exception_types.h:
+
+/usr/include/mach/machine/exception.h:
+
+/usr/include/mach/ppc/exception.h:
+
+/usr/include/mach/thread_status.h:
+
+/usr/include/mach/machine/thread_status.h:
+
+/usr/include/mach/ppc/thread_status.h:
+
+/usr/include/mach/ppc/_types.h:
+
+/usr/include/mach/machine/thread_state.h:
+
+/usr/include/mach/ppc/thread_state.h:
+
+/usr/include/mach/processor_info.h:
+
+/usr/include/mach/machine/processor_info.h:
+
+/usr/include/mach/ppc/processor_info.h:
+
+/usr/include/mach/task_info.h:
+
+/usr/include/mach/policy.h:
+
+/usr/include/mach/task_policy.h:
+
+/usr/include/mach/task_special_ports.h:
+
+/usr/include/mach/thread_info.h:
+
+/usr/include/mach/thread_policy.h:
+
+/usr/include/mach/thread_special_ports.h:
+
+/usr/include/mach/clock_types.h:
+
+/usr/include/mach/vm_attributes.h:
+
+/usr/include/mach/vm_inherit.h:
+
+/usr/include/mach/vm_purgable.h:
+
+/usr/include/mach/vm_behavior.h:
+
+/usr/include/mach/vm_prot.h:
+
+/usr/include/mach/vm_sync.h:
+
+/usr/include/mach/vm_region.h:
+
+/usr/include/mach/machine/vm_param.h:
+
+/usr/include/mach/ppc/vm_param.h:
+
+/usr/include/mach/kmod.h:
+
+/usr/include/mach/std_types.h:
+
+../../../ompi/mca/allocator/allocator.h:
+
+../../../ompi/mca/mpool/mpool.h:
+
+../../../ompi/info/info.h:
+
+../../../ompi/class/ompi_pointer_array.h:
+
+../../../ompi/mca/allocator/base/base.h:
+
+../../../ompi/mca/allocator/allocator.h:
+
+../../../ompi/mca/coll/coll.h:
+
+../../../include/mpi.h:
+
+../../../ompi/mca/coll/base/base.h:
+
+../../../ompi/mca/coll/coll.h:
+
+../../../ompi/mca/io/io.h:
+
+../../../ompi/request/request.h:
+
+../../../ompi/class/ompi_pointer_array.h:
+
+../../../ompi/errhandler/errhandler.h:
+
+../../../ompi/runtime/mpiruntime.h:
+
+../../../ompi/errhandler/errhandler_predefined.h:
+
+../../../ompi/errhandler/errcode-internal.h:
+
+../../../opal/runtime/opal_progress.h:
+
+../../../opal/threads/condition.h:
+
+../../../ompi/mca/io/base/base.h:
+
+../../../ompi/class/ompi_free_list.h:
+
+../../../opal/threads/threads.h:
+
+../../../ompi/mca/io/io.h:
+
+../../../ompi/mca/mpool/mpool.h:
+
+../../../ompi/mca/mpool/base/base.h:
+
+../../../ompi/class/ompi_rb_tree.h:
+
+../../../ompi/mca/pml/pml.h:
+
+../../../ompi/mca/pml/base/base.h:
+
+../../../ompi/mca/pml/pml.h:
+
+../../../ompi/mca/ptl/ptl.h:
+
+../../../ompi/mca/ptl/base/base.h:
+
+../../../ompi/mca/ptl/ptl.h:
+
+../../../ompi/mca/btl/btl.h:
+
+../../../ompi/mca/btl/base/base.h:
+
+../../../ompi/mca/btl/btl.h:
+
+../../../ompi/mca/topo/topo.h:
+
+../../../ompi/mca/topo/base/base.h:
+
+../../../ompi/mca/topo/topo.h:
+
+../../../ompi/proc/proc.h:
+
+../../../orte/mca/errmgr/errmgr.h:
+
+../../../orte/mca/errmgr/base/base.h:
+
+../../../orte/mca/errmgr/errmgr.h:
+
+../../../orte/mca/gpr/gpr.h:
+
+../../../orte/mca/gpr/base/base.h:
+
+../../../orte/mca/gpr/gpr.h:
+
+../../../orte/mca/iof/iof.h:
+
+../../../orte/mca/iof/base/base.h:
+
+/usr/include/sys/uio.h:
+
+../../../opal/class/opal_free_list.h:
+
+../../../orte/mca/iof/iof.h:
+
+../../../orte/mca/ns/ns.h:
+
+../../../orte/mca/ns/base/base.h:
+
+../../../orte/mca/oob/oob.h:
+
+../../../orte/mca/oob/base/base.h:
+
+../../../orte/mca/oob/base/base.h:
+
+../../../orte/mca/ras/ras.h:
+
+../../../orte/mca/ras/ras_types.h:
+
+../../../orte/mca/ras/base/base.h:
+
+../../../orte/mca/ras/ras.h:
+
+../../../orte/mca/rds/rds.h:
+
+../../../orte/mca/rds/rds_types.h:
+
+../../../orte/mca/rds/base/base.h:
+
+../../../orte/mca/rds/rds.h:
+
+../../../orte/mca/rmaps/rmaps.h:
+
+../../../orte/mca/rmaps/base/base.h:
+
+../../../orte/mca/rmaps/rmaps.h:
+
+../../../orte/mca/rmgr/rmgr.h:
+
+../../../orte/mca/rmgr/rmgr_types.h:
+
+../../../orte/mca/rmgr/base/base.h:
+
+../../../orte/mca/rmgr/rmgr.h:
+
+../../../orte/mca/rml/rml.h:
+
+../../../orte/mca/rml/base/base.h:
+
+../../../orte/mca/rml/rml.h:
+
+../../../orte/mca/pls/pls.h:
+
+../../../orte/mca/pls/base/base.h:
+
+../../../orte/mca/pls/pls.h:
+
+../../../orte/mca/ras/base/ras_base_node.h:
+
+../../../orte/mca/soh/soh.h:
+
+../../../orte/mca/soh/base/base.h:
+
+../../../orte/mca/soh/soh.h:
+
+../../../orte/mca/sds/sds.h:
+
+../../../orte/mca/sds/base/base.h:
+
+../../../orte/mca/ns/ns_types.h:

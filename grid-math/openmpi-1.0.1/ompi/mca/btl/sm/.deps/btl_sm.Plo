@@ -1,0 +1,299 @@
+btl_sm.lo .libs/btl_sm.o: btl_sm.c ../../../../include/ompi_config.h \
+  ../../../../include/ompi_config_bottom.h \
+  /usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/stdbool.h \
+  /usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/limits.h \
+  /usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/syslimits.h \
+  /usr/include/limits.h /usr/include/machine/limits.h \
+  /usr/include/ppc/limits.h /usr/include/ppc/_limits.h \
+  /usr/include/sys/syslimits.h \
+  /usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/stdint.h \
+  /usr/include/string.h /usr/include/_types.h /usr/include/sys/_types.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/_types.h \
+  /usr/include/ppc/_types.h /usr/include/stdlib.h /usr/include/sys/wait.h \
+  /usr/include/sys/signal.h /usr/include/sys/appleapiopts.h \
+  /usr/include/machine/signal.h /usr/include/ppc/signal.h \
+  /usr/include/sys/resource.h /usr/include/machine/endian.h \
+  /usr/include/ppc/endian.h /usr/include/sys/_endian.h \
+  /usr/include/libkern/OSByteOrder.h \
+  /usr/include/libkern/ppc/OSByteOrder.h /usr/include/alloca.h \
+  /usr/include/machine/types.h /usr/include/ppc/types.h \
+  /usr/include/sys/types.h /usr/include/sys/stat.h /usr/include/fcntl.h \
+  /usr/include/sys/fcntl.h /usr/include/errno.h /usr/include/sys/errno.h \
+  ../../../../opal/threads/mutex.h ../../../../opal/include/sys/atomic.h \
+  ../../../../opal/include/sys/architecture.h \
+  ../../../../opal/include/sys/powerpc/atomic.h \
+  ../../../../opal/include/sys/atomic_impl.h \
+  ../../../../opal/threads/mutex_unix.h /usr/include/pthread.h \
+  /usr/include/pthread_impl.h /usr/include/sched.h /usr/include/time.h \
+  /usr/include/machine/_limits.h ../../../../opal/class/opal_object.h \
+  /usr/include/assert.h ../../../../ompi/datatype/convertor.h \
+  ../../../../ompi/include/constants.h \
+  ../../../../orte/include/orte_constants.h \
+  ../../../../opal/include/constants.h /usr/include/sys/uio.h \
+  ../../../../opal/util/output.h \
+  /usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/stdarg.h \
+  ../../../../opal/util/if.h /usr/include/sys/socket.h \
+  /usr/include/machine/param.h /usr/include/ppc/param.h \
+  ../../../../orte/util/proc_info.h ../../../../include/orte_config.h \
+  ../../../../include/ompi_config.h ../../../../orte/mca/ns/ns_types.h \
+  ../../../../ompi/include/types.h /usr/include/sys/select.h \
+  /usr/include/signal.h /usr/include/sys/time.h \
+  ../../../../opal/class/opal_list.h /usr/include/stdio.h \
+  ../../../../opal/util/printf.h ../../../../orte/util/sys_info.h \
+  /usr/include/sys/utsname.h ../../../../ompi/class/ompi_fifo.h \
+  ../../../../opal/include/sys/cache.h ../../../../ompi/mca/mpool/mpool.h \
+  ../../../../opal/mca/mca.h ../../../../opal/util/cmd_line.h \
+  ../../../../ompi/info/info.h ../../../../include/mpi.h \
+  ../../../../opal/util/strncpy.h \
+  ../../../../ompi/class/ompi_pointer_array.h \
+  ../../../../ompi/class/ompi_pointer_array.h \
+  ../../../../ompi/class/ompi_circular_buffer_fifo.h \
+  ../../../../opal/include/sys/cache.h \
+  ../../../../opal/include/sys/atomic.h \
+  ../../../../ompi/mca/mpool/mpool.h ../../../../opal/util/pow2.h \
+  ../../../../ompi/class/ompi_free_list.h \
+  ../../../../opal/threads/threads.h ../../../../opal/threads/condition.h \
+  ../../../../opal/runtime/opal_progress.h ../../../../ompi/mca/pml/pml.h \
+  ../../../../ompi/mca/btl/btl.h ../../../../ompi/class/ompi_free_list.h \
+  ../../../../ompi/mca/mpool/base/base.h \
+  ../../../../ompi/class/ompi_rb_tree.h \
+  ../../../../ompi/mca/common/sm/common_sm_mmap.h btl_sm.h \
+  /usr/include/netinet/in.h /usr/include/netinet6/in6.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  ../../../../ompi/class/ompi_bitmap.h ../../../../ompi/class/ompi_fifo.h \
+  ../../../../opal/event/event.h ../../../../ompi/mca/pml/pml.h \
+  ../../../../ompi/mca/btl/btl.h ../../../../ompi/mca/btl/base/base.h \
+  btl_sm_endpoint.h btl_sm_frag.h btl_sm_fifo.h \
+  ../../../../ompi/proc/proc.h ../../../../orte/dps/dps_types.h
+
+../../../../include/ompi_config.h:
+
+../../../../include/ompi_config_bottom.h:
+
+/usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/stdbool.h:
+
+/usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/limits.h:
+
+/usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/syslimits.h:
+
+/usr/include/limits.h:
+
+/usr/include/machine/limits.h:
+
+/usr/include/ppc/limits.h:
+
+/usr/include/ppc/_limits.h:
+
+/usr/include/sys/syslimits.h:
+
+/usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/stdint.h:
+
+/usr/include/string.h:
+
+/usr/include/_types.h:
+
+/usr/include/sys/_types.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/machine/_types.h:
+
+/usr/include/ppc/_types.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/sys/wait.h:
+
+/usr/include/sys/signal.h:
+
+/usr/include/sys/appleapiopts.h:
+
+/usr/include/machine/signal.h:
+
+/usr/include/ppc/signal.h:
+
+/usr/include/sys/resource.h:
+
+/usr/include/machine/endian.h:
+
+/usr/include/ppc/endian.h:
+
+/usr/include/sys/_endian.h:
+
+/usr/include/libkern/OSByteOrder.h:
+
+/usr/include/libkern/ppc/OSByteOrder.h:
+
+/usr/include/alloca.h:
+
+/usr/include/machine/types.h:
+
+/usr/include/ppc/types.h:
+
+/usr/include/sys/types.h:
+
+/usr/include/sys/stat.h:
+
+/usr/include/fcntl.h:
+
+/usr/include/sys/fcntl.h:
+
+/usr/include/errno.h:
+
+/usr/include/sys/errno.h:
+
+../../../../opal/threads/mutex.h:
+
+../../../../opal/include/sys/atomic.h:
+
+../../../../opal/include/sys/architecture.h:
+
+../../../../opal/include/sys/powerpc/atomic.h:
+
+../../../../opal/include/sys/atomic_impl.h:
+
+../../../../opal/threads/mutex_unix.h:
+
+/usr/include/pthread.h:
+
+/usr/include/pthread_impl.h:
+
+/usr/include/sched.h:
+
+/usr/include/time.h:
+
+/usr/include/machine/_limits.h:
+
+../../../../opal/class/opal_object.h:
+
+/usr/include/assert.h:
+
+../../../../ompi/datatype/convertor.h:
+
+../../../../ompi/include/constants.h:
+
+../../../../orte/include/orte_constants.h:
+
+../../../../opal/include/constants.h:
+
+/usr/include/sys/uio.h:
+
+../../../../opal/util/output.h:
+
+/usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/stdarg.h:
+
+../../../../opal/util/if.h:
+
+/usr/include/sys/socket.h:
+
+/usr/include/machine/param.h:
+
+/usr/include/ppc/param.h:
+
+../../../../orte/util/proc_info.h:
+
+../../../../include/orte_config.h:
+
+../../../../include/ompi_config.h:
+
+../../../../orte/mca/ns/ns_types.h:
+
+../../../../ompi/include/types.h:
+
+/usr/include/sys/select.h:
+
+/usr/include/signal.h:
+
+/usr/include/sys/time.h:
+
+../../../../opal/class/opal_list.h:
+
+/usr/include/stdio.h:
+
+../../../../opal/util/printf.h:
+
+../../../../orte/util/sys_info.h:
+
+/usr/include/sys/utsname.h:
+
+../../../../ompi/class/ompi_fifo.h:
+
+../../../../opal/include/sys/cache.h:
+
+../../../../ompi/mca/mpool/mpool.h:
+
+../../../../opal/mca/mca.h:
+
+../../../../opal/util/cmd_line.h:
+
+../../../../ompi/info/info.h:
+
+../../../../include/mpi.h:
+
+../../../../opal/util/strncpy.h:
+
+../../../../ompi/class/ompi_pointer_array.h:
+
+../../../../ompi/class/ompi_pointer_array.h:
+
+../../../../ompi/class/ompi_circular_buffer_fifo.h:
+
+../../../../opal/include/sys/cache.h:
+
+../../../../opal/include/sys/atomic.h:
+
+../../../../ompi/mca/mpool/mpool.h:
+
+../../../../opal/util/pow2.h:
+
+../../../../ompi/class/ompi_free_list.h:
+
+../../../../opal/threads/threads.h:
+
+../../../../opal/threads/condition.h:
+
+../../../../opal/runtime/opal_progress.h:
+
+../../../../ompi/mca/pml/pml.h:
+
+../../../../ompi/mca/btl/btl.h:
+
+../../../../ompi/class/ompi_free_list.h:
+
+../../../../ompi/mca/mpool/base/base.h:
+
+../../../../ompi/class/ompi_rb_tree.h:
+
+../../../../ompi/mca/common/sm/common_sm_mmap.h:
+
+btl_sm.h:
+
+/usr/include/netinet/in.h:
+
+/usr/include/netinet6/in6.h:
+
+/usr/include/unistd.h:
+
+/usr/include/sys/unistd.h:
+
+../../../../ompi/class/ompi_bitmap.h:
+
+../../../../ompi/class/ompi_fifo.h:
+
+../../../../opal/event/event.h:
+
+../../../../ompi/mca/pml/pml.h:
+
+../../../../ompi/mca/btl/btl.h:
+
+../../../../ompi/mca/btl/base/base.h:
+
+btl_sm_endpoint.h:
+
+btl_sm_frag.h:
+
+btl_sm_fifo.h:
+
+../../../../ompi/proc/proc.h:
+
+../../../../orte/dps/dps_types.h:

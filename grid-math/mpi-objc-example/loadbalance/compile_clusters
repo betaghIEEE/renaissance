@@ -1,0 +1,1 @@
+gcc -I /home/local/mpich-1.2.5.2/include lb.c  -L /home/local/mpich-1.2.5.2/lib -lmpich -lm 
