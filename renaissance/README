@@ -1,0 +1,53 @@
+Incorporated Ruzon's RGBLab code.
+
+
+Matrix:
+* eigenvalues and eigenvectors only work on square matrices
+  why am I allowing nonsquare to be processed.
+  should do an assert so it only compiles on debug mode
+
+* consider padding
+
+renaissance is a library of base objects to be used for research in
+computer vision, computer graphics, image processing and scientific
+computing.
+
+They should be highly interchangeable.
+
+The base types are:
+
+Holders - templates used to build other objects
+* grid.hpp - 2D data
+* volume.hpp - 3D data
+
+Numerics:
+* valarray - part of STL
+  slight problem in that the overloaded = doesn't work well.
+* slice_iter.hpp - quick indexing into matrix
+  from Stroustrap's book
+* matrix.hpp - used for numerical analysis and transformations
+  should work on my vectors
+
+Image Processing:
+* grayImage.hpp - handles gray images as unsigned char grids
+* colorImage.hpp - handles color images as unsigned char volumes
+
+Graphics:
+* point.hpp - three dimensional point in space
+* vector.hpp - three dimensional vector in space
+* face.hpp - a collection of points forming a polygon
+* mesh.hpp - a collection of faces forming a complex shape
+
+Also identified, I want to add the following:
+* Point3D - three dimensional double point
+* Point3DH - three dimensional double point with homogeneous representation
+* Point2I - two dimensional integer point - used to represents positions in image
+* Point2D - two dimensional double point
+* Point2DH - two dimensional double point homogeneous
+* Vector2D - 
+* Vector2DH -
+* Vector3D - 
+* Vector3DH -
+* arbitrarily high dimensional constructs
+* arbitrary features
+	
