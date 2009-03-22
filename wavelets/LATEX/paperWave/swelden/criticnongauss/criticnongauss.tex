@@ -1,0 +1,173 @@
+\documentclass[11pt]{article}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{doublespace}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `basename #1 .tif`.png}
+
+\textwidth = 6.5 in
+\textheight = 9 in
+\oddsidemargin = 0.0 in
+\evensidemargin = 0.0 in
+\topmargin = 0.0 in
+\headheight = 0.0 in
+\headsep = 0.0 in
+\parskip = 0.2in
+\parindent = 0.0in
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}{Definition}
+
+\title{Critic on Tools to detect non-Gaussianity in non-standard cosmological models}
+\author{Daniel D. Beatty}
+\begin{document}
+\maketitle
+
+Reason for wavelet concentration:
+\begin{enumerate}\item Space-frequency localization
+\item Demonstration in CMB and COBE-DMR data analysis
+\item Note spherical wavelets (Tenorio)\end{enumerate}
+
+Experiments with spherical wavelets on COBE-DMR data in HEALPix pixelization.  They were looking for Gaussianity of data by using 
+\begin{itemize}\item Spherical Haar Wavelet (SHW)
+\item Spherical Mexican Hat Wavelet (SMHW)\end{itemize}
+
+They measured performance of these wavelets for discriminating between standard inflationary models and non-Gaussian models.  
+
+For astronomical data, these non-Gaussian effects are said to be attributes of the following:
+\begin{itemize}\item Cosmic defects
+\item Linear defects
+\item hot spots 
+\item cold spots\end{itemize}
+
+Other examples referenced 
+\begin{itemize}\item Salopek and Spergel
+\item Gangui et al\end{itemize}
+
+$\phi(\vec{n}) = \phi (\vec{n}) +f_{i,l}(\phi^2_L (n) - <\phi^2,n>) $
+
+Statement: The model has been the gravitational potential $ \phi(\vec{n})$ includes now a quadratic term with amplitude regulated by the so called non-linear coupling parameters such that:
+\begin{itemize}\item $\phi_L$ is the linear part of the gravitational potential, $f_{n,l}$
+\item $f_{n,l}$ is the nonlinear coupling parameter controlling the amount of non-Gaussianity introduced.  
+\item $<>$ is a volume average.\end{itemize}
+
+Cayon et. al. applied a wavelet space statistic model to simulations of slow-roll inflation model to quantify the probability of non-Gaussiantity detections used by the above model:
+
+Simple Questions:
+\begin{enumerate}\item What are the SMHW and SHW?
+\item What are the properties of SMHW and SHW?
+\item What is the performance of these methods in Gaussian conditions?  
+\item What is the performance of these methods in non-Gaussian conditions?\end{enumerate}
+
+From Section 2:  The Spherical Wavelets:
+
+%Page 63
+
+Claim: The Mexican Hat Wavelet family has been successfully used to extract point sources from CMB maps.
+
+\section {The Mexican Hat on $S^2$ }
+Group Theory approach by Antoine and Vanderghegnst have extended to the wavelet on $S^2$ based on these following properties:
+\begin{itemize}\item The basic function is a compensated filter
+\item Translations
+\item Dialations
+\item Euclidean Limits for small angles\end{itemize}
+
+Conclusions from expansion:
+The stereo-graphic projection on the sphere is the appropriate one to translate the mentioned properties from plane to the sphere.  
+
+Projection definition $(\vec{x} \to (\theta, \phi))$
+
+$x_1 = 2 \tan \frac{\theta}{2} \cos \phi$
+
+$x_2 = 2 \tan \frac{\theta}{2} \sin \phi $
+
+where 
+$ (\theta , \phi)$ represent polar coordinates in $S^2$, $(y=\equiv 2 \tan \frac{\phi}{2}, \phi)$ are polar coordinates in the tangent plane to the North Pole.  
+
+What does this do for an isotropic wavelet $\psi(x;R)$?  
+
+$\psi_s (\phi, R)\alpha (\cos \frac{\theta}{2} )^{-4} \psi(x\equiv 2 \tan \frac{\theta}{2}; R) $
+
+Analysis: A function on a sphere $f(\theta , \phi)$
+
+Definition: Linear operation continuous wavelet transform with respect to $\psi_s (\theta, R)$ is defined 
+
+$\tilde{w} (\vec{X}, R) = \int d\theta\prime \sin \theta\prime \hat{f}(\vec{x} + \vec{u}) \psi_s (\theta, R)$
+
+$\vec{x} \equiv 2 \tan \frac{\theta}{2}(\cos\theta, \sin\theta) $
+
+$\vec{u} \equiv 2 \tan \frac{\theta\prime}{2}(\cos\theta\prime, \sin\theta\prime) $
+
+$\hat{f}(\vec{x}) = f(\theta, \phi)$
+
+$w = (\theta , \psi; r) \equiv \tilde{w}(\vec{x},R)$ are wavelet coefficients dependent on 3 parameters.
+
+Synthesis 
+The equation $\psi = (\theta\prime;R)$ leads to the following reconstruction formula.
+
+$f(\theta , \phi) = \bar{f} = \frac{1}{C_\psi} \int d\theta\prime d\phi\prime \sin\theta\prime \frac{dR}{R} (\vec{x} +\vec{\mu} , \vec{R} ) $
+
+Example of Mexican Hat
+
+$\psi (\theta, R) = \frac{1}{\sqrt{2\pi} RN} [1 + (\frac{1}{2})^2]^2 [2-(\frac{y}{2})^2]e^{-\frac{y^2}{2R^2]}}$
+
+$N(R) \equiv +\sqrt{1 + \frac{R^2}{2} + \frac{R^4}{4}} $
+
+$y \equiv 2\tan\frac{\theta}{2}$
+
+
+\section {Spherical Haar Wavelet}
+Claims 
+\begin{enumerate}\item Introduced by Sweldens with general planar Haar Wavelet to a pixelized sphere.
+\item Orthogonal 
+\item Adapted to pixelization of the sky 
+\item ? Must be hierarchical ?
+\item ?Dialation and translation capability lost ?
+\item SHW decomposition is based on one scaling $\phi_{j,k}$ and three wavelet functions $\psi_{m,j,k}$ at each resolution j and position on the grid k. 
+\item$ N_{side} =2^{s-1}$
+\item The total number of pixels for a level j, w/ in an area $\mu_j$ is given by $n_j = 12 \times 4^{J-1}$
+\item Each pixel resolution j $(S_{j,k})$ is divided into four pixels $(S_{j+1,k_0}, S_{j+1,k_1}, S_{j+1,k_2}, S_{j+1,k_3})$
+\item Their tool: HEALPix\end{enumerate}
+
+Key equations:
+\begin{itemize}\item $\phi_{j,k} (x) = \left(\begin{array}{ccc}  & 1  & if\ x\in S_{j,k}  \\  & 0  & otherwise  \end{array}\right)$
+\item $\psi_{1,j,k} = \frac {\phi_{j+1,k_0} + \phi_{j+1,k_2} - \phi_{j+1, k_1} - \phi_{j+1,k_3}}{4\mu_{j+1}}$
+\item $\psi_{2,j,k} = \frac {\phi_{j+1,k_0} + \phi_{j+1,k_1} - \phi_{j+1, k_2} - \phi_{j+1,k_3}}{4\mu_{j+1}}$
+\item $\psi_{1,j,k} = \frac {\phi_{j+1,k_0} + \phi_{j+1,k_3} - \phi_{j+1, k_2} - \phi_{j+1,k_1}}{4\mu_{j+1}}$
+\end{itemize}
+
+such that 
+$k_0$, $k_1$, $k_2$, $k_3$ are the four pixels at resolution level j+1 into which k at level j is divided.  
+
+Note similarity to 2-D average, vertical, horizontal and diagonal.  
+
+Wavelet coefficients at level j can be obtained from the four corresponding approximation at level j+1, $\lambda _{j+1,k_i}$  .  
+
+\begin{itemize}
+\item $\lambda_{j,k} = \frac{1}{4} \sum\limits^3_{i=0} \lambda_{j+1,k_i} $
+
+\item $\gamma_{1,j,k} = \mu_{j+1} (\lambda_{j+1,k_0} + \lambda_{j+1,k_2} -\lambda_{j+1,k_1} - \lambda{j+1,k_3})$
+
+\item $\gamma_{2,j,k} = \mu_{j+1} (\lambda_{j+1,k_0} + \lambda_{j+1,k_1} -\lambda_{j+1,k_2} - \lambda{j+1,k_3})$
+
+
+\item $\gamma_{3,j,k} = \mu_{j+1} (\lambda_{j+1,k_0} + \lambda_{j+1,k_3} -\lambda_{j+1,k_1} - \lambda{j+1,k_2})$
+\end {itemize}
+
+Question: Where do $ \lambda_{j+1,k_0}$ , $\lambda_{j+1,k_1}$  , $\lambda_{j+1, k_2}$ , and $\lambda_{j+1, k_2}$ come from.
+
+According to the paper, the generation of coefficients starts with the original map j=J, for which the coefficients are defined by original values a pixel k.  
+
+Questions:  
+\begin{itemize}
+\item What is this division which is refered to?  
+\item Is this similar to 1-D and 2-D in the fact that the elements ahead or behind the original element are used to define the next resolution components?  It would make sense for a 3-D world based on spherical coordinates.  
+\end{itemize}
+%end page 66 (sections 1 and 2).
+
+
+
+
+
+ \end{document}

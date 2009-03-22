@@ -1,0 +1,72 @@
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{doublespace}
+
+\begin{document}
+
+The main things Dr. Beylkin highlighted in Wavelets and Fast Numerical
+Algorithms were:
+\begin{itemize}
+\item All transform methods expand vectors and operators are expanded into a
+basis and the computations take place in the new system of coordinates.
+\item Typically, the choice of the differential operator, and the basis
+functions are dictated by the availability of fast algorithms for expanding an
+arbitrary function into the basis.
+\item Representations in wavelet bases reduce a wide class of operators to a
+sparce form.
+\end{itemize}
+
+The key word here is a "sparce" system.  Sparce is defined as having few
+elements typically where there is concentration of the bulk of the elements and
+the rest are insignificant.  
+
+There are ingredientss of Calderon-Zygmund theory appear in the Fast Multipole
+Method for computing potential interactions.  
+
+Fast Wavelet Transforms provide a system generalization of the FMM and its
+decendents to all Calderon-Zygmund and differential operators.  
+
+\subsection{Non-standard form characteristics}
+\begin{itemize}
+\item uncoupling of interaction between the scales
+\item explicit computation of basic operators such as derivatives, fractional
+deriviatives, Hilbert and Riesz transforms.  
+\item Solutions to two-point boundary value problem for ellipic differential
+operators.  
+\end {itemize}
+
+\subsection{Multi-Resolution Analysis and Wavelet Reference Properties}
+
+Definition: A multi-resolution analysis is a decomposition of the Hilbert space
+$L^2 (R^d )$, , $d >= 1$ , into a chain of closed subspaces.
+
+%$...\sub V_2 \sub V_1 \sub V_0 \sub V_{-1} \sub V_{-2} \sub ...$
+
+Let $w_j$ be an orthogonal complement of $V_j$ in $V_{j-1}$ such that
+
+$V_{j-1} = V_j +W_j$
+
+and represent $L^2(R^d)= \sum _{j\in Z} W_j $  as a direct sum.
+
+Consequences of Definition:
+\begin{itemize}
+\item The function may be described as linear combination of the basis function.
+\item Orthogonality is unity, in the power domain, and does not add or remove
+power from the original.  
+\end {itemize} 
+
+There are several mathematical transformation to illustrate these points:
+\begin{itemize}
+\item $\chi$ forms an orthonormal basis for V $(\chi (x-k)) \forall k \in Z$
+\item $\psi$ forms an orthonormal basis for W $(\psi (x-k)) \forall k \in Z$
+
+\end{itemize}
+
+Condition for exact reconstruction for a pair of the quadrature mirror filters:
+
+It may be a good idea to work out this proof and show results.  
+
+
+\end{document}

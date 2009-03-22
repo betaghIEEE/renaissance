@@ -1,0 +1,34 @@
+Recall the chain structure.  This structure can be referenced from most introductory algorithm books.  The big idea is to be able to locate specific items quickly by some key which reduces the search to a family of keys that close together by a hashing scheme.  In the case of matrix multiplication, no hash key is needed.  The row or column identifier is sufficient for this.  Of course a description of this scheme is in order.  
+
+Each chain is organized as a one-dimensional array.  Each array has an array list, called a link, which contains the actual data, and array list count showing how many items are in each array.  A next and previous value in this case would be superfluous since columns and rows are arranges in lexicographical order.  The array list contains the following items:
+\begin{itemize}\item key
+\item item value (row value/ column value)
+\item previous key
+\item next key \end{itemize}
+
+In the case of a column chain, the keys are row identifiers.   In the case of a row chain, the keys are column identifier.  This structure is similar to a matrix and can be represented by a matrix.  The essential thing for the chain is the arrangement of the array lists.  Zero values are not allowed, and thus order and index keys must be maintained.  
+
+What has this to do with sparse matrix multiplication?  The left matrix is transformed into a row chain and the right matrix is transformed into a column chain.  Each value of the result matrix is simply a multiplication of the row vectors in the left matrix by the column vectors in the right matrix.  With the chain structure, it simply row links times the column links.  Only elements with matching keys are allowed to be multiplied together.  The rest are assumed to be zero, and thus no action is taken.  The sum of the multiplies is the result.  The multiplication procedure is as follows:
+
+\begin{enumerate}\item Matrix Chain Multiply
+\begin{enumerate}\item Arguments: left matrix chain (A) and right matrix chain (B)
+\item Results: Result matrix\end{enumerate}
+\begin{itemize}\item $\forall i \in R.row$
+\begin{itemize}\item $\forall j \in R.col$
+\begin{itemize}\item $R_{i,j} = CM( A[i], B[j]) $  
+\item ---- Note that CM is the chain multiply procedure.  \end{itemize}\end{itemize}\end{itemize}
+
+\item Chain Multiply
+\begin{enumerate}	\item Arguments:  row link (r) and column link (c)
+	\item Output:  Double result: total	\end{enumerate}
+	\begin{itemize}		\item rlimit = r.size;
+		\item climit = c.size;
+		\item i = j = 0;
+		\item total = 0.0
+		\item while both ( i < rlimit) and (j < climit)
+		\begin{itemize}			\item if ( r[i]. key == c.key[i]) total += r[i].value * c[i].value;
+			\item find next matching keys:
+				\begin{itemize}					\item if ( r[i].key < c[i],key) i++;
+					\item else if ( c[j].next < r[i].key) j++;				\end{itemize}		\end{itemize}	\end{itemize}\end{enumerate}
+					
+For the Matrix Chain Multiply the complexity is $O(N^2)$.  For the chain multiply, the complexity is $O(M)$ where M is the larger length of the two links.  Thus total complexity is $O(N^2 + N)$ since M's largest size is N.  This a general and simple algorithm for sparse matrix multiplication of matrix chains.  Of course the chore of loading the matrix chains is $O(N^2)$ per matrix.  Thus total cost is on the order of $O(3N^2 +N)$.  This is still significantly less than conventional matrix multiplication's complexity of $O(N^3)$.

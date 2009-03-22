@@ -1,0 +1,375 @@
+\documentclass[11pt]{book}
+\usepackage{graphicx}
+%\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{doublespace}
+\usepackage{epstopdf}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `basename #1 .tif`.png}
+
+\textwidth = 6.5 in
+\textheight = 9 in
+\oddsidemargin = 0.0 in
+\evensidemargin = 0.0 in
+\topmargin = 0.25 in
+\headheight = 0.3 in
+\headsep = 0.30 in
+\parskip = 0.2in
+\parindent = 0.2in
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}{Definition}
+
+\title{Critic of Fast Approximate Factor Analysis}
+\author{Daniel D. Beatty}
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+
+\chapter{Karhunen-Lo$\grave{e}$ve / Singular Value Decomposition}
+Algorithm equivalence: singular value decomposition = factor analysis = principle component analysis = Karhunen-Lo$\grave{e}$ve transform
+
+``SVD has  algebraic  interpretation (finding the eigenvalues of a matrix) and an analytic interpretation (finding the minimum of a cost function over the set of orthogonal matrices).''
+
+ ``Two problems solved by  principle orthogonal decomposition.  First, distinguishing elements from a collection by making d measurements.  Second, inverting a complicated map from a p-parameter configuration space to d-dimensional measurement space. '' 
+
+``The problem is efficently distinguishing elements from a collection by making d measurements.''
+
+ ``Similarity of problems:\begin{itemize}\item Problem 1: Distinguising elements:  The goal is find a discrete object given description in $R^d$.  \item Problem 2: Inverting a complicated map from $R^p$ to $R^d$.  The goal is to find the parameters of $R^p$ from the descripttion in $R^p$. ''\end{itemize}
+ ``Combinations of measurements which root out the underlying parameters are called principle (orthogonal) components or factors which are computed by the SVD.  The SVD in conventional form is an $O(d^3)$''
+
+`` The principle orthogonal or Karhunen-Lo$\grave{e}$ve coordinates for an ensemble $X=\{X_n \in R^d : n=1, \ldots , N\}$ correspond to the choice of axes in $R^d$ which minimizes the volume of the variance ellipsoid.''
+
+
+``the Karhunen-Lo$\grave{e}$ve basis eigenvectors are also called principle orthogonal components or principal factors, and computing them for a given ensemble X is also called factor analysis.''
+
+Question is what is the relevance of autocovariance in this analysis.  
+
+``The adjoint of K is the matrix that changes the standard coordinates into the Karhunen-Lo$\grave{e}$ve coordinates.  This mapping is the Karhunen-Lo$\grave{e}$ve Transform.''
+
+``Finding these eigenvectors requires diagonalizing a matrix of order d, which has complexity $O(d^3)$.''
+
+``Suppose that the Karhunen-Lo$\grave{e}$ve eigenvectors has an optimization over the set of orthogonal transformations of the original ensemble X.''
+
+ ``It is possible to build a library of more than $2^d$ fast transforms U of $R^d$ to use for ``x" points.'Question:  What does this mean?  
+ This means that wavelets can be used to construct the fast transforms U which make up the ``x'''.  From these basis, a particular wavelet basis can be selected as the best choice.  Or so this idea is implying.
+ 
+
+A few defined terms :
+\begin{itemize}\item $U$ is an orthogonal $d\times d$ matrix
+\item $Y=UX$ is short hand for $Y_n = UX_n \forall n \in Z \cup [1,N]$
+\item $R^d$ indicates a set of $d \times d$ matrices\end{itemize}
+
+% ``It is possible to build a library of more than $2^d$ fast transforms U of $R^d$ to use for "x" points.''
+
+%watch out for swelden's 6th chapter of his disertation
+``This paper uses a notion of closeness that is derived from the function minimized by the Karhunen-Loeve transform.''
+
+Question:  What does this mean?  How does one identify an algorithm that is the closest to the Karhunen-Lo$\grave{e}$ve bases.  
+
+``Transform coding gain for an orthogonal matrix is defined by:
+\begin{itemize}\item $H(X) = \frac{1}{d} \sum\limits^d_{i=1} \log \sigma (X)(\imath) $
+\item $G_{TC} (U) = \frac {Var(UX)}{e^{H(UX)}} $''\end{itemize}
+
+``H has various interpretations.  It is the entropy of the direct sum of d independent Gaussian random variables with variances $\sigma(X)(\imath), i=1,\ldots,d$''
+\section{Approximate Factor Analysis}
+"The approximate factor analysis algorithm is the search through a library of orthonormal basis for the one whose H is closest to that of the Karhunen-Lo$\grave{e}$ve basis, and cases of fast search methods the result is a fast approximate Karhunen-Lo$\grave{e}$ve algorithm.  "
+
+``The metric `closeness' of a basis U to the Karhunen-Lo$\grave{e}$ve basis K can be measured by computing the transform coding gain of U and subtracting that of K:
+
+$dist_X (U,V)=|H(U,X)-H(V,X)|$"
+
+"This metric is considered degenerate metric on the orthogonal group since it gives a distance of zero between bases which have the same transform coding gain for X''
+
+``A minimum for H(VX) is the Karhunen-Lo$\grave{e}$ve basis V=K, so minimizing H(UX) over fast transforms U is equivalent to minimizing $dist_X(U,K)$ : it finds the closest fast transform for this ensemble in the transform coding sense.  ''
+
+Note:  This distance measure produces a problem in defining which orthonormal basis to chose.  The premise is to find a basis whose transform coding gain metric is closest to the KL transform's.  One way to consider this a data structure is that maintains the basis in each resolution.  This would be a highly memory intensive problem. 
+
+One method is to make a binary tree.  However, arrangement of this binary tree is at issue, and is certainly not clear.  How are the elements to be arranged in this tree?  
+
+Conceivably, the tree could be arranged such that each element in the tree has an array that is representative of component.  Each left child would contain the average component.  Each right child would contain a difference component.  The root element would contain the original array.   This is one possibility.  However, it is memory intensive.  
+
+\section{The Entropy Metric }
+The entropy of U is computed by
+\begin{itemize}\item $\mathcal{H}(U) = - \sum\limits^d_{i=1} \sum\limits^{d}_{j=1} |U(\imath , \jmath)|^2 \log (|U(\imath , \jmath)|^2) $
+\item defined for the inequality  $0\le \mathcal{H}(U) \le d\log d$\end{itemize}
+
+
+
+``$\mathcal{H}$ is a functional on O(d) , the compact Lie group of orthogonal linear transformations of $R^d$.''
+
+Question:  What is a compact Lie group of orthogonal transformations?
+
+%Defined (Merian-Webster) entropy  a measure of the unavailable energy in a closed thermodynamic system that is also usually considered to be a measure of the system's disorder and that is a property of the system's state and is related to it in such a manner that a reversible change in heat in the system produces a change in the measure which varies directly with the heat change and inversely with the absolute temperature at which the change takes place; broadly : the degree of disorder or uncertainty in a system
+
+
+``The entropy metric on the orthogonal group is the function 
+
+$dist(U,V) = dist_O (U,V) \stackrel{def}{=} \sqrt{\mathrel{H}(U\cdot V)}$''
+
+\chapter {The approximate KL Transform}
+Otherwise called the library of rapidly computable orthonormal wavelet packet bases which are geared to address the KL Transform.  These are constructed to take advantage of the rapid growth of the number of subtrees of a binary tree.  
+
+Question: What is a QF?  
+
+``H and G are applied recursively a total of L times to get a complete wavelet packet analysis down to level L.  We arrange the resulting sequences into a binary tree, which now contains very many basis subsets.''  
+
+%Question: What is the arrangement these wavelet packets take in the binary tree.  Technically they are already in array.  
+
+Given:
+\begin{itemize}\item Signal $x=\{x_0, \ldots , x_{d-1}\} $ such that $ d= M2^L$
+\item A complete wavelet packet down to level L
+\item An arrangement to place the resulting sequences in a binary tree.\end{itemize}
+
+Question: This arrangement is very vague.  How are the wavelet packets to be arranged?  
+
+
+Supposition:  ``Suppose that the sequence of coefficients in block  f of level s for signal $X_n$ isdesignated as $\lambda^{(n)}_{s,f} (p)$.   We then sum the coefficients of the N signal trees into two accumulator trees in location p of block f at level s which are as follows:
+\begin{itemize}
+\item a tree of means which contains $\sum\limits^{N-1}_{n=0}\lambda^{(n)}_{s,f} (p)$
+\item a tree of squares which contains $\sum\limits^{N-1}_{n=0}(\lambda^{(n)}_{s,f} (p))^2$\end{itemize}
+
+Question:  From what arrangement, and block of sequences do these means and squares trees come from?  It would seem that arrangement would be a crucial issue, and this is treated like a magic hand wave.  
+
+``Cost of computing all of the blocks in an L-level tree starting from d samples is $O(dL)=O(d\log d)$ operations for a random vector.  If there N vectors, then the total search is $O(Nd\log d)$.''
+
+``A  binary tree of variances at index p of block f at level s can be produced.''
+
+``The tree of variances may now be searched for the graph basis which minimizes the transform coding gain.''
+ 
+ 
+ Finding the approximate Karhunen-Lo$\grave{e}$ve basis 
+ \begin{itemize}\item Expand N vectors $\{X_n \in R^d : n = 1,2, \ldots ,N\}$ into wavelet packets coefficients: $O(Nd\log d)$
+ \item Summing squares into the variance tree: $O(d \log d)$
+ \item Searching the variance tree for a best basis: $O(d+d\log d)$
+ \item Sorting the best basis vectors into decreasing order $O(d \log d)$
+ \item Diagonalizing the auto-covariance matrix of the top $d^\prime$ best basis vectors $O({d^\prime}^3)$\end{itemize}
+
+Total complexity of the Approximate Karhunen-Lo$\grave{e}$ve basis: $O(Nd\log d + {d^\prime}^3)$.  Since $d^\prime \ll d$, it safe to say the approximate solution is faster than the conventional one. 
+
+The approximate Karhunen-Lo$\grave{e}$ve transform of one vector 
+\begin{itemize}\item Computing the wavelet packet coefficients of one vector $O(d \log d)$
+\item Applying the $d^\prime \times d^\prime$ matrix $K^{\prime \ast}$ : $O({d^\prime}^2)$\end{itemize}
+
+Updating the approximate Karhunen-Lo$\grave{e}$ve basis 
+\begin{itemize}\item Expanding one vector into wavelet packet coefficients 
+\item Adding the coefficients into the means tree
+\item Adding the squared coefficients into the squares tree
+\item Forming the variance tree and computing the new information costs
+\item Searching the variance tree for the joint best basis\end{itemize}
+The classification in large data sets apply to both rogues' gallery problem, fingerprint classification problem, and rank reduction for complex classifiers.  
+
+
+\chapter {Jacobians of complicated maps}
+
+Problems with numerical computation of Jacobian are: difference quotiient is ill-conditioned, the Jacobian might itself be an ill-conditioned matrix, and few methods of estimating the condition number of J. If it is replaced by an approximation based on the KL transform for the positive matrix JJ*, what happens?  The hypothesis is that the error soley exists in the approximation.  The first Justification for this hypothesis is that the KL transform is orthogonal and perfectly condition in its very nature.  The SVD of J*J provides an estimation of the condition number of J.  $cond(J) =\sqrt{cond(j*J)} = \sqrt{\mu_1/\mu_p}$ such that $\mu_1$ is the first singular value and $\mu_p$ is the nth singular value of the estimate J*J.  
+
+Note May 21, 2003: 
+Discussion with Dr. Eric Sinzinger:
+The issue with KL transform is to establish a set of common features, and extractions from a set of basis functions.  Of course, the KL is using this against a system matrix for which is already a basis for.  
+
+The idea of KL via wavelets is to use a series wavelet transforms against the basis functions to represent the original with fewer elements.  In this basis set, the basis vectors are a collective set.  Therefore, the selection of the wavelet pattern has be a close approximation to the original to be valid.  Therefore a comparison is made based on a collective variance (recall that variance is a statistical property and related to standard deviation. $\sum_i (x_i -\bar{x})^2$)  The wavelet packet sequence whose pattern which achieves the best sparse-and-closeness combination is then used for the calculation of the KL transform.  
+
+The above method is also valid against the SVD.  Thus it may be very valuable.  
+
+Dr. Sinzinger iterated the point, that focus on my first two objectives (Matrix Multiplication and Matrix Inversion) and possibly PDE's should be my primary focus.  For academic purposes I agree with him.  However, there must be balance between academics and the job that is paying me.  
+
+Dr. Sill points out to me that funding is being provided for me via SDSS and Microsoft.  
+
+In the mean time, the objective is short description on wavelet based matrix multiplication, and general look at the problem.  
+
+\chapter{Wavelet Based Matrix Multiplication}
+The idea is to make a dense collection of wavelet packets $\mathcal{W}(R)$ such that it is dense in $L^2(R)$.  Naturarlly this occurs with the Haar Wavelet.  Could also be ported to other wavelet schemes such as Daub4 or Coeffliets?
+
+There is an ordering of wavelet packets that is proposed by FAFA.  A lexicography is defined from left to right for packet frequency, scale, and position.  There is also an adjoint order that exchanges order.  ``The adjoint order $<*$ just exchanges X and Y indicies $\psi_X \otimes \psi_Y <* \psi^\prime_X \otimes \psi^\prime_Y$ if and only if $\psi_Y \otimes \psi_X <* \psi^\prime_Y \otimes \psi^\prime_X$.  It is a total order.''
+
+What about projections?  
+
+Claim:
+``There is also a natural injection $J^1:L^2(R) \to W^1$ given by $J^1x=\{\lambda_{sf} (p)\}$ for $x \in L^2(R)$ with $\lambda_{sf} = <x,\psi^<_{sfp}>$ being the sequence of backwards inner products with functions in $W(R)$.  If B is a basis subset, then the composition $J^1_B$ of $J^1$ with projection onto the subsequences indexed by B is also injective.  $J^1_B$ is an isomorphism of $L^2(R)$ onto $l^2(B)$, which is defined to be the square-summable sequences of $W^1$ whose indices belong to B.''
+
+
+Claim: There is an inverse matrix mapping  $R^1:W^1\to L^2(R)$ defined by:
+$R^1\lambda(t) = \sum\limits_{(s,f,p)\in Z^3} \bar{\lambda}_{sf}(p)\psi^{\prime <}_{sfp}(t)$.
+
+What about applying operators to vectors?
+Notation used was letting X and Y be two named copies of R.  Here $x\in L^2(R)$ is a vector whose coordinates with respect to wavelets and wavelet packets form the sequence: $J^1x = \{ \langle x, \psi^<_X\rangle : \psi_x \in \mathcal{W}(X)\} $.  Also included in the notation is a Hilbert-Schmidt operator ( $M:L^2(X)\to L^2(Y)$ .) 
+
+Question: What does this Hilbert-Schmidt operator have to do tensor products?  The claim is that with respect to the complete set of tensor products wavelet packets from the sequence $J^2M = \{\langle M, \psi^<_X \otimes \psi ^<_Y\rangle : \psi_X\in \mathcal{W}(X), \psi _Y \in \mathcal{W}(Y) \}$.  Supposedly this tensor product leads to the identity:
+
+$\langle Mv , \psi^<_Y\rangle = \sum\limits_{\psi_x \in \mathcal{W}(X)} \langle M, \psi^<_X \otimes \psi^<_Y\rangle \langle x, \psi^<_X\rangle $.
+
+
+Question:  What is meant by the statement, ``This identity generalizes to a linear action of $\mathcal{W}^2$ on $\mathcal{W}^1$ defined by $c(x)_{sfp} = \sum\limits_{(s^\prime f^\prime p^\prime)} \lambda_{sfps^\prime fp^\prime } v_{s^\prime f^\prime p^\prime}$.'' with all of its confusing subscripts.  I am presuming that a linear action includes a matrix multiply, since a matrix is of $R^{N^2}$ 
+
+Question: What is meant by ``We can lift the action of M on x to these larger spaces via the commutative diagram?''  His diagram included :
+
+\begin{center}
+\begin{minipage}{5cm}
+
+
+\mbox {$\mathcal{W}^1 \stackrel {J^2_B M}{\to} \mathcal{W}^1$}
+
+\mbox { $J^1 \uparrow \bigcirc  \downarrow R^1$ }
+
+\mbox {$L^2(R)  \stackrel{M}{\to} L^2(R)$ }
+
+
+\end{minipage}
+
+\end{center}
+
+
+FAFA Example of Matrix Multiplication 
+The illustration considers nonstandard multiplication by square matrices of order 16.  In particular, wavelets were used to obtain a ``best isotropic basis'.'   What does this mean?  
+
+\chapter {Matrix Multiplication Second Look}
+Chosen Wavelet for example is the Haar Wavelet.  Wavelet packets are chosen for the multi-resolution method.  The key to this method is the best basis (by variance).  
+
+There is a ordering given to wavelet packets, in lexical order.  The lexicographical order is read from left to right, based on scale, frequency, and position.  This basis displayed in a tree.  
+\begin{itemize}\item Each level is 1 scale
+\item Each leaf is a low pass and high pass filter from its respective parent.  
+\item The prime element for each leaf is an array which is a condensed version of the original.  \end{itemize}
+
+This can be applied in the 2-D world with tensor products which are designated mathematically as:
+
+\begin{center}
+$\psi_X = \otimes \psi_Y$
+\end{center}
+
+The lexicographical rules apply this inequality:
+
+\begin{center}
+$\psi_X = \otimes \psi_Y < \psi^\prime_X = \otimes \psi^\prime_Y $
+\end{center}
+\begin{itemize}\item $x < x^\prime$ 
+\item $ x = x^\prime $ and $ y < y^\prime$\end{itemize}
+
+If either of these are true then the inequality is true, too.
+
+As far as practical wavelet components are concerned, this is represented in a quad tree.  The leaves lexicography is such that the leaves have two possible orders:
+\begin{enumerate}\item A-H-V-D applies if the average is in top left corner 
+\item H-A-V-D applies if the average is in the lower left corner of the transform matrix
+\item D-V-H-A applies if the average is in the lower right corner of the transform matrix\end{enumerate}
+
+The claimed isomorphism 
+
+
+\begin{itemize}\item Natural injection in vector/ 1-D space
+\item $J:L^2(R) \to W^1$
+\item $J^1x = \{\lambda_{sf} (p) \}$ such that $\lambda_{sf}$ is a wavelet packet
+\item Indexing of position can be based on the basis set.
+\item There is also an inverse map, too (inverse transform.) 
+\item Conclusion: These are mathematical representations\end{itemize}
+
+Natural Injection in matrix/ 2-D array for objects in $L^2(R^2)$
+\begin{itemize}\item Hilbert Schmidt operators $M\to <M_j , \psi_X \otimes \psi_j>$
+\item Increase operators exist $R^2 : W^2 \to L^2(R^2)$\end{itemize}
+
+Identity generalization of $W^2 \to W^1$  
+$<Mv,\psi^<_X > = \sum_\mu <M, \psi^<_X \otimes \psi^<_Y><x,\psi^2_X>$
+
+Some how there is a lifting act such that the choice of R (filter $\psi$ index scheme) ``can reduce the complexity of map $J^2_B M$ and therefore the complexity of the operator applications.''
+
+linear Action $W^2\to W^1$ defined: 
+
+$c(x)_{sfp} = \sum\limits_{(s^\prime f^\prime p^\prime )} \lambda_{sfp s^\prime f^\prime p^\prime} v_{s^\prime f^\prime p^\prime }$
+
+\begin{enumerate}\item Inject domain space into a ?$16\log 16$? dimensional space by expansion into the complete domain wavelet packet analysis tree (bottom)
+\item Multiply the injected elements elements with the best basis coefficients in the center matrix square.
+\item Sum the products into range wavelet packet synthesis tree.
+\item Project the range wavelet pocket synthesis into 16 dimensional range space by the adjoint of wavelet packet expansion.  \end{enumerate}
+
+\section {Conventional Matrix Multiplication}
+Conventional multiplication is spelled out as
+
+$c_{i,j} = \sum\limits_k a_{i,k} b_{k,j}$
+
+For a $2 \times 2$ matrix, there is the following:
+\[\left(\begin{array}{ccc}  a_{1,1}&  a_{1,2} &   \\ a_{2,1} &  a_{2,2} &   \end{array}\right)
+\left(\begin{array}{ccc}  b_{1,1}&  b_{1,2} &   \\ b_{2,1} &  b_{2,2} &   \end{array}\right) =
+\left(\begin{array}{ccc}  a_{1,1} b_{1,1} + a_{1,2} b_{2,1}&  a_{1,1}b_{1,2} + a_{1,2}  b_{2,2} &   \\ a_{2,1} b_{1,1} + a_{2,2} b_{2,1} &  a_{2,1} b_{1,2} + a_{2,2} b_{2,2} &   \end{array}\right)\]
+
+For a wavelet transform on both matrix A and B, the results are:
+
+\[
+W(A) = \frac{1}{2} \left(\begin{array}{ccc}  a_{1,1} + a_{2,1} + a_{1,2} + a_{2,2} &  a_{1,1} + a_{2,1} - a_{1,2} - a_{2,2} &   \\ a_{1,1} - a_{2,1} + a_{1,2} - a_{2,2} &  a_{1,1} - a_{2,1} - a_{1,2} + a_{2,2} &   \end{array}\right)
+\]
+
+\[
+W(B) = \frac{1}{2} \left(\begin{array}{ccc}  b_{1,1} + b_{2,1} + b_{1,2} + b_{2,2} &  b_{1,1} + b_{2,1} - b_{1,2} - b_{2,2} &   \\ b_{1,1} - b_{2,1} + b_{1,2} - b_{2,2} &  b_{1,1} - b_{2,1} - b_{1,2} + b_{2,2} &   \end{array}\right)
+\]
+
+To state $W(A)$ and $W(B)$ simply:
+\[
+W(A) = \left(\begin{array}{ccc}  w^a_{1,1}&  w^a_{1,2} &   \\ w^a_{2,1} &  w^a_{2,2} &   \end{array}\right)
+\]
+\[
+W(B) = \left(\begin{array}{ccc}  w^b_{1,1}&  w^b_{1,2} &   \\ w^b_{2,1} &  w^b_{2,2} &   \end{array}\right)
+\]
+
+The product of the averages:
+
+$w^a_{1,1} w^b_{1,1} = \frac{1}{4} (
+b_{1,1} a_{1,1} + b_{1,1} a_{2,1} + b_{1,1} a_{1,2} +b_{1,1} a_{2,2}  
++ b_{2,1} a_{1,1} + b_{2,1} a_{2,1} + b_{2,1} a_{1,2} +b_{2,1} a_{2,2}  
++ b_{1,2} a_{1,1} + b_{1,2} a_{2,1} + b_{1,2} a_{1,2} +b_{1,2} a_{2,2} 
+ + b_{2,2} a_{1,1} + b_{2,2} a_{2,1} + b_{2,2} a_{1,2} +b_{2,2} a_{2,2}  )$
+
+The product of vertical 
+
+$w^a_{1,1} w^b_{1,1} = \frac{1}{4} (
+b_{1,1} a_{1,1} + b_{1,1} a_{2,1} -  b_{1,1} a_{1,2} - b_{1,1} a_{2,2}  
++ b_{2,1} a_{1,1} + b_{2,1} a_{2,1} - b_{2,1} a_{1,2} - b_{2,1} a_{2,2} 
+ - b_{1,2} a_{1,1} - b_{1,2} a_{2,1} + b_{1,2} a_{1,2} +b_{1,2} a_{2,2} 
+  - b_{2,2} a_{1,1} - b_{2,2} a_{2,1} + b_{2,2} a_{1,2} +b_{2,2} a_{2,2}  )$
+
+
+The product of the horizontal
+
+ $w^a_{1,1} w^b_{1,1} = \frac{1}{4} (
+ b_{1,1} a_{1,1} - b_{1,1} a_{2,1} + b_{1,1} a_{1,2} - b_{1,1} a_{2,2}  
+ - b_{2,1} a_{1,1} + b_{2,1} a_{2,1} - b_{2,1} a_{1,2} + b_{2,1} a_{2,2}  
+ +  b_{1,2} a_{1,1} - b_{1,2} a_{2,1} + b_{1,2} a_{1,2}  - b_{1,2} a_{2,2}  
+ -  b_{2,2} a_{1,1} + b_{2,2} a_{2,1} - b_{2,2} a_{1,2} +b_{2,2} a_{2,2}  )$
+
+The product of the diagonal
+
+$w^a_{1,1} w^b_{1,1} = \frac{1}{4} (
+b_{1,1} a_{1,1} - b_{1,1} a_{2,1} - b_{1,1} a_{1,2} +b_{1,1} a_{2,2} 
+- b_{2,1} a_{1,1} + b_{2,1} a_{2,1} + b_{2,1} a_{1,2} -b_{2,1} a_{2,2}  
+- b_{1,2} a_{1,1} + b_{1,2} a_{2,1} + b_{1,2} a_{1,2} -b_{1,2} a_{2,2}  
++ b_{2,2} a_{1,1} - b_{2,2} a_{2,1} - b_{2,2} a_{1,2} +b_{2,2} a_{2,2}  )$
+
+The section multiplication is defined:
+\[ W(A) \stackrel{+}{*} W(B) = \left(\begin{array}{ccc} w^a_{1,1} w^b_{1,1} & w^a_{1,2} w^b_{1,2}   &   \\ w^a_{2,1} w^b_{2,1} & w^a_{2,2} w^b_{2,2}   &   \end{array}\right)\]
+
+The inverse wavelet transform of the section multiply is:
+
+\[ W^{-1} ( W(A) \stackrel{+}{*} W(B)) = \frac{1}{2}\left(\begin{array}{ccc} (w^a_{1,1} w^b_{1,1} + w^a_{1,2} w^b_{1,2}  +   w^a_{2,1} w^b_{2,1} + w^a_{2,2} w^b_{2,2} )&  (w^a_{1,1} w^b_{1,1} - w^a_{1,2} w^b_{1,2}  +   w^a_{2,1} w^b_{2,1} - w^a_{2,2} w^b_{2,2}) &   \\(w^a_{1,1} w^b_{1,1} + w^a_{1,2} w^b_{1,2}  -   w^a_{2,1} w^b_{2,1} - w^a_{2,2} w^b_{2,2} ) &   
+(w^a_{1,1} w^b_{1,1} - w^a_{1,2} w^b_{1,2}  -   w^a_{2,1} w^b_{2,1} + w^a_{2,2} w^b_{2,2} )\end{array}\right)\]
+
+\[ \frac{1}{2}
+\left(\begin{array}{ccc} (w^a_{1,1} w^b_{1,1} + w^a_{1,2} w^b_{1,2}  +   w^a_{2,1} w^b_{2,1} + w^a_{2,2} w^b_{2,2} )&  (w^a_{1,1} w^b_{1,1} - w^a_{1,2} w^b_{1,2}  +   w^a_{2,1} w^b_{2,1} - w^a_{2,2} w^b_{2,2}) &   \\(w^a_{1,1} w^b_{1,1} + w^a_{1,2} w^b_{1,2}  -   w^a_{2,1} w^b_{2,1} - w^a_{2,2} w^b_{2,2} ) &   
+(w^a_{1,1} w^b_{1,1} - w^a_{1,2} w^b_{1,2}  -   w^a_{2,1} w^b_{2,1} + w^a_{2,2} w^b_{2,2} )\end{array}\right)
+\]
+
+
+
+\subsection {Multiplication version }
+$w^a_{11}w^b_{11} +w^a_{12} w^b_{21} =$ 
+
+\[
+W(A) = \left(\begin{array}{ccc}  w^a_{1,1}&  w^a_{1,2} &   \\ w^a_{2,1} &  w^a_{2,2} &   \end{array}\right)
+\]
+\[
+W(B) = \left(\begin{array}{ccc}  w^b_{1,1}&  w^b_{1,2} &   \\ w^b_{2,1} &  w^b_{2,2} &   \end{array}\right)
+\]
+
+\begin{thebibliography}{99}
+\bibitem {victor} Mladen Victor Wickerhauser \textsl {Adapted Wavelet Analysis from Theory to Software} copyright 2001 by the Society for Industrial and Applied Mathematics Philadelphia, PA 19104-2688
+\end {thebibliography}
+
+\end{document}

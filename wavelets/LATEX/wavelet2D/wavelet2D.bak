@@ -1,0 +1,181 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Created=Thu Feb 20 14:24:52 2003}
+%TCIDATA{LastRevised=Thu Feb 20 23:10:35 2003}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="General\Blank Document">}
+%TCIDATA{CSTFile=LaTeX article (bright).cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+
+\section{Class 2-D Wavelet: Complete Form}
+
+\bigskip Many concepts are evident in the convolution method wavelet
+transforms. \ Why? \ It is true that a simple matrix multiply can also
+provide means of transformation. \ However, a convolution provides a simpler
+concept. \ One goal of these experiments is to measure computational
+strength of each method. \ 
+
+\bigskip A transform must take a given matrix, and produce a result which
+contains four components: average, vertical, horizontal and diagonal
+difference. \ The can be done by either over complete or complete one
+dimensional wavelet transform means. \ 
+
+\bigskip The over complete is addressed in the next class. \ A complete
+transform method returns a result matrix which is the same size as the
+source matrix. \ The result contains the four compoents. \ Each compoent
+resides on 4 corners of the matrix. \ Given a matrix B, the transform is to
+yield the following form:
+
+\qquad $B\Rightarrow 
+\begin{array}{cc}
+H & D \\ 
+A & V
+\end{array}
+$
+
+\qquad where A is the average matrix, H is the horizontal matrix, V is the
+vertical compoent, and D is the Difference Matrix. \ \ \ Why could this
+transform have the form:
+
+$\qquad B\Rightarrow 
+\begin{tabular}{ll}
+$A$ & $V$ \\ 
+$H$ & $D$%
+\end{tabular}
+$ 
+
+\bigskip In truth, it is not obvious. \ In the first transform has the A
+compoent as the row and column average. \ So it is in the second. \ In both
+cases, V is the result of the difference row wise, and average column wise.
+\ Like wise, H is the average of the rows, and difference of columns. \
+Finally, D is the difference of rows and difference of the columns. \ \
+Furthermore, each case involve piping the results of row operation into the
+column operations or vise-versa. \ 
+
+\bigskip This set of classes uses the first. \ Only reason for choosing such
+a method at the time of this classes construction is convention. \ \ Such a
+convention allows a standard comparision for accuracy, on a known solution.
+\ Further classes are to explore results via non-conventional means. \ Also,
+it is hoped that properties of each method will be revealed. \ \ \ 
+
+This class provides three functions. \ The column wavelet provides a
+transform solely on the columns. \ The row wavelet likewise, provides a
+wavelet transform on each of the rows. \ The 2-D\ wavelet transform is
+simple a row wavelet followed by a column wavelet transform. \ 
+
+It should be noted that these wavelet transforms are Haar Wavelet
+transforms.. Multiple resolutions functions can be made, but again it is
+still the Haar Wavelet at the core. \ Other class clones may be produced to
+use other wavelet basis such as Daubachie or Coeflet. \ 
+
+Another support class required for support of the two dimensional wavelet is
+the image reader/ writer. \ Such a class of functions provide means of
+acquiring data for a matrix to be computed. \ Granted this matrix could have
+been populated by other means. \ Generating such a class consumed some time
+on this project. \ The reason is that there a few mechanisms for doing this.
+\ One is to use raw image types. \ These types are known as by their
+extensions: pgm and ppm. \ Another popular mechanism is Image Magick. \ The
+reason for Image Magick is that it is available on most UNIX platforms
+(Linux, IRIX, Solaris, and Mac OSX). \ Otherwise, schemes such as Apple's
+Quicktime would be used. \ The other reason for the use of other software to
+acquire the image is that the objective of this class is not produce image
+translators for each image type imaginable. \  
+
+\subsection{\protect\bigskip Method: Column Wavelet Transform}
+
+The column wavelet transform is provides a source matrix, and returns a
+result. \ In order to yield this result, each column is extracted into a
+vector and that vector is fed into a one-dimensional transform. \ The result
+of the one dimensional transform is placed the corresponding row of the
+result matrix. \ Mathematically, this algorithm is as follows:
+
+\qquad $\forall j\in col$
+
+\qquad \qquad n = 0
+
+\qquad \qquad $\forall i\in row$ in reverse order
+
+\qquad \qquad \qquad $S_{n++}=$source$_{i,j}$
+
+\qquad \qquad $S$ $\overset{W}{\Rightarrow }R$
+
+\qquad \qquad n = 0
+
+\qquad \qquad $\forall i\in row$ in reverse order
+
+\qquad \qquad \qquad result$_{i,j}$ \ = $R_{n++}$
+
+\bigskip Note that the need for the n index is keep the order straight for
+this wavelets convention. \ 
+
+\bigskip 
+
+\subsection{Method: Row Wavelet Transform}
+
+\bigskip Like the column wavelet transform, the row wavelet transform takes
+a source matrix and returns a resulting matrix. \ The only two significant
+differences are first the items being operated on (rows not columns). \
+Second, the lack of need for the n index. \ 
+
+\qquad $\forall i\in row$
+
+\qquad \qquad $\forall j\in col$ 
+
+\qquad \qquad \qquad $S_{j}=$source$_{i,j}$
+
+\qquad \qquad $S$ $\overset{W}{\Rightarrow }R$
+
+\qquad \qquad n = 0
+
+\qquad \qquad $\forall j\in col$ in reverse order
+
+\qquad \qquad \qquad result$_{i,j}$ \ = $R_{j}$
+
+\subsection{Method:Wavelet Transform}
+
+\bigskip As stated above, the two dimensional wavelet transform is simply
+row wavelet transform followed by a column wavelet transform. \ It could
+have been done in reverse order. \ However, the result would be the same. \ 
+
+Just of note, this class lacks for the moment an inverse transform function.
+\ Not that such a thing does not exist mathematically. \ It simply was not
+implemented at the time of this document. \ 
+
+\bigskip 
+
+\bigskip 
+
+\section{Class 2-D Wavelet Over Complete}
+
+\end{document}

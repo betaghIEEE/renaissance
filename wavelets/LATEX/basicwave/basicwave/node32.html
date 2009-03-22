@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 99.2beta8 (1.43)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Algorithm</TITLE>
+<META NAME="description" CONTENT="Algorithm">
+<META NAME="keywords" CONTENT="basicwave">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v99.2beta8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="basicwave.css">
+
+<LINK REL="previous" HREF="node31.html">
+<LINK REL="up" HREF="node29.html">
+<LINK REL="next" HREF="node33.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html507"
+  HREF="node33.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html503"
+  HREF="node29.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html499"
+  HREF="node31.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html505"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html508"
+  HREF="node33.html">2-D Wavelet Transform Class</A>
+<B> Up:</B> <A NAME="tex2html504"
+  HREF="node29.html">Procedure: Haar Wavelet Inverse</A>
+<B> Previous:</B> <A NAME="tex2html500"
+  HREF="node31.html">Output</A>
+ &nbsp <B>  <A NAME="tex2html506"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00076300000000000000">
+Algorithm</A>
+</H3>
+There is a difference between the current algorithm and the ideal algorithm which may be the source of error.  This algorithm uses the following symbols to aide in its description:
+
+<UL>
+<LI>S is the source myVector
+</LI>
+<LI>A is the average term for which  <BR>
+</LI>
+<LI>D is the difference term for which <!-- MATH
+ $D_i = S_{i+l/2}$
+ -->
+ <BR>
+</LI>
+<LI>l is the length of S
+</LI>
+</UL>
+
+<P>
+The first version has the following algorithm:
+
+<P>
+
+<OL>
+<LI>Initialize the result, R.
+</LI>
+<LI><!-- MATH
+ $\forall i \in [0,\frac{l}{2}]$
+ -->
+	<!-- MATH
+ $R_{2i} = (A_i + D_i) \sqrt{ \frac{1}{2}}$
+ -->
+</LI>
+<LI><!-- MATH
+ $\forall i \in [0,\frac{l}{2}]$
+ -->
+	<!-- MATH
+ $R_{2i-1} = (A_i + D_i) \sqrt {\frac{1}{2}}$
+ -->
+</LI>
+</OL>
+
+<P>
+There is a problem with this method.  Let us start with the even values:   <!-- MATH
+ $R_0 = (A_0 + D_0 )\sqrt{1/2}$
+ -->
+.   Now the odd, not that <!-- MATH
+ $R_{-1}=(A_0 + D_0)\sqrt{1/2}$
+ -->
+ which of course does not exist.  Next, <!-- MATH
+ $R_1 = (A_1 - D_1)\sqrt{1/2}$
+ -->
+ is valid.   Lastly, <!-- MATH
+ $R_{l-1}=R_{2*(l/2) - 1} = (A_{l/2} - D_{l/2})\sqrt{1/2}$
+ -->
+.  The problem is that  and  do not exist.  Thus,  does not exist, either.  
+
+<P>
+
+<P><P>
+<BR>
+
+<P>
+<BR><HR>
+<ADDRESS>
+Daniel Beatty
+2003-06-04
+</ADDRESS>
+</BODY>
+</HTML>

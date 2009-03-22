@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 99.2beta8 (1.43)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>1-D to 2-D Method</TITLE>
+<META NAME="description" CONTENT="1-D to 2-D Method">
+<META NAME="keywords" CONTENT="basicwave">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v99.2beta8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="basicwave.css">
+
+<LINK REL="next" HREF="node7.html">
+<LINK REL="previous" HREF="node5.html">
+<LINK REL="up" HREF="node5.html">
+<LINK REL="next" HREF="node7.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html179"
+  HREF="node7.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html175"
+  HREF="node5.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html169"
+  HREF="node5.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html177"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html180"
+  HREF="node7.html">Vector - Matrix Method</A>
+<B> Up:</B> <A NAME="tex2html176"
+  HREF="node5.html">Proof of Concept</A>
+<B> Previous:</B> <A NAME="tex2html170"
+  HREF="node5.html">Proof of Concept</A>
+ &nbsp <B>  <A NAME="tex2html178"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00041100000000000000">
+1-D to 2-D Method</A>
+</H3>
+Both rows  1-D and 2-D and columns 1-D and 2-D transform are performed similarly.  The obvious difference is the indexing of rows and columns.  
+
+<P>
+Given 
+1-D wavelet transform
+
+<P>
+source matrix
+
+<P>
+Algorithm: (Row Transform)
+
+<P>
+<!-- MATH
+ $\forall i \in rows$
+ -->
+
+<UL>
+<LI><!-- MATH
+ $\forall j \in columns$
+ -->
+
+<P>
+</LI>
+<LI><!-- MATH
+ $S[j] \leftarrow source[i][j]$
+ -->
+	
+</LI>
+<LI><!-- MATH
+ $S \Rightarrow ^W  R$
+ -->
+</LI>
+</UL>
+
+<P>
+This principle of this algorithm is simple.  Only three intuitive steps are necessary per row or column.  Two of these steps are array transfers (row/column transfer to an array).  These arrays are fed into the 1-D transforms.  
+
+<P>
+However, the 1-D wavelet transform itself includes a series of memory allocation and deallocation operations.  Each memory call is at the minimum a system call.  
+
+<P>
+<BR><HR>
+<ADDRESS>
+Daniel Beatty
+2003-06-04
+</ADDRESS>
+</BODY>
+</HTML>
