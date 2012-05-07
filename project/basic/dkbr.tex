@@ -1,0 +1,41 @@
+\documentclass[11pt]{article}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+\textwidth = 6.5 in
+\textheight = 9 in
+\oddsidemargin = 0.0 in
+\evensidemargin = 0.0 in
+\topmargin = 0.0 in
+\headheight = 0.0 in
+\headsep = 0.0 in
+\parskip = 0.2in
+\parindent = 0.0in
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}{Definition}
+
+\title{Concept of a Grid Scientific Knowledge Base}
+\author{Daniel Beatty}
+\begin{document}
+\maketitle
+
+This project is a feasibility study on the concept of a Scientific  Knowledge Representation and Computational Service.  
+%This field of this research is a union of distributed computing, scientific computing, and computational intelligence represented by knowledge base representation.   
+The concept is produce a Grid/Distributed Knowledge Base  which is a service which considers the numerical libraries as services as well.    One characteristic of this Scientific Knowledge Base Service is the ability to use multi-level resource and data management to facilitate its goal.  If these distributed systems can be treated as collective of machines or simply a large computer, then principles of a large computer comes into play.    The semantics of such an KB must implicitly translate or contribute to some service oriented paradigm in a way to optimize use of these collectives.  
+
+The first steps in generating such a Scientific Knowledge Representation and Computing Service is to define and demonstrate what a multi-level resource is.  Next is to demonstrate an application using this service.  Finally, show how such an application can be improved both algorithmically, and conceptually in this form.  
+
+Chosen for these exercises are xGrid for the cluster manager,  Globus for the cluster interconnect, and SDSS for the application.   xGrid requires a simple API that can allow either cluster interconnection or application use of its resource fluently.  The SDSS project also requires its astro-tools converted to a framework which can be mobile and published as a service.  A framework is a collection of objects organized in a hierarchy.  
+
+\section{What are XGrid or Globus?}
+XGrid and Globus are middle ware packages which some of the basic functions of a Network Operating System.  Neither one of these packages completely implements enough functionality to be considered a Network Operating System on basis of simple operating systems.  However, there is process management, storage management, and communication methods for coordinating nodes on a network in some basic way.  
+
+What does this have to do with a Scientific Knowledge Base and Computation Service?  The middle-ware can still be thought of in terms of a Turing machine (even if incomplete).   Furthermore, semantics of such a Knowledge Representation and Reasoning system or its more basic form a Knowledge Base can be defined in terms that be executed in this middle ware.    
+
+Also, distributed jobs and published services are a corner stone of Globus.  Distributing tasks, published resources and discovering resources are a corner stone of XGrid.    The scale of the two allow for powerful conceptions of a KBR to exist.   
+
+ \end{document} 

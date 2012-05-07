@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'test-socketports-xpsi' target in the 'test-socketports-xpsi' project.
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif

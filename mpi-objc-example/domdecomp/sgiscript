@@ -1,0 +1,3 @@
+#!/bin/tcsh
+# BSUB -q short
+cpuset -q batch -A  ./a.out>dd.txt

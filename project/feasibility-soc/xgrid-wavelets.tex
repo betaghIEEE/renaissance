@@ -1,0 +1,34 @@
+\documentclass[11pt]{article}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+\textwidth = 6.5 in
+\textheight = 9 in
+\oddsidemargin = 0.0 in
+\evensidemargin = 0.0 in
+\topmargin = 0.0 in
+\headheight = 0.0 in
+\headsep = 0.0 in
+\parskip = 0.2in
+\parindent = 0.0in
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}{Definition}
+
+\title{Using Distributatble Libraries within XGrid demonstrated by $\psi^n$ Wavelets}
+\author{Daniel Beatty}
+\begin{document}
+\maketitle
+
+Many issues exist for the use of distributed computing for practical computing.  In some measure, practical computing involve the software developing, and software execution.  In particular, measures of ease, speed, and reliability are the terms used in general to describe practical use of computing in a distributed sense.  It is a comparison to single or super computer mechanisms of performing the same computation.   
+
+The point of using distributable libraries is provide a set of services that can be migratory.  They are also practical for the users such that they can call those services and they run in a reliable mechanism.  First things first, build the library and test the means of distribution.  
+
+This project takes the wavelet transform as done in the author's original thesis.  Translates them into Objective-C libraries that can called by Java, Objective-C, or any BEEP compatible client.     Furthermore, these libraries are advertised so that clients can discover them easily and use the those libraries easily.  
+
+
+
+ \end{document} 

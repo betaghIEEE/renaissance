@@ -1,0 +1,231 @@
+ \documentclass[11pt]{article}
+ \usepackage{graphicx}
+ \usepackage{amssymb}
+ \usepackage{epstopdf}
+ \usepackage {doublespace}
+ \DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+ 
+ \textwidth = 6.5 in
+ \textheight = 9 in
+ \oddsidemargin = 0.0 in
+ \evensidemargin = 0.0 in
+ \topmargin = 0.0 in
+ \headheight = 0.0 in
+ \headsep = 0.0 in
+ \parskip = 0.2in
+ \parindent = 0.0in
+ 
+ \newtheorem{theorem}{Theorem}
+ \newtheorem{corollary}[theorem]{Corollary}
+ \newtheorem{definition}{Definition}
+ 
+ \title{Basic Concepts for Service Oriented Computing Applied to Scientific Computing  Part 1}
+ \author{Daniel Beatty}
+ \begin{document}
+ \maketitle
+ 
+ \section {Introduction}
+ The term service oriented computing has been used in many papers to be a form of distributed computing.  The term grid has also been used in the distributed computing community to describe a distributed operating system, of sorts.  What may help is set of perspectives that encompass core components of computer science.  The obvious questions are:
+ \begin{itemize}
+\item How can distributed systems implement the Turing Machine?
+\item What features of a classic operating system can be applied to a distributed system?
+\item What degrees of failure limit the features of the computing system?  
+\item What impact does this have on scientific computing?
+\end{itemize}
+
+Many computing paradigms have developed as computing science has spread to a larger crew participants.  The paradigms have included procedural, object-oriented, list oriented and logic oriented type paradigms.  Some these paradigms have incorporated how-to concepts which are described as algorithmic.  Others have been coined as descriptive for there ability define a problem by a precise enough description.  
+
+Aiding these paradigms are concepts of processing these paradigms such single instruction single data, to parallel schemes.  Currently multiple data or multiple instructions tend be the exclusive mechanisms of performing parallel computation.  Further aiding these paradigms software to manage processing agents.   
+
+The big issue for distributed computing currently is what concepts apply in the distributed forms?    There are many system types that could be considered to be distributed.   What concept is held in common for distributed computing is that each node in the distributed system have independent processing and memory systems.   Storage at large, and degrees of processes management may or may not be shared.  This description allows for a range of systems from a tightly coupled super computer and clusters to globally separated systems.
+
+The level of separation of these systems contributes communications issues of these systems.  These communications issues lead levels of access, and coordination.  These levels provide limitations as what degree of parallelism can be applied to these systems both at large and in particular groups.  
+
+In the worst case, simple batch system load sharing and basic data sharing is about all that can be expect of these distributed systems.  In other cases, a sophisticated sharing of memory, storage, processing, and other resources can produce efficient means of combining computing power.   These varying degrees combining computing power demands paradigms to describe how to use this power effectively.   Thus if we are to call a grid a collection of computing devices connected by a network to reduce overhead, accelerate productivity and maximize computing power, then we need a paradigm to describe how this can be done.  If the how-to is defined, then the descriptive paradigms benefit as well by having means to answer their queries.  The paradigm associated with this grid can be as a Service Oriented Paradigm.   This service paradigm covers both the middle-ware that services a management scheme to this grid, and how programs are designed implementation of the Turing Machine.  
+
+The focus of this series of studies is to determine how to define the varying levels sharing, how to connect these levels in a productive manner, and how this effect scientific computing and the paradigms to make scientific computing effective.    This first part of the series describes the concepts in terms of classic process management, data management, memory management, service calls, user services, and application examples.  
+ 
+ \section {Process Management}
+ Process management is a fundamental part of every modern operating system.  Any service oriented paradigm must include management schemes to coordinate these process managers effectively.  In some cases, the coordination  is limited by the lack of sophistication of the host OS.  In other cases, more sophistication can be applied.  The sophistication process management can be applied in cases of OS's  with sharing micro-kernels,  or schedulers which can either altered or interfaced with to share management information.  
+ 
+ Even if the OS process manager support shared management, the infrastructure connecting the shared system also provides limitation.  These limits are results of communication limits and precision on which the system clocks can be coordinated.  In general, designs for distributed system assume that the communications are unreliable and time can not be coordinated.   However, this statement fails to account for degrees of reliability and how precise time can be cooridinated.  Anywhere on earth, time services such as WWV supplied by National Institute of Standards and Technology.  \cite {lombardi}  The maximum precision available from NIST is down to 30 ps, but that time is not transmitted at intervals of 55ms.  The variance at which such a signal reaches a location versus another defines the precision for which time is reliable for these location.  For shared process management, the purpose of coordinated time is for determining order events in these systems.  Of course ties are still possible, but the goal is to ensure the same reliability as a single processor system.  
+ 
+ Time on a supercomputer is very precisely coordinated.  Each processor could be running exclusively of the same clock.  A cluster tends to be made of machines with independent clocks.  However, if the communications are quick in that cluster, and the latency is small then precision can be made on the order of $10^{-9}$ to $10^{-6}$ seconds.  As a latency and bandwidth decreases the degree of precision decreases dramatically.  In cases where these properties can be calculated or measured, a limit of clock coordinated.  For example, many ping counts in university settings are recorded on the order of microseconds.  
+ 
+ As stated, the issue of time coordination is a matter of establishing order of events.  In the case of a supercomputers, ties occur between processor working in parallel, but those ties are based on the same clock.  For a cluster, the order of messages from threads and processes in not as precise.  A gray area exists in the precision limit and any message received in that window, must be declared as a tie.  A set of time windows can be used to separate groups of messages as occurring at the same time.  
+ 
+ Another issue is the generation of processes and the distribution of threads.  The purpose of multi-processes is to allow for multiple jobs to run simultaneously.  The source of these jobs may be application (the jobs themselves) or spawned copies of those jobs.  In other words, some process may be copies of the same program or different program.  
+ 
+ The coordination of these processes include a process space which an operating system uses to encapsulate all operations and properties to manage that job.  Threads are considered to be sub-jobs which share their space within a process.  Their purpose is to allow parallel operation without the overhead associated with multiple process spaces.  Threads are limited to system where memory can be considered to be shared.  
+ 
+ In some cases, virtual shared memory can be employed.  In cases where virtual shared memory is impractical, then migrating a thread from processor to processor means generating a process on the other processor which communicates to a thread on the original processor by proxy.  
+ 
+ \subsection{Example: GRAM}
+ 
+ \subsection {Example: Nimrod-G}
+ 
+ \subsection {Example: Avaki/ Legion}
+ 
+ \subsection {XGrid}
+ 
+ \section {Data Management}
+ 
+ \subsection {Example: GridFTP}
+ 
+ \subsection {Example: SAM}
+ 
+ \subsection {Example: AFS}
+ 
+ \subsection {Example: Avaki Data Grid}
+ 
+ \subsection {SORCER: Data Management}
+ 
+ 
+ \section {Services: A SOC Operating System Call}
+ 
+ \subsection {Examples}
+ \subsubsection {Darwin and Distributed Objects}
+OSX is a product of NeXTStep with the Mach micro-kernel.  As such it also has NSPorts.  One feature that is also present is another service registration scheme called Rendezvous.    Rendezvous is Apple's implementation of Zeroconf DNS which allows services to declare the name, type, port, etc.  
+
+OSX uses NSPorts to provide distributed objects (DO(s)) and uses the run loop and or thread  to achieve a non-blocking solution.  Such DO are called via normal message passing routines associated with Objective C and NS Objects.  This mechanism provides a sort of proxy for which there are two classes"  NSDistributedObject and NSProxy.  
+
+An NSConnection object has two instances of NSPort: one receives data and the other sends data.   An NSPort is a superclass to all other ports.  NSMachPort uses Mach messaging and is typically used solely on the machine itself.  NSSocketPorts use socket to go between machines.  
+
+There are addition identifier/ modifier types applied to distributed objects: functions, methods and members alike.  These key words are as follows:
+\begin{itemize}
+\item oneway void ( client does not wait for a response.
+\item in (A receiver is going to read the value but not change it.)
+\item out ( A value is changed by the receiver by not read)
+\item inout (receiver is to both read and write  the value).
+\item bycopy (argument is archived before sent and de-archived in the receiver's process space)
+\item byref (the argument is represented by proxy).   
+\end{itemize}
+
+
+Each connection can have a delegate.  Each time the connection spawns a new ``child'' connection, the ``child'' will have its delegate outlet set to point to its parent delegate. The connection monitor is a class for logging delegates and their connections.  
+
+\subsubsection {Distributed Tasks}
+Of course, there is nothing wrong with calling distributed tasks either.  An example was provided by O'Reilly's articles and written by Drew McCormack May 11, 2004 \cite {mccormack}. This analysis examines the crucial parts.
+
+Apply Filters is the method that calls Distributed Task.  There are many nuggets of value in addition to the calls for:
+\begin{itemize}
+\item Add Sub Task with Identifier .  This call includes
+\begin{enumerate}
+\item The identifier
+\item Launch path
+\item Working Directory
+\item Output Directory
+\item Standard Input 
+\item Standard Output
+\end{enumerate}
+
+\item Launch
+\end{itemize}
+
+The methods of how ``Photo Industry'' provides these values are somewhat interesting.  
+\begin{itemize}
+\item The first section of Apply Filters acquires the time.   
+\item Next initiates local instances of the file manager.  
+\item The output directory is fed into Apply Filters and is not interesting.  
+\item The temporary directory segment is interesting.  
+\begin{enumerate}
+\item It uses the processes own information (supplied by NS (OSX) which identifies the process in all of its details.  The way this is used to access programs is with in the application itself.  
+\item The temporary directory of functions which acquires the temporary directory as specified by the OS.  (Any where NS applies). 
+\end{enumerate}
+\item The next section claims to produce standard input for the filters which are actually programs and the parameters to those programs.  The means for this is the typical array/ dictionary scheme of Objective-C.  
+\item The next segment produces input and temporary directories for the input data (the photos).  Features of these production(s) is the production of directories for the sub-tasks.  Thus a scheme for dividing the work judiciously is being applied.  
+\end{itemize}
+The question of the thread oriented submission becomes an issue.
+
+Also, the feeding of data structures becomes an issue for the parent application:
+\begin{itemize}
+\item The manner the sub-tasks are divided up as a list of files (input).   Items copied into these directories into these directories are the data (photos) and the programs to work on them.
+\item These structures include message forwarding which is the purpose of a NeXTStep delegate.  
+\item ``A delegate is an object directed to carry out an action by another object.'' page 456 \cite {Kochan}
+\item Once the sub-tasks and its data are determined, the sub job is copied out of the bundle (app), and the executable (script), then the sub-task queue is loaded.  
+\item The rest of the methods are delegate methods.
+
+\end{itemize}
+
+\subsubsection {Devise xGrid client from Source}
+One thing to be said about the distributed tasks devised by Drew McCormack is that it is a client of a client.  Of course, xGrid has three basic components by design: client, agent and controller.  Since xGrid's agent and client are open source, a good clean examination of these components may be in order to devise an xGrid API that makes any application simply a client of the xGrid system.  Some of these clients could broker xGrid's services to Federated systems like SORCER, Condor, Globus, and the like.  
+
+ 
+ \section {Services: User Libraries}
+ 
+ \section {Application Example:  Sloan Digital Sky Survey}  
+ Suffice to say, the Sloan Digital Sky Survey has collected an enormous amount of visual and spectral data of the night sky.    The basic scheme for representing the SDSS repository of data is to store its images in a data store of some kind with a meta-data catalog containing information on the images themselves as well as pre-computed data.    Having said that, there are some issues to bring this 
+ \begin{itemize}
+\item Generate an object to represent a FITS file
+\item Generate an astrotools object to manipulate the FITS file
+\item Generate objects that represent derived attributes of the FITS file.
+\item Include optimizations to the FITS object such as wavelet representation. 
+\end{itemize}
+
+ Having said this the FITS object should include be able to understood by both native and Java code.  The astrotools should represent a set of services should be both mobile and efficient.  
+
+The Objective-C version of this object most likely will be a wrapper around the C version.  The FITS object will most likely have its own reference to the fitsfile, status bit, number of elements, bit pixels, number of axes, size of axes, and null value discriminator.  Operations include:
+\begin{itemize}
+\item Open Filename: mode: 
+\item Open Table name: mode:
+\item Open Data file name:  mode:
+\item Open Image Name:  mode:
+\item Create Filename: 
+\item Close file
+\item Hidden methods for copying the FITS file to memory
+\begin{itemize}
+\item Get Num of HDUs:
+\item Get HDU Move To HDU
+\end{itemize}
+\item Image I/O 
+\begin{itemize}
+\item Get Image Type
+\item Get Image Dim
+\item Get Image Size
+\item Get Image Parameters
+\item Create Image
+\item Write Pix
+\item Write Null Pix
+\item Read Pix
+\item Write Subset
+\item Read subset
+\end{itemize}
+
+\end{itemize}
+
+
+Note that image types may use:
+\begin{itemize}
+\item Byte size 
+\item Short, int, or long
+\item Floats or doubles
+\end{itemize}
+
+ Tables may also be used in the FITS object.  The goal of the table object is to store dictionary type data, meta-data, and may be relational/ knowledge base information.  
+ 
+ create table
+ 
+ 
+ \subsection {SDSS Wavelet Application}
+ This feasibility study uses the problems encountered by the Sloan Digital Sky Survey to show the need of this scheme.   How does this scheme derive the use of wavelets?  How does this scheme work?   In fact, the application of wavelets to the SDSS data releases could be a topic in and of itself.  However, there is a common need.   
+
+All of the SDSS data can be reduced to a collection of FITS files and the meta-data derived from it.  These FITS files can be viewed in terms of objects where the data comes from the files, and the operations contained in the object make it compatible with conventional and wavelet numerical methods.   Such an object can act as a proxy, and deliver the information as the transportable object itself.   
+
+%The concept of using wavelets in this object make sense for making the object compact and easier to send.  
+What is the point of using wavelets in these FITS objects?  First a matrix in a wavelet domain tends to be more sparse and easier to compact.  The wavelet domain also allows for feature detection,  image enhancement,  and noise reduction a much simpler operation.   Can these operations be handled by  these objects?  Can these operations be handled concurrently?  What message handling is in order?  These are questions for the feasibility study.  %Combined with the capacity to distributed these objects cleanly is concept worth pursuing.  This commonality comes in the form of objects that are brokered for purpose performing the operations concurrently.  
+
+
+ \section {Application Example: Grass GIS 6 (Service Oriented GIS)}
+ 
+ 
+ \begin {thebibliography}{99}
+ \bibitem {denton} Jason Denton and Dan Beatty  \textsl{Lecture notes from Operating Systems} 2003-2004 Texas Tech University
+ \bibitem {simple1} Simple - XGrid project 
+ \bibitem {simple2}
+ \bibitem {simple3}
+ \bibitem {simple4}
+ \bibitem {GT4Primer}
+\bibitem {lombardi} Michael Lombardi \textsl {Computer Time Synchronization}  http://www.boulder.nist.gov/timefreq/service/time-computer.html
+ \end{thebibliography}
+ 
+  \end{document}

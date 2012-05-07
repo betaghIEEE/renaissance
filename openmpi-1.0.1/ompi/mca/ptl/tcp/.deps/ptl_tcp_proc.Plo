@@ -1,0 +1,240 @@
+ptl_tcp_proc.lo .libs/ptl_tcp_proc.o: ptl_tcp_proc.c \
+  ../../../../include/ompi_config.h \
+  ../../../../include/ompi_config_bottom.h \
+  /usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/stdbool.h \
+  /usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/limits.h \
+  /usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/syslimits.h \
+  /usr/include/limits.h /usr/include/machine/limits.h \
+  /usr/include/ppc/limits.h /usr/include/ppc/_limits.h \
+  /usr/include/sys/syslimits.h \
+  /usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/stdint.h \
+  /usr/include/string.h /usr/include/_types.h /usr/include/sys/_types.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/_types.h \
+  /usr/include/ppc/_types.h ../../../../opal/include/sys/atomic.h \
+  ../../../../opal/include/sys/architecture.h /usr/include/sys/types.h \
+  /usr/include/sys/appleapiopts.h /usr/include/machine/types.h \
+  /usr/include/ppc/types.h /usr/include/machine/endian.h \
+  /usr/include/ppc/endian.h /usr/include/sys/_endian.h \
+  /usr/include/libkern/OSByteOrder.h \
+  /usr/include/libkern/ppc/OSByteOrder.h \
+  ../../../../opal/include/sys/powerpc/atomic.h \
+  ../../../../opal/include/sys/atomic_impl.h \
+  ../../../../orte/class/orte_proc_table.h \
+  ../../../../opal/class/opal_hash_table.h \
+  ../../../../ompi/include/types.h /usr/include/sys/socket.h \
+  /usr/include/machine/param.h /usr/include/ppc/param.h \
+  /usr/include/sys/select.h /usr/include/signal.h \
+  /usr/include/sys/signal.h /usr/include/machine/signal.h \
+  /usr/include/ppc/signal.h /usr/include/sys/time.h /usr/include/time.h \
+  /usr/include/machine/_limits.h ../../../../opal/class/opal_list.h \
+  /usr/include/stdio.h /usr/include/stdlib.h /usr/include/sys/wait.h \
+  /usr/include/sys/resource.h /usr/include/alloca.h \
+  ../../../../opal/class/opal_object.h /usr/include/assert.h \
+  ../../../../orte/mca/ns/ns_types.h ../../../../include/orte_config.h \
+  ../../../../include/ompi_config.h \
+  ../../../../ompi/mca/pml/base/pml_base_module_exchange.h \
+  ../../../../opal/mca/mca.h ../../../../opal/util/cmd_line.h \
+  ../../../../opal/threads/mutex.h ../../../../opal/threads/mutex_unix.h \
+  /usr/include/pthread.h /usr/include/pthread_impl.h /usr/include/sched.h \
+  ../../../../opal/util/output.h \
+  /usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/stdarg.h ptl_tcp.h \
+  /usr/include/netinet/in.h /usr/include/netinet6/in6.h \
+  ../../../../ompi/class/ompi_free_list.h \
+  ../../../../opal/threads/threads.h ../../../../opal/threads/condition.h \
+  ../../../../opal/runtime/opal_progress.h \
+  ../../../../ompi/include/constants.h \
+  ../../../../orte/include/orte_constants.h \
+  ../../../../opal/include/constants.h ../../../../ompi/mca/mpool/mpool.h \
+  ../../../../ompi/info/info.h ../../../../include/mpi.h \
+  ../../../../opal/util/strncpy.h \
+  ../../../../ompi/class/ompi_pointer_array.h \
+  ../../../../ompi/class/ompi_pointer_array.h \
+  ../../../../opal/event/event.h ../../../../ompi/mca/pml/pml.h \
+  ../../../../ompi/mca/ptl/ptl.h ptl_tcp_addr.h ptl_tcp_peer.h \
+  ptl_tcp_proc.h ../../../../orte/mca/ns/ns_types.h \
+  ../../../../ompi/proc/proc.h ../../../../orte/dps/dps_types.h \
+  /usr/include/arpa/inet.h /usr/include/sys/param.h
+
+../../../../include/ompi_config.h:
+
+../../../../include/ompi_config_bottom.h:
+
+/usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/stdbool.h:
+
+/usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/limits.h:
+
+/usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/syslimits.h:
+
+/usr/include/limits.h:
+
+/usr/include/machine/limits.h:
+
+/usr/include/ppc/limits.h:
+
+/usr/include/ppc/_limits.h:
+
+/usr/include/sys/syslimits.h:
+
+/usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/stdint.h:
+
+/usr/include/string.h:
+
+/usr/include/_types.h:
+
+/usr/include/sys/_types.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/machine/_types.h:
+
+/usr/include/ppc/_types.h:
+
+../../../../opal/include/sys/atomic.h:
+
+../../../../opal/include/sys/architecture.h:
+
+/usr/include/sys/types.h:
+
+/usr/include/sys/appleapiopts.h:
+
+/usr/include/machine/types.h:
+
+/usr/include/ppc/types.h:
+
+/usr/include/machine/endian.h:
+
+/usr/include/ppc/endian.h:
+
+/usr/include/sys/_endian.h:
+
+/usr/include/libkern/OSByteOrder.h:
+
+/usr/include/libkern/ppc/OSByteOrder.h:
+
+../../../../opal/include/sys/powerpc/atomic.h:
+
+../../../../opal/include/sys/atomic_impl.h:
+
+../../../../orte/class/orte_proc_table.h:
+
+../../../../opal/class/opal_hash_table.h:
+
+../../../../ompi/include/types.h:
+
+/usr/include/sys/socket.h:
+
+/usr/include/machine/param.h:
+
+/usr/include/ppc/param.h:
+
+/usr/include/sys/select.h:
+
+/usr/include/signal.h:
+
+/usr/include/sys/signal.h:
+
+/usr/include/machine/signal.h:
+
+/usr/include/ppc/signal.h:
+
+/usr/include/sys/time.h:
+
+/usr/include/time.h:
+
+/usr/include/machine/_limits.h:
+
+../../../../opal/class/opal_list.h:
+
+/usr/include/stdio.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/sys/wait.h:
+
+/usr/include/sys/resource.h:
+
+/usr/include/alloca.h:
+
+../../../../opal/class/opal_object.h:
+
+/usr/include/assert.h:
+
+../../../../orte/mca/ns/ns_types.h:
+
+../../../../include/orte_config.h:
+
+../../../../include/ompi_config.h:
+
+../../../../ompi/mca/pml/base/pml_base_module_exchange.h:
+
+../../../../opal/mca/mca.h:
+
+../../../../opal/util/cmd_line.h:
+
+../../../../opal/threads/mutex.h:
+
+../../../../opal/threads/mutex_unix.h:
+
+/usr/include/pthread.h:
+
+/usr/include/pthread_impl.h:
+
+/usr/include/sched.h:
+
+../../../../opal/util/output.h:
+
+/usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/stdarg.h:
+
+ptl_tcp.h:
+
+/usr/include/netinet/in.h:
+
+/usr/include/netinet6/in6.h:
+
+../../../../ompi/class/ompi_free_list.h:
+
+../../../../opal/threads/threads.h:
+
+../../../../opal/threads/condition.h:
+
+../../../../opal/runtime/opal_progress.h:
+
+../../../../ompi/include/constants.h:
+
+../../../../orte/include/orte_constants.h:
+
+../../../../opal/include/constants.h:
+
+../../../../ompi/mca/mpool/mpool.h:
+
+../../../../ompi/info/info.h:
+
+../../../../include/mpi.h:
+
+../../../../opal/util/strncpy.h:
+
+../../../../ompi/class/ompi_pointer_array.h:
+
+../../../../ompi/class/ompi_pointer_array.h:
+
+../../../../opal/event/event.h:
+
+../../../../ompi/mca/pml/pml.h:
+
+../../../../ompi/mca/ptl/ptl.h:
+
+ptl_tcp_addr.h:
+
+ptl_tcp_peer.h:
+
+ptl_tcp_proc.h:
+
+../../../../orte/mca/ns/ns_types.h:
+
+../../../../ompi/proc/proc.h:
+
+../../../../orte/dps/dps_types.h:
+
+/usr/include/arpa/inet.h:
+
+/usr/include/sys/param.h:

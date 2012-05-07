@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'haar-threaded-xform' target in the 'haar-threaded-xform' project.
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif

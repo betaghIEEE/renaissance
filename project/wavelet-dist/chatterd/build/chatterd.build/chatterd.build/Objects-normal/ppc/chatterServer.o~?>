@@ -1,0 +1,2 @@
+/Volumes/thebunny/Users/danbgood/Desktop/courses/grid-math/project/wavelet-dist/chatterd/chatterServer.m: In function `-[chatterServer sendMessage:fromClient:]':
+/Volumes/thebunny/Users/danbgood/Desktop/courses/grid-math/project/wavelet-dist/chatterd/chatterServer.m:47: warning: cannot find method `-showMessage:fromNickname:'; return type `id' assumed

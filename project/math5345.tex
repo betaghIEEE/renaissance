@@ -1,0 +1,394 @@
+\documentclass[11pt]{article}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+%\usepackage{doublespace}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+\textwidth = 6 in
+\textheight = 9 in
+\oddsidemargin = 0.0 in
+\evensidemargin = 0.0 in
+\topmargin = 0.0 in
+\headheight = 0.0 in
+\headsep = 0.0 in
+\parskip = 0.2in
+\parindent = 0.0in
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}{Definition}
+
+\title{Project Summary and Context}
+\author{Daniel Beatty}
+\begin{document}
+\maketitle
+\newpage
+\begin{Large}
+The purpose of this document is to outline the context of the SDSS XGrid project and its specific objectives to be achieved for the Advanced Topics in Numerical Methods II.    The SDSS XGrid project is part of a % an example project of a 
+larger context of providing a Scientific Knowledge Base and Computational Service.  %The basic science of that service is described in other draft documents to made available at the end of the class.   
+For this class, there are few parts of the project which are deemed reasonable for demonstration in a Grid context.  The choices of these parts include:
+\begin{itemize}
+\item A Wavelet transform in distributed form.
+\item Bonus items:
+\begin {itemize}
+%\item An XGrid plugin for Globus Resource Management
+%\item Operations of SDSS on the Vector Libraries of OSX distributed by XGrid.
+%\item A Distributable set of FITS Objects to include simple operations and services to operating on those Objects.  
+%\item A viewer to use the distributed FITS object, display the images, and accept the queries.  
+%\item An MPI to BEEP interpretor.  
+\item A template for NSPorts distributed objects with Bonjour
+\item A template for distributable objects
+\end{itemize}
+\end{itemize}
+\end{Large}
+
+\newpage
+\begin{Large}
+%All of these communication mechanisms (NSPorts, MPI, and XML-RPC)  provide input and output for the distributed Turing Machine.  
+Every context of computing, including super-computing,  can be described in term of the Turing Machine.    The Turing Machine is a model of the simplest computing machine possible.   %Each one of these objects can be migrated to any of the nodes, and calls to these objects represent transition function (Turing Machine).   
+Note that a Turing machine is a five tuple $T= \{ K, \Sigma , \delta , s, h \}$ where 
+\begin{itemize}
+\item $K$ are the states of the Turing machine
+\item $\Sigma$ is the alphabet of the Turing machine
+\item $\delta$ are transition functions on the Turing machine
+\item $s$ are the starting states
+\item $h$ are the halting states.
+\end{itemize}
+Also, a Turing machine can be viewed as a control unit with its collective of states.  The transition functions tell the control unit to move from one set of states to another.  A collective of states can be defined as one collective state for simplicity.  In the distributed model,  grid communications represents the I/O transmitting transition functions of the form 
+\[ (K - H) \times \Sigma \to K \times ( \Sigma  \cup \{ \leftarrow , \rightarrow  \} ) \]
+The nodes in a distributed system (super-computer, cluster, or grid) are control units which contain a collection of states.  Further paradigms such as object oriented computing entail that the object house the transition functions and states, and the process or thread house the control unit.   Distributed, Grid and Service Oriented computing focus mostly on the control unit.    %This paper considers objects as integral with the control unit.  
+The particulars of these transition functions, states, and control units are the subject of the Scientific Knowledge Representation and Computation Service which could very well be dissertation matter.   
+\end{Large}
+
+
+%\section {Choices for distributing the wavelet transform}
+%Two mechanism of the wavelet transform are obvious.  One is the multi-resolutions which would split the matrix up to transform those components in separate processes.  The other performs the convolution operation on multiple rows simultaneously.  These operations are independent, and made parallel.   \cite{beatty_wavelets}
+\newpage
+\begin{Large}
+\section {Using Parallel Turing Machines}
+There are ways use and exploit benefits in parallelizing computing.  Most of the effort focus in on the input and output mechanisms connecting the control units, and the collective control of the control units.  Facilities that help in generating such a collective of computing machines include: 
+\begin{itemize}
+\item \textbf{Library Frameworks: } are a set of objects, protocols and modules which are contained collectively.  
+\item \textbf{Interconnection Library (Framework)}: are library frameworks designed connect and migrate other frameworks.  
+\end{itemize}
+%A few frameworks are of interest for expanding this project.  These frameworks include MPI, BEEP, and NSPorts.    Each have their strengths and weaknesses.     As this project demonstrated, the two can coincide or act separately.  
+
+%Why?  
+In general, clusters require middle-ware such as MPI, BEEP, NSPorts, XML-RPC or other mechanism to provide the communications for their input and output.   MPI, BEEP and NSPorts each form libraries which are part of a library framework.  % to exploit parallelisms.  
+The costs of these middle-wares contribute to the engining of specific Turing machines with an emphasis on performance.  %are subject for the performance measures section (when written).  For this experiment, BEEP, NSPorts, and MPI are chosen for comparison. 
+During this project, BEEP was explored and discovered to be useful for the overall SDSS Knowledge Base and Computational Service.  However, BEEP is not necessarily this project.   MPI and NSPorts are comparable methods of distribution and are useful for this project.
+\end{Large}
+%\begin{Large}
+%\subsection{Framework Library} 
+%Frameworks contribute to the distribution of wavelet transform operations.  These operations are contained within a library which can called by any job that needs them.   These frameworks can migrate with job, or may be present in either user or system storage locations.  Generally, the latter is available in cluster to super computer environments where the user's storage is common to the entire cluster, and system libraries are also available system wide (cluster or super computer).  
+%\end{Large}
+
+%\subsection {Interconnection Libraries}
+%Inside the computing frameworks (wavelets, matrices and astrotools) exist opportunities to exploit  parallelisms these libraries.   As mentioned in the introduction, these exploits require means of communications to be effective.  In a general super-computer the OS's native threads are generally the best choice.   Even systems such NeXT clusters included Mach-Threads and ports for these communications and pseudo-threads.  
+
+%\begin{Large}
+%In general, clusters require middle-ware such as MPI, BEEP, NSPorts, XML-RPC or other mechanism to provide the communications to exploit parallelisms.  The costs of these middle-wares are subject for the performance measures section (when written).  For this experiment, BEEP, NSPorts, and MPI are chosen for comparison.  
+%\end{Large}
+%It turns out that BEEP is a framework in and of itself.  It provides calls and mechanisms to HTTP.  
+%\section {What is next?}
+%The next update shall provide a comparison of MPI and BEEP showing their differences.  This should have both theoretical and experimental points of view.   
+%
+%
+%Reference: First steps of the Scientific  Knowledge Base and Computational Service 
+%
+\newpage
+\begin{Large}
+\subsection{BEEP Overview}
+BEEP serves as a form of glue for XGrid (zilla and zillion).  It is the inter-communication framework.  On OSX it is one of three frameworks for XGrid.  BEEP itself stands for Block Extensible Exchange Protocol.  %The other two are :
+%\begin{itemize}
+%\item Grid Interface 
+%\item Grid Plugs
+%\end{itemize}
+%\cite{apple_api}
+BEEP consists of the following: 
+\begin{itemize}
+\item sessions
+\item channels
+\item exchanges
+\item messages
+\end{itemize}
+\cite{m_rose} 
+A session is a peer-wise, full duplex pipe.  Two kinds of roles peers play are:
+\begin{itemize}
+\item Listener or Initiator 
+\item Client / Server
+\end{itemize}
+BEEP connections can have multi-relations (client, server, or peer).
+
+A channel is a full duplex pipe, and the application protocol designer specifies rules who can initiate message exchange along with a stream of type messages.  
+\end{Large}
+\newpage
+\begin{Large}
+ Basic features that most implementations of BEEP claim the following:
+ \begin{itemize}
+\item Portability 
+ \item Object Oriented Design
+ \item Robustness and stability 
+ \item High Performance
+ \item Multi-threaded
+\end{itemize}
+In essence BEEP is another %marshalling, 
+message passing, and general communication protocol at the .  %It uses XML and elements of SOAP to transfer messages across the web.  
+BEEP is a layer that can be used to implement XML-RPC, NSPorts, SOAP, MPI and other service libraries.  
+Like other web type protocols, TLS/SSL security is available.  However, the XGrid implementation makes no mention of it except in its API framework.   
+\end{Large}
+
+On OSX, the primary BEEP framework header imports the following headers:
+\begin{itemize}
+\item BEEPSession.h
+\item BEEPSessionAcceptor.h
+\item BEEPSessionConnector.h
+\item BEEPChannel.h
+\item BEEPMessage.h
+\item BEEPError.h
+\item BEEPSSLContext.h
+\end{itemize}
+
+%On other platforms, XGrid is forced to use RoadRunner as its implementation of BEEP.   The object hierarchy  is as follows:
+%\begin{itemize}
+%\item GObject
+%\begin{itemize}
+%\item RRConnection
+%\begin{itemize}
+%\item RRTCPConnection
+%\end{itemize}
+%\item RRListener
+%\begin{itemize}
+%\item RRTCPListener
+%\end{itemize}
+%\item RRFilter
+%\begin{itemize}
+%\item RRTCPFilter
+%\end{itemize}
+%\item RRFrame
+%\begin {itemize}
+%\item RRFrameSeq
+%\end {itemize}
+%\item RRChannel
+%\begin {itemize}
+%\item RRManager
+%\end{itemize}
+%\begin {itemize}
+%\item RRMessage
+%\end {itemize}
+%\begin{itemize}
+%\item RRMessageStart
+%\item RRMessageStartRpy
+%\item RRMessageClose
+%\item RRMessageError
+%\item RRMessageStatic
+%\item RRGreeting
+%\end{itemize}
+%\item RRProfileRegistry
+%\end{itemize}
+%\item GInterface
+%\end{itemize}
+
+%\subsection {BEEP Session}
+%A BEEP session has the following members
+%\begin{itemize}
+%\item is Initiator
+%\item servant 
+%\item Arrays for the communication channels
+%\begin{itemize}
+%\item channel Should Open Queue
+%\item Channel Should Close Queue
+%\item Sent Request Type Queue
+%\end{itemize}
+%\item Mutable Sets
+%\begin{itemize}
+%\item Uncloseable Channels
+%\item Used Channel Number Set
+%\end{itemize}
+%\item Beep Channels
+%\begin{itemize}
+%\item Management Channel
+%\item Tuning Channel
+%\end{itemize}
+%\item Next Channel
+%\item Looking For Greeting
+%\item Delegate
+%\item Profile URI
+%\item Peer Profile URIs
+%\item Closing values:
+%\begin{itemize}
+%\item  Allows Close
+%\item Should Close
+%\item Will Close
+%\item Did Close
+%\item Will Terminate
+%\end{itemize}
+%\item Transporting
+%\item Peer Credentials
+%\end{itemize}
+
+
+%The methods contained in this Beep Session and the comments associated with them.  
+%`` The BEEPSession session should not usually be created by hand.  Instead, a BEEPSessionAcceptor
+% or a BEEPSessionConnector should be used to create the session.''  The methods for this are:
+% \begin{itemize}
+%\item \textsl{+ (id)initiatorWithReadStream:(CFReadStreamRef)readStream writeStream:(CFWriteStreamRef)writeStream;}
+%\item \textsl{+ (id)listenerWithReadStream:(CFReadStreamRef)readStream writeStream:(CFWriteStreamRef)writeStream;}
+%\item ``- (id)initWithReadStream:(CFReadStreamRef)readStream writeStream:(CFWriteStreamRef)writeStream asInitiator:(BOOL)asInitiator;''
+%\end{itemize}
+ 
+% Confirmation of the session being initialized is provided by \textsl{isInitiator}.    
+ 
+% Credentials are set and acquired by \textsl{setPeerCredentials} and \textsl{peerCredientials}.  This applies to remote peers.  `` The peer's credentials should only be set by local
+% tuning channel delegates, and may only be set once.''
+ 
+% The basic purpose of BEEP session is provide a basic object that encompasses the general session used in the BEEP framework.  The RoadRunner equivalent is called general function.    This object initializes the session, and includes session wide functions.  
+
+ 
+ % (More information on methods.  Both on the status of the session and the use of TLS/SSL security to include PKI certificates.  
+ 
+\subsubsection {Beep Channels}
+
+``The channel number.  The zero channel is the private BEEPSession management channel.  Even-numbered
+ channels are created by the listener session.  Odd-numbered channels are created by the initiator session.'' \cite{OSXgridAPI}   
+ 
+ % Question:  What purpose does the channel and how is it used.  Furthermore, how is TLS implemented on BEEP.  
+ 
+ \subsubsection {Beep Session Connector } 
+ This object controls session connections, and provides methods initialize connections.  It provides a method to cancel the connection.  Also provided are delegates for \textsl{did connect} and \textsl{failed with error}.  
+ 
+ 
+ \subsubsection {Beep Session Acceptor}
+ Probably one of the unique features of the XGrid (OSX) implementation of BEEP is the use of Rendezvous.  This is useful for service discovery with zero configuration DNS.    The methods to set the values of the Rendezvous service must be set before letting the session acceptor begin.  This applies to both the controller and the agents.   This may apply to the clients as well only when service is being requested.  
+
+
+\begin {quote}
+This method asynchronously opens a socket and listens for connections.
+
+ When a connection is accepted the delegate is notified via the appropriate delegate method.  The accepted session must be opened before it can be used to create new channels and send messages.  Note that if the accepted session is not opened soon after the notification is posted the remote peer's session may time out. Also note that the acceptor will continue to run asynchronously and notify the delegate when additional connections are accepted.
+ 
+ If the BEEPSessionAcceptor can not listen on the port specified or another error occurs it will cancel
+ the asynchronous operation and notify the delegate with the appropriate method.
+\end{quote}\cite {OSXgridAPI}
+
+
+%\subsection {BEEP Frame}
+%This method provides operations on other objects in the BEEP framework.  Mostly, this section works on the message breakdown in to frames.    % Some pieces which need to be answered is whether multi-threaded frames are used to maximize bandwidth?  What bandwidth is used?
+    
+    
+\subsubsection {BEEP Message}
+ This is object is the core of the message is itself, and seems rather simple.  For OSX is it is not clear as to whether marshalling is handled by the ``archiving'' feature of Cocoa (Objective-C) or some other feature.  
+ 
+\newpage
+\begin{Large}
+\subsection {NSPorts} 
+NSPorts is a classic method that has been available since the early days of NeXT.  It is a remote object mechanism that:
+\begin{itemize}
+\item Provides objects via proxy
+\item Publishes services via discovery mechanisms such as Bonjour (Rendezvous)
+\item Provides distributed objects via marshalling and un-marshalling methods (archiving and unarchiving by Cocoa terminology).
+\end{itemize}
+
+%A classic method that has been available since the early days of NeXT (NeXTStep).  The mechanism is essentially another remote procedure call mechanism.  The objects provided using NSPorts are provided by proxy.  Such objects may be published and discovered by Rendezvous (Bon-jour as it is being called starting with OSX version 10.4).  
+
+ %OSX is a product of NeXTStep with the Mach micro-kernel.  As such it also has NSPorts.  One feature that is also present is another service registration scheme called Rendezvous.    Rendezvous is Apple's implementation of Zeroconf DNS which allows services to declare the name, type, port, etc.  
+
+%OSX uses NSPorts to provide distributed objects (DO(s)) and uses the run loop and or thread  to achieve a non-blocking solution.  Such DO are called via normal message passing routines associated with Objective C and NS Objects.  This mechanism provides a sort of proxy for which there are two classes"  NSDistributedObject and NSProxy.  
+
+An NSConnection object has two instances of NSPort: one receives data and the other sends data.   An NSPort is a superclass to all other ports.  NSMachPort uses Mach messaging and is typically used solely on the machine itself.  NSSocketPorts use socket to go between machines.  
+
+There are addition identifier/ modifier types applied to distributed objects: functions, methods and members alike.  These key words are as follows:
+\begin{itemize}
+\item oneway void \\ ( client does not wait for a response.)
+\item in \\(A receiver is going to read the value but not change it.)
+\item out \\( A value is changed by the receiver by not read)
+\item inout \\(receiver is to both read and write  the value).
+\item bycopy \\(argument is archived before sent and de-archived \\ in the receiver's process space)
+\item byref \\(the argument is represented by proxy).   
+\end{itemize}
+
+
+Each connection can have a delegate.  Each time the connection spawns a new ``child'' connection, the ``child'' will have its delegate outlet set to point to its parent delegate. The connection monitor is a class for logging delegates and their connections.  
+
+Another key to distributed objects is Objective-C's ``archiving" mechanisms.  These mechanisms are analogous to Java's serialization.  The object stores its members into a byte array of arbitrary size.  This size of this array and the array itself is what is sent over when an object is asked for by proxy.  It is an effective means of marshalling and unmarshalling data types within the Cocoa environment (NeXTStep).  
+\end{Large}
+
+\section {Basic Science}
+For this exercise, NSPorts and MPI are favored to demonstrate the rudimentary transition functions and input-output operations of this distributed Turing Machine.  Furthermore, simple SDSS image compression and knowledge base work are the problems being solved as applications.  
+
+Also for this exercise, the wavelet transform in both $\psi^n$ and multi-resolution expansion are used to demonstrate computation in this distributed environment.  The $\psi^n$ is preferred for computation.  However, multi-resolution expansion has useful storage, retrieval, and spacial analysis.  Details of the wavelet transform are defined in Applications of Wavelets to Image Processing and Matrix Multiplication \cite{beatty_wavelets}.  
+
+For the both transforms, parallelism is found in the row and column transforms.  In particular, the transforms of each row are independent of each other.  Likewise, the column transforms are independent of each other.  The dependencies are that the second transform of the pair depends on the first transform.  In other words, if row transforms are performed first, then the column transform depends on the completion of the row transform.   In the case of the column transform being performed first, then order of dependency is the reverse of the row transform.   
+
+The column and row transforms are called repetitively in the $\psi^n$ wavelet transform,  and parts-wise repetitive for multi-resolution expansion.  For columns or rows of sufficient number, parallelism becomes practical and simple.  The choices is call for transforms on specific rows and columns.  One objective of this paper is to determine optimal vector size and distribution for efficient parallel computation.  
+
+For this exercise, the $\psi^n$ wavelet transform has been translated from its C++ form to Objective-C.  In this form, the code is much cleaner, easier to read, and uncluttered from previous trials on the wavelet transform.  Addition methods added include archiving (in the Cocoa sense).  
+
+A variant of this object is made to work with MPI.  The variety of MPI implementation is immaterial so long as it works with the clustering middleware.  In cases of genuine super-computers, the OS provides the clustering mechanisms for processors.   For ethernet connected clusters such as Rocks, Sun's Grid Engine, Apple's XGrid (and other Zilla decendents), Condor, and other batch submission middleware the key is for a driving program to be initiated on each worker node.  Once initiated, the MPI calls act as transition functions for the Turing Machine Nodes computing the wavelet transform.  
+
+A variant of this object is made for a NSPorts Distributed Object (NSPDO).  In the case of NSPDO, the clustering mechanism is similar to that of MPI.  In the case of super-computers, Mach-ports tend to be mechanism for NSPorts to be implements, and as a result more flexibility is available.  In the case of clusters and grids,  NSPorts are simply calls over XML-RPC, BEEP, SocketPorts, or some of each.  These calls are made by object proxies, which provide a transparency these libraries.  The two cases of implementation require separate descriptions for library initialization, but the calls within object itself are the same. 
+
+In the case of Mach-Ports, there is no need for Bonjour publishing, since instansiation of these objects will inherently produce either a process or thread on a separate processors.   This instansiation naturally provides a links between threads or processors for inter-processor (thread) communication.  The reduced overhead is handy for method calls and object migration.  
+
+In the case of cluster or grid type environment Mach-Ports are generally out of the question.   Instead, NSPorts provides distributed object proxies for these objects and communication costs between instances of these distributed objects becomes more pronounced.  One feature that does assist NSPorts in the cluster environment is the use of Bonjour publishing (previously known as Rendezvous publishing).  In this case, an initial program is run on each node to publish the $\psi^n$ object.  When the user calls for an $\psi^n$ transform, the transform calls the NSPDO version of column and row transforms.  This version may call one object for each division of the column/row transform.  The returned result is a matrix containing values for the columns/rows transformed and zeros everywhere else.  The sum of the results happens to be the complete transform.  
+
+The trick in the case of cluster and grid environments is the discovery process of the available objects.  Obviously invocation of these objects can not be made if the instances of the objects are not confirmed to exist.  Once discovered, the objects proxies can be contained in an array of object proxies and invoked in sequence.  The special invocation includes a range of rows or columns to ensure consistent computation. 
+ 
+\begin{Large}
+An MPI implementation and NSPorts implementation have similar mathematics to represent computation conducted in this instance.  The MPI calls and NSPDO invocations both serve as transition functions.  In the case of temporary objects, both mechanisms incur a cost of instansiating a set of listening ``objects''.   NSPDO has one advantage for long term use.  Namely, the listening objects can be left active.  As such, the libraries can be invoked by many processes (including processes that had nothing to do with the starting of the listening objects).   In the case of residual listening NSPDO, the cost of use includes discovery of the NSPDO and the proxy call.  In case of MPI and non-residual NSPDO, the cost includes discovery of the proxy, proxy call, and instansiation of the objects.   
+\end{Large}
+
+XGrid and other cluster middleware are the mechanisms for instansating these objects.  Classic means of MPI instanciation is to submit a batch job with a number of programs each containing the calls desired.  In the case of NSPDO, the middle-ware can be setup seperately from the initial program or can be called by the program itself.   %In the case of XGrid NSPDO, this is where the BEEP framework comes into play as part of the XGrid API at large.  
+
+What would be nice is an XGrid version of NSPorts which used BEEP to broker location and provisions such as ports.   Discovery would furthermore be handled by the XGrid server in the immediate vicinity.  Whether services in additional realms where visible may be considered if statistically and computationally sound.  
+
+In addition to the XGrid version of NSPorts, a fiber channel version of NSPorts or NSPorts over BEEP may be a good choice.  In the case of NSPorts over BEEP where flavors of BEEP exist for both ethernet and fiber channel would have a portability advantage.  Knowledge of the flavor would then only be useful for heuristic-al information for library optimization.  
+
+\subsection {Bonjour Example}
+The Bonjour example shows a practical implementation of the $\psi^n$ wavelet transform with distributed objects.  Bonjour provides the discovery process for available objects.  Note that all objects are of the same type.  They differ only by name to retain node information.  Additional information such as dual processor may also be included to determine how many processes/ threads may implemented on each node.  
+
+XGrid serves the purpose of activating each library.  Again an XGrid version of the NSPort would be useful in abstracting the discovery and setup process.  Also, such an API may gain performance by reduced discovery time and performance heuristics.  
+
+\newpage
+\begin{Large}
+\textbf{There are four basic branches for all service libraries:}
+\begin{itemize}
+\item The system resource manager launches publishing programs if permanent services do not already exist, or if more are possible and needed.
+\item The publishing program uses its associated frameworks, and publishes those objects as service objects.
+\item Migratory objects use marshalling/ unmarshalling methods transform themselves in reference or copy objects.  These are either function or return arguments for service objects.  
+\item Programs using service objects require discovery services and or launch services to use these services.  The node from which the program itself is running may be a candidate for hosting the service libraries.  
+\end{itemize}
+Parallel algorithms are passed a list of proxies to the other objects and protocols.    One note is that parallel algorithms tend have a recursive nature to them.  Thus a point of convergence is generally necessary to determine when the job stops dividing work, and performs it.   Note a service that manages the launcher and coordinates the parallel algorithms would be handy.  
+
+\end{Large}
+
+
+\section {Future Work}
+An MPI over BEEP library would be nice.  
+%An MPI to BEEP interpreter is useful to allow MPI function calls to be uses as the interconnecting language middle-ware as opposed to directly using BEEP or distributed tasks.    
+BEEP is an another XML communications layer standard with basic layer supports.  Some nice features include the ability to publish itself via Rendezvous, and be secured with SSL.   As such, BEEP would simply be a medium for MPI to communicate over.  
+
+The nice idea for MPI over BEEP would be that once job begins, it can publish its MPI channel.  Thus the discovery of any MPI world with its communicator is a simple matter of locating the Rendezvous service.  
+
+
+Some of these demonstration choices inherently require services from some of the others.  The services on the FITS objects as mentioned can be and should be SDSS operations, and those operations should be optimized to use the Vector Libraries, and distribute where appropriate.  A view requires both services (FITS objects and SDSS Services).    The Wavelet transform is more or less independent, but can be made to contribute as a service in the SDSS suite of services.  
+
+The easiest of these parts to make happen would be a distributed wavelet transform.  The reason for this assessment is the fact that the wavelet transform object itself exists.  What separates a distributed wavelet transform versus a serial wavelet transform is the decision of where and when the convolutions occur.  
+
+A FITS object could come in handy to demonstrate the use of wavelets on FITS data.  The key element of a FITS dataset is the image.  The other data are meta-data about the image.  Some meta-data are derived.  Others are required data about how the data was acquired.  For example, the image pixels represents a set of angles, from a set position, with a set conditions on the instrument and the instruments characteristics.  Whether or not this is feasible by the end of the course remains to be seen.  
+
+%Of course, a distributed wavelet transform is necessarily limited to MPI.  It can be implemented with any distribution API and the schemes there of.  BEEP is included in the list of choices for consideration.  
+
+
+
+\begin{thebibliography} {99}
+\bibitem {beatty_wavelets} Daniel D. Beatty, Eric Sinzinger, Alan Sill, Noe Benitez, Phil Smith \textsl{Applications of Wavelets to Image Processing and Matrix Multiplication}  March 2004 Texas Tech University, http://venus.cs.ttu.edu/wavelet/wavelet.pdf  
+\bibitem{m_rose} Marshall T. Rose \textsl{BEEP: the Definite Guide} copyright 2002 O'Reilly and Associates, Inc, 1005 Gravenstein Highway North, Sebastopol, CA 95472
+\bibitem {OSXgridAPI} Apple Computer \textsl{XGrid API Documentation and Source Code} copyright Apple Computer.
+\end{thebibliography}
+
+
+
+
+ \end{document} 

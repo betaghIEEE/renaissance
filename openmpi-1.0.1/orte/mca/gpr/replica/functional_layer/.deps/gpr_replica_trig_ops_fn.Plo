@@ -1,0 +1,275 @@
+gpr_replica_trig_ops_fn.lo .libs/gpr_replica_trig_ops_fn.o:  \
+ gpr_replica_trig_ops_fn.c ../../../../../include/orte_config.h \
+  ../../../../../include/ompi_config.h \
+  ../../../../../include/ompi_config_bottom.h \
+  /usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/stdbool.h \
+  /usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/limits.h \
+  /usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/syslimits.h \
+  /usr/include/limits.h /usr/include/machine/limits.h \
+  /usr/include/ppc/limits.h /usr/include/ppc/_limits.h \
+  /usr/include/sys/syslimits.h \
+  /usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/stdint.h \
+  ../../../../../orte/mca/errmgr/errmgr.h \
+  ../../../../../orte/include/orte_constants.h \
+  ../../../../../opal/include/constants.h \
+  ../../../../../orte/mca/schema/schema.h ../../../../../opal/mca/mca.h \
+  ../../../../../opal/class/opal_list.h /usr/include/stdio.h \
+  /usr/include/_types.h /usr/include/sys/_types.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/_types.h \
+  /usr/include/ppc/_types.h /usr/include/stdlib.h /usr/include/sys/wait.h \
+  /usr/include/sys/signal.h /usr/include/sys/appleapiopts.h \
+  /usr/include/machine/signal.h /usr/include/ppc/signal.h \
+  /usr/include/sys/resource.h /usr/include/machine/endian.h \
+  /usr/include/ppc/endian.h /usr/include/sys/_endian.h \
+  /usr/include/libkern/OSByteOrder.h \
+  /usr/include/libkern/ppc/OSByteOrder.h /usr/include/alloca.h \
+  /usr/include/machine/types.h /usr/include/ppc/types.h \
+  ../../../../../opal/class/opal_object.h /usr/include/assert.h \
+  ../../../../../opal/include/sys/atomic.h \
+  ../../../../../opal/include/sys/architecture.h /usr/include/sys/types.h \
+  ../../../../../opal/include/sys/powerpc/atomic.h \
+  ../../../../../opal/include/sys/atomic_impl.h \
+  ../../../../../opal/util/cmd_line.h ../../../../../opal/threads/mutex.h \
+  ../../../../../opal/threads/mutex_unix.h /usr/include/pthread.h \
+  /usr/include/pthread_impl.h /usr/include/sched.h /usr/include/time.h \
+  /usr/include/machine/_limits.h ../../../../../orte/mca/ns/ns_types.h \
+  ../../../../../ompi/include/types.h /usr/include/sys/socket.h \
+  /usr/include/machine/param.h /usr/include/ppc/param.h \
+  /usr/include/sys/select.h /usr/include/signal.h /usr/include/sys/time.h \
+  ../../../../../orte/mca/schema/schema_types.h \
+  ../../../../../opal/util/error.h ../../../../../orte/mca/ns/ns.h \
+  ../../../../../opal/include/constants.h \
+  ../../../../../orte/include/orte_types.h ../../../../../orte/dps/dps.h \
+  ../../../../../orte/dps/dps_types.h \
+  ../../../../../orte/mca/oob/oob_types.h \
+  ../../../../../orte/mca/rml/rml_types.h \
+  ../../../../../orte/util/proc_info.h \
+  ../../../../../orte/mca/ns/ns_types.h ../../../../../opal/util/output.h \
+  /usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/stdarg.h \
+  ../../../../../opal/util/trace.h \
+  ../../../../../orte/mca/gpr/replica/api_layer/gpr_replica_api.h \
+  ../../../../../orte/class/orte_pointer_array.h /usr/include/string.h \
+  ../../../../../opal/threads/condition.h \
+  ../../../../../opal/runtime/opal_progress.h \
+  ../../../../../orte/mca/gpr/replica/functional_layer/gpr_replica_fn.h \
+  ../../../../../orte/mca/gpr/replica/gpr_replica.h \
+  ../../../../../orte/class/orte_bitmap.h \
+  ../../../../../orte/class/orte_value_array.h \
+  ../../../../../orte/mca/gpr/base/base.h \
+  ../../../../../opal/mca/base/base.h \
+  ../../../../../opal/mca/base/mca_base_param.h \
+  ../../../../../opal/class/opal_value_array.h \
+  ../../../../../ompi/include/constants.h \
+  ../../../../../orte/include/orte_constants.h \
+  ../../../../../opal/class/opal_hash_table.h \
+  ../../../../../opal/mca/mca.h \
+  ../../../../../opal/mca/base/mca_base_msgbuf.h \
+  ../../../../../orte/mca/gpr/gpr.h \
+  ../../../../../orte/mca/gpr/gpr_types.h \
+  ../../../../../orte/mca/rmgr/rmgr_types.h \
+  ../../../../../orte/mca/soh/soh_types.h \
+  ../../../../../orte/mca/gpr/replica/transition_layer/gpr_replica_tl.h \
+  ../../../../../orte/mca/gpr/replica/transition_layer/gpr_replica_tl.h \
+  ../../../../../orte/mca/gpr/replica/functional_layer/gpr_replica_fn.h
+
+../../../../../include/orte_config.h:
+
+../../../../../include/ompi_config.h:
+
+../../../../../include/ompi_config_bottom.h:
+
+/usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/stdbool.h:
+
+/usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/limits.h:
+
+/usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/syslimits.h:
+
+/usr/include/limits.h:
+
+/usr/include/machine/limits.h:
+
+/usr/include/ppc/limits.h:
+
+/usr/include/ppc/_limits.h:
+
+/usr/include/sys/syslimits.h:
+
+/usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/stdint.h:
+
+../../../../../orte/mca/errmgr/errmgr.h:
+
+../../../../../orte/include/orte_constants.h:
+
+../../../../../opal/include/constants.h:
+
+../../../../../orte/mca/schema/schema.h:
+
+../../../../../opal/mca/mca.h:
+
+../../../../../opal/class/opal_list.h:
+
+/usr/include/stdio.h:
+
+/usr/include/_types.h:
+
+/usr/include/sys/_types.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/machine/_types.h:
+
+/usr/include/ppc/_types.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/sys/wait.h:
+
+/usr/include/sys/signal.h:
+
+/usr/include/sys/appleapiopts.h:
+
+/usr/include/machine/signal.h:
+
+/usr/include/ppc/signal.h:
+
+/usr/include/sys/resource.h:
+
+/usr/include/machine/endian.h:
+
+/usr/include/ppc/endian.h:
+
+/usr/include/sys/_endian.h:
+
+/usr/include/libkern/OSByteOrder.h:
+
+/usr/include/libkern/ppc/OSByteOrder.h:
+
+/usr/include/alloca.h:
+
+/usr/include/machine/types.h:
+
+/usr/include/ppc/types.h:
+
+../../../../../opal/class/opal_object.h:
+
+/usr/include/assert.h:
+
+../../../../../opal/include/sys/atomic.h:
+
+../../../../../opal/include/sys/architecture.h:
+
+/usr/include/sys/types.h:
+
+../../../../../opal/include/sys/powerpc/atomic.h:
+
+../../../../../opal/include/sys/atomic_impl.h:
+
+../../../../../opal/util/cmd_line.h:
+
+../../../../../opal/threads/mutex.h:
+
+../../../../../opal/threads/mutex_unix.h:
+
+/usr/include/pthread.h:
+
+/usr/include/pthread_impl.h:
+
+/usr/include/sched.h:
+
+/usr/include/time.h:
+
+/usr/include/machine/_limits.h:
+
+../../../../../orte/mca/ns/ns_types.h:
+
+../../../../../ompi/include/types.h:
+
+/usr/include/sys/socket.h:
+
+/usr/include/machine/param.h:
+
+/usr/include/ppc/param.h:
+
+/usr/include/sys/select.h:
+
+/usr/include/signal.h:
+
+/usr/include/sys/time.h:
+
+../../../../../orte/mca/schema/schema_types.h:
+
+../../../../../opal/util/error.h:
+
+../../../../../orte/mca/ns/ns.h:
+
+../../../../../opal/include/constants.h:
+
+../../../../../orte/include/orte_types.h:
+
+../../../../../orte/dps/dps.h:
+
+../../../../../orte/dps/dps_types.h:
+
+../../../../../orte/mca/oob/oob_types.h:
+
+../../../../../orte/mca/rml/rml_types.h:
+
+../../../../../orte/util/proc_info.h:
+
+../../../../../orte/mca/ns/ns_types.h:
+
+../../../../../opal/util/output.h:
+
+/usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/stdarg.h:
+
+../../../../../opal/util/trace.h:
+
+../../../../../orte/mca/gpr/replica/api_layer/gpr_replica_api.h:
+
+../../../../../orte/class/orte_pointer_array.h:
+
+/usr/include/string.h:
+
+../../../../../opal/threads/condition.h:
+
+../../../../../opal/runtime/opal_progress.h:
+
+../../../../../orte/mca/gpr/replica/functional_layer/gpr_replica_fn.h:
+
+../../../../../orte/mca/gpr/replica/gpr_replica.h:
+
+../../../../../orte/class/orte_bitmap.h:
+
+../../../../../orte/class/orte_value_array.h:
+
+../../../../../orte/mca/gpr/base/base.h:
+
+../../../../../opal/mca/base/base.h:
+
+../../../../../opal/mca/base/mca_base_param.h:
+
+../../../../../opal/class/opal_value_array.h:
+
+../../../../../ompi/include/constants.h:
+
+../../../../../orte/include/orte_constants.h:
+
+../../../../../opal/class/opal_hash_table.h:
+
+../../../../../opal/mca/mca.h:
+
+../../../../../opal/mca/base/mca_base_msgbuf.h:
+
+../../../../../orte/mca/gpr/gpr.h:
+
+../../../../../orte/mca/gpr/gpr_types.h:
+
+../../../../../orte/mca/rmgr/rmgr_types.h:
+
+../../../../../orte/mca/soh/soh_types.h:
+
+../../../../../orte/mca/gpr/replica/transition_layer/gpr_replica_tl.h:
+
+../../../../../orte/mca/gpr/replica/transition_layer/gpr_replica_tl.h:
+
+../../../../../orte/mca/gpr/replica/functional_layer/gpr_replica_fn.h:

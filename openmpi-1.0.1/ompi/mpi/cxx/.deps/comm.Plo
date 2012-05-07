@@ -1,0 +1,352 @@
+comm.lo .libs/comm.o: comm.cc ../../../include/mpi.h \
+  ../../../ompi/mpi/cxx/mpicxx.h /usr/include/c++/4.0.0/map \
+  /usr/include/c++/4.0.0/bits/stl_tree.h \
+  /usr/include/c++/4.0.0/bits/stl_algobase.h \
+  /usr/include/c++/4.0.0/powerpc-apple-darwin8/bits/c++config.h \
+  /usr/include/c++/4.0.0/powerpc-apple-darwin8/bits/os_defines.h \
+  /usr/include/c++/4.0.0/cstring /usr/include/c++/4.0.0/cstddef \
+  /usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/stddef.h \
+  /usr/include/string.h /usr/include/_types.h /usr/include/sys/_types.h \
+  /usr/include/sys/cdefs.h /usr/include/machine/_types.h \
+  /usr/include/ppc/_types.h /usr/include/c++/4.0.0/climits \
+  /usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/limits.h \
+  /usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/syslimits.h \
+  /usr/include/limits.h /usr/include/machine/limits.h \
+  /usr/include/ppc/limits.h /usr/include/ppc/_limits.h \
+  /usr/include/sys/syslimits.h /usr/include/c++/4.0.0/cstdlib \
+  /usr/include/stdlib.h /usr/include/sys/wait.h /usr/include/sys/signal.h \
+  /usr/include/sys/appleapiopts.h /usr/include/machine/signal.h \
+  /usr/include/ppc/signal.h /usr/include/sys/resource.h \
+  /usr/include/machine/endian.h /usr/include/ppc/endian.h \
+  /usr/include/sys/_endian.h \
+  /usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/stdint.h \
+  /usr/include/libkern/OSByteOrder.h \
+  /usr/include/libkern/ppc/OSByteOrder.h /usr/include/alloca.h \
+  /usr/include/machine/types.h /usr/include/ppc/types.h \
+  /usr/include/c++/4.0.0/iosfwd \
+  /usr/include/c++/4.0.0/powerpc-apple-darwin8/bits/c++locale.h \
+  /usr/include/c++/4.0.0/clocale /usr/include/locale.h \
+  /usr/include/_locale.h /usr/include/c++/4.0.0/cstdio \
+  /usr/include/stdio.h \
+  /usr/include/c++/4.0.0/powerpc-apple-darwin8/bits/c++io.h \
+  /usr/include/c++/4.0.0/powerpc-apple-darwin8/bits/gthr.h \
+  /usr/include/c++/4.0.0/powerpc-apple-darwin8/bits/gthr-default.h \
+  /usr/include/pthread.h /usr/include/pthread_impl.h /usr/include/sched.h \
+  /usr/include/time.h /usr/include/machine/_limits.h \
+  /usr/include/unistd.h /usr/include/sys/unistd.h \
+  /usr/include/sys/select.h /usr/include/sys/types.h \
+  /usr/include/signal.h /usr/include/sys/time.h \
+  /usr/include/c++/4.0.0/cctype /usr/include/ctype.h \
+  /usr/include/runetype.h /usr/include/c++/4.0.0/bits/stringfwd.h \
+  /usr/include/c++/4.0.0/bits/postypes.h /usr/include/c++/4.0.0/cwchar \
+  /usr/include/c++/4.0.0/ctime /usr/include/wchar.h \
+  /usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/stdarg.h \
+  /usr/include/_wctype.h /usr/include/c++/4.0.0/bits/functexcept.h \
+  /usr/include/c++/4.0.0/exception_defines.h \
+  /usr/include/c++/4.0.0/bits/stl_pair.h \
+  /usr/include/c++/4.0.0/bits/cpp_type_traits.h \
+  /usr/include/c++/4.0.0/bits/stl_iterator_base_types.h \
+  /usr/include/c++/4.0.0/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/4.0.0/bits/concept_check.h \
+  /usr/include/c++/4.0.0/bits/stl_iterator.h \
+  /usr/include/c++/4.0.0/debug/debug.h /usr/include/c++/4.0.0/cassert \
+  /usr/include/assert.h /usr/include/c++/4.0.0/bits/allocator.h \
+  /usr/include/c++/4.0.0/powerpc-apple-darwin8/bits/c++allocator.h \
+  /usr/include/c++/4.0.0/ext/new_allocator.h /usr/include/c++/4.0.0/new \
+  /usr/include/c++/4.0.0/exception \
+  /usr/include/c++/4.0.0/bits/stl_construct.h \
+  /usr/include/c++/4.0.0/bits/stl_function.h \
+  /usr/include/c++/4.0.0/bits/stl_map.h \
+  /usr/include/c++/4.0.0/bits/stl_multimap.h \
+  /usr/include/c++/4.0.0/utility /usr/include/c++/4.0.0/bits/stl_relops.h \
+  ../../../ompi/mpi/cxx/constants.h ../../../ompi/mpi/cxx/functions.h \
+  ../../../ompi/mpi/cxx/datatype.h ../../../ompi/mpi/cxx/exception.h \
+  ../../../ompi/mpi/cxx/op.h ../../../ompi/mpi/cxx/status.h \
+  ../../../ompi/mpi/cxx/request.h ../../../ompi/mpi/cxx/group.h \
+  ../../../ompi/mpi/cxx/comm.h ../../../ompi/mpi/cxx/errhandler.h \
+  ../../../ompi/mpi/cxx/intracomm.h ../../../ompi/mpi/cxx/topology.h \
+  ../../../ompi/mpi/cxx/intercomm.h ../../../ompi/mpi/cxx/info.h \
+  ../../../ompi/mpi/cxx/win.h ../../../ompi/mpi/cxx/file.h \
+  ../../../ompi/mpi/cxx/datatype_inln.h \
+  ../../../ompi/mpi/cxx/functions_inln.h \
+  ../../../ompi/mpi/cxx/request_inln.h ../../../ompi/mpi/cxx/comm_inln.h \
+  ../../../ompi/mpi/cxx/intracomm_inln.h \
+  ../../../ompi/mpi/cxx/topology_inln.h \
+  ../../../ompi/mpi/cxx/intercomm_inln.h \
+  ../../../ompi/mpi/cxx/group_inln.h ../../../ompi/mpi/cxx/op_inln.h \
+  ../../../ompi/mpi/cxx/errhandler_inln.h \
+  ../../../ompi/mpi/cxx/status_inln.h ../../../ompi/mpi/cxx/info_inln.h \
+  ../../../ompi/mpi/cxx/win_inln.h ../../../ompi/mpi/cxx/file_inln.h \
+  ../../../opal/threads/mutex.h ../../../include/ompi_config.h \
+  ../../../include/ompi_config_bottom.h \
+  ../../../opal/include/sys/atomic.h \
+  ../../../opal/include/sys/architecture.h \
+  ../../../opal/include/sys/powerpc/atomic.h \
+  ../../../opal/include/sys/atomic_impl.h \
+  ../../../opal/threads/mutex_unix.h ../../../opal/class/opal_object.h
+
+../../../include/mpi.h:
+
+../../../ompi/mpi/cxx/mpicxx.h:
+
+/usr/include/c++/4.0.0/map:
+
+/usr/include/c++/4.0.0/bits/stl_tree.h:
+
+/usr/include/c++/4.0.0/bits/stl_algobase.h:
+
+/usr/include/c++/4.0.0/powerpc-apple-darwin8/bits/c++config.h:
+
+/usr/include/c++/4.0.0/powerpc-apple-darwin8/bits/os_defines.h:
+
+/usr/include/c++/4.0.0/cstring:
+
+/usr/include/c++/4.0.0/cstddef:
+
+/usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/stddef.h:
+
+/usr/include/string.h:
+
+/usr/include/_types.h:
+
+/usr/include/sys/_types.h:
+
+/usr/include/sys/cdefs.h:
+
+/usr/include/machine/_types.h:
+
+/usr/include/ppc/_types.h:
+
+/usr/include/c++/4.0.0/climits:
+
+/usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/limits.h:
+
+/usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/syslimits.h:
+
+/usr/include/limits.h:
+
+/usr/include/machine/limits.h:
+
+/usr/include/ppc/limits.h:
+
+/usr/include/ppc/_limits.h:
+
+/usr/include/sys/syslimits.h:
+
+/usr/include/c++/4.0.0/cstdlib:
+
+/usr/include/stdlib.h:
+
+/usr/include/sys/wait.h:
+
+/usr/include/sys/signal.h:
+
+/usr/include/sys/appleapiopts.h:
+
+/usr/include/machine/signal.h:
+
+/usr/include/ppc/signal.h:
+
+/usr/include/sys/resource.h:
+
+/usr/include/machine/endian.h:
+
+/usr/include/ppc/endian.h:
+
+/usr/include/sys/_endian.h:
+
+/usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/stdint.h:
+
+/usr/include/libkern/OSByteOrder.h:
+
+/usr/include/libkern/ppc/OSByteOrder.h:
+
+/usr/include/alloca.h:
+
+/usr/include/machine/types.h:
+
+/usr/include/ppc/types.h:
+
+/usr/include/c++/4.0.0/iosfwd:
+
+/usr/include/c++/4.0.0/powerpc-apple-darwin8/bits/c++locale.h:
+
+/usr/include/c++/4.0.0/clocale:
+
+/usr/include/locale.h:
+
+/usr/include/_locale.h:
+
+/usr/include/c++/4.0.0/cstdio:
+
+/usr/include/stdio.h:
+
+/usr/include/c++/4.0.0/powerpc-apple-darwin8/bits/c++io.h:
+
+/usr/include/c++/4.0.0/powerpc-apple-darwin8/bits/gthr.h:
+
+/usr/include/c++/4.0.0/powerpc-apple-darwin8/bits/gthr-default.h:
+
+/usr/include/pthread.h:
+
+/usr/include/pthread_impl.h:
+
+/usr/include/sched.h:
+
+/usr/include/time.h:
+
+/usr/include/machine/_limits.h:
+
+/usr/include/unistd.h:
+
+/usr/include/sys/unistd.h:
+
+/usr/include/sys/select.h:
+
+/usr/include/sys/types.h:
+
+/usr/include/signal.h:
+
+/usr/include/sys/time.h:
+
+/usr/include/c++/4.0.0/cctype:
+
+/usr/include/ctype.h:
+
+/usr/include/runetype.h:
+
+/usr/include/c++/4.0.0/bits/stringfwd.h:
+
+/usr/include/c++/4.0.0/bits/postypes.h:
+
+/usr/include/c++/4.0.0/cwchar:
+
+/usr/include/c++/4.0.0/ctime:
+
+/usr/include/wchar.h:
+
+/usr/lib/gcc/powerpc-apple-darwin8/4.0.1/include/stdarg.h:
+
+/usr/include/_wctype.h:
+
+/usr/include/c++/4.0.0/bits/functexcept.h:
+
+/usr/include/c++/4.0.0/exception_defines.h:
+
+/usr/include/c++/4.0.0/bits/stl_pair.h:
+
+/usr/include/c++/4.0.0/bits/cpp_type_traits.h:
+
+/usr/include/c++/4.0.0/bits/stl_iterator_base_types.h:
+
+/usr/include/c++/4.0.0/bits/stl_iterator_base_funcs.h:
+
+/usr/include/c++/4.0.0/bits/concept_check.h:
+
+/usr/include/c++/4.0.0/bits/stl_iterator.h:
+
+/usr/include/c++/4.0.0/debug/debug.h:
+
+/usr/include/c++/4.0.0/cassert:
+
+/usr/include/assert.h:
+
+/usr/include/c++/4.0.0/bits/allocator.h:
+
+/usr/include/c++/4.0.0/powerpc-apple-darwin8/bits/c++allocator.h:
+
+/usr/include/c++/4.0.0/ext/new_allocator.h:
+
+/usr/include/c++/4.0.0/new:
+
+/usr/include/c++/4.0.0/exception:
+
+/usr/include/c++/4.0.0/bits/stl_construct.h:
+
+/usr/include/c++/4.0.0/bits/stl_function.h:
+
+/usr/include/c++/4.0.0/bits/stl_map.h:
+
+/usr/include/c++/4.0.0/bits/stl_multimap.h:
+
+/usr/include/c++/4.0.0/utility:
+
+/usr/include/c++/4.0.0/bits/stl_relops.h:
+
+../../../ompi/mpi/cxx/constants.h:
+
+../../../ompi/mpi/cxx/functions.h:
+
+../../../ompi/mpi/cxx/datatype.h:
+
+../../../ompi/mpi/cxx/exception.h:
+
+../../../ompi/mpi/cxx/op.h:
+
+../../../ompi/mpi/cxx/status.h:
+
+../../../ompi/mpi/cxx/request.h:
+
+../../../ompi/mpi/cxx/group.h:
+
+../../../ompi/mpi/cxx/comm.h:
+
+../../../ompi/mpi/cxx/errhandler.h:
+
+../../../ompi/mpi/cxx/intracomm.h:
+
+../../../ompi/mpi/cxx/topology.h:
+
+../../../ompi/mpi/cxx/intercomm.h:
+
+../../../ompi/mpi/cxx/info.h:
+
+../../../ompi/mpi/cxx/win.h:
+
+../../../ompi/mpi/cxx/file.h:
+
+../../../ompi/mpi/cxx/datatype_inln.h:
+
+../../../ompi/mpi/cxx/functions_inln.h:
+
+../../../ompi/mpi/cxx/request_inln.h:
+
+../../../ompi/mpi/cxx/comm_inln.h:
+
+../../../ompi/mpi/cxx/intracomm_inln.h:
+
+../../../ompi/mpi/cxx/topology_inln.h:
+
+../../../ompi/mpi/cxx/intercomm_inln.h:
+
+../../../ompi/mpi/cxx/group_inln.h:
+
+../../../ompi/mpi/cxx/op_inln.h:
+
+../../../ompi/mpi/cxx/errhandler_inln.h:
+
+../../../ompi/mpi/cxx/status_inln.h:
+
+../../../ompi/mpi/cxx/info_inln.h:
+
+../../../ompi/mpi/cxx/win_inln.h:
+
+../../../ompi/mpi/cxx/file_inln.h:
+
+../../../opal/threads/mutex.h:
+
+../../../include/ompi_config.h:
+
+../../../include/ompi_config_bottom.h:
+
+../../../opal/include/sys/atomic.h:
+
+../../../opal/include/sys/architecture.h:
+
+../../../opal/include/sys/powerpc/atomic.h:
+
+../../../opal/include/sys/atomic_impl.h:
+
+../../../opal/threads/mutex_unix.h:
+
+../../../opal/class/opal_object.h:

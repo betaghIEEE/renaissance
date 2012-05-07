@@ -1,0 +1,47 @@
+\documentclass[11pt]{article}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+\textwidth = 6.5 in
+\textheight = 9 in
+\oddsidemargin = 0.0 in
+\evensidemargin = 0.0 in
+\topmargin = 0.0 in
+\headheight = 0.0 in
+\headsep = 0.0 in
+\parskip = 0.2in
+\parindent = 0.0in
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}{Definition}
+
+\title{Feasibility Study: Basic Concepts of Grid-Service Oriented Computing}
+\author{Daniel Beatty}
+\begin{document}
+\maketitle
+
+The fundamental issue for Grid computing is making many machines behave as one super-computer.  Not all features of a super-computer can be made to work on more spread out machines due to the synchronization of time.   If the grid is trying to make its connected machine behave as nodes of a supercomputer, then the features of an operating system designed for a supercomputer will have analogs in the grid.  
+
+Most supercomputer operating systems support shared libraries just like single processor machine operating system does.  In the case of a grid, %these libraries are shared by the middleware which determines how to distribute these libraries, how to access these libraries, and mechanisms for publishing a common set of libraries for many people to share and use.  
+these libraries require some sort of middle-ware to form the sharing mechanism.  This mechanism has issues with access, location, storage, discovery of such libraries,  and general execution that would normally exist on a general purpose super-computer.   Other issues that are generally better engineered on a super-computer versus a grid is reliability and synchronization.  
+%One other concept that concerns the grid is reliability.  
+Both general issues are elaborated as follows:  
+\begin{itemize}\item Reliability
+\begin{itemize}\item Nodes are likely to fail, and redundancy is a mechanism to reduce the impact of this failure.  
+\item Discovery services provide mechanisms identify resources (libraries, hardware specific devices, memory, data storage, etc).  \end{itemize}
+\item Synchronization 
+\begin{itemize}\item Synchronization is a matter of determining order and is based a common clock.  
+\item Operations that occur at the same distinguishable moment are said to tie (and are a tie).  
+\item The precision of synchronization of clocks determines the window of time, and operations occurring in that window are a tie.  
+\item For general super computers, this window is determined by a common clock.  In non-super computers, the each processor set has its own clock.  \end{itemize}\end{itemize}
+%Of course, the synchronization of time and the degree of precision to which this synchronization can be made determines how dynamic the scheduler can be.  In many cases, a pyramid scheme going from weak to strong precision is hypothesized for a mechanism.
+
+For this feasibility study, issues of reliability and synchronization are considered briefly to provide a performance context.   The general architecture neglects these issues in general.  However, these are important issues which contribute to the limits of these shared libraries both in implementation and capability.  
+
+The primary focus of this feasibility are the use of these shared libraries and a few applications.  
+
+
+ \end{document} 
