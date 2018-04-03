@@ -1,0 +1,3 @@
+CMDLINE=CC -DEFAULT:abi=n32:isa=mips4:proc=r10k -LANG:std -lscs -c -I/usr/freeware/include -I/usr/freeware/include/libxml2 -n32 projectionMatrix.cpp
+PWD=/home/undergrad4/beatty/CS5331/HW03/HW03At01
+----

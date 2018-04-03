@@ -1,0 +1,443 @@
+# The reLyX bundled with LyX 1.3 created this file.
+# For more info see http://www.lyx.org/
+\lyxformat 2.15
+\textclass report
+\paperfontsize 11
+\use_amsmath 1
+\use_natbib 0
+\use_numerical_citations 0
+\begin_preamble
+\usepackage[pdftex, xdvi, dvips]{graphicx}
+\usepackage{doublespace}
+\usepackage{algorithm,algorithmic}
+%\usepackage{epstopdf}
+%\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `basename #1 .tif`.png}
+
+%\usepackage{amsmath}
+
+
+\textwidth = 6.5 in
+\textheight = 9 in
+\oddsidemargin = 0.0 in
+\evensidemargin = 0.0 in
+\topmargin = 0.0 in
+\headheight = 0.0 in
+\headsep = 0.0 in
+\parskip = 0.2in
+\parindent = 0.0in
+
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+%\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+%\input{tcilatex}
+
+
+\title{Matrix Multiplication via Wavelets}
+\author{Daniel Beatty}
+
+\end_preamble
+
+\layout Standard
+
+
+\begin_inset LatexCommand \tableofcontents
+
+\end_inset 
+
+
+\layout Chapter
+
+Introduction
+\layout Standard
+
+
+\begin_inset Include \input{introduction.lyx}
+
+\end_inset 
+
+
+\layout Chapter
+
+Overview on Wavelets
+\layout Standard
+
+
+\begin_inset Include \input{wavedefinition.lyx}
+
+\end_inset 
+
+
+\layout Chapter
+
+Image Processing Example of Wavelets
+\layout Standard
+
+
+\begin_inset Include \input{imageexample.lyx}
+
+\end_inset 
+
+
+\layout Chapter
+
+Matrix Multiplication via Wavelets
+\layout Standard
+
+
+\begin_inset Include \input{haarmultiply.lyx}
+
+\end_inset 
+
+
+\layout Chapter
+
+Results
+\layout Standard
+
+
+\begin_inset LatexCommand \label{chp:results}
+
+\end_inset 
+
+ 
+\begin_inset Include \input{results.lyx}
+
+\end_inset 
+
+
+\layout Chapter
+
+Conclusion
+\layout Standard
+
+
+\begin_inset Include \input{conclusion.lyx}
+
+\end_inset 
+
+
+\layout Bibliography
+
+\bibitem {ChuiIntro}
+ Charles Chui 
+\shape slanted 
+An Introduction to Wavelets
+\shape default 
+ published by Academic Press San Diego, CA 92101-4495 copyright 1992
+\layout Bibliography
+
+\bibitem {matrix01}
+Howard L.
+ Resnikoff.
+ and Raymond O.
+ Wells, Jr. 
+\shape slanted 
+Wavelet Analysis: The Scalable Structure of Information
+\shape default 
+ copyright Springer-Verlag New York, Inc.
+ New York, NY 10010, USA, 1998 
+\layout Bibliography
+
+\bibitem {walker}
+James Walker 
+\shape slanted 
+A Primer on Wavelets and Their Scientific Applications
+\shape default 
+ copyright Chapman & Hall/CRC : Boca Raton, FL, USA, 1999
+\layout Bibliography
+
+\bibitem {tabor}
+Gavin Tabor 
+\begin_inset Quotes eld
+\end_inset 
+
+Wavelets - The Idiots Guide
+\begin_inset Quotes erd
+\end_inset 
+
+ Retrieved March 20, 2004 http://monet.me.ic.ac.uk/people/gavin/java/waveletDemo
+s.html
+\layout Bibliography
+
+\bibitem {graps}
+ Amara Graps 
+\begin_inset Quotes eld
+\end_inset 
+
+Introduction to Wavelets
+\begin_inset Quotes erd
+\end_inset 
+
+ Retrieved March 20, 2004 from http://www.amara.com/current/wavelet.html
+\layout Bibliography
+
+\bibitem {appliedmethods}
+ Singiresu S.
+ Rao 
+\shape slanted 
+Applied Numerical Methods for Engineers and Scientists
+\shape default 
+ published Prentice Hall Upper Saddle River, NJ 07458 copyright 2002 
+\layout Bibliography
+
+\bibitem {numrecipies}
+ William H.
+ Press, Saul A.
+ Teukolsky, William T.
+ Vetterling, and Brian P.
+ Flannery 
+\shape slanted 
+Numerical Methods in C
+\shape default 
+ Published by the Press Syndicate of the University of Cambridge The Pitt
+ Building, Trumpington Street, Cambridge CB2 1RP 40 West 20th Street, New
+ York, NY 10011-4211, USA, Copyright Cambridge University Press 1988, 1992
+\layout Bibliography
+
+\bibitem {bvpbeylkin}
+ G.
+ Beylkin 
+\shape slanted 
+Wavelets: Mathematics and Applications
+\shape default 
+, 1993 CRC Press , chapter "On wavelet-based algorithms for solving differential
+ equations",
+\layout Bibliography
+
+\bibitem {amsbeylkin}
+ G.
+ Beylkin 
+\shape slanted 
+Wavelets and Fast Numerical Algorithms AMS-93 Proceedings of Symposia in
+ Applied Mathematics
+\shape default 
+, v.47, pp.
+ 89-117, 1993Ê
+\layout Bibliography
+
+\bibitem {fwtnal}
+ G.
+ Beylkin, R.
+ Coifman, and V.
+ Rokhlin 
+\shape slanted 
+Fast Wavelet Transforms and Numerical Algorithms I, Article in Communications
+ on pure and applied mathematics
+\shape default 
+ copyright 1991 Wiley, New York
+\layout Bibliography
+
+\bibitem {mwabeylkin}
+ G.
+ Beylkin, D.
+ Gines and L.
+ Vozovoi "Adaptive Solution of Partial Differential Equations in Multiwavelet
+ Bases " May 6, 1999 National Institute of Standards and Technology, Boulder,
+ CO 80303-3328 and Department of Applied Mathematics, University of Colorado,
+ Boulder, CO 80309-0526
+\layout Bibliography
+
+\bibitem {PDEfSE}
+ Stanly J.
+ Farlow 
+\shape slanted 
+Partial Differential Equations for Scientists and Engineers
+\shape default 
+ copywrite 1993 Dover Publications, Inc Mineola, N.Y.
+ 11501
+\layout Bibliography
+
+\bibitem {spiegel}
+ Murray R.
+ Spiegel, 
+\shape slanted 
+ Theory and Problems of Advanced Mathematics for Engineers and Scientist
+\shape default 
+ copy-write 1996 McGraw-Hill
+\layout Bibliography
+
+\bibitem {tools}
+ Stephane Jaffard, Yves Meyer, and Robert D.
+ Ryan 
+\shape slanted 
+Wavelets: Tools for Science and Technology
+\shape default 
+ copyright 2001 by the Society for Industrial and Applied Mathematics Philadelph
+ia,
+ PA 19104-2688
+\layout Bibliography
+
+\bibitem {victor}
+ Mladen Victor Wickerhauser 
+\shape slanted 
+Adapted Wavelet Analysis from Theory to Software
+\shape default 
+ copyright 2001 by the Society for Industrial and Applied Mathematics Philadelph
+ia,
+ PA 19104-2688
+\layout Bibliography
+
+\bibitem {xiao}
+ En-Bing Lin and Zhengchu Xiao 
+\shape slanted 
+Multiwavelet Solutions for the Dirichlet Problem
+\shape default 
+ Department of Mathematics, University of Toledo; Toledo, OH 43606, USA
+\layout Bibliography
+
+\bibitem {T}
+ian-Xiao He 
+\shape slanted 
+Wavelet Analysis and Multiresolution Methods (Lecture Notes in Pure and
+ Applied Mathematics)
+\shape default 
+ published Marcel Dekker, Inc.
+ New York, NY 10016 copyright 2000
+\layout Bibliography
+
+\bibitem {lipschutz}
+ Seymour Lipschutz 
+\shape slanted 
+Schaum's Outlines Theory and Problems of Linear Algebra, 2nd Edition
+\shape default 
+ copywrite 1991, 1968 McGraw Hill New York
+\layout Bibliography
+
+\bibitem {blackford}
+ Z.
+ Bai, J.
+ Demmel, J.
+ Dongarra, A.
+ Ruhe, and H.
+ van der Vorst, editors. 
+\shape slanted 
+Templates for the Solution of Algebraic Eigenvalue Problems: a Practical
+ Guide
+\shape default 
+.
+ SIAM, Philadelphia, 2000.
+\layout Bibliography
+
+\bibitem {bank}
+ Randolph E.
+ Bank, Craig C.
+ Douglas 
+\shape slanted 
+Sparse Matrix Multiplication Package
+\shape default 
+ April 23, 2001.
+\layout Bibliography
+
+\bibitem {lederman}
+ Steven Huss-Lederman, Elaine M.
+ Jacobson, J.R.
+ Johnson, Anna Tsao, Thomas Turnbull 
+\shape slanted 
+Strassen's Algorithm for Matrix Multiplication: Modeling, Analysis, and
+ Implementation
+\shape default 
+ November 15, 1996
+\layout Bibliography
+
+\bibitem {waterfall}
+ Sascha Ledinsky 
+\shape slanted 
+Waterfall
+\shape default 
+ http://oz.irtc.org/ftp/pub/stills/1998-10-31/waterfa1.txt Internet Raytracing
+ Competition copyright October 31, 1998 
+\layout Bibliography
+
+\bibitem {water}
+ Jaime Vives Piqueres 
+\shape slanted 
+Always running, never the same...
+\shape default 
+ http://oz.irtc.org/ftp/pub/stills/1998-10-31/running.txt Internet Raytracing
+ Competition copyright October 31, 1998 
+\layout Bibliography
+
+\bibitem {watch}
+ Kevin Odhner 
+\shape slanted 
+Pocket Watch on a Gold Chain
+\shape default 
+
+\layout Bibliography
+
+\bibitem {opera}
+ fabien a.
+ p.
+ petitcolas Opera House of Lyon open domain 
+\layout Bibliography
+
+\bibitem {pentagon}
+ Signal and Image Processing Institute at the University of Southern California
+ 
+\shape slanted 
+Pentagon
+\shape default 
+ The copyright status of this images in unclear. 
+\layout Bibliography
+
+\bibitem {f16}
+ Signal and Image Processing Institute at the University of Southern California
+ 
+\shape slanted 
+F-16
+\shape default 
+ The copyright status of this images in unclear. 
+\layout Bibliography
+
+\bibitem {peppers}
+ Signal and Image Processing Institute at the University of Southern California
+ 
+\shape slanted 
+Peppers
+\shape default 
+ The copyright status of this images in unclear. 
+\layout Bibliography
+
+\bibitem {fishingboat}
+ Signal and Image Processing Institute at the University of Southern California
+ 
+\shape slanted 
+Fishing Boat
+\shape default 
+ The copyright status of this images in unclear. 
+\layout Bibliography
+
+\bibitem {rowland}
+ Eric W.
+ Weisstein et al.
+ "Dual Space." From MathWorld--A Wolfram Web Resource.
+ http://mathworld.wolfram.com/DualSpace.html 
+\layout Bibliography
+
+\bibitem {translation}
+ Eric W.
+ Weisstein.
+ "Translation." From MathWorld--A Wolfram Web Resource.
+ http://mathworld.wolfram.com/Translation.html 
+\the_end

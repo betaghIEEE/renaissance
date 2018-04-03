@@ -1,0 +1,160 @@
+
+1 1zero value 48
+
+ At resolution 1
+
+ At epsilon 0.7
+
+ image 1 pgmclassics/peppers.pgm
+ image 2 pgmclassics/peppers.pgm¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 4 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 14413908
+ Total Data transfers 6289452
+ Total Data Compares 1048594 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 4 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 28827816
+ Total Data transfers 12578904
+ Total Data Compares 2097188 Generate Histogram 
+ Histogram allocated -1881055200 = 512 by512
+ Histogram arranged 
+ Generate Histogram 
+ Histogram allocated -1881055200 = 512 by512
+ Histogram arranged 
+ Beginning Multiply 
+
+ Energy of the standard 12972.4
+ Energy of the approximation 12972.4
+ Percent difference -8.4132e-16 Saved source and result
+ Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+
+ Total instructions 41410928
+ Total Data transfers 15724668
+ Total Data Compares 2097224
+ Energy of the standard 12972.4
+ Energy of the approximation 12972.4
+ Percent difference -4.2066e-16
+ Fidelity 1.25775e-13
+
+1 2zero value 48
+
+ At resolution 2
+
+ At epsilon 0.7
+
+ image 1 pgmclassics/peppers.pgm
+ image 2 pgmclassics/peppers.pgm¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 16 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 26466406
+ Total Data transfers 11006014
+ Total Data Compares 2097170 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 16 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 52932812
+ Total Data transfers 22012028
+ Total Data Compares 4194340 Generate Histogram 
+ Histogram allocated -1881055200 = 512 by512
+ Histogram arranged 
+ Generate Histogram 
+ Histogram allocated -1881055200 = 512 by512
+ Histogram arranged 
+ Beginning Multiply 
+
+ Energy of the standard 12972.4
+ Energy of the approximation 12972.4
+ Percent difference -2.24352e-15 Saved source and result
+ Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+
+ Total instructions 72855984
+ Total Data transfers 26206368
+ Total Data Compares 4194376
+ Energy of the standard 12972.4
+ Energy of the approximation 12972.4
+ Percent difference -1.12176e-15
+ Fidelity 1.53682e-13

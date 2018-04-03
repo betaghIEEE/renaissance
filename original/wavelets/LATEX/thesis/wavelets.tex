@@ -1,0 +1,119 @@
+\documentclass[11pt]{report}
+
+\usepackage[pdftex, xdvi, dvips]{graphicx}
+\usepackage{amssymb}
+\usepackage{doublespace}
+%\usepackage{epstopdf}
+%\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `basename #1 .tif`.png}
+
+
+%\usepackage{amsmath}
+
+
+\textwidth = 6.5 in
+\textheight = 9 in
+\oddsidemargin = 0.0 in
+\evensidemargin = 0.0 in
+\topmargin = 0.0 in
+\headheight = 0.0 in
+\headsep = 0.0 in
+\parskip = 0.2in
+\parindent = 0.0in
+
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+%\input{tcilatex}
+
+
+\title{Matrix Multiplication, Inversion and Partial Differential Equations via Wavelets}
+\author{Daniel Beatty}
+
+\begin{document}
+
+
+\maketitle \newpage
+
+\tableofcontents \newpage
+
+\chapter{Introduction}
+\input{introduction}
+
+\chapter {Overview on Wavelets}
+Goals for this introductory document on wavelets is to define a wavelet,
+acknowledge alternative definitions of a wavelet, specify basic wavelet
+theorems, and show wavelets through practical examples. \ \ Convolution provides the key for defining the wavelet, its theorems and practical examples.  The Haar Wavelet Filter is used to show these concepts.  
+
+\input {basicwave}
+
+\chapter {Matrix Multiplication via Wavelets}
+\input{multiply}
+
+
+%\chapter {Matrix Inversion via Wavelets}
+%\input{inverse}
+
+\chapter {PDE via Wavelets}
+\input{pdeproblem}
+
+\appendix
+\input{appendixOver}
+
+\begin{thebibliography}{99}
+\bibitem{matrix01}Howard L. Resnikoff. and Raymond O. Wells, Jr. \textsl {Wavelet Analysis: The Scalable Structure of Information}  copyright Springer-Verlag New York, Inc.  New York, NY 10010, USA, 1998
+\bibitem{walker}James Walker \textsl {A Primer on Wavelets and Their Scientific Applications}
+copyright Chapman \& Hall/CRC : Boca Raton, FL, USA, 1999
+\bibitem{tabor}Gavin Tabor \textsl {Wavelets - The Idiots Guide} http://monet.me.ic.ac.uk/people/gavin/java/waveletDemos.html
+\bibitem {graps} Amara Graps \textsl {Introduction to Wavelets} http://www.amara.com/current/wavelet.html 
+
+\bibitem {appliedmethods} Singiresu S. Rao \textsl{Applied Numerical Methods for Engineers and Scientists}  published Prentice Hall Upper Saddle River, NJ 07458 copyright  2002
+\bibitem {numrecipies} William H. Press, Saul A. Teukolsky, William T. Vetterling, and Brian P. Flannery 
+
+\textsl {Numerical Methods in C}
+Published by the Press Syndicate of the University of Cambridge The Pitt Building, Trumpington Street, Cambridge CB2 1RP40 West 20th Street, New York, NY 10011-4211, USA
+Copyright Cambridge University Press 1988, 1992
+
+\bibitem {bvpbeylkin}  G. Beylkin \textsl{On wavelet-based algorithms for solving differential equations}
+
+\bibitem {amsbeylkin}  G. Beylkin \textsl{Wavelets and Fast Numerical Algorithms}
+
+\bibitem {fwtnal} G. Beylkin, R. Coifman, and V. Rokhlin \textsl {Fast Wavelet Transforms and Numerical Algorithms I, Article in Communications on pure and applied mathematics} copyright 1991 Wiley, New York
+
+\bibitem {mwabeylkin}  G. Beylkin, D. Gines and L. Vozovoi \textsl{Adaptive Solution of Partial Differential Equations in Multiwavelet Bases }
+
+\bibitem {PDEfSE} Stanly J. Farlow \textsl{Partial Differential Equations for Scientists and Engineers} copywrite 1993 Dover Publications, Inc Mineola, N.Y. 11501
+
+\bibitem {spiegel} Murray R. Spiegel, \textsl { Theory and Problems of Advanced Mathematics for Engineers and Scientist} copy-write 1996 McGraw-Hill 
+
+\bibitem {tools} Stephane Jaffard, Yves Meyer, and Robert D. Ryan \textsl {Wavelets: Tools for Science and Technology} copyright 2001 by the Society for Industrial and Applied Mathematics Philadelphia, PA 19104-2688
+
+\bibitem {victor} Mladen Victor Wickerhauser \textsl {Adapted Wavelet Analysis from Theory to Software} copyright 2001 by the Society for Industrial and Applied Mathematics Philadelphia, PA 19104-2688
+
+\bibitem En-Bing Lin and Zhengchu Xiao \textsl {Multiwavelet Solutions for the Dirichlet Problem} Department of Mathematics, University of Toledo; Toledo, OH 43606, USA
+
+\bibitem Tian-Xiao He \textsl {Wavelet Analysis and Multiresolution Methods (Lecture Notes in Pure and Applied Mathematics} published Marcel Dekker, Inc.  New York, NY 10016 copyright 2000
+
+\end{thebibliography}
+
+ \end{document}

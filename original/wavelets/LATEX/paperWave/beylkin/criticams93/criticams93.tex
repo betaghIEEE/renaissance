@@ -1,0 +1,249 @@
+\documentclass[11pt]{article}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{doublespace}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `basename #1 .tif`.png}
+
+\textwidth = 6.5 in
+\textheight = 9 in
+\oddsidemargin = 0.0 in
+\evensidemargin = 0.0 in
+\topmargin = 0.0 in
+\headheight = 0.0 in
+\headsep = 0.0 in
+\parskip = 0.2in
+\parindent = 0.0in
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}{Definition}
+
+\title{Critic of AMS-93}
+\author{Daniel D. Beatty}
+\begin{document}
+\maketitle
+
+Watch out for 2 significant numerical methods 
+\begin{enumerate}\item Derivation: Differential Equations 
+\item SVD\end{enumerate}
+
+Start with analysis notes and notes on Functional Analysis.
+
+\section {Topological Vector Spaces 10 April 2003}
+Functional Analysis by Rudin 
+Supposition:  Suppose $\tau$ is a topology on a vector space X such that 
+\begin{itemize}\item every point of X is a closed set.
+\item the vector space operations are continuous with respect to $\tau$.\end{itemize}
+
+To say that addition is continuous means, by definition that the mapping $(x,y) \rightarrow x+y$ of the cartesian product $X*X$ into X is continuous.  
+
+Invariance: Let X be a topological vector space.  Associate to each $a\in X$ and to each scalar $\lambda \not= 0$ the translation operator $m_{\lambda}$ by the formula:
+
+\begin{itemize}\item $T_a (x)=x+a$
+\item $M_{\lambda} (x) = \lambda x$\end{itemize}
+
+Both $T_a$ and $M_{\lambda}$ are homomorphisms on X onto X.
+
+Types of Topological Vector Spaces
+
+\section{Main Points of Wavelets and Fast Numerical Algorithms}
+
+\begin{enumerate}\item All transform methods expand vectors and operators are expanded into a basis and computations take place in the new system of coordinates.
+\item Typically, the choice of the differential operator and, hence of the basis functions, is dictated by the availability of fast algorithms for expanding an arbitrary functions into the basis.
+\item Representations in wavelet bases reduce a wide class of operators to a sparse form.
+\end{enumerate}
+
+One key term: Sparse system
+A sparse system is a system with few or scattered elements.  
+
+Ingredients of Calderon-Zygmund Theory appear in the Fast Multipole Method for computing potential interactions.  
+
+The Fast Wavelet Transform provide a system generalization of the FMM and its descendants to all Calderon-Zygmund and differential operators.
+
+Non-standard form characteristics 
+\begin{itemize}\item Uncoupling of interaction between the scales.
+\item Explicitly computation of basic operators such as derivatives, Hilbert and Riesz transforms.  
+\item Solutions to two-point boundary value problems for elliptic differential operators.\end{itemize}
+
+\subsection {Multiresolution Analysis and Wavelets Reference Properties}
+Definiion:  A multi-resolution analysis is a decomposition of the Hilbert space $L^2(R^d)$,  $d\ge 1$, into a chain of close subspaces.
+
+$...\subset V_2 \subset V_1 \subset V_0 \subset V_{-1} \subset V_{-2} \subset ....$
+
+such that
+\begin{enumerate}\item $\bigcap _{j\in Z} V_j = \{0\} $
+\item For any $f\in L^2 (R^d)$  and $j\in Z$ , $f(x)\in V_j$ if and only if $f(2x)\in V_{j-1}$
+\item For any $ f\in L^2 (R^d)$ and any $k\in Z^d$ , $f(x)\in V_0$ if and only if $f(x-k)\in V_0$ 
+\item There exist a function $ \phi \in V_0$ such that $\phi (x-k)$ is an orthogonal basis at $V_0$.\end{enumerate}
+
+Let $W_j$ be an orthogonal complement of $V_j$ in $V_(j-1)$ 
+
+$V_j-1 =V_j \oplus W_j$
+
+and represent $ L^2(R^d)= \oplus W_j $ (as a direct sum). 
+
+
+\subsubsection {Consequences of the Multi-resolution Definition}
+
+\begin{enumerate}\item The function may be described as a linear combination of the basis function.
+\item Second orthogonality implies the multiplicand (filter) unit, in the power domain, and does not add or remove power from the original.\end{enumerate}
+
+There are several mathematical transforms to illustrate these points 
+\begin{itemize}\item $\phi$ forms an orthonormal basis for V $(\phi(x-k)) \forall k \in Z$ .
+\item $\psi$ forms an orthonormal basis for W $(\psi (x-k)) \forall k \in Z$\end{itemize} 
+Condition for exact reconstruction for a pair of the quadrature mirror filters:
+
+
+It may be a good idea to work out this proof a show the results.  
+
+The coefficents of quadrature mirror filters H and G are computed by solving a set of algebraic equations.  
+
+Once the filter H has been chosen, it completely determines the functions $\phi$  and $\psi$ and furthermore multi-resolution analysis.  Furthermore, the QMF are perform manipulation on the original signed to acquire the transform results.  
+
+There is a non-standard form.
+
+In $L^2(R^2)$ the supports of the basis functions are rectangles of various dyadic sizes.  Construction may be done scaling and wavelet functions.  
+
+\subsection{Introduction of the non-standard form:}
+
+
+Given
+
+ $T_j=\left(\begin{array}{ccc}%  &   &   \\%  &   &   \\
+{A}_{j+1}  & B _{j+1} \\
+\Gamma _{j+1} & T_{j+1} \\%  &   &   \end{array}\right)
+$
+
+Let $\alpha _{i,l}$ , $\beta _{i,l}$ , $\gamma _{i,l}$, and $\tau_{i,l}$ represent the individual elements of A, B, $\Gamma$, T.  The matrices have the following mapping:
+\begin{itemize}\item $A_j:W_j \rightarrow W_j$
+\item $B_j:V_j \rightarrow W_j$
+\item $\Gamma _j: W_j \rightarrow V_j$\end{itemize}
+
+For each element, there are set of equations that describe this mapping.
+\begin{itemize}\item $\alpha _{k,k'} = \int \int K(x,y) \psi _{j,k} (x) \psi _{j,k'} (y) dxdy $
+\item $\beta _{k,k'} = \int \int K(x,y) \phi _{j,k'} (y) \psi _{j,k} (x) dxdy $
+\item $\gamma _{k,k'} = \int \int K(x,y) \phi _{j,k} (x) \psi _{j,k'} (y) dxdy $
+\item $\tau _(k,k') = \int \int K(x,y) \phi _{j,k} (x) \phi _{j,k'} (y) dxdy $\end{itemize}
+
+\subsection {Standard Form}
+Use of the T operator 
+\begin{itemize}\item Calderon-Zygmund
+\item pseudo-differential operators\end{itemize}
+
+Two ways of computing the standard form of a matrix 
+\begin{itemize}\item Non-standard form follows by column-row fix
+\item Modified Vector-Matrix Method of Wavelet Transform (Pivot Vector-Matrix Wavelet Transform)\end{itemize}\subsection {Compression Operator}
+Hypothesis: Operator T is a Calderon-Zygmun or a pseudo-differential operator then by using the wavelet basis with M vanishing moments, which forces the operators $ 
+ \left\{ 
+ {A_j , B_j, \Gamma _j  } 
+ \right\} 
+  _{j\in Z } $
+to decay roughly as $\frac{1}{d^{n+1}}$ where d is the distance from the diagonal.
+
+Example: Let the kernel satisfy the conditions
+\begin{itemize}\item $|\kappa (x,y)| < \frac{1}{|x-y|} $
+\item $|\partial ^M _x \kappa (x,y)| + |\partial ^M _y \kappa (x,y)| < \frac{c_0}{|x-y|^{1+M}}$\end{itemize}
+
+Furthermore, the choice of wavelet basis with M vanishing moments (such that $M \ge 1$) 
+yields the following condition with the non-standard form coefficients:
+
+$|\alpha ^j _{i,l}| + |\beta^j _{i,l}| + |\gamma^j _{i,l}| \le
+ \frac{c_m}{1+|i-l|^{m+1}}$
+
+$\forall (|i-l|\ge 2M)$
+
+If $  | \int_{I\times I} \kappa (x,y) dxdy | \le C|I| \forall dydx    $
+intervals then $\forall i,l \in Z$ 
+
+
+Hypothesis on Pseudo-differential operator
+If T is a pseudo-differential operator with symbol $\sigma (x, \xi )$ of order $\lambda$ define by the formula 
+
+$ T(f)(x) = \sigma(x,D)f = \int e^{ix} \xi \sigma (x,\zeta) \hat{f}(\zeta) d\xi $
+
+$T(f)(x) = \int \kappa (x,y) f(y)dy $
+
+where $\kappa$ is the distributed kernel of T, then assuming that the symbols $\sigma$ of T and $\tilde{\sigma}$ of $\tilde{T}$ satisfy the standard conditions:
+
+$|\partial ^\alpha _\xi \partial ^\beta _x \sigma (x,\xi)| \le C_{\alpha , \beta} (1+|\xi |)^{\lambda - \alpha + \beta}$
+
+$ | \partial ^\alpha _\xi \partial ^\beta _x \hat{\sigma} ( x , \xi ) | \le C_{\alpha , \beta} (1 + |\xi | )^{\lambda -\alpha + \beta}  $
+
+The following inequality holds $\forall i,l$:
+
+$ |\alpha ^j _{i,l} | + | \beta ^j _{i,l} | +  |\gamma ^j _{i,l}| \le \frac {2^{\lambda j}  C_m } {1 + |i-l| ^{m+1}} $
+ 
+ 
+Key points:
+\begin{itemize}\item The operator-compression hypothesis are used to both so a reduction of a matrix to diagonal form for use of linear algebra techniques be applied to these problems.  
+\item Also these hypothesis are used provide support for G. David and J.L. Jorne Theorem on compression of operators to yield fast algorithms.
+\item An vector matrix multiply is used to show an example of this theorem in practice.  \end{itemize}
+
+
+\subsection {The differential operator in wavelet bases.}
+
+Theme: For a number of operators we may compute the non-standard form in the wavelet bases by solving a small system of linear equations.  
+
+Example: Non-standard form of the operator:
+
+Compute $\alpha^j _{i,l}$ , $\beta^j _{i,l}$ and $\gamma^j _{i,l}$ of $A_j$, $B_j$, and $\Gamma_j$ where $i,l \in Z$ for the operator $\frac{d}{dx}$.  
+\begin{itemize}\item $\alpha ^j_{i,l} = 2^{-j} \int \psi (2^{-j} - i) \psi\prime (2^{-j}x -l) 2^-j dx = 2^{-j} \alpha_{i-l}  $
+\item $\beta ^j_{i,l} = 2^{-j} \int \psi (2^{-j} - i) \phi\prime (2^{-j}x -l) 2^-j dx = 2^{-j} \beta_{i-l}  $
+\item $\gamma ^j_{i,l} = 2^{-j} \int \phi (2^{-j} - i) \psi\prime (2^{-j}x -l) 2^-j dx = 2^{-j} \gamma_{i-l}  $
+\end{itemize}
+
+where 
+\begin{itemize}\item $\alpha_l = \int\limits ^\infty _{-\infty} \psi (x-l)\frac{d}{dx} \psi (x)dx$
+\item $\beta_l = \int\limits ^\infty _{-\infty} \psi (x-l)\frac{d}{dx} \phi (x)dx$
+\item $\gamma_l = \int\limits ^\infty _{-\infty} \phi (x-l)\frac{d}{dx} \psi (x)dx$
+\end{itemize}
+
+For example using 
+\begin{itemize}\item $\phi(x) = \sqrt{2} \sum\limits^{k-1} _{k=0} h_k \phi(2x-k)$
+
+\item $\psi(x) = \sqrt{2} \sum\limits^{k-1} _ {k=0} g_k \phi (2x-k)$
+
+\item $\alpha_i = 2 \sum\limits_k \sum\limits_{k\prime} g_k g_{k\prime} r{2i + k -k\prime}$
+
+\item $\beta_i = 2 \sum\limits_k \sum\limits_{k\prime} g_k h_{k\prime} r{2i + k -k\prime}$
+
+\item $\gamma_i = 2 \sum\limits_k \sum\limits_{k\prime} h_k g_{k\prime} r{2i + k -k\prime}$\end{itemize}
+
+$r_l = \int\limits^\infty _{-infty} \phi(x-l) \frac{d}{dx}\phi(x)dx$
+Conclusions, eye catchers, and questions
+\begin{enumerate}\item The representation of $d/dx$ is completely determined by the coefficents $r_l$ or more to the point by the representation on the subspace $V_0$.
+\item The coefficents $r_l$ depend only on the auto-correlation function of the scaling functions $\phi$, rather than the scaling function itself.  
+\item Justification of one of the conclusions (2) is that integral depends on $|\phi(\xi)|^2$.  
+\item Also, how does Beylkin get to this point?\end{enumerate}
+
+
+Proposition: The goal is to reduce the computation of the coefficients $r_l$ to solving a system of linear algebraic equations.
+
+Given:
+
+$r_l = \int\limits^\infty _{-\infty} \phi (x-l) \frac{d}{dx} \phi(x)dx $
+
+$ r_l = \int\limits^\infty_{-\infty} |\phi (\xi)|^2 (i\xi)e^{-il\xi} d\xi   $
+
+ Proposition 1: If the given exists, then the following coefficents $r_l , l \in Z$ satisfy the following system of linear algebraic equations:
+ 
+$r_l = 2( r_{2l} +\frac{1}{2} \sum\limits ^{L/2}_{k=1} \alpha_{2k-1} (r_{2l-2k+1} + r_{2l+2k-1}))$
+
+$\sum\limits_l lr_l =-1$
+
+such that $a_{2k-1} = 2 \sum\limits^{L-2k}_i=0 h_ih_{i+2k-1} $   $k\in U[1,L/2]$.  are the auto-correlation coefficients of the filter H.
+
+If $M \ge 2$, then a and b have an unique solution with a finite of non-zero $r_l$, namely $r_l\not=0 \forall l\in [-L+2,L-2]$ and $r_l = -r_l$
+
+% Reference Data Analysis for High Energy Physics 2nd Edition by R. Fruhwirth, M. Regler, R. K. Bock, H. Grote, D. Notz, c. 2000 Publisher: Cambridge University Press ISBN: 0-521-63219-6 hardback :  
+% Useful for pattern recognition and Kalman filters.
+
+%Reference:  Astronomical Data Analysis II:  Volume 4847 Procedings of SPIE: The International Society for Optical Engineering.
+
+% Reference:  Tools to detect non-Gaussianity in non-standard cosmological models by J.E. Gallegos, Martinez-Gonzalez, F. Argueso, L. Cayon, and J.L. Sanz of Instituto de Fisica de Cantabria E39005; Santander, Spain Universidad de Oviedo E33007 Oviedo, Spain.
+
+
+
+
+ \end{document}

@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99c (Web2C 7.5.2)
+The top-level auxiliary file: wavelets.aux
+The style file: abbrv.bst
+Database file #1: wave.bib
+Warning--to sort, need author or key in opera
+Warning--to sort, need author or key in peppers
+Warning--empty journal in bank
+Warning--can't use both author and editor fields in digital
+You've used 20 entries,
+            2118 wiz_defined-function locations,
+            603 strings with 6288 characters,
+and the built_in function-call counts, 5210 in all, are:
+= -- 496
+> -- 200
+< -- 4
++ -- 84
+- -- 61
+* -- 248
+:= -- 862
+add.period$ -- 68
+call.type$ -- 20
+change.case$ -- 84
+chr.to.int$ -- 0
+cite$ -- 24
+duplicate$ -- 223
+empty$ -- 487
+format.name$ -- 61
+if$ -- 1143
+int.to.chr$ -- 0
+int.to.str$ -- 20
+missing$ -- 16
+newline$ -- 108
+num.names$ -- 38
+pop$ -- 160
+preamble$ -- 1
+purify$ -- 69
+quote$ -- 0
+skip$ -- 151
+stack$ -- 0
+substring$ -- 179
+swap$ -- 44
+text.length$ -- 4
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 70
+warning$ -- 4
+while$ -- 43
+width$ -- 22
+write$ -- 216
+(There were 4 warnings)

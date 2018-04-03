@@ -1,0 +1,146 @@
+%%  mydissertation.tex  by Corey A. Moffet  10-01-2003
+%%
+%%  Please read the Moffetttuthes class file before proceeding.
+%%  
+%%    To proccess this file I used:
+%%
+%%      texify mydissertation.tex
+%%      dvipdfm mydissertation
+%%
+%%    I used the MiKTeX distribution on MS Windows
+%%
+%%
+\documentclass[fleqn]{class/Moffetttuthes}
+
+%%
+%% IMPORTANT NOTE: 
+%%  At the very end of writing the dissertation you may need to edit
+%%  the toc, lot, lof, bbl, and out files (e.g., to get multiline entries 
+%%  single spaced in the table of contents) and will not want these edits
+%%  overwriten so uncomment the next line to stop the creation of all 
+%%  these type files.
+%%
+%% \nofiles
+
+%%
+%% NOTE:
+%%  List of names that should not be hyphenated are added here
+%%
+\hyphenation{Goldberg Underwood Barton Campbell Albertson Turkington Sosebee}
+
+%%
+%% TITLE
+%%
+\title{\MakeUppercase{Competition Among Blue Grama and Buffalograss
+Ecotypes: Effects of Soil and Past Neighbor Interactions}} 
+
+%%
+%%   AUTHOR and DATE
+%%   NOTE: Author and date info
+%%     I turned these off after the cover page was signed 
+%%     scanned and saved as cover_page_clip.eps in the 
+%%     ./figures directory (see includegraphics block below).
+%%   
+%%
+\author{%% 
+{\ }}  %%  NOTE: Comment this line and uncomment line below to turn on.
+%% COREY ALLEN MOFFET, B.S., M.S.} 
+\date{%%
+{\ }}  %%  NOTE: Comment this line and uncomment lines below to turn on.
+%% August, 2003}
+%% A DISSERTATION\\
+%% IN\\
+%% RANGE SCIENCE\\
+%% {\ }\\
+%% Submitted to the Graduate Faculty
+%% of Texas Tech University in
+%% Partial Fulfillment of
+%% the Requirement for
+%% the Degree of\\
+%% {\ }\\
+%% DOCTOR OF PHILOSOPHY\\
+%% {\ }\\
+%% Revision of \today}
+
+\begin{document}
+
+\maketitle
+%%
+%%  COVER PAGE
+%%  NOTE: Commment out next 4 lines until a signed cover page is 
+%%   received.
+%%
+\begin{center}
+\pagestyle{empty}
+\includegraphics{cover_page_clip}
+\end{center}
+
+%% FOREMATTER
+\frontmatter
+
+\include{acknowl}
+
+\tableofcontents
+
+\include{abstract}
+
+\listoftables
+\listoffigures
+
+\addtocontents{toc}{\protect\raggedright CHAPTER}
+
+%% BODY
+\mainmatter
+
+\include{intro}
+\include{litrev}
+\include{mat_meth}
+\include{res_disc}
+\include{sum_conc}
+
+\addcontentsline{toc}{part}{LITERATURE CITED}
+\begin{singlespace}
+  \bibliography{bib/jrnllong,bib/cited,bib/books}
+\end{singlespace}
+
+%% APPENDIX
+\begin{appendix}
+  \addtocontents{toc}{\protect\raggedright APPENDICES}
+  \renewcommand{\thesection}{\Alph{chapter}.\arabic{section}}
+  \renewcommand{\thetable}{\Alph{chapter}.\arabic{table}}
+  \renewcommand{\thefigure}{\Alph{chapter}.\arabic{figure}}
+  \renewcommand{\theequation}{\Alph{chapter}.\arabic{equation}}
+
+\chapter{PLANT RESPONSE}
+
+\section{Biomass Data}
+\begin{singlespace}
+\begin{scriptsize}
+\begin{landscape}
+\include{appendix/final_bio_dat}
+\end{landscape}
+\end{scriptsize}
+\end{singlespace}
+
+\section{Plant Spacing and Basal Area}
+\begin{singlespace}
+\begin{scriptsize}
+\begin{landscape}
+\include{appendix/final_plantspacing_dat}
+\end{landscape}
+\end{scriptsize}
+\end{singlespace}
+
+\include{appendix/append_soildesc}
+
+\section{Soil Characterization}
+\begin{singlespace}
+\begin{landscape}
+\include{appendix/final_soil_char_dat}
+\end{landscape}
+\end{singlespace}
+
+
+\end{appendix}
+
+\end{document}

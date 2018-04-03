@@ -1,0 +1,181 @@
+\documentclass[11pt]{article}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{doublespace}
+
+\textwidth = 6.5 in
+\textheight = 9 in
+\oddsidemargin = 0.0 in
+\evensidemargin = 0.0 in
+\topmargin = 0.0 in
+\headheight = 0.0 in
+\headsep = 0.0 in
+\parskip = 0.2in
+\parindent = 0.0in
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}{Definition}
+
+\title{Critic of Spherical Wavelets}
+\author{Daniel D. Beatty}
+\begin{document}
+\maketitle
+%Reference Spherical Wavelets: Efficiently Representing Functions of the Sphere by Peter Schroder and Wim Sweldens.
+
+Abstract Ideas The Power of the Wavelet
+
+\begin{itemize}\item Their power lies in the fact that they only require a small number of coefficents to represent general functions and large data sets accurately.
+\item Scalar functions defined on the sphere using biorthogonal wavelets
+\item Custom properties 
+\item lifting scheme
+\item Reparameterizing directions over the set of visible surfaces
+\item Mapping directions to the unit square providing the avenue for construction of spherical wavelet.\end{itemize}
+
+The bases claim to allow fully adaptive subdivisions.
+
+Examples
+\begin{itemize}\item Topographical Data
+\item Bi-direction reflection distribution functions
+\item Illumination techniques
+\item ``The offer both theoretical characterization of smoothness, insights into the structure of functions and operators, and practical numerical tools which lead to faster computational algortihms.''
+\item The challenge is to construct wavelets in general domains as they appear in graphics applications.  \end{itemize}
+
+Reference to Lounsbery et al (LDW) for 
+\begin{itemize}\item representing surface themselves
+\item representing functions defined on a surface.\end{itemize}
+
+Reference: Dahlke et al.  intro to spherical wavelet (first) used a tensor product basis where one factor is an exponential spline.  
+
+Practical Applications:
+\begin{enumerate}\item Computer Graphics
+\begin{enumerate}\item Manipulations of spherical objects
+\item display of spherical objects
+\item remote sensing imagery
+\item simulation and modeling of bidirectional reflection distribution functions.
+\item illumination algorithms
+\item direction information processing (env maps and sphere views)\end{enumerate}\end{enumerate}
+
+Outline of paper (in general) 
+\begin{enumerate}\item Brief review of applications (computer graphics and others).
+\item Wavelets on the sphere 
+\item Basic machinery of lifting and the fast wavelet x-form
+\item Implementation
+\item Simulations \end{enumerate}
+
+Representing Functions on a sphere 
+\begin{itemize}\item Dalton and geodesic sphere
+\item Hierarchical and non-hierarchical forms
+\item Sparseness is key\end{itemize}
+
+Example: Bidirectional reflectance distribution functions and radiance
+\begin{itemize}\item BRDF : $f_r (\vec{w_i} , \vec{x}, \vec{w_o})$ describes the relationship between 
+\begin{itemize}\item $\vec{w_i}$ incoming radiance
+\item $\vec{x}$ point 
+\item $\vec{w_0}$ outgoing radiance\end{itemize}
+\item Spherical Harmonics needed to describe BRDF (involves the Fourier domain).
+\item A FFT has not been extended to the sphere domain
+\item One method derived from Monte Carlo simulations of micro-geometry.\end{itemize}
+
+Example: Radiance $L(\vec{x}, \vec{w})$ function.
+\begin{itemize}\item Defined over all surfaces and directions
+\item Global support introduces errors and ringing\end{itemize}
+
+Trouble for the spherical wavelet
+\begin{itemize}\item Suffers from distortions
+\item Contaminated wavelets from parameterization \end{itemize}
+
+Wavelets on the sphere (2nd generation wavelets)
+\begin{itemize}\item Note local support for compact support
+\item Smoothness (decay toward high-frequencies)\end{itemize}
+
+Base Philosophy:  
+Build wavelets with all desirable properties (localization, fast-transfer ) adapted to much more general settings than the real line.
+
+One difference with classical wavelets are not the same throughout, but change locally to reflect the changing nature of the surface and its measure.
+
+``In the setting of second generation wavelets, translation and dialation can no longer be used, and the Fourier transform becomes worthless as a construction tool.''
+
+Multi-resolution:  Given A function $L_2 = L_2 (S^2, d\omega)$.  Call functions of finite energy defined over $S^2$.  
+
+Multi-resolution is defined as a sequence of closed subspaces $V_j \subset L_2$ with $j\ge 0$ such that 
+\begin{itemize}\item $V_j \subset V_{j+1}$
+\item $\cup_{j\ge0} V_j $ is dense in $L_2$\end{itemize}
+
+$K (j)$ is a general index set.
+
+Note that every scaling function $\phi_{j,k}$, there exists coefficents $\{h_{i,j,k}\}$ such that
+
+$\phi_{j,k} = \sum\limits_l h_{j,k,l} \phi_{j+1,l}$
+\begin{itemize}\item $j \ge 0 $
+\item $k \in K(j)$
+\item $l \in K(j+1) $
+\item $h_{j,k,l} = h_{l-2k}$ in the classic wavelet sense\end{itemize}
+
+Also, there is a concept of nested spaces, $V_j$, with bases of $\tilde{\psi}_{j,k}$ (dual-scan basis functions ) which are bi-orthogonal to the scaling functions.  
+
+If the scaling functions and dual scaling functions coincide, then the scaling function forms an orthogonal basis.  
+
+If the multi-resolution and dual-multi-resolution analysis coincide, (not necessarily the scaling and dual scaling functions) then the scaling functions are semi-orthogonal.   
+
+Swelding's opinion on orthogonality
+\begin{itemize}\item Global support 
+\item Assumption that coincidence does not occur
+\item General case is for bi-orthogonal cases \end{itemize}
+
+Wavelet Constructions: A basis space $w_j$ that encodes the difference between two successive levels representation.  Conditions for the wavelet basis space are as follows.  
+
+Wavelets: Multi-resolution wavelet construction 
+
+\begin{enumerate}\item $V_j \oplus W_j$
+\item The set of basis functions $\{\psi-{j,m} | j\ge , m \in M(j)\}$ such that $M(j)\subset X(j+1)$
+\begin{enumerate}\item is a Riesz basis for $L_2(S^2)$
+\item is a Riesz basis of $W_j$\end{enumerate}
+
+\item $\psi_{j,m}$ defines a spherical wavelet basis
+\item $\psi_{j,m} = \sum_l g_{j,m,l} \phi_{j+1,l}$
+\item Wavelets $\psi_{j,m}$ have $\bar{N}$ vanishing moments s.t. 
+\begin{enumerate}\item for $0\le i \le \bar{N} \exists <\psi{j,m}, P_i> = 0 $
+\item $ P_i$ are polynomials and $\bar{N}$ is independent of it. \end{enumerate}
+\item $ P_i$ are defined as the restriction to the sphere.  
+\item There are basis and dual basis functions $( \tilde{\psi}_{j,m} )$ which are bi-orthogonal.  
+\item The following equalities hold:  
+\begin{enumerate}\item $<\tilde{\psi}_{j,m}, \phi_{j,k}> = <\tilde{\phi}_{j,k}, \psi_{j,m}> = 0$
+\item $f= \sum_{j,m} <\tilde{\psi}_{j,m} , f> \psi_{i,m} = \sum_{j,m} \gamma _{j,m} \psi _{j,m}$\end{enumerate}\end{enumerate}
+
+
+A Reisz base has some Hilbert space is a countable suset $\{f_k\}$ so that every element f of the space can be written uniquely as $f_i =\sum_k c_k f_k$ and positive constants A and B exist with 
+
+$A||f||^2 \le \sum_k |c_k|^2 \le B||f||^2 $
+
+The conditions for constructing a wavelet scaling function are simply function of coarser scaling functions.
+
+$\psi_{j+1,l} = \sum\limits_k \tilde{h} \phi_{j,k} = \sum\limits_m \bar{g}_{j,m,l} \psi_{j,m}$
+
+such that 
+\begin{itemize}\item $k\in K(j)$
+\item $l\in K(j+1)$
+\item $m\in M(j)$\end{itemize}
+
+Proposition:  
+Given a set of scaling function coefficients of function f.
+
+$\{ \lambda_{n,k} = <f,\emptyset> | k\in K(x) \}   $
+
+such that n is some finest resolution level.  
+
+Results:
+The fast wavelet transform recursively calculates the coarser approximation to the underlying functions.  
+\begin{itemize}\item $ \{\gamma_{j,n} | 0 \le j < n; m \in M(j) \} $
+\item $\{ \lambda_{0,k} | k\in (\emptyset) \}$\end{itemize}
+
+One step in the FWT computes a coarser level from a finer level $( j+1 \to j)$
+\begin{itemize}\item $\lambda_{j,k} = \sum\limits _l \tilde{h}_{j+1,l} \lambda_{j+1,l}$
+\item $\gamma_{j,m} = \sum\limits_l \tilde{g}_{j,m,l} \lambda_{j+1,l} $\end{itemize}
+
+A single step in the individual transform that computes the finer level from the coarser level  $(j+1 \leftarrow j)$. 
+
+
+$\lambda_{j+1,l} = \sum\limits_k h_{j,k,l} \lambda_{j,k} + \sum\limits_m g_{j,m,l} \gamma_{j,m} $
+
+ \end{document}

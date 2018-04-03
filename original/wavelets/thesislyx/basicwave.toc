@@ -1,0 +1,50 @@
+\contentsline {section}{\numberline {1}Wavelet Transform Definitions:}{5}
+\contentsline {section}{\numberline {2}\bigskip Wavelets via Convolution}{6}
+\contentsline {section}{\numberline {3}Class 2-D Wavelet: Complete Form}{8}
+\contentsline {subsection}{\numberline {3.1}Proof of Concept}{9}
+\contentsline {subsubsection}{\numberline {3.1.1}1-D to 2-D Method}{10}
+\contentsline {subsubsection}{\numberline {3.1.2}Vector - Matrix Method}{10}
+\contentsline {subsection}{\numberline {3.2}Multi-Resolution}{12}
+\contentsline {subsection}{\numberline {3.3}Computational Cost:}{13}
+\contentsline {section}{\numberline {4}Results - 1-D Wavelet Transform}{13}
+\contentsline {section}{\numberline {5}Results: 2-D Wavelet Transform }{16}
+\contentsline {subsection}{\numberline {5.1}Multi -resolution}{18}
+\contentsline {subsection}{\numberline {5.2}Threshold FIltering}{22}
+\contentsline {section}{\numberline {A}Haar Wavelet Transform Class:}{23}
+\contentsline {subsection}{\numberline {A.1}\bigskip One Dimensional Wavelet Transform}{25}
+\contentsline {subsection}{\numberline {A.2}Join Procedure}{26}
+\contentsline {subsection}{\numberline {A.3}Procedure: Even Split}{27}
+\contentsline {subsubsection}{\numberline {A.3.1}Input:}{27}
+\contentsline {subsubsection}{\numberline {A.3.2}Output:}{28}
+\contentsline {subsubsection}{\numberline {A.3.3}Algorithm}{28}
+\contentsline {subsection}{\numberline {A.4}Procedure: Force Insert}{28}
+\contentsline {subsubsection}{\numberline {A.4.1}Input:}{28}
+\contentsline {subsubsection}{\numberline {A.4.2}Output:}{28}
+\contentsline {subsubsection}{\numberline {A.4.3}Algorithm:}{29}
+\contentsline {subsection}{\numberline {A.5}Procedure: Extract}{29}
+\contentsline {subsubsection}{\numberline {A.5.1}Input:}{29}
+\contentsline {subsubsection}{\numberline {A.5.2}Output:}{30}
+\contentsline {subsubsection}{\numberline {A.5.3}Algorithm}{30}
+\contentsline {subsection}{\numberline {A.6}Procedure: Haar Wavelet Inverse (Left Side)}{30}
+\contentsline {subsubsection}{\numberline {A.6.1}Input}{30}
+\contentsline {subsubsection}{\numberline {A.6.2}Output}{31}
+\contentsline {subsubsection}{\numberline {A.6.3}Algorithm}{31}
+\contentsline {section}{\numberline {B}2-D Wavelet Transform Class}{32}
+\contentsline {subsection}{\numberline {B.1}\bigskip Method: Column Wavelet Transform}{33}
+\contentsline {subsection}{\numberline {B.2}Method: Row Wavelet Transform}{34}
+\contentsline {subsection}{\numberline {B.3}Method: Self Row/Column Wavelet Transform}{34}
+\contentsline {subsection}{\numberline {B.4}Method:Wavelet Transform}{34}
+\contentsline {subsection}{\numberline {B.5}Method: Row Wavelet Inverse Transform}{35}
+\contentsline {subsection}{\numberline {B.6}Method: Column Wavelet Inverse Transform}{35}
+\contentsline {subsection}{\numberline {B.7}Method: Wavelet Inverse Transform v1}{36}
+\contentsline {subsection}{\numberline {B.8}Method: Self Wavelet Inverse Transform }{36}
+\contentsline {subsubsection}{\numberline {B.8.1}Given}{36}
+\contentsline {subsubsection}{\numberline {B.8.2}Algorithm}{36}
+\contentsline {subsection}{\numberline {B.9}Method: Self Column Inverse Wavelet Transform }{37}
+\contentsline {subsubsection}{\numberline {B.9.1}Given}{37}
+\contentsline {subsubsection}{\numberline {B.9.2}Notation}{37}
+\contentsline {subsubsection}{\numberline {B.9.3}Algorithm}{37}
+\contentsline {subsection}{\numberline {B.10}Method: Self Row Inverse Wavelet Transform }{38}
+\contentsline {subsubsection}{\numberline {B.10.1}Given}{38}
+\contentsline {subsubsection}{\numberline {B.10.2}Notation}{38}
+\contentsline {subsubsection}{\numberline {B.10.3}Algorithm}{38}

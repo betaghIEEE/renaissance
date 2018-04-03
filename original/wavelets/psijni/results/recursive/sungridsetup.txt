@@ -1,0 +1,544 @@
+Last login: Wed Mar 10 15:45:09 on ttyp4
+Welcome to Darwin!
+sc016:~ danbgood$ ssh therock -l root
+root@therock's password: 
+Last login: Wed Mar 10 15:24:06 2004 from 129.118.41.175
+Welcome to Darwin!
+therock:~ root# cd ~sgeroot
+therock:~ root# pwd
+/private/var/root
+therock:~ root# cd /Network/Servers/therock.gesc.ttu.edu/Volumes/home/staff/sgeroot/
+therock:/Network/Servers/therock.gesc.ttu.edu/Volumes/home/staff/sgeroot root# ls
+.CFUserTextEncoding     Sites                   lib
+3rd_party               bin                     man
+Desktop                 catman                  mpi
+Documents               ckpt                    pvm
+Library                 doc                     qmon
+Movies                  examples                tarfiles
+Music                   inst_sge                util
+Pictures                inst_sgeee              utilbin
+Public                  install_execd
+README.inst_sgeee       install_qmaster
+therock:/Network/Servers/therock.gesc.ttu.edu/Volumes/home/staff/sgeroot root# ./install_qmaster 
+
+
+Welcome to the Grid Engine installation
+---------------------------------------
+
+Grid Engine qmaster host installation
+-------------------------------------
+
+Before you continue with the installation please read these hints:
+
+   - Your terminal window should have a size of at least
+     80x24 characters
+
+   - The INTR character is often bound to the key Ctrl-C.
+     The term >Ctrl-C< is used during the installation if you
+     have the possibility to abort the installation
+
+The qmaster installation procedure will take approximately 5-10 minutes.
+
+Hit <RETURN> to continue >> 
+
+
+
+
+
+
+Confirm Grid Engine default installation settings
+-------------------------------------------------
+
+The following default settings can be used for an accelerated
+installation procedure:
+
+      $SGE_ROOT          = /Network/Servers/therock.gesc.ttu.edu/Volumes/home/staff/sgeroot
+      service            = sge_commd
+      admin user account = sgeroot
+
+Do you want to use these configuration parameters (y/n) [y] >> 
+
+
+
+
+
+
+
+
+
+
+
+
+Verifying and setting file permissions
+--------------------------------------
+
+Did you install this version with >pkgadd< or did you already
+verify and set the file permissions of your distribution (y/n) [y] >> 
+
+We do not verify file permissions. Hit <RETURN> to continue >> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Making directories
+------------------
+creating directory: default
+creating directory: default/common
+creating directory: default/common/history
+creating directory: default/common/local_conf
+creating directory: /Network/Servers/therock.gesc.ttu.edu/Volumes/home/staff/sgeroot/default/spool/qmaster
+creating directory: /Network/Servers/therock.gesc.ttu.edu/Volumes/home/staff/sgeroot/default/spool/qmaster/admin_hosts
+creating directory: /Network/Servers/therock.gesc.ttu.edu/Volumes/home/staff/sgeroot/default/spool/qmaster/ckpt
+creating directory: /Network/Servers/therock.gesc.ttu.edu/Volumes/home/staff/sgeroot/default/spool/qmaster/complexes
+creating directory: /Network/Servers/therock.gesc.ttu.edu/Volumes/home/staff/sgeroot/default/spool/qmaster/exec_hosts
+creating directory: /Network/Servers/therock.gesc.ttu.edu/Volumes/home/staff/sgeroot/default/spool/qmaster/job_scripts
+creating directory: /Network/Servers/therock.gesc.ttu.edu/Volumes/home/staff/sgeroot/default/spool/qmaster/jobs
+creating directory: /Network/Servers/therock.gesc.ttu.edu/Volumes/home/staff/sgeroot/default/spool/qmaster/pe
+creating directory: /Network/Servers/therock.gesc.ttu.edu/Volumes/home/staff/sgeroot/default/spool/qmaster/queues
+creating directory: /Network/Servers/therock.gesc.ttu.edu/Volumes/home/staff/sgeroot/default/spool/qmaster/submit_hosts
+creating directory: /Network/Servers/therock.gesc.ttu.edu/Volumes/home/staff/sgeroot/default/spool/qmaster/usersets
+Hit <RETURN> to continue >> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Select default Grid Engine hostname resolving method
+----------------------------------------------------
+
+Are all hosts of your cluster in one DNS domain? If this is
+the case the hostnames
+
+   >hostA< and >hostA.foo.com<
+
+would be treated as equal, because the DNS domain name >foo.com<
+is ignored when comparing hostnames.
+
+Are all hosts of your cluster in a single DNS domain (y/n) [y] >> n
+
+The domainname is not ignored when comparing hostnames.
+
+Hit <RETURN> to continue >> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Grid Engine group id range
+--------------------------
+
+When jobs are started under the control of Grid Engine an additional group id
+is set on platforms which do not support jobs.
+
+This additional UNIX group id range must be unused group id's in your system.
+
+The range must be big enough to provide enough numbers for the maximum number
+of Grid Engine jobs running at a single moment on a single host. E.g. a range
+like >20000-20100< means, that Grid Engine will use the group id's from
+20000-20100 and thus provides a range for 101 jobs running at the same time
+on a single host.
+
+You can change at any time the group id range in your cluster configuration.
+
+Please enter a range >> 18000-20100    
+
+Using >18000-20100< as gid range. Hit <RETURN> to continue >> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Creating local configuration
+----------------------------
+Creating >act_qmaster< file
+Adding default complexes >host< and >queue<
+Adding default parallel environment (PE) for >qmake<
+Adding >sge_aliases< path aliases file
+Adding >qtask< qtcsh sample default request file
+Adding >sge_request< default submit options file
+Creating settings files for >.profile/.cshrc<
+
+Hit <RETURN> to continue >> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Grid Engine startup script
+--------------------------
+
+Your Grid Engine cluster wide startup script is installed as:
+
+   /Network/Servers/therock.gesc.ttu.edu/Volumes/home/staff/sgeroot/default/common/rcsge<
+
+Hit <RETURN> to continue >> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Grid Engine startup script
+--------------------------
+
+We can install the startup script that
+Grid Engine is started at machine boot (y/n) [y] >> 
+
+Adding application startup to SGE
+
+Hit <RETURN> to continue >> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Grid Engine qmaster and scheduler startup
+-----------------------------------------
+
+Starting qmaster and scheduler daemon. Please wait ...
+   starting sge_qmaster
+starting program: /Network/Servers/therock.gesc.ttu.edu/Volumes/home/staff/sgeroot/bin/darwin/sge_commd
+using service "sge_commd"
+bound to port 535
+Reading in complexes:
+        Complex "host".
+        Complex "queue".
+Reading in parallel environments:
+        PE "make".
+Reading in scheduler configuration
+   starting sge_schedd
+Hit <RETURN> to continue >> 
+
+
+
+
+
+
+
+Adding Grid Engine hosts
+------------------------
+
+Please now add the list of hosts, where you will later install your execution
+daemons. These hosts will be also added as valid submit hosts.
+
+Please enter a blank separated list of your execution hosts. You may
+press <RETURN> if the line is getting too long. Once you are finished
+simply press <RETURN> without entering a name.
+
+You also may prepare a file with the hostnames of the machines where you plan
+to install Grid Engine. This may be convenient if you are installing Grid
+Engine on many hosts.
+
+Do you want to use a file which contains the list of hosts (y/n) [n] >> y
+
+
+
+
+
+
+
+
+
+Adding admin and submit hosts from file
+---------------------------------------
+
+Please enter the file name which contains the host list: hosts
+
+You entered an invalid file name or the file does not exist.
+Do you want to enter a new file name (y/n) [y] >> n
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Adding admin and submit hosts
+-----------------------------
+
+Please enter a blank seperated list of hosts.
+
+Stop by entering <RETURN>. You may repeat this step until you are
+entering an empty list. You will see messages from Grid Engine
+when the hosts are added.
+
+Host(s): highenergy2.phys.ttu.edu hep.phys.ttu.edu dione.cs.ttu.edu
+highenergy2.phys.ttu.edu added to administrative host list
+highenergy2.phys.ttu.edu added to submit host list
+hep.phys.ttu.edu added to administrative host list
+hep.phys.ttu.edu added to submit host list
+dione.cs.ttu.edu added to administrative host list
+dione.cs.ttu.edu added to submit host list
+Hit <RETURN> to continue >> 
+
+
+
+
+
+
+
+Adding admin and submit hosts
+-----------------------------
+
+Please enter a blank seperated list of hosts.
+
+Stop by entering <RETURN>. You may repeat this step until you are
+entering an empty list. You will see messages from Grid Engine
+when the hosts are added.
+
+Host(s): 
+Finished adding hosts. Hit <RETURN> to continue >> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Using Grid Engine
+-----------------
+
+You should now enter the command:
+
+   source /Network/Servers/therock.gesc.ttu.edu/Volumes/home/staff/sgeroot/default/common/settings.csh
+
+if you are a csh/tcsh user or
+
+   # . /Network/Servers/therock.gesc.ttu.edu/Volumes/home/staff/sgeroot/default/common/settings.sh
+
+if you are a sh/ksh user.
+
+This will set or expand the following environment variables:
+
+   - $SGE_ROOT    (always necessary)
+   - $SGE_CELL    (if you are using a cell other than >default<)
+   - $COMMD_PORT   (if you haven't added the service >sge_commd<)
+   - $PATH/$path (to find the Grid Engine binaries)
+   - $MANPATH     (to access the manual pages)
+
+Hit <RETURN> to see where Grid Engine logs messages >> 
+
+
+
+Grid Engine messages
+--------------------
+
+Grid Engine messages can be found at:
+
+   /tmp/qmaster_messages (during qmaster startup)
+   /tmp/execd_messages   (during execution daemon startup)
+
+After startup the daemons log thier messages in their spool directories.
+
+   Qmaster:     /Network/Servers/therock.gesc.ttu.edu/Volumes/home/staff/sgeroot/default/spool/qmaster/messages
+   Exec daemon: <execd_spool_dir>/<hostname>/messages
+
+Do you want to see previous screen about using Grid Engine again (y/n) [n] >> 
+
+
+
+
+
+
+
+
+
+Your Grid Engine qmaster installation is now completed
+------------------------------------------------------
+
+Please now login to all hosts where you want to run an execution daemon
+and start the execution host installation procedure.
+
+If you want to run an execution daemon on this host, please do not forget
+to make the execution host installation in this host as well.
+
+All execution hosts must be administrative hosts during the installation.
+All hosts which you added to the list of administrative hosts during this
+installation procedure can now be installed.
+
+You may verify your administrative hosts with the command
+
+   # qconf -sh
+
+and you may add new administrative hosts with the command
+
+   # qconf -ah <hostname>
+
+therock:/Network/Servers/therock.gesc.ttu.edu/Volumes/home/staff/sgeroot root# 

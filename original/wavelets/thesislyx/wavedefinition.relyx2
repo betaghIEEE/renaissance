@@ -1,0 +1,2522 @@
+
+\layout Standard
+
+Wavelets evolved from atomic function theory where they were developed as
+ basic atoms or building blocks of all functions.
+ This chapter provides an overview of wavelets.
+ This is done first by providing the standard definitions and concepts of
+ the wavelet basis function, the wavelet transform and multiresolution represent
+ation.
+ Then a numerical example is utilized to demonstrate the concepts.
+ The next section details the numerical implementation of the wavelet transform.
+ The last section represents the 2D wavelet transform.
+\layout Section
+
+The Wavelet Basis Function
+\layout Standard
+
+This section provides the basic properties of a wavelet function.
+ It first describes some general properties of functions.
+ Then it presents the translation and dilation properties which can be used
+ to build an entire bases.
+ Finally, it presents the wavelet function itself.
+\layout Subsection
+
+Function Properties
+\layout Standard
+
+There are a number of different properties that can be used to classify
+ functions.
+ These include integrability, symmetry, compactness and orthogonality.
+ The properties will be introduced now and used in the rest of the chapter.
+\layout Standard
+
+A function, 
+\begin_inset Formula \( f(\cdot)\)
+\end_inset 
+
+, is 
+\shape italic 
+square integrable
+\shape default 
+ if its 
+\begin_inset Formula \( L_2\)
+\end_inset 
+
+ norm is finite.
+ This can be expressed by 
+\begin_inset Formula \[  
+f(x) \in L_2({\mathbb R}) \,\,\mbox{ if } \,\,\int\limits _{-\infty}^{\infty} \left|f(x)\right|^2 dx < \infty.
+\]
+\end_inset 
+
+ A one-dimensional function is 
+\shape italic 
+symmetric
+\shape default 
+ about the 
+\begin_inset Formula \( y\)
+\end_inset 
+
+-axis if 
+\begin_inset Formula \[ 
+f(x) = f(-x)
+\]
+\end_inset 
+
+ and it is 
+\shape italic 
+antisymmetric
+\shape default 
+ if 
+\begin_inset Formula \[ 
+f(x) = -f(-x).
+\]
+\end_inset 
+
+
+\layout Standard
+
+A set is considered 
+\shape italic 
+compact
+\shape default 
+ in the 
+\begin_inset Formula \( n\)
+\end_inset 
+
+-dimensional real space, 
+\begin_inset Formula \( {\mathbb R}^n\)
+\end_inset 
+
+ if it is both closed and bounded.
+ A function has 
+\shape italic 
+compact support
+\shape default 
+ if it is zero outside of a compact set.
+ This implies that there exists 
+\begin_inset Formula \( n\)
+\end_inset 
+
+-dimensional sphere, 
+\begin_inset Formula \( S^n\)
+\end_inset 
+
+, where 
+\begin_inset Formula \[ 
+f(x) = 0 \qquad \forall x \not \in S^n.
+\]
+\end_inset 
+
+
+\layout Standard
+
+Orthogonality is another concept necessary for this thesis.
+ Two different basis functions are 
+\shape italic 
+orthogonal
+\shape default 
+ if their inner product is zero.
+ The inner product of two functions, 
+\begin_inset Formula \( f\)
+\end_inset 
+
+ and 
+\begin_inset Formula \( g\)
+\end_inset 
+
+, can be represented by 
+\begin_inset Formula \[ 
+\left< f, g \right> = \int_{-\infty}^\infty f(x)g(x) \,\,dx.
+\]
+\end_inset 
+
+ They are 
+\shape italic 
+orthonormal
+\shape default 
+ if they are both orthogonal and have a norm of one.
+\layout Subsection
+
+Translation and Dilation
+\layout Standard
+
+Translation shifts the basis function along the variable axis.
+ The translation of a function, 
+\begin_inset Formula \( f\)
+\end_inset 
+
+, can be represented by 
+\begin_inset Formula \( f_k\)
+\end_inset 
+
+ where 
+\begin_inset Formula \[ 
+f_k(t) = f(t-k).
+\]
+\end_inset 
+
+ Notice that translation does not alter the shape of the function, only
+ the position of the function along the number space of 
+\begin_inset Formula \( t\)
+\end_inset 
+
+ 
+\begin_inset LatexCommand \cite{translation}
+
+\end_inset 
+
+.
+\layout Standard
+
+Dilation (also called contraction) transforms a one dimensional function
+ in width, and the output in height.
+ The dilation of a function, 
+\begin_inset Formula \( f\)
+\end_inset 
+
+, can be presented by 
+\begin_inset Formula \( f_{k,j}\)
+\end_inset 
+
+ where 
+\begin_inset Formula \[ 
+f_{k}^\alpha(t) = kf(\alpha t).
+\]
+\end_inset 
+
+ If 
+\begin_inset Formula \( k>1\)
+\end_inset 
+
+ then the height of the function is increased.
+ If 
+\begin_inset Formula \( \alpha<1\)
+\end_inset 
+
+ then the width of the function is increased.
+ Otherwise it is decreased.
+\layout Standard
+
+These definitions can be combined into the translation-dilation representation
+ upon dyadic intervals.
+ A function 
+\begin_inset Formula \( f\)
+\end_inset 
+
+ can be expressed by a dilation of 
+\begin_inset Formula \( j\)
+\end_inset 
+
+ and a translation of 
+\begin_inset Formula \( k\)
+\end_inset 
+
+ through 
+\begin_inset Formula \[ 
+f_{j,k}(t) = 2^{j/2}f(2^jt-k) \qquad \forall j, k \in {\mathbb Z}.
+\]
+\end_inset 
+
+ A function is said to have the orthonormal translation-dilation property
+ when for two translation-dilations, 
+\begin_inset Formula \( f_{j,k}\)
+\end_inset 
+
+ and 
+\begin_inset Formula \( f_{l,m}\)
+\end_inset 
+
+, the result can be expressed by 
+\begin_inset LatexCommand \cite{ChuiIntro}
+
+\end_inset 
+
+ 
+\begin_inset Formula \[ 
+\left< f_{j,k} , f_{l,m} \right> = \delta_{j,l} \delta_{k,m}.
+\]
+\end_inset 
+
+
+\layout Subsection
+
+The Wavelet Basis Function
+\layout Standard
+
+The two mandatory properties of a wavelet basis function are: 
+\layout Itemize
+
+it must square integrable, and 
+\layout Itemize
+
+must have a zero average, i.e.: 
+\begin_inset Formula \[ 
+\int_{-\infty}^{+\infty}\psi(x) \,\,dx = 0.
+\]
+\end_inset 
+
+
+\layout Standard
+
+In addition, the first generation wavelets were restricted to satisfy the
+ orthonormal translation-dilation property.
+ This restriction has been removed through the lifting scheme 
+\begin_inset LatexCommand \cite{Sweldens}
+
+\end_inset 
+
+.
+ An example of a strict definition of a wavelet is given by Charles Chui
+ 
+\begin_inset LatexCommand \cite{ChuiIntro}
+
+\end_inset 
+
+: 
+\layout Quote
+
+
+\begin_inset Quotes eld
+\end_inset 
+
+A function 
+\begin_inset Formula \( \psi \in L_2({\mathbb R})\)
+\end_inset 
+
+ is called an orthonormal wavelet if the family 
+\begin_inset Formula \( \{\psi_{j,k}\}\)
+\end_inset 
+
+ defined 
+\begin_inset Formula \[  \psi_{j,k}(x)  = 2^{j/2} \psi (2 ^j x -k) \forall j,k \in Z \]
+\end_inset 
+
+ is an orthonormal basis of 
+\begin_inset Formula \( L_2({\mathbb R})\)
+\end_inset 
+
+ where 
+\begin_inset Formula \( \langle \psi _{j,k} , \psi_{l,m} \rangle = \delta _{j,l} \delta_{k,m}\)
+\end_inset 
+
+, 
+\begin_inset Formula \(  \forall j,k,l,m\in Z\)
+\end_inset 
+
+ and every 
+\begin_inset Formula \(  f\in L_2({\mathbb R})\)
+\end_inset 
+
+ can be written as 
+\begin_inset Formula \[  f(x)= \sum\limits _{j,k = -\infty}^{\infty} c_{j,k} \psi _{j,k} (x)  \]
+\end_inset 
+
+ where the series convergences and is in 
+\begin_inset Formula \( L_2({\mathbb R})\)
+\end_inset 
+
+ such that 
+\begin_inset Formula \[  \lim\limits _{M_1, M_2, N_1 , N_2} || f - \sum\limits _{j=-M_2}^{N_2} \sum\limits _{k=-M_1}^{N_1} c_{j,k} \psi _{j,k} || = 0 \]
+\end_inset 
+
+ The simplest example of orthonormal wavelets is the Haar Transform.
+\begin_inset Quotes erd
+\end_inset 
+
+ 
+\layout Standard
+
+There is more than one wavelet basis function.
+ Additional classifications used include the symmetry and compactness.
+ The Haar Wavelet Basis function actually fulfills the strictest definition
+ of a wavelet basis function, and has additional properties.
+ The Haar Wavelet Basis Function has compact support.
+ It is also symmetric.
+ Furthermore, it has been stated by Walker
+\begin_inset LatexCommand \cite{Walker}
+
+\end_inset 
+
+ and Chui 
+\begin_inset LatexCommand \cite{ChuiIntro}
+
+\end_inset 
+
+ that the Haar Wavelet Basis Function is the only wavelet basis function
+ in 
+\begin_inset Formula \( L_2({\mathbb R})\)
+\end_inset 
+
+ that is orthogonal, compact and symmetric.
+ The Haar wavelet basis function is defined below. 
+\begin_inset Formula \begin{equation}  \label{eqn:waveletbasis}
+\psi(x) = \left\{
+\begin{array}{cc}
+1 & 0\leq x < \frac{1}{2} \\
+-1 & \frac{1}{2} \leq x < 1 \\
+0 & {otherwise}
+\end{array}\right. 
+\end{equation}
+\end_inset 
+
+
+\layout Section
+
+The Wavelet Transform
+\layout Standard
+
+The wavelet transform is comprised of two parts.
+ An average sample and a difference sample.
+ This is expressed by first looking at pairs of wavelets and then looking
+ at the actual representation.
+\layout Subsection
+
+Wavelet Pairs: The Averaging Basis Function
+\layout Standard
+
+The Wavelet Basis Function section defined the Haar Wavelet Basis Function
+ defined the Haar Wavelet Basis function, in equation 
+\begin_inset LatexCommand \ref{eqn:waveletbasis}
+
+\end_inset 
+
+.
+ However, there exists a concept of a wavelet pair.
+ These pairs exist as averaging and differencing basis.
+ The wavelet basis function and differencing basis are synonymous.
+ The averaging basis concept was derived from classic multi-resolution which
+ is described in section 
+\begin_inset LatexCommand \ref{sec:multiresolution}
+
+\end_inset 
+
+.
+\layout Standard
+
+This section only defines the wavelet basis pair in terms of a wavelet averaging
+ basis and shows an example with the Haar Averaging Basis Function.
+ A wavelet pair is a set of two basis functions containing one wavelet basis
+ function and one averaging basis function which meet the following criteria:
+ 
+\layout Itemize
+
+both must be square integrable, 
+\layout Itemize
+
+both must satisfy the orthonormal translation-dilation property, and 
+\layout Itemize
+
+the wavelet basis function must be orthogonal with the average basis function.
+ 
+\layout Standard
+
+The simplest form of the averaging filter is the Haar Averaging Filter,
+ and it is a pair to the Haar Wavelet Basis Function.
+ Like the Haar Wavelet Basis Function, the Haar Averaging Filter also satisfies
+ the orthogonal translation-dilation property and is in 
+\begin_inset Formula \( L_2({\mathbb R})\)
+\end_inset 
+
+ The mother function for the Haar Averaging Filter is defined by 
+\begin_inset Formula \[ 
+\phi(x) =
+\left\{\begin{array}{cc}1 & 0\leq x < \frac{1}{2} \\0 &
+{otherwise.}\end{array}\right.
+\]
+\end_inset 
+
+
+\layout Subsection
+
+Transform Representation
+\layout Standard
+
+This derivation uses the wavelet pair to define the wavelet transform.
+ Any wavelet transform uses a satisfactory wavelet pair to transform an
+ array into two halves which constitute the average filter sub-array and
+ the difference filtered sub-array.
+ This definition commonly refers to the average filtered sub-array as the
+ average terms and difference terms respectively.
+ The concatenated array of average and difference terms constitutes a similar
+ array to the original array, and the same properties as similar vectors.
+ Also, for every wavelet transform there is a straight forward method to
+ restore the original array from the wavelet transformed array called the
+ inverse wavelet transform.
+\layout Standard
+
+One form of the wavelet transform is the integral wavelet transform (IWT)
+ described by Chui.
+ Another two are the discrete wavelet transform (DWT) and the fast wavelet
+ transform (FWT).
+ The convolution wavelet transform (CWT) is a general form of the FWT.
+ In the case of the CWT, any proper wavelet pairs can used to generate correspon
+ding
+ average and difference terms.
+ Application of the CWT is described in section 
+\begin_inset LatexCommand \ref{sec:implementation}
+
+\end_inset 
+
+.
+\layout Standard
+
+Convolution of the wavelet pairs with an array form the starting point to
+ the convolution wavelet transform.
+ The following constitute the steps of the CWT: 
+\layout Enumerate
+
+Convolute the original array 
+\begin_inset Formula \( S\)
+\end_inset 
+
+ with the wavelet pair.
+ The results of this are the average filtered array, 
+\begin_inset Formula \( A\)
+\end_inset 
+
+, and the difference filtered array, 
+\begin_inset Formula \( D\)
+\end_inset 
+
+. 
+\layout Enumerate
+
+Selectively filter every other element of 
+\begin_inset Formula \( A\)
+\end_inset 
+
+ and 
+\begin_inset Formula \( D\)
+\end_inset 
+
+ into new arrays half the size of 
+\begin_inset Formula \( S\)
+\end_inset 
+
+.
+ The results map 
+\begin_inset Formula \( A\rightarrow A'\)
+\end_inset 
+
+ and 
+\begin_inset Formula \( D\rightarrow D'\)
+\end_inset 
+
+ respectively, where 
+\begin_inset Formula \( A'\)
+\end_inset 
+
+ and 
+\begin_inset Formula \( D'\)
+\end_inset 
+
+ are the selectively filtered average filter array, and selectively filtered
+ difference filtered array respectively. 
+\layout Enumerate
+
+Concatenate 
+\begin_inset Formula \( A'\)
+\end_inset 
+
+ and 
+\begin_inset Formula \( D'\)
+\end_inset 
+
+ to form 
+\begin_inset Formula \( W(S) = (A'|D')\)
+\end_inset 
+
+, which is the wavelet transform of 
+\begin_inset Formula \( S\)
+\end_inset 
+
+. 
+\layout Section
+
+Multi-resolution Representation
+\layout Standard
+
+
+\begin_inset LatexCommand \label{sec:multiresolution}
+
+\end_inset 
+
+
+\layout Standard
+
+In one dimension, multi-resolution analysis provides means to measure averages,
+ differences of the original array or signal and of the sub-arrays generated
+ in application of multi-resolution.
+ In this section, techniques of multi-resolution are defined in terms of
+ one-dimensional wavelet transforms.
+ Two dimensional versions covered in section 
+\begin_inset LatexCommand \ref{sec:2Dwavelet}
+
+\end_inset 
+
+.
+ Three methods for decomposing the signal are considered --- multiresolution
+ analysis (MRA), multiresolution expansion (MRE) and the 
+\begin_inset Formula \( \psi^n\)
+\end_inset 
+
+ expansion.
+\layout Subsection
+
+MRA
+\layout Standard
+
+MRA schemes generates averaging estimates of some signal such that the average
+ representation is smaller than the original by some integer amount.
+ MRA reapplies this averaging process until the process produces a small
+ enough size for the analysis being conducted.
+ MRA may maintain estimate correction factors for the purpose of translating
+ an averaged array to the next larger average array to recover that particular
+ function.
+ The elements of average functions are averaging terms.
+ Likewise, the elements of the estimate correction factor function are called
+ differencing terms.
+ To acquire each estimate by wavelets, the wavelet averaging basis is used.
+ The wavelet basis function happens to be the basis function for the differencin
+g
+ function
+\layout Standard
+
+There are simple ways to visualize this concept.
+ A classic one dimensional form method is to consider a triangle.
+ In this triangle, layers of functions are stacked up from the base to the
+ apex.
+ The original function is always placed on the bottom.
+ Subsequent average terms are placed between the base and the apex.
+ For every level between the apex and the base, there is an averaging method
+ to map that level to the adjacent level closer to the apex.
+ Also, there exist a set of difference elements such that when the average
+ is expanded it can be mapped to the adjacent level toward the base.
+ The apex has no adjacent level to average to.
+ The base has no difference elements to map to a larger level.
+\layout Standard
+
+The way to consider MRA with one-dimensional wavelet transforms is with
+ a binary tree.
+ At the root of the tree the entire original array is represented.
+ Two branches exist on this tree, the average and difference branch.
+ Each node in the tree represents a sub-array of the original array.
+ Branches are generated on a node if and only if a wavelet transform is
+ performed on the node.
+ In case a wavelet transform is performed, both an average and difference
+ branch are generated.
+ Otherwise the node is a leaf.
+ The following are rules for the one-dimensional wavelet transform binary
+ tree in MRA: 
+\layout Itemize
+
+Transforms are only applied to leaves. 
+\layout Itemize
+
+Transforms are only allowed on the root or average leaves. 
+\layout Itemize
+
+If a node is not a leaf then a wavelet transformation has already been performed
+ and is not permitted to be reapplied. 
+\layout Itemize
+
+If the leaf is a difference term, then a transformation is not allowed.
+ 
+\layout Itemize
+
+The maximum height of this tree is 
+\begin_inset Formula \( n = \lceil \log_2 \left|S\right| \rceil\)
+\end_inset 
+
+ where 
+\begin_inset Formula \( \left|S\right|\)
+\end_inset 
+
+ is the cardinality of the signal 
+\begin_inset Formula \( S\)
+\end_inset 
+
+. 
+\layout Subsection
+
+MRE
+\layout Standard
+
+MRE extends this idea by considering the difference leaves, also.
+ The rules for one-dimensional wavelet transform binary tree in MRA are
+ as follows: 
+\layout Itemize
+
+Transforms are only applied to leaves. 
+\layout Itemize
+
+If a node is not a leaf then a wavelet transformation has already been performed
+ and is not permitted to be reapplied. 
+\layout Itemize
+
+The maximum height of this tree is 
+\begin_inset Formula \( n = \lceil \log_2 \left|S\right| \rceil\)
+\end_inset 
+
+ where 
+\begin_inset Formula \( \left|S\right|\)
+\end_inset 
+
+ is the cardinality of the signal 
+\begin_inset Formula \( S\)
+\end_inset 
+
+. 
+\layout Standard
+
+Like in MRA, there is an analogues to time and frequency signal representation.
+ Every sub-array represented at each node with in the wavelet transform
+ binary tree represents activity in the time domain within a certain octave
+ and note of frequencies.
+ That octave's frequency range is specified by its position within the array
+ defined here: 
+\begin_inset Formula \[ 
+\left[
+\frac{\pi x_1}{2 \cdot \left|S\right|} , \frac{\pi (x_2+1)}{2 \cdot \left|S\right|} 
+\right]
+\]
+\end_inset 
+
+ where 
+\begin_inset Formula \( x_1\)
+\end_inset 
+
+ is the starting index of the sub-array and 
+\begin_inset Formula \( x_2\)
+\end_inset 
+
+ is the ending index of the sub-array.
+\layout Subsection
+
+
+\begin_inset Formula \( \psi^n\)
+\end_inset 
+
+ Expansion
+\layout Standard
+
+There is another expansion similar to MRE which places its sections in a
+ different arrangement.
+ This form is called the 
+\begin_inset Formula \( \psi^n\)
+\end_inset 
+
+ expansion.
+ It is a rather simple expansion of the wavelet transform.
+ Each resolution, reapplies the wavelet transform to the whole array again.
+ While it is simple to conceive and implement, the results are little more
+ complicated to analyze.
+ A mapping procedure does exist for mapping the 
+\begin_inset Formula \( \psi^n\)
+\end_inset 
+
+ expansion to the MRE and vice versa.
+\layout Section
+
+Numerical Example
+\layout Standard
+
+To illustrate the concepts of the wavelet transform, two simple numerical
+ examples are provided.
+ The first one utilities MRA and is shown in Figure 
+\begin_inset LatexCommand \ref{nummra}
+
+\end_inset 
+
+.
+ The second one utilizes MRE and is demonstrated in Figure 
+\begin_inset LatexCommand \ref{nummre}
+
+\end_inset 
+
+.
+\layout Subsection
+
+MRA Example
+\layout Standard
+
+MRA starts with the original array.
+ The wavelet transform is applied to the array.
+ After the first application of the wavelet transform, an average and difference
+ array now exist.
+ This is shown in figure 
+\begin_inset LatexCommand \ref{nummra}
+
+\end_inset 
+
+ as the first two children in the wavelet binary tree.
+\layout Standard
+
+
+\begin_float fig 
+
+\begin_inset Figure
+file mraexample2.jpg
+width 2 6.5
+flags 9
+
+\end_inset 
+
+
+\layout Caption
+
+The Haar Transform performed a sample function show each step of the transform
+ in multi-resolution analysis 
+\layout Standard
+
+
+\begin_inset LatexCommand \label{nummra}
+
+\end_inset 
+
+
+\end_float 
+
+
+\layout Standard
+
+For MRA, the analysis is continued on the average branch.
+ The difference branch is unchanged.
+ This procedure is repeated on the average branch.
+ The stopping point is determined by the size of array.
+ The finite limit, 
+\begin_inset Formula \( n\)
+\end_inset 
+
+, is 
+\begin_inset Formula \begin{equation}  \label{eqn:treeheight} \displaystyle
+n = \lceil\log_2 \left|S\right|\rceil
+\end{equation}
+\end_inset 
+
+ where 
+\begin_inset Formula \( \left|S\right|\)
+\end_inset 
+
+ is the size of the array.
+\layout Standard
+
+Once completed, the arrays are joined into an array which is the same size
+ as the original.
+ The energy is generally concentrated at the beginning of the array.
+ Also, the energy of the array tends to be ordered from strongest to weakest.
+ Terms representing change are kept as pairs to each section.
+\layout Standard
+
+Notice that the fine difference terms are left alone, and the dynamics of
+ the function in the time domain are accentuated.
+ Likewise the lower frequency components are separated allowing a closer
+ analysis in both position and frequency.
+\layout Subsection
+
+MRE Example
+\layout Standard
+
+Like MRA, MRE starts with an original array, and applies a wavelet transform
+ to that array.
+ The decomposition is also represented by binary tree, with an average and
+ difference branch.
+ The limit and height of the tree, 
+\begin_inset Formula \( n\)
+\end_inset 
+
+, remains the same as equation 
+\begin_inset LatexCommand \ref{eqn:treeheight}
+
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_float fig 
+
+\begin_inset Figure
+file numexample01_2.jpg
+width 2 6.5
+flags 9
+
+\end_inset 
+
+
+\layout Caption
+
+The Haar Transform performed a sample function show each step of the transform
+ in multi-resolution expansion 
+\layout Standard
+
+
+\begin_inset LatexCommand \label{nummre}
+
+\end_inset 
+
+
+\end_float 
+
+
+\layout Standard
+
+What is not the same is how the wavelet transform is reapplied.
+ In addition to being applied on the average branch again, but the wavelet
+ transform is also applied to the difference branch also.
+ An example is provided in Figure 
+\begin_inset LatexCommand \ref{nummre}
+
+\end_inset 
+
+.
+ The sub arrays are reinserted into the array in order from the left branch
+ to the right branch.
+\layout Standard
+
+In the time and frequency analogues, each transformation filters the array
+ with high pass and low pass filter.
+ The frequency width of these sub arrays is proportional to length of the
+ original array.
+ The center frequency is relative to the position of the sub-array within
+ the array.
+ The lowest frequency components are on the average side of the array, and
+ the highest frequency components are on the difference section of the array.
+ One special case exists for arrays of length 
+\begin_inset Formula \( 2^n\)
+\end_inset 
+
+.
+ If the array is of length 
+\begin_inset Formula \( 2^n\)
+\end_inset 
+
+ then the full MRE yields entire frequency domain.
+ In case that the array is of odd size larger than one, then the array must
+ be padded and then normal decomposition can continue. 
+\layout Subsection
+
+
+\begin_inset Formula \( \psi^n\)
+\end_inset 
+
+ Expansion
+\layout Standard
+
+One other form of the multi-resolution expansion that can be used is almost
+ trivial by its nature, 
+\begin_inset Formula \( \psi^n\)
+\end_inset 
+
+ expansion.
+ This particular form has the same branches as the MRE.
+ However, the sub arrays are place back in the array in a different order.
+ Figure illustrates the difference in ordering from the 
+\begin_inset Formula \( \psi^n\)
+\end_inset 
+
+ form and the MRE form.
+ This form makes for analysis such time and frequency difficult, but contributes
+ advantages linear operations. 
+\begin_float fig 
+
+\begin_inset Figure
+file psinexpansion.jpg
+width 2 7
+flags 9
+
+\end_inset 
+
+
+\layout Caption
+
+The Haar Transform performed a sample function show each step of the transform
+ in 
+\begin_inset Formula \( \psi^n\)
+\end_inset 
+
+ expansion 
+\layout Standard
+
+
+\begin_inset LatexCommand \label{numpsin}
+
+\end_inset 
+
+
+\end_float 
+
+
+\layout Section
+
+Implementation of the Wavelet Transform
+\layout Standard
+
+
+\begin_inset LatexCommand \label{sec:implementation}
+
+\end_inset 
+
+
+\layout Standard
+
+As stated before, the wavelet transform is defined in terms of average and
+ difference components.
+ A signal is taken and transformed into the two base objects.
+ Typically, the transform has the form 
+\begin_inset Formula \( S\rightarrow
+(A'|D')\)
+\end_inset 
+
+ where 
+\begin_inset Formula \( S\)
+\end_inset 
+
+ is the original signal, 
+\begin_inset Formula \( A\)
+\end_inset 
+
+ is the average component, 
+\begin_inset Formula \( D\)
+\end_inset 
+
+ is the difference component and 
+\begin_inset Formula \( (A'|D')\)
+\end_inset 
+
+ the signal 
+\begin_inset Formula \( A'\)
+\end_inset 
+
+ concatenated with 
+\begin_inset Formula \( D'\)
+\end_inset 
+
+.
+ This transformation can be modeled with the convolution operator.
+ Despite the decomposition of the signal into the two components, the original
+ signal can be reconstructed.
+\layout Standard
+
+Many mathematicians such as Walker
+\begin_inset LatexCommand \cite{walker}
+
+\end_inset 
+
+, use a form that eliminates half of the values.
+ Thus a form can be defined which has the same number of elements as the
+ original.
+ The rules for choosing the member elements are dependent on the wavelet
+ filter choice.
+ Another useful property of wavelets via convolution is the simplicity of
+ the operation.
+ The general case works for all.
+ Such an algorithm requires one nested loop as seen in Algorithm 
+\begin_inset LatexCommand \ref{alg:convolution}
+
+\end_inset 
+
+.
+\layout Standard
+
+
+\latex latex 
+
+\backslash begin{algorithm}
+\newline 
+
+\backslash caption{Convolution of two signals 
+\backslash (x(
+\backslash cdot)
+\backslash ) and 
+\backslash (h(
+\backslash cdot)
+\backslash ).}
+\newline 
+
+\backslash label{alg:convolution}
+\newline 
+
+\backslash begin{algorithmic}
+\newline 
+
+\backslash FOR{
+\backslash (i=0
+\backslash ) to 
+\backslash (M-1
+\backslash )}
+\newline 
+
+\backslash FOR{
+\backslash (j=0
+\backslash ) to 
+\backslash (N-1
+\backslash )}
+\newline 
+
+\backslash STATE 
+\backslash (n=i-j
+\backslash )
+\newline 
+
+\backslash IF{
+\backslash ((0 
+\backslash leq n < M)
+\backslash )}
+\newline 
+
+\backslash STATE
+\backslash (y(i) 
+\backslash   += 
+\backslash  x(j)
+\backslash cdot h(n)
+\backslash )
+\newline 
+
+\backslash ENDIF
+\newline 
+
+\backslash ENDFOR
+\newline 
+
+\backslash ENDFOR
+\newline 
+
+\backslash end{algorithmic}
+\newline 
+
+\backslash end{algorithm}
+\latex default 
+
+\layout Standard
+
+This filter simply equates to the mathematical function 
+\begin_inset Formula \[ 
+y(k) = (x\ast h)(k) = \sum_{l}x(l)h(k-l)
+\]
+\end_inset 
+
+ which is the convolution operation.
+ It is obvious that the operation is 
+\begin_inset Formula \( O(NM)\)
+\end_inset 
+
+ .
+ For practical use, the filter is made smaller than the actual signal being
+ analyzed.
+ In some cases, the filter may be much smalled than the signal.
+ Filter size matters in extracting features from the original signal.
+\layout Standard
+
+To perform a wavelet transform via convolution, the signal is first convolved
+ with the average operator and then with the difference operator.This can
+ be represented by 
+\begin_inset Formula \[ 
+A = S \ast \phi 
+\qquad \mbox{ and } \qquad
+D = S \ast \psi.
+\]
+\end_inset 
+
+ where 
+\begin_inset Formula \( \phi\)
+\end_inset 
+
+ is the mother wavelet and 
+\begin_inset Formula \( \psi\)
+\end_inset 
+
+ is the difference wavelet.
+\layout Section
+
+The 2D Wavelet Transform
+\layout Standard
+
+
+\begin_inset LatexCommand \label{sec:2Dwavelet}
+
+\end_inset 
+
+
+\layout Standard
+
+For the 2D Wavelet Transform, it has to be determined how to represent average
+ and difference components.
+ This can be done by creating one average components and three difference
+ component - vertical, horizontal and diagonal.
+ This can be used in a multiresolution fashion to provide several levels
+ of decomposition.
+\layout Standard
+
+A complete transform method returns a result matrix which is the same size
+ as the source matrix.
+ The result contains the four components.
+ Each component resides on 4 corners of the matrix.
+ Given a matrix 
+\begin_inset Formula \( B\)
+\end_inset 
+
+, the transform is to yield the following form: 
+\begin_inset Formula \[  
+B \Rightarrow 
+\left(
+\begin{array}{cc}
+H & D \\ 
+A & V
+\end{array}
+\right)
+\]
+\end_inset 
+
+ where 
+\begin_inset Formula \( A\)
+\end_inset 
+
+ is the average component, 
+\begin_inset Formula \( H\)
+\end_inset 
+
+ is the horizontal component, 
+\begin_inset Formula \( V\)
+\end_inset 
+
+ is the vertical component, and 
+\begin_inset Formula \( D\)
+\end_inset 
+
+ is the difference component.
+ There is another form which is also used as an example: 
+\begin_inset Formula \[ 
+B \Rightarrow 
+\left(
+\begin{array}{cc}
+A & V \\ 
+H & D
+\end{array}
+\right)
+\]
+\end_inset 
+
+ The first version is simple in concept, but provides a few more possibilities
+ for error and confusion.
+ Regardless of the case, the four components have the following definitions:
+ 
+\layout Enumerate
+
+Average component: produced by filtering the row vectors and the column
+ vectors with the averaging filter. 
+\layout Enumerate
+
+Vertical Component: produced by applying the average filter to the column
+ vectors and the difference filter to the row vectors. 
+\layout Enumerate
+
+Horizontal component: produced by applying the average filter to the row
+ vectors and the difference to the column vectors. 
+\layout Enumerate
+
+Diagonal component: produced by applying the difference filter to both the
+ row and column vectors. 
+\layout Subsection
+
+Multi-Resolution in Two Dimensions
+\layout Standard
+
+Three methods are presented for decomposing 2D matrices --- 2D MRE, 2D MRA
+ and 2D 
+\begin_inset Formula \( \psi^n\)
+\end_inset 
+
+ Expansion.
+ The first of these methods for matrices is the 2D MRE.
+ In this form, the wavelet transform is applied recursively to each of the
+ sub-matrices.
+ The inverse of this MRE applies the inverse wavelet transform is applied
+ to the lowest level adjacent sub-matrices.
+\layout Standard
+
+The 2-D MRA is a special case of the 2-D MRE.
+ The application of the wavelet transform is only applied to the average
+ sub-matrix, only.
+ This method is also called wavelet pyramids.
+\layout Standard
+
+The 
+\begin_inset Formula \( \psi^n\)
+\end_inset 
+
+ is rather more simple to implement, but is harder to analyze.
+ In this case, the wavelet transform is simply reapplied to the whole matrix.
+ The result of this method contains the same elements as the 2-D MRE (wavelet
+ transform full decomposition.) However, the arrangement of the elements
+ is not the same.
+ This arrangement will be used for matrix multiplication.
+\layout Standard
+
+The method for visualizing 2D MRE and 2D MRA is similar to the one-dimensional
+ version.
+ Here a quadtree is used instead.
+ The four branches represent the four sub-matrix types (average, vertical,
+ horizontal, and diagonal.) The rules for this tree is similar for the 1D
+ wavelet transform binary tree.
+\layout Standard
+
+The following are rules for the 2D wavelet transform quad tree in MRA. 
+\layout Itemize
+
+Transforms are only applied to leaves. 
+\layout Itemize
+
+Transforms are only allowed on the root or average leaves. 
+\layout Itemize
+
+If a node is not a leaf then a wavelet transformation has already been performed
+ and is not permitted to be reapplied. 
+\layout Itemize
+
+If the leaf is a vertical, diagonal or horizontal term, then a transformation
+ is not allowed. 
+\layout Itemize
+
+The maximum height of this tree is 
+\begin_inset Formula \( n = \min \left( \lceil N_r \rceil, \lceil N_c \rceil \right)\)
+\end_inset 
+
+ where 
+\begin_inset Formula \( N_r\)
+\end_inset 
+
+ is the number of rows in the matrix and 
+\begin_inset Formula \( N_c\)
+\end_inset 
+
+ is the number of columns in the matrix. 
+\layout Standard
+
+MRE extends this idea by considering the difference leaves, also.
+ The rules for the 2D wavelet transform quad tree in MRA are below. 
+\layout Itemize
+
+Transforms are only applied to leaves. 
+\layout Itemize
+
+If a node is not a leaf then a wavelet transformation has already been performed
+ and is not permitted to be reapplied. 
+\layout Itemize
+
+The maximum height of this tree is 
+\begin_inset Formula \( n = \min \left( \lceil N_r \rceil, \lceil N_c \rceil \right)\)
+\end_inset 
+
+ where 
+\begin_inset Formula \( N_r\)
+\end_inset 
+
+ is the number of rows in the matrix and 
+\begin_inset Formula \( N_c\)
+\end_inset 
+
+ is the number of columns in the matrix. 
+\layout Subsection
+
+Methods of Implementation
+\layout Standard
+
+Two methods of convolving a matrix are easily conceived.
+ First is to use 1D wavelet.
+ The other is to apply the convolution scheme straight to the matrix.
+ Included in the wavelet experiment are both.
+ Realistically, both can and do achieve the same result.
+ However, the direct method achieves speed advantages by the lack of overhead.
+ The direct method only stores a temporary vector resident in memory.
+ Also, there are two fewer transfers per row and column.
+\layout Subsubsection
+
+1D to 2D Method
+\layout Standard
+
+Both rows 1D and 2D and columns 1D and 2D transform are performed similarly.
+ The obvious difference is the indexing of rows and columns.
+\layout Standard
+
+
+\latex latex 
+
+\backslash begin{algorithm}
+\newline 
+
+\backslash caption{Wavelet Row Transform}
+\newline 
+
+\backslash begin{algorithmic}
+\newline 
+
+\backslash REQUIRE Wavelet Transform, , and Wavelet Pair (
+\backslash (
+\backslash psi
+\backslash ) and 
+\backslash (
+\backslash phi
+\backslash ))
+\newline 
+
+\backslash REQUIRE Matrix, 
+\backslash (S 
+\backslash in {
+\backslash mathbb R}^{N
+\backslash times M}
+\backslash )
+\newline 
+
+\backslash FOR{
+\backslash (i = 0
+\backslash ) to 
+\backslash (N-1
+\backslash )}
+\newline 
+
+\backslash STATE 
+\backslash (R = S.getRow(i)
+\backslash )
+\newline 
+
+\backslash STATE 
+\backslash (S.row(i) = 
+\backslash left[ R 
+\backslash ast 
+\backslash phi, R 
+\backslash ast 
+\backslash psi 
+\backslash right]
+\backslash )
+\newline 
+
+\backslash ENDFOR
+\newline 
+
+\backslash end{algorithmic}
+\newline 
+
+\backslash end{algorithm}
+\latex default 
+
+\layout Standard
+
+This principle of this algorithm is simple.
+ Only three intuitive steps are necessary per row or column.
+ Two of these steps are array transfers (row/column transfer to an array).
+ These arrays are fed into the 1D transforms.
+\layout Standard
+
+However, the 1D wavelet transform itself includes a series of memory allocation
+ and deallocation operations.
+ Each memory call is at the minimum a system call.
+\layout Subsubsection
+
+Vector - Matrix Method
+\layout Standard
+
+The principle of this algorithm is more complicated.
+ All functionality, such as convolution, is built into the method.
+ There are fewer calls and passing of structures to external functions to
+ compute the transform.
+\layout Standard
+
+This method has a few givens.
+ The source matrix, the Haar average filter, and the Haar difference filter
+ are given arguments.
+ The result argument is the return argument.
+ The transform signals sub-function row transforms and column transforms
+ to perform the work.
+\layout Standard
+
+The algorithm is as follows for the row transform (and is similar for the
+ column transform):
+\layout Standard
+
+
+\latex latex 
+
+\backslash begin{algorithm}
+\newline 
+
+\backslash caption{Wavelet Transform: Vector - Matrix Method: Row Transform }
+\newline 
+
+\backslash label{vmmethodrow}
+\newline 
+
+\backslash begin{algorithmic}
+\newline 
+
+\backslash REQUIRE  Wavelet Pair
+\newline 
+
+\backslash REQUIRE Temporary Vector 
+\backslash (S
+\backslash )
+\newline 
+
+\backslash REQUIRE Matrix, 
+\backslash (A 
+\backslash in {
+\backslash mathbb R}^{M
+\backslash times N}
+\backslash )
+\newline 
+
+\backslash FOR{
+\backslash (i = 0
+\backslash ) to 
+\backslash (M
+\backslash )}
+\newline 
+
+\backslash STATE load 
+\backslash (S
+\backslash ) from 
+\backslash (A_i
+\backslash ) where 
+\backslash (A_i
+\backslash ) is the row vector at row 
+\backslash (i
+\backslash )
+\newline 
+
+\backslash STATE 
+\backslash (S 
+\backslash stackrel{
+\backslash psi_1}{
+\backslash to} R
+\backslash )
+\newline 
+
+\backslash STATE Load 
+\backslash (R
+\backslash ) into result matrix 
+\backslash (
+\backslash alpha
+\backslash ) at 
+\backslash (
+\backslash alpha_i
+\backslash )
+\newline 
+
+\backslash ENDFOR
+\newline 
+
+\backslash STATE Return 
+\backslash (
+\backslash alpha
+\backslash )
+\newline 
+
+\backslash end{algorithmic}
+\newline 
+
+\backslash end{algorithm}
+\latex default 
+
+\layout Standard
+
+
+\latex latex 
+
+\backslash begin{algorithm}
+\newline 
+
+\backslash caption{Wavelet Transform: Vector - Matrix Method: Column Transform }
+\newline 
+
+\backslash label{vmmethodrow}
+\newline 
+
+\backslash begin{algorithmic}
+\newline 
+
+\backslash REQUIRE  Wavelet Pair
+\newline 
+
+\backslash REQUIRE Temporary Vector 
+\backslash (S
+\backslash )
+\newline 
+
+\backslash REQUIRE Matrix, 
+\backslash (A 
+\backslash in {
+\backslash mathbb R}^{M
+\backslash times N}
+\backslash )
+\newline 
+
+\backslash FOR{
+\backslash (j = 0
+\backslash ) to 
+\backslash (N
+\backslash )}
+\newline 
+
+\backslash STATE load 
+\backslash (S
+\backslash ) from 
+\backslash (A_j
+\backslash ) where 
+\backslash (A_i
+\backslash ) is the column vector at column 
+\backslash (j
+\backslash )
+\newline 
+
+\backslash STATE 
+\backslash (S 
+\backslash stackrel{
+\backslash psi_1}{
+\backslash to} R
+\backslash )
+\newline 
+
+\backslash STATE Load 
+\backslash (R
+\backslash ) into result matrix 
+\backslash (
+\backslash alpha
+\backslash ) at 
+\backslash (
+\backslash alpha_j
+\backslash )
+\newline 
+
+\backslash ENDFOR
+\newline 
+
+\backslash STATE Return 
+\backslash (
+\backslash alpha
+\backslash )
+\newline 
+
+\backslash end{algorithmic}
+\newline 
+
+\backslash end{algorithm}
+\latex default 
+
+\layout Standard
+
+To perform a wavelet transform with this method, the driving wavelet transform
+ method calls on of the wavelet transform methods and feeds the results
+ into the other.
+ In the implementation used for this thesis, the row transform is called
+ first, then its results 
+\begin_inset Formula \( \alpha\)
+\end_inset 
+
+ are fed into the column transform as the column transforms 
+\begin_inset Formula \( A\)
+\end_inset 
+
+.
+ The results from the column transform are returned as the wavelet transform
+ of the original matrix.
+\layout Subsection
+
+2-D MRA: Wavelet Pyramids
+\layout Standard
+
+This version of the wavelet transform (multiresolution) uses private members
+ of the class 
+\begin_inset Formula \( (hA, hD, xD/yD, xA/yA)\)
+\end_inset 
+
+.
+ Both Haar filters are maintained this way.
+ Also both row and column transforms have average and difference myVector
+ classes for temporary storage.
+ All of these members are allocated and destroyed by the wavelet transform
+ method itself.
+ The simplified algorithm of the row transform is shown in Algorithm 
+\begin_inset LatexCommand \ref{wpmethodrow}
+
+\end_inset 
+
+, and the column transform is shown in Algorithm 
+\begin_inset LatexCommand \ref{wpmethodcol}
+
+\end_inset 
+
+ .
+\layout Standard
+
+
+\latex latex 
+
+\backslash begin{algorithm}
+\newline 
+
+\backslash caption{Wavelet Transform: Wavelet Pyramid Method: Row Transform }
+\newline 
+
+\backslash label{wpmethodrow}
+\newline 
+
+\backslash begin{algorithmic}
+\newline 
+
+\backslash REQUIRE  Wavelet Pair 
+\backslash (hA
+\backslash ) and 
+\backslash (hD
+\backslash ) of length 
+\backslash (w_l
+\backslash )
+\newline 
+
+\backslash REQUIRE Temporary Vector 
+\backslash (S
+\backslash )
+\newline 
+
+\backslash REQUIRE Matrix, 
+\backslash (A 
+\backslash in {
+\backslash mathbb R}^{M
+\backslash times N}
+\backslash )
+\newline 
+
+\backslash REQUIRE Limits of Rows and Columns to traverse: 
+\backslash (M'
+\backslash ) and 
+\backslash (N'
+\backslash )
+\newline 
+
+\backslash REQUIRE Temporary vectors 
+\backslash (xA
+\backslash ) and 
+\backslash (xD
+\backslash ) for row Average vector and row Difference Vector.
+\newline 
+
+\backslash STATE Initialize vector 
+\backslash (xA
+\backslash ) and 
+\backslash (xD
+\backslash )
+\newline 
+
+\backslash FOR {
+\backslash (i = 0
+\backslash ) to 
+\backslash (M'
+\backslash )}
+\newline 
+
+\backslash STATE Initialize 
+\backslash (xA
+\backslash ) and 
+\backslash (xD
+\backslash )
+\newline 
+
+\backslash FOR{
+\backslash (k = 0
+\backslash ) to 
+\backslash (N'
+\backslash )}
+\newline 
+
+\backslash FOR {
+\backslash (l=0
+\backslash ) to 
+\backslash (w_l
+\backslash )}
+\newline 
+
+\backslash STATE 
+\backslash (n = k - l
+\backslash )
+\newline 
+
+\backslash IF {
+\backslash (n 
+\backslash in [0,N']
+\backslash )}
+\newline 
+
+\backslash STATE 
+\backslash (xA_k = A_{i,n} 
+\backslash cdot hA_l
+\backslash )
+\newline 
+
+\backslash STATE 
+\backslash (xD_k = A_{i,n} 
+\backslash cdot hD_l
+\backslash )
+\newline 
+
+\backslash ENDIF
+\newline 
+
+\backslash ENDFOR
+\newline 
+
+\backslash ENDFOR
+\newline 
+
+\backslash STATE Transfer to 
+\backslash (
+\backslash alpha
+\backslash ).  
+\backslash (
+\backslash alpha_i  
+\backslash leftarrow xA'|xD'
+\backslash )
+\newline 
+
+\backslash ENDFOR
+\newline 
+
+\backslash STATE Return 
+\backslash (
+\backslash alpha
+\backslash )
+\newline 
+
+\backslash end{algorithmic}
+\newline 
+
+\backslash end{algorithm}
+\latex default 
+
+\layout Standard
+
+
+\latex latex 
+
+\backslash begin{algorithm}
+\newline 
+
+\backslash caption{Wavelet Transform: Wavelet Pyramid Method: Column Transform }
+\newline 
+
+\backslash label{wpmethodcol}
+\newline 
+
+\backslash begin{algorithmic}
+\newline 
+
+\backslash REQUIRE  Wavelet Pair 
+\backslash (hA
+\backslash ) and 
+\backslash (hD
+\backslash ) of length 
+\backslash (w_l
+\backslash )
+\newline 
+
+\backslash REQUIRE Temporary Vector 
+\backslash (S
+\backslash )
+\newline 
+
+\backslash REQUIRE Matrix, 
+\backslash (A 
+\backslash in {
+\backslash mathbb R}^{M
+\backslash times N}
+\backslash )
+\newline 
+
+\backslash REQUIRE Limits of Rows and Columns to traverse: 
+\backslash (M'
+\backslash ) and 
+\backslash (N'
+\backslash )
+\newline 
+
+\backslash REQUIRE Temporary vectors 
+\backslash (yA
+\backslash ) and 
+\backslash (yD
+\backslash ) for column Average vector and column Difference Vector.
+\newline 
+
+\newline 
+
+\backslash FOR {
+\backslash (j = 0
+\backslash ) to 
+\backslash (N'
+\backslash )}
+\newline 
+
+\backslash STATE Initialize 
+\backslash (yA
+\backslash ) and 
+\backslash (yD
+\backslash )
+\newline 
+
+\backslash FOR{
+\backslash (k = 0
+\backslash ) to 
+\backslash (M'
+\backslash )}
+\newline 
+
+\backslash FOR {
+\backslash (l=0
+\backslash ) to 
+\backslash (w_l
+\backslash )}
+\newline 
+
+\backslash STATE 
+\backslash (n = k - l
+\backslash )
+\newline 
+
+\backslash IF {
+\backslash (n 
+\backslash in [0,M']
+\backslash )}
+\newline 
+
+\backslash STATE 
+\backslash (yA_k = A_{n,j} 
+\backslash cdot hA_l
+\backslash )
+\newline 
+
+\backslash STATE 
+\backslash (yD_k = A_{n,j} 
+\backslash cdot hD_l
+\backslash )
+\newline 
+
+\backslash ENDIF
+\newline 
+
+\backslash ENDFOR
+\newline 
+
+\backslash ENDFOR
+\newline 
+
+\backslash STATE Transfer to 
+\backslash (
+\backslash alpha
+\backslash ).  
+\backslash (
+\backslash alpha_j  
+\backslash leftarrow yA'|yD'
+\backslash )
+\newline 
+
+\backslash ENDFOR
+\newline 
+
+\backslash STATE Return 
+\backslash (
+\backslash alpha
+\backslash )
+\newline 
+
+\backslash end{algorithmic}
+\newline 
+
+\backslash end{algorithm}
+\latex default 
+
+\layout Standard
+
+
+\latex latex 
+
+\backslash begin{algorithm}
+\newline 
+
+\backslash caption{Wavelet Transform: Wavelet Pyramid Method: Driving Transform }
+\newline 
+
+\backslash label{wpmethod}
+\newline 
+
+\backslash begin{algorithmic}
+\newline 
+
+\backslash REQUIRE  Wavelet Pair 
+\backslash (hA
+\backslash ) and 
+\backslash (hD
+\backslash ) of length 
+\backslash (w_l
+\backslash )
+\newline 
+
+\backslash REQUIRE Matrix 
+\backslash (A
+\backslash ) of size 
+\backslash (M
+\backslash times N
+\backslash )
+\newline 
+
+\backslash REQUIRE Number of resolutions, 
+\backslash (r
+\backslash )
+\newline 
+
+\backslash STATE Initialize matrix 
+\backslash (
+\backslash alpha
+\backslash ) to 
+\backslash (M
+\backslash times N
+\backslash ) and set equal to 
+\backslash (A
+\backslash )
+\newline 
+
+\backslash STATE Initialize matrix 
+\backslash (
+\backslash beta
+\backslash ) to 
+\backslash (M 
+\backslash times N
+\backslash ) and set equal to zero.
+\newline 
+
+\backslash FOR {
+\backslash (k = 0
+\backslash ) to 
+\backslash (r
+\backslash )}
+\newline 
+
+\backslash STATE 
+\backslash (M' = 
+\backslash frac{M}{2^k}
+\backslash )
+\newline 
+
+\backslash STATE 
+\backslash (N' = 
+\backslash frac{N}{2^k}
+\backslash )
+\newline 
+
+\backslash STATE call row transform for matrix 
+\backslash (
+\backslash alpha
+\backslash ), with dimension limits 
+\backslash (M'
+\backslash ) , 
+\backslash (N'
+\backslash ) store in 
+\backslash (
+\backslash beta
+\backslash )
+\newline 
+
+\backslash STATE call column transform for matrix 
+\backslash (
+\backslash beta
+\backslash ), with dimension limits 
+\backslash (M'
+\backslash ) , 
+\backslash (N'
+\backslash ) store in 
+\backslash (
+\backslash alpha
+\backslash )
+\newline 
+
+\backslash ENDFOR
+\newline 
+
+\backslash STATE Return 
+\backslash (
+\backslash alpha
+\backslash ) as result
+\newline 
+
+\backslash end{algorithmic}
+\newline 
+
+\backslash end{algorithm}
+\latex default 
+
+\layout Standard
+
+Note: 
+\begin_inset Formula \( A_i\)
+\end_inset 
+
+ names the row vectors and 
+\begin_inset Formula \( A_j\)
+\end_inset 
+
+ names the column vectors, and 
+\begin_inset Formula \( A_{i,j}\)
+\end_inset 
+
+ is the element from the 
+\begin_inset Formula \( i^{th}\)
+\end_inset 
+
+ row and 
+\begin_inset Formula \( j^{th}\)
+\end_inset 
+
+ column.
+\layout Standard
+
+The computational cost of this algorithm 
+\begin_inset Formula \( \frac{1}{2n}\cdot C_\psi\)
+\end_inset 
+
+ where 
+\begin_inset Formula \( C_\psi\)
+\end_inset 
+
+ is the cost of the wavelet transform at large, and 
+\begin_inset Formula \( n\)
+\end_inset 
+
+ is the number of resolutions performed.
+ The reason for this constant is that the size of the matrix being transformed
+ shrinks by a factor of 
+\begin_inset Formula \( 2\)
+\end_inset 
+
+ each time.
+ There may be additional overhead for the setup of the matrices, and transfer
+ of matrix 
+\begin_inset Formula \( S\)
+\end_inset 
+
+ to 
+\begin_inset Formula \( T\)
+\end_inset 
+
+, which is 
+\begin_inset Formula \( N^2\)
+\end_inset 
+
+.
+ Since 
+\begin_inset Formula \( C_\psi \propto O(N^2)\)
+\end_inset 
+
+ then this a cost of another constant multiplied by 
+\begin_inset Formula \( O(N^2)\)
+\end_inset 
+
+.
+\layout Subsection
+
+2-D MRE via Quad Tree
+\layout Standard
+
+There are two ways to implement the 2-D MRE and it depends on if other stopping
+ conditions are desired.
+ The one stopping condition of size can be handled in a simple loop.
+ To enforce an energy limit stop, then a means to stop any further transforms
+ on that branch must be used.
+ Two such means exist.
+ One way is to mark that branch and do so to its children.
+ Another way is to use a queue structure to designate nodes to be transform.
+ If the node represents a stopping condition, simply do not enter that node
+ into the queue.
+\layout Standard
+
+In either case, the matrix information can be stored in this quad-tree.
+ Either by referencing position within the working matrix, or by storing
+ a matrix in the node itself.
+ In this thesis, references were used for space efficiency.
+ However, the storage of the matrices in the nodes is just as valid.
+ Also a hybrid of only storing the final matrices in the leaves is acceptable
+ as well.
+\layout Standard
+
+As stated, a straight forward loop can acquire the full decomposition.
+ The limit of the times required for is defined 
+\begin_inset Formula \( v_l = 4^{r-1} \)
+\end_inset 
+
+ where 
+\begin_inset Formula \( r\)
+\end_inset 
+
+ is the height of the quad-tree.
+ In this implementation, the quad tree is implemented in an array, and those
+ properties are exploited in using a simple for loop to perform the 2-D
+ MRE. 
+\latex latex 
+
+\backslash begin{algorithm}
+\newline 
+
+\backslash caption{Wavelet Transform: MRE Quad Tree Loop }
+\newline 
+
+\backslash label{mreqtloop}
+\newline 
+
+\backslash begin{algorithmic}
+\newline 
+
+\backslash REQUIRE Wavelet Transform, 
+\backslash (
+\backslash psi
+\backslash ), and Wavelet Pair
+\newline 
+
+\backslash REQUIRE Matrix, 
+\backslash (S 
+\backslash in {
+\backslash mathbb R}^{N
+\backslash times M}
+\backslash )
+\newline 
+
+\backslash FOR{
+\backslash (i = 0
+\backslash ) to 
+\backslash (v_l
+\backslash )}
+\newline 
+
+\backslash STATE draw 
+\backslash (S
+\backslash ) from quad-tree at index 
+\backslash (i
+\backslash )
+\newline 
+
+\backslash STATE 
+\backslash (S 
+\backslash stackrel{
+\backslash psi_r}{
+\backslash to} T
+\backslash )
+\newline 
+
+\backslash STATE 
+\backslash (T 
+\backslash stackrel{
+\backslash psi_c}{
+\backslash to} X
+\backslash )
+\newline 
+
+\backslash STATE Wavelet Split and Store 
+\backslash (X
+\backslash ) in branch children.
+\newline 
+
+\backslash ENDFOR
+\newline 
+
+\backslash end{algorithmic}
+\newline 
+
+\backslash end{algorithm}
+\latex default 
+
+\layout Standard
+
+Note on Algorithm 
+\begin_inset LatexCommand \ref{mreqtloop}
+
+\end_inset 
+
+ that the Wavelet Split and Store operation splits the matrix 
+\begin_inset Formula \( X\)
+\end_inset 
+
+ into its four sub-matrices (average, horizontal, vertical, and diagonal)
+ and stores them in their appropriate spot in the tree.
+ Thus every-time that 
+\begin_inset Formula \( S\)
+\end_inset 
+
+ is loaded a leaf branch of the tree is loaded to be transformed.
+\layout Standard
+
+The queue based 2-D MRE with a quad-tree is a bit more complicated.
+ The queue must be loaded with the root, then operation may be allowed to
+ proceed.
+ The end condition is when the queue is empty.
+ Rules for loading the queue is must force the leaves on the last level
+ to be ineligible for loading.
+ Otherwise, the loop will never stop and segmentation fault is likely to
+ arise.
+ Energy rules and other arbitrary rules may also be imposed, but they are
+ not as critical as the leaf limit rule.
+ For this example, refer to Algorithm 
+\begin_inset LatexCommand \ref{wavemreloop}
+
+\end_inset 
+
+. 
+\latex latex 
+
+\backslash begin{algorithm}
+\newline 
+
+\backslash caption {Wavelet Transform: MRE with queue controlled visits of the Quad Tree}
+\newline 
+
+\backslash label{wavemreloop}
+\newline 
+
+\backslash begin {algorithmic}
+\newline 
+
+\backslash REQUIRE Wavelet Transform, MRE, and wavelet pair (
+\backslash (
+\backslash psi
+\backslash ) and 
+\backslash (
+\backslash phi
+\backslash ))
+\newline 
+
+\backslash REQUIRE Matrix 
+\backslash (S
+\backslash ) 
+\newline 
+
+\backslash STATE {Insert root node representing the whole matrix in the queue.}
+\newline 
+
+\backslash WHILE {as long as queue is not empty} 
+\newline 
+
+\backslash STATE Get the next element from the queue, and load matrix 
+\backslash (S
+\backslash )
+\newline 
+
+\backslash STATE 
+\backslash (S 
+\backslash stackrel{
+\backslash psi_r}{
+\backslash to} T
+\backslash )
+\newline 
+
+\backslash STATE 
+\backslash (T 
+\backslash stackrel{
+\backslash psi_c}{
+\backslash to} X
+\backslash )
+\newline 
+
+\backslash STATE Check 
+\backslash (X
+\backslash ) for terminating conditions
+\newline 
+
+\backslash STATE if 
+\backslash (X
+\backslash ) does not have a terminating condition store 
+\backslash (X
+\backslash )'s four sections into the branch children of node 
+\backslash (S
+\backslash ).  Store theses children nodes in the queue in order of average, vertical, horizontal, and difference.
+\newline 
+
+\newline 
+
+\backslash ENDWHILE
+\newline 
+
+\backslash end {algorithmic}
+\newline 
+
+\backslash end{algorithm}
+\latex default 
+ The computational cost of this algorithm 
+\begin_inset Formula \( n\cdot C_\psi\)
+\end_inset 
+
+ where 
+\begin_inset Formula \( C_\psi\)
+\end_inset 
+
+ is the cost of the wavelet transform at large, and 
+\begin_inset Formula \( n\)
+\end_inset 
+
+ is the number of resolutions performed.
+ In some special cases, the cost may be slightly to significantly less if
+ additional termination rules are applied.
+ The reduced size of the sub-matrices is canceled by quantity of sub-matrices
+ to transform.
+ There may be additional overhead for the setup of the matrices.
+ Since 
+\begin_inset Formula \( C_\psi \propto O(N^2)\)
+\end_inset 
+
+ then this a cost of this algorithm is on the order 
+\begin_inset Formula \( N^2\)
+\end_inset 
+
+ also.
+\layout Subsection
+
+2-D 
+\begin_inset Formula \( \psi^n\)
+\end_inset 
+
+ Implementation
+\layout Standard
+
+As stated the 
+\begin_inset Formula \( \psi^n\)
+\end_inset 
+
+ expansion is simpler to implement, but produces a matrix that is harder
+ to analyze for features.
+ However, it is scientific merit since it is literally a wavelet transform
+ of a wavelet transform.
+ Also, the limits imposed on the MRA and MRE for tree height are not required,
+ but are rather a good idea.
+ A good practical limit would be for the resolution limit to be defined
+ 
+\begin_inset Formula \( n =\log_2 |S| -1\)
+\end_inset 
+
+ where 
+\begin_inset Formula \( |S|\)
+\end_inset 
+
+ is the size of the the matrix S.
+ For this example, refer to Algorithm 
+\begin_inset LatexCommand \ref{wavepsiloop}
+
+\end_inset 
+
+. 
+\latex latex 
+
+\backslash begin{algorithm}
+\newline 
+
+\backslash caption {Wavelet Transform: MRE with queue controlled visits of the Quad Tree}
+\newline 
+
+\backslash label{wavepsiloop}
+\newline 
+
+\backslash begin {algorithmic}
+\newline 
+
+\backslash REQUIRE Wavelet Transform, MRE, and wavelet pair (
+\backslash (
+\backslash psi
+\backslash ) and 
+\backslash (
+\backslash phi
+\backslash ))
+\newline 
+
+\backslash REQUIRE Matrix 
+\backslash (S
+\backslash ) 
+\newline 
+
+\backslash STATE {Load 
+\backslash (S
+\backslash ) into temporary matrix 
+\backslash (T
+\backslash )}
+\newline 
+
+\backslash FOR {
+\backslash (i = 1
+\backslash ) to 
+\backslash (n
+\backslash )}
+\newline 
+
+\backslash STATE {
+\backslash (T 
+\backslash stackrel{
+\backslash psi_c}{
+\backslash to} X
+\backslash )}
+\newline 
+
+\backslash STATE {
+\backslash (X 
+\backslash stackrel{
+\backslash psi_r}{
+\backslash to} T
+\backslash )}
+\newline 
+
+\backslash ENDFOR 
+\newline 
+
+\backslash STATE {return 
+\backslash (T
+\backslash ) as the transformed matrix}
+\newline 
+
+\newline 
+
+\backslash end {algorithmic}
+\newline 
+
+\backslash end{algorithm}
+\latex default 
+
+\layout Standard
+
+The computational cost of this algorithm 
+\begin_inset Formula \( n\cdot C_\psi\)
+\end_inset 
+
+ where 
+\begin_inset Formula \( C_\psi\)
+\end_inset 
+
+ is the cost of the wavelet transform at large, and 
+\begin_inset Formula \( n\)
+\end_inset 
+
+ is the number of resolutions performed.
+ There may be additional overhead for the setup of the matrices, and transfer
+ of matrix 
+\begin_inset Formula \( S\)
+\end_inset 
+
+ to 
+\begin_inset Formula \( T\)
+\end_inset 
+
+, which is 
+\begin_inset Formula \( N^2\)
+\end_inset 
+
+.
+ Since 
+\begin_inset Formula \( C_\psi \propto O(N^2)\)
+\end_inset 
+
+ then this a cost of another constant multiplied by 
+\begin_inset Formula \( O(N^2)\)
+\end_inset 
+
+.
+\the_end

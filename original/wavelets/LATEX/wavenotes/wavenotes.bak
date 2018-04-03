@@ -1,0 +1,376 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Created=Thu Feb 13 11:08:58 2003}
+%TCIDATA{LastRevised=Tue Feb 25 21:04:07 2003}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="General\Blank Document">}
+%TCIDATA{CSTFile=LaTeX article (bright).cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\input{tcilatex}
+
+\begin{document}
+
+\title{Brief Article}
+\author{The Author}
+
+If one looks at the vast variety of approaches to wavelets, it appears to be
+a vague concept with matrix transforms and functions for the use in
+compression. This is only the tip of the iceberg. In reality, wavelets offer
+significant advantages in the field of numerical analysis. Some methods are
+good for showing theoretical proofs. Other methods are good for computing
+out solutions for frequency and filtering problems.
+
+Goals for this introductory document into wavelets are to visit some
+approaches to define what a wavelet is, some basic theorems, and practical
+examples. The wavelet definitions approaches a wavelet from both the matrix
+and convolution methods. Most of the basic theorems presented here are based
+on the convolution approach to wavelets. It is not to say that the matrix
+approach is not valid, rather it is simply more complicated than this
+introduction should be. Lastly the practical examples are based on the Haar
+Wavelet applied to 1-D and 2-D sources. Such examples are also practical for
+Daubechies wavelet transform as well.
+
+\section{Wavelet Transform Definitions:}
+
+As stated, the wavelet transform can be viewed from both a matrix
+representation which allows many linear algebra and abstract algebra methods
+to prove theorems about wavelets. Another form is a convolution type of
+operation. The compact form used by James Walker is simply a special case of
+the convolution method, and thus James Walker's principles apply to the
+convolution methods.
+
+In the matrix form, a wavelet matrix is defined as a generalization of a
+square orthogonal or unitary matrices which are a subset of a larger class
+of rectrangular matrices. The matrices contain information to define an
+associate wavelet system. Such matrices are defined in terms of their rank
+and genus.
+
+Furthermore, Alfred Haar himself pointed out in Zur Theorie der orthogonalen
+Funktionensystem Math Annual qualities of a Haar Wavelet Matrix. In these
+cases, the Haar Wavelet Matrix has a genus of one. Such matrices have a one
+to one mapping to a general wavelet matrix. Such Haar matrices are called
+the characteristic Haar Matrix. Also a rank 2 Haar Matrix suffices to show
+all geometric considerations.
+
+The thing that makes the matrix representation difficult is the use of the
+Laurent series. Also, computationally, any matrix operation is inherently $%
+O^{2}$ a operation which is not desired in compuationaly intense programs.
+Convolution operatated versions may offer an improvement.
+
+s
+
+James S. Walker identified eight properties of wavelets in convolution,
+which some of them hold in general. These properties covered the following
+areas: small fluctuations, compaction of energy, scaling squared, linear
+fluctuations, quadratic fluctations, polynomial fluctuations. These
+properties allow frequency components to be analyized in a wavelets space as
+opposed to pure frequency space like Fourier and Laplace transforms allow.
+
+\section{Wavelets via Convolution}
+
+Wavelets can be defined in a matrix form as ($A|D_{1}|D_{2}|...|D_{n}$)
+where n is the resolution of the wavelet, A is the average component, and $%
+D_{i}$ are the difference components. This implies that there is the ability
+to transform a signal into this form and to recover it as well.
+
+Many such as Walker, use a form that eliminates half of the values. This
+method makes the total number values in the wavelet transform and the same
+as in the original. However, there are other means. One method (an
+over-qualified method) ensures that each component of the wavelet matrix is
+of the same length as the orignal. It is hoped that properties of both
+methods can reveal useful mathematical properties.
+
+Another useful property of wavelets via convolution is the simplisity of the
+operation The convolution is $O\left( n\log n\right) $in complexity. Where
+as a matrix multiply is inherently $O(n^{2\,})$ . Obviously few operations
+lead to less complexity.
+
+$\forall i\in \lbrack 0,M)$
+
+\qquad $\forall j\in \lbrack 0,N)$
+
+\qquad \qquad n=i-j
+
+\qquad \qquad if ($n\in \lbrack 0,M)$)
+
+\qquad \qquad \qquad $y_{i\,}+=x_{n}\cdot h_{j\,}$
+
+This filter simply equates to the mathematical function: $x\ast
+h=\sum_{l}x_{k-l}h_{k}$, which is the convolution operation. As we can see
+the operation is slightly less than $O(n^{2})$ . For practical use, the
+filter is made smaller than the actual signal being analyized. In some
+cases, the filter may be much smalled than the signal. Size of the filter is
+important in extracting features from original signal.
+
+In the case of this convolution operator, the limit is acutally M, not N.
+The value of M is the size of the original signal. Since the resulting
+vector is the same as the original, the vector is said to be fully qualified
+and over complete. Some forms are made half size discounting half of the
+information, making them fully qualified and complete.
+
+To perform a wavelet transform via convolution, each signal is convolved
+twice. \ 
+
+$A_{i}=A_{i-1}\ast V$
+
+$D_{i\,}=A_{i-1}\ast W$
+
+\qquad where
+
+\qquad \qquad V is the scaling wavelet vector
+
+\qquad \qquad W is the differencing wavelet vector
+
+\qquad \qquad A is the average vector (scaled vector)
+
+\qquad \qquad D is the difference component vector
+
+\qquad \qquad $\forall i\in \lbrack 1,L)$ and $A_{0}=f$ which is the
+original signal
+
+\qquad \qquad L is the limit on the number resolutions that signal can have
+based on the wavelet type.
+
+\bigskip
+
+\section{Walker Method and Convolution Method}
+
+There is a comparison of this method to James S. Walker's method. This point
+is to be illustrated by the Haar wavelet. \ Note that other wavelet basis
+functions may be different. \ By definition, the difference vector elements
+are defined:
+
+$d_{k}=f\cdot W_{k}$
+
+\qquad where
+
+\qquad \qquad $d_{k}$ is the difference value at index k
+
+\qquad \qquad $W_{k}$ is the wavelet vector shifted by (k-1)*2
+
+\qquad \qquad $k\in \lbrack 1,\frac{m}{2}]$ is the index, such that m is the
+length of f
+
+\qquad \qquad f is the original signal
+
+The average vector elements are defined by $a_{k}=f\cdot V_{k}$
+
+\qquad $a_{k}$ is the average value
+
+\qquad $V_{k}$ is the scaling vector shifted by (k-1)*2
+
+\qquad $k\in \lbrack 1,\frac{m}{2}]$ s.t. m is the length of f
+
+\qquad f is the original signal
+
+\bigskip
+
+Furthermore, the inverse of the wavelet transform defines the original
+vector as
+
+$f_{2k}=a_{k}-d_{k}$
+
+$f_{2k-1}=a_{k}+d_{k}$
+
+\bigskip
+
+This example implies that each $A^{i}$ and $D^{1}$ are both half the size of
+f in the James S.\ Walker method. \ Likewise, $A^{2}$ and $\ D^{2}$ are half
+the size of $A^{1}$.
+
+\bigskip
+
+For the convolution method for zero indexed vectors, the even indexed values
+equated to the $a_{k}$ and $d_{k}$ values in Walker's method. \ Thus the
+inverse via convolution is
+
+\qquad $f_{i}=a_{1}+d_{i}$ $\forall i\in \lbrack 0,m)$ that is even
+
+\qquad $f_{i}=a_{i-1}-d_{i\,}$ $\forall i\in \lbrack 0,m)$ that is odd.
+
+\bigskip
+
+\subsection{Example:}
+
+To test these idea, a simple program was made to run this convolution
+operator on simple functions. Haar matrices were generated by one class.
+Convolution was placed in another class. Last, the representation in another
+class. Special classes were provided for the test of the algorithm and
+plotting of the vectors.
+
+The values chosen for the wavelet and scaling vectors were as followes:
+
+\qquad $V=\sqrt{\frac{1}{2}} 
+\begin{array}{c}
+1 \\ 
+1
+\end{array}
+$
+
+\qquad $W=\sqrt{\frac{1}{2}} 
+\begin{array}{c}
+1 \\ 
+-1
+\end{array}
+$
+
+The start of the transform convolves the original signal into vector $R_{A}$
+and $R_{D}$. \ From this a loop performs the operation of subsequent $R_{A}$
+vector. \ In principle this should work. \ However, $R_{A}$ has a tendency
+to grow.
+
+The original signal for test was
+
+\qquad $f(t)=10\sin (t)-5\sin (\dot{2}\cdot t)+2\sin (3\cdot t)-\sin (4\cdot
+t)$
+
+The horizontal axis was represented on horizontal axis by $\forall t\in
+\lbrack 0,128]$. \ The verticle access was represented on the vertical axis.
+
+\bigskip
+
+The first average maintains the shape, but gains some strength:
+
+\bigskip
+
+Differences are notices mostly $\forall t\in (40,60)$. The rest are not so
+remarkable
+
+\bigskip
+
+One curious aspect of this example is that the average signal grows in each
+iteration. In time is much larger in magnitude than the original. However,
+the shape generally remains the same. Why is this? The first idea that comes
+to mind is the scaling value on the scaling vector. Most filters are
+supposed have loss of energy. However, there is an actual gain of energy
+between the average versus the previous original. Why?
+
+Walker points out that a majority of the energy is contained with in the
+average. Subsequent energy would be found in the average of the average of
+the average ..... Unfortunately, these vectors are much the same size as the
+original.
+
+Another reason could be the size of the convolution filter. This filter is
+only 2 elements long. Where as the signal is 64 times its size. Could this
+be contributing to this difference?
+
+\bigskip
+
+\section{Properties of Wavelets}
+
+Orthogonality:
+
+This property links the $L^{2}$ norm of a function to the norm of its
+wavelet by
+
+$||f||=\sqrt{\sum_{j,l}\gamma _{j,l}^{2}}$
+
+One thing, Bjorn Jawerth and Wim Sweldens saw an importance on wavelet's
+unitary transformation. \ Actually, orthogonal wavelets have this property.
+\ Why this is important is that orthogonal wavelet transforms have a
+condition number of one. \ This property makes the operation stable, and
+prevents any error presnet in the inital data from growing in further
+transformations. \ 
+
+Compact Support:
+
+Another theorem statement made by Bjorn Jawerth and Wim Sweldens was ''If
+the scaling function and wavelet are compactly suuported, the filters H and
+G are finite impulse response filters, so that the summations in the fast
+wavelet transform are finite.'' \ Lessons from digital signal processing
+reminds us that these type of filters tend to stable. \ 
+
+If the scaling and wavelet functions are not compactly supported, then this
+a problem. \ Furthermore, the best than can be had is if the functions have
+a quick decay. \ If the decay is quick, then filter can be approximated by a
+finite impulse response filter. \ 
+
+\bigskip
+
+Rational coefficents:
+
+If the coefficents are not rational, then a Turing machine is incapable of
+computing this transform. \ If the coefficents are dyadic, then the
+computation via a Turing machine is trivial. \ These two points are critical
+for computable wavelet transforms. \ 
+
+\bigskip
+
+Symmetry:
+
+Another Jawerth theorem, ''If the scaling function and wavelet are
+symmetric, then the filters have generalized linear phase.'' \ For signal
+processing, the result of this property is some what obvious. \ For
+scientific analysis, the property introduces some stronger consequences. \
+If the signal or image is distorted by the operation itself, then analysis
+will be flawed as result. \ An exception to this is obvious, if the
+distortion is an intended mathematical aboration with specific properties,
+then it itself will produce desired results.
+
+\bigskip
+
+Smoothness:
+
+Jawerth theorem on smoothness, ''If the original function represents an
+image and the wavelet is not smooth, the error can easily be detected
+visually.'' \ One point smoothness corresponds to better frequency
+localization of the filters.
+
+\bigskip
+
+There are three properties with less definition: Number of Vanishing Moments
+of the dual wavlet, analytic expressions, and interpolation. \ The
+properties have desirable characteristics which makes them useful. \ The
+number of vanishing moments is useful for detecting singularites and
+smoothness. \ Analytic expressions are useful for frequency/ harmonic
+analysis. \ Lastly, interpolation is useful in defining coefficents for a
+representive function of the signal. \ 
+
+\bigskip
+
+Regularity is an issue for the Haar Wavelet. \ Why?
+
+\bigskip
+
+\subsubsection{Notes on Biorthogonal Wavelets:}
+
+\bigskip
+
+\bigskip
+
+Functional Analysis
+
+By Rudin
+
+Wheedan,
+
+Holder's Inequality
+
+\end{document}

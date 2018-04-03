@@ -1,0 +1,191 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 99.2beta8 (1.43)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Vector - Matrix Method</TITLE>
+<META NAME="description" CONTENT="Vector - Matrix Method">
+<META NAME="keywords" CONTENT="basicwave">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v99.2beta8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="basicwave.css">
+
+<LINK REL="previous" HREF="node6.html">
+<LINK REL="up" HREF="node5.html">
+<LINK REL="next" HREF="node8.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html189"
+  HREF="node8.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html185"
+  HREF="node5.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html181"
+  HREF="node6.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html187"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html190"
+  HREF="node8.html">Multi-Resolution</A>
+<B> Up:</B> <A NAME="tex2html186"
+  HREF="node5.html">Proof of Concept</A>
+<B> Previous:</B> <A NAME="tex2html182"
+  HREF="node6.html">1-D to 2-D Method</A>
+ &nbsp <B>  <A NAME="tex2html188"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H3><A NAME="SECTION00041200000000000000">
+Vector - Matrix Method</A>
+</H3>
+The principle of this algorithm is more complicated.  All functionality, such as convolution, is built into the method.  There are fewer calls and passing of structures to external functions to compute the transform.  
+
+<P>
+This method has a few givens.  The source matrix, the Haar average filter, and Haar difference filter are given arguments.  The result argument is the return argument.    The transform signals sub-functions row transform and column transform to perform the work.  
+
+<P>
+The algorithm is as follows for the row tranform (and is similar for the column transform):  
+
+<P>
+<!-- MATH
+ $\forall i \in rows$
+ -->
+
+<OL>
+<LI>Initialize temporary array/vector to all zeros (x).
+</LI>
+<LI><!-- MATH
+ $\forall k \in columns$
+ -->
+
+<OL>
+<LI><!-- MATH
+ $\forall l \in ha.Size$
+ -->
+x +=  <TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT"><!-- MATH
+ $S_{i,k-l} * hA_l$
+ -->
+</TD>
+<TD ALIGN="LEFT"><!-- MATH
+ $k-l \in columns$
+ -->
+</TD>
+</TR>
+<TR><TD ALIGN="LEFT">0</TD>
+<TD ALIGN="LEFT"></TD>
+</TR>
+</TABLE>
+</LI>
+</OL>
+</LI>
+<LI><!-- MATH
+ $\forall k \in columns/2$
+ -->
+
+<P>
+<!-- MATH
+ $result_{i,k} = x_{2k+1}$
+ -->
+ (In other words, odd split)
+
+<P>
+</LI>
+<LI>Initialize x to all zeros.
+</LI>
+<LI><!-- MATH
+ $\forall k \in columns$
+ -->
+
+<OL>
+<LI><!-- MATH
+ $\forall l \in hd.Size$
+ -->
+x +=  <TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT"><!-- MATH
+ $S_{i,k-l} * hD_l$
+ -->
+</TD>
+<TD ALIGN="LEFT"><!-- MATH
+ $k-l \in columns$
+ -->
+</TD>
+</TR>
+<TR><TD ALIGN="LEFT">0</TD>
+<TD ALIGN="LEFT"></TD>
+</TR>
+</TABLE>
+</LI>
+</OL>
+
+<P>
+</LI>
+<LI><!-- MATH
+ $\forall k \in columns/2$
+ -->
+
+<P>
+<!-- MATH
+ $result_{i,k+columns/2} = x_{2k+1}$
+ -->
+ (In other words, odd split)
+
+<P>
+</LI>
+</OL>
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html189"
+  HREF="node8.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html185"
+  HREF="node5.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html181"
+  HREF="node6.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html187"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html190"
+  HREF="node8.html">Multi-Resolution</A>
+<B> Up:</B> <A NAME="tex2html186"
+  HREF="node5.html">Proof of Concept</A>
+<B> Previous:</B> <A NAME="tex2html182"
+  HREF="node6.html">1-D to 2-D Method</A>
+ &nbsp <B>  <A NAME="tex2html188"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Daniel Beatty
+2003-06-04
+</ADDRESS>
+</BODY>
+</HTML>

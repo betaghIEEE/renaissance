@@ -1,0 +1,2 @@
+	cc -g -LANG:std  -c correlate.cpp -I/usr/freeware/include -I/usr/freeware/include/libxml2
+*** Error code 2 (bu21)

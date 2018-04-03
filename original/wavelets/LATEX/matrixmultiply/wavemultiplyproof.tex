@@ -1,0 +1,78 @@
+One of the key points for wavelet matrix multiplication is the proof that $W(A) \times W(B) = W(A\times B)$  If this is the case, then it is obvious that $W(A) \times W(B) = W(C) = W(A\times B = C)$.  So far the proof is still weak.  The reason is that an example proof is useful for proving something to not be the case, rather than being the case.   However, a simple example does show some intuitive steps that would be necessary for a proof.  
+
+\subsection{A $2\times 2$ example}
+\subsubsection{Conventional Multiplication}
+Conventional multiplication is spelled out as
+
+$c_{i,j} = \sum\limits_k a_{i,k} b_{k,j}$
+
+For a $2 \times 2$ matrix, there is the following:
+\[\left(\begin{array}{ccc}  a_{1,1}&  a_{1,2} &   \\ a_{2,1} &  a_{2,2} &   \end{array}\right)
+\left(\begin{array}{ccc}  b_{1,1}&  b_{1,2} &   \\ b_{2,1} &  b_{2,2} &   \end{array}\right) =
+\left(\begin{array}{ccc}  a_{1,1} b_{1,1} + a_{1,2} b_{2,1}&  a_{1,1}b_{1,2} + a_{1,2}  b_{2,2} &   \\ a_{2,1} b_{1,1} + a_{2,2} b_{2,1} &  a_{2,1} b_{1,2} + a_{2,2} b_{2,2} &   \end{array}\right)\]
+
+\subsubsection{Wavelet Transform of two $2\times$ 2 matrices}
+
+For a wavelet transform on both matrix A and B, the results are:
+
+\[
+W(A) = \frac{1}{2} \left(\begin{array}{ccc}  a_{1,1} + a_{2,1} + a_{1,2} + a_{2,2} &  a_{1,1} + a_{2,1} - a_{1,2} - a_{2,2} &   \\ a_{1,1} - a_{2,1} + a_{1,2} - a_{2,2} &  a_{1,1} - a_{2,1} - a_{1,2} + a_{2,2} &   \end{array}\right)
+\]
+
+\[
+W(B) = \frac{1}{2} \left(\begin{array}{ccc}  b_{1,1} + b_{2,1} + b_{1,2} + b_{2,2} &  b_{1,1} + b_{2,1} - b_{1,2} - b_{2,2} &   \\ b_{1,1} - b_{2,1} + b_{1,2} - b_{2,2} &  b_{1,1} - b_{2,1} - b_{1,2} + b_{2,2} &   \end{array}\right)
+\]
+
+\subsubsection{Product of A and B in wavelet space}
+The conventional product of A and B can be transformed into wavelet space.  The results of this matrix transform is as follows:
+
+\[
+W(A\times B) = W
+\left(\begin{array}{ccc}  a_{1,1} b_{1,1} + a_{1,2} b_{2,1}&  a_{1,1}b_{1,2} + a_{1,2}  b_{2,2} &   \\ a_{2,1} b_{1,1} + a_{2,2} b_{2,1} &  a_{2,1} b_{1,2} + a_{2,2} b_{2,2} &   \end{array}\right) = \frac{1}{2}
+\left(
+\begin{array}{ccc}  (a_{1,1} b_{1,1} + a_{1,2} b_{2,1} + a_{1,1}b_{1,2} + a_{1,2}  b_{2,2}) + (a_{2,1} b_{1,1} + a_{2,2} b_{2,1} + a_{2,1} b_{1,2} + a_{2,2} b_{2,2}) &
+  (a_{1,1} b_{1,1} + a_{1,2} b_{2,1}  - a_{1,1}b_{1,2} - a_{1,2}  b_{2,2}) +  (a_{2,1} b_{1,1} + a_{2,2} b_{2,1} - a_{2,1} b_{1,2} - a_{2,2} b_{2,2} ) &   \\ (a_{1,1} b_{1,1} + a_{1,2} b_{2,1} + a_{1,1}b_{1,2} + a_{1,2}  b_{2,2}) - (a_{2,1} b_{1,1} + a_{2,2} b_{2,1} + a_{2,1} b_{1,2} + a_{2,2} b_{2,2})&
+ (a_{1,1} b_{1,1} + a_{1,2} b_{2,1}  - a_{1,1}b_{1,2} - a_{1,2}  b_{2,2}) - (a_{2,1} b_{1,1} + a_{2,2} b_{2,1} - a_{2,1} b_{1,2} - a_{2,2} b_{2,2} ) &   \end{array}\right) 
+ = \frac{1}{2}
+\left(
+\begin{array}{ccc}  (a_{1,1} b_{1,1} + a_{1,2} b_{2,1} + a_{1,1}b_{1,2} + a_{1,2}  b_{2,2} + a_{2,1} b_{1,1} + a_{2,2} b_{2,1} + a_{2,1} b_{1,2} + a_{2,2} b_{2,2}) &
+  (a_{1,1} b_{1,1} + a_{1,2} b_{2,1}  - a_{1,1}b_{1,2} - a_{1,2}  b_{2,2} +  a_{2,1} b_{1,1} + a_{2,2} b_{2,1} - a_{2,1} b_{1,2} - a_{2,2} b_{2,2} ) &   \\ (a_{1,1} b_{1,1} + a_{1,2} b_{2,1} + a_{1,1}b_{1,2} + a_{1,2}  b_{2,2} - a_{2,1} b_{1,1} - a_{2,2} b_{2,1} - a_{2,1} b_{1,2} - a_{2,2} b_{2,2})&
+ (a_{1,1} b_{1,1} + a_{1,2} b_{2,1}  - a_{1,1}b_{1,2} - a_{1,2}  b_{2,2} -a_{2,1} b_{1,1} - a_{2,2} b_{2,1} + a_{2,1} b_{1,2} + a_{2,2} b_{2,2} ) &   \end{array}\right) 
+  
+\]
+
+\subsubsection{What is $W(A) \times W(B)$}
+
+Straight forward multiplication of $W(A) \times W(B)$ works out as follows:
+
+\[
+W(A) \times W(B) = 
+\frac{1}{2} \left(\begin{array}{ccc}  a_{1,1} + a_{2,1} + a_{1,2} + a_{2,2} &  a_{1,1} + a_{2,1} - a_{1,2} - a_{2,2} &   \\ a_{1,1} - a_{2,1} + a_{1,2} - a_{2,2} &  a_{1,1} - a_{2,1} - a_{1,2} + a_{2,2} &   \end{array}\right)
+\times
+\frac{1}{2} \left(\begin{array}{ccc}  b_{1,1} + b_{2,1} + b_{1,2} + b_{2,2} &  b_{1,1} + b_{2,1} - b_{1,2} - b_{2,2} &   \\ b_{1,1} - b_{2,1} + b_{1,2} - b_{2,2} &  b_{1,1} - b_{2,1} - b_{1,2} + b_{2,2} &   \end{array}\right) = 
+
+\frac{1}{4} \left(\begin{array}{ccc}  (a_{1,1} + a_{2,1} + a_{1,2} + a_{2,2})( b_{1,1} + b_{2,1} + b_{1,2} + b_{2,2}) + ( a_{1,1} + a_{2,1} - a_{1,2} - a_{2,2})(b_{1,1} - b_{2,1} + b_{1,2} - b_{2,2}) & 
+
+( a_{1,1} + a_{2,1} + a_{1,2} + a_{2,2}) ( b_{1,1} + b_{2,1} - b_{1,2} - b_{2,2}) + (a_{1,1} + a_{2,1} - a_{1,2} - a_{2,2}) ( b_{1,1} - b_{2,1} - b_{1,2} + b_{2,2})&   \\
+ 
+ ( a_{1,1} - a_{2,1} + a_{1,2} - a_{2,2})(b_{1,1} + b_{2,1} + b_{1,2} + b_{2,2}) +  ( a_{1,1} - a_{2,1} - a_{1,2} + a_{2,2} ) (b_{1,1} - b_{2,1} + b_{1,2} - b_{2,2}) & 
+ 
+( a_{1,1} - a_{2,1} + a_{1,2} - a_{2,2}) (b_{1,1} + b_{2,1} - b_{1,2} - b_{2,2})+( a_{1,1} - a_{2,1} - a_{1,2} + a_{2,2} )(b_{1,1} - b_{2,1} - b_{1,2} + b_{2,2})&   \end{array}\right)
+
+\]
+
+Of course this is better simplified.  
+
+\[ \frac{1}{2}\left(\begin{array}{ccc} (a_{1,1} b_{1,1} + a_{2,1} b_{1,1} + a_{1,2} b_{2,1} + a_{2,2} b_{2,1} +a_{1,1} b_{1,2}  a_{2,1} b_{1,2} + a_{1,2} b_{2,2} + a_{2,2} b_{2,2} ) &
+(a_{1,1} b_{1,1} + a_{2,1} b_{1,1} +a_{1,2}b_{2,1} + a_{2,2} b_{2,1} -a_{1,1}b_{1,2} - a_{2,1 } b_{1,2} - a_{1,2} b_{2,2} - a_{2,2} b_{2,2}  )   &   \\(a_{1,1} b_{1,1} - a_{2,1} b_{1,1} + a_{2,1} b_{2,1} -a_{1,2} b_{2,1} + a_{1,1} b_{1,2} - a_{2,1} b_{1,2} + a_{1,2} b_{2,2} - a_{2,2} b_{2,2} )  & 
+ (a_{1,1} b_{1,1} - a_{2,1} b_{1,1} + a_{1,2} b_{2,1} + a_{2,1} b_{2,1} - a_{1,1} b_{1,2} + a_{2,1} b_{1,2} - a_{1,2} b_{2,2} + a_{2,2} b_{2,2}) &   \end{array}\right)\]
+ 
+ Compared with $W(C)$ computed the conventional way:
+ 
+ \[
+ W(C) = \frac{1}{2}
+\left(
+\begin{array}{ccc}  (a_{1,1} b_{1,1} + a_{1,2} b_{2,1} + a_{1,1}b_{1,2} + a_{1,2}  b_{2,2} + a_{2,1} b_{1,1} + a_{2,2} b_{2,1} + a_{2,1} b_{1,2} + a_{2,2} b_{2,2}) &
+  (a_{1,1} b_{1,1} + a_{1,2} b_{2,1}  - a_{1,1}b_{1,2} - a_{1,2}  b_{2,2} +  a_{2,1} b_{1,1} + a_{2,2} b_{2,1} - a_{2,1} b_{1,2} - a_{2,2} b_{2,2} ) &   \\ (a_{1,1} b_{1,1} + a_{1,2} b_{2,1} + a_{1,1}b_{1,2} + a_{1,2}  b_{2,2} - a_{2,1} b_{1,1} - a_{2,2} b_{2,1} - a_{2,1} b_{1,2} - a_{2,2} b_{2,2})&
+ (a_{1,1} b_{1,1} + a_{1,2} b_{2,1}  - a_{1,1}b_{1,2} - a_{1,2}  b_{2,2} -a_{2,1} b_{1,1} - a_{2,2} b_{2,1} + a_{2,1} b_{1,2} + a_{2,2} b_{2,2} ) &   \end{array}\right) 
+ \]

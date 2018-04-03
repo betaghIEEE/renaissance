@@ -1,0 +1,735 @@
+
+1 1zero value 48
+
+ At resolution 1
+
+ image 1 pgmclassics/f16.pgm
+ image 2 pgmclassics/f16.pgm¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 4 
+ Quad Tree Initalized 
+ Stats taken 
+ 0 is being copied 
+ Beginning copy 
+ Copy of 0 complete 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 13365324
+ Total Data transfers 5240868
+ Total Data Compares 1048594 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 4 
+ Quad Tree Initalized 
+ Stats taken 
+ 0 is being copied 
+ Beginning copy 
+ Copy of 0 complete 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 26730648
+ Total Data transfers 10481736
+ Total Data Compares 2097188
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 3.36721e-16 Saved source and result
+ Allocated quadnode and set values 
+ 0 is being copied 
+ Beginning copy 
+ Copy of 0 complete 
+ 
+ The resolution in the self WX form is 9 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+
+ Total instructions 31711468
+ Total Data transfers 11530330
+ Total Data Compares 2097206
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference -6.73442e-16
+ Fidelity 2.8082e-13
+
+1 2zero value 48
+
+ At resolution 2
+
+ image 1 pgmclassics/f16.pgm
+ image 2 pgmclassics/f16.pgm¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 16 
+ Quad Tree Initalized 
+ Stats taken 
+ 0 is being copied 
+ Beginning copy 
+ Copy of 0 complete 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 25417822
+ Total Data transfers 9957430
+ Total Data Compares 2097170 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 16 
+ Quad Tree Initalized 
+ Stats taken 
+ 0 is being copied 
+ Beginning copy 
+ Copy of 0 complete 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 50835644
+ Total Data transfers 19914860
+ Total Data Compares 4194340
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference -2.24481e-15 Saved source and result
+ Allocated quadnode and set values 
+ 0 is being copied 
+ Beginning copy 
+ Copy of 0 complete 
+ 
+ The resolution in the self WX form is 9 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+
+ Total instructions 59486494
+ Total Data transfers 21487742
+ Total Data Compares 4194358
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference -1.45912e-15
+ Fidelity 3.42151e-13
+
+1 3zero value 48
+
+ At resolution 3
+
+ image 1 pgmclassics/f16.pgm
+ image 2 pgmclassics/f16.pgm¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 64 
+ Quad Tree Initalized 
+ Stats taken 
+ 0 is being copied 
+ Beginning copy 
+ Copy of 0 complete 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 37470320
+ Total Data transfers 14673992
+ Total Data Compares 3145746 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 64 
+ Quad Tree Initalized 
+ Stats taken 
+ 0 is being copied 
+ Beginning copy 
+ Copy of 0 complete 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 74940640
+ Total Data transfers 29347984
+ Total Data Compares 6291492
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference -1.34688e-15 Saved source and result
+ Allocated quadnode and set values 
+ 0 is being copied 
+ Beginning copy 
+ Copy of 0 complete 
+ 
+ The resolution in the self WX form is 9 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+
+ Total instructions 87261520
+ Total Data transfers 31445154
+ Total Data Compares 6291510
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference -2.24481e-15
+ Fidelity 4.239e-13
+
+1 4zero value 48
+
+ At resolution 4
+
+ image 1 pgmclassics/f16.pgm
+ image 2 pgmclassics/f16.pgm¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 256 
+ Quad Tree Initalized 
+ Stats taken 
+ 0 is being copied 
+ Beginning copy 
+ Copy of 0 complete 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 49522818
+ Total Data transfers 19390554
+ Total Data Compares 4194322 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 256 
+ Quad Tree Initalized 
+ Stats taken 
+ 0 is being copied 
+ Beginning copy 
+ Copy of 0 complete 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 99045636
+ Total Data transfers 38781108
+ Total Data Compares 8388644
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference -2.91825e-15 Saved source and result
+ Allocated quadnode and set values 
+ 0 is being copied 
+ Beginning copy 
+ Copy of 0 complete 
+ 
+ The resolution in the self WX form is 9 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+
+ Total instructions 115036546
+ Total Data transfers 41402566
+ Total Data Compares 8388662
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference -2.91825e-15
+ Fidelity 5.10901e-13
+
+1 5zero value 48
+
+ At resolution 5
+
+ image 1 pgmclassics/f16.pgm
+ image 2 pgmclassics/f16.pgm¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 1024 
+ Quad Tree Initalized 
+ Stats taken 
+ 0 is being copied 
+ Beginning copy 
+ Copy of 0 complete 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 61575316
+ Total Data transfers 24107116
+ Total Data Compares 5242898 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 1024 
+ Quad Tree Initalized 
+ Stats taken 
+ 0 is being copied 
+ Beginning copy 
+ Copy of 0 complete 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 123150632
+ Total Data transfers 48214232
+ Total Data Compares 10485796
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference -2.13257e-15 Saved source and result
+ Allocated quadnode and set values 
+ 0 is being copied 
+ Beginning copy 
+ Copy of 0 complete 
+ 
+ The resolution in the self WX form is 9 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+
+ Total instructions 142811572
+ Total Data transfers 51359978
+ Total Data Compares 10485814
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference -3.25497e-15
+ Fidelity 5.89135e-13
+
+1 6zero value 48
+
+ At resolution 6
+
+ image 1 pgmclassics/f16.pgm
+ image 2 pgmclassics/f16.pgm¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 4096 
+ Quad Tree Initalized 
+ Stats taken 
+ 0 is being copied 
+ Beginning copy 
+ Copy of 0 complete 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 73627814
+ Total Data transfers 28823678
+ Total Data Compares 6291474 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 4096 
+ Quad Tree Initalized 
+ Stats taken 
+ 0 is being copied 
+ Beginning copy 
+ Copy of 0 complete 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 147255628
+ Total Data transfers 57647356
+ Total Data Compares 12582948
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference -2.80601e-15 Saved source and result
+ Allocated quadnode and set values 
+ 0 is being copied 
+ Beginning copy 
+ Copy of 0 complete 
+ 
+ The resolution in the self WX form is 9 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+
+ Total instructions 170586598
+ Total Data transfers 61317390
+ Total Data Compares 12582966
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference -4.60185e-15
+ Fidelity 6.82811e-13
+
+1 7zero value 48
+
+ At resolution 7
+
+ image 1 pgmclassics/f16.pgm
+ image 2 pgmclassics/f16.pgm¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 16384 
+ Quad Tree Initalized 
+ Stats taken 
+ 0 is being copied 
+ Beginning copy 
+ Copy of 0 complete 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 85680312
+ Total Data transfers 33540240
+ Total Data Compares 7340050 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 16384 
+ Quad Tree Initalized 
+ Stats taken 
+ 0 is being copied 
+ Beginning copy 
+ Copy of 0 complete 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 171360624
+ Total Data transfers 67080480
+ Total Data Compares 14680100
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference -4.93857e-15 Saved source and result
+ Allocated quadnode and set values 
+ 0 is being copied 
+ Beginning copy 
+ Copy of 0 complete 
+ 
+ The resolution in the self WX form is 9 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+
+ Total instructions 198361624
+ Total Data transfers 71274802
+ Total Data Compares 14680118
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference -5.27529e-15
+ Fidelity 8.50609e-13
