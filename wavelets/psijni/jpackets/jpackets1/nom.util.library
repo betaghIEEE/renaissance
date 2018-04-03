@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library>
+  <!--JBuilder Library Definition File-->
+  <fullname>nom.util</fullname>
+  <class>
+    <path>[../../../../../../../../../../Developer/Applications/JBuilderX/OpenTools/nom/util_test.jar]</path>
+    <path>[../../../../../../../../../../Developer/Applications/JBuilderX/OpenTools/nom/fits.jar]</path>
+    <path>[../../../../../../../../../../Developer/Applications/JBuilderX/OpenTools/nom/util-1.jar]</path>
+  </class>
+  <source>
+    <path>[../../../../../../../../../../Developer/Applications/JBuilderX/OpenTools/nom/fits_src.jar]</path>
+    <path>[../../../../../../../../../../Developer/Applications/JBuilderX/OpenTools/nom/util_src-1.jar]</path>
+    <path>[../../../../../../../../../../Developer/Applications/JBuilderX/OpenTools/nom/util_test_src.jar]</path>
+  </source>
+  <lastmodsaved>1082935016895</lastmodsaved>
+</library>

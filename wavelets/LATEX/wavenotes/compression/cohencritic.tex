@@ -1,0 +1,49 @@
+\documentclass[11pt]{article}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `basename #1 .tif`.png}
+
+\textwidth = 6.5 in
+\textheight = 9 in
+\oddsidemargin = 0.0 in
+\evensidemargin = 0.0 in
+\topmargin = 0.0 in
+\headheight = 0.0 in
+\headsep = 0.0 in
+\parskip = 0.2in
+\parindent = 0.0in
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}{Definition}
+
+\title{Critique and Notes on ``Image Compression and Multiscale Approximation''}
+\author{Daniel Beatty}
+\begin{document}
+\maketitle
+
+\section {Mechanisms for Compression}
+``The approximation of S has a small number of coefficents and net not be compressed; it will be coded on 8 bits.  Compression will be achieved thanks to a fewer bits quantization detail because of their statistical concentration around 0.''
+
+\subsection {Personal Notes}
+In cases of lower energy, the number of bits necessary to represent the smaller number is itself smaller.  
+
+Example: 
+\begin{itemize}\item Typical Images: In this case, the quantization that represents them.  Some sections that have more energy require bits since they become larger than one.  However, in the lower energy sections the number approaches numerical zero.  Limits can be set for a section that indicate the maximum, minimum, precision, a reference normalizer, and so forth.
+\item True doubles:  In this case, the idea is to obtain zero sections, and eliminate them.\end{itemize}
+
+One thing that I partially agree with ``complete loss of wastes drammatically the quality of the picture for a small gain of the picture for a small gain of compression so that this method must not be used for the coding of the image.''  This applies in cases where either full recovery is required.  In cases where lower contributions can be neglected, then a floor limit can be applied and force values below the limit to zero and eliminate those values.
+
+Section 3.2 does not make any sense.
+
+Make note of the theorems and proofs from section 4 for error approximation.  pages 193 - 197
+
+The Fourier Transform comparison is interesting but unnecessary.
+
+
+\begin{thebibliography}{99}
+\bibitem Albert Cohen \testsl {Image Compression and Multiscale Approximation''} published in Wavelets and Applications edited by Y. Meyer Published by Springer-Verlag 1992
+\end{thebibliography}
+
+ \end{document}

@@ -1,0 +1,10 @@
+[PropertyInfo]
+borderLayout1,BorderLayout,false,false, , ,false,<default>
+m_cols,int,false,false,m_cols,m_cols,true,<default>
+m_data,double[][],false,false,m_data,m_data,true,<default>
+m_row,int,false,false,m_row,m_row,true,<default>
+[IconNames]
+
+
+
+

@@ -1,0 +1,194 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 99.2beta8 (1.43)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Results: 2-D Wavelet Transform </TITLE>
+<META NAME="description" CONTENT="Results: 2-D Wavelet Transform ">
+<META NAME="keywords" CONTENT="basicwave">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v99.2beta8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="basicwave.css">
+
+<LINK REL="next" HREF="node14.html">
+<LINK REL="previous" HREF="node10.html">
+<LINK REL="up" HREF="basicwave.html">
+<LINK REL="next" HREF="node12.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html235"
+  HREF="node12.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html231"
+  HREF="basicwave.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html225"
+  HREF="node10.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html233"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html236"
+  HREF="node12.html">Multi -resolution</A>
+<B> Up:</B> <A NAME="tex2html232"
+  HREF="basicwave.html">Simple Wavelets with Convolution</A>
+<B> Previous:</B> <A NAME="tex2html226"
+  HREF="node10.html">Results - 1-D Wavelet</A>
+ &nbsp <B>  <A NAME="tex2html234"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00060000000000000000">
+Results: 2-D Wavelet Transform </A>
+</H1>
+
+<P>
+A simple room picture shows the difference correct indexing produces in the wavelet transform and its inverse. The 1-D to 2-D method shows the incorrectly indexed case.  A correctly indexed version is shown in the vector-matrix method.  
+
+<P>
+The 1-D to 2-D method has a serious issue with memory leak errors (Macintosh OSX, using gcc 3.1).  Memory is allocated and deallocated quickly, and on some platforms shows up as an error.   On other platforms, the result is degraded performance (IRIX, SGI Octane2 using gcc 2.9).   An example image of 720 x 486 requires nearly 10 minutes to compute the wavelet transform by this method on an SGI Octane2.  However, this method does eventually return a correct result.  
+
+<P>
+The matrix-vector method also yields the correct result.  However, there is less memory overhead in this method as compared to the 1-D to 2-D method.  As a result, both the row wavelet transform and column wavelet transforms are performed more quickly, with fewer memory transfers and allocations.  Obviously, this also allows for the operation to be conducted almost entirely in cache memory on both the SGI Octane2 and Macintosh G4 based machines.  A Macintosh G3 based machine still requires main memory at a minimum to execute the same operation which yields a slower performance.  
+
+<P>
+A correct result must also be matched to a correct inverse method.  The indexing order matters.  The inverse transform method is a forward inverse transform method.  In the case of 1-D to 2-D transform, the ordering was reverse indexed (Figure <A HREF="node11.html#rightWavepic">6</A>).  As a result of an error in indexing, ringing is seen on edges in this method(Figure <A HREF="node11.html#rightDanRecovered">8</A>) for a case in point.  Caution is incredibly important when matching both forward and reverse indexing, since matching the mathematics to the actual ordering can be obscure and tricky.   
+
+<P>
+A correct result is shown in Figure <A HREF="#selfRecover.jpg"><IMG  ALIGN="BOTTOM" BORDER="1" ALT="[*]"
+ SRC="file:/usr/lib/latex2html/icons/crossref.png"></A>.  In this case, the indexing was matched up and ringing is not present.  It is clear that the recovered image and the original (Figure <A HREF="node11.html#rightDan">4</A>) are nearly indistinguishable.  
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="rightDan"></A><A NAME="167"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 4:</STRONG>
+Original Image.  This image is the original image. </CAPTION>
+<TR><TD><!-- MATH
+ $\includegraphics[width=4in]{rightDan.jpg}$
+ -->
+</TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="rightDanRecovered"></A><A NAME="172"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 5:</STRONG>
+Recovered Image.  This image is the recovered image.  Depending on whether the image was saved as a picture first can affect the white spots in the picture.  Ringing is also an issue.  </CAPTION>
+<TR><TD><!-- MATH
+ $\includegraphics[width=4in]{revRecover.jpg}$
+ -->
+</TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="rightWavepic"></A><A NAME="177"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 6:</STRONG>
+Wavelet Transform Image.  This image is divided in to average, horizontal, vertical and diagonal components. </CAPTION>
+<TR><TD><!-- MATH
+ $\includegraphics[width=4in]{revWavepic.jpg}$
+ -->
+</TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="wavepic"></A><A NAME="182"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 7:</STRONG>
+Wavelet Transform Image.  This image is divided in to average, horizontal, vertical and diagonal components, using the vector-matrix version. </CAPTION>
+<TR><TD><!-- MATH
+ $\includegraphics[width=4in]{selfWavepic.jpg}$
+ -->
+</TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="rightDanRecovered"></A><A NAME="187"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 8:</STRONG>
+Recovered Image (Vector-Matrix Method).  This image is the recovered image.  This version avoids the ringing by using the vector-matrix version which is more aligned for the inverse wavelet transform.  </CAPTION>
+<TR><TD><!-- MATH
+ $\includegraphics[width=4in]{selfRecover.jpg}$
+ -->
+</TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html237"
+  HREF="node12.html">Multi -resolution</A>
+<LI><A NAME="tex2html238"
+  HREF="node13.html">Threshold FIltering</A>
+</UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html235"
+  HREF="node12.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html231"
+  HREF="basicwave.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html225"
+  HREF="node10.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html233"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html236"
+  HREF="node12.html">Multi -resolution</A>
+<B> Up:</B> <A NAME="tex2html232"
+  HREF="basicwave.html">Simple Wavelets with Convolution</A>
+<B> Previous:</B> <A NAME="tex2html226"
+  HREF="node10.html">Results - 1-D Wavelet</A>
+ &nbsp <B>  <A NAME="tex2html234"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Daniel Beatty
+2003-06-04
+</ADDRESS>
+</BODY>
+</HTML>

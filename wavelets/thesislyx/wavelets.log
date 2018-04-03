@@ -1,0 +1,491 @@
+This is pdfeTeXk, Version 3.141592-1.11b-2.1 (Web2C 7.5.2) (format=pdflatex 2004.3.14)  20 MAR 2004 21:18
+entering extended mode
+\write18 enabled.
+ %&-line parsing enabled.
+ (/usr/local/teTeX/share/texmf.tetex/web2c/cp8bit.tcx)
+**wavelets.tex
+(./wavelets.tex{/usr/local/teTeX/share/texmf.local/pdftex/config/pdftex.cfg}
+LaTeX2e <2001/06/01>
+Babel <v3.7h> and hyphenation patterns for american, french, german, ngerman, n
+ohyphenation, loaded.
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/base/report.cls
+Document Class: report 2001/04/21 v1.4e Standard LaTeX document class
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/base/size11.clo
+File: size11.clo 2001/04/21 v1.4e Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/graphics/graphics.sty
+Package: graphics 2001/07/07 v1.0n Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/config/graphics.cfg
+File: graphics.cfg 2001/08/31 v1.1 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 80.
+
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/graphics/pdftex.def
+File: pdftex.def 2002/06/19 v0.03k graphics/color for pdftex
+\Gread@gobject=\count88
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks15
+\ex@=\dimen105
+))
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen106
+)
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count89
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count90
+\leftroot@=\count91
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count92
+\DOTSCASE@=\count93
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen107
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count94
+\c@MaxMatrixCols=\count95
+\dotsspace@=\muskip10
+\c@parentequation=\count96
+\dspbrk@lvl=\count97
+\tag@help=\toks16
+\row@=\count98
+\column@=\count99
+\maxfields@=\count100
+\andhelp@=\toks17
+\eqnshift@=\dimen108
+\alignsep@=\dimen109
+\tagshift@=\dimen110
+\tagwidth@=\dimen111
+\totwidth@=\dimen112
+\lineht@=\dimen113
+\@envbody=\toks18
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks19
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2002/01/22 v2.2d
+
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2001/10/25 v2.2f
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 132.
+))
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/misc/doublespace.sty)
+(/usr/local/teTeX/share/texmf.gwtex/tex/latex/macros/contrib/supported/algorith
+ms/algorithm.sty
+Package: algorithm 
+
+Document Style `algorithm' - floating environment
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/misc/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count101
+\float@exts=\toks20
+\float@box=\box28
+\@float@everytoks=\toks21
+\@floatcapt=\box29
+)
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks22
+\c@algorithm=\count102
+)
+(/usr/local/teTeX/share/texmf.gwtex/tex/latex/macros/contrib/supported/algorith
+ms/algorithmic.sty
+Package: algorithmic 
+
+Document Style `algorithmic' - environment
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/tools/calc.sty
+Package: calc 1998/07/07 v4.1b Infix arithmetic (KKT,FJ)
+\calc@Acount=\count103
+\calc@Bcount=\count104
+\calc@Adimen=\dimen114
+\calc@Bdimen=\dimen115
+\calc@Askip=\skip46
+\calc@Bskip=\skip47
+LaTeX Info: Redefining \setlength on input line 59.
+LaTeX Info: Redefining \addtolength on input line 60.
+\calc@denominator=\count105
+)
+\c@ALC@line=\count106
+\c@ALC@rem=\count107
+\ALC@tlm=\skip48
+)
+\c@theorem=\count108
+ (./wavelets.aux
+
+LaTeX Warning: Label `vmmethodrow' multiply defined.
+
+
+LaTeX Warning: Label `image Peppers' multiply defined.
+
+
+LaTeX Warning: Label `image_watch_fidelity' multiply defined.
+
+
+LaTeX Warning: Label `image Peppers' multiply defined.
+
+
+LaTeX Warning: Label `image_waterfall_fidelity' multiply defined.
+
+)
+\openout1 = `wavelets.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+ (/usr/local/teTeX/share/texmf.tetex/tex/context/base/supp-pdf.tex
+(/usr/local/teTeX/share/texmf.tetex/tex/context/base/supp-mis.tex
+loading : Context Support Macros / Missing
+\protectiondepth=\count109
+\scratchcounter=\count110
+\scratchtoks=\toks23
+\scratchdimen=\dimen116
+\scratchskip=\skip49
+\scratchmuskip=\muskip11
+\scratchbox=\box30
+\scratchread=\read1
+\scratchwrite=\write3
+\zeropoint=\dimen117
+\minusone=\count111
+\thousandpoint=\dimen118
+\emptytoks=\toks24
+\nextbox=\box31
+\nextdepth=\dimen119
+\everyline=\toks25
+\!!counta=\count112
+\!!countb=\count113
+\recursecounter=\count114
+)
+loading : Context Support Macros / PDF
+\nofMPsegments=\count115
+\nofMParguments=\count116
+\everyMPtoPDFconversion=\toks26
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 56.
+ (/usr/local/teTeX/share/texmf.tetex/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2002/01/19 v2.2g AMS font definitions
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 56.
+
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2002/01/19 v2.2g AMS font definitions
+) [1
+
+{/usr/local/teTeX/share/texmf.local/fonts/map/pdftex/updmap/pdftex.map}] (./wav
+elets.toc
+[1
+
+] [2])
+\tf@toc=\write4
+\openout4 = `wavelets.toc'.
+
+ [3]
+Chapter 1.
+(./introduction.tex [4
+
+]) [5]
+Chapter 2.
+(./wavedefinition.tex [6
+
+] [7] [8]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 79.
+
+(/usr/local/teTeX/share/texmf.tetex/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 79.
+
+
+LaTeX Warning: Citation `Sweldens' on page 9 undefined on input line 87.
+
+[9]
+
+LaTeX Warning: Citation `Walker' on page 10 undefined on input line 101.
+
+[10] [11] [12] [13] [14] [15]
+<mraexample2.jpg, id=97, 892.33376pt x 405.515pt>
+File: mraexample2.jpg Graphic file (type jpg)
+ <use mraexample2.jpg>
+[16 <./mraexample2.jpg>] <numexample01_2.jpg, id=101, 997.7275pt x 407.5225pt>
+File: numexample01_2.jpg Graphic file (type jpg)
+
+<use numexample01_2.jpg> [17]
+<psinexpansion.jpg, id=105, 1027.84pt x 770.88pt>
+File: psinexpansion.jpg Graphic file (type jpg)
+ <use psinexpansion.jpg>
+Overfull \hbox (36.13501pt too wide) in paragraph at lines 313--314
+[][] 
+ []
+
+[18 <./numexample01_2.jpg>] [19 <./psinexpansion.jpg>] [20] [21] [22] [23]
+[24] [25]
+Overfull \hbox (71.45892pt too wide) in paragraph at lines 540--541
+/cmr10@10.95pt/This ver-sion of the wavelet trans-form (mul-tires-o-lu-tion) us
+es pri-vate mem-bers of the class $(/cmmi10@10.95pt/hA; hD; xD=yD; xA=yA/cmr10@
+10.95pt/)$.
+ []
+
+[26] [27] [28] [29]) [30]
+Chapter 3.
+(./imageexample.tex
+
+Package amsmath Warning: Foreign command \over;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 7.
+
+[31
+
+] <sample.jpg, id=154, 574.145pt x 448.67625pt>
+File: sample.jpg Graphic file (type jpg)
+ <use sample.jpg> [32 <./sample.jpg>] <haar1d.jpg, id=158, 574.145pt x 448.6762
+5pt>
+File: haar1d.jpg Graphic file (type jpg)
+ <use haar1d.jpg>
+[33 <./haar1d.jpg>] <recoveredEven.jpg, id=162, 574.145pt x 448.67625pt>
+File: recoveredEven.jpg Graphic file (type jpg)
+
+<use recoveredEven.jpg> <recovered.jpg, id=163, 574.145pt x 448.67625pt>
+File: recovered.jpg Graphic file (type jpg)
+
+<use recovered.jpg> [34 <./recoveredEven.jpg>] [35 <./recovered.jpg>] [36]
+<rightDan.jpg, id=174, 722.7pt x 487.8225pt>
+File: rightDan.jpg Graphic file (type jpg)
+ <use rightDan.jpg>
+<revRecover.jpg, id=175, 722.7pt x 487.8225pt>
+File: revRecover.jpg Graphic file (type jpg)
+ <use revRecover.jpg>
+<revWavepic.jpg, id=176, 722.7pt x 487.8225pt>
+File: revWavepic.jpg Graphic file (type jpg)
+ <use revWavepic.jpg>
+<selfWavepic.jpg, id=177, 722.7pt x 487.8225pt>
+File: selfWavepic.jpg Graphic file (type jpg)
+ <use selfWavepic.jpg>
+<selfRecover.jpg, id=178, 722.7pt x 487.8225pt>
+File: selfRecover.jpg Graphic file (type jpg)
+ <use selfRecover.jpg> [37 <./rightDan.jpg>] <wavepic3R.jpg, id=182, 722.7pt x 
+487.8225pt>
+File: wavepic3R.jpg Graphic file (type jpg)
+ <use wavepic3R.jpg>
+<recoverHid.jpg, id=183, 722.7pt x 487.8225pt>
+File: recoverHid.jpg Graphic file (type jpg)
+ <use recoverHid.jpg> [38 <./revRecover.jpg>] [39 <./revWavepic.jpg>]
+<recover3R002T.jpg, id=190, 722.7pt x 487.8225pt>
+File: recover3R002T.jpg Graphic file (type jpg)
+ <use recover3R002T.jpg>
+<recover3R010T.jpg, id=191, 722.7pt x 487.8225pt>
+File: recover3R010T.jpg Graphic file (type jpg)
+ <use recover3R010T.jpg>
+<recover3R005T.jpg, id=192, 722.7pt x 487.8225pt>
+File: recover3R005T.jpg Graphic file (type jpg)
+ <use recover3R005T.jpg>
+<recover3R001.jpg, id=193, 722.7pt x 487.8225pt>
+File: recover3R001.jpg Graphic file (type jpg)
+ <use recover3R001.jpg>)
+[40 <./selfWavepic.jpg>] [41 <./selfRecover.jpg> <./wavepic3R.jpg>] [42 <./reco
+verHid.jpg> <./recover3R002T.jpg>] [43 <./recover3R010T.jpg> <./recover3R005T.j
+pg>] [44 <./recover3R001.jpg>]
+Chapter 4.
+(./haarmultiply.tex [45
+
+] [46] [47] [48] [49] [50] [51] [52] [53] [54] [55]
+[56] [57] [58]) [59]
+Chapter 5.
+(./results.tex [60
+
+] [61] [62] [63]
+<sandrapyrpackresults.jpg, id=270, 574.145pt x 448.67625pt>
+File: sandrapyrpackresults.jpg Graphic file (type jpg)
+
+<use sandrapyrpackresults.jpg>
+Overfull \hbox (36.13501pt too wide) in paragraph at lines 142--143
+[][] 
+ []
+
+<f16.jpg, id=271, 513.92pt x 513.92pt>
+File: f16.jpg Graphic file (type jpg)
+ <use f16.jpg>
+<f16resultsA.jpg, id=272, 574.145pt x 448.67625pt>
+File: f16resultsA.jpg Graphic file (type jpg)
+ <use f16resultsA.jpg>
+<fishingboat.jpg, id=273, 513.92pt x 513.92pt>
+File: fishingboat.jpg Graphic file (type jpg)
+ <use fishingboat.jpg>
+<fishingboatresultA.jpg, id=274, 574.145pt x 448.67625pt>
+File: fishingboatresultA.jpg Graphic file (type jpg)
+
+<use fishingboatresultA.jpg> <opera.jpg, id=275, 513.92pt x 513.92pt>
+File: opera.jpg Graphic file (type jpg)
+
+<use opera.jpg> <operaresultsA.jpg, id=276, 574.145pt x 448.67625pt>
+File: operaresultsA.jpg Graphic file (type jpg)
+
+<use operaresultsA.jpg> <pentagon.jpg, id=277, 770.88pt x 770.88pt>
+File: pentagon.jpg Graphic file (type jpg)
+
+<use pentagon.jpg> <pentagonresultsA.jpg, id=278, 574.145pt x 448.67625pt>
+File: pentagonresultsA.jpg Graphic file (type jpg)
+
+<use pentagonresultsA.jpg>
+
+LaTeX Warning: Citation `Pentagon' on page 64 undefined on input line 201.
+
+
+LaTeX Warning: Citation `Pentagon' on page 64 undefined on input line 201.
+
+<peppers.jpg, id=279, 513.92pt x 513.92pt>
+File: peppers.jpg Graphic file (type jpg)
+ <use peppers.jpg>
+<peppersresultsA.jpg, id=280, 574.145pt x 448.67625pt>
+File: peppersresultsA.jpg Graphic file (type jpg)
+
+<use peppersresultsA.jpg> <watchResultsA.jpg, id=281, 574.145pt x 448.67625pt>
+File: watchResultsA.jpg Graphic file (type jpg)
+
+<use watchResultsA.jpg> <watch.jpg, id=282, 770.88pt x 770.88pt>
+File: watch.jpg Graphic file (type jpg)
+
+<use watch.jpg> <watchResultsB.jpg, id=283, 574.145pt x 448.67625pt>
+File: watchResultsB.jpg Graphic file (type jpg)
+
+<use watchResultsB.jpg> <water.jpg, id=284, 770.88pt x 770.88pt>
+File: water.jpg Graphic file (type jpg)
+
+<use water.jpg> <waterResultsA.jpg, id=285, 574.145pt x 448.67625pt>
+File: waterResultsA.jpg Graphic file (type jpg)
+
+<use waterResultsA.jpg> <waterfall.jpg, id=286, 513.92pt x 513.92pt>
+File: waterfall.jpg Graphic file (type jpg)
+
+<use waterfall.jpg> <waterfallResultsA.jpg, id=287, 574.145pt x 448.67625pt>
+File: waterfallResultsA.jpg Graphic file (type jpg)
+
+<use waterfallResultsA.jpg>) [64] [65 <./sandrapyrpackresults.jpg>] [66 <./f16.
+jpg> <./f16resultsA.jpg>] [67 <./fishingboat.jpg> <./fishingboatresultA.jpg>]
+[68 <./opera.jpg> <./operaresultsA.jpg>] [69 <./pentagon.jpg> <./pentagonresult
+sA.jpg>] [70 <./peppers.jpg> <./peppersresultsA.jpg>] [71 <./watchResultsA.jpg>
+ <./watch.jpg>] [72 <./watchResultsB.jpg> <./water.jpg>] [73 <./waterResultsA.j
+pg>] [74 <./waterfall.jpg> <./waterfallResultsA.jpg>]
+Chapter 6.
+(./conclusion.tex) [75
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 96--97
+[]/cmr10@10.95pt/Gavin Ta-bor ``Wavelets - The Id-iots Guide'' Re-trieved March
+ 20, 2004
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 98--99
+[]/cmr10@10.95pt/Amara Graps ``In-tro-duc-tion to Wavelets'' Re-trieved March 2
+0, 2004 from
+ []
+
+[76
+
+]
+Missing character: There is no ^^ca in font cmr10!
+ [77] [78]
+Underfull \hbox (badness 10000) in paragraph at lines 147--148
+[]/cmr10@10.95pt/Eric W. Weis-stein. "Trans-la-tion." From MathWorld--A Wol-fra
+m Web Re-source.
+ []
+
+[79] (./wavelets.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 2492 strings out of 95314
+ 31433 string characters out of 1187311
+ 87453 words of memory out of 1531946
+ 5486 multiletter control sequences out of 10000+50000
+ 13272 words of font info for 49 fonts, out of 1000000 for 2000
+ 14 hyphenation exceptions out of 1000
+ 27i,8n,25p,811b,577s stack positions out of 5000i,500n,6000p,200000b,40000s
+ 341 PDF objects out of 300000
+ 0 named destinations out of 131072
+ 181 words of extra memory for PDF output out of 65536
+{/usr/local/teTeX/share/texmf.tetex/dvips/tetex/f7b6d320.enc}</usr/local/teTe
+X/share/texmf.tetex/fonts/type1/bluesky/cm/cmsl10.pfb>{/usr/local/teTeX/share/t
+exmf.tetex/dvips/tetex/aae443f0.enc}</usr/local/teTeX/share/texmf.tetex/fonts/t
+ype1/bluesky/cm/cmmi6.pfb></usr/local/teTeX/share/texmf.tetex/fonts/type1/blues
+ky/cm/cmmi12.pfb></usr/local/teTeX/share/texmf.tetex/fonts/type1/bluesky/cm/cmr
+6.pfb></usr/local/teTeX/share/texmf.tetex/fonts/type1/bluesky/cm/cmex10.pfb>{/u
+sr/local/teTeX/share/texmf.tetex/dvips/tetex/bbad153f.enc}</usr/local/teTeX/sha
+re/texmf.tetex/fonts/type1/bluesky/cm/cmsy8.pfb></usr/local/teTeX/share/texmf.t
+etex/fonts/type1/bluesky/symbols/msbm10.pfb>{/usr/local/teTeX/share/texmf.tetex
+/dvips/tetex/74afc74c.enc}</usr/local/teTeX/share/texmf.tetex/fonts/type1/blues
+ky/cm/cmti10.pfb></usr/local/teTeX/share/texmf.tetex/fonts/type1/bluesky/cm/cmr
+8.pfb></usr/local/teTeX/share/texmf.tetex/fonts/type1/bluesky/cm/cmsy10.pfb></u
+sr/local/teTeX/share/texmf.tetex/fonts/type1/bluesky/cm/cmmi8.pfb></usr/local/t
+eTeX/share/texmf.tetex/fonts/type1/bluesky/cm/cmmi10.pfb></usr/local/teTeX/shar
+e/texmf.tetex/fonts/type1/bluesky/cm/cmr10.pfb></usr/local/teTeX/share/texmf.te
+tex/fonts/type1/bluesky/cm/cmbx10.pfb></usr/local/teTeX/share/texmf.tetex/fonts
+/type1/bluesky/cm/cmbx12.pfb></usr/local/teTeX/share/texmf.tetex/fonts/type1/bl
+uesky/cm/cmr12.pfb></usr/local/teTeX/share/texmf.tetex/fonts/type1/bluesky/cm/c
+mr17.pfb>
+Output written on wavelets.pdf (80 pages, 4129050 bytes).

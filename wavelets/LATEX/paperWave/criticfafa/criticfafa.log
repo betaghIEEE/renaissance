@@ -1,0 +1,266 @@
+This is pdfTeX, Version 3.14159-1.10a (Web2C 7.4.5) (format=pdflatex 2003.5.8)  27 MAY 2003 15:06
+\write18 enabled.
+**criticfafa.tex
+(./criticfafa.tex{/usr/local/teTeX/share/texmf.local/pdftex/config/pdftex.cfg}
+LaTeX2e <2001/06/01>
+Babel <v3.7h> and hyphenation patterns for american, french, german, ngerman, g
+reek, latin, nohyphenation, loaded.
+(/usr/local/teTeX/share/texmf/tex/latex/base/book.cls
+Document Class: book 2001/04/21 v1.4e Standard LaTeX document class
+(/usr/local/teTeX/share/texmf/tex/latex/base/bk11.clo
+File: bk11.clo 2001/04/21 v1.4e Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/teTeX/share/texmf/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/teTeX/share/texmf/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/teTeX/share/texmf/tex/latex/graphics/graphics.sty
+Package: graphics 2001/07/07 v1.0n Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/teTeX/share/texmf/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/teTeX/share/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2001/08/31 v1.1 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 80.
+
+(/usr/local/teTeX/share/texmf/tex/latex/graphics/pdftex.def
+File: pdftex.def 2002/06/19 v0.03k graphics/color for pdftex
+\Gread@gobject=\count88
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/local/teTeX/share/texmf/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/teTeX/share/texmf/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/local/teTeX/share/texmf/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks15
+\ex@=\dimen105
+))
+(/usr/local/teTeX/share/texmf/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen106
+)
+(/usr/local/teTeX/share/texmf/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count89
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count90
+\leftroot@=\count91
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count92
+\DOTSCASE@=\count93
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen107
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+\macc@depth=\count94
+\c@MaxMatrixCols=\count95
+\dotsspace@=\muskip10
+\c@parentequation=\count96
+\dspbrk@lvl=\count97
+\tag@help=\toks16
+\row@=\count98
+\column@=\count99
+\maxfields@=\count100
+\andhelp@=\toks17
+\eqnshift@=\dimen108
+\alignsep@=\dimen109
+\tagshift@=\dimen110
+\tagwidth@=\dimen111
+\totwidth@=\dimen112
+\lineht@=\dimen113
+\@envbody=\toks18
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks19
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+)
+(/usr/local/teTeX/share/texmf/tex/latex/misc/doublespace.sty)
+(/usr/local/teTeX/share/texmf/tex/latex/oberdiek/epstopdf.sty
+Package: epstopdf 2001/02/04 v1.1 Conversion with epstopdf on the fly (HO)
+)
+\c@theorem=\count101
+\c@definition=\count102
+
+(./criticfafa.aux)
+\openout1 = `criticfafa.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+ (/usr/local/teTeX/share/texmf/tex/context/base/supp-pdf.tex
+(/usr/local/teTeX/share/texmf/tex/context/base/supp-mis.tex
+loading : Context Support Macros / Missing
+\protectiondepth=\count103
+\scratchcounter=\count104
+\scratchtoks=\toks20
+\scratchdimen=\dimen114
+\scratchskip=\skip46
+\scratchmuskip=\muskip11
+\scratchbox=\box28
+\scratchread=\read1
+\scratchwrite=\write3
+\zeropoint=\dimen115
+\minusone=\count105
+\thousandpoint=\dimen116
+\emptytoks=\toks21
+\nextbox=\box29
+\nextdepth=\dimen117
+\everyline=\toks22
+\!!counta=\count106
+\!!countb=\count107
+\recursecounter=\count108
+)
+loading : Context Support Macros / PDF
+\nofMPsegments=\count109
+\nofMParguments=\count110
+\everyMPtoPDFconversion=\toks23
+) [1
+
+
+{/usr/local/teTeX/share/texmf.local/dvips/config/pdftex.map}] [2
+
+]
+(./criticfafa.toc)
+\tf@toc=\write4
+\openout4 = `criticfafa.toc'.
+
+ [3] [4
+
+]
+Chapter 1.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 41.
+(/usr/local/teTeX/share/texmf/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 41.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5]
+Underfull \vbox (badness 1237) has occurred while \output is active []
+
+ [6]
+Underfull \vbox (badness 2197) has occurred while \output is active []
+
+ [7]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8]
+[9] [10
+
+]
+Chapter 2.
+[11] [12] [13] [14
+
+]
+Chapter 3.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [15]
+[16]
+Chapter 4.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [17
+
+]
+Overfull \hbox (45.68005pt too wide) in paragraph at lines 217--219
+[]/cmr10@10.95pt/Claim: There is an in-verse ma-trix map-ping $/cmmi10@10.95pt/
+R[] /cmr10@10.95pt/: /cmmi10@10.95pt/W[] /cmsy10@10.95pt/! /cmmi10@10.95pt/L[]/
+cmr10@10.95pt/(/cmmi10@10.95pt/R/cmr10@10.95pt/)$ de-fined by: $/cmmi10@10.95pt
+/R[]^^U/cmr10@10.95pt/(/cmmi10@10.95pt/t/cmr10@10.95pt/) = [] [](/cmmi10@10.95p
+t/p/cmr10@10.95pt/)/cmmi10@10.95pt/ []/cmr10@10.95pt/(/cmmi10@10.95pt/t/cmr10@1
+0.95pt/)$. 
+ []
+
+[18] [19] [20
+
+]
+Chapter 5.
+[21] [22] [23]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [24]
+Overfull \hbox (110.5103pt too wide) detected at line 438
+/cmmi10@10.95pt/W[]/cmr10@10.95pt/(/cmmi10@10.95pt/W/cmr10@10.95pt/(/cmmi10@10.
+95pt/A/cmr10@10.95pt/) [] /cmmi10@10.95pt/W/cmr10@10.95pt/(/cmmi10@10.95pt/B/cm
+r10@10.95pt/)) = [] []
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [25]
+[26] (./criticfafa.aux) ) 
+Here is how much of TeX's memory you used:
+ 1592 strings out of 95431
+ 19180 string characters out of 1189208
+ 72055 words of memory out of 1000001
+ 4607 multiletter control sequences out of 10000+50000
+ 13484 words of font info for 48 fonts, out of 500000 for 1000
+ 14 hyphenation exceptions out of 1000
+ 27i,7n,20p,753b,286s stack positions out of 1500i,500n,5000p,200000b,5000s
+ 131 PDF objects out of 300000
+ 0 named destinations out of 131072
+ 0 words of extra memory for PDF output out of 65536
+{/usr/local/teTeX/share/texmf/dvips/tetex/bbad153f.enc
+}</usr/local/teTeX/share/texmf/fonts/type1/bluesky/cm/cmsy6.pfb></usr/local/teT
+eX/share/texmf/fonts/type1/bluesky/cm/cmsy8.pfb>{/usr/local/teTeX/share/texmf/d
+vips/tetex/f7b6d320.enc}</usr/local/teTeX/share/texmf/fonts/type1/bluesky/cm/cm
+r6.pfb>{/usr/local/teTeX/share/texmf/dvips/tetex/aae443f0.enc}</usr/local/teTeX
+/share/texmf/fonts/type1/bluesky/cm/cmmi6.pfb></usr/local/teTeX/share/texmf/fon
+ts/type1/bluesky/cm/cmex10.pfb></usr/local/teTeX/share/texmf/fonts/type1/bluesk
+y/cm/cmr8.pfb></usr/local/teTeX/share/texmf/fonts/type1/bluesky/cm/cmmi8.pfb></
+usr/local/teTeX/share/texmf/fonts/type1/bluesky/cm/cmsy10.pfb></usr/local/teTeX
+/share/texmf/fonts/type1/bluesky/cm/cmmi12.pfb></usr/local/teTeX/share/texmf/fo
+nts/type1/bluesky/cm/cmsl10.pfb></usr/local/teTeX/share/texmf/fonts/type1/blues
+ky/cm/cmmi10.pfb></usr/local/teTeX/share/texmf/fonts/type1/bluesky/cm/cmbx10.pf
+b></usr/local/teTeX/share/texmf/fonts/type1/bluesky/cm/cmbx12.pfb></usr/local/t
+eTeX/share/texmf/fonts/type1/bluesky/cm/cmr10.pfb></usr/local/teTeX/share/texmf
+/fonts/type1/bluesky/cm/cmr12.pfb></usr/local/teTeX/share/texmf/fonts/type1/blu
+esky/cm/cmr17.pfb>
+Output written on criticfafa.pdf (26 pages, 145110 bytes).

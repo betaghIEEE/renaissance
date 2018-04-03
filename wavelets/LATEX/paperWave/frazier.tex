@@ -1,0 +1,116 @@
+\documentclass[11pt]{article}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `basename #1 .tif`.png}
+
+\textwidth = 6.5 in
+\textheight = 9 in
+\oddsidemargin = 0.0 in
+\evensidemargin = 0.0 in
+\topmargin = 0.0 in
+\headheight = 0.0 in
+\headsep = 0.0 in
+\parskip = 0.2in
+\parindent = 0.0in
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}{Definition}
+
+\title{Critic on Galerkin-Wavelet Solution to Strum-Louisville}
+\author{Daniel Beatty}
+\begin{document}
+\maketitle
+
+%\newtheorem{theorem}{Theorem}
+%\newtheorem{lemma}{Lemma}
+Example ODE Strum-Louisville 
+
+$Lu(t) = -\frac{d}{dt} (a(t) \frac{du}{dt} ) b(t) u(t) = f(t) $  $\forall t \in [0,1]$
+
+Dirichlet Conditions of $u(0)=u(1) = 0$
+
+Properties:
+\begin{enumerate}\item ``a'' is a continuous species
+\item L may be variable coefficient differential operator.
+\item L is uniformly elliptic 
+\item Finite Constant $C_1$ , $C_2$ and $C_3$ exists such that $0\le C_1 \le a(t) \le C_2$ and $0 \le b(t) \le C_3$.\end{enumerate}
+
+For Galerkin method we suppose that $\{v_j\}_j$ is a complete orthonormal system for $L^2[(0,1)]$ and that every $v_j$ is $C^2$ on $[(0,1)]$ and satisfies $v_j(0)= v_j (1) = 0$
+\begin{itemize}\item There is a finite set $\Lambda$ of indices j
+\item Subspace $S=$ span $\{v_j: j\in \Lambda \} $\end{itemize}
+
+The goal is to find the approximation to the solution u of $Lu(t)$ in the form $u_s = \sum _{k\in \Lambda} x_k v_k \in S$ such that $x_k$ is a scalar and is chosen such that $u_s$ behaves as a true solution on S.  
+
+\section {Galerkin Method}
+Definition:  The Galerkin method supposes that a complete orthonormal system $\{v_j\}_j$ is defined on $L^2([0,1])$ and every $v_j$ is $C^2$ on [0,1].  The boundary conditions of the $v_j$ is typically defined as well.  The solution approximation is then defined on the span of this orthonormal system.  Example:
+
+$u_s = \sum_{k\in \Lambda} (x_k v_k )\in S$ such that S is a span of $v_j : j\in \Lambda$, and $x_j$ is a scalar.  The catch is that $u_s$ should behave as true solution a system of linear equations, i.e. a vector itself.  The linear equations are is the implicit set of equations for solving a PDE or ODE.  
+
+Frazier takes this one step further to show a parallel from Galerkin to a conventional implicit form.  First he shows:
+\begin{itemize}\item $\langle L u_s, v_j \rangle = \langle f, v_j \rangle$ $\forall j\in \Lambda$ such that $\langle f, g \rangle = \int ^1 _0 f(t) \bar{g(t)} dt $ 
+\item Furthermore: $\langle L (\sum_{k\in \Lambda} x_k v_k), v_j \rangle = \langle f, v_j \rangle$ $\forall j\in \Lambda$ leading to
+\item $\sum_{k\in \Lambda} \langle L v_k , v_j \rangle x_k = \langle f, v_j \rangle$ $\forall j\in \Lambda$ \end{itemize}
+
+The final connection is that each element of a matrix A defined $A=(a_{j,k} )_{j,k \in \Lambda}$ is a scalar defined by  $\langle Lv_k , v_j \rangle$.  This yields the following equality
+
+$(a_{j,k} )_{j,k \in \Lambda} = \langle Lv_k , v_j \rangle$
+\begin{itemize}\item x is a vector $(x_k)_{k\in \Lambda}$
+\item y is a vector $(y_k)_{k\in \Lambda}$
+\item A is a matrix with rows and columns indexed by $\Lambda$
+\item $a_{j,k}$ is an individual element of A
+\end{itemize}
+
+With Galerkin, for all subsets in $\Lambda$ we obtain an approximation $u_s \in S \to u$.  This is done by solving $Ax=y$ and using x to determine $u_s$.  One of the tricks is finding the the $v_j$'s and $x_j$'s such that the equations are satisfied.  
+
+Wavelets are chosen as a basis to ensure that the condition number is near unity and the matrix A becomes sparse.  
+
+\begin{enumerate}\item Frazier modified wavelet system for $L^2(R)$ which is also complete orthonormal system $\{\psi_{j,k}\}$ such that $(j,k)\in \Gamma$ and $\Gamma$ is a certain subset of $Z\times Z$ that we do not specify.  
+\item Scale of $\psi_{j,k}$ is $2^{-j}$, and concentration is at or near $2^{-j}k$ and 0 elsewhere.
+\item Near boundary points are substantially modified.  $\forall (j,k) \in \Lambda$, $\psi_{j,k} \in C^2$ and satisfies: 
+\begin{itemize}\item Boundary conditions:  $\psi _{j,k} (0) = \psi _{j,k} (1) = 0$
+\item Key Estimate $g=\sum_{jk} c_{jk} \psi _{jk} $ 
+\item Norm Equivalence: $C_4 \sum _{ik} 2^{2j} |c_{j,k} | ^2 \le \int ^1 _ 0 |g'(t)| ^2 dt \le C_5 \sum _{jk} 2^2 |c_ij |^2 $\end{itemize}
+\item Standard Scale and Translation Rule $\psi_{j,k} (t) = 2^{j/2} \psi (2^j t - k) $
+\item Chain Rule Applies to the Standard Scale and Translation rule: $\psi' _ {j,k} (t) = 2^j 2^{j/2} \psi' (2^j -k ) = 2^j (\psi ')_{j,k}$ 
+\item Modest convincing of derivative identity of $\psi=\psi'$ and Norm Equivalence.   
+\item Equivalent wavelet form 
+\begin{itemize}\item $u_s = \sum _{k\in \Lambda } x_k v_k \in S$
+\item $u_s = \sum _{(j,k)\in \Lambda } x_k \psi_{j,k} \in S$
+\item $\sum _{(j,k)\in \Lambda } \langle L\psi_{j,k} , \psi _{l,m} \rangle = \langle f , \psi _{l,m} \rangle $  $\forall (l,m) \in \Lambda$
+\item $A=[a_{l,m;j,k} ] _{(l,m)(j,k) \in \Lambda} =  \langle L\psi_{j,k} , \psi _{l,m} \rangle $\end{itemize}\end{enumerate}
+
+
+%\begin{lemma}
+Let L be uniformly elliptic Strum-Liouville operator (i.e. an operator as defined in equation ``a'' satisfying relation ``b''.
+Suppose $g\in L^2([0,1])$ is $C^2$ on $[0,1]$ and satisfies $g(0)=g(1)=0$, then $C_1 \int ^1_0 |g'(t)|^2 df \le \langle Lg,g \rangle \le (C_2 + C_3) \int ^1 _0 |g'(t)|^2 dt$
+where  $C_1$ , $C_2$ and $C_3$ are the constants in the relation ``b''.
+%\end {lemma}
+
+``a'' $Lu(t) = \frac{d}{dt} (a(t) \frac{df}{dt} ) + b(t)u(t) = f(t) $ s.t. $u(0)=u(1) =0$
+
+``b'' $0 \le C_1 \le a(t) \le C_2 $ and $0 \le b(t) \le C_2 $
+
+``c''  $M=D^{-1} A D^{-1}$  such that $D=[d_{lm,j,k} ] _{(l,m)(j,k)\in \Delta} $ and 
+
+$d_{l,m,j,k} = $
+
+``d'' $C_4 \sum _{ik} 2^{2j} |c_{j,k} | ^2 \le \int ^1 _ 0 |g'(t)| ^2 dt \le C_5 \sum _{jk} 2^2 |c_ij |^2 $
+
+%\begin {theorem}
+Let L be a uniformly elliptic Strum-Liouville operator.  Let $\{\psi _{j,k} \} _{(j,k)\in \Gamma}$ be a complete orthonormal system for $L^2([0,1])$ such that each $\psi_{j,k}$ is $C^2$, satisfies $\psi _{j,k} (0) = \psi _{j,k} (1) = 0$, and such that the norm equivalence holds.  Let $\Lambda$ be a finte subset of $\Gamma$.  Let M be the matrix defined ``c''.  Then the condition number of M satisfies:
+
+$C_{\#} (M) \le \frac{(C_2 + C_3 )C_5} {C_1 C_4} $
+
+for any finite-set $\Lambda$ , where $C_1$ , $C_2$, and $C_3$ are the constants in relation ``b'' and $C_4$ and $C_5$ are the constants in relation ``d''.   
+%\end {theorem}
+
+\begin{thebibliography}{99}
+
+\bibitem {frazier} Michael W. Frazier \textsl {An Introduction to Wavelets to Wavelets Through Linear Algebra} copyright 1999 by the Springer-Verlag  New York, Inc
+
+
+\end {thebibliography}
+
+ \end{document}

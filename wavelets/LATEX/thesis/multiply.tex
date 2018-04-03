@@ -1,0 +1,222 @@
+
+\section {Wavelet Matrix Multiplication}
+
+One of the key points for wavelet matrix multiplication is the proof that $W(A) \times W(B) = W(A\times B)$  If this is the case, then it is obvious that $W(A) \times W(B) = W(C) = W(A\times B = C)$.  So far the proof is still weak.  The reason is that an example proof is useful for proving something to not be the case, rather than being the case.   However, a simple example does show some intuitive steps that would be necessary for a proof.  
+
+\subsection{A $2\times 2$ example}
+\subsubsection{Conventional Multiplication}
+Conventional multiplication is spelled out as
+
+$c_{i,j} = \sum\limits_k a_{i,k} b_{k,j}$
+
+For a $2 \times 2$ matrix, there is the following:
+\[\left(\begin{array}{ccc}  a_{1,1}&  a_{1,2} &   \\ a_{2,1} &  a_{2,2} &   \end{array}\right)
+\left(\begin{array}{ccc}  b_{1,1}&  b_{1,2} &   \\ b_{2,1} &  b_{2,2} &   \end{array}\right) =
+\left(\begin{array}{ccc}  a_{1,1} b_{1,1} + a_{1,2} b_{2,1}&  a_{1,1}b_{1,2} + a_{1,2}  b_{2,2} &   \\ a_{2,1} b_{1,1} + a_{2,2} b_{2,1} &  a_{2,1} b_{1,2} + a_{2,2} b_{2,2} &   \end{array}\right)\]
+
+\subsubsection{Wavelet Transform of two $2\times$ 2 matrices}
+
+For a wavelet transform on both matrix A and B, the results are:
+
+\[
+W(A) = \frac{1}{2} \left(\begin{array}{ccc}  a_{1,1} + a_{2,1} + a_{1,2} + a_{2,2} &  a_{1,1} + a_{2,1} - a_{1,2} - a_{2,2} &   \\ a_{1,1} - a_{2,1} + a_{1,2} - a_{2,2} &  a_{1,1} - a_{2,1} - a_{1,2} + a_{2,2} &   \end{array}\right)
+\]
+
+\[
+W(B) = \frac{1}{2} \left(\begin{array}{ccc}  b_{1,1} + b_{2,1} + b_{1,2} + b_{2,2} &  b_{1,1} + b_{2,1} - b_{1,2} - b_{2,2} &   \\ b_{1,1} - b_{2,1} + b_{1,2} - b_{2,2} &  b_{1,1} - b_{2,1} - b_{1,2} + b_{2,2} &   \end{array}\right)
+\]
+
+\subsubsection{Product of A and B in wavelet space}
+The conventional product of A and B can be transformed into wavelet space.  The results of this matrix transform is as follows:
+
+\[
+W(A\times B) = W
+\left(\begin{array}{ccc}  a_{1,1} b_{1,1} + a_{1,2} b_{2,1}&  a_{1,1}b_{1,2} + a_{1,2}  b_{2,2} &   \\ a_{2,1} b_{1,1} + a_{2,2} b_{2,1} &  a_{2,1} b_{1,2} + a_{2,2} b_{2,2} &   \end{array}\right) = \frac{1}{2}
+\left(
+\begin{array}{ccc}  (a_{1,1} b_{1,1} + a_{1,2} b_{2,1} + a_{1,1}b_{1,2} + a_{1,2}  b_{2,2}) + (a_{2,1} b_{1,1} + a_{2,2} b_{2,1} + a_{2,1} b_{1,2} + a_{2,2} b_{2,2}) &
+  (a_{1,1} b_{1,1} + a_{1,2} b_{2,1}  - a_{1,1}b_{1,2} - a_{1,2}  b_{2,2}) +  (a_{2,1} b_{1,1} + a_{2,2} b_{2,1} - a_{2,1} b_{1,2} - a_{2,2} b_{2,2} ) &   \\ (a_{1,1} b_{1,1} + a_{1,2} b_{2,1} + a_{1,1}b_{1,2} + a_{1,2}  b_{2,2}) - (a_{2,1} b_{1,1} + a_{2,2} b_{2,1} + a_{2,1} b_{1,2} + a_{2,2} b_{2,2})&
+ (a_{1,1} b_{1,1} + a_{1,2} b_{2,1}  - a_{1,1}b_{1,2} - a_{1,2}  b_{2,2}) - (a_{2,1} b_{1,1} + a_{2,2} b_{2,1} - a_{2,1} b_{1,2} - a_{2,2} b_{2,2} ) &   \end{array}\right) 
+ \]
+ 
+ \[ W(A \times B) = 
+ = \frac{1}{2}
+\left(
+\begin{array}{ccc}  (a_{1,1} b_{1,1} + a_{1,2} b_{2,1} + a_{1,1}b_{1,2} + a_{1,2}  b_{2,2} + a_{2,1} b_{1,1} + a_{2,2} b_{2,1} + a_{2,1} b_{1,2} + a_{2,2} b_{2,2}) &
+  (a_{1,1} b_{1,1} + a_{1,2} b_{2,1}  - a_{1,1}b_{1,2} - a_{1,2}  b_{2,2} +  a_{2,1} b_{1,1} + a_{2,2} b_{2,1} - a_{2,1} b_{1,2} - a_{2,2} b_{2,2} ) &   \\ (a_{1,1} b_{1,1} + a_{1,2} b_{2,1} + a_{1,1}b_{1,2} + a_{1,2}  b_{2,2} - a_{2,1} b_{1,1} - a_{2,2} b_{2,1} - a_{2,1} b_{1,2} - a_{2,2} b_{2,2})&
+ (a_{1,1} b_{1,1} + a_{1,2} b_{2,1}  - a_{1,1}b_{1,2} - a_{1,2}  b_{2,2} -a_{2,1} b_{1,1} - a_{2,2} b_{2,1} + a_{2,1} b_{1,2} + a_{2,2} b_{2,2} ) &   \end{array}\right) 
+\]
+
+\subsubsection{What is $W(A) \times W(B)$}
+
+Straight forward multiplication of $W(A) \times W(B)$ works out as follows:
+
+\[
+W(A) \times W(B) = 
+\frac{1}{2} \left(\begin{array}{ccc}  a_{1,1} + a_{2,1} + a_{1,2} + a_{2,2} &  a_{1,1} + a_{2,1} - a_{1,2} - a_{2,2} &   \\ a_{1,1} - a_{2,1} + a_{1,2} - a_{2,2} &  a_{1,1} - a_{2,1} - a_{1,2} + a_{2,2} &   \end{array}\right)
+\times
+\frac{1}{2} \left(\begin{array}{ccc}  b_{1,1} + b_{2,1} + b_{1,2} + b_{2,2} &  b_{1,1} + b_{2,1} - b_{1,2} - b_{2,2} &   \\ b_{1,1} - b_{2,1} + b_{1,2} - b_{2,2} &  b_{1,1} - b_{2,1} - b_{1,2} + b_{2,2} &   \end{array}\right) = 
+\frac{1}{4} \left(\begin{array}{ccc}  (a_{1,1} + a_{2,1} + a_{1,2} + a_{2,2})( b_{1,1} + b_{2,1} + b_{1,2} + b_{2,2}) + ( a_{1,1} + a_{2,1} - a_{1,2} - a_{2,2})(b_{1,1} - b_{2,1} + b_{1,2} - b_{2,2}) & 
+
+( a_{1,1} + a_{2,1} + a_{1,2} + a_{2,2}) ( b_{1,1} + b_{2,1} - b_{1,2} - b_{2,2}) + (a_{1,1} + a_{2,1} - a_{1,2} - a_{2,2}) ( b_{1,1} - b_{2,1} - b_{1,2} + b_{2,2})&   \\
+ 
+ ( a_{1,1} - a_{2,1} + a_{1,2} - a_{2,2})(b_{1,1} + b_{2,1} + b_{1,2} + b_{2,2}) +  ( a_{1,1} - a_{2,1} - a_{1,2} + a_{2,2} ) (b_{1,1} - b_{2,1} + b_{1,2} - b_{2,2}) & 
+ 
+( a_{1,1} - a_{2,1} + a_{1,2} - a_{2,2}) (b_{1,1} + b_{2,1} - b_{1,2} - b_{2,2})+( a_{1,1} - a_{2,1} - a_{1,2} + a_{2,2} )(b_{1,1} - b_{2,1} - b_{1,2} + b_{2,2})&   \end{array}\right)
+\]
+
+Of course this is better simplified.  
+
+\[ \frac{1}{2}\left(\begin{array}{ccc} (a_{1,1} b_{1,1} + a_{2,1} b_{1,1} + a_{1,2} b_{2,1} + a_{2,2} b_{2,1} +a_{1,1} b_{1,2}  a_{2,1} b_{1,2} + a_{1,2} b_{2,2} + a_{2,2} b_{2,2} ) &
+(a_{1,1} b_{1,1} + a_{2,1} b_{1,1} +a_{1,2}b_{2,1} + a_{2,2} b_{2,1} -a_{1,1}b_{1,2} - a_{2,1 } b_{1,2} - a_{1,2} b_{2,2} - a_{2,2} b_{2,2}  )   &   \\(a_{1,1} b_{1,1} - a_{2,1} b_{1,1} + a_{1,2} b_{2,1} -a_{2,2} b_{2,1} + a_{1,1} b_{1,2} - a_{2,1} b_{1,2} + a_{1,2} b_{2,2} - a_{2,2} b_{2,2} )  & 
+ (a_{1,1} b_{1,1} - a_{2,1} b_{1,1} + a_{1,2} b_{2,1} - a_{2,2} b_{2,1} - a_{1,1} b_{1,2} + a_{2,1} b_{1,2} - a_{1,2} b_{2,2} + a_{2,2} b_{2,2}) &   \end{array}\right)\]
+ 
+ Compared with $W(C)$ computed the conventional way:
+ 
+ \[
+ W(C) = \frac{1}{2}
+\left(
+\begin{array}{ccc}  (a_{1,1} b_{1,1} + a_{1,2} b_{2,1} + a_{1,1}b_{1,2} + a_{1,2}  b_{2,2} + a_{2,1} b_{1,1} + a_{2,2} b_{2,1} + a_{2,1} b_{1,2} + a_{2,2} b_{2,2}) &
+  (a_{1,1} b_{1,1} + a_{1,2} b_{2,1}  - a_{1,1}b_{1,2} - a_{1,2}  b_{2,2} +  a_{2,1} b_{1,1} + a_{2,2} b_{2,1} - a_{2,1} b_{1,2} - a_{2,2} b_{2,2} ) &   \\ (a_{1,1} b_{1,1} + a_{1,2} b_{2,1} + a_{1,1}b_{1,2} + a_{1,2}  b_{2,2} - a_{2,1} b_{1,1} - a_{2,2} b_{2,1} - a_{2,1} b_{1,2} - a_{2,2} b_{2,2})&
+ (a_{1,1} b_{1,1} + a_{1,2} b_{2,1}  - a_{1,1}b_{1,2} - a_{1,2}  b_{2,2} -a_{2,1} b_{1,1} - a_{2,2} b_{2,1} + a_{2,1} b_{1,2} + a_{2,2} b_{2,2} ) &   \end{array}\right) 
+ \]
+
+Notice that $W(A) \times W(B) = W(A \times B) $,  in the case of $2 \times 2$ matrices.
+
+\subsection { Proof of Wavelet Matrix Multiplication}
+A reminder from Dr. Sinzinger, wavelets and their inverses are linear operators.  As he correctly reminded me any linear operator has the following properties:
+
+\begin{enumerate}\item $L(AB) = L(A) \dot L(B)$
+\item $\psi ^{-1}$ is a linear operator
+\item $\psi ^{-1} (\psi (A) \dot \psi (B)) = \psi ^ {-1} (\psi (A)) \dot \psi ^{-1} (\psi(B)) $
+\item $\psi ^{-1}(\psi(A)) = A$
+\item $\psi ^{-1}(\psi(B)) = B$
+\item Therefore:  $AB = \psi^{-1} (\psi(A) \dot \psi(B))$  
+\end{enumerate}
+
+Thus this is sufficient proof that wavelet matrix multiplication is sound.  
+
+\section{Chain Multiplication Structure}
+Recall the chain structure.  This structure can be referenced from most introductory algorithm books.  The big idea is to be able to locate specific items quickly by some key which reduces the search to a family of keys that close together by a hashing scheme.  In the case of matrix multiplication, no hash key is needed.  The row or column identifier is sufficient for this.  Of course a description of this scheme is in order.  
+
+Each chain is organized as a one-dimensional array.  Each array has an array list, called a link, which contains the actual data, and array list count showing how many items are in each array.  A next and previous value in this case would be superfluous since columns and rows are arranges in lexicographical order.  The array list contains the following items:
+\begin{itemize}\item key
+\item item value (row value/ column value)
+\item previous key
+\item next key \end{itemize}
+
+In the case of a column chain, the keys are row identifiers.   In the case of a row chain, the keys are column identifier.  This structure is similar to a matrix and can be represented by a matrix.  The essential thing for the chain is the arrangement of the array lists.  Zero values are not allowed, and thus order and index keys must be maintained.  
+
+What has this to do with sparse matrix multiplication?  The left matrix is transformed into a row chain and the right matrix is transformed into a column chain.  Each value of the result matrix is simply a multiplication of the row vectors in the left matrix by the column vectors in the right matrix.  With the chain structure, it simply row links times the column links.  Only elements with matching keys are allowed to be multiplied together.  The rest are assumed to be zero, and thus no action is taken.  The sum of the multiplies is the result.  The multiplication procedure is as follows:
+
+\begin{enumerate}\item Chain Multiply
+\begin{enumerate}\item Arguments: left matrix chain (A) and right matrix chain (B)
+\item Results: Result matrix\end{enumerate}
+\begin{itemize}\item $\forall i \in R.row$
+\begin{itemize}\item $\forall j \in R.col$
+\begin{itemize}\item $R_{i,j} = CM( A[i], B[j]) $  
+\item ---- Note that CM is the chain multiply procedure.  \end{itemize}\end{itemize}\end{itemize}
+
+\item Chain Multiply Element
+\begin{enumerate}	\item Arguments:  row link (r) and column link (c)
+	\item Output:  Double result: total	\end{enumerate}
+	\begin{itemize}		\item rlimit = r.size;
+		\item climit = c.size;
+		\item k = l = 0;
+		\item jlow = 0;
+		\item total = 0.0
+		\item BnotExhausted = true
+		\item while both ( k < rlimit) and (BnotExhausted)
+		\begin{itemize}
+			\item $\forall l \in [jlow, climit)$ if ( $A^c_i . getkey(k) \equiv B^c_j getkey(l)$) then lmatch = l
+			\item if ( $l \equiv climit$) BnotExhausted = false
+			\item otherwise
+				\begin{itemize}					\item temp += $A^c_i[k] * B^c_i[lmatch]$
+					\item jlow = lmatch				\end{itemize}		\end{itemize}	\end{itemize}\end{enumerate}
+					
+For the Matrix Chain Multiply the complexity is $O(N^2)$.  For the chain multiply, the complexity is $O(M)$ where M is the larger length of the two links.  Thus total complexity is $O(N^2 M)$ since M's largest size is N.  This a general and simple algorithm for sparse matrix multiplication of matrix chains.  Of course the chore of loading the matrix chains is $O(N^2)$ per matrix.  Thus total cost is on the order of $O(3N^2 M)$.  So long as M is significantly less than N ( on the order of a $\frac{1}{3}$), then the wavelet matrix multiplication has a reasonable advantage.  
+
+\section{Practical Implementation}
+
+There are few questions about the practical implementation that must be answered:
+\begin{enumerate}\item Are the matrices square matrices, and same size?
+\item If not, are the dimensions suitable for multiplication?
+\item If so, what is the maximum resolution for each matrix?  The lesser maximum is the limit for both.
+\item Is the wavelet transform performed on each matrix the same?\end{enumerate}
+
+A yes answer to the first matrix, allows for an relatively easy transform, and matrix multiply.  If the matrices are not square, then practical problems exist.  If the wavelet transform is the same on each, then the linear proof is sound.  However, if they are not then the proof is bogus and the multiplication is too.  
+
+The general wavelet based matrix multiply is as follows:
+\begin{enumerate}\item Arguments:  
+\begin{itemize}\item A :  a $m \times p$ matrix
+\item B: a $p \times n$ matrix\end{itemize}
+\item Results:  C : a $m \times n$ matrix
+\item Procedure:
+\begin{itemize}\item $ A \stackrel{\psi}{\to} \alpha$
+\item $ B \stackrel{\psi}{\to} \beta$
+\item $ \alpha \stackrel {Chain Row}{\to} \alpha ^c$
+\item $ \beta \stackrel {Chain Column}{\to} \beta ^c$
+\item Chain Multiply ($\alpha ^c , \beta ^c$) $\to C$ \end{itemize}\end{enumerate}\subsection{Chain Row and Chain Column Setup}Setting up the the chain-link structure for row or column orientation is relatively simple.  Each one requires proper addressing of the hooks.  The procedures are as follows:
+
+Row Chain-Link Setup
+\begin{itemize}\item $\forall i  \in \alpha .rows$
+\begin{itemize}\item $\forall j \in \alpha . columns$
+\begin{itemize}\item if ( $\alpha [i][j] \approx 0 $)
+$a^c.hook_i . addlink(j,\alpha_{i,j} ) $\end{itemize}\end{itemize}\end{itemize}
+
+Column Chain Link Setup
+\begin{itemize}\item $\forall i  \in \alpha .rows$
+\begin{itemize}\item $\forall j \in \alpha . columns$
+\begin{itemize}\item if ( $\alpha [i][j] \approx 0 $)
+$a^c.hook_i . addlink(j,\alpha_{i,j} ) $\end{itemize}\end{itemize}\end{itemize}
+
+One of the big questions is how to optimize wavelet packets for multiplication applications.  A straight multi-resolution wavelet on a square matrix is seemingly trivial.  In the square matrix, straight multi-resolution case the number of resolutions is dictate by the size of the matrices being multiplied.  For wavelet packets on square matrices, it is also a size issue.  One can apply wavelet packets to maximum extent that the matrix size allows.  However, some of the packet levels may be unnecessary since the amount energy shuffling is small in comparison to the number of operations.  In the case of non-square matrices, best fits must be applied to ensure that the same wavelet transform 
+
+The Chain-Link Structure
+
+The chain link structure is derived from 2 other classes (hooks and links).   Each one of these classes are relatively simple and can be implemented with either arrays or pointers.  Due to the anticipated size, the array mechanism is chosen for speed and efficiency.  
+
+Class Chain Link members
+\begin{itemize}
+\item length 
+\item hooks\end{itemize}
+
+Class Hook 
+members:
+\begin{itemize}\item length
+\item l2norm
+\item links \end{itemize}
+
+
+Class Link
+members: 
+\begin{itemize}\item id
+\item value\end{itemize}
+
+
+Recursive Wavelet Packets
+The algorithm for optimal wavelet packets is easiest to describe by recursive means.  The stop condition either when the maximum resolution has been reached, or energy shuffle metric is satisfied.  
+
+procedure wavepack (matrix A, integer res) return $\mu$
+\begin{itemize}\item if ($res \equiv 0$  ) stop
+\item if ( $A.row {modulo} 2 \equiv  0$ and $A.col {modulo} 2 \equiv 0$) stop
+\item if ( optimum) stop
+\item otherwise 
+\begin{itemize}\item $A \stackrel{\psi}{\to} \mu $
+\item $\mu \stackrel{topleft}{\to} \alpha$
+\item $\mu \stackrel{lowleft}{\to} \beta$
+\item $\mu \stackrel{topright}{\to} \gamma$
+\item $\mu \stackrel{lowright}{\to} \delta$
+\item wavepack ( $\alpha$ , res -1)
+\item wavepack ( $\beta$ , res -1)
+\item wavepack ( $\gamma$ , res -1)
+\item wavepack ( $\delta$ , res -1)
+\item insert ($\alpha  \stackrel{topleft}{\to} \mu$)
+\item insert ($\gamma  \stackrel{topright}{\to} \mu$)
+\item insert ($\beta  \stackrel{lowleft}{\to} \mu$)
+\item insert ($\delta  \stackrel{lowright}{\to} \mu$)
+\item stop\end{itemize}\end{itemize}
+
+The determining of the optimum condition is matter that is not well defined. 
+
+
+

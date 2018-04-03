@@ -1,0 +1,1241 @@
+
+\layout Standard
+
+In this chapter, the general concept of matrix multiplication via wavelets
+ is introduced.
+ In addition, the chapter provides proof that the Haar Wavelet Transform
+ can precondition matrix, and produces the same answer.
+ A little bit of matrix multiplication and sparse matrix multiplication
+ itself is reviewed for completeness.
+\layout Section
+
+Matrix Multiplication
+\layout Standard
+
+Matrix multiplication is this ...
+\layout Standard
+
+What is sparse matrix multiplication?
+\layout Standard
+
+Matrix multiplication is one of the fundamental operations in linear algebra.
+ It is defined for two matrices 
+\begin_inset Formula \( A\)
+\end_inset 
+
+ and 
+\begin_inset Formula \( B\)
+\end_inset 
+
+, denoted 
+\begin_inset Formula \( A\cdot B\)
+\end_inset 
+
+.
+ Matrix multiply requires that the row length of A to be the same as the
+ column length of B.
+ Lastly, the matrix multiplication operation is defined: 
+\begin_inset Formula \[ 
+c_{i,j} = \sum\limits_k a_{i,k} b_{k,j}.
+\]
+\end_inset 
+
+ Matrix multiplication also obeys the following properties 
+\layout Itemize
+
+Associative law: 
+\begin_inset Formula \( (AB)C = A(BC)\)
+\end_inset 
+
+
+\layout Itemize
+
+Left Distributive Law 
+\begin_inset Formula \( A (B+C) = AB + AC\)
+\end_inset 
+
+
+\layout Itemize
+
+Right Distributive Law 
+\begin_inset Formula \( (B+C)A = BA + CA\)
+\end_inset 
+
+
+\layout Itemize
+
+Distribution of a constant 
+\layout Standard
+
+
+\begin_inset LatexCommand \cite{lipschutz}
+
+\end_inset 
+
+
+\layout Standard
+
+Consider a 
+\begin_inset Formula \( 2 \times 2\)
+\end_inset 
+
+ matrix, this example matrix multiplication: 
+\begin_inset Formula \begin{equation} \displaystyle
+\label{eqn:conventional}
+A \cdot B = 
+\left(\begin{array}{cc}  a^1_1&  a^2_1 \\ a^1_2 &  a^2_2 \end{array}\right)
+\left(\begin{array}{cc}  b^1_1&  b^2_1 \\ b^1_2 &  b^2_2 \end{array}\right) =
+\left(\begin{array}{cc}  a^1_{1} b^1_{1} + a^2_{1} b^1_{2}&  a^1_{1}b^2_{1} + a^2_{1}  b^2_{2}    \\ a^1_{2} b^1_{1} + a^2_{2} b^1_{2} &  a^1_{2} b^2_{1} + a^2_{2} b^2_{2} 
+\end{array}\right)
+\end{equation}
+\end_inset 
+
+
+\layout Standard
+
+There is a fast matrix multiply which was devised in 1969 by Strassen.
+ It tends to obtain a computational complexity of 
+\begin_inset Formula \( O(N^{2.807})\)
+\end_inset 
+
+.
+ This works for square even dimensioned matrices.
+ There is a variation of the Strassen called the Winograd obtains slightly
+ better performance. 
+\begin_inset LatexCommand \cite{lederman}
+
+\end_inset 
+
+
+\layout Standard
+
+Another view on matrix multiplication is sparse multiplication, is the use
+ of sparse matrix multiply.
+ One method is included in the Sparse Matrix Multiplication Package, called
+ SYMBMM 
+\begin_inset LatexCommand \cite{bank}
+
+\end_inset 
+
+.
+ An other is the one contained Basic Linear Algebra Subprogram for sparse
+ matrix to dense matrix multiply.
+\layout Standard
+
+The whole point of sparse matrix multiplication is to take a matrix such
+ that the matrix composition is mostly zero, and exploit that composition
+ to reduce the number of multiplications required.
+ Such multiplication schemes optimal limit for matrix multiplication is
+ 
+\begin_inset Formula \( O(N^2)\)
+\end_inset 
+
+.
+\layout Section
+
+Wavelet Matrix Multiplication
+\layout Standard
+
+The point of this thesis is not show the efficiencies of these above algorithms.
+ Rather, it is to show a pre-conditioner using the wavelet transform that
+ can be used in each of them.
+ Wavelet based matrix multiply is sound for the Haar Wavelet Transform and
+ the 
+\begin_inset Formula \( \psi^n\)
+\end_inset 
+
+ expansion.
+ In other words, All terms contributed by the wavelet transform on the operation
+ of matrix multiplication are cancelled in the inverse.
+ If the Haar Wavelet Transform produces a sparse and well conditioned matrix,
+ then the Haar Wavelet Transform proves itself as a useful preconditioner.
+ In this chapter, the general concept of matrix multiplication via wavelets
+ is introduced, and the linearity principle is shown.
+ The key point for wavelet matrix multiplication is the proof that 
+\begin_inset Formula \( W(A) \times W(B) = W(A\times B)\)
+\end_inset 
+
+ If this is the case, then it is obvious that 
+\begin_inset Formula \( W(A) \times W(B) = W(\Gamma) = W(A\times B = \Gamma)\)
+\end_inset 
+
+. 
+\layout Subsection
+
+A 
+\begin_inset Formula \( 2\times 2\)
+\end_inset 
+
+ example
+\layout Standard
+
+The feasibility of multiplication in the wavelet domain is demonstrated
+ directly using a 
+\begin_inset Formula \( 2 \times 2\)
+\end_inset 
+
+ matrix.
+ The coefficients of the matrices are multiplied both according to normal
+ matrix multiplication and the modified wavelet multiplication operator.
+ In the end the resulting coefficients are seen to be the same.
+\layout Subsubsection
+
+Wavelet Transforms of the Matrices
+\layout Standard
+
+For a wavelet transform, the result on matrix 
+\begin_inset Formula \( A\)
+\end_inset 
+
+ is 
+\begin_inset Formula \begin{equation}  \label{WA} \displaystyle
+W(A) = 
+{1 \over 2} 
+\left(\begin{array}{cc}  
+\left(a^1_1 + a^1_2 + a^2_1 + a^2_2\right) & 
+\left(a^1_1 + a^1_2 - a^2_1 - a^2_2\right)  \\ 
+\left(a^1_1 - a^1_2 + a^2_1 - a^2_2\right) & 
+\left(a^1_1 - a^1_2 - a^2_1 + a^2_2\right)   
+\end{array}\right), 
+\end{equation}
+\end_inset 
+
+ and for matrix 
+\begin_inset Formula \( B\)
+\end_inset 
+
+ it is 
+\begin_inset Formula \begin{equation}  \label{WB} \displaystyle
+W(B) = {1 \over 2} 
+\left(\begin{array}{cc}
+\left(b^1_1 + b^1_2 + b^2_1 + b^2_2\right) &
+\left(b^1_1 + b^1_2 - b^2_1 - b^2_2\right) \\ 
+\left(b^1_1 - b^1_2 + b^2_1 - b^2_2\right) &  
+\left(b^1_1 - b^1_2 - b^2_1 + b^2_2\right)
+\end{array}\right).
+\end{equation}
+\end_inset 
+
+
+\layout Subsubsection
+
+Product of 
+\begin_inset Formula \( A\)
+\end_inset 
+
+ and 
+\begin_inset Formula \( B\)
+\end_inset 
+
+ in wavelet space
+\layout Standard
+
+The conventional product of 
+\begin_inset Formula \( A\)
+\end_inset 
+
+ and 
+\begin_inset Formula \( B\)
+\end_inset 
+
+ (equation 
+\begin_inset LatexCommand \ref{eqn:conventional}
+
+\end_inset 
+
+) can be transformed into wavelet space.
+ The wavelet transform of this matrix is represented by 
+\begin_inset Formula \[ 
+W(A \cdot B) =
+{1 \over 2}
+\left(
+\begin{array}{cc}
+\psi(A) & \psi(V) \\
+\psi(H) & \psi(D)
+\end{array}
+\right)
+\]
+\end_inset 
+
+ where 
+\begin_inset Formula \begin{eqnarray} 
+\label{eqn:abwavelet1}
+\psi(A) &=& (a^1_1 b^1_1 + a^2_1 b^1_2 + a^1_1b^2_1 + a^2_1  b^2_2) + (a^1_2 b^1_1 + a^2_2 b^1_2 + a^1_2 b^2_1 + a^2_2 b^2_2)\\
+\label{eqn:abwavelet2}
+\psi(V) &=&(a^1_1 b^1_1 + a^2_1 b^1_2  - a^1_1b^2_1 - a^2_1  b^2_2) +  (a^1_2 b^1_1 + a^2_2 b^1_2 - a^1_2 b^2_1 - a^2_2 b^2_2 ) \\
+\label{eqn:abwavelet3}
+\psi(H) &=& (a^1_1 b^1_1 + a^2_1 b^1_2 + a^1_1b^2_1 + a^2_1  b^2_2) - (a^1_2 b^1_1 + a^2_2 b^1_2 + a^1_2 b^2_1 + a^2_2 b^2_2)\\
+\label{eqn:abwavelet4}
+\psi(D) &=& (a^1_1 b^1_1 + a^2_1 b^1_2  - a^1_1b^2_1 - a^2_1  b^2_2) - (a^1_2 b^1_1 + a^2_2 b^1_2 - a^1_2 b^2_1 - a^2_2 b^2_2 ).
+\end{eqnarray}
+\end_inset 
+
+
+\layout Subsubsection
+
+The product of the waveletized matrices
+\layout Standard
+
+Straight forward multiplication of 
+\begin_inset Formula \( W(A) \cdot W(B)\)
+\end_inset 
+
+ represented by equations 
+\begin_inset LatexCommand \ref{WA}
+
+\end_inset 
+
+ and 
+\begin_inset LatexCommand \ref{WB}
+
+\end_inset 
+
+ works out as follows: 
+\begin_inset Formula \[ 
+W(A) \cdot W(B) = 
+{1 \over 4} 
+\left(
+\begin{array}{cc}
+W_A & W_V \\
+W_H & W_D
+\end{array}
+\right)
+\]
+\end_inset 
+
+ where 
+\begin_inset Formula \begin{eqnarray*} 
+W_A &=& (a^1_1 + a^1_2 + a^2_1 + a^2_2)( b^1_1 + b^1_2 + b^2_1 + b^2_2) + ( a^1_1 + a^1_2 - a^2_1 - a^2_2)(b^1_1 - b^1_2 + b^2_1 - b^2_2) \\
+W_V &=& ( a^1_1 + a^1_2 + a^2_1 + a^2_2) ( b^1_1 + b^1_2 - b^2_1 - b^2_2) + (a^1_1 + a^1_2 - a^2_1 - a^2_2) ( b^1_1 - b^1_2 - b^2_1 + b^2_2)  \\
+W_H &=&  ( a^1_1 - a^1_2 + a^2_1 - a^2_2)(b^1_1 + b^1_2 + b^2_1 + b^2_2) +  ( a^1_1 - a^1_2 - a^2_1 + a^2_2 ) (b^1_1 - b^1_2 + b^2_1 - b^2_2) \\
+W_D &=& ( a^1_1 - a^1_2 + a^2_1 - a^2_2) (b^1_1 + b^1_2 - b^2_1 - b^2_2)+( a^1_1 - a^1_2 - a^2_1 + a^2_2 )(b^1_1 - b^1_2 - b^2_1 + b^2_2)
+\end{eqnarray*}
+\end_inset 
+
+ which simplifies to 
+\begin_inset Formula \begin{eqnarray*} 
+W_A &=& a^1_1 b^1_1 + a^1_2 b^1_1 + a^2_1 b^1_2 + a^2_2 b^1_2 + a^1_1 b^2_1 + a^1_2 b^2_1 + a^2_1 b^2_2 + a^2_2 b^2_2 \\
+W_V &=& a^1_1 b^1_1 + a^1_2 b^1_1 + a^2_1 b^1_2 + a^2_2 b^1_2 - a^1_1 b^2_1 - a^1_2 b^2_1 - a^2_1 b^2_2 - a^2_2 b^2_2 \\
+W_H &=& a^1_1 b^1_1 - a^1_2 b^1_1 + a^2_1 b^1_2 - a^2_2 b^1_2 + a^1_1 b^2_1 - a^1_2 b^2_1 + a^2_1 b^2_2 - a^2_2 b^2_2 \\
+W_D &=& a^1_1 b^1_1 - a^1_2 b^1_1 + a^2_1 b^1_2 - a^2_2 b^1_2 - a^1_1 b^2_1 + a^1_2 b^2_1 - a^2_1 b^2_2 + a^2_2 b^2_2 
+\end{eqnarray*}
+\end_inset 
+
+ These can then be compared to the coefficients of 
+\begin_inset Formula \( W(A \cdot B)\)
+\end_inset 
+
+ in equations 
+\begin_inset LatexCommand \ref{eqn:abwavelet1}
+
+\end_inset 
+
+-
+\begin_inset LatexCommand \ref{eqn:abwavelet2}
+
+\end_inset 
+
+ and seen to be identical.
+ This asserts that 
+\begin_inset Formula \( W(A) \cdot W(B) = W(A \cdot B)\)
+\end_inset 
+
+ in the case of 
+\begin_inset Formula \( 2 \times 2\)
+\end_inset 
+
+ matrices.
+\layout Subsection
+
+Haar Wavelets and Vector Inner Products
+\layout Standard
+
+One of the other crucial keys for the Haar Wavelet Transform Matrix Multiply
+ to work is vector inner product.
+ The issue is whether or not 
+\begin_inset Formula \begin{equation} \langle f', g' \rangle = \langle f,g \rangle \end{equation}
+\end_inset 
+
+ is true for vectors 
+\begin_inset Formula \( f\)
+\end_inset 
+
+ and 
+\begin_inset Formula \( g\)
+\end_inset 
+
+ which both of length 
+\begin_inset Formula \( p\)
+\end_inset 
+
+, and the wavelet transformed versions of 
+\begin_inset Formula \( f\)
+\end_inset 
+
+ and 
+\begin_inset Formula \( g\)
+\end_inset 
+
+ denoted 
+\begin_inset Formula \( f'\)
+\end_inset 
+
+ and 
+\begin_inset Formula \( g'\)
+\end_inset 
+
+ respectively.
+ To show this, 
+\begin_inset Formula \( \langle f',g' \rangle\)
+\end_inset 
+
+ is expanded algebraically to establish its identity. 
+\begin_inset Formula \begin{equation} 
+\label {vectinwt}\langle f',g' \rangle = \sum \limits_{k=0} ^{p/2 -1}(\frac{f_{2k} +f_{2k+1}}{\sqrt{2}} \cdot \frac{g_{2k} + g_{2k+1}}{\sqrt{2}}) + \sum \limits_{k=0} ^{p/2 -1}(\frac{f_{2k} - f_{2k+1}}{\sqrt{2}} \cdot \frac{g_{2k} - g_{2k+1}}{\sqrt{2}})\end{equation}
+\end_inset 
+
+ When equation 
+\begin_inset LatexCommand \ref{vectinwt}
+
+\end_inset 
+
+ is expanded further, the terms that emerge expose the identity of the inner
+ product. 
+\begin_inset Formula \begin{eqnarray} \label {vectinwte}
+\langle f',g' \rangle = \frac{1}{2}  \sum \limits_{k=0} ^{p/2 -1}
+( f_{2k} g_{2k} + f_{2k+1}g_{2k} + f_{2k}g_{2k+1} + f_{2k+1}g_{2k+1}  \\ \nonumber+  f_{2k} g_{2k} - f_{2k+1}g_{2k} - f_{2k}g_{2k+1} + f_{2k+1}g_{2k+1} \end{eqnarray}
+\end_inset 
+
+ When simplified the 
+\begin_inset Formula \( f_{2k}g_{2k+1}\)
+\end_inset 
+
+ and 
+\begin_inset Formula \( f_{2k+1}g_{2k}\)
+\end_inset 
+
+ terms cancel.
+ The 
+\begin_inset Formula \( f_{2k}g_{2k}\)
+\end_inset 
+
+ and 
+\begin_inset Formula \( f_{2k+1}g_{2k+1}\)
+\end_inset 
+
+ terms combine to yield equation 
+\begin_inset LatexCommand \ref{vectinwtsimple}
+
+\end_inset 
+
+ and further simplifies to equation vectinwtsimple2. 
+\begin_inset Formula \begin{equation} \label {vectinwtsimple}
+\langle f',g' \rangle = \frac{1}{2}  \sum \limits_{k=0} ^{p/2 -1} (f_{2k}g_{2k} + f_{2k+1}g_{2k+1})\end{equation}
+\end_inset 
+
+
+\begin_inset Formula \begin{equation} \label {vectinwtsimple2}
+\langle f',g' \rangle = \frac{1}{2}  \sum \limits_{k=0} ^{p-1} (f_{k}g_{k} ) = \langle f,g \rangle\end{equation}
+\end_inset 
+
+
+\layout Subsection
+
+Matrix Multiply with the Haar Transform: Formal Proof
+\layout Standard
+
+
+\series bold 
+Given
+\series default 
+ two arbitary matrices 
+\begin_inset Formula \( A\)
+\end_inset 
+
+ of size 
+\begin_inset Formula \( m\times p\)
+\end_inset 
+
+, 
+\begin_inset Formula \( B\)
+\end_inset 
+
+ of size 
+\begin_inset Formula \( m\times p\)
+\end_inset 
+
+, the Haar Wavelet Pair, and the Haar Wavelet Transform.
+ The wavelet pair to be used here is 
+\begin_inset Formula \[  \psi_H (x)= \sqrt{\frac{1}{2}} \left\{\begin{array}{cc}1 & x=0 \\-1 & x=1 \\0 & otherwise\end{array}\right.\]
+\end_inset 
+
+ 
+\begin_inset Formula \[ \phi_H (x) = \sqrt{\frac{1}{2}} \left\{\begin{array}{cc}1 & x=0 \\0 & otherwise\end{array}\right. \]
+\end_inset 
+
+ Also, this notation is used for this proof. 
+\layout Itemize
+
+
+\begin_inset Formula \( \psi_{1R}(S)\)
+\end_inset 
+
+ is the row transform of matrix 
+\begin_inset Formula \( S\)
+\end_inset 
+
+. 
+\layout Itemize
+
+
+\begin_inset Formula \( \psi_{1C}(S)\)
+\end_inset 
+
+ is the column transform of matrix 
+\begin_inset Formula \( S\)
+\end_inset 
+
+. 
+\layout Itemize
+
+
+\begin_inset Formula \( \psi {S}\)
+\end_inset 
+
+ is the 2-D wavelet transform of matrix 
+\begin_inset Formula \( S\)
+\end_inset 
+
+. 
+\layout Itemize
+
+
+\begin_inset Formula \( \langle f,g \rangle = \langle \psi_1(f) , \psi_1(g) \rangle \)
+\end_inset 
+
+
+\layout Itemize
+
+
+\begin_inset Formula \( A' = \psi(A)\)
+\end_inset 
+
+
+\layout Itemize
+
+
+\begin_inset Formula \( B' = \psi(B)\)
+\end_inset 
+
+
+\layout Itemize
+
+
+\begin_inset Formula \( A^R =\psi_{1R}(A) \)
+\end_inset 
+
+
+\layout Itemize
+
+
+\begin_inset Formula \( B^C =\psi_{1C}(B) \)
+\end_inset 
+
+
+\layout Itemize
+
+
+\begin_inset Formula \( A^R_{ri}\)
+\end_inset 
+
+ is the row vector 
+\begin_inset Formula \( i\)
+\end_inset 
+
+ of the row transform of 
+\begin_inset Formula \( A\)
+\end_inset 
+
+. 
+\layout Itemize
+
+
+\begin_inset Formula \( A^R_{ri+1}\)
+\end_inset 
+
+ is the row vector 
+\begin_inset Formula \( i+1\)
+\end_inset 
+
+ of the row transform of 
+\begin_inset Formula \( A\)
+\end_inset 
+
+. 
+\layout Itemize
+
+
+\begin_inset Formula \( B^C_{cj}\)
+\end_inset 
+
+ is the column vector 
+\begin_inset Formula \( j\)
+\end_inset 
+
+ of the column transform of 
+\begin_inset Formula \( B\)
+\end_inset 
+
+
+\layout Itemize
+
+
+\begin_inset Formula \( B^C_{cj+1}\)
+\end_inset 
+
+ is the column vector 
+\begin_inset Formula \( j+1\)
+\end_inset 
+
+ of the column transform of 
+\begin_inset Formula \( B\)
+\end_inset 
+
+
+\layout Standard
+
+
+\series bold 
+Required
+\series default 
+ show that 
+\begin_inset Formula \[  \psi (A) \psi (B) = \psi (A B) \]
+\end_inset 
+
+ is a true statement. 
+\series bold 
+Proof
+\series default 
+
+\layout Standard
+
+There are two formulae required for transforming either A or B into the
+ wavelet domain. 
+\begin_inset Formula \begin{equation} 
+\label{wavedefc4A}
+ \psi (A) = \psi _{1R} ( \psi_{1C} (A)) = \psi _{1C} ( \psi_{1R} (A))
+\end{equation}
+\end_inset 
+
+
+\begin_inset Formula \begin{equation} 
+\label{wavedefc4B}
+\psi (B) = \psi _{1R} ( \psi_{1C} (B)) = \psi _{1C} ( \psi_{1R} (B))    
+\end{equation}
+\end_inset 
+
+
+\layout Standard
+
+Thus, this is simply a re-write of the definition of the wavelet transform
+ by the CWT.
+ Next, define a matrix 
+\begin_inset Formula \( \Gamma'\)
+\end_inset 
+
+ so that 
+\begin_inset Formula \[ \Gamma' = \psi (A) \psi (B) \]
+\end_inset 
+
+.
+ From, the definition 
+\begin_inset Formula \( \Gamma'\)
+\end_inset 
+
+, a series of re-writes and the properties of the Haar Wavelet Transform
+ can expose the solution for every element of 
+\begin_inset Formula \( \Gamma'\)
+\end_inset 
+
+ and 
+\begin_inset Formula \( \Gamma'\)
+\end_inset 
+
+.
+ In general, the elements of 
+\begin_inset Formula \( \Gamma'\)
+\end_inset 
+
+ defined as follows: 
+\begin_inset Formula \begin{equation} 
+\label{wavecrossA}
+\Gamma'_{i,j} =   \left\langle \psi_{1C} (\psi_{1R} (A)) _{ri} , \psi_{1R} (\psi_{1C} (B)) _{ci}  \right\rangle
+\end{equation}
+\end_inset 
+
+
+\begin_inset Formula \begin{equation} 
+\label{wavecrossB}
+\Gamma'_{i,j} =   \left\langle \psi_{1R} (\psi_{1C} (A)) _{ri} , \psi_{1C} (\psi_{1R} (B)) _{ci}  \right\rangle
+\end{equation}
+\end_inset 
+
+
+\layout Standard
+
+In this case, each element of 
+\begin_inset Formula \( \Gamma'\)
+\end_inset 
+
+ is defined as nothing more than the inner product of row 
+\begin_inset Formula \( i\)
+\end_inset 
+
+ of 
+\begin_inset Formula \( \psi(A)\)
+\end_inset 
+
+ and column 
+\begin_inset Formula \( j\)
+\end_inset 
+
+ of 
+\begin_inset Formula \( \psi(B)\)
+\end_inset 
+
+.
+ This is in agreement with standard matrix multiplication.
+ Another identity that is important what the wavelet pair for transform
+ will do in either a row or column transform. 
+\begin_inset Formula \[   \psi _{1C} (A) = \left\{ 
+\begin{array}{ll}
+\frac{A_{i,j}+A_{i,j+1}}{\sqrt{2}} & j<col \\ 
+\frac{A_{i,j}-A_{i,j+1}}{\sqrt{2}} & j\geq col\end{array}
+\right.   \]
+\end_inset 
+
+ 
+\begin_inset Formula \[   \psi _{1R} (A) = \left\{ 
+\begin{array}{ll}
+\frac{A_{i,j}+A_{i+1,j}}{\sqrt{2}} & i<row \\ 
+\frac{A_{i,j}-A_{i+1,j}}{\sqrt{2}} & i\geq row\end{array}
+\right. 
+ \]
+\end_inset 
+
+ In this case, there are four cases to show for: 
+\layout Enumerate
+
+
+\begin_inset Formula \( i < \frac{row}{2}\)
+\end_inset 
+
+ and 
+\begin_inset Formula \( j <  \frac{col}{2}\)
+\end_inset 
+
+
+\layout Enumerate
+
+
+\begin_inset Formula \( i \geq \frac{row}{2}\)
+\end_inset 
+
+ and 
+\begin_inset Formula \( j <  \frac{col}{2}\)
+\end_inset 
+
+
+\layout Enumerate
+
+
+\begin_inset Formula \( i < \frac{row}{2}\)
+\end_inset 
+
+ and 
+\begin_inset Formula \( j \geq  \frac{col}{2}\)
+\end_inset 
+
+
+\layout Enumerate
+
+
+\begin_inset Formula \( i \geq \frac{row}{2}\)
+\end_inset 
+
+ and 
+\begin_inset Formula \( j \geq  \frac{col}{2}\)
+\end_inset 
+
+
+\layout Standard
+
+
+\series bold 
+Case 1
+\series default 
+ 
+\begin_inset Formula \( i < \frac{row}{2} \)
+\end_inset 
+
+ and 
+\begin_inset Formula \( j < \frac{col}{2}\)
+\end_inset 
+
+.
+ The base equation 
+\begin_inset Formula \( \Gamma'_{i,j}\)
+\end_inset 
+
+ in this cases is as follows: 
+\begin_inset Formula \begin{equation} 
+\label{case1inner}
+ \Gamma'_{ij} = \left\langle \frac {A^R_{ri} + A^R_{ri+1}}{\sqrt{2}} , \frac {B^C_{cj} + B^C_{cj + 1}}{\sqrt{2}} \right\rangle
+\end{equation}
+\end_inset 
+
+
+\layout Standard
+
+This re-write must be expanded to expose an equality.
+ This expansion is valid for vectors sums within inner products.
+ Thus 
+\begin_inset Formula \( \Gamma'_{i,j}\)
+\end_inset 
+
+ in this case is expanded to: 
+\begin_inset Formula \[  \Gamma'_{i,j} = \frac{1}{2} ( \left\langle A^R_{ri}, B^C_{cj}   \right\rangle +   \left\langle A^R_{ri+1}, B^C_{cj}   \right\rangle +  \left\langle A^R_{ri}, B^C_{cj + 1}   \right\rangle +  \left\langle A^R_{ri+1}, B^C_{cj+1}   \right\rangle    ) \]
+\end_inset 
+
+
+\layout Standard
+
+Next, 
+\begin_inset Formula \( \Gamma'_{i,j}\)
+\end_inset 
+
+ must be compared to 
+\begin_inset Formula \( \psi(\Gamma)_{i,j}\)
+\end_inset 
+
+ where 
+\begin_inset Formula \[  \psi (A B)  = \psi (\Gamma)    \]
+\end_inset 
+
+ By definition, every element in 
+\begin_inset Formula \( C\)
+\end_inset 
+
+ is defined: 
+\begin_inset Formula \[  C_{i,j} =   \left\langle A_{ri} , B_{cj}  \right\rangle \]
+\end_inset 
+
+ The next step is to show what every element within this case is for 
+\begin_inset Formula \( \psi(\Gamma)\)
+\end_inset 
+
+.
+ This is done by analyzing what the column transform will do at 
+\begin_inset Formula \( C_{i,j}\)
+\end_inset 
+
+.
+ To do this, the column transform is applied to both column 
+\begin_inset Formula \( j\)
+\end_inset 
+
+ and 
+\begin_inset Formula \( j+1\)
+\end_inset 
+
+ for columns between 
+\begin_inset Formula \( [0,\frac{col}{2} -1]\)
+\end_inset 
+
+.
+ The effects of these column transforms are defined in equations 
+\begin_inset LatexCommand \ref{rowwtC1c1}
+
+\end_inset 
+
+ and 
+\begin_inset LatexCommand \ref{rowwtC2c1}
+
+\end_inset 
+
+. 
+\begin_inset Formula \begin{equation} \displaystyle\label {rowwtC1c1}
+ \psi_{1C} (\Gamma)_{i,j} = \frac{1}{\sqrt{2}} \left\langle A_{ri} , B_{cj}  \right\rangle + \left\langle A_{ri +1} , B_{cj}  \right\rangle \end{equation}
+\end_inset 
+
+
+\begin_inset Formula \begin{equation} \label {rowwtC2c1}
+\psi_{1C} (\Gamma)_{i,j+1} = \frac{1}{\sqrt{2}} \left\langle A_{ri} , B_{cj+1}  \right\rangle + \left\langle A_{ri +1} , B_{cj+1}  \right\rangle \\end{equation}
+\end_inset 
+
+
+\layout Standard
+
+The result of the row transform on 
+\begin_inset Formula \( \psi_{1C}(\Gamma)\)
+\end_inset 
+
+ in this case is a sum of 
+\begin_inset Formula \( \psi_{1C}(\Gamma)_{i,j}\)
+\end_inset 
+
+ and 
+\begin_inset Formula \( \psi_{1C}(\Gamma)_{i,j+1}\)
+\end_inset 
+
+, and specified in equation 
+\begin_inset LatexCommand \ref{rowtfCc1}
+
+\end_inset 
+
+. 
+\begin_inset Formula \begin{equation} \label{rowtfCc1}
+ \psi(\Gamma) = \frac{1}{\sqrt {2}} (\psi_{1C} (\Gamma)_{i,j} + \psi_{1C} (\Gamma)_{i,j+1}   )\end{equation}
+\end_inset 
+
+ Expanded this equation is equation 
+\begin_inset LatexCommand \ref{rowtfCc1e}
+
+\end_inset 
+
+. 
+\begin_inset Formula \begin{equation} \label{rowtfCc1e}
+ \psi(\Gamma) = \frac{1}{2} (  \left\langle A_{ri} , B_{cj}  \right\rangle + \left\langle A_{ri +1} , B_{cj}  \right\rangle + \left\langle A_{ri} , B_{cj+1}  \right\rangle + \left\langle A_{ri +1} , B_{cj+1}  \right\rangle   ) \end{equation}
+\end_inset 
+
+
+\layout Standard
+
+
+\series bold 
+Case 2
+\series default 
+ 
+\begin_inset Formula \( i \geq frac{row}{2}\)
+\end_inset 
+
+ and 
+\begin_inset Formula \( j <  \frac{col}{2}\)
+\end_inset 
+
+.
+ The base equation 
+\begin_inset Formula \( \Gamma'_{i,j}\)
+\end_inset 
+
+ in this cases is as follows: 
+\begin_inset Formula \[  \Gamma'_{ij} = \left\langle \frac {A^R_{ri,j} - A^R_{ri+1}}{\sqrt{2}} , \frac {B^C_{cj} + B^C_{cj + 1}}{\sqrt{2}} \right\rangle  \]
+\end_inset 
+
+ The next step is to show what every element within this case is for 
+\begin_inset Formula \( \psi(\Gamma)\)
+\end_inset 
+
+. 
+\begin_inset Formula \[  \Gamma'_{i,j} = \frac{1}{2} ( \left\langle A^R_{ri}, B^C_{cj}   \right\rangle -   \left\langle A^R_{ri+1}, B^C_{cj}   \right\rangle +  \left\langle A^R_{ri}, B^C_{cj + 1}   \right\rangle -  \left\langle A^R_{ri+1}, B^C_{cj+1}   \right\rangle    ) \]
+\end_inset 
+
+ How does this compare with 
+\begin_inset Formula \( \psi (\Gamma)\)
+\end_inset 
+
+? 
+\begin_inset Formula \[  \psi (A B)  = \psi (\Gamma)    \]
+\end_inset 
+
+ 
+\begin_inset Formula \[  (\Gamma) = \psi  \left\langle A_{ri} , B_{cj}  \right\rangle \]
+\end_inset 
+
+ This equation expands with wavelet operator to: 
+\begin_inset Formula \[  \psi_{1C} (\Gamma)_{i,j} = \frac{1}{\sqrt{2}} \left\langle A_{ri} , B_{cj}  \right\rangle - \left\langle A_{ri +1} , B_{cj}  \right\rangle   \]
+\end_inset 
+
+ 
+\begin_inset Formula \[  \psi_{1C} (\Gamma)_{i,j+1} = \frac{1}{\sqrt{2}} \left\langle A_{ri} , B_{cj+1}  \right\rangle - \left\langle A_{ri +1} , B_{cj+1}  \right\rangle \,\, \]
+\end_inset 
+
+
+\layout Standard
+
+The result of the row transform on 
+\begin_inset Formula \( \psi_{1C}(\Gamma)\)
+\end_inset 
+
+ in this case is a sum of 
+\begin_inset Formula \( \psi_{1C}(\Gamma)_{i,j}\)
+\end_inset 
+
+ and 
+\begin_inset Formula \[  \psi(\Gamma) = \frac{1}{\sqrt {2}} (\psi_{1C} (\Gamma)_{i,j} + \psi_{1C} (\Gamma)_{i,j+1}   ) \]
+\end_inset 
+
+
+\layout Standard
+
+Expanded this equation is equation 
+\begin_inset LatexCommand \ref{rowtfCc1e}
+
+\end_inset 
+
+. 
+\begin_inset Formula \[  \psi(\Gamma) = \frac{1}{2} (  \left\langle A_{ri} , B_{cj}  \right\rangle - \left\langle A_{ri +1} , B_{cj}  \right\rangle + \left\langle A_{ri} , B_{cj+1}  \right\rangle - \left\langle A_{ri +1} , B_{cj+1}  \right\rangle   ) \]
+\end_inset 
+
+
+\layout Standard
+
+
+\series bold 
+Case 3
+\series default 
+ 
+\begin_inset Formula \( i < \frac {row}{2}\)
+\end_inset 
+
+ and 
+\begin_inset Formula \( j \geq \frac{col}{2}\)
+\end_inset 
+
+.
+ Like, before the base case for 
+\begin_inset Formula \( \Gamma'_{i,j}\)
+\end_inset 
+
+ 
+\begin_inset Formula \[  \Gamma'_{ij} = \left\langle \frac {A^R_{ri,j} + A^R_{ri+1}}{\sqrt{2}} , \frac {B^C_{cj} - B^C_{cj + 1}}{\sqrt{2}} \right\rangle  \]
+\end_inset 
+
+ Again, the vector sums are expanded within their inner products. 
+\begin_inset Formula \[  \Gamma'_{i,j} = \frac{1}{2} ( \left\langle A^R_{ri}, B^C_{cj}   \right\rangle +   \left\langle A^R_{ri+1}, B^C_{cj}   \right\rangle -  \left\langle A^R_{ri}, B^C_{cj + 1}   \right\rangle -  \left\langle A^R_{ri+1}, B^C_{cj+1}   \right\rangle    ) \]
+\end_inset 
+
+ Next, 
+\begin_inset Formula \( \Gamma'_{i,j}\)
+\end_inset 
+
+ is compared with 
+\begin_inset Formula \( \psi(\Gamma)\)
+\end_inset 
+
+ 
+\begin_inset Formula \[  \psi (A B)  = \psi (\Gamma)    \]
+\end_inset 
+
+ Next, the column transform expansion is conducted: 
+\begin_inset Formula \[  (\Gamma) = \psi  \left\langle A_{ri} , B_{cj}  \right\rangle \]
+\end_inset 
+
+ 
+\begin_inset Formula \[  \psi_{1C} (\Gamma)_{i,j} = \frac{1}{\sqrt{2}} \left\langle A_{ri} , B_{cj}  \right\rangle + \left\langle A_{ri +1} , B_{cj}  \right\rangle   \]
+\end_inset 
+
+ 
+\begin_inset Formula \[  \psi_{1C} (\Gamma)_{i,j+1} = \frac{1}{\sqrt{2}} \left\langle A_{ri} , B_{cj+1}  \right\rangle + \left\langle A_{ri +1} , B_{cj+1}  \right\rangle \,\, \]
+\end_inset 
+
+ Now the column transform results are combined, by subtraction in this case:
+ 
+\begin_inset Formula \[  \psi(\Gamma) = \frac{1}{\sqrt {2}} (\psi_{1C} (\Gamma)_{i,j} - \psi_{1C} (\Gamma)_{i,j+1}   ) \]
+\end_inset 
+
+ Lastly, the expanded form is expanded. 
+\begin_inset Formula \[  \psi(\Gamma) = \frac{1}{2} (  \left\langle A_{ri} , B_{cj}  \right\rangle + \left\langle A_{ri +1} , B_{cj}  \right\rangle - \left\langle A_{ri} , B_{cj+1}  \right\rangle - \left\langle A_{ri +1} , B_{cj+1}  \right\rangle   ) \]
+\end_inset 
+
+
+\layout Standard
+
+
+\series bold 
+Case 4
+\series default 
+ 
+\begin_inset Formula \( i \geq \frac {row}{2}\)
+\end_inset 
+
+ and 
+\begin_inset Formula \( j \geq \frac{col}{2}\)
+\end_inset 
+
+.
+ Like, before the base case for 
+\begin_inset Formula \( \Gamma'_{i,j}\)
+\end_inset 
+
+ 
+\begin_inset Formula \[  \Gamma'_{ij} = \left\langle \frac {A^R_{ri,j} - A^R_{ri+1}}{\sqrt{2}} , \frac {B^C_{cj} - B^C_{cj + 1}}{\sqrt{2}} \right\rangle  \]
+\end_inset 
+
+ Again, the vector sums are expanded within their inner products. 
+\begin_inset Formula \[  \Gamma'_{i,j} = \frac{1}{2} ( \left\langle A^R_{ri}, B^C_{cj}   \right\rangle -   \left\langle A^R_{ri+1}, B^C_{cj}   \right\rangle -  \left\langle A^R_{ri}, B^C_{cj + 1}   \right\rangle +  \left\langle A^R_{ri+1}, B^C_{cj+1}   \right\rangle    ) \]
+\end_inset 
+
+
+\layout Standard
+
+Next, 
+\begin_inset Formula \( \Gamma'_{i,j}\)
+\end_inset 
+
+ is compared with 
+\begin_inset Formula \( \psi(\Gamma)\)
+\end_inset 
+
+ 
+\begin_inset Formula \[  \psi (A B)  = \psi (\Gamma)    \]
+\end_inset 
+
+ 
+\begin_inset Formula \[  (\Gamma) = \psi  \left\langle A_{ri} , B_{cj}  \right\rangle \]
+\end_inset 
+
+ Once the column wavelet transform expands 
+\begin_inset Formula \( \Gamma\)
+\end_inset 
+
+ to 
+\begin_inset Formula \[  \psi_{1C} (\Gamma)_{i,j} = \frac{1}{\sqrt{2}} \left\langle A_{ri} , B_{cj}  \right\rangle - \left\langle A_{ri +1} , B_{cj}  \right\rangle   \]
+\end_inset 
+
+ 
+\begin_inset Formula \[  \psi_{1C} (\Gamma)_{i,j+1} = \frac{1}{\sqrt{2}} \left\langle A_{ri} , B_{cj+1}  \right\rangle - \left\langle A_{ri +1} , B_{cj+1}  \right\rangle \,\, \]
+\end_inset 
+
+
+\layout Standard
+
+Now the column transform results are combined, by subtraction in this case:
+ 
+\begin_inset Formula \[  \psi(\Gamma) = \frac{1}{\sqrt {2}} (\psi_{1C} (\Gamma)_{i,j} - \psi_{1C} (\Gamma)_{i,j+1}   ) \]
+\end_inset 
+
+
+\layout Standard
+
+Lastly, the expanded form is expanded. 
+\begin_inset Formula \[  \psi(\Gamma) = \frac{1}{2} (  \left\langle A_{ri} , B_{cj}  \right\rangle - \left\langle A_{ri +1} , B_{cj}  \right\rangle - \left\langle A_{ri} , B_{cj+1}  \right\rangle + \left\langle A_{ri +1} , B_{cj+1}  \right\rangle   ) \]
+\end_inset 
+
+
+\layout Standard
+
+Since the inner product of two vectors 
+\begin_inset Formula \( f,g\)
+\end_inset 
+
+ is the same as their wavelet transformed vectors 
+\begin_inset Formula \( f',g'\)
+\end_inset 
+
+, then all 4 cases produce a case where 
+\begin_inset Formula \( \Gamma'_{i,j} = (\psi (\Gamma))_{i,j} \,\,\forall (i,j)\)
+\end_inset 
+
+.
+ Thus for the Haar Wavelet Transform (discrete mother basis), 
+\begin_inset Formula \[  \psi (A) \cdot \psi(B) = \psi (A\cdot B) \]
+\end_inset 
+
+.
+\layout Section
+
+Multi Resolution Expansion Proof
+\layout Standard
+
+In a previous section, wavelet based matrix multiplication was proven such
+ that 
+\begin_inset Formula \[ \psi(A) \cdot \psi(B) = \psi (A\cdot B) \]
+\end_inset 
+
+ In this section the question of whether or not there is MRE form which
+ is sound for matrix multiplication.
+ There are few facts that are relevant and were made obvious in the empirical
+ analysis in the results chapter. 
+\layout Itemize
+
+
+\begin_inset Formula \( \psi_{WPx} (A) \not= \psi^x(A) \)
+\end_inset 
+
+ where 
+\begin_inset Formula \( \psi_{WPx} (A) \)
+\end_inset 
+
+ is the 
+\begin_inset Formula \( x\)
+\end_inset 
+
+ resolution of wavelet transform packets (full decomposition) except for
+ 
+\begin_inset Formula \( x=1\)
+\end_inset 
+
+. 
+\layout Itemize
+
+
+\begin_inset Formula \( \psi_{Wx} (A) \not= \psi^x(A) \)
+\end_inset 
+
+ where 
+\begin_inset Formula \( \psi_{Wx} (A) \)
+\end_inset 
+
+ is the 
+\begin_inset Formula \( x\)
+\end_inset 
+
+ resolution of wavelet transform pyramids except for 
+\begin_inset Formula \( x=1\)
+\end_inset 
+
+. 
+\layout Standard
+
+The next hypothesis to be answered is can the wavelet transform be applied
+ more than once to condition a matrix for matrix multiplication? This question
+ is answered by the following lemma.
+\layout Standard
+
+
+\begin_inset Formula \[  \psi ^2 (A) \cdot \psi^2 (B)  = \psi^2(A\cdot B) \]
+\end_inset 
+
+ Proof: 
+\newline 
+The theorem 
+\begin_inset Formula \[  \psi(A) \cdot \psi(B) = \psi (A\cdot B) \]
+\end_inset 
+
+ is proven as fact. 
+\begin_inset Formula \[  \psi^2(A) = \psi(\psi (A))\]
+\end_inset 
+
+ 
+\begin_inset Formula \[  \psi^2 (A) =\cdot \psi^2 (B) = \psi(\psi(A)) \cdot \psi (\psi (B))  \]
+\end_inset 
+
+ 
+\begin_inset Formula \[  \psi(\psi(A)) \cdot \psi (\psi (B)) = \psi (\psi(A) \cdot \psi(B) ) \]
+\end_inset 
+
+ 
+\begin_inset Formula \[  \psi (\psi(A) \cdot \psi(B) ) = \psi (\psi(A \cdot (B))  \]
+\end_inset 
+
+ 
+\begin_inset Formula \[  \psi (\psi(A \cdot (B)) = \psi^2(A \cdot B) \]
+\end_inset 
+
+ Therefore: 
+\begin_inset Formula \[  \psi ^2 (A) \cdot \psi^2 (B)= \psi^2(A \cdot B) \]
+\end_inset 
+
+
+\the_end

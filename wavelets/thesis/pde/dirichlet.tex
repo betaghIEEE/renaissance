@@ -1,0 +1,55 @@
+The hinge point of the Lin-Xiao method is the multi-scale interpolation method.  
+
+Given:
+$\lambda _{m\alpha} , u_{m\alpha}   \forall \in [0, M-1] \forall \alpha \in  [0, r-1] $
+
+Chosen samples for $j\in N$ 
+$f^j _{k,\alpha, l \beta} = \sum ^{M-1}_{n=0} \sum ^{M-1}_{m=0}  u_{n, \alpha} u_{m, \beta} f ( \frac{k-\lambda _{n\alpha}}{2} , \frac{l-\lambda _{n\beta}}{2} ) $
+
+$f(x,y) = \frac{1}{\alpha ^2}  \sum {k} \sum {l}  \sum ^{\gamma-1}_{\alpha=0} \sum ^{\gamma-1}_{\beta=0}     f^j _{k,\alpha , \beta, l} \phi _{\alpha k} (x) \phi^' _{\beta l} (y) $ 
+
+such that the weighted coefficients $u_{m\alpha} $ are related to the starting vectors:
+
+$y^{(R)}_0 = (\sum ^{M-1}_{m=0} u_{m0} \lambda^p_{mp}, .. , \sum ^{M-1}_{m=0} u_{m, j-1} \lambda^p_{m, j - 1}) \forall p \in [0,N-1]$  such that $\lambda^{(p)}_{m\alpha} = 1$
+
+
+Theorem: Suppose $\phi(x)$ is compactly supported.  Given $\phi_{m\alpha}$, $u_{m\alpha}$ and $f^j$, then $\forall f\in C^4_0 (R^2)$   $||f-f^j ||_? < 2^-jN $  iff $\phi$ has approximation accuracy and satisfies $y_0$.  The constant C is independent of j.  $y_0$ are the starting vectors.  
+
+Suppose a multiscaling function is compactly supported and has approximation accuracy N with starting vectors $y^0_0, ..., y^{N-1} _0$.  Let vectors $\sum ^{N-1}_{n=0} z_m^p = y^p_0 \forall p \in [0,N-1]$ then $\forall f \in C^N_0 (R^2) $ 
+
+||$f(x,y) = \frac{1}{2^j}  \sum {k} \sum {l}  \sum ^{N-1}_{n=0} \sum ^{M-1}_{m=0}     f^j _{k/2 , l/2} Z_n \phi _{kn} (x) Z_m \phi^' _{lm} (y) || < 2^{-j(N-n)} C $ 
+
+provided $\phi (x) \in H$ and $n\le N$ where C is independent of j.  
+
+Chapter 3 extention of multi-scale functions:  Functions for general cases continuous and Holder continuous functions.  
+
+Given:  $\omega \subset R^2$ domain
+$N$  positive integer
+$\gamma \in [0,1] \cup R$
+$\alpha \in (0, \infty) \cup R$
+
+
+%P1010473.jpg$
+$D_{j,\Omega} (u) = sup \{| \frac{\pd^N f}{\pd x^u \pd y^N}(x,y) frac{\pd^N f}{\pd x^u \pd y^N}(x',y') \}$
+such that 
+$|(x,y) \in \Omega (x',y') \in \Omega, |x-x'| \le h$, 
+$|y-y'| \le h, 0\le u \le N$
+
+
+The Dirichlet Problem:
+The following givens are needed to describe the Dirichlet Problem:
+\begin{itemize}\item Let $\Omega$ be a bounded domain in $R^2$ with a Lipshitz boundary $d\Omega$ 
+\item Functions $f\in L^2 (\Omega)$ and $g\in H^2 (\pd \Omega)$\end{itemize}
+The objective is to find $u\in H'(\Omega)$ such that 
+\begin{itemize}\item $-\Delta u + u = f$ in $\Omega$
+\item $u=g$ on $\pd \Omega$\end{itemize}
+
+How to solve: %P1010482.jpg 
+
+\begin{itemize}
+\item Penalty Method combined with Wavelet-Galerkin methods\item Convergent Method\end{itemize}
+
+Five point supposition for Method:
+
+Thus for any $\zeta$ considered this penalized variation of the problem :  
+

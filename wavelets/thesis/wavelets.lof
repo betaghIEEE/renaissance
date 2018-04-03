@@ -1,0 +1,41 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces The Haar Transform performed a sample function show each step of the transform in multi-resolution analysis }}{18}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces The Haar Transform performed a sample function show each step of the transform in multi-resolution expansion }}{20}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces The Haar Transform performed a sample function show each step of the transform in $\psi ^n$ expansion }}{21}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Sample function. The $x$-axis is the array index (index $n$). The $y$ value is simple -- the value $y(n)$. }}{36}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Signal after the wavelet transformation.}}{37}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Recovered function. The $x$-axis is the array index (index n). The $y$ value is simply the value $y(n)$. The function was recovered from an even indexed wavelet transform. }}{39}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Recovered function. The x-axis is the array index (index n). The y value is simply the value y[n]. The function was recovered from an odd indexed wavelet transform. }}{40}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Original Image. This image is the original image. }}{41}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Recovered Image. This image is the recovered image. Depending on whether the image was saved as a picture first can affect the white spots in the picture. Ringing is also an issue. }}{42}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Wavelet Transform Image. This image is divided in to average, horizontal, vertical and diagonal components. }}{43}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Wavelet Transform Image. This image is divided in to average, horizontal, vertical and diagonal components, using the vector-matrix version. The difference between this transform and that in Figure 3.7\hbox {} is positional. Both have the same components, and strictly a matter of orientation. In this form the indexing for each element is simpler, and that is the preferable quality.}}{44}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Recovered Image (Vector-Matrix Method). This image is the recovered image. This version avoids the ringing by using the vector-matrix version which is more aligned for the inverse wavelet transform. }}{45}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Wavelet Transform Image. This image is divided in to average, horizontal, vertical and diagonal components using multiresolution wavelet transform. Note the the average component was transformed one step further. }}{45}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Recovered Image - Wrong Order (Multiresolution). This image shows a 2D wavelet transform after it was recovered out of order. Obviously, the distortion is hideous. }}{46}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Recovered Image - 2\% threshold (Multiresolution). This image had nearly 83\% of its elements removed in the triple resolution wavelet transform. }}{46}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Recovered Image - 10\% threshold (Multiresolution). This image had nearly 93\% of its elements removed in the triple resolution wavelet transform. }}{47}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Recovered Image - 5\% threshold (Multiresolution). This image had nearly 85\% of its elements removed in the triple resolution wavelet transform. }}{47}
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Recovered Image - 1\% threshold (Multiresolution). This image had nearly 60\% of its elements removed in the triple resolution wavelet transform. }}{48}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces This fidelity level graph shows that the wavelet transform packet method as a preconditioner to matrix multiplication is not reliable past the first resolution. The wavelet packet produces marginal results mostly due sections being placed out of order.}}{82}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces This image is a photo of an F-16 fighter jet.}}{83}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces This fidelity level graph shows that Psi Wavelet Transform (full decomposition) approximation error in matrix multiplication. This graph in particular was obtained by multiplying the F-16 image by itself with various resolution levels of Wavelet Transforms applied }}{84}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces This image is a photo of an Fishing Boat which is a standard image.}}{85}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces This fidelity level graph shows that Psi Wavelet Transform (full decomposition) approximation error in matrix multiplication. This graph in particular was obtained by multiplying the Fishing Boat image by itself with various resolution levels of Wavelet Transforms applied. }}{86}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces This image is a photo of the Opera House in Lyon \cite {opera}.}}{87}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces This fidelity level graph shows that Psi Wavelet Transform (full decomposition) approximation error in matrix multiplication. This graph in particular was obtained by multiplying the Opera House image by itself with various resolution levels of Wavelet Transforms applied. }}{88}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces This image is an aerial photo of the Pentagon.}}{89}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces This fidelity level graph shows that Psi Wavelet Transform (full decomposition) approximation error in matrix multiplication. This graph in particular was obtained by multiplying the Pentagon image by itself with various resolution levels of Wavelet Transforms applied. }}{90}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces This image is of peppers was used to populate a sample matrix used to test matrix multiplication. }}{91}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces This fidelity level graph shows that Psi Wavelet Transform (full decomposition) approximation error in matrix multiplication. This graph in particular was obtained by multiplying the Peppers image by itself with various resolution levels of Wavelet Transforms applied\cite {peppers}. }}{92}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces ``Pocket Watch on a Gold Chain.'' Copyright image courtesy of Kevin Odhner\cite {watch}.}}{93}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces This fidelity level graph shows that Psi Wavelet Transform (full decomposition) approximation error in matrix multiplication. This graph in particular was obtained by multiplying the Watch image by itself with various resolution levels of Wavelet Transforms applied \cite {watch}. }}{94}
+\contentsline {figure}{\numberline {5.14}{\ignorespaces This image is an aerial photo of ``Always running, never the same....'' provided Courtesy of the Jaime Vives Piqueres\cite {water}.}}{95}
+\contentsline {figure}{\numberline {5.15}{\ignorespaces This fidelity level graph shows that Psi Wavelet Transform (full decomposition) approximation error in matrix multiplication. This graph in particular was obtained by multiplying the Water image by itself with various resolution levels of Wavelet Transforms applied\cite {water}.}}{96}
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Raytraced representation of M.C.Escher's (1898-1972) famous lithography 'Waterfall' (1961), based upon an illusion drawn by Roger Penrose \cite {waterfall}. }}{97}
+\contentsline {figure}{\numberline {5.17}{\ignorespaces This fidelity level graph shows that Psi Wavelet Transform (full decomposition) approximation error in matrix multiplication. This graph in particular was obtained by multiplying the Waterfall image by itself with various resolution levels of Wavelet Transforms applied. \cite {waterfall} }}{98}
+\addvspace {10\p@ }

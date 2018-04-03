@@ -1,0 +1,1 @@
+all: thesisthesis: wavelets.tex wave.bib	pdflatex wavelets	bibtex wavelets	pdflatex wavelets	pdflatex wavelets

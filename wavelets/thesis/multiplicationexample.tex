@@ -1,0 +1,460 @@
+\documentclass[11pt]{article}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+\textwidth = 6.5 in
+\textheight = 9 in
+\oddsidemargin = 0.0 in
+\evensidemargin = 0.0 in
+\topmargin = 0.0 in
+\headheight = 0.0 in
+\headsep = 0.0 in
+\parskip = 0.2in
+\parindent = 0.0in
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}{Definition}
+
+\title{A $2 \times 2$ example of wavelet multiplication}
+\author{Daniel Beatty}
+\begin{document}
+\maketitle
+
+
+Given Function 
+\[(
+\begin{array}{cc}
+\frac{1}{2} & \frac{1}{2} \\ 
+0 & \frac{1}{2}
+\end{array}
+) \]
+
+Desired result
+\[(
+\begin{array}{cc}
+\frac{1}{2} & \frac{1}{2} \\ 
+0 & \frac{1}{2}
+\end{array}
+)^{2}=\allowbreak 
+\begin{array}{cc}
+\frac{1}{4} & \frac{1}{2} \\ 
+0 & \frac{1}{4}
+\end{array}
+\]
+
+Hypothesis:  
+\[ \psi^{-1} ((\psi{A})^2) = A^2 \]
+
+$\psi _{c}(
+\begin{array}{cc}
+\frac{1}{2} & \frac{1}{2} \\ 
+0 & \frac{1}{2}
+\end{array}
+)=
+\begin{array}{cc}
+\frac{1}{\sqrt{2}}\left( \frac{1}{2}+\frac{1}{2}\right)  & \frac{1}{\sqrt{2}}%
+\left( \frac{1}{2}-\frac{1}{2}\right)  \\ 
+\frac{1}{\sqrt{2}}(0+\frac{1}{2}) & \frac{1}{\sqrt{2}}(0-\frac{1}{2})
+\end{array}
+=\allowbreak 
+\begin{array}{cc}
+\frac{1}{2}\sqrt{2} & 0 \\ 
+\frac{1}{4}\sqrt{2} & -\frac{1}{4}\sqrt{2}
+\end{array}
+$
+
+$\psi _{r}(
+\begin{array}{cc}
+\frac{1}{2}\sqrt{2} & 0 \\ 
+\frac{1}{4}\sqrt{2} & -\frac{1}{4}\sqrt{2}
+\end{array}
+)=
+\begin{array}{cc}
+\frac{1}{\sqrt{2}}(\frac{1}{2}\sqrt{2}+(\frac{1}{4}\sqrt{2})) & \frac{1}{%
+\sqrt{2}}(0+(-\frac{1}{4}\sqrt{2})) \\ 
+\frac{1}{\sqrt{2}}(\frac{1}{2}\sqrt{2}-(\frac{1}{4}\sqrt{2})) & \frac{1}{%
+\sqrt{2}}(0-(-\frac{1}{4}\sqrt{2}))
+\end{array}
+=\allowbreak 
+\begin{array}{cc}
+\frac{3}{4} & -\frac{1}{4} \\ 
+\frac{1}{4} & \frac{1}{4}
+\end{array}
+$
+
+$\psi _{r}(
+\begin{array}{cc}
+\frac{1}{2} & \frac{1}{2} \\ 
+0 & \frac{1}{2}
+\end{array}
+)=(
+\begin{array}{cc}
+\frac{1}{2\sqrt{2}} & \frac{2}{2\sqrt{2}} \\ 
+\frac{1}{2\sqrt{2}} & 0
+\end{array}
+)=\allowbreak 
+\begin{array}{cc}
+\frac{1}{4}\sqrt{2} & \frac{1}{2}\sqrt{2} \\ 
+\frac{1}{4}\sqrt{2} & 0
+\end{array}
+$
+
+$\psi _{c}(
+\begin{array}{cc}
+\frac{1}{4}\sqrt{2} & \frac{1}{2}\sqrt{2} \\ 
+\frac{1}{4}\sqrt{2} & 0
+\end{array}
+)=(
+\begin{array}{cc}
+\frac{1}{\sqrt{2}}(\frac{1}{4}\sqrt{2}+\frac{1}{2}\sqrt{2}) & \frac{1}{\sqrt{%
+2}}(\frac{1}{4}\sqrt{2}-\frac{1}{2}\sqrt{2}) \\ 
+\frac{1}{\sqrt{2}}(\frac{1}{4}\sqrt{2}-0) & \frac{1}{\sqrt{2}}(\frac{1}{4}%
+\sqrt{2}-0)
+\end{array}
+)=\allowbreak 
+\begin{array}{cc}
+\frac{3}{4} & -\frac{1}{4} \\ 
+\frac{1}{4} & \frac{1}{4}
+\end{array}
+$
+
+$\psi ( 
+\begin{array}{cc}
+\frac{1}{2} & \frac{1}{2} \\ 
+0 & \frac{1}{2}
+\end{array}
+)= 
+\begin{array}{cc}
+\frac{3}{4} & -\frac{1}{4} \\ 
+\frac{1}{4} & \frac{1}{4}
+\end{array}
+$
+
+$( 
+\begin{array}{cc}
+\frac{3}{4} & -\frac{1}{4} \\ 
+\frac{1}{4} & \frac{1}{4}
+\end{array}
+)^{2}=\allowbreak 
+\begin{array}{cc}
+\frac{1}{2} & -\frac{1}{4} \\ 
+\frac{1}{4} & 0
+\end{array}
+$
+
+$\psi _{c}^{-1}(
+\begin{array}{cc}
+\frac{1}{2} & -\frac{1}{4} \\ 
+\frac{1}{4} & 0
+\end{array}
+)=
+\begin{array}{cc}
+(\frac{1}{\sqrt{2}})((\frac{1}{2})-(-\frac{1}{4})) & (\frac{1}{\sqrt{2}})((%
+\frac{1}{2})+(-\frac{1}{4})) \\ 
+(\frac{1}{\sqrt{2}})(\frac{1}{4}-(0)) & (\frac{1}{\sqrt{2}})(\frac{1}{4}-(0))
+\end{array}
+=\allowbreak 
+\begin{array}{cc}
+\frac{3}{8}\sqrt{2} & \frac{1}{8}\sqrt{2} \\ 
+\frac{1}{8}\sqrt{2} & \frac{1}{8}\sqrt{2}
+\end{array}
+$
+
+$\psi _{r}^{-1}(\allowbreak 
+\begin{array}{cc}
+\frac{3}{8}\sqrt{2} & \frac{1}{8}\sqrt{2} \\ 
+\frac{1}{8}\sqrt{2} & \frac{1}{8}\sqrt{2}
+\end{array}
+)=
+\begin{array}{cc}
+(\frac{1}{\sqrt{2}})(\frac{3}{8}\sqrt{2}-(\frac{1}{8}\sqrt{2})) & (\frac{1}{%
+\sqrt{2}})(\frac{1}{8}\sqrt{2}-(\frac{1}{8}\sqrt{2})) \\ 
+(\frac{1}{\sqrt{2}})(\frac{3}{8}\sqrt{2}+(\frac{1}{8}\sqrt{2})) & (\frac{1}{%
+\sqrt{2}})(\frac{1}{8}\sqrt{2}+(\frac{1}{8}\sqrt{2}))
+\end{array}
+=\allowbreak 
+\begin{array}{cc}
+\frac{1}{4} & 0 \\ 
+\frac{1}{2} & \frac{1}{4}
+\end{array}
+$
+
+$\psi ^{-1}(\allowbreak 
+\begin{array}{cc}
+\frac{1}{2} & -\frac{1}{4} \\ 
+\frac{1}{4} & 0
+\end{array}
+)=\allowbreak 
+\begin{array}{cc}
+\frac{1}{4} & 0 \\ 
+\frac{1}{2} & \frac{1}{4}
+\end{array}
+$
+
+Symbolic Form 
+
+
+Hypothesis:  
+\[ \psi^{-1} ((\psi{A})^2) = A^2 \]
+
+
+
+$(
+\begin{array}{cc}
+a & b \\ 
+c & d
+\end{array}
+)^{2}=\allowbreak 
+\begin{array}{cc}
+a^{2}+bc & ab+bd \\ 
+ca+dc & bc+d^{2}
+\end{array}
+$
+
+$\psi _{r}(
+\begin{array}{cc}
+a & b \\ 
+c & d
+\end{array}
+)=
+\begin{array}{cc}
+\frac{1}{\sqrt{2}}(a+b) & \frac{1}{\sqrt{2}}(a-b) \\ 
+\frac{1}{\sqrt{2}}(c-d) & \frac{1}{\sqrt{2}}(c+d)
+\end{array}
+=\allowbreak 
+\begin{array}{cc}
+\frac{1}{2}\sqrt{2}\left( a+b\right)  & \frac{1}{2}\sqrt{2}\left( a-b\right) 
+\\ 
+\frac{1}{2}\sqrt{2}\left( c-d\right)  & \frac{1}{2}\sqrt{2}\left( c+d\right) 
+\end{array}
+\allowbreak $
+
+$\psi _{c}(\allowbreak 
+\begin{array}{cc}
+\frac{1}{2}\sqrt{2}\left( a+b\right)  & \frac{1}{2}\sqrt{2}\left( a-b\right) 
+\\ 
+\frac{1}{2}\sqrt{2}\left( c-d\right)  & \frac{1}{2}\sqrt{2}\left( c+d\right) 
+\end{array}
+\allowbreak )=
+\begin{array}{cc}
+(\frac{1}{2}\sqrt{2})(\frac{1}{2}\sqrt{2}\left( a+b\right) -\frac{1}{2}\sqrt{%
+2}\left( c-d\right) ) & (\frac{1}{2}\sqrt{2})(\frac{1}{2}\sqrt{2}\left(
+a-b\right) -(\frac{1}{2}\sqrt{2}\left( c+d\right) )) \\ 
+(\frac{1}{2}\sqrt{2})(\frac{1}{2}\sqrt{2}\left( a+b\right) +\frac{1}{2}\sqrt{%
+2}\left( c-d\right) ) & (\frac{1}{2}\sqrt{2})(\frac{1}{2}\sqrt{2}\left(
+a-b\right) +(\frac{1}{2}\sqrt{2}\left( c+d\right) ))
+\end{array}
+\allowbreak $
+
+$(
+\begin{array}{cc}
+(\frac{1}{2}\sqrt{2})(\frac{1}{2}\sqrt{2}\left( a+b\right) -\frac{1}{2}\sqrt{%
+2}\left( c-d\right) ) & (\frac{1}{2}\sqrt{2})(\frac{1}{2}\sqrt{2}\left(
+a-b\right) -(\frac{1}{2}\sqrt{2}\left( c+d\right) )) \\ 
+(\frac{1}{2}\sqrt{2})(\frac{1}{2}\sqrt{2}\left( a+b\right) +\frac{1}{2}\sqrt{%
+2}\left( c-d\right) ) & (\frac{1}{2}\sqrt{2})(\frac{1}{2}\sqrt{2}\left(
+a-b\right) +(\frac{1}{2}\sqrt{2}\left( c+d\right) ))
+\end{array}
+\allowbreak )^{2}=\allowbreak 
+\begin{array}{cc}
+\frac{1}{2}\left( \frac{1}{2}\sqrt{2}\left( a+b\right) -\frac{1}{2}\sqrt{2}%
+\left( c-d\right) \right) ^{2}+\frac{1}{2}\left( \frac{1}{2}\sqrt{2}\left(
+a-b\right) -\frac{1}{2}\sqrt{2}\left( c+d\right) \right) \left( \frac{1}{2}%
+\sqrt{2}\left( a+b\right) +\frac{1}{2}\sqrt{2}\left( c-d\right) \right)  & 
+\frac{1}{2}\left( \frac{1}{2}\sqrt{2}\left( a+b\right) -\frac{1}{2}\sqrt{2}%
+\left( c-d\right) \right) \left( \frac{1}{2}\sqrt{2}\left( a-b\right) -\frac{%
+1}{2}\sqrt{2}\left( c+d\right) \right) +\frac{1}{2}\left( \frac{1}{2}\sqrt{2}%
+\left( a-b\right) -\frac{1}{2}\sqrt{2}\left( c+d\right) \right) \left( \frac{%
+1}{2}\sqrt{2}\left( a-b\right) +\frac{1}{2}\sqrt{2}\left( c+d\right) \right) 
+\\ 
+\frac{1}{2}\left( \frac{1}{2}\sqrt{2}\left( a+b\right) +\frac{1}{2}\sqrt{2}%
+\left( c-d\right) \right) \left( \frac{1}{2}\sqrt{2}\left( a+b\right) -\frac{%
+1}{2}\sqrt{2}\left( c-d\right) \right) +\frac{1}{2}\left( \frac{1}{2}\sqrt{2}%
+\left( a-b\right) +\frac{1}{2}\sqrt{2}\left( c+d\right) \right) \left( \frac{%
+1}{2}\sqrt{2}\left( a+b\right) +\frac{1}{2}\sqrt{2}\left( c-d\right) \right) 
+& \frac{1}{2}\left( \frac{1}{2}\sqrt{2}\left( a-b\right) -\frac{1}{2}\sqrt{2}%
+\left( c+d\right) \right) \left( \frac{1}{2}\sqrt{2}\left( a+b\right) +\frac{%
+1}{2}\sqrt{2}\left( c-d\right) \right) +\frac{1}{2}\left( \frac{1}{2}\sqrt{2}%
+\left( a-b\right) +\frac{1}{2}\sqrt{2}\left( c+d\right) \right) ^{2}
+\end{array}
+\allowbreak =\allowbreak 
+\begin{array}{cc}
+\frac{1}{2}a^{2}+\frac{1}{2}ab-\frac{1}{2}ca-bc+\frac{1}{2}bd-\frac{1}{2}dc+%
+\frac{1}{2}d^{2} & \frac{1}{2}a^{2}-\frac{1}{2}ca-\frac{1}{2}bd-\frac{1}{2}%
+d^{2}-\frac{1}{2}ab-\frac{1}{2}dc \\ 
+\frac{1}{2}a^{2}+\frac{1}{2}ab+\frac{1}{2}dc-\frac{1}{2}d^{2}+\frac{1}{2}ca+%
+\frac{1}{2}bd & \frac{1}{2}a^{2}-bc+\frac{1}{2}d^{2}-\frac{1}{2}ab+\frac{1}{2%
+}ca-\frac{1}{2}bd+\frac{1}{2}dc
+\end{array}
+\allowbreak $
+
+{\tiny \bigskip }
+
+$\psi _{c}^{-1}(\allowbreak 
+\begin{array}{cc}
+\frac{1}{2}a^{2}+\frac{1}{2}ab-\frac{1}{2}ca-bc+\frac{1}{2}bd-\frac{1}{2}dc+%
+\frac{1}{2}d^{2} & \frac{1}{2}a^{2}-\frac{1}{2}ca-\frac{1}{2}bd-\frac{1}{2}%
+d^{2}-\frac{1}{2}ab-\frac{1}{2}dc \\ 
+\frac{1}{2}a^{2}+\frac{1}{2}ab+\frac{1}{2}dc-\frac{1}{2}d^{2}+\frac{1}{2}ca+%
+\frac{1}{2}bd & \frac{1}{2}a^{2}-bc+\frac{1}{2}d^{2}-\frac{1}{2}ab+\frac{1}{2%
+}ca-\frac{1}{2}bd+\frac{1}{2}dc
+\end{array}
+\allowbreak )=$
+
+$\allowbreak 
+\begin{array}{cc}
+(\frac{1}{\sqrt{2}})((\frac{1}{2}a^{2}+\frac{1}{2}ab-\frac{1}{2}ca-bc+\frac{1%
+}{2}bd-\frac{1}{2}dc+\frac{1}{2}d^{2})-(\frac{1}{2}a^{2}+\frac{1}{2}ab+\frac{%
+1}{2}dc-\frac{1}{2}d^{2}+\frac{1}{2}ca+\frac{1}{2}bd)) & (\sqrt{\frac{1}{2}}%
+)((\frac{1}{2}a^{2}-\frac{1}{2}ca-\frac{1}{2}bd-\frac{1}{2}d^{2}-\frac{1}{2}%
+ab-\frac{1}{2}dc)-(\frac{1}{2}a^{2}-bc+\frac{1}{2}d^{2}-\frac{1}{2}ab+\frac{1%
+}{2}ca-\frac{1}{2}bd+\frac{1}{2}dc)) \\ 
+(\frac{1}{\sqrt{2}})((\frac{1}{2}a^{2}+\frac{1}{2}ab-\frac{1}{2}ca-bc+\frac{1%
+}{2}bd-\frac{1}{2}dc+\frac{1}{2}d^{2})+(\frac{1}{2}a^{2}+\frac{1}{2}ab+\frac{%
+1}{2}dc-\frac{1}{2}d^{2}+\frac{1}{2}ca+\frac{1}{2}bd)) & (\sqrt{\frac{1}{2}}%
+)((\frac{1}{2}a^{2}-\frac{1}{2}ca-\frac{1}{2}bd-\frac{1}{2}d^{2}-\frac{1}{2}%
+ab-\frac{1}{2}dc)+(\frac{1}{2}a^{2}-bc+\frac{1}{2}d^{2}-\frac{1}{2}ab+\frac{1%
+}{2}ca-\frac{1}{2}bd+\frac{1}{2}dc))
+\end{array}
+\allowbreak =\allowbreak 
+\begin{array}{cc}
+-\frac{1}{2}\sqrt{2}\left( ca+bc+dc-d^{2}\right)  & -\frac{1}{2}\sqrt{2}%
+\left( ca+d^{2}+dc-bc\right)  \\ 
+\frac{1}{2}\sqrt{2}\left( a^{2}+ab-bc+bd\right)  & \frac{1}{2}\sqrt{2}\left(
+a^{2}-bd-ab-bc\right) 
+\end{array}
+\allowbreak $
+
+$\psi _{r}^{-1}(\allowbreak 
+\begin{array}{cc}
+-\frac{1}{2}\sqrt{2}\left( ca+bc+dc-d^{2}\right)  & -\frac{1}{2}\sqrt{2}%
+\left( ca+d^{2}+dc-bc\right)  \\ 
+\frac{1}{2}\sqrt{2}\left( a^{2}+ab-bc+bd\right)  & \frac{1}{2}\sqrt{2}\left(
+a^{2}-bd-ab-bc\right) 
+\end{array}
+\allowbreak )=$
+
+$\allowbreak 
+\begin{array}{cc}
+(\sqrt{\frac{1}{2}})(-\frac{1}{2}\sqrt{2}\left( ca+bc+dc-d^{2}\right) -(-%
+\frac{1}{2}\sqrt{2}\left( ca+d^{2}+dc-bc\right) )) & (\sqrt{\frac{1}{2}})(-%
+\frac{1}{2}\sqrt{2}\left( ca+bc+dc-d^{2}\right) +(-\frac{1}{2}\sqrt{2}\left(
+ca+d^{2}+dc-bc\right) )) \\ 
+(\sqrt{\frac{1}{2}})(\frac{1}{2}\sqrt{2}\left( a^{2}+ab-bc+bd\right) -(\frac{%
+1}{2}\sqrt{2}\left( a^{2}-bd-ab-bc\right) )) & (\sqrt{\frac{1}{2}})(\frac{1}{%
+2}\sqrt{2}\left( a^{2}+ab-bc+bd\right) -(\frac{1}{2}\sqrt{2}\left(
+a^{2}-bd-ab-bc\right) ))
+\end{array}
+\allowbreak =\allowbreak 
+\begin{array}{cc}
+-bc+d^{2} & -c\left( a+d\right)  \\ 
+b\left( a+d\right)  & b\left( a+d\right) 
+\end{array}
+$
+
+{\tiny \bigskip }
+
+$\allowbreak 
+\begin{array}{cc}
+-bc+d^{2} & -c\left( a+d\right)  \\ 
+b\left( a+d\right)  & b\left( a+d\right) 
+\end{array}
+\neq \allowbreak 
+\begin{array}{cc}
+a^{2}+bc & ab+bd \\ 
+ca+dc & bc+d^{2}
+\end{array}
+$
+
+\section {Empirical Results}
+Each empirical result is from either a series of multiplications preconditioned either with wavelet packets or wavelet pyramids type wavelet transforms.  
+
+%\{tiny}
+Sample One: Sandra $512 \times 512$ by wavelet transform packet 
+
+\begin{tabular}{lllll}
+{\tiny Number of Resolution } & \tiny {Original Energy } $E(O)$ &{\tiny Estimate Energy } $E(%
+\widetilde{O})$ & $(E(O)-E(\widetilde{O}))$ & {\tiny Fidelity} $\sqrt{E((O)-(%
+\widetilde{O}))}$ \\ 
+$1$ & $40043.8$ &  $40043.8$ &$ -9.08501 \cdot 10^{-16} $&  $2.16231 \cdot 10^{-13}$\\ 
+$2$ & $40043.8$ & $40043.8$ & $3.7666 \cdot 10{-9}$ & $0.0231922$ \\ 
+$3$ & $40043.8$ & $40043.8$ & $2.12923 \cdot 10^{-8}$ & $0.0331245$  \\ 
+$4$& $40043.8$  & $40043.7$  & $1.15056\cdot 10^{-7}$  & $0.046215$  \\ 
+$5$& $40043.8$  & $40043.8$  & $-4.45904\cdot 10^{-8}$  & 0.0563862  \\ 
+$6$& $40043.8$  & $40043.8$ & $4.85688\cdot 10^{-8}$ & $0.0629457$  \\ 
+$7$& $40043.8$  & $40043.8$ & $7.51241 \cdot 10^{-8}$ & $0.0666921$  \\ 
+
+\end{tabular}
+
+
+Sample Two: Sandra $512 \times 512$ by wavelet transform pyramid 
+
+\begin{tabular}{lllll}
+{\tiny Number of Resolution} & {\tiny Original Energy }$E(O)$ & {\tiny 
+Estimate Energy }$E(\widetilde{O})$ & $(E(O)-E(\widetilde{O}))$ & {\tiny 
+Fidelity }$\sqrt{E((O)-(\widetilde{O}))}$ \\ 
+$1$ & $40043.8$ &  $40043.8$ &$ -9.08501 \cdot 10^{-16} $&  $2.16231 \cdot 10^{-13}$\\ 
+$2$ & $40043.8$  & $40039.8$ & $9.93622\ cdot 10^{-5}$ & $2.27862$ \\ 
+$3$ & $40043.8$  & $40039.2$ & $0.000113292$  & $4.04497$  \\ 
+$4$ & $40043.8$  & $40045.9$  & $-5.33258e-05$  & $6.7722$  \\ 
+$5$& $40043.8$  & $40051.3$  & $-0.000187741$  & $11.1503$  \\ 
+&  &  &  &  \\ 
+&  &  &  &  \\ 
+&  &  &  &  \\ 
+&  &  &  & 
+\end{tabular}
+
+
+Sample Three: Molly Holly $256 \times 256$ by wavelet transform pyramid 
+
+\begin{tabular}{lllll}
+{\tiny Number of Resolution} & {\tiny Original Energy }$E(O)$ & {\tiny 
+Estimate Energy }$E(\widetilde{O})$ & $(E(O)-E(\widetilde{O}))$ & {\tiny 
+Fidelity }$\sqrt{E((O)-(\widetilde{O}))}$ \\ 
+$1$ & $582.864 $ & $582.864$ &  $-9.75244\cdot 10^{-16}$ & $2.0396 \cdot 10^{-14}$ \\ 
+$2$ & $582.864 $& $583.05 $  & $-0.000319839$ & $1.19806 $  \\ 
+$3$ &  $582.864$ & $582.613$ & $0.000430391$  & $2.18712$ \\ 
+$4$ & $582.864$ & $579.473$ & $0.00581664$ &  $3.19317$ \\ 
+$5$ & $582.864$ & $576.72$ & $0.0105413$ & $4.82652$ 
+
+\end{tabular}
+
+
+Sample Four: Waterfall $512 \times 512$ by wavelet transform pyramid 
+
+\begin{tabular}{lllll}
+{\tiny Number of Resolution} & {\tiny Original Energy }$E(O)$ & {\tiny 
+Estimate Energy }$E(\widetilde{O})$ & $(E(O)-E(\widetilde{O}))$ & {\tiny 
+Fidelity }$\sqrt{E((O)-(\widetilde{O}))}$ \\ 
+$1$&  $6630.76$ & $6630.76$ & $-9.60141e-16$  &  $9.37836e-14$ \\ 
+$2$& $6630.76$ & $6629.92$ & $0.000127083$  &  $1.20049$ \\ 
+$3$& $6630.76$ & $6626.6$  & $0.000627646$ & $2.37529$ \\ 
+$4$& $6630.76$ & $6619.14$  & $0.00175173$ & $3.9194$ \\ 
+$5$& $6630.76$ & $6595.14$ &  $0.00537249$ &  $6.63615$\\ 
+$6$& $6630.76$ & $6579.62$ & $0.00771315$ & $9.48774$ \\ 
+$7$& $6630.76$ & $6567.17$ & $0.00959077$ &  $12.1211$
+\end{tabular}
+
+
+\section {Issue of which MRE works and why}
+
+Theorem:  $\psi(A) \cdot \psi(B) = \psi (A\cdot B) $
+
+Fact :  $\psi_{WPx} (A) \not= \psi^x(A) $  such that $\psi_{WPx} (A) $ is the $x$ resolution of wavelet transform packets except for $x=1$.
+
+Fact:  $\psi_{Wx} (A) \not= \psi^x(A) $  such that $\psi_{Wx} (A) $ is the $x$ resolution of wavelet transform pyramids except for $x=1$.
+
+Proposed Hypothesis: 
+ \begin{enumerate}\item  $ \psi (\psi(A)) \cdot \psi (\psi (B)) = \psi ( \psi (A\cdot B)) $ 
+ \item $M:\psi (\psi (A)) \to \psi_{WP2} (A) $ such that $\psi_{WP2}$ is a wavelet transform packet of 2 resolutions for all A capable of MRE or 2 resolutions.  
+ \item $M_W:\psi_{WP2} (A)  \to \psi (\psi (A)) $ such that $\psi_{WP2}$ is a wavelet transform packet of 2 resolutions for all A capable of MRE or 2 resolutions.  \end{enumerate}
+
+
+
+
+
+
+ \end{document} 

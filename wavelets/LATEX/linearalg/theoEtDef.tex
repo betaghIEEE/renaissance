@@ -1,0 +1,43 @@
+\documentclass[11pt]{article}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `basename #1 .tif`.png}
+
+\textwidth = 6.5 in
+\textheight = 9 in
+\oddsidemargin = 0.0 in
+\evensidemargin = 0.0 in
+\topmargin = 0.0 in
+\headheight = 0.0 in
+\headsep = 0.0 in
+\parskip = 0.2in
+\parindent = 0.0in
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}{Definition}
+
+\title{Good old Linear Algebra and Theorems}
+\author{The Author}
+\begin{document}
+\maketitle
+
+Definition: Let F be a field.  A vector space V over F is  set with operations of vector addition + and scalar $\dot$ satisfying the following properties:
+\begin{enumerate}\item Closure for addition:  $\forall u,v\in V$, $u+v$ is defines and is an element of V.
+\item Communitive of addition $u+v=v+u$  $\forall u,v \in V$
+\item Associativity for addition: $u + (v +w) = (u+v)+w$  $\forall u,v,w\in V$
+\item Existence of additive identity $\forall u\in V$ : $u+0 = u$
+\item Existence of Additive Inverse $\forall u \in V$ , there exists an element in V, -u,  such that $u + (-u) = 0$.
+\item Closure for scalar multiplication: $\forall \alpha \in F$ and $\forall u \in V$ $\alpha \dot u$ is well defined.  
+\item Behavior of the scalar multiplication identity: $\forall u \in V$ $\exist \alpha$ called 1 
+\item Associativity fir scalar multiplication:$\forall u \in V$ $\alpha \dot (\beta \dot u) = (\alpha \dot \beta) \dot u$
+\item Distribution properties: $\forall \alpha , \beta \in F$ and $u,v \in V$ 
+	$\alpha \dot (u + v) = \alpha u + \alpha v$
+	$(\alpha + \beta) \dot u = \alpha \dot u + \beta \dot u$\end{enumerate}
+
+
+\begin{thebibliography}{99}
+\bibitem Michael W. Frazier \textsl{An Introduction to Wavelets through Linear Algebra} 1999 Springer Verlag New York, NY 10010, Inc.
+\end{thebibliography}
+ \end{document}

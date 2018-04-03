@@ -1,0 +1,251 @@
+%\documentclass[11pt]{article}
+%\usepackage{graphicx}
+%\usepackage{amssymb}
+%\usepackage{epstopdf}
+%\usepackage{doublespace}
+%\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+%\textwidth = 6.5 in
+%\textheight = 9 in
+%\oddsidemargin = 0.0 in
+%\evensidemargin = 0.0 in
+%\topmargin = 0.0 in
+%\headheight = 0.0 in
+%\headsep = 0.0 in
+%\parskip = 0.2in
+%\parindent = 0.0in
+
+%\newtheorem{theorem}{Theorem}
+%\newtheorem{corollary}[theorem]{Corollary}
+%\newtheorem{definition}{Definition}
+
+%\title{Matrix Multiply Results}
+%\author{Daniel D. Beatty}
+%\begin{document}
+%\maketitle
+
+%\chapter
+
+
+Each empirical result is from % either 
+a series of matrix multiplications on 9 different images.  These matrices were submitted to preconditioning with the wavelet transform in the 3 basic method of decomposition --- MRA, MRE and the $\psi^n$ decomposition.%   with wavelet packets or wavelet pyramids type wavelet transforms.  
+In the end, MRA performed poorly for any set of resolutions deeper than one in matrix multiplication.  Thus MRA should not be used as a pre-conditioner to matrix multiplication.  The MRE transform performs modestly in matrix multiplication tests, but to be effective must be reordered into $\psi^n$ structure. %require reordering to match the recursive MRE wavelet transform packet form.    
+Lastly, the $\psi^n$ form performs well on matrix multiplication.   
+
+The matrix multiplication used in each of these cases is %a special case of matrix multiplication is conducted, 
+$A^2= A\cdot A$, where $A$ is  a $M\times N$ matrix. The general equation for evaluating the wavelet transform pyramid method is the fidelity measurement:
+\[
+\sqrt{E(\psi^{-1} ( (\psi (A))^2) - A^2)}.
+\]
+where $\psi$ represents the given multilevel wavelet transform and $\psi^{-1}$ represents its inverse. Relative fidelity measurements provide an error that takes into account the scale. It is more useful for general observations.  To obtain this measurement, the results are compared to standard.% reference of a standard.  
+In this case, $A^2$ is the standard, and the energy difference is inversely proportional.
+\[ \sqrt {\frac{E(\psi^{-1} ( (\psi (A))^2) - A^2)} {E(A^2)} }  \]
+
+%\section {Matrix Multiplication Results}
+%\{tiny}
+
+\section {Empirical Analysis: MRA}
+
+Several standard images were used for measuring the effects of matrix multiplication.  Amongst them were the artificial images such as the waterfall and the clock.  Others were actual images such as an aerial view of the Pentagon, an in flight photo of an F-16, a fishing boat, an opera house, a river, and a set of bell peppers.
+
+In first round analysis, matrix multiplication was measured against the wavelet pyramids.  These showed some undesirable results.  As the decomposition proceeded deeper, the fidelity quick became unstable, and made the method unusable for matrix multiplication.  The results are shown in Tables \ref{tbl:peppers_mra} and \ref{tbl:waterfall_mra}.
+
+\begin{table}
+\begin{center}
+\begin{tabular}{clll}
+{Resolution} & { Original Energy } & { 
+Estimate Energy }& { 
+Fidelity } \\ 
+1&  12972.4& 12972.4 &  $1.26464 \cdot 10^{-13} $ \\ 
+2&12972.4  & 12960.3 &  3.11211  \\ 
+3& 12972.4 &12947.8  &  5.44678  \\ 
+4&12972.4&12939.7&   8.43738 \\
+5 &12972.4  & 12926 & 13.1662 \\
+6& 12972.4& 12904.3& 19.9257 \\
+7& 12972.4 & 12877.9 & 25.4429 \\
+\end{tabular}
+\end{center}
+\caption{\label{tbl:peppers_mra}
+Peppers $512 \times 512$ by MRA.}
+\end{table}
+
+\begin{table}
+\begin{center}
+\begin{tabular}{clll}
+{Resolution} & { Original Energy }& { 
+Estimate Energy } &  { 
+Fidelity } \\ 
+$1$&  $6630.76$ & $6630.76$&  $9.37836e-14$ \\ 
+$2$& $6630.76$ & $6629.92$  &  $1.20049$ \\ 
+$3$& $6630.76$ & $6626.6$   & $2.37529$ \\ 
+$4$& $6630.76$ & $6619.14$  & $3.9194$ \\ 
+$5$& $6630.76$ & $6595.14$  &  $6.63615$\\ 
+$6$& $6630.76$ & $6579.62$  & $9.48774$ \\ 
+$7$& $6630.76$ & $6567.17$  &  $12.1211$
+\end{tabular}
+\end{center}
+\caption{\label{tbl:waterfall_mra}
+Waterfall $512 \times 512$ by MRA.}
+\end{table}
+
+\section {Empirical Analysis: MRE}
+
+The primary example shown is from the Peppers image.  Although, all nine of the images used for this thesis could have been used, all of them exhibit similar qualities.   After, two resolutions the 2-D MRE becomes unstable for matrix multiplication.  It misplaces sections to where random noise in those sections would be just useful as the actual information contained in those sections.  The results are shown in Table \ref{tbl:peppers_mre}.
+
+\begin{table}
+\begin{center}
+\begin{tabular}{clll}
+{ Resolution } &  {Original Energy } &{ Estimate Energy }  & {Fidelity} \\ 
+$1$ & $12972.4$ &  $12972.4$ &  $1.26464e-13$\\ 
+$2$ & $12972.4$ & $12972.4$ &  $0.059622$ \\ 
+$3$ & $12972.4$ & $12972.4$ &  $0.072957$  \\ 
+$4$& $12972.4$  & $12972.4$  & $0.0849579$  \\ 
+$5$& $12972.4$  & $12972.4$  & 0.09721  \\ 
+$6$& $12972.4$  & $12972.4$ &  $0.104528$  \\ 
+$7$& $12972.4$  & $12972.4$ &  $0.119789$  \\ 
+\end{tabular}
+\end{center}
+\caption{\label{tbl:peppers_mre}
+Peppers $512 \times 512$ by MRE.}
+\end{table}
+
+\section {Empirical Results: $\psi^n$}
+
+The $\psi^n$ transform clearly produces better results as shown in all examples of the wavelet transform.  Trade off issues start to appear when comparing the number of resolution levels to apply as opposed to a spare filter threshold.   
+
+In these next examples, resolution levels 1 through 7 are examined by removing data based on energy level.  The method used is to strictly remove the lower threshold of energy from the matrix at large.  %The second method removes energy first by eliminating whole segments.  The third is a hybrid, removing first the segments at large and then filtering on the threshold segment.  
+The range of energy thresholds vary from 0.0 to 0.9.
+
+The reasoning for any of these schemes is to establish sparse representations of the matrix.  In these sparse representation, only the above threshold elements are used.   These representations are useful for sparse matrix multiplication since only the above threshold elements need be multiplied thus reducing the number of multiplications (operations at large) performed.  
+
+%\subsubsection {Strict Lower Threshold Scheme: The Darwin Filter}
+%This filter is appropriately named for allowing the strongest elements to survive and weaker ones to be reduced to zero.  This particular Darwin Filter is applied through out the matrix.  In order to find the element that is the threshold element, each element in the matrix is squared, placed in a one dimensional array, and then sorted in the array from least to greatest.  %Lastly the summing loop is applied to the array, and is stopped when either entire array is processed or the sum has reached the threshold value.  The threshold value is established by the energy of the matrix multiplied by the energy percentage to be removed.  
+
+Lastly, two method exist to find the threshold value in the array of values.  One is to sum up values until the threshold energy level has been reached.  Another is to take element relative to the percentage threshold desired.  The relative percentage method is simpler, by performing one division on the energy array size and a look up for the value in the energy array.  
+
+Once found, the filter threshold is used to filter out elements whose squared value is less than the threshold.  Those elements that are less are made to be zero.   Those that are above the threshold are left alone.  
+
+For this experiment both matrix operands have the filter applied.  It should be noted that for the BLAS level three matrix multiplication, this filtering scheme need only be applied to the first matrix operand.   Applying this filter to the second is simply unnecessary since the method states that the second matrix can be dense.  
+
+The pattern of fidelity loss has a dramatic climb in the first $\frac{1}{20}$ of energy loss.  From $\frac{1}{20}$ th to $\frac{1}{2}$ the fidelity stays roughly within the same order of magnitude.  After this there is a sharp rise until all fidelity is lost.  
+
+\begin{figure}[ht]
+\includegraphics [width=6.5in]{sandrapyrpackresults.jpg}
+\caption{This fidelity level graph shows that the wavelet transform packet method as a preconditioner to matrix multiplication is not reliable past the first resolution. The wavelet packet produces marginal results mostly due sections being placed out of order.}
+\label{packetresultsstraight}
+\end{figure}
+
+\begin{figure}[ht]
+\begin{center}\includegraphics [width=3in]{f16.jpg}\end{center}
+\caption{This image is a photo of an F-16 fighter jet provided Courtesy of the Signal and Image Processing Institute at the University of Southern California.  \cite{f16}}
+\label{image f16}
+\end{figure}
+\begin{figure}[ht]
+\begin{center}\includegraphics [width=5in]{f16resultsA.jpg}\end{center}
+\caption{This fidelity level graph shows that Psi Wavelet Transform (full decomposition) approximation error in matrix multiplication.  This graph in particular was obtained by multiplying the F-16 image by itself with various resolution levels of Wavelet Transforms applied. \cite{f16} }
+\label{image f16 fidelity}
+
+\end{figure}
+
+\begin{figure}[ht]
+\begin{center}\includegraphics [width=3in]{fishingboat.jpg}\end{center}
+\caption{This image is a photo of an F-16 fighter jet provided Courtesy of the Signal and Image Processing Institute at the University of Southern California.  \cite{fishingboat}}
+\label{image_fishingboat}
+\end{figure}
+
+
+
+\begin{figure}[ht]
+\begin{center}\includegraphics [width=5in]{fishingboatresultA.jpg}\end{center}
+\caption{This fidelity level graph shows that Psi Wavelet Transform (full decomposition) approximation error in matrix multiplication.  This graph in particular was obtained by multiplying the Fishing Boat image by itself with various resolution levels of Wavelet Transforms applied. \cite{fishingboat}  }
+\label{image_fishingboat_fidelity}
+\end{figure}
+
+
+\begin{figure}
+\begin{center}\includegraphics [width=3in] {opera.jpg}\end{center}
+\caption {This image is a photo of the Opera House in Lyon \cite{opera}}
+\label{Opera House}
+\end{figure}
+
+\begin{figure}[ht]
+\begin{center}\includegraphics [width=5in]{operaresultsA.jpg}\end{center}
+\caption{This fidelity level graph shows that Psi Wavelet Transform (full decomposition) approximation error in matrix multiplication.  This graph in particular was obtained by multiplying the Opera House image by itself with various resolution levels of Wavelet Transforms applied.  }
+\label{image_opera_fidelity}
+\end{figure}
+
+\begin{figure}[ht]
+\begin{center}\includegraphics [width=3in]{pentagon.jpg}\end{center}
+\caption{This image is an aerial photo of an Pentagon provided Courtesy of the Signal and Image Processing Institute at the University of Southern California.  \cite{pentagon}}
+\label{image fishingboat}
+\end{figure}
+
+\begin{figure}[ht]
+\begin{center}\includegraphics [width=5in]{pentagonresultsA.jpg}\end{center}
+\caption{This fidelity level graph shows that Psi Wavelet Transform (full decomposition) approximation error in matrix multiplication.  This graph in particular was obtained by multiplying the Pentagon image by itself with various resolution levels of Wavelet Transforms applied. }
+\label{image_pentagon_fidelity}
+\end{figure}
+
+\begin{figure}[ht]
+\begin{center}\includegraphics [width=3in]{peppers.jpg}\end{center}
+\caption{This image is an aerial photo of  ``Peppers'' provided Courtesy of the Signal and Image Processing Institute at the University of Southern California.  \cite{peppers}}
+\label{image Peppers}
+\end{figure}
+
+\begin{figure}[ht]
+\begin{center}\includegraphics [width=5in]{peppersresultsA.jpg}\end{center}
+\caption{This fidelity level graph shows that Psi Wavelet Transform (full decomposition) approximation error in matrix multiplication.  This graph in particular was obtained by multiplying the Peppers image by itself with various resolution levels of Wavelet Transforms applied. \cite{peppers} }
+\label{image_peppers_fidelity}
+\end{figure}
+
+\begin{figure}[ht]
+\begin{center}\includegraphics [width=3in]{watch.jpg}\end{center}
+\caption{``Pocket Watch on a Gold Chain. Copyright image courtesy of Kevin Odhner''   \cite{watch}}
+\label{image Peppers}
+\end{figure}
+
+\begin{figure}[ht]
+\begin{center}\includegraphics [width=5in]{watchResultsB.jpg}\end{center}
+\caption{This fidelity level graph shows that Psi Wavelet Transform (full decomposition) approximation error in matrix multiplication.  This graph in particular was obtained by multiplying the Watch image by itself with various resolution levels of Wavelet Transforms applied.  \cite{watch} }
+\label{image_watch_fidelity}
+\end{figure}
+
+\begin{figure}[ht]
+\begin{center}\includegraphics [width=3in]{water.jpg}\end{center}
+\caption{This image is an aerial photo of  ``Always running, never the same....'' provided Courtesy of the Jaime Vives Piqueres.  \cite{water}}
+\label{image Peppers}
+\end{figure}
+
+\begin{figure}[ht]
+\begin{center}\includegraphics [width=5in]{waterResultsA.jpg}\end{center}
+\caption{This fidelity level graph shows that Psi Wavelet Transform (full decomposition) approximation error in matrix multiplication.  This graph in particular was obtained by multiplying the Water image by itself with various resolution levels of Wavelet Transforms applied.  \cite{watch} }
+\label{image_waterfall_fidelity}
+\end{figure}
+
+
+\begin{figure}[ht]
+\begin{center}\includegraphics [width=3in]{waterfall.jpg}\end{center}
+\caption{Raytraced representation of M.C.Escher's (1898-1972) famous lithography
+'Waterfall' (1961), based upon an illusion drawn by
+Roger Penrose \cite{waterfall}. }
+\label{image waterfall}
+\end{figure}
+\begin{figure}[ht]
+\begin{center}\includegraphics [width=5in]{waterfallResultsA.jpg}\end{center}
+\caption{This fidelity level graph shows that Psi Wavelet Transform (full decomposition) approximation error in matrix multiplication.  This graph in particular was obtained by multiplying the Waterfall image by itself with various resolution levels of Wavelet Transforms applied.  \cite{waterfall} }
+\label{image_waterfall_fidelity}
+\end{figure}
+
+%\begin{thebibliography}{99}
+%\bibitem {waterfall} Sascha Ledinsky \textsl{Waterfall} http://oz.irtc.org/ftp/pub/stills/1998-10-31/waterfa1.txt Internet Raytracing Competition copyright October 31, 1998
+%\bibitem {water} Jaime Vives Piqueres \textsl {Always running, never the same...} http://oz.irtc.org/ftp/pub/stills/1998-10-31/running.txt  Internet Raytracing Competition copyright October 31, 1998
+%\bibitem {watch} Kevin Odhner \textsl {Pocket Watch on a Gold Chain} 
+%\bibitem {opera} fabien a. p. petitcolas {Opera House of Lyon} open domain
+%\bibitem {pentagon} Signal and Image Processing Institute at the University of Southern California \textsl{Pentagon} The copyright status of this images in unclear.
+%\bibitem {f16}  Signal and Image Processing Institute at the University of Southern California \textsl{F-16}
+% The copyright status of this images in unclear.
+%\bibitem  {peppers} Signal and Image Processing Institute at the University of Southern California \textsl {Peppers} The copyright status of this images in unclear.
+%\bibitem {fishingboat} Signal and Image Processing Institute at the University of Southern California \textsl {Fishing Boat} The copyright status of this images in unclear.
+
+%\end {thebibliography}
+% \end{document} 

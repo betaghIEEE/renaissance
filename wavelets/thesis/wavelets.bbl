@@ -1,0 +1,116 @@
+\begin{thebibliography}{10}
+
+\bibitem{opera}
+Opera house of lyon.
+\newblock fabien a. p. petitcolas.
+\newblock open domain.
+
+\bibitem{peppers}
+Peppers.
+\newblock Signal and Image Processing Institute at the University of Southern
+  California.
+\newblock The copyright status of this image is unclear.
+
+\bibitem{bank}
+R.~E. Bank and C.~C. Douglas.
+\newblock Sparse matrix multiplication package.
+\newblock 2001.
+
+\bibitem{bvpbeylkin}
+G.~Beylkin.
+\newblock On wavelet-based algorithms for solving differential equations.
+\newblock In {\em Wavelets: Mathematics and Applications}. CRC Press, 1993.
+
+\bibitem{amsbeylkin}
+G.~Beylkin.
+\newblock Wavelets and fast numerical algorithms.
+\newblock In {\em AMS-93 Proceedings of Symposia in Applied Mathematics},
+  volume~47, pages 89--117, 1993.
+
+\bibitem{fwtnal}
+G.~Beylkin, R.~Coifman, and V.~Rokhlin.
+\newblock Communications on pure and applied mathematics.
+\newblock Master's thesis, University of Colorado, 1991.
+
+\bibitem{ChuiIntro}
+C.~Chui.
+\newblock {\em An Introduction to Wavelets}.
+\newblock Academic Press San Diego, 1992.
+
+\bibitem{fernandez96software}
+G.~Fern\'{a}ndez, S.~Periaswamy, and W.~Sweldens.
+\newblock {LIFTPACK}: {A} software package for wavelet transforms using
+  lifting.
+\newblock In M.~Unser, A.~Aldroubi, and A.~F. Laine, editors, {\em Wavelet
+  Applications in Signal and Image Processing IV}, pages 396--408. Proc.\
+  SPIE~2825, 1996.
+
+\bibitem{digital}
+R.~C. Gonzolez and R.~E. Woods.
+\newblock {\em Digital Image Processing}.
+\newblock Prentice Hall, Inc. Upper Saddle River, New Jersey 07458, 2002.
+
+\bibitem{graps}
+A.~Graps.
+\newblock Introduction to wavelets.
+\newblock http://www.amara.com/current/wavelet.html.
+\newblock Retrieved March 20, 2004.
+
+\bibitem{lederman}
+S.~Huss-Lederman, E.~M. Jacobson, J.~Johnson, A.~Tsao, and T.~Turnbull.
+\newblock Strassen's algorithm for matrix multiplication: Modeling, analysis,
+  and implementation.
+\newblock In {\em Proceedings of the 1996 ACM/IEEE conference on Supercomputing
+  (CDROM)}, page~32. ACM Press, 1996.
+
+\bibitem{jawerth94overview}
+B.~Jawerth and W.~Sweldens.
+\newblock An overview of wavelet based multiresolution analyses.
+\newblock {\em {SIAM} Reviews}, 36(3):377--412, 1994.
+
+\bibitem{waterfall}
+S.~Ledinsky.
+\newblock Waterfall.
+\newblock Internet Raytracing Competition, October 1998.
+\newblock http://oz.irtc.org/ftp/pub/stills/1998-10-31/waterfa1.txt.
+
+\bibitem{lipschutz}
+S.~Lipschutz.
+\newblock {\em Schaum's Outlines Theory and Problems of Linear Algebra, 2nd
+  Edition}.
+\newblock McGraw Hill New York, 1991.
+
+\bibitem{watch}
+K.~Odhner.
+\newblock Pocket watch on a gold chain.
+\newblock Internet Raytracing Competition, 1998.
+
+\bibitem{water}
+J.~V. Piqueres.
+\newblock Always running, never the same...
+\newblock Internet Raytracing Competition, October 1998.
+\newblock http://oz.irtc.org/ftp/pub/stills/1998-10-31/running.txt.
+
+\bibitem{tabor}
+G.~Tabor.
+\newblock Wavelets - the idiots guide.
+\newblock http://monet.me.ic.ac.uk/people/gavin/java/waveletDemos.html.
+\newblock Retrieved March 20, 2004.
+
+\bibitem{walker}
+J.~Walker.
+\newblock {\em A Primer on Wavelets and Their Scientific Applications}.
+\newblock Chapman and Hall/CRC, 1999.
+
+\bibitem{translation}
+E.~W. Weisstein.
+\newblock Translation.
+\newblock From MathWorld--A Wolfram Web Resource, 2004.
+\newblock http://mathworld.wolfram.com/Translation.html.
+
+\bibitem{victor}
+M.~V. Wickerhauser.
+\newblock {\em Adapted Wavelet Analysis from Theory to Software}.
+\newblock Society for Industrial and Applied Mathematics Philadelphia, 2001.
+
+\end{thebibliography}

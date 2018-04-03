@@ -1,0 +1,197 @@
+\documentclass[11pt]{article}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+\textwidth = 6.5 in
+\textheight = 9 in
+\oddsidemargin = 0.0 in
+\evensidemargin = 0.0 in
+\topmargin = 0.0 in
+\headheight = 0.0 in
+\headsep = 0.0 in
+\parskip = 0.2in
+\parindent = 0.0in
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}{Definition}
+
+\title{Brief Article}
+\author{The Author}
+\begin{document}
+\maketitle
+
+
+\section {Wavelet Theory}
+
+Qualities/ behavior of spectral information acquired by Fourier Transform:
+\begin{itemize}\item Full knowledge must be known about signal in the time domain
+\item Small changes in small neighborhoods in the time domain drastically affect the frequency domain drastically affects the frequency domain
+\item Real Time Analysis of non-stationary is not practical with Fourier Transform
+\item Improvements are made with Gabor windowing function, short\_time Fourier Transform, and the integral wavelet transform 
+\item Things to watch out for
+\begin{itemize}\item Uncertainty principle as it applies to the window size
+\item Scaling and dilation of the basis function\end{itemize}\end{itemize} 
+\subsection {The Gabor Transform}
+All analog signals are represented in function, $f\in L^2(R)$
+
+The Fourier Transform 
+\[\hat{f}(\omega) = \int ^\infty _{-infty} e^{-i \omega t} f(t)dt \]
+
+such that 
+\begin{itemize}\item $t = $ time 
+\item $\omega = $ frequency\end{itemize}
+
+Given Gaussian function 
+\[ g_a (t) = \frac{1}{2\sqrt{\pi a}} e^{-\frac{t^2}{4\alpha}} \]
+
+The Gabor Transform 
+\[ (G^\alpha _b f) (\omega) = \int ^\infty _{-\infty } (e^{-i\omega t} f(t)) g_\alpha (t-b)dt \]
+
+The purpose of this transform is to focus the Fourier Transform around a particular segment (a window) of signal.
+
+The RMS or standard deviation determines the scaling factors, and the width of the Gabor Transform.
+\subsubsection {Interpretation of the Gabor Transform}
+Set \[G^\alpha \_{b,\omega} (t) = e^{i\omega t} g_\alpha (t-b)\] 
+The Gabor Transform becomes 
+\[ (G^\alpha _b f) (\omega) = \lbrace f, G^\alpha _{b, \omega} \rbrace = \int f(t) \bar{G^\alpha _{b,\omega} (t)} dt \]
+
+The Gabor Transform is a windowing function on f
+
+This is similar to the Integral Wavelet Transform and the Convolution Wavelet Transform.
+
+How does the Parseval Identity apply the Gabor Transform of f?
+
+Try this identity
+\[  G^\alpha _{b , \omega } (\n)  e^{-ib(\n -\omega)} e^{-\alpha(\n -\omega)^2}  \]
+\[ \lbrace G^\alpha _{b , \omega },  f \rbrace (\omega) = \frac {1}{2\pi} \lbrace \hat{f} , \hat{G} ^\alpha _{b,\omega} \lbrace\]
+
+How is this to be interpreted?  
+\begin{enumerate}\item The windowing Fourier Transform of $f$ with windowing function $g_\alpha$ at $t=b$ agrees with window inverse Fourier Transform of $\hat{f}$ with window function $g_{\alpha / 4}$ at $\n = \omega$
+\item Second the identity 
+\[\lbrace f, G^\alpha _{b, \omega} \rbrace = \lbrace f, H^\alpha _{b, \omega} \rbrace \]
+Shows that the information obtained by investigating an analog signal $f(t) $ at $t=b$ by using the window function $G^\alpha _{b,\omega}$ (Gabor Transform window) is the same information by observing the spectrum $\hat{f} (\n)$ of the signal in a neighborhood of the same frequency $\n = \omega$ by using the window function $H^\alpha _{b,\omega}$ 
+\item The product of width of time window and frequency window.
+\item The cartesian product
+\[ \]  % Come back and insert formula
+of the time window and frequency window is called the rectangular time-frequency window.
+\begin{enumerate}\item Width of the time frequency window = $2\sqrt{\alpha}$
+\item height of the time frequency window $\frac{1}{\sqrt{\alpha}}$\end{enumerate}
+\item Restrictions on the Gabor Transform is the window is constant and does not handle high and low frequency well.\end{enumerate}
+
+
+\subsection {Short Time Fourier Transform and the Uncertainty Principle}
+
+Other functions may also be used as windows functions instead.  Such functions must satisfy 
+\[w\in L^2(R) \]
+\[t w(t) \in L^2(R) \]
+\[  |t|^{1/2} w(t) \in L^2(R)  \]
+\[w\in L^1 (R) \]
+\begin{itemize}\item The Fourier Transform does not necessarily satisfy this condition and may not be a frequency window 
+\item The Haar Wavelet does not satisfy this condition and can not be used for time frequency location?
+\item The B-spline does not satisfy this condition and can not be used for time frequency analysis
+\begin{itemize}\item Both are non-continuous 
+\item $N_1 \not\in L^1 (R) $ and $\hat{\psi} \not \in L^1(R)$ which is the failure point\end{itemize}\end{itemize}
+
+\subsection {Integral Wavelet Transform}
+The STFT provides a rigid time frequency window that is unchanged.  
+
+\[ [\omega ^\ast + \omega - \Delta _{\hat{\omega}}, \omega ^\ast + \omega + \Delta _{\hat{\omega}} ] \]
+
+such that $\omega ^\ast + \omega$ is the center $\Delta _\omega $ is the frequency width (bandwidth)
+
+Relative to some basic wavelet, the IWT provides a flexible time frequency window which automatically narrows when observing high frequencies  and widen when studying low frequencies environments.
+
+Definition: If $\psi  \in L^2(R)$ satisfies the ``admissibility'' condition: 
+
+\[   C_\psi = \int ^\infty _{-\infty} \frac {|\hat{\psi}|^2}{|\psi|} d\omega < \infty \]
+then  \psi is called a ``basic wavelet.''  Relative to every basic $\psi$ , the integral wavelet transform (IWT) on $L^2 (R)$ is defined by 
+\[ (W_\psi f) (b,a) = |a|^\frac{1}{2} \int ^\infty _{-\infty} f(t) \bar {\psi (\frac{t-b}{a})} dt \]
+$f \in L^2 (R) $ where $a,b \in R$ with $a \not= 0$ 
+
+IWT defined 
+
+\[  \psi _{b,a} (t) = |a|^{-\frac{1}{2}} \psi (\frac{t-b}{a} )  ]\
+
+\[ (W_{\psi} f) (b,a) = \lbrace f, \psi _{b,a} \rbrace  \]
+such that 
+\begin{itemize}\item time window width is $\Delta _\psi$
+\item center at $t^\ast$
+\item window at $ [ b + at^\ast -a\Delta_\psi,  b + at^\ast + a\Delta_\psi ] $
+\item Window width $\alpha$\end{itemize}
+
+Reference page 61 Frequency Window
+
+The IWT $W_\psi f$ also gives local information of $\hat {f}$ with a frequency window:
+\[ [ \frac{\omega^\ast }{a} - \frac {1}{a} \Delta _\hat{\psi} , \frac{\omega^\ast }{a} + \frac {1}{a} \Delta _\hat{\psi}  ] \]
+The frequency window as a  frequency band (or octave) with center-frequency $\frac{\omega^\ast }{a}$ and a bandwidth of $\frac {2\Delta \hat{\psi}}{a} $.  The ratio is independent of scaling which is a constant Q filtering.  
+
+In other words, the IWT is defined as the inner product of a function and the wavelet, and this inner product is said to have the property of ``Constant Q Filtering''.   
+
+Reference Theorem 3.10 page 62:
+
+
+The IWT has a rewrite which comes from the following defines:
+\[ \psi _{b,a} (t) = |a| ^{-1/2} \psi (\frac{t-b}{a}) \]
+\[ ( \omega _\psi ) ( b, a) = \lbrace f, \psi_{b,a} \]
+
+In other words IWT is defined as a the inner product of a function and the wavelet.
+
+Such an inner product has the property of ``constant-q filtering''
+
+The fact is the ratio of the center frequency to bandwidth is independent of ``a''. 
+
+Reference Page 61 - 62
+Theorem : ``Let \psi be a basic wavelet which defines an IWT $W_\psi$.  Then 
+
+\[ C_\psi \lbrace f,g \rbrace \int ^\infty _{-\infty} \int ^\infty _{-\infty} [ W_\psi f) (b,a) \bar {(W_\psi g)(b,a)} ] \frac{da}{a^2} db\]
+$\forall f,g \in L^2 (R)$ Furthermore, $\forall f \in L^2 (R)$ and $x\in R$ at which $f$ is continuous,
+
+\[ f(x) \frac {1}{C_\psi } \int ^\infty _{-\infty} \int ^\infty _{-\infty} [(W_\psi f)(b,a)] \psi_{b,a} (x) \frac{da}{a} db \]
+$\psi _{b,a} = |a| ^{-1/2} \psi (\frac {t-b}{a}) $  ''
+
+Question is what does this theorem mean? 
+
+Typical Signal Analysis
+\[\omega >0 \]
+
+\[ \omega = \frac{\omega ^\ast }{a} \]
+
+such that 
+\begin{itemize}\item $\omega ^\ast$ is the center of $\hat{\psi}$
+\item $\psi ^\ast > 0 $
+\item $a > 0$\end{itemize}
+
+This is applied to the IWT $(W_\psi f)(b,a) $ 
+
+The extra condition is 
+\[  \int ^\infty _0 \frac{|\hat{\psi}(\omega)|}{\omega} d\omega = \int ^\infty _0 \frac{|\hat{-\psi}(\omega)|^2}{\omega} d\omega = \frac{1}{2} C_\psi < \infty \]
+
+Theorem: Let $\psi$ be a basic wavelet that satisfies the above condition, then 
+\[ \frac{1}{2}C_\psi \lbrace f,g \rbrace \int ^\infty _{-\infty} [ \int ^\infty _{-\infty} W_\psi f) (b,a) \bar {(W_\psi g)(b,a)} db] \frac{da}{a^2} \]
+
+$\forall f,g \in L^2 (R)$.  Furthermore, $\forall f \in L^2(R)$ and $x \in R$ at which $f$ is continuous:
+\[ f(x) = \frac{2}{C_\psi} \int ^\infty _ 0 [ \int ^infty _0 (W_\psi f) (b, a) \psi_{b,a} (x) db ] \frac{da}{a^2} \]
+such that $\psi _{b,a} (t) = |a|^{-1/2} \psi (\frac {t-b}{a} )$.
+
+\subsection {Dyadic Wavelet and Inversion }
+Signal analysis \_ partition of disjoint frequency bands binary partitions.
+
+\[\ast (0,\infty) = \cup ^\infty _{j=-\infty} ( 2^j \Delta_{\hat{\psi}} , 2^{j+1} \Delta_{\hat{\psi}} ]  \]
+
+such that 
+\begin{itemize}\item $\Delta _{\hat{psi}} > 0$ is the radius of the Fourier Transform of a basic wavelet
+\item $\hat{\psi}$ is the Fourier Transform of the basic wavelet 
+\item $\psi$ is the basic wavelet\end{itemize}
+
+
+A phase shift of $\psi$ by $\alpha$ is equivalent to the forward shift in frequency of $\hat{\psi}$ by the $\alpha$.  
+\[ \psi ^0 (t) - e^{i\alpha t} \psi (t) \to \hat{\psi} ^0 (\omega) = \hat{\psi} (\omega - \alpha)$
+
+Note page 79 Theorem 3.27
+  
+
+
+ \end{document}
