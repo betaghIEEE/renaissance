@@ -1,0 +1,46 @@
+\contentsline {chapter}{\numberline {1}Introduction}{4}
+\contentsline {chapter}{\numberline {2}Overview on Wavelets}{6}
+\contentsline {section}{\numberline {2.1}The Wavelet Basis Function}{6}
+\contentsline {subsection}{\numberline {2.1.1}Function Properties}{7}
+\contentsline {subsection}{\numberline {2.1.2}Translation and Dilation}{8}
+\contentsline {subsection}{\numberline {2.1.3}The Wavelet Basis Function}{9}
+\contentsline {section}{\numberline {2.2}The Wavelet Transform}{10}
+\contentsline {subsection}{\numberline {2.2.1}Wavelet Pairs: The Averaging Basis Function}{11}
+\contentsline {subsection}{\numberline {2.2.2}Transform Representation}{12}
+\contentsline {section}{\numberline {2.3}Multi-resolution Representation}{13}
+\contentsline {subsection}{\numberline {2.3.1}MRA}{13}
+\contentsline {subsection}{\numberline {2.3.2}MRE}{14}
+\contentsline {subsection}{\numberline {2.3.3}$\psi ^n$ Expansion}{15}
+\contentsline {section}{\numberline {2.4}Numerical Example}{16}
+\contentsline {subsection}{\numberline {2.4.1}MRA Example}{16}
+\contentsline {subsection}{\numberline {2.4.2}MRE Example}{17}
+\contentsline {subsection}{\numberline {2.4.3}$\psi ^n$ Expansion}{18}
+\contentsline {section}{\numberline {2.5}Implementation of the Wavelet Transform}{20}
+\contentsline {section}{\numberline {2.6}The 2D Wavelet Transform}{21}
+\contentsline {subsection}{\numberline {2.6.1}Multi-Resolution in Two Dimensions}{22}
+\contentsline {subsection}{\numberline {2.6.2}Methods of Implementation}{24}
+\contentsline {subsubsection}{1D to 2D Method}{24}
+\contentsline {subsubsection}{Vector - Matrix Method}{25}
+\contentsline {subsection}{\numberline {2.6.3}2-D MRA: Wavelet Pyramids}{26}
+\contentsline {subsection}{\numberline {2.6.4}2-D MRE via Quad Tree}{28}
+\contentsline {subsection}{\numberline {2.6.5}2-D $\psi ^n$ Implementation}{30}
+\contentsline {chapter}{\numberline {3}Image Processing Example of Wavelets}{31}
+\contentsline {section}{\numberline {3.1}Results --- 1D Wavelet Transform}{31}
+\contentsline {section}{\numberline {3.2}Results: 2D Wavelet Transform }{36}
+\contentsline {subsection}{\numberline {3.2.1}Multiresolution Results}{38}
+\contentsline {subsection}{\numberline {3.2.2}Threshold Filtering}{39}
+\contentsline {chapter}{\numberline {4}Matrix Multiplication via Wavelets}{45}
+\contentsline {section}{\numberline {4.1}Matrix Multiplication}{45}
+\contentsline {section}{\numberline {4.2}Wavelet Matrix Multiplication}{47}
+\contentsline {subsection}{\numberline {4.2.1}A $2\times 2$ example}{47}
+\contentsline {subsubsection}{Wavelet Transforms of the Matrices}{48}
+\contentsline {subsubsection}{Product of $A$ and $B$ in wavelet space}{48}
+\contentsline {subsubsection}{The product of the waveletized matrices}{49}
+\contentsline {subsection}{\numberline {4.2.2}Haar Wavelets and Vector Inner Products}{50}
+\contentsline {subsection}{\numberline {4.2.3}Matrix Multiply with the Haar Transform: Formal Proof}{51}
+\contentsline {section}{\numberline {4.3}Multi Resolution Expansion Proof}{58}
+\contentsline {chapter}{\numberline {5}Results}{60}
+\contentsline {section}{\numberline {5.1}Empirical Analysis: Wavelet Transform Pyramids}{61}
+\contentsline {section}{\numberline {5.2}Empirical Analysis: Wavelet Transform Packets}{62}
+\contentsline {section}{\numberline {5.3}Empirical Results on the Psi-N Wavelet Transform Method}{63}
+\contentsline {chapter}{\numberline {6}Conclusion}{75}

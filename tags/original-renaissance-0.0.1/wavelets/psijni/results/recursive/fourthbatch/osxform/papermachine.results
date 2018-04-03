@@ -1,0 +1,784 @@
+
+1 1zero value 48
+
+ At resolution 1
+
+ At epsilon 0.2
+
+ image 1 pgmclassics/papermachine.pgm
+ image 2 pgmclassics/papermachine.pgm¿768768 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿768768 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 8 
+ 
+ The vertices in the self WX form is 4 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 32434256
+ Total Data transfers 14152746
+ Total Data Compares 2359312 
+ The resolution in the self WX form is 8 
+ 
+ The vertices in the self WX form is 4 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 64868512
+ Total Data transfers 28305492
+ Total Data Compares 4718624 Generate Histogram 
+ Histogram allocated 589824 = 768 by768
+ Histogram arranged 
+ Sorting Histogram 
+  Generate Histogram 
+ Histogram allocated 589824 = 768 by768
+ Histogram arranged 
+ Sorting Histogram 
+  Beginning Multiply 
+
+ Energy of the standard 15695.8
+ Energy of the approximation 15695.8
+ Percent difference -9.2712e-16 Saved source and result
+ Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+
+ Total instructions 93180256
+ Total Data transfers 35383412
+ Total Data Compares 4718656
+ Energy of the standard 15695.8
+ Energy of the approximation 15695.8
+ Percent difference -8.1123e-16
+ Fidelity 1.81573e-13
+
+1 2zero value 48
+
+ At resolution 2
+
+ At epsilon 0.2
+
+ image 1 pgmclassics/papermachine.pgm
+ image 2 pgmclassics/papermachine.pgm¿768768 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿768768 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 8 
+ 
+ The vertices in the self WX form is 16 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 59556962
+ Total Data transfers 24766524
+ Total Data Compares 4718608 
+ The resolution in the self WX form is 8 
+ 
+ The vertices in the self WX form is 16 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 119113924
+ Total Data transfers 49533048
+ Total Data Compares 9437216 Generate Histogram 
+ Histogram allocated 589824 = 768 by768
+ Histogram arranged 
+ Sorting Histogram 
+  Generate Histogram 
+ Histogram allocated 589824 = 768 by768
+ Histogram arranged 
+ Sorting Histogram 
+  Beginning Multiply 
+
+ Energy of the standard 15695.8
+ Energy of the approximation 15695.8
+ Percent difference -3.4767e-16 Saved source and result
+ Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+
+ Total instructions 163940768
+ Total Data transfers 58970264
+ Total Data Compares 9437248
+ Energy of the standard 15695.8
+ Energy of the approximation 15695.8
+ Percent difference -1.50657e-15
+ Fidelity 2.15679e-13
+
+1 3zero value 48
+
+ At resolution 3
+
+ At epsilon 0.2
+
+ image 1 pgmclassics/papermachine.pgm
+ image 2 pgmclassics/papermachine.pgm¿768768 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿768768 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 8 
+ 
+ The vertices in the self WX form is 64 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 86679668
+ Total Data transfers 35380302
+ Total Data Compares 7077904 
+ The resolution in the self WX form is 8 
+ 
+ The vertices in the self WX form is 64 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 173359336
+ Total Data transfers 70760604
+ Total Data Compares 14155808 Generate Histogram 
+ Histogram allocated 589824 = 768 by768
+ Histogram arranged 
+ Sorting Histogram 
+  Generate Histogram 
+ Histogram allocated 589824 = 768 by768
+ Histogram arranged 
+ Sorting Histogram 
+  Beginning Multiply 
+
+ Energy of the standard 15695.8
+ Energy of the approximation 15695.8
+ Percent difference -3.59259e-15 Saved source and result
+ Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+
+ Total instructions 234701280
+ Total Data transfers 82557116
+ Total Data Compares 14155840
+ Energy of the standard 15695.8
+ Energy of the approximation 15695.8
+ Percent difference -2.43369e-15
+ Fidelity 2.54031e-13
+
+1 4zero value 48
+
+ At resolution 4
+
+ At epsilon 0.2
+
+ image 1 pgmclassics/papermachine.pgm
+ image 2 pgmclassics/papermachine.pgm¿768768 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿768768 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 8 
+ 
+ The vertices in the self WX form is 256 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 113802374
+ Total Data transfers 45994080
+ Total Data Compares 9437200 
+ The resolution in the self WX form is 8 
+ 
+ The vertices in the self WX form is 256 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 227604748
+ Total Data transfers 91988160
+ Total Data Compares 18874400 Generate Histogram 
+ Histogram allocated 589824 = 768 by768
+ Histogram arranged 
+ Sorting Histogram 
+  Generate Histogram 
+ Histogram allocated 589824 = 768 by768
+ Histogram arranged 
+ Sorting Histogram 
+  Beginning Multiply 
+
+ Energy of the standard 15695.8
+ Energy of the approximation 15695.8
+ Percent difference -2.3178e-15 Saved source and result
+ Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+
+ Total instructions 305461792
+ Total Data transfers 106143968
+ Total Data Compares 18874432
+ Energy of the standard 15695.8
+ Energy of the approximation 15695.8
+ Percent difference -2.89725e-15
+ Fidelity 2.88712e-13
+
+1 5zero value 48
+
+ At resolution 5
+
+ At epsilon 0.2
+
+ image 1 pgmclassics/papermachine.pgm
+ image 2 pgmclassics/papermachine.pgm¿768768 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿768768 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 8 
+ 
+ The vertices in the self WX form is 1024 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 140925080
+ Total Data transfers 56607858
+ Total Data Compares 11796496 
+ The resolution in the self WX form is 8 
+ 
+ The vertices in the self WX form is 1024 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 281850160
+ Total Data transfers 113215716
+ Total Data Compares 23592992 Generate Histogram 
+ Histogram allocated 589824 = 768 by768
+ Histogram arranged 
+ Sorting Histogram 
+  Generate Histogram 
+ Histogram allocated 589824 = 768 by768
+ Histogram arranged 
+ Sorting Histogram 
+  Beginning Multiply 
+
+ Energy of the standard 15695.8
+ Energy of the approximation 15695.8
+ Percent difference -5.21505e-15 Saved source and result
+ Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+
+ Total instructions 376222304
+ Total Data transfers 129730820
+ Total Data Compares 23593024
+ Energy of the standard 15695.8
+ Energy of the approximation 15695.8
+ Percent difference -3.94026e-15
+ Fidelity 3.26641e-13
+
+1 6zero value 48
+
+ At resolution 6
+
+ At epsilon 0.2
+
+ image 1 pgmclassics/papermachine.pgm
+ image 2 pgmclassics/papermachine.pgm¿768768 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿768768 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 8 
+ 
+ The vertices in the self WX form is 4096 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 168047786
+ Total Data transfers 67221636
+ Total Data Compares 14155792 
+ The resolution in the self WX form is 8 
+ 
+ The vertices in the self WX form is 4096 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 336095572
+ Total Data transfers 134443272
+ Total Data Compares 28311584 Generate Histogram 
+ Histogram allocated 589824 = 768 by768
+ Histogram arranged 
+ Sorting Histogram 
+  Generate Histogram 
+ Histogram allocated 589824 = 768 by768
+ Histogram arranged 
+ Sorting Histogram 
+  Beginning Multiply 
+
+ Energy of the standard 15695.8
+ Energy of the approximation 15695.8
+ Percent difference -3.01314e-15 Saved source and result
+ Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+
+ Total instructions 446982816
+ Total Data transfers 153317672
+ Total Data Compares 28311616
+ Energy of the standard 15695.8
+ Energy of the approximation 15695.8
+ Percent difference -5.09916e-15
+ Fidelity 4.09957e-13
+
+1 7zero value 48
+
+ At resolution 7
+
+ At epsilon 0.2
+
+ image 1 pgmclassics/papermachine.pgm
+ image 2 pgmclassics/papermachine.pgm¿768768 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿768768 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 8 
+ 
+ The vertices in the self WX form is 16384 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 195170492
+ Total Data transfers 77835414
+ Total Data Compares 16515088 
+ The resolution in the self WX form is 8 
+ 
+ The vertices in the self WX form is 16384 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 390340984
+ Total Data transfers 155670828
+ Total Data Compares 33030176 Generate Histogram 
+ Histogram allocated 589824 = 768 by768
+ Histogram arranged 
+ Sorting Histogram 
+  Generate Histogram 
+ Histogram allocated 589824 = 768 by768
+ Histogram arranged 
+ Sorting Histogram 
+  Beginning Multiply 
+
+ Energy of the standard 15695.8
+ Energy of the approximation 15695.8
+ Percent difference -3.94026e-15 Saved source and result
+ Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+ In Col WIX 0 by 0 to 767 by 767 
+ In Row WIX 0 by 0 to 767 by 767 
+
+ Total instructions 517743328
+ Total Data transfers 176904524
+ Total Data Compares 33030208
+ Energy of the standard 15695.8
+ Energy of the approximation 15695.8
+ Percent difference -5.09916e-15
+ Fidelity 3.90674e-13

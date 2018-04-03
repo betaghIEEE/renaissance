@@ -1,0 +1,155 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 99.2beta8 (1.43)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Practical Implementation</TITLE>
+<META NAME="description" CONTENT="Practical Implementation">
+<META NAME="keywords" CONTENT="multiply">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v99.2beta8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="multiply.css">
+
+<LINK REL="next" HREF="node10.html">
+<LINK REL="previous" HREF="node8.html">
+<LINK REL="up" HREF="multiply.html">
+<LINK REL="next" HREF="node10.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html108"
+  HREF="node10.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html106"
+  HREF="multiply.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html100"
+  HREF="node8.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A>   
+<BR>
+<B> Next:</B> <A NAME="tex2html109"
+  HREF="node10.html">About this document ...</A>
+<B> Up:</B> <A NAME="tex2html107"
+  HREF="multiply.html">Wavelet Multiplication</A>
+<B> Previous:</B> <A NAME="tex2html101"
+  HREF="node8.html">Chain Multiplication Structure</A>
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00030000000000000000">
+Practical Implementation</A>
+</H1>
+
+<P>
+There are few questions about the practical implementation that must be answered:
+
+<OL>
+<LI>Are the matrices square matrices, and same size?
+</LI>
+<LI>If not, are the dimensions suitable for multiplication?
+</LI>
+<LI>If so, what is the maximum resolution for each matrix?  The lesser maximum is the limit for both.
+</LI>
+<LI>Is the wavelet transform performed on each matrix the same?
+</LI>
+</OL>
+
+<P>
+A yes answer to the first matrix, allows for an relatively easy transform, and matrix multiply.  If the matrices are not square, then practical problems exist.  If the wavelet transform is the same on each, then the linear proof is sound.  However, if they are not then the proof is bogus and the multiplication is too.  
+
+<P>
+The general wavelet based matrix multiply is as follows:
+
+<OL>
+<LI>Arguments:
+
+<UL>
+<LI>A :  a <IMG
+ WIDTH="52" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img30.png"
+ ALT="$m \times p$"> matrix
+</LI>
+<LI>B: a <IMG
+ WIDTH="47" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img31.png"
+ ALT="$p \times n$"> matrix
+</LI>
+</UL>
+</LI>
+<LI>Results:  C : a <IMG
+ WIDTH="54" HEIGHT="33" ALIGN="MIDDLE" BORDER="0"
+ SRC="img32.png"
+ ALT="$m \times n$"> matrix
+</LI>
+<LI>Procedure:
+
+<UL>
+<LI><!-- MATH
+ $A \stackrel{\psi}{\to} \alpha$
+ -->
+<IMG
+ WIDTH="58" HEIGHT="29" ALIGN="BOTTOM" BORDER="0"
+ SRC="img33.png"
+ ALT="$ A \stackrel{\psi}{\to} \alpha$">
+</LI>
+<LI><!-- MATH
+ $B \stackrel{\psi}{\to} \beta$
+ -->
+<IMG
+ WIDTH="58" HEIGHT="54" ALIGN="MIDDLE" BORDER="0"
+ SRC="img34.png"
+ ALT="$ B \stackrel{\psi}{\to} \beta$">
+</LI>
+<LI><!-- MATH
+ $\alpha \stackrel {Chain Row}{\to} \alpha ^c$
+ -->
+<IMG
+ WIDTH="110" HEIGHT="28" ALIGN="BOTTOM" BORDER="0"
+ SRC="img35.png"
+ ALT="$ \alpha \stackrel {Chain Row}{\to} \alpha ^c$">
+</LI>
+<LI><!-- MATH
+ $\beta \stackrel {Chain Column}{\to} \beta ^c$
+ -->
+<IMG
+ WIDTH="132" HEIGHT="52" ALIGN="MIDDLE" BORDER="0"
+ SRC="img36.png"
+ ALT="$ \beta \stackrel {Chain Column}{\to} \beta ^c$">
+</LI>
+<LI>Chain Multiply (<!-- MATH
+ $\alpha ^c , \beta ^c$
+ -->
+<IMG
+ WIDTH="50" HEIGHT="35" ALIGN="MIDDLE" BORDER="0"
+ SRC="img37.png"
+ ALT="$\alpha ^c , \beta ^c$">) <IMG
+ WIDTH="42" HEIGHT="19" ALIGN="BOTTOM" BORDER="0"
+ SRC="img38.png"
+ ALT="$\to C$"> 
+</LI>
+</UL>
+</LI>
+</OL>
+
+<P>
+<BR><HR>
+<ADDRESS>
+Daniel Beatty
+2003-06-03
+</ADDRESS>
+</BODY>
+</HTML>

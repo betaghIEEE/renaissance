@@ -1,0 +1,707 @@
+
+1 1zero value 48
+
+ At resolution 1
+
+ image 1 pgmclassics/fishingboat.pgm
+ image 2 pgmclassics/fishingboat.pgm¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 4 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 14413908
+ Total Data transfers 6289452
+ Total Data Compares 1048594 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 4 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 28827816
+ Total Data transfers 12578904
+ Total Data Compares 2097188
+ Energy of the standard 18827.4
+ Energy of the approximation 18827.4
+ Percent difference -9.66142e-16 Saved source and result
+ Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+
+ Total instructions 38789456
+ Total Data transfers 14676092
+ Total Data Compares 2097224
+ Energy of the standard 18827.4
+ Energy of the approximation 18827.4
+ Percent difference -9.66142e-16
+ Fidelity 1.66816e-13
+
+1 2zero value 48
+
+ At resolution 2
+
+ image 1 pgmclassics/fishingboat.pgm
+ image 2 pgmclassics/fishingboat.pgm¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 16 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 26466406
+ Total Data transfers 11006014
+ Total Data Compares 2097170 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 16 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 52932812
+ Total Data transfers 22012028
+ Total Data Compares 4194340
+ Energy of the standard 18827.4
+ Energy of the approximation 18827.4
+ Percent difference 1.3526e-15 Saved source and result
+ Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+
+ Total instructions 70234512
+ Total Data transfers 25157792
+ Total Data Compares 4194376
+ Energy of the standard 18827.4
+ Energy of the approximation 18827.4
+ Percent difference -1.73905e-15
+ Fidelity 2.02148e-13
+
+1 3zero value 48
+
+ At resolution 3
+
+ image 1 pgmclassics/fishingboat.pgm
+ image 2 pgmclassics/fishingboat.pgm¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 64 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 38518904
+ Total Data transfers 15722576
+ Total Data Compares 3145746 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 64 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 77037808
+ Total Data transfers 31445152
+ Total Data Compares 6291492
+ Energy of the standard 18827.4
+ Energy of the approximation 18827.4
+ Percent difference -2.51197e-15 Saved source and result
+ Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+
+ Total instructions 101679568
+ Total Data transfers 35639492
+ Total Data Compares 6291528
+ Energy of the standard 18827.4
+ Energy of the approximation 18827.4
+ Percent difference -2.51197e-15
+ Fidelity 2.46824e-13
+
+1 4zero value 48
+
+ At resolution 4
+
+ image 1 pgmclassics/fishingboat.pgm
+ image 2 pgmclassics/fishingboat.pgm¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 256 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 50571402
+ Total Data transfers 20439138
+ Total Data Compares 4194322 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 256 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 101142804
+ Total Data transfers 40878276
+ Total Data Compares 8388644
+ Energy of the standard 18827.4
+ Energy of the approximation 18827.4
+ Percent difference -1.73905e-15 Saved source and result
+ Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+
+ Total instructions 133124624
+ Total Data transfers 46121192
+ Total Data Compares 8388680
+ Energy of the standard 18827.4
+ Energy of the approximation 18827.4
+ Percent difference -3.28488e-15
+ Fidelity 2.94567e-13
+
+1 5zero value 48
+
+ At resolution 5
+
+ image 1 pgmclassics/fishingboat.pgm
+ image 2 pgmclassics/fishingboat.pgm¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 1024 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 62623900
+ Total Data transfers 25155700
+ Total Data Compares 5242898 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 1024 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 125247800
+ Total Data transfers 50311400
+ Total Data Compares 10485796
+ Energy of the standard 18827.4
+ Energy of the approximation 18827.4
+ Percent difference -3.67134e-15 Saved source and result
+ Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+
+ Total instructions 164569680
+ Total Data transfers 56602892
+ Total Data Compares 10485832
+ Energy of the standard 18827.4
+ Energy of the approximation 18827.4
+ Percent difference -4.63748e-15
+ Fidelity 3.42861e-13
+
+1 6zero value 48
+
+ At resolution 6
+
+ image 1 pgmclassics/fishingboat.pgm
+ image 2 pgmclassics/fishingboat.pgm¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 4096 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 74676398
+ Total Data transfers 29872262
+ Total Data Compares 6291474 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 4096 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 149352796
+ Total Data transfers 59744524
+ Total Data Compares 12582948
+ Energy of the standard 18827.4
+ Energy of the approximation 18827.4
+ Percent difference -9.66142e-16 Saved source and result
+ Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+
+ Total instructions 196014736
+ Total Data transfers 67084592
+ Total Data Compares 12582984
+ Energy of the standard 18827.4
+ Energy of the approximation 18827.4
+ Percent difference -5.79685e-15
+ Fidelity 4.03415e-13
+
+1 7zero value 48
+
+ At resolution 7
+
+ image 1 pgmclassics/fishingboat.pgm
+ image 2 pgmclassics/fishingboat.pgm¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 16384 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 86728896
+ Total Data transfers 34588824
+ Total Data Compares 7340050 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 16384 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 173457792
+ Total Data transfers 69177648
+ Total Data Compares 14680100
+ Energy of the standard 18827.4
+ Energy of the approximation 18827.4
+ Percent difference -3.86457e-15 Saved source and result
+ Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+
+ Total instructions 227459792
+ Total Data transfers 77566292
+ Total Data Compares 14680136
+ Energy of the standard 18827.4
+ Energy of the approximation 18827.4
+ Percent difference -6.76299e-15
+ Fidelity 4.94544e-13

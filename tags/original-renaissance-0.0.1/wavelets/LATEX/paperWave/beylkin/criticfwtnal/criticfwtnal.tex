@@ -1,0 +1,51 @@
+\documentclass[11pt]{article}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `basename #1 .tif`.png}
+
+\textwidth = 6.5 in
+\textheight = 9 in
+\oddsidemargin = 0.0 in
+\evensidemargin = 0.0 in
+\topmargin = 0.0 in
+\headheight = 0.0 in
+\headsep = 0.0 in
+\parskip = 0.2in
+\parindent = 0.0in
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}{Definition}
+
+\title{Critique and Notes on Article: Fast Wavelet Transforms and Numerical Algorithms I }
+\author{Daniel Beatty}
+\begin{document}
+\maketitle
+
+\section {Introduction} 
+\subsection {Reasons for Wavelets in Numerical Computations}
+The article makes the following claims within the first paragraph.  
+\begin{enumerate}\item Rapid Application of dense matrices:  The article claims that direct application of an $N \times N$ matrix to a vector is an $O(N^2)$ operation.
+\item Integral Applications:  These are also claimed as numerically expensive with hidden recursively generated vectors which large quickly.  The complexity of these operations are claimed as $O(N^3)$ in complexity.  
+\item Finite Difference and Finite Element potential: These items are claimed to be devices for reducing a partial differential equation to a sparse linear system with an inherently high condition number.  
+\item Fast Fourier Transform Limitation:  The FFT and most related algorithms suffer from excessive costs of their transform.  Typically, these transforms have complexity $O(N \log (N)$.   Also, these schemes suffer from a fragile exactness due to the properties of the operator.  
+\item Fast Approximate Algorithms exploiting analytic properties:  Such operators are claimed to be applicable to arbitrary vectors.  As a result, the article claims that these operators ``do not require that the operators in question be translation invariant, and are considerably more adaptable than the algorithms base on the FFT and its variants.''
+\item Fast Numerical Applications: The wavelet method normally requires O(N) operations and is directly applicable to all Calderon-Zygmund,  pseudo-differential operators, and general operators with a specified degree of accuracy ( finite accuracy).  \end{enumerate}
+
+\subsection { Methods of the Paper}
+The paper used the Haar Wavelet Transform, and mechanisms first developed by Stromberg, Meyer, and Ingrid Daubechies.  Operators included in the study are integral, Dirichlet and Neumann boundary value problems for elliptical partial differential equations, and  Legendre series.  The idea like most wavelet schemes is to use the wavelet transform to make the matrix operator very sparse.  Once that is the case, the operation against a vector is $O(N)$ in complexity.      The construction is claimed to be $O(N^2)$ with the exception of structures whose singularities are known a priori.  In the case of the exception, the compression operator is an order O(N) procedure.  
+
+Mechanisms provided that the article claims to provide for evaluating integral operators.  A standard and non-standard form.  The non-standard scheme claims to extend the standard form leading to an $O(N)$ scheme.  
+
+The paper is organized with section concepts.  The first concept is the Haar Wavelet Basis.  Second are relevant facts regarding wavelets.  Third is a description of the integral operators for which we obtain an order N algorithm.  Included with the third is a billinear operator and its description.  Fourth is the complexity analysis.  Finally, the numerical applications of wavelets are presented.  
+
+\section{Properties of Wavelets}
+One property that the article hits on is the fact the Haar Wavelet does not drop off very fast.  In the case of the paper, the Daubechies Wavelet Basis functions are used.  
+
+\begin{thebibliography}{99}
+\bibitem {fwtnal} G. Beylkin, R. Coifman, and V. Rokhlin \textsl {Fast Wavelet Transforms and Numerical Algorithms I, Article in Communications on pure and applied mathematics} copyright 1991 Wiley, New York
+\end {thebibliography}
+
+
+ \end{document}

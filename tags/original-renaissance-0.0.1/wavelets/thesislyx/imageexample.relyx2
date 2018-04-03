@@ -1,0 +1,787 @@
+
+\layout Standard
+
+This chapter is for showing graphically examples of the one-dimensional
+ and two dimensional wavelet transform.
+ For one dimensional wavelet transform a simple sinusoid signal is used
+ as the source input to measure correctness of the implementation.
+ Likewise, a simple pictorial image is used as the test input to show correctnes
+s
+ of these implementations of the two dimensional wavelet transform.
+\layout Section
+
+Results --- 1D Wavelet Transform
+\layout Standard
+
+Testing of the 1D wavelet was performed on a sinusoidal wave form of 128
+ elements: 
+\begin_inset Formula \begin{equation} \label{sinusoid}
+y(n) = 10 \sin \left({n \over 128}\right) 
+	- 5 \sin \left({n \over 64}\right) 
+	+ 2 \sin \left({3 n \over 128}\right)
+	- \sin \left({n \over 32}\right).
+\end{equation}
+\end_inset 
+
+ This function is the input function used for the one-dimensional implementation
+s
+ and is shown graphically in Figure 
+\begin_inset LatexCommand \ref{sample}
+
+\end_inset 
+
+.
+ The first test of the 1D transform used the even elements of both convolutions
+ to generate the wavelet transform.
+ These even elements came from the over-complete form and naturally allow
+ the potential to have complete information.
+ However, in doing so, a fundamental flaw appears.
+\layout Standard
+
+
+\begin_float fig 
+
+\layout Standard
+
+
+\align center 
+
+\begin_inset Figure
+file sample.jpg
+width 2 4
+flags 9
+
+\end_inset 
+
+
+\layout Caption
+
+Sample function.
+ The 
+\begin_inset Formula \( x\)
+\end_inset 
+
+-axis is the array index (index 
+\begin_inset Formula \( n\)
+\end_inset 
+
+).
+ The 
+\begin_inset Formula \( y\)
+\end_inset 
+
+ value is simple -- the value 
+\begin_inset Formula \( y(n)\)
+\end_inset 
+
+. 
+\layout Standard
+
+
+\begin_inset LatexCommand \label{sample}
+
+\end_inset 
+
+
+\end_float 
+
+
+\layout Standard
+
+In order to evaluate the effectiveness of the wavelet transform three tests
+ have been devised.
+ First, energy equivalence is used to determine how much energy is retained
+ in the transform from the original.
+ The general shape is used on a the first resolution to test if the average
+ signal has the same general shape as the original.
+ Lastly, the inverse transform is used to recover the original signal.
+ A comparison is made between the original and the recovered signal.
+\layout Standard
+
+After one resolution, the transformed signal has the same energy as the
+ original.
+ This is good since it allows the original to be recovered from the transform.
+ Also, the average component of the transform has the same shape as the
+ original, which is good.
+ However, the recovered signal is missing the last element.
+ Refer to Figure 
+\begin_inset LatexCommand \ref{recoverEven}
+
+\end_inset 
+
+.
+ The secret is in which elements are used from the over-complete to make
+ the complete.
+ The over-complete form is defined from the average and difference components
+ which are simply the result of convolution.
+\layout Standard
+
+
+\begin_float fig 
+
+\layout Standard
+
+
+\align center 
+
+\begin_inset Figure
+file haar1d.jpg
+width 2 6
+flags 9
+
+\end_inset 
+
+
+\layout Caption
+
+
+\begin_inset LatexCommand \label{wavelet
+\latex latex 
+_
+\latex default 
+sample}
+
+\end_inset 
+
+ Signal after the wavelet transformation.
+\end_float 
+
+
+\layout Standard
+
+The convolution means is at the heart of the issue.
+ The convolution operator in this case starts with the first element of
+ the filter against the first element of the signal.
+ In the simple Haar Wavelet case, there is a transformation pairing 
+\begin_inset Formula \[ 
+(S_i , S_{i-1}) \rightarrow A_i, \mbox{ and } (S_i , S_{i-1}) \rightarrow D_i .
+\]
+\end_inset 
+
+ In this pairing with zero indexed signals, the odd indexed elements from
+ the over-complete must be used to have all elements of the original accounted
+ for.
+\layout Standard
+
+Also this produces a functional difference between wavelet inverse transform
+ for odd and even versions.
+ The difference is slight; however, the last element is lost in the even
+ indexed form. 
+\begin_inset Formula \begin{eqnarray*} 
+\mbox{Odd: } \qquad R_{2i} =(A_i - D_i ) \sqrt{1/2}, &\qquad& R_{2i+1}=(A_i + D_i ) \sqrt{1/2} \\
+\mbox{Even: } \qquad R_{2i} =(A_i + D_i ) \sqrt{1/2}, &\qquad& R_{2i-1}=(A_i - D_i ) \sqrt{1/2} 
+\end{eqnarray*}
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_float fig 
+
+\layout Standard
+
+
+\align center 
+
+\begin_inset Figure
+file recoveredEven.jpg
+width 2 6
+flags 9
+
+\end_inset 
+
+
+\layout Caption
+
+Recovered function.
+ The 
+\begin_inset Formula \( x\)
+\end_inset 
+
+-axis is the array index (index n).
+ The 
+\begin_inset Formula \( y\)
+\end_inset 
+
+ value is simply the value 
+\begin_inset Formula \( y(n)\)
+\end_inset 
+
+.
+ The function was recovered from an even indexed wavelet transform. 
+\layout Standard
+
+
+\begin_inset LatexCommand \label{recoverEven}
+
+\end_inset 
+
+
+\end_float 
+
+
+\layout Standard
+
+
+\begin_float fig 
+
+\layout Standard
+
+
+\align center 
+
+\begin_inset Figure
+file recovered.jpg
+width 2 6
+flags 9
+
+\end_inset 
+
+
+\layout Caption
+
+Recovered function.
+ The x-axis is the array index (index n).
+ The y value is simply the value y[n].
+ The function was recovered from an odd indexed wavelet transform. 
+\layout Standard
+
+
+\begin_inset LatexCommand \label{recoverOdd}
+
+\end_inset 
+
+
+\end_float 
+
+
+\layout Standard
+
+An odd indexed wavelet transform yields the same energy.
+ However, all of the values are accounted for.
+ Refer to Figure 
+\begin_inset LatexCommand \ref{recoverOdd}
+
+\end_inset 
+
+.
+\layout Section
+
+Results: 2D Wavelet Transform 
+\layout Standard
+
+A simple room picture shows the difference that correct indexing produces
+ in the wavelet transform and its inverse.
+ The 1D to 2D method shows the incorrectly indexed case.
+ A correctly indexed version is shown in the vector-matrix method.
+\layout Standard
+
+The 1D to 2D implementation has a serious issue with memory leak errors.
+ Memory is allocated and deallocated quickly, and on some platforms shows
+ up as an error.
+ Some platforms are not forgiving of this error and will force the program
+ to terminate (Macintosh OSX 10.2, using gcc 3.1).
+ On other platforms, the error is tolerated and performance is degraded
+ (IRIX, SGI Octane2 using gcc 2.9).
+ An example image of 720 x 486 required nearly 10 minutes to compute the
+ wavelet transform by this method on an SGI Octane2.
+ However, it does eventually return a correct result.
+\layout Standard
+
+The matrix-vector method also yields the correct result.
+ However, there is less memory overhead in this method as compared to the
+ 1D to 2D method.
+ As a result, both the row wavelet transform and column wavelet transforms
+ are performed more quickly, with fewer memory transfers and allocations.
+ Obviously, this also allows for the operation to be conducted almost entirely
+ in cache memory on both the SGI Octane2 and Macintosh G4 based machines.
+ A Macintosh G3 based machine still requires main memory at a minimum to
+ execute the same operation.A correct result must also be matched to a correct
+ inverse method.
+ The indexing order matters.
+ The inverse transform method is a forward inverse transform method.
+ In the case of 1D to 2D transform, the ordering was reverse indexed (Figure
+ 
+\begin_inset LatexCommand \ref{rightWavepic}
+
+\end_inset 
+
+).
+ As a result of an error in indexing, ringing is seen on edges in this method(Fi
+gure
+ 
+\begin_inset LatexCommand \ref{rightDanRecovered}
+
+\end_inset 
+
+) for a case in point.
+ Caution is incredibly important when matching both forward and reverse
+ indexing, since matching the mathematics to the actual ordering can be
+ obscure and tricky.
+\layout Standard
+
+A correct result is shown in Figure 
+\begin_inset LatexCommand \ref{selfRecover}
+
+\end_inset 
+
+.
+ In this case, the indexing was matched up and ringing is not present.
+ It is clear that the recovered image and the original (Figure 
+\begin_inset LatexCommand \ref{rightDan}
+
+\end_inset 
+
+) are nearly indistinguishable.
+\layout Standard
+
+
+\begin_float fig 
+
+\layout Standard
+
+
+\align center 
+
+\begin_inset Figure
+file rightDan.jpg
+width 2 4
+flags 9
+
+\end_inset 
+
+
+\layout Caption
+
+Original Image.
+ This image is the original image. 
+\layout Standard
+
+
+\begin_inset LatexCommand \label{rightDan}
+
+\end_inset 
+
+
+\end_float 
+
+
+\layout Standard
+
+
+\begin_float fig 
+
+\layout Standard
+
+
+\align center 
+
+\begin_inset Figure
+file revRecover.jpg
+width 2 4
+flags 9
+
+\end_inset 
+
+
+\layout Caption
+
+Recovered Image.
+ This image is the recovered image.
+ Depending on whether the image was saved as a picture first can affect
+ the white spots in the picture.
+ Ringing is also an issue. 
+\layout Standard
+
+
+\begin_inset LatexCommand \label{rightDanRecovered}
+
+\end_inset 
+
+
+\end_float 
+
+
+\layout Standard
+
+
+\begin_float fig 
+
+\layout Standard
+
+
+\align center 
+
+\begin_inset Figure
+file revWavepic.jpg
+width 2 4
+flags 9
+
+\end_inset 
+
+
+\layout Caption
+
+Wavelet Transform Image.
+ This image is divided in to average, horizontal, vertical and diagonal
+ components. 
+\layout Standard
+
+
+\begin_inset LatexCommand \label{rightWavepic}
+
+\end_inset 
+
+
+\end_float 
+
+
+\layout Standard
+
+
+\begin_float fig 
+
+\layout Standard
+
+
+\align center 
+
+\begin_inset Figure
+file selfWavepic.jpg
+width 2 4
+flags 9
+
+\end_inset 
+
+
+\layout Caption
+
+Wavelet Transform Image.
+ This image is divided in to average, horizontal, vertical and diagonal
+ components, using the vector-matrix version. 
+\layout Standard
+
+
+\begin_inset LatexCommand \label{wavepic}
+
+\end_inset 
+
+
+\end_float 
+
+
+\layout Standard
+
+
+\begin_float fig 
+
+\layout Standard
+
+
+\align center 
+
+\begin_inset Figure
+file selfRecover.jpg
+width 2 4
+flags 9
+
+\end_inset 
+
+
+\layout Caption
+
+Recovered Image (Vector-Matrix Method).
+ This image is the recovered image.
+ This version avoids the ringing by using the vector-matrix version which
+ is more aligned for the inverse wavelet transform. 
+\layout Standard
+
+
+\begin_inset LatexCommand \label{selfRecover}
+
+\end_inset 
+
+
+\end_float 
+
+
+\layout Subsection
+
+Multiresolution Results
+\layout Standard
+
+The expected result is a picture within a picture.
+ Each average component has a further transform on it.
+ The three resolution transform has the form: 
+\begin_inset Formula \[ 
+\left(\begin{array}{cccccccc}A_3 & V_3 & V_2 &  & V_1 &  &  &  \\H_3 & D_3 &  &  &  &  &  &  \\H_2 &  & D_2 &  &  &  &  &  \\ &  &  &  &  &  &  &  \\H_1 &  &  &  & D_1 &  &  &  \\ &  &  &  &  &  &  &  \end{array}\right)
+\]
+\end_inset 
+
+ Refer to Figure 
+\begin_inset LatexCommand \ref{wavepicR3}
+
+\end_inset 
+
+ for the image transform results.
+\layout Standard
+
+
+\begin_float fig 
+
+\layout Standard
+
+
+\align center 
+
+\begin_inset Figure
+file wavepic3R.jpg
+width 2 4
+flags 9
+
+\end_inset 
+
+
+\layout Caption
+
+Wavelet Transform Image.
+ This image is divided in to average, horizontal, vertical and diagonal
+ components using multiresolution wavelet transform.
+ Note the the average component was transformed one step further. 
+\layout Standard
+
+
+\begin_inset LatexCommand \label{wavepicR3}
+
+\end_inset 
+
+
+\end_float 
+
+
+\layout Standard
+
+
+\begin_float fig 
+
+\layout Standard
+
+
+\align center 
+
+\begin_inset Figure
+file recoverHid.jpg
+width 2 4
+flags 9
+
+\end_inset 
+
+
+\layout Caption
+
+Recovered Image - Wrong Order (Multiresolution).
+ This image shows a 2D wavelet transform after it was recovered out of order.
+ Obviously, the distortion is hideous. 
+\layout Standard
+
+
+\begin_inset LatexCommand \label{recoverHid}
+
+\end_inset 
+
+
+\end_float 
+
+
+\layout Standard
+
+To obtain the inverse, an exact reverse procedure is necessary, otherwise
+ the distortion is hideous.
+ The first attempt of the wavelet inverse transform was out of order, refer
+ to Figure 
+\begin_inset LatexCommand \ref{recoverHid}
+
+\end_inset 
+
+.
+ A correct picture was obtained during the second attempt.
+ Correct order yielded correct results, refer to Figure 
+\begin_inset LatexCommand \ref{rightDanRecovered}
+
+\end_inset 
+
+.
+\layout Subsection
+
+Threshold Filtering
+\layout Standard
+
+After a triple resolution, a 0.02 threshold will eliminate 81.1706 percent
+ of elements in the original sample picture.
+ Also at this point, the effects of removing these elements becomes visually
+ evident (Figure 
+\begin_inset LatexCommand \ref{recover3R002}
+
+\end_inset 
+
+).
+ At a 0.01 threshold, 66.0205 percent of the elements are removed.
+ Visually, the recovered sample and the original appear to be the same (Figure
+ 
+\begin_inset LatexCommand \ref{recover3R001}
+
+\end_inset 
+
+).
+ At a threshold of 0.1, 92.9987 percent of the elements are reduced to zero.
+ However, the distortions are clearly visible at this level of thresholding
+ (Figure 
+\begin_inset LatexCommand \ref{recover3R010}
+
+\end_inset 
+
+).
+ Even at a threshold of 0.001 which is below the numerical precision of
+ the original, 16.0814 elements are reduced to zero.
+ At a threshold of 0.002, 28.9683 percent is removed.
+\layout Standard
+
+Consequently after a triple resolution, nearly 29% of the data was irrelevant for the image's brightness resolution (which
+ also applies to color).
+ Subjective examination reveals that removing 60% to 85% of the data was not noticeable to human perception.
+ Which leaves only 15% to 40% of the data actually contributing or being necessary to reconstruct the
+ image.
+\layout Standard
+
+
+\begin_float fig 
+
+\layout Standard
+
+
+\align center 
+
+\begin_inset Figure
+file recover3R002T.jpg
+width 2 4
+flags 9
+
+\end_inset 
+
+
+\layout Caption
+
+Recovered Image - 2% threshold (Multiresolution).
+ This image had nearly 83% of its elements removed in the triple resolution wavelet transform. 
+\layout Standard
+
+
+\begin_inset LatexCommand \label{recover3R002}
+
+\end_inset 
+
+
+\end_float 
+
+
+\layout Standard
+
+
+\begin_float fig 
+
+\layout Standard
+
+
+\align center 
+
+\begin_inset Figure
+file recover3R010T.jpg
+width 2 4
+flags 9
+
+\end_inset 
+
+
+\layout Caption
+
+Recovered Image - 10% threshold (Multiresolution).
+ This image had nearly 93% of its elements removed in the triple resolution wavelet transform. 
+\layout Standard
+
+
+\begin_inset LatexCommand \label{recover3R010}
+
+\end_inset 
+
+
+\end_float 
+
+
+\layout Standard
+
+
+\begin_float fig 
+
+\layout Standard
+
+
+\align center 
+
+\begin_inset Figure
+file recover3R005T.jpg
+width 2 4
+flags 9
+
+\end_inset 
+
+
+\layout Caption
+
+Recovered Image - 5% threshold (Multiresolution).
+ This image had nearly 85% of its elements removed in the triple resolution wavelet transform. 
+\layout Standard
+
+
+\begin_inset LatexCommand \label{recover3R005}
+
+\end_inset 
+
+
+\end_float 
+
+
+\layout Standard
+
+
+\begin_float fig 
+
+\layout Standard
+
+
+\align center 
+
+\begin_inset Figure
+file recover3R001.jpg
+width 2 4
+flags 9
+
+\end_inset 
+
+
+\layout Caption
+
+Recovered Image - 1% threshold (Multiresolution).
+ This image had nearly 60% of its elements removed in the triple resolution wavelet transform. 
+\layout Standard
+
+
+\begin_inset LatexCommand \label{recover3R001}
+
+\end_inset 
+
+
+\end_float 
+
+
+\the_end

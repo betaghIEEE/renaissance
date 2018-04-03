@@ -1,0 +1,84 @@
+\contentsline {chapter}{\numberline {1}Introduction}{5}
+\contentsline {chapter}{\numberline {2}Overview on Wavelets}{7}
+\contentsline {section}{\numberline {2.1}Wavelet Transform Definitions:}{7}
+\contentsline {section}{\numberline {2.2}\bigskip Wavelets via Convolution}{8}
+\contentsline {section}{\numberline {2.3}Class 2-D Wavelet: Complete Form}{10}
+\contentsline {subsection}{\numberline {2.3.1}Proof of Concept}{12}
+\contentsline {subsubsection}{1-D to 2-D Method}{12}
+\contentsline {subsubsection}{Vector - Matrix Method}{13}
+\contentsline {subsection}{\numberline {2.3.2}Multi-Resolution}{14}
+\contentsline {subsection}{\numberline {2.3.3}Computational Cost:}{15}
+\contentsline {section}{\numberline {2.4}Results - 1-D Wavelet Transform}{16}
+\contentsline {section}{\numberline {2.5}Results: 2-D Wavelet Transform }{18}
+\contentsline {subsection}{\numberline {2.5.1}Multi -resolution}{20}
+\contentsline {subsection}{\numberline {2.5.2}Threshold FIltering}{24}
+\contentsline {chapter}{\numberline {3}Matrix Multiplication via Wavelets}{28}
+\contentsline {section}{\numberline {3.1}Wavelet Matrix Multiplication}{28}
+\contentsline {subsection}{\numberline {3.1.1}A $2\times 2$ example}{28}
+\contentsline {subsubsection}{Conventional Multiplication}{28}
+\contentsline {subsubsection}{Wavelet Transform of two $2\times $ 2 matrices}{29}
+\contentsline {subsubsection}{Product of A and B in wavelet space}{29}
+\contentsline {subsubsection}{What is $W(A) \times W(B)$}{30}
+\contentsline {subsection}{\numberline {3.1.2} Proof of Wavelet Matrix Multiplication}{31}
+\contentsline {section}{\numberline {3.2}Chain Multiplication Structure}{31}
+\contentsline {section}{\numberline {3.3}Practical Implementation}{34}
+\contentsline {subsection}{\numberline {3.3.1}Chain Row and Chain Column Setup}{35}
+\contentsline {chapter}{\numberline {4}PDE via Wavelets}{39}
+\contentsline {section}{\numberline {4.1}PDE in General}{39}
+\contentsline {subsection}{\numberline {4.1.1}Classic Methods}{40}
+\contentsline {subsubsection}{Elliptical Differential Equations}{41}
+\contentsline {subsubsection}{Parabolic Differential Equations}{42}
+\contentsline {subsubsection}{Hyperbolic Differential Equations}{42}
+\contentsline {subsubsection}{Difference Equation Formulae}{44}
+\contentsline {subsubsection}{Explicit Methods/ Iterative Methods}{44}
+\contentsline {subsubsection}{Implicit Methods}{45}
+\contentsline {subsubsection}{Galerkin}{46}
+\contentsline {subsection}{\numberline {4.1.2}Problems}{47}
+\contentsline {subsubsection}{Semi-Infinite String Problem}{47}
+\contentsline {subsubsection}{Heat Diffusion}{49}
+\contentsline {subsubsection}{Diffusion - Convection }{49}
+\contentsline {section}{\numberline {4.2}Related Work}{51}
+\contentsline {subsection}{\numberline {4.2.1}Gregory Beylkin}{51}
+\contentsline {subsection}{\numberline {4.2.2}Turbulance and Navier Stokes}{52}
+\contentsline {subsection}{\numberline {4.2.3}KL Transform Approach}{53}
+\contentsline {subsection}{\numberline {4.2.4}Galerkin Approach}{55}
+\contentsline {subsection}{\numberline {4.2.5}}{55}
+\contentsline {chapter}{\numberline {A}Wavelets Implemented in General}{56}
+\contentsline {section}{\numberline {A.1}Haar Wavelet Transform Class:}{56}
+\contentsline {subsection}{\numberline {A.1.1}\bigskip One Dimensional Wavelet Transform}{57}
+\contentsline {subsection}{\numberline {A.1.2}Join Procedure}{58}
+\contentsline {subsection}{\numberline {A.1.3}Procedure: Even Split}{59}
+\contentsline {subsubsection}{Input:}{59}
+\contentsline {subsubsection}{Output:}{59}
+\contentsline {subsubsection}{Algorithm}{60}
+\contentsline {subsection}{\numberline {A.1.4}Procedure: Force Insert}{60}
+\contentsline {subsubsection}{Input:}{60}
+\contentsline {subsubsection}{Output:}{60}
+\contentsline {subsubsection}{Algorithm:}{61}
+\contentsline {subsection}{\numberline {A.1.5}Procedure: Extract}{61}
+\contentsline {subsubsection}{Input:}{61}
+\contentsline {subsubsection}{Output:}{62}
+\contentsline {subsubsection}{Algorithm}{62}
+\contentsline {subsection}{\numberline {A.1.6}Procedure: Haar Wavelet Inverse (Left Side)}{63}
+\contentsline {subsubsection}{Input}{63}
+\contentsline {subsubsection}{Output}{63}
+\contentsline {subsubsection}{Algorithm}{63}
+\contentsline {section}{\numberline {A.2}2-D Wavelet Transform Class}{64}
+\contentsline {subsection}{\numberline {A.2.1}\bigskip Method: Column Wavelet Transform}{65}
+\contentsline {subsection}{\numberline {A.2.2}Method: Row Wavelet Transform}{66}
+\contentsline {subsection}{\numberline {A.2.3}Method: Self Row/Column Wavelet Transform}{67}
+\contentsline {subsection}{\numberline {A.2.4}Method:Wavelet Transform}{67}
+\contentsline {subsection}{\numberline {A.2.5}Method: Row Wavelet Inverse Transform}{67}
+\contentsline {subsection}{\numberline {A.2.6}Method: Column Wavelet Inverse Transform}{68}
+\contentsline {subsection}{\numberline {A.2.7}Method: Wavelet Inverse Transform v1}{68}
+\contentsline {subsection}{\numberline {A.2.8}Method: Self Wavelet Inverse Transform }{69}
+\contentsline {subsubsection}{Given}{69}
+\contentsline {subsubsection}{Algorithm}{69}
+\contentsline {subsection}{\numberline {A.2.9}Method: Self Column Inverse Wavelet Transform }{69}
+\contentsline {subsubsection}{Given}{69}
+\contentsline {subsubsection}{Notation}{70}
+\contentsline {subsubsection}{Algorithm}{70}
+\contentsline {subsection}{\numberline {A.2.10}Method: Self Row Inverse Wavelet Transform }{70}
+\contentsline {subsubsection}{Given}{71}
+\contentsline {subsubsection}{Notation}{71}
+\contentsline {subsubsection}{Algorithm}{71}

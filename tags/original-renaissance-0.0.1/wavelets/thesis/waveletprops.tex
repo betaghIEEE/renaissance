@@ -1,0 +1,116 @@
+In order to understand the wavelet basis function, the reader must consider certain general function properties.  $L^2(R)$ spaces, symmetric, anti-symmetric, compactness, orthogonal, bi-orthogonal provide a fundamental ground basis for considering wavelet functions.    This section reviews these terms and prepares their use for the rest of this chapter.  
+
+$L^2(R)$ space defines any function whose square is finite, and the integral of the squared function is also finite.   In equation form, this definition is as follows:
+\[ f(x) \in L^2(R) \ {if} \int\limits _{-\infty}^{\infty} (f(x))^2 dx < \infty \]
+All $L^2(R)$ spaces can include mapping which for any value in one $L^2(R)$ yields a unique value in another $L^2(R)$ space.  One other quality of $L^2(R)$ space is that its definition also defines another property called $L^2(R)$ energy, $E_{L^2}$.
+\[ E_{L^2}=\int\limits _{-\infty}^{\infty} (f(x))^2 dx < \infty \]
+
+Symmetric functions are ones where the result of a input a magnitude is the same regardless of sign.  In equation form this is stated as follows:
+\[
+f(-x) = f(x)
+\]
+It the sign of the magnitude changes only changes the sign of the output, but not the magnitude then the function is anti-symmetric.  
+
+Compactness is a quality of a function where the energy is confined to within a specific interval.  Another way on noting this that there is no energy in the function out side the specified interval.   The following equation makes the same statement, and is the equation definition of compactness for a function $f$
+\[
+\int_{-\infty}^{x_0} (f(x))^2 dx\] and 
+\[ \int_{x_1}^{+\infty} (f(x))^2 dx = 0.
+\]
+
+Orthogonality is another concept necessary for this thesis.  Two functions or two bases is orthogonal if their inner product is zero.  This property applies all numerical sets, including complex floating point sets.  
+
+Another orthogonal concept, bi-orthogonality, dual space must be defined.   In the real number space a dual space for a vector $V$ is defined as `` a vector space of linear functions $f:V\to R$ and is denoted $V^*$.''\cite{rowland}  Two bases are biorthogonal bases  if the inner product of the dual space of those bases is zero.  
+
+\subsection {Translation and Dialation}
+Function translation is an operation that moves a basis function anywhere in the number space.  For example, the translation of a one dimensional function can be defined by equation $f(t+c)$ where $t$ is the dependent variable and $c$ is a constant.  Notice that translation does not alter the shape of the function, only the position of the function along the number space of $t$.  Translation consist of no rotation or distortion either.\cite{translation}  
+
+Dilation (also called contraction) transforms a one dimensional function in width, and the output in height.   A definition equation for dilation is as follows:
+\[ f_a (x) =  f(\frac{x}{a}) \]
+As defined, dilation corresponds an expansion.  Often, dialation is accompanied by a scaling by the same dilation factor, or a square root of that factor.   
+
+\subsection {The Wavelet Basis Function}
+Mandatory properties of a wavelet basis function can be summarized in an itemized list as follows:
+\begin{itemize}
+\item A wavelet basis function is a member of the $L^2(R)$ domain.  
+\item A wavelet must have a zero average, i.e.,
+\[
+\int_{-\infty}^{+\infty}\psi(x) \ dx = 0.
+\]
+\item A wavelet basis function satisfies the translation - dilation property
+\end{itemize}
+
+The bi-orthogonal - translation - dilation property states that any two Wavelet Basis Functions derived from the translation - dilation function:
+\[ \psi_{j,k}(x)  = 2^{j/2} \psi (2 ^j x -k) \forall j,k \in Z \]
+must be bi-orthogonal.   
+
+The bi-orthonormal - translation - dilation is a minimum requirement for which a less strict requirement does not exist.  However, there some definitions are more strict wavelet definitions require that the wavelet basis functions derived from the translation - dilation function must be orthogonal.  Some are strict enough to require these derived wavelet basis functions be orthonormal.  An example of this strict definition was a stated by Charles Chui:  
+``A function $\psi \in L^2(R)$ is called an orthogonal wavelet ( or o.n. wavelet) if the family $\{\psi_{j,k}\}$ defined 
+\[ \psi_{j,k}(x)  = 2^{j/2} \psi (2 ^j x -k) \forall j,k \in Z \]
+is an orthonormal basis of $L^2(R)$ where $\langle \psi _{j,k} , \psi_{l,m} \rangle = \delta _{j,l} \delta_{k,m}$,  $ \forall j,k,l,m\in Z$ and every $ f\in L^2(R)$ can be written as 
+\[ f(x)= \sum\limits _{j,k = -\infty}^{\infty} c_{j,k} \psi _{j,k} (x)  \]
+where the series convergences and is %of the series 
+%\[ f(x) = \sum\limits _{j,k = -\infty}^{\infty}  c_{j,k} \psi _{j,k} (x)  \]
+in $L^2(R)$ such that 
+\[ \lim\limits _{M_1, M_2, N_1 , N_2} || f - \sum\limits _{j=-M_2}^{N_2} \sum\limits _{k=-M_1}^{N_1} c_{j,k} \psi _{j,k} || = 0 \]
+The simplest example of orthogonal wavelets is the Haar Transform.''\cite{ChuiIntro} 
+
+Wavelet Basis Functions may have other properties, but these are not mandatory.  Some of these include symmetric properties.  Others may be anti-symmetric.   Some may have compact support.  Also, Wavelet Basis Functions may be orthogonal.  
+
+The Haar Wavelet Basis function actually fulfills the strictest definition of a wavelet basis function, and has additional properties.  The Haar Wavelet Basis Function has compact support.  It is also symmetric.  Furthermore, it has been stated by Walker\cite{Walker} and  Chui \cite{ChuiIntro} that the Haar Wavelet Basis Function is the only wavelet basis function in $L^2(R)$ to satisfy these properties.  The Haar mother wavelet basis function is defined:
+\[ \psi(x) = \left\{\begin{array}{cc}1 & 0\le x < \frac{1}{2} \\-1 & \frac{1}{2} \le x < 1 \\0 & {otherwise}\end{array}\right.  \]
+
+
+
+
+%A function is symmetric if
+%\[
+%f(-x) = f(x)
+%\]
+%and it is antisymmetric if
+%\[
+%-f(-x) = f(x).
+%\]
+%A function is compact if all of the energy exists within finite interval. This can be expressed by $\exists$ an interval $(x_0, x_1)$, where
+%\[
+%\int_{-\infty}^{x_0} (f(x))^2 dx + \int_{x_1}^{+\infty} (f(x))^2 dx = 0.
+%\]
+%A basis is orthogonal if the inner product of two different basis functions is zero. A basis is biorthogonal if the inner product of two different basis function in its dual space is zero.
+
+
+
+
+%\subsection {Properties inferred by Translation and Dialation (Chui's Definition)}
+
+%``A function $\psi \in L^2(R)$ is called an orthogonal wavelet ( or
+%o.n. wavelet) if the family $\{\psi_{j,k}\}$ defined \[ \psi_{j,k}(x)
+%= 2^{j/2} \psi (2 ^j x -k) \forall j,k \in Z \] is an orthonormal
+%basis of $L^2(R)$ where $\langle \psi _{j,k} , \psi_{l,m} \rangle =
+%\delta _{j,l} \delta_{k,m}$, $ \forall j,k,l,m\in Z$ and every $ f\in
+%L^2(R)$ can be written as \[ f(x)= \sum\limits _{j,k =
+%-\infty}^{\infty} c_{j,k} \psi _{j,k} (x) \] where the series
+%convergences and is of the series \[ f(x) = \sum\limits _{j,k =
+%-\infty}^{\infty} c_{j,k} \psi _{j,k} (x) \] in $L^2(R)$ such that \[
+%\lim\limits _{M_1, M_2, N_1 , N_2} || f - \sum\limits _{j=-M_2}^{N_2}
+%\sum\limits _{k=-M_1}^{N_1} c_{j,k} \psi _{j,k} || = 0 \] The simplest
+%example of orthogonal wavelets is the Haar
+%Transform.''\cite{ChuiIntro}.
+
+\subsection {Wavelet Pairs: The Averaging Basis Function}
+The Wavelet Basis Function section defined the Haar Wavelet Basis Function defined the Haar Wavelet Basis function, in equation .  However, there exists a concept of a wavelet pair.  These pairs exist as averaging and differencing basis.  The wavelet basis function and differencing basis are synonymous.  The averaging basis concept was derived from classic multi-resolution which is described in section, ``Multi-Resolution.''
+
+This section only defines the wavelet basis pair in terms of a wavelet averaging basis % as part of a wavelet basis pair 
+and shows an example with the Haar Averaging Basis Function.  A wavelet pair are a set of two basis functions containing one wavelet basis function and one averaging basis function which meet the following criteria:  %In order to be a wavelet basis pair both the wavelet and averaging basis function must both
+\begin{itemize}
+\item Both must be in the $L^2$ domain
+\item Both must satisfy the bi-orthogonal- translation- dilation property
+\item The wavelet basis function must be bi-orthogonal with the average basis function.
+\end{itemize}
+In some cases, the bi-orthogonal requirements can be more strict by requiring pure orthogonal and/or orthonormal qualities.  
+
+The simplest form to the averaging filter is the Haar Averaging
+Filter, and it is a pair to the Haar Wavelet Basis Function.  Like the
+Haar Wavelet Basis Function, the Haar Averaging Filter also satisfies
+the orthogonal-translation-dilation property and is in $L^2(R)$ The
+mother function for the Haar Averaging Filter is defined: \[\phi(x) =
+\left\{\begin{array}{cc}1 & 0\le x < \frac{1}{2} \\0 &
+{otherwise}\end{array}\right.\]

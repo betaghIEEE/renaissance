@@ -1,0 +1,169 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 99.2beta8 (1.43)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>2-D Wavelet Transform Class</TITLE>
+<META NAME="description" CONTENT="2-D Wavelet Transform Class">
+<META NAME="keywords" CONTENT="basicwave">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v99.2beta8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="basicwave.css">
+
+<LINK REL="next" HREF="node52.html">
+<LINK REL="previous" HREF="node14.html">
+<LINK REL="up" HREF="basicwave.html">
+<LINK REL="next" HREF="node34.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html519"
+  HREF="node34.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html515"
+  HREF="basicwave.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html509"
+  HREF="node32.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html517"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html520"
+  HREF="node34.html">Method: Column Wavelet Transform</A>
+<B> Up:</B> <A NAME="tex2html516"
+  HREF="basicwave.html">Simple Wavelets with Convolution</A>
+<B> Previous:</B> <A NAME="tex2html510"
+  HREF="node32.html">Algorithm</A>
+ &nbsp <B>  <A NAME="tex2html518"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00080000000000000000">
+2-D Wavelet Transform Class</A>
+</H1>
+This class provides three functions.  The column wavelet provides a
+transform solely on the columns.  The row wavelet likewise, provides a
+wavelet transform on each of the rows.  The 2-D wavelet transform is
+simple a row wavelet followed by a column wavelet transform.  
+
+It should be noted that these wavelet transforms are Haar Wavelet
+transforms.. Multiple resolutions functions can be made, but again it is
+still the Haar Wavelet at the core.  Other class clones may be produced to
+use other wavelet basis such as Daubachie or Coeflet.  
+
+Another support class required for support of the two dimensional wavelet is
+the image reader/ writer.  Such a class of functions provide means of
+acquiring data for a matrix to be computed.  Granted this matrix could have
+been populated by other means.  Generating such a class consumed some time
+on this project.  The reason is that there a few mechanisms for doing this.
+ One is to use raw image types.  These types are known as by their
+extensions: pgm and ppm.  Another popular mechanism is Image Magick.  The
+reason for Image Magick is that it is available on most UNIX platforms
+(Linux, IRIX, Solaris, and Mac OSX).  Otherwise, schemes such as Apple's
+Quicktime would be used.  The other reason for the use of other software to
+acquire the image is that the objective of this class is not produce image
+translators for each image type imaginable.  
+
+<P>
+<BR><HR>
+<!--Table of Child-Links-->
+<A NAME="CHILD_LINKS"><STRONG>Subsections</STRONG></A>
+
+<UL>
+<LI><A NAME="tex2html521"
+  HREF="node34.html"><P><P>
+<BR>
+Method: Column Wavelet Transform</A>
+<LI><A NAME="tex2html522"
+  HREF="node35.html">Method: Row Wavelet Transform</A>
+<LI><A NAME="tex2html523"
+  HREF="node36.html">Method: Self Row/Column Wavelet Transform</A>
+<LI><A NAME="tex2html524"
+  HREF="node37.html">Method:Wavelet Transform</A>
+<LI><A NAME="tex2html525"
+  HREF="node38.html">Method: Row Wavelet Inverse Transform</A>
+<LI><A NAME="tex2html526"
+  HREF="node39.html">Method: Column Wavelet Inverse Transform</A>
+<LI><A NAME="tex2html527"
+  HREF="node40.html">Method: Wavelet Inverse Transform v1</A>
+<LI><A NAME="tex2html528"
+  HREF="node41.html">Method: Self Wavelet Inverse Transform </A>
+<UL>
+<LI><A NAME="tex2html529"
+  HREF="node42.html">Given</A>
+<LI><A NAME="tex2html530"
+  HREF="node43.html">Algorithm</A>
+</UL>
+<LI><A NAME="tex2html531"
+  HREF="node44.html">Method: Self Column Inverse Wavelet Transform </A>
+<UL>
+<LI><A NAME="tex2html532"
+  HREF="node45.html">Given</A>
+<LI><A NAME="tex2html533"
+  HREF="node46.html">Notation</A>
+<LI><A NAME="tex2html534"
+  HREF="node47.html">Algorithm</A>
+</UL>
+<LI><A NAME="tex2html535"
+  HREF="node48.html">Method: Self Row Inverse Wavelet Transform </A>
+<UL>
+<LI><A NAME="tex2html536"
+  HREF="node49.html">Given</A>
+<LI><A NAME="tex2html537"
+  HREF="node50.html">Notation</A>
+<LI><A NAME="tex2html538"
+  HREF="node51.html">Algorithm</A>
+</UL></UL>
+<!--End of Table of Child-Links-->
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html519"
+  HREF="node34.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html515"
+  HREF="basicwave.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html509"
+  HREF="node32.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html517"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html520"
+  HREF="node34.html">Method: Column Wavelet Transform</A>
+<B> Up:</B> <A NAME="tex2html516"
+  HREF="basicwave.html">Simple Wavelets with Convolution</A>
+<B> Previous:</B> <A NAME="tex2html510"
+  HREF="node32.html">Algorithm</A>
+ &nbsp <B>  <A NAME="tex2html518"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Daniel Beatty
+2003-06-04
+</ADDRESS>
+</BODY>
+</HTML>

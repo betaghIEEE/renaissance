@@ -1,0 +1,84 @@
+
+Proposed Hypothesis: 
+ \begin{enumerate}
+ \item $\exists M:\psi (\psi (A)) \to \psi_{WP2} (A) $ such that $\psi_{WP2}$ is a wavelet transform packet of 2 resolutions for all A capable of MRE or 2 resolutions.  
+ \item $\exists M_W:\psi_{WP2} (A)  \to \psi (\psi (A)) $ such that $\psi_{WP2}$ is a wavelet transform packet of 2 resolutions for all A capable of MRE or 2 resolutions.  \end{enumerate}
+
+
+\[\psi (S)=
+\begin{array}{cc}
+A_{1} & V_{1} \\ 
+H_1 & D_1
+\end{array}
+\]
+
+\[\psi(\psi (S))=
+\begin{array}{cccc}
+\phi_c(\phi_r (A_1)) & \phi_c(\phi_r(V_1)) & \phi_c(\psi_r(A_1)) & \phi_c(\psi_r(V_1)) \\ 
+\phi_c(\phi_r(H_1)) & \phi_c(\phi_r(D_1)) & \phi_c(\psi_r(H_1)) & \phi_c(\psi_r(D_1)) \\ 
+\psi_c(\phi_r(A_1)) & \psi_c(\phi_r(V_1)) & \psi_c(\psi_r(A_1)) & \psi_c(\psi_r(V_1 \\ 
+\psi_c(\phi_r(H_1)) & \psi_c(\phi_r(D_1)) & \psi_c(\psi_r(H_1)) & \psi_c(\psi_r(D_1))
+\end{array}
+\]
+
+\[\psi(\psi (S))=
+\begin{array}{cccc}
+AA_1 & AV_1 & VA_1 & VV_1 \\ 
+AH_1 & AD_1 & VH_1 & VD_1 \\ 
+HA_1 & HV_1 & DA_1 & DV_1 \\ 
+HH_1 & HD_1 & DH_1 & DD_1
+\end{array}
+\]
+
+\[\psi_{PA}^2(S)=
+\begin{array}{cccc}
+AA_1 & VA_1 &  AV_1& VV_1 \\ 
+AH_1 &  DA_1&   HV_1 & DV_1 \\ 
+HA_1 & VH_1 &  AD_1& VD_1 \\ 
+HH_1 &  DH_1 &HD_1 & DD_1
+\end{array}
+\]
+
+The mapping here can be confusing due to the language.  To describe this mapping, consider a quad tree structure where %is used.  The 
+identification of the tree elements are the wavelet %is by the 
+operations on matrix $S$.  The content of the leaves are the results of the wavelet % and 
+operations on %results of operations from 
+$S$.  Also included in the leaves are the locations within the matrix where %This is the same as in the previous matrix representation.  The values in elements are positions in the matrix for which a 
+sub-matrix belongs. %of the matrix represents the elements operational identity.  
+
+Given a standard wavelet transform full decomposition packet tree, the mapping is developed level by level.  At the second the level, the position of these sub-matrices in the combined matrix is given relative to the wavelet transform packet tree and $\psi^2$'s tree.
+
+ $(\psi_{PA}^2)_A(x) \to \psi^2(x_1)_A$
+ 
+$(\psi_{PA}^2)_V(x) \to \psi^2(x_1)_V$
+ 
+$(\psi_{PA}^2)_H(x) \to \psi^2(x_1)_H$
+ 
+$(\psi_{PA}^2)_D(x) \to \psi^2(x_1)_D$
+ 
+ 
+ In three resolutions $\psi^3(S)$ can be expressed by:
+ \[  
+\left(
+\begin{array}{cccccccc}
+A_3A_2 A_1 & A_3 A_2V_1 & A_3  V_2A_1 & A_3 V_2V_1 
+	& V_3A_2 A_1 & V_3 A_2V_1 & V_3  V_2A_1 & V_3 V_2V_1 \\
+A_3 A_2 H_1 & A_3 A_2D_1 & A_3 V_2H_1 & A_3  V_2D_1
+	& V_3 A_2 H_1 & V_3 A_2D_1 & V_3 V_2H_1 & V_3  V_2D_1 \\ 
+A_3 H_2 A_1 & A_3 H_2V_1 & A_3 D_2A_1 & A_3 D_2V_1
+	& D_3 H_2 A_1 & D_3 H_2V_1 & D_3 D_2A_1 & D_3 D_2V_1 \\ 
+A_3 H_2 H_1 & A_3 H_2D_1 & A_3 D_2H_1 & A_3 D_2D_1 
+	& V_3 H_2 H_1 & V_3 H_2D_1 & V_3 D_2H_1 & V_3 D_2D_1 \\
+
+H_3 A_2 A_1 & H_3 A_2V_1 & H_3 V_2A_1 & H_3 V_2V_1 
+	& D_3 A_2 A_1 & D_3 A_2V_1 & D_3 V_2A_1 & D_3 V_2V_1\\ 
+H_3 A_2 H_1 & H_3 A_2D_1 & H_3 V_2H_1 & H_3 V_2D_1
+	& D_3 A_2 H_1 & D_3 A_2D_1 & D_3 V_2H_1 & D_3 V_2D_1 \\ 
+H_3 H_2 A_1 & H_3 H_2V_1 & H_3 D_2A_1 &  H_3 D_2V_1 
+	& D_3 H_2 A_1 & D_3 H_2V_1 & D_3 D_2A_1 & D_3 D_2V_1\\ 
+H_3 H_2 H_1 & H_3 H_2D_1 & H_3 D_2H_1 & H_3 D_2D_1 
+	& D_3 H_2 H_1 & D_3 H_2D_1 & D_3 D_2H_1 & D_3 D_2D_1
+\end{array}
+\right).
+\]
+ 

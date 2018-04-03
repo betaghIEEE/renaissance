@@ -1,0 +1,138 @@
+
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Created=Tue Feb 25 21:06:46 2003}
+%TCIDATA{LastRevised=Thu Feb 27 14:56:18 2003}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="General\Blank Document">}
+%TCIDATA{CSTFile=LaTeX article (bright).cst}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+%\input{tcilatex}
+
+\begin{document}
+
+
+Devore and Lucier make some simple arguments for the Haar Wavelet, and in
+the treatment of wavelets in general. \ While they admit Haar Wavelets can
+lack smoothness, they state the Haar Wavelet demonstrate the key features of
+wavelet decomposition. \ \ \ Their argument:
+
+\qquad 1. \ Let t be the independent variable.
+
+\qquad 2. Let $H=\chi _{\lbrack 0,\frac{1}{2}]}-\chi _{\lbrack \frac{1}{2}%
+,1]}=\left\{ 
+\begin{tabular}{ll}
+$1$ & $0\leq $t$<\frac{1}{2}$ \\ 
+$-1$ & $\frac{1}{2}\leq $t$<1$ \\ 
+$0$ & otherwise
+\end{tabular}
+\right. $
+
+\qquad 3. Let the translation and dialation function be
+
+\qquad \qquad \qquad $H_{j,k}(t)=2^{\frac{k}{2}}(2^{k}t-t)=2^{k/2}\left\{ 
+\begin{tabular}{ll}
+$1$ & $j2^{-k}\leq $t$<(j+\frac{1}{2})2^{-k}$ \\ 
+$-1$ & $(j+\frac{1}{2})2^{-k}\leq $t$<(j+1)2^{-k}$ \\ 
+$0$ & otherwise
+\end{tabular}
+\right. $
+
+\qquad 4. \ What about $<H_{j,k},H_{j^{\prime },k^{\prime }}>$
+
+\qquad \qquad a. \ Case $H_{j,k}$ and $H_{j^{\prime },k^{\prime }}$ are
+disjoint $<H_{j,k},H_{j^{\prime },k^{\prime }}>=0$
+
+\qquad \qquad b. \ Otherwise: \ $<H_{j,k},H_{j^{\prime },k^{\prime }}>=0$
+
+\qquad 5. \ \{$H_{j,k}|j,k\in Z$\}, the Haar basis, is $L_{2}$ complete. \
+Each $S=S^{0}\subset L_{2}(R)$ has a unique representation for dyadic shift
+intervals $j2^{-k}$.
+
+\qquad 6. \ Also, $S^{\infty }=L_{2}(R)$ and $S^{-\infty }=\{0\}$ .
+
+\bigskip
+
+There is an exercise in proving this argument. \ 
+
+\bigskip
+
+The main point of both forms of H ($H$ and $H(t-k)$) form an orthonormal
+basis for W, which denotes wavelet space.
+
+\bigskip
+
+The Haar Decomposition and Smoothness space tends to be less understood. \
+The whole point to the Haar Decomposition section is whether a wavelet can
+be $L_{p}$ complete for an arbitrary $p\in \lbrack 1,\infty )$. \ The answer
+is that for $p\in \lbrack 2,\infty )$, this is true. \ The $L_{1}$ case
+shows the Haar Wavelet growing indefinately in energy. \ \ However, there is
+a reference to special cases in ''Hardy space.'' \ \ At this time, the term
+itself is being researched as an educational exercise.
+
+\bigskip
+
+One question, what is the relationship between smoothness of f and the size
+of the Haar coefficents dependent on?
+
+\qquad 1. \ For a fixed $k\in Z$ the Haar functions $(H_{j,k}),j\in Z$ are
+stable.
+
+\qquad 2. \ The Jackson inequality (How well functions from $Lip(\alpha
+,L_{p}(R))$ can be approximated.
+
+\qquad 3. \ The Bernstein Inequality ( Inequalities for Polynomials)
+
+\bigskip
+
+Another useful exercise is the proof of the Jackson and Bernstein
+Inequalities.
+
+\bigskip
+
+The fast wavelet transform is so far the same, a convolution scheme. \ This
+convolution scheme tosses out half of the values to produce convergence.
+
+\bigskip
+
+The mulivariate (multi-dimensional ) Haar Wavelet Functions have the two
+methods:
+
+\qquad 1. Sum of a wavelet Polynomial, which is the collection of functions $%
+2^{kd/2}\psi _{v}(2^{k}\cdot -j),j\in Z^{d},k\in Z,v\in V\backslash \{0\}$
+
+\qquad 2. The collection of all shifts of $\chi _{\lbrack 0,1]^{d}}$, which
+is the tensor product of the univariate space of piecewise functions with
+integer breakpoints.
+
+\bigskip 
+
+Belkin
+
+\end{document}

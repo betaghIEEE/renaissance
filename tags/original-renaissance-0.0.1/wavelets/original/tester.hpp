@@ -1,0 +1,1 @@
+#ifndef __TESTER_HPP__#define __TESTER_HPP__class testerHaar {	public:		void testHaar();};#endif

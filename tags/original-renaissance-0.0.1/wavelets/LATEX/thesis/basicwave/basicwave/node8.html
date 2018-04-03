@@ -1,0 +1,184 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 99.2beta8 (1.43)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Multi-Resolution</TITLE>
+<META NAME="description" CONTENT="Multi-Resolution">
+<META NAME="keywords" CONTENT="basicwave">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v99.2beta8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="basicwave.css">
+
+<LINK REL="next" HREF="node9.html">
+<LINK REL="previous" HREF="node5.html">
+<LINK REL="up" HREF="node4.html">
+<LINK REL="next" HREF="node9.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html201"
+  HREF="node9.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html197"
+  HREF="node4.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html191"
+  HREF="node7.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html199"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html202"
+  HREF="node9.html">Computational Cost:</A>
+<B> Up:</B> <A NAME="tex2html198"
+  HREF="node4.html">Class 2-D Wavelet: Complete</A>
+<B> Previous:</B> <A NAME="tex2html192"
+  HREF="node7.html">Vector - Matrix Method</A>
+ &nbsp <B>  <A NAME="tex2html200"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00042000000000000000">
+Multi-Resolution</A>
+</H2>
+
+<P>
+The multi-resolution wavelet transform and the inverse multi-resolution transform resemble the vector-matrix version.  All functionality is built into this method.  However, there are structural changes.
+
+<P>
+The wavelet transform (multiresolution) uses private members of the class (hA, hD, xD/yD, xA/yA).  Both Haar filters are maintained this way.  Also both row and column transforms have average and difference myVector classes for temporary storage.   All of these members are allocated and destroyed by the wavelet transform method itself.   The simplified algorithm of the row transform is the following:
+
+<OL>
+<LI>Initialize xA and xD to zero
+</LI>
+<LI><!-- MATH
+ $\forall k \in columns \forall l \in filter$
+ -->
+
+<UL>
+<LI>n = k - l
+</LI>
+<LI>if ( <!-- MATH
+ $n \in columns$
+ -->
+ )
+
+<P>
+<!-- MATH
+ $xA_k = W_{i,n} * hA_l$
+ -->
+
+<P>
+<!-- MATH
+ $xD_k = W_{i,n} * hD_l$
+ -->
+
+<P>
+</LI>
+</UL>
+</LI>
+<LI>Transfer back to W
+
+<P>
+<!-- MATH
+ $W_i = xA|xD$
+ -->
+</LI>
+</OL>
+
+<P>
+
+<OL>
+<LI>initialize yA and yD to zero
+</LI>
+<LI><!-- MATH
+ $\forall k \in rows \forall l \in filter$
+ -->
+
+<UL>
+<LI>n = k - l
+</LI>
+<LI>if ( <!-- MATH
+ $n \in columns$
+ -->
+ )
+
+<P>
+<!-- MATH
+ $yA_k = W_{i,n} * hA_l$
+ -->
+
+<P>
+<!-- MATH
+ $yD_k = W_{i,n} * hD_l$
+ -->
+
+<P>
+</LI>
+</UL>
+</LI>
+<LI>Transfer back to W
+
+<P>
+<!-- MATH
+ $W_j = yA|yD$
+ -->
+</LI>
+</OL>
+
+<P>
+Note:  names the row vectors and  names the column vectors, and  is the element from the ith row and jth column.
+
+<P>
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html201"
+  HREF="node9.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html197"
+  HREF="node4.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html191"
+  HREF="node7.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html199"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html202"
+  HREF="node9.html">Computational Cost:</A>
+<B> Up:</B> <A NAME="tex2html198"
+  HREF="node4.html">Class 2-D Wavelet: Complete</A>
+<B> Previous:</B> <A NAME="tex2html192"
+  HREF="node7.html">Vector - Matrix Method</A>
+ &nbsp <B>  <A NAME="tex2html200"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Daniel Beatty
+2003-06-04
+</ADDRESS>
+</BODY>
+</HTML>

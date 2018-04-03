@@ -1,0 +1,281 @@
+\documentclass[11pt]{article}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `basename #1 .tif`.png}
+
+\textwidth = 6.5 in
+\textheight = 9 in
+\oddsidemargin = 0.0 in
+\evensidemargin = 0.0 in
+\topmargin = 0.0 in
+\headheight = 0.0 in
+\headsep = 0.0 in
+\parskip = 0.2in
+\parindent = 0.0in
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}{Definition}
+
+\title{Computational Notes}
+\author{Dan Beatty}
+\begin{document}
+\maketitle
+
+\section{Elliptic Partial Differential Equations}
+
+Example equation $\nabla [ g(x,y)\nabla \phi (x,y)] + h(x,y)\phi (x,y) = f(x,y) $  $\forall (x,y)\in R$. 
+
+There is also the Poisson form: 
+
+$ \nabla ^2 \phi (x,y)  = 
+\frac { \partial^2 \phi (x,y) }{ \partial x^2 } 
+%\frac {\partial a}{b}
++ \frac {\partial ^2 \phi (x,y)}{\partial y^2} = f(x,y) $
+
+In working with these PDE forms the boundaries are typically spelled out in rectangular form for the left, right, top and bottom boundaries as follows:
+\begin{itemize}\item left:  $\phi (0,y) = 0 $
+\item right: $\frac{\partial \phi}{\partial x} (a,y) = 0$
+\item bottom: $\phi (x,0) = 0$
+\item top:   $\frac{\partial \phi}{\partial y} (a,y) = 0$\end{itemize}
+
+Central Difference formulas are to derive the finite-difference equation for an interior grid (i,j). 
+
+Poison's Equation becomes the following after applying the Central Difference formulas:  
+
+
+$\frac{\phi _{i-1,j} -2 \phi _{i,j} + \phi _{i+1,j} }{\Delta x^2} + \frac{\phi _{i-1,j} -2 \phi _{i,j} + \phi _{i+1,j} }{\Delta y^2} =f_{i,j}$
+
+Boundaries are also spelled out in discrete form.  
+
+Also, for the specified boundaries, the derivation of those points are unnecessary.  Also those specified points are used in deriving the points near the edges.  
+
+There are two given approaches to implement boundary conditions that are spelled out for the right and top boundaries.  One method yields the right and top boundaries as being equal to second to the last element.  The other uses the last two elements to spell out the last element.   (such as on page 803 and 804).  
+
+There are two further methods for solving the elliptical partial differential equations, Robbins and cases of irregular boundaries.
+
+\section {PDE Intro Generically}
+In general two sources agree that mathematically there are three basic types of PDE formulas: hyperbolic, parabolic, and elliptic.  The classifications are based on the curves which propagate through the function.  For these types there are prototype functions.  
+\begin{itemize}\item Hyperbolic: $\frac{\partial ^2 u}{\partial t^2} = v^2 \frac{\partial ^2 u}{\partial x^2}$
+\item Parabolic: $ \frac{\partial  u}{\partial t} = \frac{\partial}{\partial x} (D \frac{\partial u}{\partial x}) $
+\item Elliptical:  $\frac {\partial ^2 u}{\partial x^2} + \frac {\partial^2}{\partial y^2} = \rho (x,y) $\end{itemize}
+These equations are given such that v and D are both constants, and $\rho$ is a given function.  The elliptical formula is Poisson's Equation and in the special case of $\rho = 0$ is Laplace's Equation.  The hyperbolic and parabolic are source definitions for initial value/ Cauchy problems.  Some cases for parabolic and hyperbolic functions use time-evolution methods (special case of shooting method) such that the initial values propagate to subsequent values as time progresses.  Boundary value problems require the area of consideration to be specified.    Bottom line, the goal of PDE's is to fill in the blanks by some model / converging function.  
+
+So what is the issue in these cases?  BVP tend come down a series of simultaneous algebraic equations.  For example the elliptical version comes to:
+
+$\frac{u_{j+1,l} - 2u_{j,l} +u_{j-1,l}}{\Delta x^2 }  + \frac{u_{j,l+1} - 2u_{j,l} +u_{j,l-1}}{\Delta x^2} = \rho_{j,l}$
+
+
+
+These methods eventually bring up an equation which is meant satisfy the linear set of equations.  
+
+$A \cdot u = b $
+
+A is typically sparse, and allows methods such as relaxation methods to split the matrix.  Upon splitting, the goal is to guess the value of u and iterative compute out the correct solution for u.  The idea for wavelets in PDE's would most likely be both to precondition the matrix, and make it as sparse as possible.
+
+Methods for consideration are:
+\begin{itemize}\item The Incomplete Cholesky Conjugate Gradient Method (ICCG)
+\item Strongly Implicit Procedure
+\item Analyze Factorize Operate Approach
+\item Multi-Grid Approaches
+\item Monte-Carlo Methods
+\item Spectral Methods
+\item Variational Methods\end{itemize}
+
+
+\section {ODE}
+\subsection { Euler's Method}
+
+$x_i = x_0 i \dot h$ 
+
+$y_{i+1} = y_i + hy_i + \frac{h^2}{2} y_i^{''} + ... + \frac{h^2}{2} y_i^{n} $
+
+Approximately:  $y_{i+1} = y_i + hy_i + \frac{h^2}{2} y_i^{''} (\zeta ) $
+
+$y_i = y(x_i) $
+
+$y_{i+1} = y (x_{i+1}) $
+
+$y^{'}_i = \frac{dy}{dx} (x_i) = f(x_i, y_i)$
+
+This works in case that some initial value is also known and steady intervals are defined.  
+
+This can be enhanced by selecting an interval small enough to reduce truncated error to its smallest value.
+
+Integration can also be used since 
+
+$\int^{x_{i+1}}_{x_i} f (x,y) dx \approx f(x_i,y_i) (x_{i+1} , x_i)$
+
+A system of differential equations can be use at specific points $y_{i,i+1} y_{j,i} +h f_j (x_i, y_1, ..., y_n, i)$
+
+Euler's Method can be made to use higher order terms 
+
+$y(x_0) = y_0$
+
+$y_i+1 = y_i +h f(x_i, y_i)  + \frac{h^2}{2!} f(x_i,y_i) + ... + \frac{h^n}{n!} f(x_i,y_i)$
+
+$y^{''} = f^{''}(x,y) = \frac{\partial f(x,y)}{\partial x} + \frac{\partial f(x,y)}{\partial y} f(x,y)$
+
+\subsection {Heun's Method }
+\begin{enumerate}\item Start with initial condition $y(x_0) = y_0$.
+\item $\forall i \in [0,N) \bigcup Z $ determine the slope at the beginning step, $f(x_i, y_i)$
+\item Find the slope at the end step as $f(x_{i+1}, y_{i+1})$.
+\item Determine the value of y at $x_{i+1}$ as $y_i+1 = y_i + h [\frac {f(x_i , y_i) + f(x_{i+1} , y_{i+1}) + f(x_{i+1} , y_{i+1})} {2}]$
+\item Find corrector iteratively such that $|\frac{y^{k+1}_{i+1} - y^k_{i+1}}{y^k_{i+1}} | \le \epsilon $  $y_i+1 = y_i + h [\frac {f(x_i , y_i) + f(x_{i+1} , y_{i+1}) + f(x_{i+1} , y_{i+1})} {2}]$
+\end{enumerate}
+\subsection {Runge-Kutta Method}
+``Runge-Kutta methods require only one initial point to start the procedure ... and requires several evaluations of $f(x,y)$ for each step of integration. 
+
+Runge-Kutta Method: $y_{i+1} = y_i +h \alpha (x,i , y_i , h)$ such that
+\begin{itemize}\item $\alpha (x_i , y_i, h)$ is the increment function (average slope) 
+\item $\alpha (x_i, y_i, h) = c_1 k_1 + c_2 k_2 + ... + c_n k_n $
+\item n is the order of Runge-Kutta method 
+\item $c_1 , ... , c_n$ are constants
+\item $k_1, k_2, ..., k_n $ are recurrence relations defined as 
+\begin{itemize}\item $k_1 = f(x_i, y_i) $
+\item $k_2 = f(x_i + p_2 h, y_i + a_21 hk_i)$ 
+\item $k_3 = f(x_i + p_3 h, y_i + a_31 hk_i + a_32hk_2)$ 
+\item $k_n = f(x_i + p_3 h, y_i + a_{n,1} hk_i + ... + a_{n,n-1}hk_2)$ 
+\end{itemize}\item Rewrite $y_{i+1} = y_i + h \sum ^n_{j=1} c_j k_j $
+\item $k_j = f(x_i +p_j h, y_i + \sum ^{j-1}{l=1}a_{jl} k_l  )$ \end{itemize}
+The mechanisms allow a 1st, 2nd, 3rd, and nth order Runge-Kutta function to be defined.  
+
+Note that the recurrence relations must be computed each time and constants must be selected for the appropriate order.
+
+``Usually a self-starting method that has the same order of accuracy as that of the multi-step method is used in the first few steps to generate the solution needed for starting the multistep method.'' 
+
+Adam's Method 
+
+\subsection {Boundary Value Problems}
+The problem specifications are for two or more end points and 2nd or higher order in the solution.  
+
+An example:
+
+$ \frac {d^2 y (x)} {d x} = f(x,y, \frac{dy}{dx}) $;  $\forall x \in [a,b]$
+
+$ y (x =a) = \alpha $
+$ y (x =b) = \beta $
+
+Shooting Method (pg 727)  General Procedure
+\begin{enumerate}\item Guess the unspecified initial conditions of the differential equation and prepare it for solution based on initial value problem methods.
+\item Derive the variational equations denoting the sensitivity of the dependent variable based on the guess initial conditions.
+\item Integrate the differential equation and the variation equations along the x direction as a set of simultaneous initial value equations.
+\item Use the results of Step 3 to correct the guessed initial conditions
+\item Repeat steps 2 through 4 until the specified boundary conditions are satisfied.  
+\end{enumerate}
+
+Development of the procedure $\frac{d^2 (x)}{dx^2} = f(x,y,\frac{dy}{dx} )$ ; $\forall x \in [a,b]$
+
+$y(x=a) = y_a$
+
+$\frac {dy}{dx} (x= b) = y_b$
+
+Next define variables 
+\begin{enumerate}\item $y_1 (x) = y(x) $
+\item $y_2 (x) = \frac{dy_1}{dx}(x) = \frac{dy}{dx}(x) $\end{enumerate}
+
+\section {PDE Classic} 
+The general mathematical definition of the partial differential equation is as follows:
+
+The quasi - Linear
+$A \frac{\partial ^2 \theta }{\partial x^2} + B \frac{\partial ^2 \theta }{\partial x \partial y} +  C \frac{\partial ^2 \theta }{\partial y^2} + D \frac{\partial ^2 \theta }{\partial x} + E \frac{\partial ^2 \theta }{\partial y^2} + F\theta = G(x,y, \theta , \frac{\partial \theta}{\partial x} ,  \frac{\partial \theta}{\partial y} )$
+
+The Linear Form:
+$A \frac{\partial ^2 \theta }{\partial x^2} + B \frac{\partial ^2 \theta }{\partial x \partial y} +  C \frac{\partial ^2 \theta }{\partial y^2} + D \frac{\partial ^2 \theta }{\partial x} + E \frac{\partial ^2 \theta }{\partial y^2} + F\theta = G(x,y, \theta , \frac{\partial \theta}{\partial x} ,  \frac{\partial \theta}{\partial y} )$
+
+If $H\equiv 0 $ then it is linear and homogeneous.  
+
+\subsection {General Classifications} 
+There are three general classifications of PDE and one case that is mention only but a few times in mathematical literature.  The four classifications are with their practical characteristic :
+\begin{itemize}\item Elliptical (Equilibrium States)
+\item Parabolic (Diffusion states) 
+\item Hyperbolic (oscillating or vibrating states)
+\item Ultra-Hyperbolic \end{itemize}
+
+\subsection {Initial Value and Boundary Value Conditions}
+
+Both: Initial and Boundary conditions are specified such that a unique solution to the partial differential equation.  
+
+\begin{itemize}\item Initial Value Problems have an open region 
+\item Boundary Value Problems are specified at all boundaries with respect to all independent variables\end{itemize}
+
+There are three types of general boundary conditions which can be specified for a partial differential equations:
+\begin{enumerate}\item Dirichlet Condition (Dependent Value) 
+\item Neumann Condition ( Gradient of Dependent variable) 
+\item Robbins (mixed)\end{enumerate}
+
+\subsection {Elliptical Differential Equations} 
+One example type that shows up for Elliptical PDE problems is heat transfer, and typically Poison's formula is used as the model in the 2-D world.  
+
+$\frac{\partial ^2 T} {\partial x^2} + \frac{\partial ^2 T} {\partial y^2} = 0$  
+
+Also, it is typical that polygon is chosen to define the boundary conditions.   Typically, the polygon is defined by either constants either in the first derivative or normal space.  An example would be a rectangle specified in the first derivative for the right and top edges and constants for the lower and left edges.  Also, the central difference formula is used to setup a linear set equations to be solved.  \cite{appliedmethods}.  The trick is to set up the matrix, and then solve it by any means (classic or wavelet based).  
+
+\subsection {Parabolic Differential Equations}
+With Parabolic Differential Equations, an explicit method is introduced.  The central difference method is applied to part of a grid with accuracy of $O(x^2)$ and $O(t^2)$.  When substituted into the simplest parabolic form;  the new form is 
+
+$\phi _{i,j+1} = \phi _{i,j+1} + \frac{2\alpha^2 \Delta t} {\Delta x^2}  (\phi _{i+1,j} -2 \phi _{i,j} + \phi _{i-1,j})   $
+
+This is useful computation.  The next step is computed from the current and previous steps.   However, this explicit form is unstable, and tends to yield results inconsistent with the boundaries.   In order for this form to be stable :
+
+$\phi _{i,j+1} = p \phi _{i+1,j} + q \phi _{i,j} + r \phi {i-1,j} $ such that $p,q,r > 0$ and $ p + q + r \le 1$.  
+
+Limits on the explicit Method and alternatives by implicit methods are as follows:  
+\begin{enumerate}\item Imposed limits on $\Delta x$ and $\Delta t$.  Dependences in explicit methods are directly limited to 3 values of the many values which it theoretically should.
+\item The implicit method is approximately the second derivative $\frac{ \partial ^2 \theta }{\partial x^2} |_{i,j} $ ``by the finite difference formula involving $\theta$ at an advanced time ($t_{j+1}$)''  \cite {appliedmethods}.  A mid-point is computed using a central - difference formula 
+
+	$\frac{\partial \theta}{\partial t} | _{i,j+1/2} = \frac {\theta_{i,j+1}  \theta_{i,j} }{\Delta t}$
+	
+\item The 2nd p.d. applied with central-difference formula.  There is catch with a weighting parameters.  
+\item Variable Weighted Implicit Formula can be used with the following conditions:
+\begin{itemize}\item weighting factor $\theta$
+\item more than one unknown variable at the time step $ j+1$\end{itemize}\end{enumerate}
+
+
+\subsection {Method of Lines}
+ The main idea is to convert the PDE into a system of first order ODE(s) by approximating only the spatial derivative, $\frac {\partial ^2 \theta}{\partial x^2} (x,t)$ using a finite difference formula.   There are special conditions, and they are as follows:
+ \begin{itemize}\item Dirichlet Condition: $\theta _0 = \theta (x_0) = u_0 $ such that $u_0$  is a constant for $t>0$
+ \item Neumann Condition: $\frac{\partial \theta_0}{ \partial x} = \frac{\partial \theta}{ \partial x}  (x=0) = v_0 $ such that $v_0$ is a constant for $t>0$ \end{itemize}
+
+Note: For cases of more than one spacial dimension, more dimensions are needed to solve the system. 
+
+Again, this is solved by the Central Difference Formula. 
+
+
+\section {Diffusion Problems}
+
+
+\section{ Classic Methods: Bessel and Legendre}
+The basic point of both Bessel and Legendre is to assign a solution of polynomials to a differential equation problem.  Each have a particular partial and ordinary differential equations, for which they solve.  In most texts, these methods are provided as an analytic method for solving the differential equation in question.  These functions are orthogonal either in the range of -1 to 1 (Legendre) or 0 to 1 (Bessel).  
+
+There are several cousin polynomials to these general cases such as Leguerre, Hermite, and the Strum Liouville system for the Legnedre polynomials.  In case of the Bessel functions, Hankel, Kei-Ker, Ber-Bei, and modified Bessel have alternate forms to the general Bessel function method.  Again, most text such Spiegle and Farlow treat the analytical version.  
+
+?What about the numerical version?
+
+\section {Navier-Stokes and Wavelets} 
+Reference page 145: 
+
+\begin{thebibliography}{99}
+\bibitem {appliedmethods} Singiresu S. Rao \textsl{Applied Numerical Methods for Engineers and Scientists}  published Prentice Hall Upper Saddle River, NJ 07458 copyright  2002
+\bibitem {numrecipies} William H. Press, Saul A. Teukolsky, William T. Vetterling, and Brian P. Flannery Published by the Press Syndicate of the University of Cambridge The Pitt Building, Trumpington Street, Cambridge CB2 1RP40 West 20th Street, New York, NY 10011-4211, USA
+Copyright Cambridge University Press 1988, 1992
+
+
+
+
+\bibitem {bvpbeylkin}  G. Beylkin \textsl{On wavelet-based algorithms for solving differential equations}
+
+\bibitem {mwabeylkin}  G. Beylkin, D. Gines and L. Vozovoi \textsl{Adaptive Solution of Partial Differential Equations in Multiwavelet Bases }
+
+\bibitem {PDEfSE} Stanly J. Farlow \textsl{Partial Differential Equations for Scientists and Engineers} copywrite 1993 Dover Publications, Inc Mineola, N.Y. 11501
+
+\bibitem {spiegel} Murray R. Spiegel, \textsl { Theory and Problems of Advanced Mathematics for Engineers and Scientist} copy-write 1996 McGraw-Hill 
+
+\bibitem {tools} Stephane Jaffard, Yves Meyer, and Robert D. Ryan \textsl {Wavelets: Tools for Science and Technology} copyright 2001 by the Society for Industrial and Applied Mathematics Philadelphia, PA 19104-2688
+
+\end {thebibliography}
+
+
+
+ \end{document}

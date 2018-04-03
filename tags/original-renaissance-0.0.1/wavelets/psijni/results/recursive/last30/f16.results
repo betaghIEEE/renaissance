@@ -1,0 +1,4306 @@
+Mon Mar  8 18:25:32 CST 2004
+
+1 1zero value 48
+
+ At resolution 1
+
+ At epsilon 0.7
+
+ image 1 pgmclassics/f16.pgm
+ image 2 pgmclassics/f16.pgm¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 4 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 14413908
+ Total Data transfers 6289452
+ Total Data Compares 1048594 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 4 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 28827816
+ Total Data transfers 12578904
+ Total Data Compares 2097188 Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 73275 of 262144
+Sum 0.367624 epenergy 0.36762 Magic number 1.53787e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.39621e-06
+ Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 73275 of 262144
+Sum 0.367624 epenergy 0.36762 Magic number 1.53787e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.39621e-06
+ Beginning Multiply 
+
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 4.92938e-09 Saved source and result
+ Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+
+ Total instructions 41410928
+ Total Data transfers 15724668
+ Total Data Compares 2097224
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 4.92938e-09
+ Fidelity 0.0266512
+Mon Mar  8 18:26:27 CST 2004
+
+1 2zero value 48
+
+ At resolution 2
+
+ At epsilon 0.7
+
+ image 1 pgmclassics/f16.pgm
+ image 2 pgmclassics/f16.pgm¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 16 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 26466406
+ Total Data transfers 11006014
+ Total Data Compares 2097170 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 16 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 52932812
+ Total Data transfers 22012028
+ Total Data Compares 4194340 Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 81684 of 262144
+Sum 0.367632 epenergy 0.36762 Magic number 1.53787e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.38293e-06
+ Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 81684 of 262144
+Sum 0.367632 epenergy 0.36762 Magic number 1.53787e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.38293e-06
+ Beginning Multiply 
+
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference -6.63734e-08 Saved source and result
+ Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+
+ Total instructions 72855984
+ Total Data transfers 26206368
+ Total Data Compares 4194376
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference -6.63734e-08
+ Fidelity 0.0251083
+Mon Mar  8 18:27:24 CST 2004
+
+1 3zero value 48
+
+ At resolution 3
+
+ At epsilon 0.7
+
+ image 1 pgmclassics/f16.pgm
+ image 2 pgmclassics/f16.pgm¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 64 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 38518904
+ Total Data transfers 15722576
+ Total Data Compares 3145746 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 64 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 77037808
+ Total Data transfers 31445152
+ Total Data Compares 6291492 Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 80185 of 262144
+Sum 0.36763 epenergy 0.36762 Magic number 1.53787e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.39829e-06
+ Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 80185 of 262144
+Sum 0.36763 epenergy 0.36762 Magic number 1.53787e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.39829e-06
+ Beginning Multiply 
+
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference -3.42011e-08 Saved source and result
+ Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+
+ Total instructions 104301040
+ Total Data transfers 36688068
+ Total Data Compares 6291528
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference -3.42011e-08
+ Fidelity 0.0224209
+Mon Mar  8 18:28:21 CST 2004
+
+1 4zero value 48
+
+ At resolution 4
+
+ At epsilon 0.7
+
+ image 1 pgmclassics/f16.pgm
+ image 2 pgmclassics/f16.pgm¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 256 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 50571402
+ Total Data transfers 20439138
+ Total Data Compares 4194322 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 256 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 101142804
+ Total Data transfers 40878276
+ Total Data Compares 8388644 Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 76589 of 262144
+Sum 0.367631 epenergy 0.36762 Magic number 1.53787e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.40082e-06
+ Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 76589 of 262144
+Sum 0.367631 epenergy 0.36762 Magic number 1.53787e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.40082e-06
+ Beginning Multiply 
+
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 6.33985e-08 Saved source and result
+ Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+
+ Total instructions 135746096
+ Total Data transfers 47169768
+ Total Data Compares 8388680
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 6.33985e-08
+ Fidelity 0.0188312
+Mon Mar  8 18:29:20 CST 2004
+
+1 5zero value 48
+
+ At resolution 5
+
+ At epsilon 0.7
+
+ image 1 pgmclassics/f16.pgm
+ image 2 pgmclassics/f16.pgm¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 1024 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 62623900
+ Total Data transfers 25155700
+ Total Data Compares 5242898 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 1024 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 125247800
+ Total Data transfers 50311400
+ Total Data Compares 10485796 Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 71148 of 262144
+Sum 0.367631 epenergy 0.36762 Magic number 1.73611e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.4024e-06
+ Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 71148 of 262144
+Sum 0.367631 epenergy 0.36762 Magic number 1.73611e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.4024e-06
+ Beginning Multiply 
+
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 2.78242e-07 Saved source and result
+ Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+
+ Total instructions 167191152
+ Total Data transfers 57651468
+ Total Data Compares 10485832
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 2.78242e-07
+ Fidelity 0.0180064
+Mon Mar  8 18:30:20 CST 2004
+
+1 6zero value 48
+
+ At resolution 6
+
+ At epsilon 0.7
+
+ image 1 pgmclassics/f16.pgm
+ image 2 pgmclassics/f16.pgm¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 4096 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 74676398
+ Total Data transfers 29872262
+ Total Data Compares 6291474 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 4096 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 149352796
+ Total Data transfers 59744524
+ Total Data Compares 12582948 Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 64450 of 262144
+Sum 0.36763 epenergy 0.36762 Magic number 1.83974e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.40233e-06
+ Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 64450 of 262144
+Sum 0.36763 epenergy 0.36762 Magic number 1.83974e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.40233e-06
+ Beginning Multiply 
+
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference -1.74729e-07 Saved source and result
+ Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+
+ Total instructions 198636208
+ Total Data transfers 68133168
+ Total Data Compares 12582984
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference -1.74729e-07
+ Fidelity 0.015663
+Mon Mar  8 18:31:19 CST 2004
+
+1 7zero value 48
+
+ At resolution 7
+
+ At epsilon 0.7
+
+ image 1 pgmclassics/f16.pgm
+ image 2 pgmclassics/f16.pgm¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 16384 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 86728896
+ Total Data transfers 34588824
+ Total Data Compares 7340050 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 16384 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 173457792
+ Total Data transfers 69177648
+ Total Data Compares 14680100 Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 54372 of 262144
+Sum 0.367634 epenergy 0.36762 Magic number 2.11194e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.40241e-06
+ Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 54372 of 262144
+Sum 0.367634 epenergy 0.36762 Magic number 2.11194e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.40241e-06
+ Beginning Multiply 
+
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 1.10826e-07 Saved source and result
+ Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+
+ Total instructions 230081264
+ Total Data transfers 78614868
+ Total Data Compares 14680136
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 1.10826e-07
+ Fidelity 0.0125529
+Mon Mar  8 18:32:18 CST 2004
+
+1 1zero value 48
+
+ At resolution 1
+
+ At epsilon 0.75
+
+ image 1 pgmclassics/f16.pgm
+ image 2 pgmclassics/f16.pgm¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 4 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 14413908
+ Total Data transfers 6289452
+ Total Data Compares 1048594 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 4 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 28827816
+ Total Data transfers 12578904
+ Total Data Compares 2097188 Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 74983 of 262144
+Sum 0.393891 epenergy 0.393879 Magic number 1.53787e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.49536e-06
+ Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 74983 of 262144
+Sum 0.393891 epenergy 0.393879 Magic number 1.53787e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.49536e-06
+ Beginning Multiply 
+
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 1.47273e-08 Saved source and result
+ Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+
+ Total instructions 41410928
+ Total Data transfers 15724668
+ Total Data Compares 2097224
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 1.47273e-08
+ Fidelity 0.0274046
+Mon Mar  8 18:33:13 CST 2004
+
+1 2zero value 48
+
+ At resolution 2
+
+ At epsilon 0.75
+
+ image 1 pgmclassics/f16.pgm
+ image 2 pgmclassics/f16.pgm¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 16 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 26466406
+ Total Data transfers 11006014
+ Total Data Compares 2097170 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 16 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 52932812
+ Total Data transfers 22012028
+ Total Data Compares 4194340 Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 83391 of 262144
+Sum 0.393883 epenergy 0.393879 Magic number 1.53787e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.43907e-06
+ Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 83391 of 262144
+Sum 0.393883 epenergy 0.393879 Magic number 1.53787e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.43907e-06
+ Beginning Multiply 
+
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference -5.74615e-08 Saved source and result
+ Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+
+ Total instructions 72855984
+ Total Data transfers 26206368
+ Total Data Compares 4194376
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference -5.74615e-08
+ Fidelity 0.0257587
+Mon Mar  8 18:34:09 CST 2004
+
+1 3zero value 48
+
+ At resolution 3
+
+ At epsilon 0.75
+
+ image 1 pgmclassics/f16.pgm
+ image 2 pgmclassics/f16.pgm¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 64 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 38518904
+ Total Data transfers 15722576
+ Total Data Compares 3145746 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 64 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 77037808
+ Total Data transfers 31445152
+ Total Data Compares 6291492 Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 81892 of 262144
+Sum 0.393881 epenergy 0.393879 Magic number 1.53787e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.49585e-06
+ Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 81892 of 262144
+Sum 0.393881 epenergy 0.393879 Magic number 1.53787e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.49585e-06
+ Beginning Multiply 
+
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference -9.64861e-09 Saved source and result
+ Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+
+ Total instructions 104301040
+ Total Data transfers 36688068
+ Total Data Compares 6291528
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference -9.64861e-09
+ Fidelity 0.0232557
+Mon Mar  8 18:35:04 CST 2004
+
+1 4zero value 48
+
+ At resolution 4
+
+ At epsilon 0.75
+
+ image 1 pgmclassics/f16.pgm
+ image 2 pgmclassics/f16.pgm¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 256 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 50571402
+ Total Data transfers 20439138
+ Total Data Compares 4194322 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 256 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 101142804
+ Total Data transfers 40878276
+ Total Data Compares 8388644 Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 78210 of 262144
+Sum 0.393888 epenergy 0.393879 Magic number 1.73611e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.50164e-06
+ Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 78210 of 262144
+Sum 0.393888 epenergy 0.393879 Magic number 1.73611e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.50164e-06
+ Beginning Multiply 
+
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 2.14359e-08 Saved source and result
+ Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+
+ Total instructions 135746096
+ Total Data transfers 47169768
+ Total Data Compares 8388680
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 2.14359e-08
+ Fidelity 0.0197004
+Mon Mar  8 18:36:01 CST 2004
+
+1 5zero value 48
+
+ At resolution 5
+
+ At epsilon 0.75
+
+ image 1 pgmclassics/f16.pgm
+ image 2 pgmclassics/f16.pgm¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 1024 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 62623900
+ Total Data transfers 25155700
+ Total Data Compares 5242898 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 1024 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 125247800
+ Total Data transfers 50311400
+ Total Data Compares 10485796 Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 72660 of 262144
+Sum 0.393881 epenergy 0.393879 Magic number 1.73611e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.50247e-06
+ Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 72660 of 262144
+Sum 0.393881 epenergy 0.393879 Magic number 1.73611e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.50247e-06
+ Beginning Multiply 
+
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 3.55133e-07 Saved source and result
+ Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+
+ Total instructions 167191152
+ Total Data transfers 57651468
+ Total Data Compares 10485832
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 3.55133e-07
+ Fidelity 0.0187518
+Mon Mar  8 18:36:59 CST 2004
+
+1 6zero value 48
+
+ At resolution 6
+
+ At epsilon 0.75
+
+ image 1 pgmclassics/f16.pgm
+ image 2 pgmclassics/f16.pgm¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 4096 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 74676398
+ Total Data transfers 29872262
+ Total Data Compares 6291474 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 4096 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 149352796
+ Total Data transfers 59744524
+ Total Data Compares 12582948 Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 65856 of 262144
+Sum 0.393879 epenergy 0.393879 Magic number 1.89268e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.50253e-06
+ Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 65856 of 262144
+Sum 0.393879 epenergy 0.393879 Magic number 1.89268e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.50253e-06
+ Beginning Multiply 
+
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference -1.22884e-07 Saved source and result
+ Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+
+ Total instructions 198636208
+ Total Data transfers 68133168
+ Total Data Compares 12582984
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference -1.22884e-07
+ Fidelity 0.0161344
+Mon Mar  8 18:37:58 CST 2004
+
+1 7zero value 48
+
+ At resolution 7
+
+ At epsilon 0.75
+
+ image 1 pgmclassics/f16.pgm
+ image 2 pgmclassics/f16.pgm¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 16384 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 86728896
+ Total Data transfers 34588824
+ Total Data Compares 7340050 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 16384 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 173457792
+ Total Data transfers 69177648
+ Total Data Compares 14680100 Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 55594 of 262144
+Sum 0.393879 epenergy 0.393879 Magic number 2.19727e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.50244e-06
+ Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 55594 of 262144
+Sum 0.393879 epenergy 0.393879 Magic number 2.19727e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.50244e-06
+ Beginning Multiply 
+
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 1.11109e-07 Saved source and result
+ Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+
+ Total instructions 230081264
+ Total Data transfers 78614868
+ Total Data Compares 14680136
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 1.11109e-07
+ Fidelity 0.0128196
+Mon Mar  8 18:38:59 CST 2004
+
+1 1zero value 48
+
+ At resolution 1
+
+ At epsilon 0.8
+
+ image 1 pgmclassics/f16.pgm
+ image 2 pgmclassics/f16.pgm¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 4 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 14413908
+ Total Data transfers 6289452
+ Total Data Compares 1048594 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 4 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 28827816
+ Total Data transfers 12578904
+ Total Data Compares 2097188 Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 76690 of 262144
+Sum 0.420142 epenergy 0.420137 Magic number 1.53787e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.51507e-06
+ Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 76690 of 262144
+Sum 0.420142 epenergy 0.420137 Magic number 1.53787e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.51507e-06
+ Beginning Multiply 
+
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 1.47783e-08 Saved source and result
+ Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+
+ Total instructions 41410928
+ Total Data transfers 15724668
+ Total Data Compares 2097224
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 1.47783e-08
+ Fidelity 0.0273761
+Mon Mar  8 18:39:53 CST 2004
+
+1 2zero value 48
+
+ At resolution 2
+
+ At epsilon 0.8
+
+ image 1 pgmclassics/f16.pgm
+ image 2 pgmclassics/f16.pgm¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 16 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 26466406
+ Total Data transfers 11006014
+ Total Data Compares 2097170 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 16 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 52932812
+ Total Data transfers 22012028
+ Total Data Compares 4194340 Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 85099 of 262144
+Sum 0.42015 epenergy 0.420137 Magic number 1.53787e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.60075e-06
+ Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 85099 of 262144
+Sum 0.42015 epenergy 0.420137 Magic number 1.53787e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.60075e-06
+ Beginning Multiply 
+
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 5.5136e-08 Saved source and result
+ Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+
+ Total instructions 72855984
+ Total Data transfers 26206368
+ Total Data Compares 4194376
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 5.5136e-08
+ Fidelity 0.027257
+Mon Mar  8 18:40:48 CST 2004
+
+1 3zero value 48
+
+ At resolution 3
+
+ At epsilon 0.8
+
+ image 1 pgmclassics/f16.pgm
+ image 2 pgmclassics/f16.pgm¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 64 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 38518904
+ Total Data transfers 15722576
+ Total Data Compares 3145746 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 64 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 77037808
+ Total Data transfers 31445152
+ Total Data Compares 6291492 Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 83600 of 262144
+Sum 0.420148 epenergy 0.420137 Magic number 1.53787e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.60274e-06
+ Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 83600 of 262144
+Sum 0.420148 epenergy 0.420137 Magic number 1.53787e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.60274e-06
+ Beginning Multiply 
+
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 2.8801e-08 Saved source and result
+ Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+
+ Total instructions 104301040
+ Total Data transfers 36688068
+ Total Data Compares 6291528
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 2.8801e-08
+ Fidelity 0.0240624
+Mon Mar  8 18:41:45 CST 2004
+
+1 4zero value 48
+
+ At resolution 4
+
+ At epsilon 0.8
+
+ image 1 pgmclassics/f16.pgm
+ image 2 pgmclassics/f16.pgm¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 256 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 50571402
+ Total Data transfers 20439138
+ Total Data Compares 4194322 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 256 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 101142804
+ Total Data transfers 40878276
+ Total Data Compares 8388644 Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 79722 of 262144
+Sum 0.420138 epenergy 0.420137 Magic number 1.73611e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.60084e-06
+ Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 79722 of 262144
+Sum 0.420138 epenergy 0.420137 Magic number 1.73611e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.60084e-06
+ Beginning Multiply 
+
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 2.75651e-08 Saved source and result
+ Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+
+ Total instructions 135746096
+ Total Data transfers 47169768
+ Total Data Compares 8388680
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 2.75651e-08
+ Fidelity 0.0201837
+Mon Mar  8 18:42:42 CST 2004
+
+1 5zero value 48
+
+ At resolution 5
+
+ At epsilon 0.8
+
+ image 1 pgmclassics/f16.pgm
+ image 2 pgmclassics/f16.pgm¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 1024 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 62623900
+ Total Data transfers 25155700
+ Total Data Compares 5242898 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 1024 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 125247800
+ Total Data transfers 50311400
+ Total Data Compares 10485796 Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 74091 of 262144
+Sum 0.42014 epenergy 0.420137 Magic number 1.83974e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.6025e-06
+ Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 74091 of 262144
+Sum 0.42014 epenergy 0.420137 Magic number 1.83974e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.6025e-06
+ Beginning Multiply 
+
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 3.88696e-07 Saved source and result
+ Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+
+ Total instructions 167191152
+ Total Data transfers 57651468
+ Total Data Compares 10485832
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 3.88696e-07
+ Fidelity 0.0194005
+Mon Mar  8 18:43:41 CST 2004
+
+1 6zero value 48
+
+ At resolution 6
+
+ At epsilon 0.8
+
+ image 1 pgmclassics/f16.pgm
+ image 2 pgmclassics/f16.pgm¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 4096 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 74676398
+ Total Data transfers 29872262
+ Total Data Compares 6291474 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 4096 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 149352796
+ Total Data transfers 59744524
+ Total Data Compares 12582948 Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 67194 of 262144
+Sum 0.42015 epenergy 0.420137 Magic number 2.00081e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.60275e-06
+ Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 67194 of 262144
+Sum 0.42015 epenergy 0.420137 Magic number 2.00081e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.60275e-06
+ Beginning Multiply 
+
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference -1.46253e-07 Saved source and result
+ Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+
+ Total instructions 198636208
+ Total Data transfers 68133168
+ Total Data Compares 12582984
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference -1.46253e-07
+ Fidelity 0.0166645
+Mon Mar  8 18:44:40 CST 2004
+
+1 7zero value 48
+
+ At resolution 7
+
+ At epsilon 0.8
+
+ image 1 pgmclassics/f16.pgm
+ image 2 pgmclassics/f16.pgm¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 16384 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 86728896
+ Total Data transfers 34588824
+ Total Data Compares 7340050 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 16384 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 173457792
+ Total Data transfers 69177648
+ Total Data Compares 14680100 Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 56760 of 262144
+Sum 0.420151 epenergy 0.420137 Magic number 2.31366e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.60275e-06
+ Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 56760 of 262144
+Sum 0.420151 epenergy 0.420137 Magic number 2.31366e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.60275e-06
+ Beginning Multiply 
+
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 9.6001e-08 Saved source and result
+ Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+
+ Total instructions 230081264
+ Total Data transfers 78614868
+ Total Data Compares 14680136
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 9.6001e-08
+ Fidelity 0.0130694
+Mon Mar  8 18:45:40 CST 2004
+
+1 1zero value 48
+
+ At resolution 1
+
+ At epsilon 0.85
+
+ image 1 pgmclassics/f16.pgm
+ image 2 pgmclassics/f16.pgm¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 4 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 14413908
+ Total Data transfers 6289452
+ Total Data Compares 1048594 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 4 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 28827816
+ Total Data transfers 12578904
+ Total Data Compares 2097188 Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 78398 of 262144
+Sum 0.446409 epenergy 0.446396 Magic number 1.53787e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.63879e-06
+ Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 78398 of 262144
+Sum 0.446409 epenergy 0.446396 Magic number 1.53787e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.63879e-06
+ Beginning Multiply 
+
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 9.29424e-08 Saved source and result
+ Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+
+ Total instructions 41410928
+ Total Data transfers 15724668
+ Total Data Compares 2097224
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 9.29424e-08
+ Fidelity 0.0293542
+Mon Mar  8 18:46:35 CST 2004
+
+1 2zero value 48
+
+ At resolution 2
+
+ At epsilon 0.85
+
+ image 1 pgmclassics/f16.pgm
+ image 2 pgmclassics/f16.pgm¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 16 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 26466406
+ Total Data transfers 11006014
+ Total Data Compares 2097170 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 16 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 52932812
+ Total Data transfers 22012028
+ Total Data Compares 4194340 Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 86806 of 262144
+Sum 0.446401 epenergy 0.446396 Magic number 1.53787e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.6637e-06
+ Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 86806 of 262144
+Sum 0.446401 epenergy 0.446396 Magic number 1.53787e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.6637e-06
+ Beginning Multiply 
+
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 3.7732e-08 Saved source and result
+ Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+
+ Total instructions 72855984
+ Total Data transfers 26206368
+ Total Data Compares 4194376
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 3.7732e-08
+ Fidelity 0.0275985
+Mon Mar  8 18:47:29 CST 2004
+
+1 3zero value 48
+
+ At resolution 3
+
+ At epsilon 0.85
+
+ image 1 pgmclassics/f16.pgm
+ image 2 pgmclassics/f16.pgm¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 64 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 38518904
+ Total Data transfers 15722576
+ Total Data Compares 3145746 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 64 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 77037808
+ Total Data transfers 31445152
+ Total Data Compares 6291492 Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 85232 of 262144
+Sum 0.446406 epenergy 0.446396 Magic number 1.94637e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.70179e-06
+ Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 85232 of 262144
+Sum 0.446406 epenergy 0.446396 Magic number 1.94637e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.70179e-06
+ Beginning Multiply 
+
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 3.75732e-08 Saved source and result
+ Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+
+ Total instructions 104301040
+ Total Data transfers 36688068
+ Total Data Compares 6291528
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 3.75732e-08
+ Fidelity 0.0253497
+Mon Mar  8 18:48:27 CST 2004
+
+1 4zero value 48
+
+ At resolution 4
+
+ At epsilon 0.85
+
+ image 1 pgmclassics/f16.pgm
+ image 2 pgmclassics/f16.pgm¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 256 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 50571402
+ Total Data transfers 20439138
+ Total Data Compares 4194322 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 256 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 101142804
+ Total Data transfers 40878276
+ Total Data Compares 8388644 Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 81204 of 262144
+Sum 0.446407 epenergy 0.446396 Magic number 1.94637e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.70261e-06
+ Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 81204 of 262144
+Sum 0.446407 epenergy 0.446396 Magic number 1.94637e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.70261e-06
+ Beginning Multiply 
+
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 2.42838e-09 Saved source and result
+ Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+
+ Total instructions 135746096
+ Total Data transfers 47169768
+ Total Data Compares 8388680
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 2.42838e-09
+ Fidelity 0.0208445
+Mon Mar  8 18:49:25 CST 2004
+
+1 5zero value 48
+
+ At resolution 5
+
+ At epsilon 0.85
+
+ image 1 pgmclassics/f16.pgm
+ image 2 pgmclassics/f16.pgm¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 1024 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 62623900
+ Total Data transfers 25155700
+ Total Data Compares 5242898 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 1024 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 125247800
+ Total Data transfers 50311400
+ Total Data Compares 10485796 Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 75456 of 262144
+Sum 0.446397 epenergy 0.446396 Magic number 1.94637e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.70213e-06
+ Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 75456 of 262144
+Sum 0.446397 epenergy 0.446396 Magic number 1.94637e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.70213e-06
+ Beginning Multiply 
+
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 3.93775e-07 Saved source and result
+ Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+
+ Total instructions 167191152
+ Total Data transfers 57651468
+ Total Data Compares 10485832
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 3.93775e-07
+ Fidelity 0.0204145
+Mon Mar  8 18:50:23 CST 2004
+
+1 6zero value 48
+
+ At resolution 6
+
+ At epsilon 0.85
+
+ image 1 pgmclassics/f16.pgm
+ image 2 pgmclassics/f16.pgm¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 4096 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 74676398
+ Total Data transfers 29872262
+ Total Data Compares 6291474 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 4096 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 149352796
+ Total Data transfers 59744524
+ Total Data Compares 12582948 Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 68474 of 262144
+Sum 0.446416 epenergy 0.446396 Magic number 2.11194e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.70246e-06
+ Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 68474 of 262144
+Sum 0.446416 epenergy 0.446396 Magic number 2.11194e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.70246e-06
+ Beginning Multiply 
+
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference -1.31644e-07 Saved source and result
+ Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+
+ Total instructions 198636208
+ Total Data transfers 68133168
+ Total Data Compares 12582984
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference -1.31644e-07
+ Fidelity 0.0170764
+Mon Mar  8 18:51:22 CST 2004
+
+1 7zero value 48
+
+ At resolution 7
+
+ At epsilon 0.85
+
+ image 1 pgmclassics/f16.pgm
+ image 2 pgmclassics/f16.pgm¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 16384 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 86728896
+ Total Data transfers 34588824
+ Total Data Compares 7340050 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 16384 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 173457792
+ Total Data transfers 69177648
+ Total Data Compares 14680100 Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 57873 of 262144
+Sum 0.446405 epenergy 0.446396 Magic number 2.40292e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.7029e-06
+ Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 57873 of 262144
+Sum 0.446405 epenergy 0.446396 Magic number 2.40292e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.7029e-06
+ Beginning Multiply 
+
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 1.18231e-07 Saved source and result
+ Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+
+ Total instructions 230081264
+ Total Data transfers 78614868
+ Total Data Compares 14680136
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 1.18231e-07
+ Fidelity 0.0136967
+Mon Mar  8 18:52:22 CST 2004
+
+1 1zero value 48
+
+ At resolution 1
+
+ At epsilon 0.9
+
+ image 1 pgmclassics/f16.pgm
+ image 2 pgmclassics/f16.pgm¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 4 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 14413908
+ Total Data transfers 6289452
+ Total Data Compares 1048594 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 4 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 28827816
+ Total Data transfers 12578904
+ Total Data Compares 2097188 Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 80105 of 262144
+Sum 0.472661 epenergy 0.472654 Magic number 1.53787e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.63879e-06
+ Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 80105 of 262144
+Sum 0.472661 epenergy 0.472654 Magic number 1.53787e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.63879e-06
+ Beginning Multiply 
+
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 9.29424e-08 Saved source and result
+ Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+
+ Total instructions 41410928
+ Total Data transfers 15724668
+ Total Data Compares 2097224
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 9.29424e-08
+ Fidelity 0.0293542
+Mon Mar  8 18:53:18 CST 2004
+
+1 2zero value 48
+
+ At resolution 2
+
+ At epsilon 0.9
+
+ image 1 pgmclassics/f16.pgm
+ image 2 pgmclassics/f16.pgm¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 16 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 26466406
+ Total Data transfers 11006014
+ Total Data Compares 2097170 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 16 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 52932812
+ Total Data transfers 22012028
+ Total Data Compares 4194340 Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 88514 of 262144
+Sum 0.472668 epenergy 0.472654 Magic number 1.53787e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.79288e-06
+ Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 88514 of 262144
+Sum 0.472668 epenergy 0.472654 Magic number 1.53787e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.79288e-06
+ Beginning Multiply 
+
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 4.06421e-08 Saved source and result
+ Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+
+ Total instructions 72855984
+ Total Data transfers 26206368
+ Total Data Compares 4194376
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 4.06421e-08
+ Fidelity 0.0288953
+Mon Mar  8 18:54:14 CST 2004
+
+1 3zero value 48
+
+ At resolution 3
+
+ At epsilon 0.9
+
+ image 1 pgmclassics/f16.pgm
+ image 2 pgmclassics/f16.pgm¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 64 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 38518904
+ Total Data transfers 15722576
+ Total Data Compares 3145746 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 64 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 77037808
+ Total Data transfers 31445152
+ Total Data Compares 6291492 Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 86581 of 262144
+Sum 0.472662 epenergy 0.472654 Magic number 1.94637e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.8015e-06
+ Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 86581 of 262144
+Sum 0.472662 epenergy 0.472654 Magic number 1.94637e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.8015e-06
+ Beginning Multiply 
+
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 5.27707e-08 Saved source and result
+ Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+
+ Total instructions 104301040
+ Total Data transfers 36688068
+ Total Data Compares 6291528
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 5.27707e-08
+ Fidelity 0.0262924
+Mon Mar  8 18:55:10 CST 2004
+
+1 4zero value 48
+
+ At resolution 4
+
+ At epsilon 0.9
+
+ image 1 pgmclassics/f16.pgm
+ image 2 pgmclassics/f16.pgm¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 256 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 50571402
+ Total Data transfers 20439138
+ Total Data Compares 4194322 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 256 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 101142804
+ Total Data transfers 40878276
+ Total Data Compares 8388644 Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 82553 of 262144
+Sum 0.472664 epenergy 0.472654 Magic number 1.94637e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.80307e-06
+ Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 82553 of 262144
+Sum 0.472664 epenergy 0.472654 Magic number 1.94637e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.80307e-06
+ Beginning Multiply 
+
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 9.59297e-08 Saved source and result
+ Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+
+ Total instructions 135746096
+ Total Data transfers 47169768
+ Total Data Compares 8388680
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 9.59297e-08
+ Fidelity 0.0217504
+Mon Mar  8 18:56:07 CST 2004
+
+1 5zero value 48
+
+ At resolution 5
+
+ At epsilon 0.9
+
+ image 1 pgmclassics/f16.pgm
+ image 2 pgmclassics/f16.pgm¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 1024 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 62623900
+ Total Data transfers 25155700
+ Total Data Compares 5242898 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 1024 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 125247800
+ Total Data transfers 50311400
+ Total Data Compares 10485796 Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 76768 of 262144
+Sum 0.472674 epenergy 0.472654 Magic number 2.056e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.8028e-06
+ Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 76768 of 262144
+Sum 0.472674 epenergy 0.472654 Magic number 2.056e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.8028e-06
+ Beginning Multiply 
+
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 4.67895e-07 Saved source and result
+ Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+
+ Total instructions 167191152
+ Total Data transfers 57651468
+ Total Data Compares 10485832
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 4.67895e-07
+ Fidelity 0.0209453
+Mon Mar  8 18:57:06 CST 2004
+
+1 6zero value 48
+
+ At resolution 6
+
+ At epsilon 0.9
+
+ image 1 pgmclassics/f16.pgm
+ image 2 pgmclassics/f16.pgm¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 4096 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 74676398
+ Total Data transfers 29872262
+ Total Data Compares 6291474 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 4096 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 149352796
+ Total Data transfers 59744524
+ Total Data Compares 12582948 Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 69700 of 262144
+Sum 0.472657 epenergy 0.472654 Magic number 2.16864e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.80304e-06
+ Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 69700 of 262144
+Sum 0.472657 epenergy 0.472654 Magic number 2.16864e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.80304e-06
+ Beginning Multiply 
+
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference -1.11502e-07 Saved source and result
+ Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+
+ Total instructions 198636208
+ Total Data transfers 68133168
+ Total Data Compares 12582984
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference -1.11502e-07
+ Fidelity 0.0175001
+Mon Mar  8 18:58:05 CST 2004
+
+1 7zero value 48
+
+ At resolution 7
+
+ At epsilon 0.9
+
+ image 1 pgmclassics/f16.pgm
+ image 2 pgmclassics/f16.pgm¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the file¿512512 Before allocation 
+
+ After allocation 
+ 
+ After loop 
+ 
+ After close 
+Read the fileBefore self wx form 
+ 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 16384 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 86728896
+ Total Data transfers 34588824
+ Total Data Compares 7340050 
+ The resolution in the self WX form is 9 
+ 
+ The vertices in the self WX form is 16384 
+ Stats taken 
+ X and Y vectors allocated 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Completed a Row X form 
+
+ Completed a Column X form 
+
+ Total instructions 173457792
+ Total Data transfers 69177648
+ Total Data Compares 14680100 Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 58943 of 262144
+Sum 0.472672 epenergy 0.472654 Magic number 2.52457e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.8031e-06
+ Generate Histogram 
+ Histogram allocated 262144 = 512 by512
+ Histogram arranged 
+ Histogram allocated 
+Generating magic number 
+
+Got magic number at 58943 of 262144
+Sum 0.472672 epenergy 0.472654 Magic number 2.52457e-05 and the total energy 0.724687
+ The integrity of the new matrix is 1.8031e-06
+ Beginning Multiply 
+
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 1.67948e-07 Saved source and result
+ Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+Allocated quadnode and set values 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+ In Col WIX 0 by 0 to 511 by 511 
+ In Row WIX 0 by 0 to 511 by 511 
+
+ Total instructions 230081264
+ Total Data transfers 78614868
+ Total Data Compares 14680136
+ Energy of the standard 64824.8
+ Energy of the approximation 64824.8
+ Percent difference 1.67948e-07
+ Fidelity 0.0140503
+Mon Mar  8 18:59:06 CST 2004

@@ -1,0 +1,58 @@
+Sample WX operation results
+Original
+P2
+2 2
+256
+128 128
+0 128
+
+multiplies conventially 
+P2
+2 2
+255
+64 128 
+0 64 
+
+
+multiplied by RWX (A) CWX (B) 
+P2
+2 2
+255
+32 96 
+0 32 
+
+WIX of (RWX(A) * CWX(B)) 
+P2
+2 2
+255
+0 48 
+0 80 
+
+CWX (A) * RWX(B) 
+P2
+2 2
+255
+80 48 
+0 0 
+
+WIX ( CWX(A) * RWX(B) )
+P2
+2 2
+255
+32 96 
+0 32 
+
+WX ( A) * WX(B) 
+P2
+2 2
+255
+80 48 
+0 0 
+
+WIX (WX(A) * WX(B))
+P2
+2 2
+255
+32 96 
+1 32 
+

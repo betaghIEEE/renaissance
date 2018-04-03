@@ -1,0 +1,157 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<!--Converted with LaTeX2HTML 99.2beta8 (1.43)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Threshold FIltering</TITLE>
+<META NAME="description" CONTENT="Threshold FIltering">
+<META NAME="keywords" CONTENT="basicwave">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="Generator" CONTENT="LaTeX2HTML v99.2beta8">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="basicwave.css">
+
+<LINK REL="previous" HREF="node12.html">
+<LINK REL="up" HREF="node11.html">
+<LINK REL="next" HREF="node14.html">
+</HEAD>
+
+<BODY >
+<!--Navigation Panel-->
+<A NAME="tex2html259"
+  HREF="node14.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html255"
+  HREF="node11.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html251"
+  HREF="node12.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html257"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html260"
+  HREF="node14.html">Haar Wavelet Transform Class:</A>
+<B> Up:</B> <A NAME="tex2html256"
+  HREF="node11.html">Results: 2-D Wavelet Transform</A>
+<B> Previous:</B> <A NAME="tex2html252"
+  HREF="node12.html">Multi -resolution</A>
+ &nbsp <B>  <A NAME="tex2html258"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00062000000000000000">
+Threshold FIltering</A>
+</H2>
+After a triple resolution, a 0.02 threshold will eliminate 81.1706 percent of elements in the original sample picture.  Also at this point, the effects of removing these elements becomes visually evident (Figure <A HREF="node13.html#recover3R002">11</A>).  At a 0.01 threshold,  66.0205 percent of the elements are removed.  Visually, the recovered sample and the original appear to be the same (Figure <A HREF="node13.html#recover3R001">14</A>).  At a threshold of 0.1, 92.9987 percent of the elements are reduced to zero.  However, the distortions are clearly visible at this level of thresholding (Figure <A HREF="node13.html#recover3R010">12</A>).  Even at a threshold of 0.001 which is below the numerical precision of the original, 16.0814 elements are reduced to zero.  At a threshold of 0.002, 28.9683 percent is removed.  
+
+<P>
+Consequently after a triple resolution, nearly 29 % of the data was irrelevant for the image's brightness resolution (which also applies to color).  60 % to 85 % of was not noticeable to human perception.  Which leaves only 15 % to 40 % of the data actually contributing or being necessary to reconstruct the image.   
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="recover3R002"></A><A NAME="219"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 11:</STRONG>
+Recovered Image - 2% threshold (Multi-Resolution). This image had nearly 83% of its elements removed in the triple resolution wavelet transform.  </CAPTION>
+<TR><TD><!-- MATH
+ $\includegraphics[width=4in]{recover3R002T.jpg}$
+ -->
+</TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="recover3R010"></A><A NAME="224"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 12:</STRONG>
+Recovered Image - 10% threshold (Multi-Resolution). This image had nearly 93% of its elements removed in the triple resolution wavelet transform.  </CAPTION>
+<TR><TD><!-- MATH
+ $\includegraphics[width=4in]{recover3R010T.jpg}$
+ -->
+</TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="recover3R005"></A><A NAME="229"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 13:</STRONG>
+Recovered Image - 5% threshold (Multi-Resolution). This image had nearly 85% of its elements removed in the triple resolution wavelet transform.    </CAPTION>
+<TR><TD><!-- MATH
+ $\includegraphics[width=4in]{recover3R005T.jpg}$
+ -->
+</TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+
+<P></P>
+<DIV ALIGN="CENTER"><A NAME="recover3R001"></A><A NAME="234"></A>
+<TABLE>
+<CAPTION ALIGN="BOTTOM"><STRONG>Figure 14:</STRONG>
+Recovered Image - 1% threshold (Multi-Resolution).  This image had nearly 60% of its elements removed in the triple resolution wavelet transform.   </CAPTION>
+<TR><TD><!-- MATH
+ $\includegraphics[width=4in]{recover3R001.jpg}$
+ -->
+</TD></TR>
+</TABLE>
+</DIV><P></P>
+
+<P>
+
+<HR>
+<!--Navigation Panel-->
+<A NAME="tex2html259"
+  HREF="node14.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="file:/usr/lib/latex2html/icons/next.png"></A> 
+<A NAME="tex2html255"
+  HREF="node11.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="file:/usr/lib/latex2html/icons/up.png"></A> 
+<A NAME="tex2html251"
+  HREF="node12.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="file:/usr/lib/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html257"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="file:/usr/lib/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html260"
+  HREF="node14.html">Haar Wavelet Transform Class:</A>
+<B> Up:</B> <A NAME="tex2html256"
+  HREF="node11.html">Results: 2-D Wavelet Transform</A>
+<B> Previous:</B> <A NAME="tex2html252"
+  HREF="node12.html">Multi -resolution</A>
+ &nbsp <B>  <A NAME="tex2html258"
+  HREF="node1.html">Contents</A></B> 
+<!--End of Navigation Panel-->
+<ADDRESS>
+Daniel Beatty
+2003-06-04
+</ADDRESS>
+</BODY>
+</HTML>

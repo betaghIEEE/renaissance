@@ -1,0 +1,38 @@
+
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{doublespace}
+
+\begin{document}
+Role of orthonomal basis in computation:
+
+Example of Calderon-Zygmund and pseudo-differential operators.
+
+``Fast algorithms for applying these operators to functions, solving integral equations.  The operators which can be efficently treated using representations in the wavelet bases include Calderon-Zygmund and pseudo-differential operators.''
+
+Again G. Beylkin used his Kernel operation to achieve a wavelet transform:
+
+$T(f)(x) = \inter K(x,y) f(y)dy $
+
+The above has the effect of a convolution operator, which implies the wavelet transform via convolution.  
+
+One of the issues for differential equations (ordinary or partial) is the condition number.  Usually, the step size for differential equation is chosen to be small for accuracy.  However, this produces a system of equations which is dense, the condition number is not likely to be high.  The condition number has direct effect as to the rate of convergence for the solutions of these equations.  
+
+``If our starting point is a differential equation with boundary conditions then the wavelet system of coordinates there is a diagonal preconditioned which allows us to perform algebraic manipulations only with the sparse the sparse matrices.''   
+
+Beylkin's Method was applied to multi-grid methods with a sample Green's function.   The idea is to use the wavelet bases as a preconditioner in the multi-grid scheme.  ``Orthonormal wavelet bases provide a very convenient tool for implementing the preconditions.  
+
+``Matrix L has the condition number $O(N^2)$.  ''  
+
+``The goal is to construct the matrix $L^{-1}$ numerically in $o(-\log \epsilon N)$ operations, where $\epsilon$ is the desired accuracy.''
+
+''The kernel of the inverse operator for the problem has a sparse representation in wavelet bases since kernel satisfies the estimates of the type in .... ''.   
+
+``The wavelets play an auxiliary role in that they provide a system of coordinates where the condition numbers of the sparse matrices (involved in the computations) under control.  ''
+
+
+\bibitem G. Beylkin \textsl{On wavelet-based algorithms for solving differential equations}
+
+\end {document}

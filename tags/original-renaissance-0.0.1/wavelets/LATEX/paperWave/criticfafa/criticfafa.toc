@@ -1,0 +1,8 @@
+\contentsline {chapter}{\numberline {1}Karhunen-Lo$\mathaccentV {grave}012{e}$ve / Singular Value Decomposition}{5}
+\contentsline {section}{\numberline {1.1}Approximate Factor Analysis}{8}
+\contentsline {section}{\numberline {1.2}The Entropy Metric }{9}
+\contentsline {chapter}{\numberline {2}The approximate KL Transform}{11}
+\contentsline {chapter}{\numberline {3}Jacobians of complicated maps}{15}
+\contentsline {chapter}{\numberline {4}Wavelet Based Matrix Multiplication}{17}
+\contentsline {chapter}{\numberline {5}Matrix Multiplication Second Look}{21}
+\contentsline {section}{\numberline {5.1}Conventional Matrix Multiplication}{24}
